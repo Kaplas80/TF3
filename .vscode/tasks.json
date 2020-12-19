@@ -1,0 +1,26 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cake",
+			"script": "Default",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"label": "Cake: Run Default"
+		},
+		{
+			"type": "cake",
+			"script": "Build",
+			"group": "build",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"label": "Cake: Run Build"
+		}
+	]
+}
