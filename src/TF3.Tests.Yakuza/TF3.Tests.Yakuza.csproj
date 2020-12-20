@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../../Libraries/TF3.Common.Yakuza/TF3.Common.Yakuza.csproj" />
+    <ProjectReference Include="../TF3.Common.Yakuza/TF3.Common.Yakuza.csproj" />
 
     <PackageReference Include="Yarhl" />
     <PackageReference Include="nunit" />

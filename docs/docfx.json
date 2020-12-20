@@ -4,7 +4,7 @@
         "src": [
           {
             "files": [
-              "Libraries/TF3.Common.Yakuza/TF3.Common.Yakuza.csproj"
+              "TF3.Common.Yakuza/TF3.Common.Yakuza.csproj"
             ],
             "src": "../src"
           }
