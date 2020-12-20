@@ -1,5 +1,21 @@
+
 {
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "editor.renderWhitespace": "boundary",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[markdown]": {
+        "editor.formatOnSave": true,
+    },
+    "[csharp]": {
+        "editor.defaultFormatter": "ms-dotnettools.csharp",
+    },
+    "prettier.proseWrap": "always",
     "cSpell.words": [
+        "Yakuza",
+        "Yarhl",
         "kaplas"
     ]
 }
