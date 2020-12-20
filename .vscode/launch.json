@@ -9,7 +9,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "Cake: Run Build",
-            "program": "${workspaceFolder}/src/MyConsole/bin/Debug/net5.0/MyConsole.dll",
+            "program": "${workspaceFolder}/src/Applications/TF3.CommandLine/bin/Debug/net5.0/TF3.CommandLine.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,

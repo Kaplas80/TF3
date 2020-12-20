@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2020 Benito Palacios Sánchez
+﻿// Copyright (c) 2020 Kaplas
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -17,23 +17,18 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-namespace MyLibrary
-{
-    using System.Reflection;
-
+namespace TF3.CommandLine {
     /// <summary>
-    /// Version of the library.
+    /// Main program class.
     /// </summary>
-    public static class LibVersion
-    {
+    public static class Program {
         /// <summary>
-        /// Gets the version of the library.
+        /// Main entry-point.
         /// </summary>
-        /// <returns>The version of the library.</returns>
-        public static string GetVersion()
+        /// <param name="args">Application arguments.</param>
+        public static void Main(string[] args)
         {
-            Assembly library = typeof(LibVersion).Assembly;
-            return library.GetName().Version.ToString();
+            // Method intentionally left empty.
         }
     }
 }

@@ -8,8 +8,4 @@
     <SelfContained>false</SelfContained>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="../MyLibrary/MyLibrary.csproj" />
-  </ItemGroup>
-
 </Project>

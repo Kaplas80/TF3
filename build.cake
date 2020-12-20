@@ -5,13 +5,15 @@ Task("Define-Project")
     .Description("Fill specific project information")
     .Does<BuildInfo>(info =>
 {
-    info.AddLibraryProjects("MyLibrary");
-    info.AddApplicationProjects("MyConsole");
-    info.AddTestProjects("MyTests");
+    info.PreviewNuGetFeed = "https://nuget.pkg.github.com/Kaplas80/index.json";
+    info.PreviewNuGetFeedToken = info.GitHubToken;
+    info.StableNuGetFeed = "https://nuget.pkg.github.com/Kaplas80/index.json";
+    info.StableNuGetFeedToken = info.GitHubToken;
 
-    // No need to set if you want to use nuget.org
-    info.PreviewNuGetFeed = "https://pkgs.dev.azure.com/benito356/NetDevOpsTest/_packaging/Example-Preview/nuget/v3/index.json";
-    info.StableNuGetFeed = "https://pkgs.dev.azure.com/benito356/NetDevOpsTest/_packaging/Example-Preview/nuget/v3/index.json";
+    info.AddLibraryProjects("TF3.Common.Yakuza");
+    info.AddLibraryProjects("TF3.Plugin.YakuzaKiwami2");
+    info.AddApplicationProjects("TF3.CommandLine");
+    info.AddTestProjects("TF3.Tests.Yakuza");
 });
 
 Task("Default")

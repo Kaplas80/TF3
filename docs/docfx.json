@@ -3,9 +3,7 @@
       {
         "src": [
           {
-            "files": [
-              "MyLibrary/MyLibrary.csproj"
-            ],
+            "files": [],
             "src": "../src"
           }
         ],

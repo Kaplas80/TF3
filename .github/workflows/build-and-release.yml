@@ -131,15 +131,7 @@ jobs:
           dotnet tool restore
           dotnet cake --bootstrap
 
-      # Weird way to authenticate in Azure DevOps Artifacts
-      # Then, we need to setup VSS_NUGET_EXTERNAL_FEED_ENDPOINTS
-      - name: "Install Azure Artifacts Credential Provider"
-        run: wget -qO- https://aka.ms/install-artifacts-credprovider.sh | bash
-
       - name: "Publish artifacts"
         run: dotnet cake --target=Push-Artifacts --verbosity=diagnostic
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          STABLE_NUGET_FEED_TOKEN: ${{ secrets.STABLE_NUGET_FEED_TOKEN }}
-          PREVIEW_NUGET_FEED_TOKEN: "az"  # Dummy, auth via below env var
-          VSS_NUGET_EXTERNAL_FEED_ENDPOINTS: '{"endpointCredentials": [{"endpoint":"${{ env.PREVIEW_NUGET_FEED }}", "username":"", "password":"${{ secrets.NUGET_PREVIEW_TOKEN }}"}]}'

@@ -1,0 +1,90 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26124.0
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Applications", "Applications", "{5475AC90-A16A-48B3-85DE-3482D5EA6091}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TF3.CommandLine", "Applications\TF3.CommandLine\TF3.CommandLine.csproj", "{52E81E43-1DCB-4913-8DFA-09FB9CC5CF3C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{E32C524C-9F9D-47D7-A9FA-43F3FF0EF614}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TF3.Common.Yakuza", "Libraries\TF3.Common.Yakuza\TF3.Common.Yakuza.csproj", "{98BF10CA-7384-4421-A477-F98041E2BB3D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{46B7F377-CFB6-4598-85A1-DD988D5199C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TF3.Plugin.YakuzaKiwami2", "Plugins\TF3.Plugin.YakuzaKiwami2\TF3.Plugin.YakuzaKiwami2.csproj", "{EC1F998A-B7B5-415E-A4CA-D73640063C89}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{DB799492-C2DF-41B3-96D3-5C762C6EC12E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TF3.Tests.Yakuza", "Tests\TF3.Tests.Yakuza\TF3.Tests.Yakuza.csproj", "{0D3251A7-6645-4F70-ABDC-7239C2DEBE02}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52E81E43-1DCB-4913-8DFA-09FB9CC5CF3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52E81E43-1DCB-4913-8DFA-09FB9CC5CF3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52E81E43-1DCB-4913-8DFA-09FB9CC5CF3C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{52E81E43-1DCB-4913-8DFA-09FB9CC5CF3C}.Debug|x64.Build.0 = Debug|Any CPU
+		{52E81E43-1DCB-4913-8DFA-09FB9CC5CF3C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{52E81E43-1DCB-4913-8DFA-09FB9CC5CF3C}.Debug|x86.Build.0 = Debug|Any CPU
+		{52E81E43-1DCB-4913-8DFA-09FB9CC5CF3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52E81E43-1DCB-4913-8DFA-09FB9CC5CF3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52E81E43-1DCB-4913-8DFA-09FB9CC5CF3C}.Release|x64.ActiveCfg = Release|Any CPU
+		{52E81E43-1DCB-4913-8DFA-09FB9CC5CF3C}.Release|x64.Build.0 = Release|Any CPU
+		{52E81E43-1DCB-4913-8DFA-09FB9CC5CF3C}.Release|x86.ActiveCfg = Release|Any CPU
+		{52E81E43-1DCB-4913-8DFA-09FB9CC5CF3C}.Release|x86.Build.0 = Release|Any CPU
+		{98BF10CA-7384-4421-A477-F98041E2BB3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98BF10CA-7384-4421-A477-F98041E2BB3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98BF10CA-7384-4421-A477-F98041E2BB3D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{98BF10CA-7384-4421-A477-F98041E2BB3D}.Debug|x64.Build.0 = Debug|Any CPU
+		{98BF10CA-7384-4421-A477-F98041E2BB3D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{98BF10CA-7384-4421-A477-F98041E2BB3D}.Debug|x86.Build.0 = Debug|Any CPU
+		{98BF10CA-7384-4421-A477-F98041E2BB3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98BF10CA-7384-4421-A477-F98041E2BB3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98BF10CA-7384-4421-A477-F98041E2BB3D}.Release|x64.ActiveCfg = Release|Any CPU
+		{98BF10CA-7384-4421-A477-F98041E2BB3D}.Release|x64.Build.0 = Release|Any CPU
+		{98BF10CA-7384-4421-A477-F98041E2BB3D}.Release|x86.ActiveCfg = Release|Any CPU
+		{98BF10CA-7384-4421-A477-F98041E2BB3D}.Release|x86.Build.0 = Release|Any CPU
+		{EC1F998A-B7B5-415E-A4CA-D73640063C89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC1F998A-B7B5-415E-A4CA-D73640063C89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC1F998A-B7B5-415E-A4CA-D73640063C89}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EC1F998A-B7B5-415E-A4CA-D73640063C89}.Debug|x64.Build.0 = Debug|Any CPU
+		{EC1F998A-B7B5-415E-A4CA-D73640063C89}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EC1F998A-B7B5-415E-A4CA-D73640063C89}.Debug|x86.Build.0 = Debug|Any CPU
+		{EC1F998A-B7B5-415E-A4CA-D73640063C89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC1F998A-B7B5-415E-A4CA-D73640063C89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC1F998A-B7B5-415E-A4CA-D73640063C89}.Release|x64.ActiveCfg = Release|Any CPU
+		{EC1F998A-B7B5-415E-A4CA-D73640063C89}.Release|x64.Build.0 = Release|Any CPU
+		{EC1F998A-B7B5-415E-A4CA-D73640063C89}.Release|x86.ActiveCfg = Release|Any CPU
+		{EC1F998A-B7B5-415E-A4CA-D73640063C89}.Release|x86.Build.0 = Release|Any CPU
+		{0D3251A7-6645-4F70-ABDC-7239C2DEBE02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D3251A7-6645-4F70-ABDC-7239C2DEBE02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D3251A7-6645-4F70-ABDC-7239C2DEBE02}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0D3251A7-6645-4F70-ABDC-7239C2DEBE02}.Debug|x64.Build.0 = Debug|Any CPU
+		{0D3251A7-6645-4F70-ABDC-7239C2DEBE02}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0D3251A7-6645-4F70-ABDC-7239C2DEBE02}.Debug|x86.Build.0 = Debug|Any CPU
+		{0D3251A7-6645-4F70-ABDC-7239C2DEBE02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D3251A7-6645-4F70-ABDC-7239C2DEBE02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D3251A7-6645-4F70-ABDC-7239C2DEBE02}.Release|x64.ActiveCfg = Release|Any CPU
+		{0D3251A7-6645-4F70-ABDC-7239C2DEBE02}.Release|x64.Build.0 = Release|Any CPU
+		{0D3251A7-6645-4F70-ABDC-7239C2DEBE02}.Release|x86.ActiveCfg = Release|Any CPU
+		{0D3251A7-6645-4F70-ABDC-7239C2DEBE02}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{52E81E43-1DCB-4913-8DFA-09FB9CC5CF3C} = {5475AC90-A16A-48B3-85DE-3482D5EA6091}
+		{98BF10CA-7384-4421-A477-F98041E2BB3D} = {E32C524C-9F9D-47D7-A9FA-43F3FF0EF614}
+		{EC1F998A-B7B5-415E-A4CA-D73640063C89} = {46B7F377-CFB6-4598-85A1-DD988D5199C8}
+		{0D3251A7-6645-4F70-ABDC-7239C2DEBE02} = {DB799492-C2DF-41B3-96D3-5C762C6EC12E}
+	EndGlobalSection
+EndGlobal

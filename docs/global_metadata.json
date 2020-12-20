@@ -1,13 +1,13 @@
 {
-    "_appTitle": "PleOps.Cake project template",
-    "_appFooter": "Copyright (c) 2019 Benito Palacios Sánchez",
+    "_appTitle": "Translation Framework v3",
+    "_appFooter": "Copyright (c) 2020 Kaplas",
     "_appLogoPath": "images/logo_48.png",
     "_appFaviconPath": "images/favicon.png",
     "_enableSearch": true,
     "_enableNewTab": true,
     "_gitContribute": {
         "apiSpecFolder": "docs/apidoc",
-        "repo": "https://github.com/pleonex/template-csharp",
+        "repo": "https://github.com/Kaplas80/TF3",
         "branch": "develop"
     }
 }

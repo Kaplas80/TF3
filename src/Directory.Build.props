@@ -1,19 +1,19 @@
 <Project>
     <PropertyGroup>
-        <Product>PleOps</Product>
-        <Authors>pleonex</Authors>
+        <Product>Translation Framework 3</Product>
+        <Authors>Kaplas</Authors>
         <Company>None</Company>
-        <Copyright>Copyright (C) 2020 Benito Palacios Sánchez</Copyright>
+        <Copyright>Copyright (C) 2020 Kaplas</Copyright>
 
         <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
     </PropertyGroup>
 
     <PropertyGroup>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <PackageProjectUrl>https://github.com/pleonex/template-csharp</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/pleonex/template-csharp</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/kaplas80/TF3</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/kaplas80/TF3</RepositoryUrl>
         <PackageIcon>icon.png</PackageIcon>
-        <PackageTags>net;csharp;devops;pipeline;github</PackageTags>
+        <PackageTags>net;csharp;romhacking;translation</PackageTags>
     </PropertyGroup>
 
     <!-- Deterministic and source link -->
