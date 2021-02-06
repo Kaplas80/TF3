@@ -3,7 +3,7 @@
         <Product>Translation Framework 3</Product>
         <Authors>Kaplas</Authors>
         <Company>None</Company>
-        <Copyright>Copyright (C) 2020 Kaplas</Copyright>
+        <Copyright>Copyright (C) 2021 Kaplas</Copyright>
 
         <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
     </PropertyGroup>
