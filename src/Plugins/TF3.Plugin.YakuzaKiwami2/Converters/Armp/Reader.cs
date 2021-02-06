@@ -186,7 +186,7 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
                 return;
             }
 
-            this.ReadTypes(reader, table.SetFieldType, table.FieldCount, offset);
+            ReadTypes(reader, table.SetFieldType, table.FieldCount, offset);
         }
 
         private void ReadRecordMemberInfo(DataReader reader, ArmpTable table, in int offset)
@@ -195,7 +195,7 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
                 return;
             }
 
-            this.ReadTypes(reader, table.SetRawRecordMemberInfo, table.FieldCount, offset);
+            ReadTypes(reader, table.SetRawRecordMemberInfo, table.FieldCount, offset);
         }
 
         private void ReadFieldOrder(DataReader reader, ArmpTable table, in int offset)
