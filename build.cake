@@ -11,10 +11,10 @@ Task("Define-Project")
     info.StableNuGetFeed = "https://nuget.pkg.github.com/Kaplas80/index.json";
     info.StableNuGetFeedToken = info.GitHubToken;
 
-    info.AddLibraryProjects("TF3.Common.Yakuza");
-    info.AddLibraryProjects("TF3.Plugin.YakuzaKiwami2");
-    info.AddApplicationProjects("TF3.CommandLine");
-    info.AddTestProjects("TF3.Tests.Yakuza");
+    info.AddLibraryProjects("src/Libraries/TF3.Common.Yakuza");
+    info.AddLibraryProjects("src/Plugins/TF3.Plugin.YakuzaKiwami2");
+    info.AddApplicationProjects("src/Apps/TF3.CommandLine");
+    info.AddTestProjects("src/Tests/TF3.Tests.Yakuza");
 });
 
 Task("Default")

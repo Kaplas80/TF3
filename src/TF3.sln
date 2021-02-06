@@ -1,15 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TF3.CommandLine", "TF3.CommandLine\TF3.CommandLine.csproj", "{AC276F9E-D6BE-4031-B44D-AEFCBF2F203F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TF3.CommandLine", "Apps\TF3.CommandLine\TF3.CommandLine.csproj", "{AC276F9E-D6BE-4031-B44D-AEFCBF2F203F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TF3.Common.Yakuza", "TF3.Common.Yakuza\TF3.Common.Yakuza.csproj", "{DE2185DC-C3B2-4F02-9DBE-19AAEE208055}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TF3.Common.Yakuza", "Libraries\TF3.Common.Yakuza\TF3.Common.Yakuza.csproj", "{DE2185DC-C3B2-4F02-9DBE-19AAEE208055}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TF3.Plugin.YakuzaKiwami2", "TF3.Plugin.YakuzaKiwami2\TF3.Plugin.YakuzaKiwami2.csproj", "{3F0AE5D5-EAC6-4866-8AD6-1CC4F677E8EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TF3.Plugin.YakuzaKiwami2", "Plugins\TF3.Plugin.YakuzaKiwami2\TF3.Plugin.YakuzaKiwami2.csproj", "{3F0AE5D5-EAC6-4866-8AD6-1CC4F677E8EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TF3.Tests.Yakuza", "TF3.Tests.Yakuza\TF3.Tests.Yakuza.csproj", "{3A8138B9-6CC4-4CE9-B1E4-8E6DAB92935A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TF3.Tests.Yakuza", "Tests\TF3.Tests.Yakuza\TF3.Tests.Yakuza.csproj", "{3A8138B9-6CC4-4CE9-B1E4-8E6DAB92935A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apps", "Apps", "{F80387AB-7660-409E-B182-943D1138AC26}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{1191ABD3-3D8F-4143-8EEE-87D5CC7DED59}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{8DCC4D86-9F2A-43F2-8F96-806FEBAB3E67}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7FA27372-C9AC-42EE-A5D7-34348F0D80A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,9 +27,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{AC276F9E-D6BE-4031-B44D-AEFCBF2F203F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -72,5 +77,17 @@ Global
 		{3A8138B9-6CC4-4CE9-B1E4-8E6DAB92935A}.Release|x64.Build.0 = Release|Any CPU
 		{3A8138B9-6CC4-4CE9-B1E4-8E6DAB92935A}.Release|x86.ActiveCfg = Release|Any CPU
 		{3A8138B9-6CC4-4CE9-B1E4-8E6DAB92935A}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AC276F9E-D6BE-4031-B44D-AEFCBF2F203F} = {F80387AB-7660-409E-B182-943D1138AC26}
+		{DE2185DC-C3B2-4F02-9DBE-19AAEE208055} = {1191ABD3-3D8F-4143-8EEE-87D5CC7DED59}
+		{3F0AE5D5-EAC6-4866-8AD6-1CC4F677E8EC} = {8DCC4D86-9F2A-43F2-8F96-806FEBAB3E67}
+		{3A8138B9-6CC4-4CE9-B1E4-8E6DAB92935A} = {7FA27372-C9AC-42EE-A5D7-34348F0D80A0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4E3DA445-D942-4C92-819B-E0BD07F69E85}
 	EndGlobalSection
 EndGlobal

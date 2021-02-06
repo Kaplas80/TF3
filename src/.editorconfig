@@ -174,7 +174,7 @@ dotnet_diagnostic.SA1633.severity = none # No XML-format header in source files
 dotnet_diagnostic.S1135.severity = suggestion # It's almost inevitable to have TODO but add bug ID
 
 # Special rules for test projects
-[TF3.Tests*/*.cs]
+[Tests/**/*.cs]
 dotnet_diagnostic.CS1591.severity = none # Disable documentation
 dotnet_diagnostic.CA1001.severity = none # No need to implement IDisposable in test classes with cleanup.
 dotnet_diagnostic.CA1034.severity = none # Public types in test classes for testing implementations
