@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFrameworks>net5.0</TargetFrameworks>
@@ -10,6 +10,10 @@
 
   <ItemGroup>
     <PackageReference Include="Yarhl" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Libraries\TF3.Common.Yakuza\TF3.Common.Yakuza.csproj" />
   </ItemGroup>
 
 </Project>
