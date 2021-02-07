@@ -79,30 +79,6 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
             }
         }
 
-        private static bool ReadBooleanValue(DataReader reader, int dataOffset, int index)
-        {
-            int byteCount = Math.DivRem(index, 8, out int bitCount);
-
-            reader.Stream.PushToPosition(dataOffset + byteCount);
-
-            byte current = reader.ReadByte();
-            current <<= bitCount;
-            bool result = (current & 0x80) == 0x80;
-
-            reader.Stream.PopPosition();
-
-            return result;
-        }
-
-        private static object ReadNumericValue(DataReader reader, int dataOffset, int index, Type type, int typeSize)
-        {
-            reader.Stream.PushToPosition(dataOffset + (index * typeSize));
-            object result = reader.ReadByType(type);
-            reader.Stream.PopPosition();
-
-            return result;
-        }
-
         private ArmpTable ReadTable(DataReader reader, long fileOffset)
         {
             reader.Stream.PushToPosition(fileOffset);
@@ -140,7 +116,7 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
                 return;
             }
 
-            ReadBits(reader, table.SetRecordExistence, table.RecordCount, offset);
+            ReadBits(reader, (i, v) => table.SetRecordExistence(i, (bool)v), table.RecordCount, offset);
         }
 
         private void ReadFieldExistence(DataReader reader, ArmpTable table, in int offset)
@@ -149,7 +125,7 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
                 return;
             }
 
-            ReadBits(reader, table.SetFieldExistence, table.FieldCount, offset);
+            ReadBits(reader, (i, v) => table.SetFieldExistence(i, (bool)v), table.FieldCount, offset);
         }
 
         private void ReadRecordIds(DataReader reader, ArmpTable table, in int offset)
@@ -252,70 +228,61 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
             reader.Stream.PushToPosition(offset);
 
             for (int i = 0; i < table.FieldCount; i++) {
+                FieldType fieldType = table.GetRawRecordMemberInfo(i);
                 int dataOffset = reader.ReadInt32();
-                if (dataOffset == -1) {
+                if (dataOffset == -1 || fieldType == FieldType.Unused) {
                     continue;
                 }
 
-                FieldType fieldType = table.GetRawRecordMemberInfo(i);
-
-                for (int j = 0; j < table.RecordCount; j++) {
-                    object value = null;
-                    switch (fieldType) {
-                        case FieldType.Unused:
-                            break;
-                        case FieldType.UInt8:
-                            value = ReadNumericValue(reader, dataOffset, j, typeof(byte), sizeof(byte));
-                            break;
-                        case FieldType.UInt16:
-                            value = ReadNumericValue(reader, dataOffset, j, typeof(ushort), sizeof(ushort));
-                            break;
-                        case FieldType.UInt32:
-                            value = ReadNumericValue(reader, dataOffset, j, typeof(uint), sizeof(uint));
-                            break;
-                        case FieldType.UInt64:
-                            value = ReadNumericValue(reader, dataOffset, j, typeof(ulong), sizeof(ulong));
-                            break;
-                        case FieldType.Int8:
-                            value = ReadNumericValue(reader, dataOffset, j, typeof(sbyte), sizeof(sbyte));
-                            break;
-                        case FieldType.Int16:
-                            value = ReadNumericValue(reader, dataOffset, j, typeof(short), sizeof(short));
-                            break;
-                        case FieldType.Int32:
-                            value = ReadNumericValue(reader, dataOffset, j, typeof(int), sizeof(int));
-                            break;
-                        case FieldType.Int64:
-                            value = ReadNumericValue(reader, dataOffset, j, typeof(long), sizeof(long));
-                            break;
-                        case FieldType.Float16:
-                            throw new FormatException("Float16 not supported.");
-                        case FieldType.Float32:
-                            value = ReadNumericValue(reader, dataOffset, j, typeof(float), sizeof(float));
-                            break;
-                        case FieldType.Float64:
-                            value = ReadNumericValue(reader, dataOffset, j, typeof(double), sizeof(double));
-                            break;
-                        case FieldType.Boolean:
-                            // Booleans are read as a bitmask
-                            value = ReadBooleanValue(reader, dataOffset, j);
-                            break;
-                        case FieldType.String:
-                            // Strings are stored as Value String index
-                            value = ReadNumericValue(reader, dataOffset, j, typeof(int), sizeof(int));
-                            break;
-                        case FieldType.Table:
-                            long tablePointer = (long)ReadNumericValue(reader, dataOffset, j, typeof(long), sizeof(long));
-                            if (tablePointer > 0) {
-                                value = ReadTable(reader, tablePointer);
-                            }
-
-                            break;
-                        default:
-                            throw new ArgumentOutOfRangeException($"Unknown field type: {fieldType}");
-                    }
-
-                    table.SetValue(j, i, value);
+                Action<int, object> setValue = (index, value) => table.SetValue(index, i, value);
+                switch (fieldType) {
+                    case FieldType.Unused:
+                        break;
+                    case FieldType.UInt8:
+                        ReadNumbers(reader, setValue, table.RecordCount, dataOffset, typeof(byte));
+                        break;
+                    case FieldType.UInt16:
+                        ReadNumbers(reader, setValue, table.RecordCount, dataOffset, typeof(ushort));
+                        break;
+                    case FieldType.UInt32:
+                        ReadNumbers(reader, setValue, table.RecordCount, dataOffset, typeof(uint));
+                        break;
+                    case FieldType.UInt64:
+                        ReadNumbers(reader, setValue, table.RecordCount, dataOffset, typeof(ulong));
+                        break;
+                    case FieldType.Int8:
+                        ReadNumbers(reader, setValue, table.RecordCount, dataOffset, typeof(sbyte));
+                        break;
+                    case FieldType.Int16:
+                        ReadNumbers(reader, setValue, table.RecordCount, dataOffset, typeof(short));
+                        break;
+                    case FieldType.Int32:
+                        ReadNumbers(reader, setValue, table.RecordCount, dataOffset, typeof(int));
+                        break;
+                    case FieldType.Int64:
+                        ReadNumbers(reader, setValue, table.RecordCount, dataOffset, typeof(long));
+                        break;
+                    case FieldType.Float16:
+                        throw new FormatException("Float16 not supported.");
+                    case FieldType.Float32:
+                        ReadNumbers(reader, setValue, table.RecordCount, dataOffset, typeof(float));
+                        break;
+                    case FieldType.Float64:
+                        ReadNumbers(reader, setValue, table.RecordCount, dataOffset, typeof(double));
+                        break;
+                    case FieldType.Boolean:
+                        // Booleans are read as a bitmask
+                        ReadBits(reader, setValue, table.RecordCount, dataOffset);
+                        break;
+                    case FieldType.String:
+                        // Strings are stored as Value String index
+                        ReadNumbers(reader, setValue, table.RecordCount, dataOffset, typeof(int));
+                        break;
+                    case FieldType.Table:
+                        ReadSubTables(reader, setValue, table.RecordCount, dataOffset);
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException($"Unknown field type: {fieldType}");
                 }
             }
 
@@ -363,14 +330,14 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
             }
         }
 
-        private void ReadBits(DataReader reader, Action<int, bool> setBitAsBoolean, in int bitCount, in int offset)
+        private void ReadBits(DataReader reader, Action<int, object> setBitAsBoolean, in int bitCount, in int offset)
         {
             reader.Stream.PushToPosition(offset);
 
             byte current = reader.ReadByte();
             int bitsLeft = 8;
             for (int i = 0; i < bitCount; i++) {
-                bool exists = (current & 0x01) == 0x01;
+                bool isTrue = (current & 0x01) == 0x01;
                 current >>= 0x01;
                 bitsLeft--;
                 if (bitsLeft == 0) {
@@ -378,7 +345,7 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
                     bitsLeft = 8;
                 }
 
-                setBitAsBoolean(i, exists);
+                setBitAsBoolean(i, isTrue);
             }
 
             reader.Stream.PopPosition();
@@ -399,12 +366,40 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
             reader.Stream.PopPosition();
         }
 
+        private void ReadNumbers(DataReader reader, Action<int, object> setValue, in int count, in int offset, in Type type)
+        {
+            reader.Stream.PushToPosition(offset);
+            for (int i = 0; i < count; i++) {
+                object value = reader.ReadByType(type);
+                setValue(i, value);
+            }
+
+            reader.Stream.PopPosition();
+        }
+
         private void ReadTypes(DataReader reader, Action<int, FieldType> setType, in int count, in int offset)
         {
             reader.Stream.PushToPosition(offset);
             for (int i = 0; i < count; i++) {
                 var value = (FieldType)Enum.ToObject(typeof(FieldType), reader.ReadByte());
                 setType(i, value);
+            }
+
+            reader.Stream.PopPosition();
+        }
+
+        private void ReadSubTables(DataReader reader, Action<int, object> setValue, in int count, in int offset)
+        {
+            reader.Stream.PushToPosition(offset);
+
+            for (int i = 0; i < count; i++) {
+                ArmpTable subTable = null;
+                int subTablePointer = reader.ReadInt32();
+                if (subTablePointer > 0) {
+                    subTable = ReadTable(reader, subTablePointer);
+                }
+
+                setValue(i, subTable);
             }
 
             reader.Stream.PopPosition();

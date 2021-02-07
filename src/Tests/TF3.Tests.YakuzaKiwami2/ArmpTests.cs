@@ -27,10 +27,8 @@ namespace TF3.Tests.YakuzaKiwami2
     [TestFixture]
     public class ArmpTests
     {
-        [Test]
-        public void WriteArmp()
-        {
-            byte[] data = {
+        // trophy.bin
+        private static readonly byte[] ArmpData = {
                 0x61, 0x72, 0x6D, 0x70, 0x00, 0x00, 0x00, 0x00, 0x0C, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00,
                 0x20, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
                 0xE1, 0x00, 0x00, 0x00, 0x0B, 0x00, 0x00, 0x00, 0x76, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -905,11 +903,31 @@ namespace TF3.Tests.YakuzaKiwami2
                 0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
             };
 
-            DataStream original = DataStreamFactory.FromArray(data, 0, data.Length);
-            Node node = NodeFactory.FromSubstream("ArmpTest", original, 0, data.Length);
+        [Test]
+        public void WriteArmp()
+        {
+            DataStream original = DataStreamFactory.FromArray(ArmpData, 0, ArmpData.Length);
+            Node node = NodeFactory.FromSubstream("ArmpTest", original, 0, ArmpData.Length);
             _ = node.TransformWith<Reader>();
-
             Assert.IsTrue(node.Stream == null);
+
+            _ = node.TransformWith<Writer>();
+            Assert.IsFalse(node.Stream == null);
+
+            Assert.IsTrue(original.Compare(node.Stream));
+            Assert.AreEqual(original.Length, node.Stream.Length);
+        }
+
+        [Test]
+        public void ExportToXlsx()
+        {
+            DataStream original = DataStreamFactory.FromArray(ArmpData, 0, ArmpData.Length);
+            Node node = NodeFactory.FromSubstream("ArmpTest", original, 0, ArmpData.Length);
+            _ = node.TransformWith<Reader>();
+            Assert.IsTrue(node.Stream == null);
+
+            _ = node.TransformWith<XlsxWriter>();
+            Assert.IsFalse(node.Stream == null);
         }
     }
 }

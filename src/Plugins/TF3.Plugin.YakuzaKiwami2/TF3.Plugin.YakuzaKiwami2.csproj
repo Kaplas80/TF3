@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="Yarhl" />
+    <PackageReference Include="EPPlus" />
   </ItemGroup>
 
   <ItemGroup>

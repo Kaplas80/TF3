@@ -15,5 +15,6 @@
         <PackageVersion Include="Roslynator.Analyzers" Version="3.0.0" />
 
         <PackageVersion Include="DotNetZip" Version="1.15.0" />
+        <PackageVersion Include="EPPlus" Version="5.5.3" />
     </ItemGroup>
 </Project>
