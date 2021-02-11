@@ -19,6 +19,7 @@
 // SOFTWARE.
 namespace TF3.Tests.YakuzaKiwami2
 {
+    using System.IO;
     using NUnit.Framework;
     using TF3.Plugin.YakuzaKiwami2.Converters.Armp;
     using Yarhl.FileSystem;

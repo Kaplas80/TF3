@@ -148,7 +148,7 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
         private void ReadValueStrings(DataReader reader, ArmpTable table, in int offset)
         {
-            if (offset <= 0) {
+            if (offset <= 0 || table.ValueStringCount == 0) {
                 return;
             }
 
@@ -394,10 +394,13 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
             for (int i = 0; i < count; i++) {
                 ArmpTable subTable = null;
-                int subTablePointer = reader.ReadInt32();
+                long subTablePointer = reader.ReadInt64();
+                reader.Stream.PushCurrentPosition();
                 if (subTablePointer > 0) {
                     subTable = ReadTable(reader, subTablePointer);
                 }
+
+                reader.Stream.PopPosition();
 
                 setValue(i, subTable);
             }

@@ -45,7 +45,7 @@ namespace TF3.Plugin.YakuzaKiwami2.Types
         /// <summary>
         /// Gets or sets a value indicating whether the records are invalid (??).
         /// </summary>
-        [BinaryBoolean(ReadAs = typeof(int), WriteAs = typeof(int), TrueValue = 0xFFFFFFFF, FalseValue = 0x00000000)]
+        [BinaryBoolean(ReadAs = typeof(int), WriteAs = typeof(int), TrueValue = -1, FalseValue = 0)]
         public bool RecordInvalid { get; set; }
 
         /// <summary>
@@ -96,7 +96,7 @@ namespace TF3.Plugin.YakuzaKiwami2.Types
         /// <summary>
         /// Gets or sets a value indicating whether the fields are invalid (??).
         /// </summary>
-        [BinaryBoolean(ReadAs = typeof(int), WriteAs = typeof(int), TrueValue = 0xFFFFFFFF, FalseValue = 0x00000000)]
+        [BinaryBoolean(ReadAs = typeof(int), WriteAs = typeof(int), TrueValue = -1, FalseValue = 0)]
         public bool FieldInvalid { get; set; }
 
         /// <summary>

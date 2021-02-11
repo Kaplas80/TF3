@@ -20,6 +20,7 @@
 namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 {
     using System;
+    using System.Drawing;
     using OfficeOpenXml;
     using TF3.Plugin.YakuzaKiwami2.Enums;
     using TF3.Plugin.YakuzaKiwami2.Formats;
@@ -46,6 +47,11 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
 
             using var package = new ExcelPackage();
+
+            OfficeOpenXml.Style.XmlAccess.ExcelNamedStyleXml namedStyle = package.Workbook.Styles.CreateNamedStyle("HyperLink");
+            namedStyle.Style.Font.UnderLine = true;
+            namedStyle.Style.Font.Color.SetColor(Color.Blue);
+
             TableToSheet(source, "Main", package);
 
             byte[] data = package.GetAsByteArray();
@@ -62,27 +68,27 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
                 TableToSheet(table.Indexer, $"{name}_Idx", package);
             }
 
-            sheet.Cells["A1"].Value = "TABLE INFO";
-            sheet.Cells["A1:B1"].Merge = true;
-            sheet.Cells["A2"].Value = "ID";
-            sheet.Cells["B2"].Value = table.Id;
-            sheet.Cells["A3"].Value = "FLAGS";
-            sheet.Cells["B3"].Value = table.Flags;
-            sheet.Cells["A4"].Value = "FIELD_INVALID";
-            sheet.Cells["B4"].Value = table.AreFieldsInvalid;
-            sheet.Cells["A5"].Value = "RECORD_INVALID";
-            sheet.Cells["B5"].Value = table.AreRecordsInvalid;
-            sheet.Cells["A6"].Value = "INDEXER";
-            sheet.Cells["B6"].Value = table.Indexer != null;
+            sheet.Cells["A2"].Value = "TABLE INFO";
+            sheet.Cells["A2:B2"].Merge = true;
+            sheet.Cells["A3"].Value = "ID";
+            sheet.Cells["B3"].Value = table.Id;
+            sheet.Cells["A4"].Value = "FLAGS";
+            sheet.Cells["B4"].Value = table.Flags;
+            sheet.Cells["A5"].Value = "FIELD_INVALID";
+            sheet.Cells["B5"].Value = table.AreFieldsInvalid;
+            sheet.Cells["A6"].Value = "RECORD_INVALID";
+            sheet.Cells["B6"].Value = table.AreRecordsInvalid;
+            sheet.Cells["A7"].Value = "INDEXER";
+            sheet.Cells["B7"].Value = table.Indexer != null;
 
-            sheet.Cells["A8"].Value = "VALUE STRINGS";
-            sheet.Cells["A8:B8"].Merge = true;
-            sheet.Cells["A9"].Value = "Index";
-            sheet.Cells["B9"].Value = "String";
+            sheet.Cells["A9"].Value = "VALUE STRINGS";
+            sheet.Cells["A9:B9"].Merge = true;
+            sheet.Cells["A10"].Value = "Index";
+            sheet.Cells["B10"].Value = "String";
 
             for (int i = 0; i < table.ValueStringCount; i++) {
-                sheet.Cells[10 + i, 1].Value = i;
-                sheet.Cells[10 + i, 2].Value = table.GetValueString(i);
+                sheet.Cells[11 + i, 1].Value = i;
+                sheet.Cells[11 + i, 2].Value = table.GetValueString(i);
             }
 
             sheet.Cells["G1"].Value = "Order";
@@ -142,8 +148,13 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
                         }
 
                         int sheetIndex = package.Workbook.Worksheets.Count + 1;
-                        sheet.Cells[6 + recordIndex, 8 + fieldIndex].Value = $"Sheet {sheetIndex}";
                         TableToSheet((ArmpTable)subTable, $"Sheet {sheetIndex}", package);
+                        sheet.Cells[6 + recordIndex, 8 + fieldIndex].Value = $"Sheet {sheetIndex}";
+                        sheet.Cells[6 + recordIndex, 8 + fieldIndex].Hyperlink = new Uri($"#'Sheet {sheetIndex}'!A1", UriKind.Relative);
+                        sheet.Cells[6 + recordIndex, 8 + fieldIndex].StyleName = "Hyperlink";
+                        package.Workbook.Worksheets[$"Sheet {sheetIndex}"].Cells["A1"].Value = "Return";
+                        package.Workbook.Worksheets[$"Sheet {sheetIndex}"].Cells["A1"].Hyperlink = new Uri($"#'{sheet.Name}'!{sheet.Cells[6 + recordIndex, 8 + fieldIndex].Address}", UriKind.Relative);
+                        package.Workbook.Worksheets[$"Sheet {sheetIndex}"].Cells["A1"].StyleName = "Hyperlink";
                     }
                 }
             }

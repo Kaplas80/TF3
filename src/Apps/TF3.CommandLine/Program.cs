@@ -18,6 +18,13 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 namespace TF3.CommandLine {
+    using System;
+    using System.IO;
+    using TF3.Plugin.YakuzaKiwami2.Converters.Armp;
+    using TF3.Plugin.YakuzaKiwami2.Formats;
+    using Yarhl.FileSystem;
+    using Yarhl.IO;
+
     /// <summary>
     /// Main program class.
     /// </summary>
@@ -29,6 +36,56 @@ namespace TF3.CommandLine {
         public static void Main(string[] args)
         {
             // Method intentionally left empty.
+            string path = @"H:\tmp\Yakuza Kiwami 2\data\db.par.unpack\en";
+            
+            foreach (string file in Directory.EnumerateFiles(path, "*.bin")) {
+                Node node = NodeFactory.FromFile(file);
+                _ = node.TransformWith<Reader>();
+                ArmpTable expected = node.GetFormatAs<ArmpTable>();
+
+                _ = node.TransformWith<Writer>();
+                BinaryFormat converted = node.GetFormatAs<BinaryFormat>();
+                converted.Stream.WriteTo(string.Concat(file, ".test"));
+
+                _ = node.TransformWith<Reader>();
+                ArmpTable result = node.GetFormatAs<ArmpTable>();
+
+                if (!result.Equals(expected)) {
+                    Console.WriteLine(file);
+                } else {
+                    File.Delete(string.Concat(file, ".test"));
+                }
+            }
+            
+
+            /*
+            string fileName = "character_generate_property_template.bin";
+            string file1 = Path.Combine(path, fileName);
+            Node node = NodeFactory.FromFile(file1);
+            _ = node.TransformWith<Reader>();
+            ArmpTable expected = node.GetFormatAs<ArmpTable>();
+
+            _ = node.TransformWith<Writer>();
+            //node.Stream.WriteTo(string.Concat(file1, ".test"));
+            
+            _ = node.TransformWith<Reader>();
+            ArmpTable result = node.GetFormatAs<ArmpTable>();
+            _ = result.Equals(expected);
+            // _ = node.TransformWith<XlsxWriter>();
+            // node.Stream.WriteTo(string.Concat(file1, ".xlsx"));
+
+            /*
+            ArmpTable expected = node.GetFormatAs<ArmpTable>();
+            _ = node.TransformWith<Writer>();
+            node.Stream.WriteTo(string.Concat(file1, ".test"));
+
+            string file2 = Path.Combine(path, string.Concat(fileName, ".test"));
+            node = NodeFactory.FromFile(file2);
+            _ = node.TransformWith<Reader>();
+            ArmpTable result = node.GetFormatAs<ArmpTable>();
+
+            _ = result.Equals(expected);
+            */
         }
     }
 }

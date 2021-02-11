@@ -19,6 +19,7 @@
 // SOFTWARE.
 namespace TF3.Plugin.YakuzaKiwami2.Formats
 {
+    using System;
     using System.Linq;
     using TF3.Plugin.YakuzaKiwami2.Enums;
     using Yarhl.FileFormat;
@@ -26,7 +27,7 @@ namespace TF3.Plugin.YakuzaKiwami2.Formats
     /// <summary>
     /// Dragon Engine ARMP table.
     /// </summary>
-    public class ArmpTable : IFormat
+    public class ArmpTable : IFormat, IEquatable<ArmpTable>
     {
         private readonly Record[] records;
         private readonly Field[] fields;
@@ -63,9 +64,9 @@ namespace TF3.Plugin.YakuzaKiwami2.Formats
         }
 
         /// <summary>
-        /// Gets the number of value strings.
+        /// Gets the number of records.
         /// </summary>
-        public int ValueStringCount { get; }
+        public int RecordCount { get; }
 
         /// <summary>
         /// Gets the number of fields.
@@ -73,9 +74,29 @@ namespace TF3.Plugin.YakuzaKiwami2.Formats
         public int FieldCount { get; }
 
         /// <summary>
-        /// Gets the number of records.
+        /// Gets the number of value strings.
         /// </summary>
-        public int RecordCount { get; }
+        public int ValueStringCount { get; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether the table has record existence and field order values.
+        /// </summary>
+        public bool AreRecordsInvalid { get; set; }
+
+        /// <summary>
+        /// Gets a value indicating whether the table has record ids.
+        /// </summary>
+        public bool HasRecordIds => records.Any(x => !string.IsNullOrEmpty(x.Id));
+
+        /// <summary>
+        /// Gets a value indicating whether the table has record existence data.
+        /// </summary>
+        public bool HasRecordExistenceData => records.Any(x => x.Exists);
+
+        /// <summary>
+        /// Gets a value indicating whether the table has field types.
+        /// </summary>
+        public bool HasFieldTypes => fields.Any(x => x.Type != FieldType.Unused);
 
         /// <summary>
         /// Gets the table id.
@@ -88,24 +109,29 @@ namespace TF3.Plugin.YakuzaKiwami2.Formats
         public byte Flags { get; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the table has field existence and field order values.
+        /// Gets a value indicating whether the table has field ids.
+        /// </summary>
+        public bool HasFieldIds => fields.Any(x => !string.IsNullOrEmpty(x.Id));
+
+        /// <summary>
+        /// Gets or sets a value indicating whether the table has field existence values.
         /// </summary>
         public bool AreFieldsInvalid { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the table has record existence and field order values.
+        /// Gets a value indicating whether the table has empty values.
         /// </summary>
-        public bool AreRecordsInvalid { get; set; }
+        public bool HasEmptyValues => records.Any(x => x.HasNullContent);
 
         /// <summary>
-        /// Gets or sets the table indexer.
+        /// Gets a value indicating whether the table has record order values.
         /// </summary>
-        public ArmpTable Indexer { get; set; }
+        public bool HasRecordOrder => records.Any(x => x.Order != -1);
 
         /// <summary>
-        /// Gets a value indicating whether the table has record existence data.
+        /// Gets a value indicating whether the table has field order values.
         /// </summary>
-        public bool HasRecordExistenceData => records.Any(x => x.Exists);
+        public bool HasFieldOrder => fields.Any(x => x.Order != -1);
 
         /// <summary>
         /// Gets a value indicating whether the table has field existence data.
@@ -113,19 +139,14 @@ namespace TF3.Plugin.YakuzaKiwami2.Formats
         public bool HasFieldExistenceData => fields.Any(x => x.Exists);
 
         /// <summary>
-        /// Gets a value indicating whether the table has record ids.
+        /// Gets or sets the table indexer.
         /// </summary>
-        public bool HasRecordIds => records.Any(x => !string.IsNullOrEmpty(x.Id));
+        public ArmpTable Indexer { get; set; }
 
         /// <summary>
-        /// Gets a value indicating whether the table has field ids.
+        /// Gets a value indicating whether the table has field info data.
         /// </summary>
-        public bool HasFieldIds => fields.Any(x => !string.IsNullOrEmpty(x.Id));
-
-        /// <summary>
-        /// Gets a value indicating whether the table has field types.
-        /// </summary>
-        public bool HasFieldTypes => fields.Any(x => x.Type != FieldType.Unused);
+        public bool HasFieldInfoData => records.Any(x => x.FieldInfo > 0);
 
         /// <summary>
         /// Gets a value string.
@@ -317,7 +338,48 @@ namespace TF3.Plugin.YakuzaKiwami2.Formats
         /// <param name="isNull">The content is NULL.</param>
         public void SetIsNullValue(int recordIndex, int fieldIndex, bool isNull) => records[recordIndex].SetIsNullContent(fieldIndex, isNull);
 
-        private class Record
+        /// <inheritdoc/>
+        public bool Equals(ArmpTable other)
+        {
+            bool checks = (Id == other.Id) && (Flags == other.Flags) && (RecordCount == other.RecordCount) && (FieldCount == other.FieldCount) && (ValueStringCount == other.ValueStringCount);
+            if (!checks) {
+                return false;
+            }
+
+            for (int i = 0; i < RecordCount; i++) {
+                if (!records[i].Equals(other.records[i])) {
+                    return false;
+                }
+            }
+
+            for (int i = 0; i < FieldCount; i++) {
+                if (!fields[i].Equals(other.fields[i])) {
+                    return false;
+                }
+            }
+
+            for (int i = 0; i < ValueStringCount; i++) {
+                if (!valueStrings[i].Equals(other.valueStrings[i])) {
+                    return false;
+                }
+            }
+
+            if ((Indexer != null && other.Indexer == null) || (Indexer == null && other.Indexer != null)) {
+                return false;
+            }
+
+            if (Indexer == null && other.Indexer == null) {
+                return true;
+            }
+
+            if (!Indexer.Equals(other.Indexer)) {
+                return false;
+            }
+
+            return true;
+        }
+
+        private class Record : IEquatable<Record>
         {
             private readonly object[] contents;
             private readonly bool[] nullContents;
@@ -343,12 +405,54 @@ namespace TF3.Plugin.YakuzaKiwami2.Formats
 
             public object GetContent(int fieldIndex) => contents[fieldIndex];
 
+            public bool HasNullContent => nullContents.Any(x => x);
+
             public bool GetIsNullContent(int fieldIndex) => nullContents[fieldIndex];
 
             public void SetIsNullContent(int fieldIndex, bool isNull) => nullContents[fieldIndex] = isNull;
+
+            public bool Equals(Record other)
+            {
+                bool check = (Id == other.Id) && (Exists == other.Exists) && (Order == other.Order) && (FieldInfo == other.FieldInfo);
+                if (!check) {
+                    return false;
+                }
+
+                for (int i = 0; i < contents.Length; i++) {
+                    if (contents[i] == null && other.contents[i] != null) {
+                        return false;
+                    }
+
+                    if (contents[i] != null && other.contents[i] == null) {
+                        return false;
+                    }
+
+                    if (contents[i] != null && other.contents[i] != null) {
+                        if (contents[i] is ArmpTable && other.contents[i] is ArmpTable) {
+                            ArmpTable t1 = contents[i] as ArmpTable;
+                            ArmpTable t2 = other.contents[i] as ArmpTable;
+                            if (!t1.Equals(t2)) {
+                                return false;
+                            }
+                        } else {
+                            if (!contents[i].Equals(other.contents[i])) {
+                                return false;
+                            }
+                        }
+                    }
+                }
+
+                for (int i = 0; i < nullContents.Length; i++) {
+                    if (!nullContents[i].Equals(other.nullContents[i])) {
+                        return false;
+                    }
+                }
+
+                return true;
+            }
         }
 
-        private class Field
+        private class Field : IEquatable<Field>
         {
             public Field()
             {
@@ -368,6 +472,17 @@ namespace TF3.Plugin.YakuzaKiwami2.Formats
             public int Order { get; set; }
 
             public bool Exists { get; set; }
+
+            public bool Equals(Field other)
+            {
+                bool check = (Id == other.Id) && (Type == other.Type) && (RawType == other.RawType) && (Order == other.Order) && (Exists == other.Exists);
+
+                if (!check) {
+                    return false;
+                }
+
+                return true;
+            }
         }
     }
 }
