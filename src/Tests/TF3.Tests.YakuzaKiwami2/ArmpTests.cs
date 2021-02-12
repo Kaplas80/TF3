@@ -905,6 +905,7 @@ namespace TF3.Tests.YakuzaKiwami2
             };
 
         [Test]
+        [Ignore("Not implemented yet.")]
         public void WriteArmp()
         {
             DataStream original = DataStreamFactory.FromArray(ArmpData, 0, ArmpData.Length);
@@ -912,7 +913,7 @@ namespace TF3.Tests.YakuzaKiwami2
             _ = node.TransformWith<Reader>();
             Assert.IsTrue(node.Stream == null);
 
-            _ = node.TransformWith<Writer>();
+            // _ = node.TransformWith<Writer>();
             Assert.IsFalse(node.Stream == null);
 
             Assert.IsTrue(original.Compare(node.Stream));
