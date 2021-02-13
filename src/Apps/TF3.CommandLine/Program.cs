@@ -18,13 +18,6 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 namespace TF3.CommandLine {
-    using System;
-    using System.IO;
-    using TF3.Plugin.YakuzaKiwami2.Converters.Armp;
-    using TF3.Plugin.YakuzaKiwami2.Formats;
-    using Yarhl.FileSystem;
-    using Yarhl.IO;
-
     /// <summary>
     /// Main program class.
     /// </summary>
@@ -36,14 +29,6 @@ namespace TF3.CommandLine {
         public static void Main(string[] args)
         {
             // Method intentionally left empty.
-            string path = @"H:\tmp\Yakuza Kiwami 2\data\db.par.unpack\en";
-            foreach (string file in Directory.EnumerateFiles(path, "*.bin")) {
-                Node node = NodeFactory.FromFile(file);
-                _ = node.TransformWith<Reader>();
-                _ = node.TransformWith<XlsxWriter>();
-                BinaryFormat converted = node.GetFormatAs<BinaryFormat>();
-                converted.Stream.WriteTo(string.Concat(file, ".xlsx"));
-            }
         }
     }
 }

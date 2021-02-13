@@ -75,9 +75,9 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
             sheet.Cells["A4"].Value = "FLAGS";
             sheet.Cells["B4"].Value = table.Flags;
             sheet.Cells["A5"].Value = "FIELD_INVALID";
-            sheet.Cells["B5"].Value = table.AreFieldsInvalid;
+            sheet.Cells["B5"].Value = table.FieldInvalid;
             sheet.Cells["A6"].Value = "RECORD_INVALID";
-            sheet.Cells["B6"].Value = table.AreRecordsInvalid;
+            sheet.Cells["B6"].Value = table.RecordInvalid;
             sheet.Cells["A7"].Value = "INDEXER";
             sheet.Cells["B7"].Value = table.Indexer != null;
 
@@ -96,32 +96,34 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
             sheet.Cells["F5"].Value = "Existence";
 
             for (int recordIndex = 0; recordIndex < table.RecordCount; recordIndex++) {
-                sheet.Cells[6 + recordIndex, 4].Value = table.RecordOrder != null && table.RecordOrder.Length > 0 ? table.RecordOrder[recordIndex] : -1;
-                sheet.Cells[6 + recordIndex, 5].Value = table.FieldInfo != null && table.FieldInfo.Length > 0 ? table.FieldInfo[recordIndex] : -1;
-                sheet.Cells[6 + recordIndex, 6].Value = table.RecordExistence != null && table.RecordExistence.Length > 0 && table.RecordExistence[recordIndex];
-                sheet.Cells[6 + recordIndex, 7].Value = table.RecordIds != null && table.RecordIds.Length > 0 ? table.RecordIds[recordIndex] : $"Record {recordIndex}";
+                sheet.Cells[6 + recordIndex, 4].Value = table.RecordOrder?.Length > 0 ? table.RecordOrder[recordIndex] : -1;
+                sheet.Cells[6 + recordIndex, 5].Value = table.FieldInfo?.Length > 0 ? table.FieldInfo[recordIndex] : -1;
+                sheet.Cells[6 + recordIndex, 6].Value = table.RecordExistence?.Length > 0 && table.RecordExistence[recordIndex];
+                sheet.Cells[6 + recordIndex, 7].Value = table.RecordIds?.Length > 0 ? table.RecordIds[recordIndex] : $"Record {recordIndex}";
             }
 
             sheet.Cells["G1"].Value = "Order";
             sheet.Cells["G2"].Value = "Type";
             sheet.Cells["G3"].Value = "Raw Type";
-            sheet.Cells["G4"].Value = "Existence";
-            sheet.Cells["G5"].Value = "ID";
+            sheet.Cells["G4"].Value = "Game Var";
+            sheet.Cells["G5"].Value = "Existence";
+            sheet.Cells["G6"].Value = "ID";
 
             for (int fieldIndex = 0; fieldIndex < table.FieldCount; fieldIndex++) {
-                sheet.Cells[1, 8 + fieldIndex].Value = table.FieldOrder != null && table.FieldOrder.Length > 0 ? table.FieldOrder[fieldIndex] : -1;
-                sheet.Cells[2, 8 + fieldIndex].Value = table.FieldTypes != null && table.FieldTypes.Length > 0 ? table.FieldTypes[fieldIndex] : FieldType.Unused;
-                sheet.Cells[3, 8 + fieldIndex].Value = table.RawRecordMemberInfo != null && table.RawRecordMemberInfo.Length > 0 ? table.RawRecordMemberInfo[fieldIndex] : FieldType.Unused;
-                sheet.Cells[4, 8 + fieldIndex].Value = table.FieldExistence != null && table.FieldExistence.Length > 0 && table.FieldExistence[fieldIndex];
-                sheet.Cells[5, 8 + fieldIndex].Value = table.FieldIds != null && table.FieldIds.Length > 0 ? table.FieldIds[fieldIndex] : $"Field {fieldIndex}";
+                sheet.Cells[1, 8 + fieldIndex].Value = table.FieldOrder?.Length > 0 ? table.FieldOrder[fieldIndex] : -1;
+                sheet.Cells[2, 8 + fieldIndex].Value = table.FieldTypes?.Length > 0 ? table.FieldTypes[fieldIndex] : FieldType.Unused;
+                sheet.Cells[3, 8 + fieldIndex].Value = table.RawRecordMemberInfo?.Length > 0 ? table.RawRecordMemberInfo[fieldIndex] : FieldType.Unused;
+                sheet.Cells[4, 8 + fieldIndex].Value = table.GameVarFieldType?.Length > 0 ? table.GameVarFieldType[fieldIndex] : string.Empty;
+                sheet.Cells[5, 8 + fieldIndex].Value = table.FieldExistence?.Length > 0 && table.FieldExistence[fieldIndex];
+                sheet.Cells[6, 8 + fieldIndex].Value = table.FieldIds?.Length > 0 ? table.FieldIds[fieldIndex] : $"Field {fieldIndex}";
 
                 object[] data = table.Values[fieldIndex];
                 if (data == null) {
                     continue;
                 }
 
-                if (table.RawRecordMemberInfo != null && table.RawRecordMemberInfo.Length > 0) {
-                    var memberInfo = table.RawRecordMemberInfo[fieldIndex];
+                if (table.RawRecordMemberInfo?.Length > 0) {
+                    FieldType memberInfo = table.RawRecordMemberInfo[fieldIndex];
                     for (int recordIndex = 0; recordIndex < table.RecordCount; recordIndex++) {
                         object obj = data[recordIndex];
                         if (obj == null) {
@@ -130,23 +132,23 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
                         if (memberInfo != FieldType.Table) {
                             string value = obj.ToString();
-                            if (table.EmptyValues != null && table.EmptyValues.Length > 0 && table.EmptyValues[fieldIndex] != null && table.EmptyValues[fieldIndex][recordIndex]) {
+                            if (table.EmptyValues?.Length > 0 && table.EmptyValues[fieldIndex]?[recordIndex] == true) {
                                 value += "(NULL)";
                             }
 
-                            sheet.Cells[6 + recordIndex, 8 + fieldIndex].Value = value;
+                            sheet.Cells[7 + recordIndex, 8 + fieldIndex].Value = value;
                         } else {
                             int sheetIndex = package.Workbook.Worksheets.Count + 1;
 
                             string value = $"Sheet {sheetIndex}";
-                            if (table.EmptyValues != null && table.EmptyValues.Length > 0 && table.EmptyValues[fieldIndex] != null && table.EmptyValues[fieldIndex][recordIndex]) {
+                            if (table.EmptyValues?.Length > 0 && table.EmptyValues[fieldIndex]?[recordIndex] == true) {
                                 value += "(NULL)";
                             }
 
                             TableToSheet((ArmpTable)obj, $"Sheet {sheetIndex}", package);
-                            sheet.Cells[6 + recordIndex, 8 + fieldIndex].Value = value;
-                            sheet.Cells[6 + recordIndex, 8 + fieldIndex].Hyperlink = new Uri($"#'Sheet {sheetIndex}'!A1", UriKind.Relative);
-                            sheet.Cells[6 + recordIndex, 8 + fieldIndex].StyleName = "Hyperlink";
+                            sheet.Cells[7 + recordIndex, 8 + fieldIndex].Value = value;
+                            sheet.Cells[7 + recordIndex, 8 + fieldIndex].Hyperlink = new Uri($"#'Sheet {sheetIndex}'!A1", UriKind.Relative);
+                            sheet.Cells[7 + recordIndex, 8 + fieldIndex].StyleName = "Hyperlink";
                             package.Workbook.Worksheets[$"Sheet {sheetIndex}"].Cells["A1"].Value = "Return";
                             package.Workbook.Worksheets[$"Sheet {sheetIndex}"].Cells["A1"].Hyperlink = new Uri($"#'{sheet.Name}'!{sheet.Cells[6 + recordIndex, 8 + fieldIndex].Address}", UriKind.Relative);
                             package.Workbook.Worksheets[$"Sheet {sheetIndex}"].Cells["A1"].StyleName = "Hyperlink";

@@ -69,29 +69,21 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
             (byte[] tableData, int tableOffset) = SerializeTable(source, 0x20);
 
             writer.Write(tableData);
+            writer.WritePadding(0x00, 16);
             writer.Stream.Seek(0x10, SeekMode.Start);
             writer.Write(tableOffset);
 
             return new BinaryFormat(stream);
         }
 
-        private static void WriteBits(DataWriter writer, Func<int, object> getBitAsBoolean, in int bitCount, in int padding, ref int offset)
+        private static int WriteNumbers(DataWriter writer, object[] values, Type type, int padding, ref int offset)
         {
+            int result = offset;
+
             long startPos = writer.Stream.Position;
-            int numBytes = (int)Math.Ceiling(bitCount / 8.0);
-
-            byte[] values = new byte[numBytes];
-            for (int i = 0; i < bitCount; i++) {
-                object temp = getBitAsBoolean(i);
-                bool value = (bool)temp;
-
-                if (value) {
-                    int byteIndex = Math.DivRem(i, 8, out int bitIndex);
-                    values[byteIndex] |= (byte)(0x01 << bitIndex);
-                }
+            for (int i = 0; i < values.Length; i++) {
+                writer.WriteOfType(type, values[i]);
             }
-
-            writer.Write(values);
 
             if (padding > 0) {
                 writer.WritePadding(0x00, padding);
@@ -99,16 +91,47 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
             long endPos = writer.Stream.Position;
             offset += (int)(endPos - startPos);
+
+            return result;
         }
 
-        private static int WriteStrings(DataWriter writer, Func<int, string> getString, in int stringCount, in int padding, ref int offset)
+        private static int WriteBits(DataWriter writer, bool[] values, int padding, ref int offset)
+        {
+            int result = offset;
+            long startPos = writer.Stream.Position;
+            int numBytes = (int)Math.Ceiling(values.Length / 8.0);
+            if (values.Length % 4 == 0) {
+                numBytes++;
+            }
+
+            byte[] temp = new byte[numBytes];
+            for (int i = 0; i < values.Length; i++) {
+                if (values[i]) {
+                    int byteIndex = Math.DivRem(i, 8, out int bitIndex);
+                    temp[byteIndex] |= (byte)(0x01 << bitIndex);
+                }
+            }
+
+            writer.Write(temp);
+
+            if (padding > 0) {
+                writer.WritePadding(0x00, padding);
+            }
+
+            long endPos = writer.Stream.Position;
+            offset += (int)(endPos - startPos);
+
+            return result;
+        }
+
+        private static int WriteStrings(DataWriter writer, string[] values, int padding, ref int offset)
         {
             long startPos;
             long endPos;
             var offsets = new List<int>();
-            for (int i = 0; i < stringCount; i++) {
+            for (int i = 0; i < values.Length; i++) {
                 offsets.Add(offset);
-                string id = getString(i);
+                string id = values[i];
                 startPos = writer.Stream.Position;
                 writer.Write(id);
                 endPos = writer.Stream.Position;
@@ -135,12 +158,13 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
             return pointer;
         }
 
-        private static void WriteNumbers(DataWriter writer, Func<int, object> getValue, in int count, in Type type, in int padding, ref int offset)
+        private static int WriteTypes(DataWriter writer, FieldType[] values, int padding, ref int offset)
         {
+            int result = offset;
+
             long startPos = writer.Stream.Position;
-            for (int i = 0; i < count; i++) {
-                object value = getValue(i);
-                writer.WriteOfType(type, value);
+            for (int i = 0; i < values.Length; i++) {
+                writer.Write((byte)values[i]);
             }
 
             if (padding > 0) {
@@ -149,21 +173,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
             long endPos = writer.Stream.Position;
             offset += (int)(endPos - startPos);
-        }
 
-        private static void WriteSubTables(DataWriter writer, List<long> offsets, in int padding, ref int offset)
-        {
-            long startPos = writer.Stream.Position;
-            for (int i = 0; i < offsets.Count; i++) {
-                writer.Write(offsets[i]);
-            }
-
-            if (padding > 0) {
-                writer.WritePadding(0x00, padding);
-            }
-
-            long endPos = writer.Stream.Position;
-            offset += (int)(endPos - startPos);
+            return result;
         }
 
         private Tuple<byte[], int> SerializeTable(ArmpTable table, int baseOffset)
@@ -179,50 +190,57 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
                 RecordCount = table.RecordCount,
                 FieldCount = table.FieldCount,
                 ValueStringCount = table.ValueStringCount,
-                RecordInvalid = table.AreRecordsInvalid,
+                RecordInvalid = table.RecordInvalid,
 
-                RecordIdPointer = 0,
-                RecordExistencePointer = -1,
-                FieldTypePointer = 0,
+                RecordIdPointer = table.RecordIds == null ? -1 : 0,
+                RecordExistencePointer = table.RecordExistence == null ? -1 : 0,
+                FieldTypePointer = table.FieldTypes == null ? -1 : 0,
                 ValuesPointer = 0,
 
                 Id = table.Id,
                 Flags = table.Flags,
                 ValueStringPointer = 0,
-                FieldIdPointer = 0,
-                FieldInvalid = table.AreFieldsInvalid,
+                FieldIdPointer = table.FieldIds == null ? -1 : 0,
+                FieldInvalid = table.FieldInvalid,
 
-                RecordOrderPointer = 0,
-                FieldOrderPointer = 0,
-                FieldExistencePointer = -1,
+                RecordOrderPointer = table.RecordOrder == null ? -1 : 0,
+                FieldOrderPointer = table.FieldOrder == null ? -1 : 0,
+                FieldExistencePointer = table.FieldExistence == null ? -1 : 0,
                 IndexerPointer = 0,
 
                 GameVarFieldTypePointer = 0,
-                EmptyValuesPointer = 0,
-                RawRecordMemberInfoPointer = 0,
-                FieldInfoPointer = 0,
+                EmptyValuesPointer = table.EmptyValues == null ? -1 : 0,
+                RawRecordMemberInfoPointer = table.RawRecordMemberInfo == null ? -1 : 0,
+                FieldInfoPointer = table.FieldInfo == null ? -1 : 0,
             };
 
             int currentOffset = baseOffset;
-            var subTablesOffsets = new List<long>();
+            long[][] subTablesOffsets = new long[table.FieldCount][];
 
             // 1. Child tables
-            for (int row = 0; row < table.RecordCount; row++) {
-                for (int col = 0; col < table.FieldCount; col++) {
-                    if (table.GetRawRecordMemberInfo(col) != Enums.FieldType.Table) {
-                        continue;
-                    }
+            for (int field = 0; field < table.FieldCount; field++) {
+                subTablesOffsets[field] = new long[table.RecordCount];
 
-                    var subTable = (ArmpTable)table.GetValue(row, col);
+                if (table.RawRecordMemberInfo[field] != Enums.FieldType.Table) {
+                    continue;
+                }
+
+                object[] data = table.Values[field];
+                if (data == null) {
+                    continue;
+                }
+
+                for (int record = 0; record < table.RecordCount; record++) {
+                    var subTable = (ArmpTable)data[record];
                     if (subTable == null) {
-                        subTablesOffsets.Add(0x00000000);
+                        subTablesOffsets[field][record] = 0x00000000;
                         continue;
                     }
 
                     (byte[] subTableData, int subTableOffset) = SerializeTable(subTable, currentOffset);
                     long startPos = writer.Stream.Position;
                     writer.Write(subTableData);
-                    subTablesOffsets.Add(subTableOffset);
+                    subTablesOffsets[field][record] = subTableOffset;
                     writer.WritePadding(0x00, 0x10);
                     long endPos = writer.Stream.Position;
                     currentOffset += (int)(endPos - startPos);
@@ -258,6 +276,7 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
             WriteRecordOrder(writer, table, header, ref currentOffset);
             WriteFieldOrder(writer, table, header, ref currentOffset);
             WriteFieldInfo(writer, table, header, ref currentOffset);
+            WriteGameVarFieldType(writer, table, header, ref currentOffset);
 
             writer.Stream.Seek(headerOffset, SeekMode.Start);
             writer.WriteOfType(header);
@@ -267,136 +286,138 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
         private void WriteRecordExistence(DataWriter writer, ArmpTable table, Types.ArmpTableHeader header, ref int offset)
         {
-            if (!table.HasRecordExistenceData) {
+            if (table.RecordExistence == null) {
                 return;
             }
 
-            header.RecordExistencePointer = offset;
-            WriteBits(writer, (i) => table.GetRecordExistence(i), table.RecordCount, 4, ref offset);
+            if (table.RecordExistence.Length == 0) {
+                return;
+            }
+
+            header.RecordExistencePointer = WriteBits(writer, table.RecordExistence, 4, ref offset);
         }
 
         private void WriteFieldExistence(DataWriter writer, ArmpTable table, Types.ArmpTableHeader header, ref int offset)
         {
-            if (!table.HasFieldExistenceData) {
+            if (table.FieldExistence == null) {
+                return;
+            }
+
+            if (table.FieldExistence.Length == 0) {
                 writer.Write(0);
                 offset += 4;
                 return;
             }
 
-            header.FieldExistencePointer = offset;
-            WriteBits(writer, (i) => table.GetFieldExistence(i), table.FieldCount, 4, ref offset);
+            header.FieldExistencePointer = WriteBits(writer, table.FieldExistence, 4, ref offset);
         }
 
         private void WriteRecordIds(DataWriter writer, ArmpTable table, Types.ArmpTableHeader header, ref int offset)
         {
-            if (!table.HasRecordIds) {
-                writer.Write(0);
-                offset += 4;
+            if (table.RecordIds.Length == 0) {
                 return;
             }
 
-            header.RecordIdPointer = WriteStrings(writer, table.GetRecordId, table.RecordCount, 0, ref offset);
+            header.RecordIdPointer = WriteStrings(writer, table.RecordIds, 0, ref offset);
         }
 
         private void WriteFieldIds(DataWriter writer, ArmpTable table, Types.ArmpTableHeader header, ref int offset)
         {
-            if (!table.HasFieldIds) {
-                writer.Write(0);
-                offset += 4;
+            if (table.FieldIds.Length == 0) {
                 return;
             }
 
-            header.FieldIdPointer = WriteStrings(writer, table.GetFieldId, table.FieldCount, 4, ref offset);
+            header.FieldIdPointer = WriteStrings(writer, table.FieldIds, 0, ref offset);
         }
 
         private void WriteValueStrings(DataWriter writer, ArmpTable table, Types.ArmpTableHeader header, ref int offset)
         {
-            if (table.ValueStringCount == 0) {
+            if (table.ValueStrings.Length == 0) {
+                long startPos = writer.Stream.Position;
                 writer.Write(0);
-                offset += 4;
+                writer.WritePadding(0x00, 16);
+                long endPos = writer.Stream.Position;
+                offset += (int)(endPos - startPos);
                 header.ValueStringPointer = offset;
                 return;
             }
 
-            // TODO: Check padding
-            header.ValueStringPointer = WriteStrings(writer, table.GetValueString, table.ValueStringCount, 8, ref offset);
+            header.ValueStringPointer = WriteStrings(writer, table.ValueStrings, 8, ref offset);
         }
 
         private void WriteFieldTypes(DataWriter writer, ArmpTable table, Types.ArmpTableHeader header, ref int offset)
         {
-            if (!table.HasFieldTypes) {
-                writer.Write(0);
-                offset += 4;
+            if (table.FieldTypes.Length == 0) {
                 return;
             }
 
-            header.FieldTypePointer = offset;
-            WriteNumbers(writer, (i) => table.GetFieldType(i), table.FieldCount, typeof(byte), 8, ref offset);
+            header.FieldTypePointer = WriteTypes(writer, table.FieldTypes, table.FieldCount <= 2 ? 4 : 8, ref offset);
         }
 
         private void WriteRecordMemberInfo(DataWriter writer, ArmpTable table, Types.ArmpTableHeader header, ref int offset)
         {
-            if (!table.HasFieldTypes) {
-                writer.Write(0);
-                offset += 4;
+            if (table.RawRecordMemberInfo.Length == 0) {
                 return;
             }
 
-            header.RawRecordMemberInfoPointer = offset;
-            WriteNumbers(writer, (i) => table.GetRawRecordMemberInfo(i), table.FieldCount, typeof(byte), 0, ref offset);
+            header.RawRecordMemberInfoPointer = WriteTypes(writer, table.RawRecordMemberInfo, table.FieldCount <= 2 ? 4 : 0, ref offset);
         }
 
-        private void WriteValues(DataWriter writer, ArmpTable table, Types.ArmpTableHeader header, List<long> subTablesOffsets, ref int offset)
+        private void WriteValues(DataWriter writer, ArmpTable table, Types.ArmpTableHeader header, long[][] subTablesOffsets, ref int offset)
         {
             int[] offsets = new int[table.FieldCount];
 
             for (int i = 0; i < table.FieldCount; i++) {
-                FieldType fieldType = table.GetRawRecordMemberInfo(i);
+                FieldType fieldType = table.RawRecordMemberInfo[i];
                 if (fieldType == FieldType.Unused) {
                     offsets[i] = 0;
                     continue;
                 }
 
-                offsets[i] = offset;
+                object[] data = table.Values[i];
+                if (data == null) {
+                    offsets[i] = -1;
+                    continue;
+                }
 
-                Func<int, object> getValue = (index) => table.GetValue(index, i);
                 switch (fieldType) {
                     case FieldType.UInt8:
-                        WriteNumbers(writer, getValue, table.RecordCount, typeof(byte), 8, ref offset);
+                        offsets[i] = WriteNumbers(writer, data, typeof(byte), 4, ref offset);
                         break;
                     case FieldType.UInt16:
-                        WriteNumbers(writer, getValue, table.RecordCount, typeof(ushort), 8, ref offset);
+                        offsets[i] = WriteNumbers(writer, data, typeof(ushort), 4, ref offset);
                         break;
                     case FieldType.UInt32:
-                        WriteNumbers(writer, getValue, table.RecordCount, typeof(uint), 8, ref offset);
+                        offsets[i] = WriteNumbers(writer, data, typeof(uint), 8, ref offset);
                         break;
                     case FieldType.UInt64:
-                        WriteNumbers(writer, getValue, table.RecordCount, typeof(ulong), 8, ref offset);
+                        offsets[i] = WriteNumbers(writer, data, typeof(ulong), 8, ref offset);
                         break;
                     case FieldType.Int8:
-                        WriteNumbers(writer, getValue, table.RecordCount, typeof(sbyte), 8, ref offset);
+                        offsets[i] = WriteNumbers(writer, data, typeof(sbyte), 4, ref offset);
                         break;
                     case FieldType.Int16:
-                        WriteNumbers(writer, getValue, table.RecordCount, typeof(short), 8, ref offset);
+                        offsets[i] = WriteNumbers(writer, data, typeof(short), 4, ref offset);
                         break;
                     case FieldType.Int32:
-                        WriteNumbers(writer, getValue, table.RecordCount, typeof(int), 8, ref offset);
+                        offsets[i] = WriteNumbers(writer, data, typeof(int), 8, ref offset);
                         break;
                     case FieldType.Int64:
-                        WriteNumbers(writer, getValue, table.RecordCount, typeof(long), 8, ref offset);
+                        offsets[i] = WriteNumbers(writer, data, typeof(long), 8, ref offset);
                         break;
                     case FieldType.Float16:
                         throw new FormatException("Float16 not supported.");
                     case FieldType.Float32:
-                        WriteNumbers(writer, getValue, table.RecordCount, typeof(float), 8, ref offset);
+                        offsets[i] = WriteNumbers(writer, data, typeof(float), 8, ref offset);
                         break;
                     case FieldType.Float64:
-                        WriteNumbers(writer, getValue, table.RecordCount, typeof(double), 8, ref offset);
+                        offsets[i] = WriteNumbers(writer, data, typeof(double), 8, ref offset);
                         break;
                     case FieldType.Boolean:
                         // Booleans are read as a bitmask
                         try {
-                            WriteBits(writer, getValue, table.RecordCount, 4, ref offset);
+                            bool[] temp = Array.ConvertAll(data, x => (bool)x);
+                            offsets[i] = WriteBits(writer, temp, 4, ref offset);
                         }
                         catch (NullReferenceException) {
                             offsets[i] = -1;
@@ -406,10 +427,10 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
                         break;
                     case FieldType.String:
                         // Strings are stored as Value String index
-                        WriteNumbers(writer, getValue, table.RecordCount, typeof(int), 8, ref offset);
+                        offsets[i] = WriteNumbers(writer, data, typeof(int), 8, ref offset);
                         break;
                     case FieldType.Table:
-                        WriteSubTables(writer, subTablesOffsets, 8, ref offset);
+                        offsets[i] = WriteSubTables(writer, subTablesOffsets[i], 8, ref offset);
                         break;
                     default:
                         throw new ArgumentOutOfRangeException($"Unknown field type: {fieldType}");
@@ -422,22 +443,44 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
                 writer.Write(o);
             }
 
-            writer.WritePadding(0x00, 0x08);
+            long mod = (writer.Stream.Position - startPos) % 8;
+            if (mod > 0) {
+                writer.WriteTimes(0x00, 8 - mod);
+            }
+
             long endPos = writer.Stream.Position;
             offset += (int)(endPos - startPos);
         }
 
+        private int WriteSubTables(DataWriter writer, long[] offsets, int padding, ref int offset)
+        {
+            int result = offset;
+
+            long startPos = writer.Stream.Position;
+            for (int i = 0; i < offsets.Length; i++) {
+                writer.Write(offsets[i]);
+            }
+
+            if (padding > 0) {
+                writer.WritePadding(0x00, padding);
+            }
+
+            long endPos = writer.Stream.Position;
+            offset += (int)(endPos - startPos);
+
+            return result;
+        }
+
         private void WriteEmptyValues(DataWriter writer, ArmpTable table, Types.ArmpTableHeader header, ref int offset)
         {
-            if (!table.HasEmptyValues) {
+            if (table.EmptyValues.Length == 0) {
                 return;
             }
 
             int[] offsets = new int[table.FieldCount];
             for (int i = 0; i < table.FieldCount; i++) {
-                offsets[i] = offset;
-                Func<int, object> getValue = (recordIndex) => table.GetIsNullValue(recordIndex, i);
-                WriteBits(writer, getValue, table.RecordCount, 4, ref offset);
+                bool[] data = table.EmptyValues[i];
+                offsets[i] = data == null ? -1 : WriteBits(writer, data, 4, ref offset);
             }
 
             header.EmptyValuesPointer = offset;
@@ -453,32 +496,48 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
         private void WriteRecordOrder(DataWriter writer, ArmpTable table, Types.ArmpTableHeader header, ref int offset)
         {
-            if (!table.HasRecordOrder) {
+            if (table.RecordOrder.Length == 0) {
                 return;
             }
 
-            header.RecordOrderPointer = offset;
-            WriteNumbers(writer, (i) => table.GetRecordOrder(i), table.RecordCount, typeof(int), 8, ref offset);
+            object[] temp = Array.ConvertAll(table.RecordOrder, x => (object)x);
+            long startPos = writer.Stream.Position;
+            header.RecordOrderPointer = WriteNumbers(writer, temp, typeof(int), 0, ref offset);
+            long mod = (writer.Stream.Position - startPos) % 8;
+            if (mod > 0) {
+                writer.WriteTimes(0x00, 8 - mod);
+                offset += (int)(8 - mod);
+            }
         }
 
         private void WriteFieldOrder(DataWriter writer, ArmpTable table, Types.ArmpTableHeader header, ref int offset)
         {
-            if (!table.HasFieldOrder) {
+            if (table.FieldOrder.Length == 0) {
                 return;
             }
 
-            header.FieldOrderPointer = offset;
-            WriteNumbers(writer, (i) => table.GetFieldOrder(i), table.FieldCount, typeof(int), 16, ref offset);
+            object[] temp = Array.ConvertAll(table.FieldOrder, x => (object)x);
+            header.FieldOrderPointer = WriteNumbers(writer, temp, typeof(int), 16, ref offset);
         }
 
         private void WriteFieldInfo(DataWriter writer, ArmpTable table, Types.ArmpTableHeader header, ref int offset)
         {
-            if (!table.HasFieldInfoData) {
+            if (table.FieldInfo.Length == 0) {
                 return;
             }
 
-            header.FieldInfoPointer = offset;
-            WriteNumbers(writer, (i) => table.GetFieldInfo(i), table.RecordCount, typeof(byte), 8, ref offset);
+            object[] temp = Array.ConvertAll(table.FieldInfo, x => (object)x);
+            header.FieldInfoPointer = WriteNumbers(writer, temp, typeof(byte), 8, ref offset);
+        }
+
+        private void WriteGameVarFieldType(DataWriter writer, ArmpTable table, Types.ArmpTableHeader header, ref int offset)
+        {
+            if (table.GameVarFieldType.Length == 0) {
+                return;
+            }
+
+            object[] temp = Array.ConvertAll(table.GameVarFieldType, x => (object)x);
+            header.GameVarFieldTypePointer = WriteNumbers(writer, temp, typeof(int), 8, ref offset);
         }
     }
 }

@@ -19,6 +19,8 @@
 // SOFTWARE.
 namespace TF3.Plugin.YakuzaKiwami2.Formats
 {
+    using System;
+    using System.Collections;
     using TF3.Plugin.YakuzaKiwami2.Enums;
     using TF3.Plugin.YakuzaKiwami2.Types;
     using Yarhl.FileFormat;
@@ -26,7 +28,7 @@ namespace TF3.Plugin.YakuzaKiwami2.Formats
     /// <summary>
     /// Dragon Engine ARMP table.
     /// </summary>
-    public class ArmpTable : IFormat
+    public sealed class ArmpTable : IFormat, IEquatable<ArmpTable>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ArmpTable"/> class.
@@ -38,10 +40,10 @@ namespace TF3.Plugin.YakuzaKiwami2.Formats
             Flags = header.Flags;
 
             RecordCount = header.RecordCount;
-            AreRecordsInvalid = header.RecordInvalid;
+            RecordInvalid = header.RecordInvalid;
 
             FieldCount = header.FieldCount;
-            AreFieldsInvalid = header.FieldInvalid;
+            FieldInvalid = header.FieldInvalid;
 
             ValueStringCount = header.ValueStringCount;
 
@@ -76,12 +78,12 @@ namespace TF3.Plugin.YakuzaKiwami2.Formats
         /// <summary>
         /// Gets a value indicating whether the table records has invalid values.
         /// </summary>
-        public bool AreRecordsInvalid { get; }
+        public bool RecordInvalid { get; }
 
         /// <summary>
         /// Gets a value indicating whether the table fields has invalid values.
         /// </summary>
-        public bool AreFieldsInvalid { get; }
+        public bool FieldInvalid { get; }
 
         /// <summary>
         /// Gets or sets the table indexer.
@@ -147,5 +149,95 @@ namespace TF3.Plugin.YakuzaKiwami2.Formats
         /// Gets or sets the field info.
         /// </summary>
         public byte[] FieldInfo { get; set; }
+
+        /// <summary>
+        /// Gets or sets the game var field type.
+        /// </summary>
+        public int[] GameVarFieldType { get; set; }
+
+        /// <inheritdoc/>
+        public bool Equals(ArmpTable other)
+        {
+            if (other == null) {
+                return false;
+            }
+
+            if (Id != other.Id ||
+                Flags != other.Flags ||
+                RecordCount != other.RecordCount ||
+                FieldCount != other.FieldCount ||
+                ValueStringCount != other.ValueStringCount ||
+                RecordInvalid != other.RecordInvalid ||
+                FieldInvalid != other.FieldInvalid) {
+                return false;
+            }
+
+            if (RecordExistence != null && !((IStructuralEquatable)RecordExistence).Equals(other.RecordExistence, StructuralComparisons.StructuralEqualityComparer)) {
+                return false;
+            }
+
+            if (FieldExistence != null && !((IStructuralEquatable)FieldExistence).Equals(other.FieldExistence, StructuralComparisons.StructuralEqualityComparer)) {
+                return false;
+            }
+
+            if (!((IStructuralEquatable)RecordIds).Equals(other.RecordIds, StructuralComparisons.StructuralEqualityComparer)) {
+                return false;
+            }
+
+            if (!((IStructuralEquatable)FieldIds).Equals(other.FieldIds, StructuralComparisons.StructuralEqualityComparer)) {
+                return false;
+            }
+
+            if (!((IStructuralEquatable)ValueStrings).Equals(other.ValueStrings, StructuralComparisons.StructuralEqualityComparer)) {
+                return false;
+            }
+
+            if (!((IStructuralEquatable)FieldTypes).Equals(other.FieldTypes, StructuralComparisons.StructuralEqualityComparer)) {
+                return false;
+            }
+
+            if (!((IStructuralEquatable)RawRecordMemberInfo).Equals(other.RawRecordMemberInfo, StructuralComparisons.StructuralEqualityComparer)) {
+                return false;
+            }
+
+            for (int i = 0; i < FieldCount; i++) {
+                if (Values[i] == null && other.Values[i] != null) {
+                    return false;
+                }
+
+                if (Values[i] != null && !((IStructuralEquatable)Values[i]).Equals(other.Values[i], StructuralComparisons.StructuralEqualityComparer)) {
+                    return false;
+                }
+            }
+
+            if (!((IStructuralEquatable)EmptyValues).Equals(other.EmptyValues, StructuralComparisons.StructuralEqualityComparer)) {
+                return false;
+            }
+
+            if (!((IStructuralEquatable)RecordOrder).Equals(other.RecordOrder, StructuralComparisons.StructuralEqualityComparer)) {
+                return false;
+            }
+
+            if (!((IStructuralEquatable)FieldOrder).Equals(other.FieldOrder, StructuralComparisons.StructuralEqualityComparer)) {
+                return false;
+            }
+
+            if (!((IStructuralEquatable)FieldInfo).Equals(other.FieldInfo, StructuralComparisons.StructuralEqualityComparer)) {
+                return false;
+            }
+
+            if (!((IStructuralEquatable)GameVarFieldType).Equals(other.GameVarFieldType, StructuralComparisons.StructuralEqualityComparer)) {
+                return false;
+            }
+
+            if (Indexer?.Equals(other.Indexer) == false) {
+                return false;
+            }
+
+            return true;
+        }
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as ArmpTable);
     }
 }

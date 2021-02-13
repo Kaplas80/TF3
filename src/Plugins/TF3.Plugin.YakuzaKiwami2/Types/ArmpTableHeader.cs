@@ -19,6 +19,7 @@
 // SOFTWARE.
 namespace TF3.Plugin.YakuzaKiwami2.Types
 {
+    using System.Text;
     using Yarhl.IO.Serialization.Attributes;
 
     /// <summary>
@@ -139,5 +140,34 @@ namespace TF3.Plugin.YakuzaKiwami2.Types
         /// Gets or sets the pointer to the field info list.
         /// </summary>
         public int FieldInfoPointer { get; set; }
+
+        /// <inheritdoc/>
+        public override string ToString()
+        {
+            var stringBuilder = new StringBuilder();
+            _ = stringBuilder.AppendLine($"Id                         = {Id}");
+            _ = stringBuilder.AppendLine($"Flags                      = {Flags}\t{Flags:X2}");
+            _ = stringBuilder.AppendLine($"RecordCount                = {RecordCount}\t{RecordCount:X8}");
+            _ = stringBuilder.AppendLine($"FieldCount                 = {FieldCount}\t{FieldCount:X8}");
+            _ = stringBuilder.AppendLine($"ValueStringCount           = {ValueStringCount}\t{ValueStringCount:X8}");
+            _ = stringBuilder.AppendLine($"RecordInvalid              = {(RecordInvalid ? -1 : 0)}");
+            _ = stringBuilder.AppendLine($"FieldInvalid               = {(FieldInvalid ? -1 : 0)}");
+            _ = stringBuilder.AppendLine($"IndexerPointer             = {IndexerPointer}\t{IndexerPointer:X8}");
+            _ = stringBuilder.AppendLine($"RecordExistencePointer     = {RecordExistencePointer}\t{RecordExistencePointer:X8}");
+            _ = stringBuilder.AppendLine($"FieldExistencePointer      = {FieldExistencePointer}\t{FieldExistencePointer:X8}");
+            _ = stringBuilder.AppendLine($"RecordIdPointer            = {RecordIdPointer}\t{RecordIdPointer:X8}");
+            _ = stringBuilder.AppendLine($"FieldIdPointer             = {FieldIdPointer}\t{FieldIdPointer:X8}");
+            _ = stringBuilder.AppendLine($"ValueStringPointer         = {ValueStringPointer}\t{ValueStringPointer:X8}");
+            _ = stringBuilder.AppendLine($"FieldTypePointer           = {FieldTypePointer}\t{FieldTypePointer:X8}");
+            _ = stringBuilder.AppendLine($"RawRecordMemberInfoPointer = {RawRecordMemberInfoPointer}\t{RawRecordMemberInfoPointer:X8}");
+            _ = stringBuilder.AppendLine($"ValuesPointer              = {ValuesPointer}\t{ValuesPointer:X8}");
+            _ = stringBuilder.AppendLine($"EmptyValuesPointer         = {EmptyValuesPointer}\t{EmptyValuesPointer:X8}");
+            _ = stringBuilder.AppendLine($"RecordOrderPointer         = {RecordOrderPointer}\t{RecordOrderPointer:X8}");
+            _ = stringBuilder.AppendLine($"FieldOrderPointer          = {FieldOrderPointer}\t{FieldOrderPointer:X8}");
+            _ = stringBuilder.AppendLine($"FieldInfoPointer           = {FieldInfoPointer}\t{FieldInfoPointer:X8}");
+            _ = stringBuilder.AppendLine($"GameVarFieldTypePointer    = {GameVarFieldTypePointer}\t{GameVarFieldTypePointer:X8}");
+            _ = stringBuilder.AppendLine("=====================================");
+            return stringBuilder.ToString();
+        }
     }
 }
