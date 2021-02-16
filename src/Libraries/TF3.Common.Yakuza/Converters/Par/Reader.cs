@@ -112,13 +112,13 @@ namespace TF3.Common.Yakuza.Converters.Par
                 return null;
             }
 
-            reader.Stream.Seek(0x20 + (directoryIndex * 0x40));
+            _ = reader.Stream.Seek(0x20 + (directoryIndex * 0x40), System.IO.SeekOrigin.Begin);
             string name = reader.ReadString(0x40).TrimEnd('\0');
             if (string.IsNullOrEmpty(name)) {
                 name = ".";
             }
 
-            reader.Stream.Seek(index.DirectoryStartOffset + (directoryIndex * 0x20));
+            _ = reader.Stream.Seek(index.DirectoryStartOffset + (directoryIndex * 0x20), System.IO.SeekOrigin.Begin);
             var directoryInfo = reader.Read<ParDirectoryInfo>() as ParDirectoryInfo;
 
             var directory = new Node(name, new NodeContainerFormat()) {
@@ -144,15 +144,15 @@ namespace TF3.Common.Yakuza.Converters.Par
             for (uint i = directoryInfo.FileStartIndex;
                  i < directoryInfo.FileStartIndex + directoryInfo.FileCount;
                  i++) {
-                reader.Stream.Seek(0x20 + (0x40 * index.DirectoryCount) + (i * 0x40));
+                _ = reader.Stream.Seek(0x20 + (0x40 * index.DirectoryCount) + (i * 0x40), System.IO.SeekOrigin.Begin);
                 string fileName = reader.ReadString(0x40).TrimEnd('\0');
 
-                reader.Stream.Seek(index.FileStartOffset + (i * 0x20));
+                _ = reader.Stream.Seek(index.FileStartOffset + (i * 0x20), System.IO.SeekOrigin.Begin);
 
                 var fileInfo = reader.Read<ParFileInfo>() as ParFileInfo;
 
                 long offset = ((long)fileInfo.ExtendedOffset << 32) | fileInfo.DataOffset;
-                var stream = new DataStream(reader.Stream, offset, fileInfo.CompressedSize);
+                var stream = DataStreamFactory.FromStream(reader.Stream, offset, fileInfo.CompressedSize);
                 var binaryFormat = new BinaryFormat(stream);
                 var file = new Node(fileName, binaryFormat) {
                     Tags =

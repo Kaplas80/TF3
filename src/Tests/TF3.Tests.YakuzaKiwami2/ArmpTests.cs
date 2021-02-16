@@ -21,6 +21,7 @@ namespace TF3.Tests.YakuzaKiwami2
 {
     using NUnit.Framework;
     using TF3.Plugin.YakuzaKiwami2.Converters.Armp;
+    using TF3.Plugin.YakuzaKiwami2.Formats;
     using Yarhl.FileSystem;
     using Yarhl.IO;
 
@@ -910,12 +911,14 @@ namespace TF3.Tests.YakuzaKiwami2
             Node node = NodeFactory.FromSubstream("ArmpTest", original, 0, ArmpData.Length);
             _ = node.TransformWith<Reader>();
             Assert.IsTrue(node.Stream == null);
+            ArmpTable expected = node.GetFormatAs<ArmpTable>();
 
             _ = node.TransformWith<Writer>();
             Assert.IsFalse(node.Stream == null);
+            _ = node.TransformWith<Reader>();
+            ArmpTable result = node.GetFormatAs<ArmpTable>();
 
-            Assert.IsTrue(original.Compare(node.Stream));
-            Assert.AreEqual(original.Length, node.Stream.Length);
+            Assert.IsTrue(expected.Equals(result));
         }
 
         [Test]
@@ -925,9 +928,16 @@ namespace TF3.Tests.YakuzaKiwami2
             Node node = NodeFactory.FromSubstream("ArmpTest", original, 0, ArmpData.Length);
             _ = node.TransformWith<Reader>();
             Assert.IsTrue(node.Stream == null);
+            ArmpTable expected = node.GetFormatAs<ArmpTable>();
 
             _ = node.TransformWith<XlsxWriter>();
             Assert.IsFalse(node.Stream == null);
+
+            _ = node.TransformWith<XlsxReader>();
+            Assert.IsTrue(node.Stream == null);
+            ArmpTable result = node.GetFormatAs<ArmpTable>();
+
+            Assert.IsTrue(expected.Equals(result));
         }
     }
 }

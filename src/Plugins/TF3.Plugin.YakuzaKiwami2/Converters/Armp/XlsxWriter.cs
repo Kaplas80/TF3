@@ -38,7 +38,7 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
         /// <param name="source">Input format.</param>
         /// <returns>The xlsx format.</returns>
         /// <exception cref="ArgumentNullException">Thrown if source is null.</exception>
-        public virtual BinaryFormat Convert(ArmpTable source)
+        public BinaryFormat Convert(ArmpTable source)
         {
             if (source == null) {
                 throw new ArgumentNullException(nameof(source));
@@ -91,15 +91,15 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
                 sheet.Cells[11 + i, 2].Value = table.ValueStrings[i];
             }
 
-            sheet.Cells["D5"].Value = "Order";
-            sheet.Cells["E5"].Value = "FieldInfo";
-            sheet.Cells["F5"].Value = "Existence";
+            sheet.Cells["D6"].Value = "Order";
+            sheet.Cells["E6"].Value = "FieldInfo";
+            sheet.Cells["F6"].Value = "Existence";
 
             for (int recordIndex = 0; recordIndex < table.RecordCount; recordIndex++) {
-                sheet.Cells[6 + recordIndex, 4].Value = table.RecordOrder?.Length > 0 ? table.RecordOrder[recordIndex] : -1;
-                sheet.Cells[6 + recordIndex, 5].Value = table.FieldInfo?.Length > 0 ? table.FieldInfo[recordIndex] : -1;
-                sheet.Cells[6 + recordIndex, 6].Value = table.RecordExistence?.Length > 0 && table.RecordExistence[recordIndex];
-                sheet.Cells[6 + recordIndex, 7].Value = table.RecordIds?.Length > 0 ? table.RecordIds[recordIndex] : $"Record {recordIndex}";
+                sheet.Cells[7 + recordIndex, 4].Value = table.RecordOrder?.Length > 0 ? table.RecordOrder[recordIndex] : -1;
+                sheet.Cells[7 + recordIndex, 5].Value = table.FieldInfo?.Length > 0 ? table.FieldInfo[recordIndex] : -1;
+                sheet.Cells[7 + recordIndex, 6].Value = table.RecordExistence?.Length > 0 && table.RecordExistence[recordIndex];
+                sheet.Cells[7 + recordIndex, 7].Value = table.RecordIds?.Length > 0 ? table.RecordIds[recordIndex] : $"Record {recordIndex}";
             }
 
             sheet.Cells["G1"].Value = "Order";

@@ -70,7 +70,7 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
             writer.Write(tableData);
             writer.WritePadding(0x00, 16);
-            writer.Stream.Seek(0x10, SeekMode.Start);
+            _ = writer.Stream.Seek(0x10, System.IO.SeekOrigin.Begin);
             writer.Write(tableOffset);
 
             return new BinaryFormat(stream);
@@ -278,7 +278,7 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
             WriteFieldInfo(writer, table, header, ref currentOffset);
             WriteGameVarFieldType(writer, table, header, ref currentOffset);
 
-            writer.Stream.Seek(headerOffset, SeekMode.Start);
+            _ = writer.Stream.Seek(headerOffset, System.IO.SeekOrigin.Begin);
             writer.WriteOfType(header);
 
             return new Tuple<byte[], int>(currentTable.ToArray(), currentTableOffset);
@@ -351,7 +351,7 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
                 return;
             }
 
-            header.FieldTypePointer = WriteTypes(writer, table.FieldTypes, table.FieldCount <= 2 ? 4 : 8, ref offset);
+            header.FieldTypePointer = WriteTypes(writer, table.FieldTypes, 8, ref offset);
         }
 
         private void WriteRecordMemberInfo(DataWriter writer, ArmpTable table, Types.ArmpTableHeader header, ref int offset)
@@ -360,7 +360,7 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
                 return;
             }
 
-            header.RawRecordMemberInfoPointer = WriteTypes(writer, table.RawRecordMemberInfo, table.FieldCount <= 2 ? 4 : 0, ref offset);
+            header.RawRecordMemberInfoPointer = WriteTypes(writer, table.RawRecordMemberInfo, 0, ref offset);
         }
 
         private void WriteValues(DataWriter writer, ArmpTable table, Types.ArmpTableHeader header, long[][] subTablesOffsets, ref int offset)

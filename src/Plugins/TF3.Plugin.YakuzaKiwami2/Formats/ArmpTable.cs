@@ -33,6 +33,32 @@ namespace TF3.Plugin.YakuzaKiwami2.Formats
         /// <summary>
         /// Initializes a new instance of the <see cref="ArmpTable"/> class.
         /// </summary>
+        /// <param name="id">Table id.</param>
+        /// <param name="flags">Table flags.</param>
+        /// <param name="recordCount">Record count.</param>
+        /// <param name="recordInvalid">Record invalid.</param>
+        /// <param name="fieldCount">Field count.</param>
+        /// <param name="fieldInvalid">Field invalid.</param>
+        /// <param name="valueStringCount">Value strings count.</param>
+        public ArmpTable(int id, byte flags, int recordCount, bool recordInvalid, int fieldCount, bool fieldInvalid, int valueStringCount)
+        {
+            Id = id;
+            Flags = flags;
+
+            RecordCount = recordCount;
+            RecordInvalid = recordInvalid;
+
+            FieldCount = fieldCount;
+            FieldInvalid = fieldInvalid;
+
+            ValueStringCount = valueStringCount;
+
+            Indexer = null;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ArmpTable"/> class.
+        /// </summary>
         /// <param name="header">Table info.</param>
         public ArmpTable(ArmpTableHeader header)
         {

@@ -47,7 +47,7 @@ namespace TF3.Common.Yakuza.Converters.Sllz
                 DefaultEncoding = Encoding.ASCII,
             };
 
-            source.Stream.Seek(4);
+            _ = source.Stream.Seek(4, System.IO.SeekOrigin.Begin);
             byte endianness = reader.ReadByte();
             reader.Endianness = endianness == 0 ? EndiannessMode.LittleEndian : EndiannessMode.BigEndian;
 
@@ -57,7 +57,7 @@ namespace TF3.Common.Yakuza.Converters.Sllz
             var header = reader.Read<SllzHeader>() as SllzHeader;
             CheckHeader(header);
 
-            reader.Stream.Seek(header.HeaderSize);
+            _ = reader.Stream.Seek(header.HeaderSize, System.IO.SeekOrigin.Begin);
 
             byte[] compressedData = reader.ReadBytes((int)(header.CompressedSize - header.HeaderSize));
             byte[] decompressedData = Decompress(compressedData, header.OriginalSize);

@@ -60,13 +60,9 @@ namespace TF3.Common.Yakuza.Converters.Par
                 throw new ArgumentNullException(nameof(source));
             }
 
-#pragma warning disable CA1308 // Normalize strings to uppercase
-
             // Reorder nodes
             source.Root.SortChildren((x, y) =>
                 string.CompareOrdinal(x.Name.ToLowerInvariant(), y.Name.ToLowerInvariant()));
-
-#pragma warning restore CA1308 // Normalize strings to uppercase
 
             // Fill node indexes
             FillNodeIndexes(source.Root);
@@ -127,7 +123,7 @@ namespace TF3.Common.Yakuza.Converters.Par
             };
 
             uint headerSize = RoundSize((uint)((0x20 * files.Count) + fileStartOffset));
-            writer.Stream.Length = RoundSize(fileOffset + headerSize);
+            writer.Stream.SetLength(RoundSize(fileOffset + headerSize));
 
             uint currentOffset = headerSize;
 
@@ -141,7 +137,9 @@ namespace TF3.Common.Yakuza.Converters.Par
             for (int i = 0; i < directories.Count; i++) {
                 Node node = directories[i];
                 writer.Write(node.Name, 0x40, false);
-                writer.Stream.PushToPosition(directoryStartOffset + (i * 0x20));
+
+                long returnPosition = writer.Stream.Position;
+                _ = writer.Stream.Seek(directoryStartOffset + (i * 0x20), System.IO.SeekOrigin.Begin);
 
                 var directoryInfo = new ParDirectoryInfo {
                     SubdirectoryCount = (uint)node.Tags["SubdirectoryCount"],
@@ -154,13 +152,15 @@ namespace TF3.Common.Yakuza.Converters.Par
                 writer.WriteOfType(directoryInfo);
                 writer.WritePadding(0x00, 0x20);
 
-                writer.Stream.PopPosition();
+                _ = writer.Stream.Seek(returnPosition, System.IO.SeekOrigin.Begin);
             }
 
             for (int i = 0; i < files.Count; i++) {
                 Node node = files[i];
                 writer.Write(node.Name, 0x40, false);
-                writer.Stream.PushToPosition(fileStartOffset + (i * 0x20));
+
+                long returnPosition = writer.Stream.Position;
+                _ = writer.Stream.Seek(fileStartOffset + (i * 0x20), System.IO.SeekOrigin.Begin);
 
                 var fileInfo = new ParFileInfo {
                     Flags = (uint)node.Tags["Flags"],
@@ -176,13 +176,14 @@ namespace TF3.Common.Yakuza.Converters.Par
 
                 currentOffset = RoundOffset(currentOffset, fileInfo.CompressedSize);
 
-                writer.Stream.PushToPosition(currentOffset);
+                long returnPosition2 = writer.Stream.Position;
+                _ = writer.Stream.Seek(currentOffset, System.IO.SeekOrigin.Begin);
                 node.Stream.WriteTo(writer.Stream);
-                writer.Stream.PopPosition();
+                _ = writer.Stream.Seek(returnPosition2, System.IO.SeekOrigin.Begin);
 
                 currentOffset += fileInfo.CompressedSize;
 
-                writer.Stream.PopPosition();
+                _ = writer.Stream.Seek(returnPosition, System.IO.SeekOrigin.Begin);
             }
 
             return new BinaryFormat(stream);
