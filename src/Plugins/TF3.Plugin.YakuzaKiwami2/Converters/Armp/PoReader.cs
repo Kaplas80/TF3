@@ -20,6 +20,7 @@
 namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 {
     using System;
+    using System.Linq;
     using TF3.Plugin.YakuzaKiwami2.Enums;
     using TF3.Plugin.YakuzaKiwami2.Formats;
     using Yarhl.FileFormat;
@@ -27,57 +28,49 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
     using Yarhl.Media.Text;
 
     /// <summary>
-    /// Extracts Yakuza Kiwami 2 ARMP translatable strings to a collection of Po files.
+    /// Inserts strings from Po files to an Armp table.
     /// </summary>
-    public class PoWriter : IConverter<ArmpTable, NodeContainerFormat>, IInitializer<PoHeader>
+    public class PoReader : IConverter<NodeContainerFormat, ArmpTable>, IInitializer<ArmpTable>
     {
-        private PoHeader _poHeader = new PoHeader("NoName", "dummy@dummy.com", "en");
+        private ArmpTable _original = null;
 
-        public void Initialize(PoHeader parameters)
+        public void Initialize(ArmpTable parameters)
         {
-            _poHeader = parameters;
+            _original = parameters;
         }
 
-        /// <summary>
-        /// Extracts strings to a Po files.
-        /// </summary>
-        /// <param name="source">Input format.</param>
-        /// <returns>The po collection.</returns>
-        /// <exception cref="ArgumentNullException">Thrown if source is null.</exception>
-        public NodeContainerFormat Convert(ArmpTable source)
+        public ArmpTable Convert(NodeContainerFormat source)
         {
             if (source == null) {
                 throw new ArgumentNullException(nameof(source));
             }
 
-            Node result = NodeFactory.CreateContainer("root");
+            if (_original == null) {
+                throw new InvalidOperationException("Uninitialized");
+            }
 
-            ExtractStrings(source, "Main", result);
+            var result = _original;
 
-            return result.GetFormatAs<NodeContainerFormat>();
+            InsertStrings(result, "Main", source.Root);
+
+            return result;
         }
 
-        private void ExtractStrings(ArmpTable table, string name, Node node)
+        private void InsertStrings(ArmpTable table, string name, Node node)
         {
-            if (table.ValueStringCount > 0) {
-                var po = new Po(_poHeader);
-                for (int i = 0; i < table.ValueStringCount; i++) {
-                    if (!string.IsNullOrEmpty(table.ValueStrings[i])) {
-                        var entry = new PoEntry() {
-                            Original = table.ValueStrings[i].Replace("\r\n", "\n"),
-                            Translated = table.ValueStrings[i].Replace("\r\n", "\n"),
-                            Context = $"{name}#{i}",
-                        };
-                        po.Add(entry);
-                    }
-                }
+            var translationNode = node.Children.FirstOrDefault(x => x.Tags["TableName"] == name);
+            if (translationNode != null) {
+                Po po = translationNode.GetFormatAs<Po>();
 
-                var n = new Node(name, po);
-                node.Add(n);
+                for (int i = 0; i < po.Entries.Count; i++) {
+                    PoEntry entry = po.Entries[i];
+                    int index = int.Parse(entry.Context.Split('#')[1]);
+                    table.ValueStrings[index] = entry.Translated.Replace("\n", "\r\n");
+                }
             }
 
             if (table.Indexer != null) {
-                ExtractStrings(table.Indexer, $"{name}_Idx", node);
+                InsertStrings(table.Indexer, $"{name}_Idx", node);
             }
 
             for (int fieldIndex = 0; fieldIndex < table.FieldCount; fieldIndex++) {
@@ -105,7 +98,7 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
                                 recordId = table.RecordIds[recordIndex];
                             }
 
-                            ExtractStrings((ArmpTable)obj, $"[{recordIndex}, {fieldIndex}]{recordId} ({fieldId})", node);
+                            InsertStrings((ArmpTable)obj, $"[{recordIndex}, {fieldIndex}]{recordId} ({fieldId})", node);
                         }
                     }
                 }
