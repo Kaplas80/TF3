@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2021 Kaplas
+// Copyright (c) 2021 Kaplas
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -34,22 +34,33 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
     {
         private ArmpTable _original = null;
 
-        public void Initialize(ArmpTable parameters)
-        {
-            _original = parameters;
-        }
+        /// <summary>
+        /// Converter initializer.
+        /// </summary>
+        /// <remarks>
+        /// Initialization is mandatory.
+        /// </remarks>
+        /// <param name="parameters">Original Armp table.</param>
+        public void Initialize(ArmpTable parameters) => _original = parameters;
 
+        /// <summary>
+        /// Inserts the translated strings from Po files in a Armp table.
+        /// </summary>
+        /// <param name="source">Collection of nodes in Po format.</param>
+        /// <returns>The original Armp table with translated strings.</returns>
         public ArmpTable Convert(NodeContainerFormat source)
         {
-            if (source == null) {
+            if (source == null)
+            {
                 throw new ArgumentNullException(nameof(source));
             }
 
-            if (_original == null) {
+            if (_original == null)
+            {
                 throw new InvalidOperationException("Uninitialized");
             }
 
-            var result = _original;
+            ArmpTable result = _original;
 
             InsertStrings(result, "Main", source.Root);
 
@@ -58,43 +69,54 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
         private void InsertStrings(ArmpTable table, string name, Node node)
         {
-            var translationNode = node.Children.FirstOrDefault(x => x.Tags["TableName"] == name);
-            if (translationNode != null) {
+            Node translationNode = node.Children.FirstOrDefault(x => x.Tags["TableName"] == name);
+            if (translationNode != null)
+            {
                 Po po = translationNode.GetFormatAs<Po>();
 
-                for (int i = 0; i < po.Entries.Count; i++) {
+                for (int i = 0; i < po.Entries.Count; i++)
+                {
                     PoEntry entry = po.Entries[i];
                     int index = int.Parse(entry.Context.Split('#')[1]);
                     table.ValueStrings[index] = entry.Translated.Replace("\n", "\r\n");
                 }
             }
 
-            if (table.Indexer != null) {
+            if (table.Indexer != null)
+            {
                 InsertStrings(table.Indexer, $"{name}_Idx", node);
             }
 
-            for (int fieldIndex = 0; fieldIndex < table.FieldCount; fieldIndex++) {
+            for (int fieldIndex = 0; fieldIndex < table.FieldCount; fieldIndex++)
+            {
                 object[] data = table.Values[fieldIndex];
-                if (data == null) {
+                if (data == null)
+                {
                     continue;
                 }
 
-                if (table.RawRecordMemberInfo?.Length > 0) {
+                if (table.RawRecordMemberInfo?.Length > 0)
+                {
                     FieldType memberInfo = table.RawRecordMemberInfo[fieldIndex];
-                    for (int recordIndex = 0; recordIndex < table.RecordCount; recordIndex++) {
+                    for (int recordIndex = 0; recordIndex < table.RecordCount; recordIndex++)
+                    {
                         object obj = data[recordIndex];
-                        if (obj == null) {
+                        if (obj == null)
+                        {
                             continue;
                         }
 
-                        if (memberInfo == FieldType.Table) {
+                        if (memberInfo == FieldType.Table)
+                        {
                             string fieldId = $"Field {fieldIndex}";
-                            if (fieldIndex < table.FieldIds.Length) {
+                            if (fieldIndex < table.FieldIds.Length)
+                            {
                                 fieldId = table.FieldIds[fieldIndex];
                             }
 
                             string recordId = $"Record {recordIndex}";
-                            if (recordIndex < table.RecordIds.Length) {
+                            if (recordIndex < table.RecordIds.Length)
+                            {
                                 recordId = table.RecordIds[recordIndex];
                             }
 

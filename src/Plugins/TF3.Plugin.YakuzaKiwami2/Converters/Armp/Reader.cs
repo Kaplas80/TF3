@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2021 Kaplas
+// Copyright (c) 2021 Kaplas
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -42,7 +42,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
         /// <exception cref="ArgumentNullException">Thrown if source is null.</exception>
         public ArmpTable Convert(BinaryFormat source)
         {
-            if (source == null) {
+            if (source == null)
+            {
                 throw new ArgumentNullException(nameof(source));
             }
 
@@ -50,7 +51,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
 
-            var reader = new DataReader(source.Stream) {
+            var reader = new DataReader(source.Stream)
+            {
                 DefaultEncoding = Encoding.UTF8,
                 Endianness = EndiannessMode.LittleEndian,
             };
@@ -59,7 +61,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
             var header = reader.Read<FileHeader>() as FileHeader;
             CheckHeader(header);
 
-            if (header.Endianness == Endianness.BigEndian) {
+            if (header.Endianness == Endianness.BigEndian)
+            {
                 reader.Endianness = EndiannessMode.BigEndian;
             }
 
@@ -70,11 +73,13 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
         private static void CheckHeader(FileHeader header)
         {
-            if (header == null) {
+            if (header == null)
+            {
                 throw new ArgumentNullException(nameof(header));
             }
 
-            if (header.Magic != "armp") {
+            if (header.Magic != "armp")
+            {
                 throw new FormatException($"armp: Bad magic Id ({header.Magic} != armp)");
             }
         }
@@ -85,7 +90,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
             long returnPosition = reader.Stream.Position;
             _ = reader.Stream.Seek(offset, System.IO.SeekOrigin.Begin);
-            for (int i = 0; i < count; i++) {
+            for (int i = 0; i < count; i++)
+            {
                 result[i] = (object)reader.ReadByType(type);
             }
 
@@ -102,11 +108,13 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
             _ = reader.Stream.Seek(offset, System.IO.SeekOrigin.Begin);
             byte current = reader.ReadByte();
             int bitsLeft = 8;
-            for (int i = 0; i < count; i++) {
+            for (int i = 0; i < count; i++)
+            {
                 bool isTrue = (current & 0x01) == 0x01;
                 current >>= 0x01;
                 bitsLeft--;
-                if (bitsLeft == 0) {
+                if (bitsLeft == 0)
+                {
                     current = reader.ReadByte();
                     bitsLeft = 8;
                 }
@@ -125,7 +133,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
             long returnPosition = reader.Stream.Position;
             _ = reader.Stream.Seek(offset, System.IO.SeekOrigin.Begin);
-            for (int i = 0; i < count; i++) {
+            for (int i = 0; i < count; i++)
+            {
                 int idOffset = reader.ReadInt32();
                 long returnPosition2 = reader.Stream.Position;
                 _ = reader.Stream.Seek(idOffset, System.IO.SeekOrigin.Begin);
@@ -146,7 +155,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
             long returnPosition = reader.Stream.Position;
             _ = reader.Stream.Seek(offset, System.IO.SeekOrigin.Begin);
-            for (int i = 0; i < count; i++) {
+            for (int i = 0; i < count; i++)
+            {
                 result[i] = (FieldType)Enum.ToObject(typeof(FieldType), reader.ReadByte());
             }
 
@@ -184,14 +194,16 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
         private void ReadIndexer(DataReader reader, ArmpTable table, int offset)
         {
-            if (offset > 0) {
+            if (offset > 0)
+            {
                 table.Indexer = ReadTable(reader, offset);
             }
         }
 
         private void ReadRecordExistence(DataReader reader, ArmpTable table, int offset)
         {
-            table.RecordExistence = offset switch {
+            table.RecordExistence = offset switch
+            {
                 -1 => null,
                 0 => System.Array.Empty<bool>(),
                 _ => ReadBits(reader, table.RecordCount, offset)
@@ -200,7 +212,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
         private void ReadFieldExistence(DataReader reader, ArmpTable table, int offset)
         {
-            table.FieldExistence = offset switch {
+            table.FieldExistence = offset switch
+            {
                 -1 => null,
                 0 => System.Array.Empty<bool>(),
                 _ => ReadBits(reader, table.FieldCount, offset)
@@ -209,7 +222,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
         private void ReadRecordIds(DataReader reader, ArmpTable table, int offset)
         {
-            table.RecordIds = offset switch {
+            table.RecordIds = offset switch
+            {
                 0 => System.Array.Empty<string>(),
                 _ => ReadStrings(reader, table.RecordCount, offset)
             };
@@ -217,7 +231,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
         private void ReadFieldIds(DataReader reader, ArmpTable table, int offset)
         {
-            table.FieldIds = offset switch {
+            table.FieldIds = offset switch
+            {
                 0 => System.Array.Empty<string>(),
                 _ => ReadStrings(reader, table.FieldCount, offset)
             };
@@ -230,7 +245,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
         private void ReadFieldTypes(DataReader reader, ArmpTable table, int offset)
         {
-            table.FieldTypes = offset switch {
+            table.FieldTypes = offset switch
+            {
                 0 => System.Array.Empty<FieldType>(),
                 _ => ReadTypes(reader, table.FieldCount, offset)
             };
@@ -238,7 +254,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
         private void ReadRecordMemberInfo(DataReader reader, ArmpTable table, int offset)
         {
-            table.RawRecordMemberInfo = offset switch {
+            table.RawRecordMemberInfo = offset switch
+            {
                 0 => System.Array.Empty<FieldType>(),
                 _ => ReadTypes(reader, table.FieldCount, offset)
             };
@@ -250,14 +267,17 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
             long returnPosition = reader.Stream.Position;
             _ = reader.Stream.Seek(offset, System.IO.SeekOrigin.Begin);
 
-            for (int i = 0; i < table.FieldCount; i++) {
+            for (int i = 0; i < table.FieldCount; i++)
+            {
                 FieldType fieldType = table.RawRecordMemberInfo[i];
                 int dataOffset = reader.ReadInt32();
-                if (dataOffset == -1 || fieldType == FieldType.Unused) {
+                if (dataOffset == -1 || fieldType == FieldType.Unused)
+                {
                     continue;
                 }
 
-                switch (fieldType) {
+                switch (fieldType)
+                {
                     case FieldType.Unused:
                         break;
                     case FieldType.UInt8:
@@ -318,11 +338,13 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
             long returnPosition = reader.Stream.Position;
             _ = reader.Stream.Seek(offset, System.IO.SeekOrigin.Begin);
 
-            for (int i = 0; i < count; i++) {
+            for (int i = 0; i < count; i++)
+            {
                 ArmpTable subTable = null;
                 long subTablePointer = reader.ReadInt64();
                 long returnPosition2 = reader.Stream.Position;
-                if (subTablePointer > 0) {
+                if (subTablePointer > 0)
+                {
                     subTable = ReadTable(reader, subTablePointer);
                 }
 
@@ -338,7 +360,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
         private void ReadEmptyValues(DataReader reader, ArmpTable table, int offset)
         {
-            if (offset == 0) {
+            if (offset == 0)
+            {
                 table.EmptyValues = Array.Empty<bool[]>();
                 return;
             }
@@ -346,9 +369,11 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
             table.EmptyValues = new bool[table.FieldCount][];
             long returnPosition = reader.Stream.Position;
             _ = reader.Stream.Seek(offset, System.IO.SeekOrigin.Begin);
-            for (int i = 0; i < table.FieldCount; i++) {
+            for (int i = 0; i < table.FieldCount; i++)
+            {
                 int dataOffset = reader.ReadInt32();
-                if (dataOffset <= 0) {
+                if (dataOffset <= 0)
+                {
                     table.EmptyValues[i] = null;
                     continue;
                 }
@@ -361,7 +386,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
         private void ReadRecordOrder(DataReader reader, ArmpTable table, int offset)
         {
-            if (offset == 0) {
+            if (offset == 0)
+            {
                 table.RecordOrder = Array.Empty<int>();
                 return;
             }
@@ -372,7 +398,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
         private void ReadFieldOrder(DataReader reader, ArmpTable table, int offset)
         {
-            if (offset == 0) {
+            if (offset == 0)
+            {
                 table.FieldOrder = Array.Empty<int>();
                 return;
             }
@@ -383,7 +410,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
         private void ReadFieldInfo(DataReader reader, ArmpTable table, int offset)
         {
-            if (offset == 0) {
+            if (offset == 0)
+            {
                 table.FieldInfo = Array.Empty<byte>();
                 return;
             }
@@ -394,7 +422,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
         private void ReadGameVarFieldType(DataReader reader, ArmpTable table, int offset)
         {
-            if (offset == 0) {
+            if (offset == 0)
+            {
                 table.GameVarFieldType = Array.Empty<int>();
                 return;
             }

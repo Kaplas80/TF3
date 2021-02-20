@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2021 Kaplas
+// Copyright (c) 2021 Kaplas
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -42,18 +42,21 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
         /// <exception cref="ArgumentNullException">Thrown if source is null.</exception>
         public BinaryFormat Convert(ArmpTable source)
         {
-            if (source == null) {
+            if (source == null)
+            {
                 throw new ArgumentNullException(nameof(source));
             }
 
             DataStream stream = DataStreamFactory.FromMemory();
 
-            var writer = new DataWriter(stream) {
+            var writer = new DataWriter(stream)
+            {
                 DefaultEncoding = Encoding.UTF8,
                 Endianness = EndiannessMode.LittleEndian,
             };
 
-            var header = new FileHeader {
+            var header = new FileHeader
+            {
                 Magic = "armp",
                 PlatformId = Platform.Win32,
                 Endianness = Endianness.LittleEndian,
@@ -81,11 +84,13 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
             int result = offset;
 
             long startPos = writer.Stream.Position;
-            for (int i = 0; i < values.Length; i++) {
+            for (int i = 0; i < values.Length; i++)
+            {
                 writer.WriteOfType(type, values[i]);
             }
 
-            if (padding > 0) {
+            if (padding > 0)
+            {
                 writer.WritePadding(0x00, padding);
             }
 
@@ -100,13 +105,16 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
             int result = offset;
             long startPos = writer.Stream.Position;
             int numBytes = (int)Math.Ceiling(values.Length / 8.0);
-            if (values.Length % 4 == 0) {
+            if (values.Length % 4 == 0)
+            {
                 numBytes++;
             }
 
             byte[] temp = new byte[numBytes];
-            for (int i = 0; i < values.Length; i++) {
-                if (values[i]) {
+            for (int i = 0; i < values.Length; i++)
+            {
+                if (values[i])
+                {
                     int byteIndex = Math.DivRem(i, 8, out int bitIndex);
                     temp[byteIndex] |= (byte)(0x01 << bitIndex);
                 }
@@ -114,7 +122,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
             writer.Write(temp);
 
-            if (padding > 0) {
+            if (padding > 0)
+            {
                 writer.WritePadding(0x00, padding);
             }
 
@@ -129,7 +138,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
             long startPos;
             long endPos;
             var offsets = new List<int>();
-            for (int i = 0; i < values.Length; i++) {
+            for (int i = 0; i < values.Length; i++)
+            {
                 offsets.Add(offset);
                 string id = values[i];
                 startPos = writer.Stream.Position;
@@ -145,11 +155,13 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
             int pointer = offset;
             startPos = writer.Stream.Position;
-            for (int i = 0; i < offsets.Count; i++) {
+            for (int i = 0; i < offsets.Count; i++)
+            {
                 writer.Write(offsets[i]);
             }
 
-            if (padding > 0) {
+            if (padding > 0)
+            {
                 writer.WritePadding(0x00, padding);
             }
 
@@ -163,11 +175,13 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
             int result = offset;
 
             long startPos = writer.Stream.Position;
-            for (int i = 0; i < values.Length; i++) {
+            for (int i = 0; i < values.Length; i++)
+            {
                 writer.Write((byte)values[i]);
             }
 
-            if (padding > 0) {
+            if (padding > 0)
+            {
                 writer.WritePadding(0x00, padding);
             }
 
@@ -181,12 +195,14 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
         {
             using var currentTable = new System.IO.MemoryStream();
             using DataStream ds = DataStreamFactory.FromStream(currentTable);
-            var writer = new DataWriter(ds) {
+            var writer = new DataWriter(ds)
+            {
                 DefaultEncoding = Encoding.UTF8,
                 Endianness = EndiannessMode.LittleEndian,
             };
 
-            var header = new Types.ArmpTableHeader {
+            var header = new Types.ArmpTableHeader
+            {
                 RecordCount = table.RecordCount,
                 FieldCount = table.FieldCount,
                 ValueStringCount = table.ValueStringCount,
@@ -218,21 +234,26 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
             long[][] subTablesOffsets = new long[table.FieldCount][];
 
             // 1. Child tables
-            for (int field = 0; field < table.FieldCount; field++) {
+            for (int field = 0; field < table.FieldCount; field++)
+            {
                 subTablesOffsets[field] = new long[table.RecordCount];
 
-                if (table.RawRecordMemberInfo[field] != Enums.FieldType.Table) {
+                if (table.RawRecordMemberInfo[field] != Enums.FieldType.Table)
+                {
                     continue;
                 }
 
                 object[] data = table.Values[field];
-                if (data == null) {
+                if (data == null)
+                {
                     continue;
                 }
 
-                for (int record = 0; record < table.RecordCount; record++) {
+                for (int record = 0; record < table.RecordCount; record++)
+                {
                     var subTable = (ArmpTable)data[record];
-                    if (subTable == null) {
+                    if (subTable == null)
+                    {
                         subTablesOffsets[field][record] = 0x00000000;
                         continue;
                     }
@@ -248,7 +269,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
             }
 
             // 2. Indexer
-            if (table.Indexer != null) {
+            if (table.Indexer != null)
+            {
                 (byte[] indexerData, int indexerOffset) = SerializeTable(table.Indexer, currentOffset);
                 long startPos = writer.Stream.Position;
                 writer.Write(indexerData);
@@ -286,11 +308,13 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
         private void WriteRecordExistence(DataWriter writer, ArmpTable table, Types.ArmpTableHeader header, ref int offset)
         {
-            if (table.RecordExistence == null) {
+            if (table.RecordExistence == null)
+            {
                 return;
             }
 
-            if (table.RecordExistence.Length == 0) {
+            if (table.RecordExistence.Length == 0)
+            {
                 return;
             }
 
@@ -299,11 +323,13 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
         private void WriteFieldExistence(DataWriter writer, ArmpTable table, Types.ArmpTableHeader header, ref int offset)
         {
-            if (table.FieldExistence == null) {
+            if (table.FieldExistence == null)
+            {
                 return;
             }
 
-            if (table.FieldExistence.Length == 0) {
+            if (table.FieldExistence.Length == 0)
+            {
                 writer.Write(0);
                 offset += 4;
                 return;
@@ -314,7 +340,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
         private void WriteRecordIds(DataWriter writer, ArmpTable table, Types.ArmpTableHeader header, ref int offset)
         {
-            if (table.RecordIds.Length == 0) {
+            if (table.RecordIds.Length == 0)
+            {
                 return;
             }
 
@@ -323,7 +350,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
         private void WriteFieldIds(DataWriter writer, ArmpTable table, Types.ArmpTableHeader header, ref int offset)
         {
-            if (table.FieldIds.Length == 0) {
+            if (table.FieldIds.Length == 0)
+            {
                 return;
             }
 
@@ -332,7 +360,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
         private void WriteValueStrings(DataWriter writer, ArmpTable table, Types.ArmpTableHeader header, ref int offset)
         {
-            if (table.ValueStrings.Length == 0) {
+            if (table.ValueStrings.Length == 0)
+            {
                 long startPos = writer.Stream.Position;
                 writer.Write(0);
                 writer.WritePadding(0x00, 16);
@@ -347,7 +376,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
         private void WriteFieldTypes(DataWriter writer, ArmpTable table, Types.ArmpTableHeader header, ref int offset)
         {
-            if (table.FieldTypes.Length == 0) {
+            if (table.FieldTypes.Length == 0)
+            {
                 return;
             }
 
@@ -356,7 +386,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
         private void WriteRecordMemberInfo(DataWriter writer, ArmpTable table, Types.ArmpTableHeader header, ref int offset)
         {
-            if (table.RawRecordMemberInfo.Length == 0) {
+            if (table.RawRecordMemberInfo.Length == 0)
+            {
                 return;
             }
 
@@ -367,20 +398,24 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
         {
             int[] offsets = new int[table.FieldCount];
 
-            for (int i = 0; i < table.FieldCount; i++) {
+            for (int i = 0; i < table.FieldCount; i++)
+            {
                 FieldType fieldType = table.RawRecordMemberInfo[i];
-                if (fieldType == FieldType.Unused) {
+                if (fieldType == FieldType.Unused)
+                {
                     offsets[i] = 0;
                     continue;
                 }
 
                 object[] data = table.Values[i];
-                if (data == null) {
+                if (data == null)
+                {
                     offsets[i] = -1;
                     continue;
                 }
 
-                switch (fieldType) {
+                switch (fieldType)
+                {
                     case FieldType.UInt8:
                         offsets[i] = WriteNumbers(writer, data, typeof(byte), 4, ref offset);
                         break;
@@ -415,11 +450,13 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
                         break;
                     case FieldType.Boolean:
                         // Booleans are read as a bitmask
-                        try {
+                        try
+                        {
                             bool[] temp = Array.ConvertAll(data, x => (bool)x);
                             offsets[i] = WriteBits(writer, temp, 4, ref offset);
                         }
-                        catch (NullReferenceException) {
+                        catch (NullReferenceException)
+                        {
                             offsets[i] = -1;
                             continue;
                         }
@@ -439,12 +476,14 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
             header.ValuesPointer = offset;
             long startPos = writer.Stream.Position;
-            foreach (int o in offsets) {
+            foreach (int o in offsets)
+            {
                 writer.Write(o);
             }
 
             long mod = (writer.Stream.Position - startPos) % 8;
-            if (mod > 0) {
+            if (mod > 0)
+            {
                 writer.WriteTimes(0x00, 8 - mod);
             }
 
@@ -457,11 +496,13 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
             int result = offset;
 
             long startPos = writer.Stream.Position;
-            for (int i = 0; i < offsets.Length; i++) {
+            for (int i = 0; i < offsets.Length; i++)
+            {
                 writer.Write(offsets[i]);
             }
 
-            if (padding > 0) {
+            if (padding > 0)
+            {
                 writer.WritePadding(0x00, padding);
             }
 
@@ -473,19 +514,22 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
         private void WriteEmptyValues(DataWriter writer, ArmpTable table, Types.ArmpTableHeader header, ref int offset)
         {
-            if (table.EmptyValues.Length == 0) {
+            if (table.EmptyValues.Length == 0)
+            {
                 return;
             }
 
             int[] offsets = new int[table.FieldCount];
-            for (int i = 0; i < table.FieldCount; i++) {
+            for (int i = 0; i < table.FieldCount; i++)
+            {
                 bool[] data = table.EmptyValues[i];
                 offsets[i] = data == null ? -1 : WriteBits(writer, data, 4, ref offset);
             }
 
             header.EmptyValuesPointer = offset;
             long startPos = writer.Stream.Position;
-            foreach (int o in offsets) {
+            foreach (int o in offsets)
+            {
                 writer.Write(o);
             }
 
@@ -496,7 +540,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
         private void WriteRecordOrder(DataWriter writer, ArmpTable table, Types.ArmpTableHeader header, ref int offset)
         {
-            if (table.RecordOrder.Length == 0) {
+            if (table.RecordOrder.Length == 0)
+            {
                 return;
             }
 
@@ -504,7 +549,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
             long startPos = writer.Stream.Position;
             header.RecordOrderPointer = WriteNumbers(writer, temp, typeof(int), 0, ref offset);
             long mod = (writer.Stream.Position - startPos) % 8;
-            if (mod > 0) {
+            if (mod > 0)
+            {
                 writer.WriteTimes(0x00, 8 - mod);
                 offset += (int)(8 - mod);
             }
@@ -512,7 +558,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
         private void WriteFieldOrder(DataWriter writer, ArmpTable table, Types.ArmpTableHeader header, ref int offset)
         {
-            if (table.FieldOrder.Length == 0) {
+            if (table.FieldOrder.Length == 0)
+            {
                 return;
             }
 
@@ -522,7 +569,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
         private void WriteFieldInfo(DataWriter writer, ArmpTable table, Types.ArmpTableHeader header, ref int offset)
         {
-            if (table.FieldInfo.Length == 0) {
+            if (table.FieldInfo.Length == 0)
+            {
                 return;
             }
 
@@ -532,7 +580,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
         private void WriteGameVarFieldType(DataWriter writer, ArmpTable table, Types.ArmpTableHeader header, ref int offset)
         {
-            if (table.GameVarFieldType.Length == 0) {
+            if (table.GameVarFieldType.Length == 0)
+            {
                 return;
             }
 

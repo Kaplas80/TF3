@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2021 Kaplas
+// Copyright (c) 2021 Kaplas
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -40,7 +40,8 @@ namespace TF3.Common.Yakuza.Converters.Par
         /// <exception cref="ArgumentNullException">Thrown if source is null.</exception>
         public virtual NodeContainerFormat Convert(BinaryFormat source)
         {
-            if (source == null) {
+            if (source == null)
+            {
                 throw new ArgumentNullException(nameof(source));
             }
 
@@ -49,7 +50,8 @@ namespace TF3.Common.Yakuza.Converters.Par
             var result = new NodeContainerFormat();
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
 
-            var reader = new DataReader(source.Stream) {
+            var reader = new DataReader(source.Stream)
+            {
                 DefaultEncoding = Encoding.GetEncoding(1252),
                 Endianness = EndiannessMode.BigEndian,
             };
@@ -58,7 +60,8 @@ namespace TF3.Common.Yakuza.Converters.Par
             var header = reader.Read<FileHeader>() as FileHeader;
             CheckHeader(header);
 
-            if (header.Endianness == Endianness.LittleEndian) {
+            if (header.Endianness == Endianness.LittleEndian)
+            {
                 reader.Endianness = EndiannessMode.LittleEndian;
             }
 
@@ -66,13 +69,16 @@ namespace TF3.Common.Yakuza.Converters.Par
 
             bool[] processedDirectories = new bool[index.DirectoryCount];
 
-            for (uint i = 0; i < index.DirectoryCount; i++) {
-                if (processedDirectories[i]) {
+            for (uint i = 0; i < index.DirectoryCount; i++)
+            {
+                if (processedDirectories[i])
+                {
                     continue;
                 }
 
                 Node directory = ProcessDirectory(i, reader, index, ref processedDirectories);
-                if (directory != null) {
+                if (directory != null)
+                {
                     result.Root.Add(directory);
                 }
             }
@@ -89,15 +95,18 @@ namespace TF3.Common.Yakuza.Converters.Par
         /// <exception cref="FormatException">Thrown when some value is invalid.</exception>
         private static void CheckHeader(FileHeader header)
         {
-            if (header == null) {
+            if (header == null)
+            {
                 throw new ArgumentNullException(nameof(header));
             }
 
-            if (header.Magic != "PARC") {
+            if (header.Magic != "PARC")
+            {
                 throw new FormatException($"PARC: Bad magic Id ({header.Magic} != PARC)");
             }
 
-            if (header.PlatformId != Platform.PlayStation3) {
+            if (header.PlatformId != Platform.PlayStation3)
+            {
                 throw new FormatException($"PARC: Bad platform Id ({header.PlatformId} != PlayStation3)");
             }
         }
@@ -108,20 +117,23 @@ namespace TF3.Common.Yakuza.Converters.Par
             ParIndex index,
             ref bool[] processedDirectories)
         {
-            if (processedDirectories[directoryIndex]) {
+            if (processedDirectories[directoryIndex])
+            {
                 return null;
             }
 
             _ = reader.Stream.Seek(0x20 + (directoryIndex * 0x40), System.IO.SeekOrigin.Begin);
             string name = reader.ReadString(0x40).TrimEnd('\0');
-            if (string.IsNullOrEmpty(name)) {
+            if (string.IsNullOrEmpty(name))
+            {
                 name = ".";
             }
 
             _ = reader.Stream.Seek(index.DirectoryStartOffset + (directoryIndex * 0x20), System.IO.SeekOrigin.Begin);
             var directoryInfo = reader.Read<ParDirectoryInfo>() as ParDirectoryInfo;
 
-            var directory = new Node(name, new NodeContainerFormat()) {
+            var directory = new Node(name, new NodeContainerFormat())
+            {
                 Tags =
                 {
                     ["SubdirectoryCount"] = directoryInfo.SubdirectoryCount,
@@ -134,16 +146,19 @@ namespace TF3.Common.Yakuza.Converters.Par
 
             for (uint i = directoryInfo.SubdirectoryStartIndex;
                  i < directoryInfo.SubdirectoryStartIndex + directoryInfo.SubdirectoryCount;
-                 i++) {
-                Node child = this.ProcessDirectory(i, reader, index, ref processedDirectories);
-                if (child != null) {
+                 i++)
+            {
+                Node child = ProcessDirectory(i, reader, index, ref processedDirectories);
+                if (child != null)
+                {
                     directory.Add(child);
                 }
             }
 
             for (uint i = directoryInfo.FileStartIndex;
                  i < directoryInfo.FileStartIndex + directoryInfo.FileCount;
-                 i++) {
+                 i++)
+            {
                 _ = reader.Stream.Seek(0x20 + (0x40 * index.DirectoryCount) + (i * 0x40), System.IO.SeekOrigin.Begin);
                 string fileName = reader.ReadString(0x40).TrimEnd('\0');
 
@@ -152,9 +167,10 @@ namespace TF3.Common.Yakuza.Converters.Par
                 var fileInfo = reader.Read<ParFileInfo>() as ParFileInfo;
 
                 long offset = ((long)fileInfo.ExtendedOffset << 32) | fileInfo.DataOffset;
-                var stream = DataStreamFactory.FromStream(reader.Stream, offset, fileInfo.CompressedSize);
+                DataStream stream = DataStreamFactory.FromStream(reader.Stream, offset, fileInfo.CompressedSize);
                 var binaryFormat = new BinaryFormat(stream);
-                var file = new Node(fileName, binaryFormat) {
+                var file = new Node(fileName, binaryFormat)
+                {
                     Tags =
                     {
                         ["Flags"] = fileInfo.Flags,

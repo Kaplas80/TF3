@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2021 Kaplas
+// Copyright (c) 2021 Kaplas
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -184,7 +184,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Formats
         /// <inheritdoc/>
         public bool Equals(ArmpTable other)
         {
-            if (other == null) {
+            if (other == null)
+            {
                 return false;
             }
 
@@ -194,69 +195,86 @@ namespace TF3.Plugin.YakuzaKiwami2.Formats
                 FieldCount != other.FieldCount ||
                 ValueStringCount != other.ValueStringCount ||
                 RecordInvalid != other.RecordInvalid ||
-                FieldInvalid != other.FieldInvalid) {
+                FieldInvalid != other.FieldInvalid)
+            {
                 return false;
             }
 
-            if (RecordExistence != null && !((IStructuralEquatable)RecordExistence).Equals(other.RecordExistence, StructuralComparisons.StructuralEqualityComparer)) {
+            if (RecordExistence != null && !((IStructuralEquatable)RecordExistence).Equals(other.RecordExistence, StructuralComparisons.StructuralEqualityComparer))
+            {
                 return false;
             }
 
-            if (FieldExistence != null && !((IStructuralEquatable)FieldExistence).Equals(other.FieldExistence, StructuralComparisons.StructuralEqualityComparer)) {
+            if (FieldExistence != null && !((IStructuralEquatable)FieldExistence).Equals(other.FieldExistence, StructuralComparisons.StructuralEqualityComparer))
+            {
                 return false;
             }
 
-            if (!((IStructuralEquatable)RecordIds).Equals(other.RecordIds, StructuralComparisons.StructuralEqualityComparer)) {
+            if (!((IStructuralEquatable)RecordIds).Equals(other.RecordIds, StructuralComparisons.StructuralEqualityComparer))
+            {
                 return false;
             }
 
-            if (!((IStructuralEquatable)FieldIds).Equals(other.FieldIds, StructuralComparisons.StructuralEqualityComparer)) {
+            if (!((IStructuralEquatable)FieldIds).Equals(other.FieldIds, StructuralComparisons.StructuralEqualityComparer))
+            {
                 return false;
             }
 
-            if (!((IStructuralEquatable)ValueStrings).Equals(other.ValueStrings, StructuralComparisons.StructuralEqualityComparer)) {
+            if (!((IStructuralEquatable)ValueStrings).Equals(other.ValueStrings, StructuralComparisons.StructuralEqualityComparer))
+            {
                 return false;
             }
 
-            if (!((IStructuralEquatable)FieldTypes).Equals(other.FieldTypes, StructuralComparisons.StructuralEqualityComparer)) {
+            if (!((IStructuralEquatable)FieldTypes).Equals(other.FieldTypes, StructuralComparisons.StructuralEqualityComparer))
+            {
                 return false;
             }
 
-            if (!((IStructuralEquatable)RawRecordMemberInfo).Equals(other.RawRecordMemberInfo, StructuralComparisons.StructuralEqualityComparer)) {
+            if (!((IStructuralEquatable)RawRecordMemberInfo).Equals(other.RawRecordMemberInfo, StructuralComparisons.StructuralEqualityComparer))
+            {
                 return false;
             }
 
-            for (int i = 0; i < FieldCount; i++) {
-                if (Values[i] == null && other.Values[i] != null) {
+            for (int i = 0; i < FieldCount; i++)
+            {
+                if (Values[i] == null && other.Values[i] != null)
+                {
                     return false;
                 }
 
-                if (Values[i] != null && !((IStructuralEquatable)Values[i]).Equals(other.Values[i], StructuralComparisons.StructuralEqualityComparer)) {
+                if (Values[i] != null && !((IStructuralEquatable)Values[i]).Equals(other.Values[i], StructuralComparisons.StructuralEqualityComparer))
+                {
                     return false;
                 }
             }
 
-            if (!((IStructuralEquatable)EmptyValues).Equals(other.EmptyValues, StructuralComparisons.StructuralEqualityComparer)) {
+            if (!((IStructuralEquatable)EmptyValues).Equals(other.EmptyValues, StructuralComparisons.StructuralEqualityComparer))
+            {
                 return false;
             }
 
-            if (!((IStructuralEquatable)RecordOrder).Equals(other.RecordOrder, StructuralComparisons.StructuralEqualityComparer)) {
+            if (!((IStructuralEquatable)RecordOrder).Equals(other.RecordOrder, StructuralComparisons.StructuralEqualityComparer))
+            {
                 return false;
             }
 
-            if (!((IStructuralEquatable)FieldOrder).Equals(other.FieldOrder, StructuralComparisons.StructuralEqualityComparer)) {
+            if (!((IStructuralEquatable)FieldOrder).Equals(other.FieldOrder, StructuralComparisons.StructuralEqualityComparer))
+            {
                 return false;
             }
 
-            if (!((IStructuralEquatable)FieldInfo).Equals(other.FieldInfo, StructuralComparisons.StructuralEqualityComparer)) {
+            if (!((IStructuralEquatable)FieldInfo).Equals(other.FieldInfo, StructuralComparisons.StructuralEqualityComparer))
+            {
                 return false;
             }
 
-            if (!((IStructuralEquatable)GameVarFieldType).Equals(other.GameVarFieldType, StructuralComparisons.StructuralEqualityComparer)) {
+            if (!((IStructuralEquatable)GameVarFieldType).Equals(other.GameVarFieldType, StructuralComparisons.StructuralEqualityComparer))
+            {
                 return false;
             }
 
-            if (Indexer?.Equals(other.Indexer) == false) {
+            if (Indexer?.Equals(other.Indexer) == false)
+            {
                 return false;
             }
 
@@ -265,5 +283,11 @@ namespace TF3.Plugin.YakuzaKiwami2.Formats
 
         /// <inheritdoc/>
         public override bool Equals(object obj) => Equals(obj as ArmpTable);
+
+        /// <inheritdoc/>
+        public override int GetHashCode()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

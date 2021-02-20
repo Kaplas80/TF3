@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2021 Kaplas
+// Copyright (c) 2021 Kaplas
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -40,7 +40,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
         /// <exception cref="ArgumentNullException">Thrown if source is null.</exception>
         public BinaryFormat Convert(ArmpTable source)
         {
-            if (source == null) {
+            if (source == null)
+            {
                 throw new ArgumentNullException(nameof(source));
             }
 
@@ -64,7 +65,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
         {
             ExcelWorksheet sheet = package.Workbook.Worksheets.Add(name);
 
-            if (table.Indexer != null) {
+            if (table.Indexer != null)
+            {
                 TableToSheet(table.Indexer, $"{name}_Idx", package);
             }
 
@@ -86,7 +88,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
             sheet.Cells["A10"].Value = "Index";
             sheet.Cells["B10"].Value = "String";
 
-            for (int i = 0; i < table.ValueStringCount; i++) {
+            for (int i = 0; i < table.ValueStringCount; i++)
+            {
                 sheet.Cells[11 + i, 1].Value = i;
                 sheet.Cells[11 + i, 2].Value = table.ValueStrings[i];
             }
@@ -95,7 +98,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
             sheet.Cells["E6"].Value = "FieldInfo";
             sheet.Cells["F6"].Value = "Existence";
 
-            for (int recordIndex = 0; recordIndex < table.RecordCount; recordIndex++) {
+            for (int recordIndex = 0; recordIndex < table.RecordCount; recordIndex++)
+            {
                 sheet.Cells[7 + recordIndex, 4].Value = table.RecordOrder?.Length > 0 ? table.RecordOrder[recordIndex] : -1;
                 sheet.Cells[7 + recordIndex, 5].Value = table.FieldInfo?.Length > 0 ? table.FieldInfo[recordIndex] : -1;
                 sheet.Cells[7 + recordIndex, 6].Value = table.RecordExistence?.Length > 0 && table.RecordExistence[recordIndex];
@@ -109,7 +113,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
             sheet.Cells["G5"].Value = "Existence";
             sheet.Cells["G6"].Value = "ID";
 
-            for (int fieldIndex = 0; fieldIndex < table.FieldCount; fieldIndex++) {
+            for (int fieldIndex = 0; fieldIndex < table.FieldCount; fieldIndex++)
+            {
                 sheet.Cells[1, 8 + fieldIndex].Value = table.FieldOrder?.Length > 0 ? table.FieldOrder[fieldIndex] : -1;
                 sheet.Cells[2, 8 + fieldIndex].Value = table.FieldTypes?.Length > 0 ? table.FieldTypes[fieldIndex] : FieldType.Unused;
                 sheet.Cells[3, 8 + fieldIndex].Value = table.RawRecordMemberInfo?.Length > 0 ? table.RawRecordMemberInfo[fieldIndex] : FieldType.Unused;
@@ -118,30 +123,39 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
                 sheet.Cells[6, 8 + fieldIndex].Value = table.FieldIds?.Length > 0 ? table.FieldIds[fieldIndex] : $"Field {fieldIndex}";
 
                 object[] data = table.Values[fieldIndex];
-                if (data == null) {
+                if (data == null)
+                {
                     continue;
                 }
 
-                if (table.RawRecordMemberInfo?.Length > 0) {
+                if (table.RawRecordMemberInfo?.Length > 0)
+                {
                     FieldType memberInfo = table.RawRecordMemberInfo[fieldIndex];
-                    for (int recordIndex = 0; recordIndex < table.RecordCount; recordIndex++) {
+                    for (int recordIndex = 0; recordIndex < table.RecordCount; recordIndex++)
+                    {
                         object obj = data[recordIndex];
-                        if (obj == null) {
+                        if (obj == null)
+                        {
                             continue;
                         }
 
-                        if (memberInfo != FieldType.Table) {
+                        if (memberInfo != FieldType.Table)
+                        {
                             string value = obj.ToString();
-                            if (table.EmptyValues?.Length > 0 && table.EmptyValues[fieldIndex]?[recordIndex] == true) {
+                            if (table.EmptyValues?.Length > 0 && table.EmptyValues[fieldIndex]?[recordIndex] == true)
+                            {
                                 value += "(NULL)";
                             }
 
                             sheet.Cells[7 + recordIndex, 8 + fieldIndex].Value = value;
-                        } else {
+                        }
+                        else
+                        {
                             int sheetIndex = package.Workbook.Worksheets.Count + 1;
 
                             string value = $"Sheet {sheetIndex}";
-                            if (table.EmptyValues?.Length > 0 && table.EmptyValues[fieldIndex]?[recordIndex] == true) {
+                            if (table.EmptyValues?.Length > 0 && table.EmptyValues[fieldIndex]?[recordIndex] == true)
+                            {
                                 value += "(NULL)";
                             }
 

@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2021 Kaplas
+// Copyright (c) 2021 Kaplas
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -32,7 +32,8 @@ namespace TF3.Tests.Yakuza
         [TestCase(CompressionType.Zlib)]
         public void Compress(CompressionType type)
         {
-            byte[] data = {
+            byte[] data =
+            {
                 0x4C, 0x6F, 0x72, 0x65, 0x6D, 0x20, 0x69, 0x70, 0x73, 0x75, 0x6D, 0x20, 0x64, 0x6F, 0x6C, 0x6F,
                 0x72, 0x20, 0x73, 0x69, 0x74, 0x20, 0x61, 0x6D, 0x65, 0x74, 0x2C, 0x20, 0x63, 0x6F, 0x6E, 0x73,
                 0x65, 0x63, 0x74, 0x65, 0x74, 0x75, 0x72, 0x20, 0x61, 0x64, 0x69, 0x70, 0x69, 0x73, 0x63, 0x69,
@@ -810,7 +811,8 @@ namespace TF3.Tests.Yakuza
             DataStream original = DataStreamFactory.FromArray(data, 0, data.Length);
             Node node = NodeFactory.FromSubstream("SllzTest", original, 0, data.Length);
 
-            var parameters = new CompressorParameters {
+            var parameters = new CompressorParameters
+            {
                 CompressionType = type,
                 Endianness = Endianness.LittleEndian,
             };

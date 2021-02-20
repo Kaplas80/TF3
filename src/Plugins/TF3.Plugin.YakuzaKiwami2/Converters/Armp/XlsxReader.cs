@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2021 Kaplas
+// Copyright (c) 2021 Kaplas
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -40,7 +40,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
         /// <exception cref="ArgumentNullException">Thrown if source is null.</exception>
         public ArmpTable Convert(BinaryFormat source)
         {
-            if (source == null) {
+            if (source == null)
+            {
                 throw new ArgumentNullException(nameof(source));
             }
 
@@ -60,21 +61,24 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
             int recordCount = 0;
             int row = 7;
-            while (sheet.Cells[row, 4].Value != null) {
+            while (sheet.Cells[row, 4].Value != null)
+            {
                 recordCount++;
                 row++;
             }
 
             int fieldCount = 0;
             int col = 8;
-            while (sheet.Cells[1, col].Value != null) {
+            while (sheet.Cells[1, col].Value != null)
+            {
                 fieldCount++;
                 col++;
             }
 
             int valueStringCount = 0;
             row = 11;
-            while (sheet.Cells[row, 1].Value != null) {
+            while (sheet.Cells[row, 1].Value != null)
+            {
                 valueStringCount++;
                 row++;
             }
@@ -82,12 +86,14 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
             var result = new ArmpTable(id, flags, recordCount, recordInvalid, fieldCount, fieldInvalid, valueStringCount);
 
             ExcelWorksheet indexerSheet = package.Workbook.Worksheets[$"{sheet.Name}_Idx"];
-            if (indexerSheet != null) {
+            if (indexerSheet != null)
+            {
                 result.Indexer = SheetToTable(package, indexerSheet);
             }
 
             result.ValueStrings = new string[valueStringCount];
-            for (row = 11; row < 11 + valueStringCount; row++) {
+            for (row = 11; row < 11 + valueStringCount; row++)
+            {
                 result.ValueStrings[row - 11] = sheet.Cells[row, 2].Value.ToString();
             }
 
@@ -95,18 +101,21 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
             byte[] fieldInfo = new byte[recordCount];
             bool[] recordExistence = new bool[recordCount];
             string[] recordIds = new string[recordCount];
-            for (row = 7; row < 7 + recordCount; row++) {
+            for (row = 7; row < 7 + recordCount; row++)
+            {
                 recordOrder[row - 7] = int.Parse(sheet.Cells[row, 4].Value.ToString());
                 fieldInfo[row - 7] = byte.Parse(sheet.Cells[row, 5].Value.ToString());
                 recordExistence[row - 7] = (bool)sheet.Cells[row, 6].Value;
                 recordIds[row - 7] = sheet.Cells[row, 7].Value.ToString() == $"Record {row - 7}" ? string.Empty : sheet.Cells[row, 7].Value.ToString();
             }
 
-            if (recordOrder.Any(x => x != -1)) {
+            if (recordOrder.Any(x => x != -1))
+            {
                 result.RecordOrder = recordOrder;
             }
 
-            if (fieldInfo.Any(x => x != 0xFF)) {
+            if (fieldInfo.Any(x => x != 0xFF))
+            {
                 result.FieldInfo = fieldInfo;
             }
 
@@ -123,13 +132,16 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
             bool[][] emptyValues = new bool[fieldCount][];
             bool hasEmptyValues = false;
 
-            for (col = 8; col < 8 + fieldCount; col++) {
+            for (col = 8; col < 8 + fieldCount; col++)
+            {
                 fieldOrder[col - 8] = int.Parse(sheet.Cells[1, col].Value.ToString());
-                if (!Enum.TryParse(sheet.Cells[2, col].Value.ToString(), out fieldTypes[col - 8])) {
+                if (!Enum.TryParse(sheet.Cells[2, col].Value.ToString(), out fieldTypes[col - 8]))
+                {
                     fieldTypes[col - 8] = FieldType.Unused;
                 }
 
-                if (!Enum.TryParse(sheet.Cells[3, col].Value.ToString(), out rawRecordMemberInfo[col - 8])) {
+                if (!Enum.TryParse(sheet.Cells[3, col].Value.ToString(), out rawRecordMemberInfo[col - 8]))
+                {
                     rawRecordMemberInfo[col - 8] = FieldType.Unused;
                 }
 
@@ -137,20 +149,24 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
                 fieldExistence[col - 8] = (bool)sheet.Cells[5, col].Value;
                 fieldIds[col - 8] = sheet.Cells[6, col].Value.ToString() == $"Field {col - 8}" ? string.Empty : sheet.Cells[6, col].Value.ToString();
 
-                if (rawRecordMemberInfo[col - 8] != FieldType.Unused) {
+                if (rawRecordMemberInfo[col - 8] != FieldType.Unused)
+                {
                     values[col - 8] = new object[recordCount];
                     emptyValues[col - 8] = new bool[recordCount];
 
-                    for (row = 7; row < 7 + recordCount; row++) {
+                    for (row = 7; row < 7 + recordCount; row++)
+                    {
                         string cellValue = sheet.Cells[row, col].Value.ToString();
 
-                        if (cellValue.EndsWith("(NULL)")) {
+                        if (cellValue.EndsWith("(NULL)"))
+                        {
                             emptyValues[col - 8][row - 8] = true;
                             cellValue = cellValue.Replace("(NULL)", string.Empty);
                             hasEmptyValues = true;
                         }
 
-                        switch (rawRecordMemberInfo[col - 8]) {
+                        switch (rawRecordMemberInfo[col - 8])
+                        {
                             case FieldType.UInt8:
                                 values[col - 8][row - 7] = byte.Parse(cellValue);
                                 break;
@@ -201,7 +217,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
             result.EmptyValues = hasEmptyValues ? emptyValues : Array.Empty<bool[]>();
 
-            if (fieldOrder.Any(x => x != -1)) {
+            if (fieldOrder.Any(x => x != -1))
+            {
                 result.FieldOrder = fieldOrder;
             }
 

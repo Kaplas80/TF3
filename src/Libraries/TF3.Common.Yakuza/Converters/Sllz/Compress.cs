@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2021 Kaplas
+// Copyright (c) 2021 Kaplas
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -29,7 +29,8 @@ namespace TF3.Common.Yakuza.Converters.Sllz
     /// </summary>
     public class Compress : IConverter<BinaryFormat, BinaryFormat>, IInitializer<CompressorParameters>
     {
-        private CompressorParameters compressorParameters = new () {
+        private CompressorParameters _compressorParameters = new ()
+        {
             CompressionType = CompressionType.Standard,
             Endianness = Endianness.LittleEndian,
             OutputStream = null,
@@ -39,7 +40,7 @@ namespace TF3.Common.Yakuza.Converters.Sllz
         /// Initializes the compressor parameters.
         /// </summary>
         /// <param name="parameters">Compressor configuration.</param>
-        public void Initialize(CompressorParameters parameters) => compressorParameters = parameters;
+        public void Initialize(CompressorParameters parameters) => _compressorParameters = parameters;
 
         /// <summary>
         /// Create a SLLZ compressed BinaryFormat.
@@ -48,14 +49,16 @@ namespace TF3.Common.Yakuza.Converters.Sllz
         /// <returns>The compressed binary.</returns>
         public BinaryFormat Convert(BinaryFormat source)
         {
-            if (source == null) {
+            if (source == null)
+            {
                 throw new ArgumentNullException(nameof(source));
             }
 
-            return compressorParameters.CompressionType switch {
-                CompressionType.Standard => (BinaryFormat)ConvertFormat.With<CompressStandard, CompressorParameters>(compressorParameters, source),
-                CompressionType.Zlib => (BinaryFormat)ConvertFormat.With<CompressZlib, CompressorParameters>(compressorParameters, source),
-                _ => throw new FormatException($"SLLZ: Bad Compression Type ({compressorParameters.CompressionType})")
+            return _compressorParameters.CompressionType switch
+            {
+                CompressionType.Standard => (BinaryFormat)ConvertFormat.With<CompressStandard, CompressorParameters>(_compressorParameters, source),
+                CompressionType.Zlib => (BinaryFormat)ConvertFormat.With<CompressZlib, CompressorParameters>(_compressorParameters, source),
+                _ => throw new FormatException($"SLLZ: Bad Compression Type ({_compressorParameters.CompressionType})")
             };
         }
     }

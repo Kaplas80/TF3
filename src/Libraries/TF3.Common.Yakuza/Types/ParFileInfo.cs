@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2021 Kaplas
+// Copyright (c) 2021 Kaplas
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -68,6 +68,6 @@ namespace TF3.Common.Yakuza.Types
         /// Check if file is compressed.
         /// </summary>
         /// <returns>True if the file is compressed.</returns>
-        public bool IsCompressed() => (this.Flags & 0x80000000) == 0x8000000;
+        public bool IsCompressed() => (Flags & 0x80000000) == 0x8000000;
     }
 }

@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2021 Kaplas
+// Copyright (c) 2021 Kaplas
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -33,10 +33,11 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
     {
         private PoHeader _poHeader = new PoHeader("NoName", "dummy@dummy.com", "en");
 
-        public void Initialize(PoHeader parameters)
-        {
-            _poHeader = parameters;
-        }
+        /// <summary>
+        /// Converter initializer.
+        /// </summary>
+        /// <param name="parameters">Header to use in created Po elements.</param>
+        public void Initialize(PoHeader parameters) => _poHeader = parameters;
 
         /// <summary>
         /// Extracts strings to a Po files.
@@ -46,7 +47,8 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
         /// <exception cref="ArgumentNullException">Thrown if source is null.</exception>
         public NodeContainerFormat Convert(ArmpTable source)
         {
-            if (source == null) {
+            if (source == null)
+            {
                 throw new ArgumentNullException(nameof(source));
             }
 
@@ -59,11 +61,15 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
 
         private void ExtractStrings(ArmpTable table, string name, Node node)
         {
-            if (table.ValueStringCount > 0) {
+            if (table.ValueStringCount > 0)
+            {
                 var po = new Po(_poHeader);
-                for (int i = 0; i < table.ValueStringCount; i++) {
-                    if (!string.IsNullOrEmpty(table.ValueStrings[i])) {
-                        var entry = new PoEntry() {
+                for (int i = 0; i < table.ValueStringCount; i++)
+                {
+                    if (!string.IsNullOrEmpty(table.ValueStrings[i]))
+                    {
+                        var entry = new PoEntry()
+                        {
                             Original = table.ValueStrings[i].Replace("\r\n", "\n"),
                             Translated = table.ValueStrings[i].Replace("\r\n", "\n"),
                             Context = $"{name}#{i}",
@@ -76,32 +82,41 @@ namespace TF3.Plugin.YakuzaKiwami2.Converters.Armp
                 node.Add(n);
             }
 
-            if (table.Indexer != null) {
+            if (table.Indexer != null)
+            {
                 ExtractStrings(table.Indexer, $"{name}_Idx", node);
             }
 
-            for (int fieldIndex = 0; fieldIndex < table.FieldCount; fieldIndex++) {
+            for (int fieldIndex = 0; fieldIndex < table.FieldCount; fieldIndex++)
+            {
                 object[] data = table.Values[fieldIndex];
-                if (data == null) {
+                if (data == null)
+                {
                     continue;
                 }
 
-                if (table.RawRecordMemberInfo?.Length > 0) {
+                if (table.RawRecordMemberInfo?.Length > 0)
+                {
                     FieldType memberInfo = table.RawRecordMemberInfo[fieldIndex];
-                    for (int recordIndex = 0; recordIndex < table.RecordCount; recordIndex++) {
+                    for (int recordIndex = 0; recordIndex < table.RecordCount; recordIndex++)
+                    {
                         object obj = data[recordIndex];
-                        if (obj == null) {
+                        if (obj == null)
+                        {
                             continue;
                         }
 
-                        if (memberInfo == FieldType.Table) {
+                        if (memberInfo == FieldType.Table)
+                        {
                             string fieldId = $"Field {fieldIndex}";
-                            if (fieldIndex < table.FieldIds.Length) {
+                            if (fieldIndex < table.FieldIds.Length)
+                            {
                                 fieldId = table.FieldIds[fieldIndex];
                             }
 
                             string recordId = $"Record {recordIndex}";
-                            if (recordIndex < table.RecordIds.Length) {
+                            if (recordIndex < table.RecordIds.Length)
+                            {
                                 recordId = table.RecordIds[recordIndex];
                             }
 
