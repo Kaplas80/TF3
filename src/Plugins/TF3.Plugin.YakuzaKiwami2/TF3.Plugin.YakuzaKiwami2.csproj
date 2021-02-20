@@ -1,11 +1,11 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFrameworks>net5.0</TargetFrameworks>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="../../docs/images/logo_128.png" Pack="true" PackagePath="$(PackageIcon)" Visible="false" />
+    <None Include="../../../docs/images/logo_128.png" Pack="true" PackagePath="$(PackageIcon)" Visible="false" />
   </ItemGroup>
 
   <ItemGroup>
@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Libraries\TF3.Common.Yakuza\TF3.Common.Yakuza.csproj" />
+    <ProjectReference Include="../../Libraries/TF3.Common.Yakuza/TF3.Common.Yakuza.csproj" />
   </ItemGroup>
 
 </Project>
