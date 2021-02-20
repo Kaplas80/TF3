@@ -1,4 +1,4 @@
-// Copyright (c) 2020 Kaplas
+// Copyright (c) 2021 Kaplas
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -33,7 +33,8 @@ namespace TF3.Common.Yakuza.Converters.Sllz
     /// </summary>
     public class CompressZlib : IConverter<BinaryFormat, BinaryFormat>, IInitializer<CompressorParameters>
     {
-        private CompressorParameters compressorParameters = new () {
+        private CompressorParameters _compressorParameters = new ()
+        {
             CompressionType = CompressionType.Zlib,
             Endianness = Endianness.LittleEndian,
             OutputStream = null,
@@ -43,7 +44,7 @@ namespace TF3.Common.Yakuza.Converters.Sllz
         /// Initializes the compressor parameters.
         /// </summary>
         /// <param name="parameters">Compressor configuration.</param>
-        public void Initialize(CompressorParameters parameters) => compressorParameters = parameters;
+        public void Initialize(CompressorParameters parameters) => _compressorParameters = parameters;
 
         /// <summary>
         /// Creates a SLLZ zlib compressed BinaryFormat.
@@ -52,7 +53,8 @@ namespace TF3.Common.Yakuza.Converters.Sllz
         /// <returns>The compressed binary.</returns>
         public BinaryFormat Convert(BinaryFormat source)
         {
-            if (source == null) {
+            if (source == null)
+            {
                 throw new ArgumentNullException(nameof(source));
             }
 
@@ -63,28 +65,32 @@ namespace TF3.Common.Yakuza.Converters.Sllz
 
             byte[] compressedData;
 
-            try {
+            try
+            {
                 compressedData = Compress(data);
             }
-            catch (SllzException) {
+            catch (SllzException)
+            {
                 // Data can't be compressed
                 return source;
             }
 
-            DataStream outputDataStream = compressorParameters.OutputStream ?? DataStreamFactory.FromMemory();
+            DataStream outputDataStream = _compressorParameters.OutputStream ?? DataStreamFactory.FromMemory();
             outputDataStream.Position = 0;
 
-            var writer = new DataWriter(outputDataStream) {
+            var writer = new DataWriter(outputDataStream)
+            {
                 DefaultEncoding = Encoding.ASCII,
-                Endianness = compressorParameters.Endianness == Endianness.LittleEndian
+                Endianness = _compressorParameters.Endianness == Endianness.LittleEndian
                     ? EndiannessMode.LittleEndian
                     : EndiannessMode.BigEndian,
             };
 
-            var header = new SllzHeader {
+            var header = new SllzHeader
+            {
                 Magic = "SLLZ",
-                Endianness = compressorParameters.Endianness,
-                CompressionType = compressorParameters.CompressionType,
+                Endianness = _compressorParameters.Endianness,
+                CompressionType = _compressorParameters.CompressionType,
                 HeaderSize = 0x10,
                 OriginalSize = (uint)source.Stream.Length,
                 CompressedSize = (uint)compressedData.Length + 0x10, // includes header length
@@ -98,7 +104,8 @@ namespace TF3.Common.Yakuza.Converters.Sllz
 
         private static byte[] Compress(byte[] inputData)
         {
-            if (inputData.Length < 0x1B) {
+            if (inputData.Length < 0x1B)
+            {
                 throw new SllzException("Input data length < 0x1B.");
             }
 
@@ -109,8 +116,10 @@ namespace TF3.Common.Yakuza.Converters.Sllz
             int outputPosition = 0;
             int remaining = inputData.Length;
 
-            while (remaining > 0) {
-                if (outputPosition >= outputSize) {
+            while (remaining > 0)
+            {
+                if (outputPosition >= outputSize)
+                {
                     throw new SllzException("Compressed size is bigger than original size.");
                 }
 
@@ -118,7 +127,8 @@ namespace TF3.Common.Yakuza.Converters.Sllz
 
                 byte[] compressedData = ZlibCompress(inputData, inputPosition, decompressedChunkSize);
 
-                if (compressedData.Length > decompressedChunkSize) {
+                if (compressedData.Length > decompressedChunkSize)
+                {
                     int compressedDataLength = decompressedChunkSize + 5;
                     int decompressedDataLength = decompressedChunkSize - 1;
                     outputData[outputPosition] = (byte)((compressedDataLength >> 16) | 0x80);
@@ -137,7 +147,8 @@ namespace TF3.Common.Yakuza.Converters.Sllz
 
                     outputPosition += decompressedChunkSize;
                 }
-                else {
+                else
+                {
                     int compressedDataLength = compressedData.Length + 5;
                     int decompressedDataLength = decompressedChunkSize - 1;
                     outputData[outputPosition] = (byte)(compressedDataLength >> 16);
@@ -161,7 +172,8 @@ namespace TF3.Common.Yakuza.Converters.Sllz
                 remaining -= decompressedChunkSize;
             }
 
-            if (outputPosition > inputData.Length) {
+            if (outputPosition > inputData.Length)
+            {
                 throw new SllzException("Compressed size is bigger than original size.");
             }
 

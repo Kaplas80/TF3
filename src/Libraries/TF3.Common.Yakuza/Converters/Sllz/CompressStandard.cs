@@ -1,4 +1,4 @@
-// Copyright (c) 2020 Kaplas
+// Copyright (c) 2021 Kaplas
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -34,7 +34,8 @@ namespace TF3.Common.Yakuza.Converters.Sllz
         private const uint MaxWindowSize = 4096;
         private const uint MaxEncodedLength = 18;
 
-        private CompressorParameters compressorParameters = new () {
+        private CompressorParameters compressorParameters = new ()
+        {
             CompressionType = CompressionType.Standard,
             Endianness = Endianness.LittleEndian,
             OutputStream = null,
@@ -53,7 +54,8 @@ namespace TF3.Common.Yakuza.Converters.Sllz
         /// <returns>The compressed binary.</returns>
         public BinaryFormat Convert(BinaryFormat source)
         {
-            if (source == null) {
+            if (source == null)
+            {
                 throw new ArgumentNullException(nameof(source));
             }
 
@@ -64,10 +66,12 @@ namespace TF3.Common.Yakuza.Converters.Sllz
 
             byte[] compressedData;
 
-            try {
+            try
+            {
                 compressedData = Compress(data);
             }
-            catch (SllzException) {
+            catch (SllzException)
+            {
                 // Data can't be compressed
                 return source;
             }
@@ -75,14 +79,16 @@ namespace TF3.Common.Yakuza.Converters.Sllz
             DataStream outputDataStream = compressorParameters.OutputStream ?? DataStreamFactory.FromMemory();
             outputDataStream.Position = 0;
 
-            var writer = new DataWriter(outputDataStream) {
+            var writer = new DataWriter(outputDataStream)
+            {
                 DefaultEncoding = Encoding.ASCII,
                 Endianness = compressorParameters.Endianness == Endianness.LittleEndian
                     ? EndiannessMode.LittleEndian
                     : EndiannessMode.BigEndian,
             };
 
-            var header = new SllzHeader {
+            var header = new SllzHeader
+            {
                 Magic = "SLLZ",
                 Endianness = compressorParameters.Endianness,
                 CompressionType = compressorParameters.CompressionType,
@@ -109,22 +115,26 @@ namespace TF3.Common.Yakuza.Converters.Sllz
             uint outputPosition = 1; // First flag is always 0x00
             uint flagPosition = 16;
 
-            while (inputPosition < inputData.Length) {
+            while (inputPosition < inputData.Length)
+            {
                 uint windowSize = Math.Min(inputPosition, MaxWindowSize);
                 uint maxOffsetLength = Math.Min((uint)(inputData.Length - inputPosition), MaxEncodedLength);
 
                 Match match = FindMatch(inputData, inputPosition, windowSize, maxOffsetLength);
-                if (match != null) {
+                if (match != null)
+                {
                     flag = (byte)(flag << 1);
                     flag = (byte)(flag | 0x01);
                     bitsRemaining--;
-                    if (bitsRemaining == 0) {
+                    if (bitsRemaining == 0)
+                    {
                         outputData[flagPosition] = flag;
                         flag = 0x00;
                         bitsRemaining = 8;
                         flagPosition = outputPosition;
                         outputPosition++;
-                        if (outputPosition >= outputSize) {
+                        if (outputPosition >= outputSize)
+                        {
                             throw new SllzException("Compressed size is bigger than original size.");
                         }
                     }
@@ -136,42 +146,50 @@ namespace TF3.Common.Yakuza.Converters.Sllz
 
                     outputData[outputPosition] = (byte)tuple;
                     outputPosition++;
-                    if (outputPosition >= outputSize) {
+                    if (outputPosition >= outputSize)
+                    {
                         throw new SllzException("Compressed size is bigger than original size.");
                     }
 
                     outputData[outputPosition] = (byte)(tuple >> 8);
                     outputPosition++;
 
-                    if (outputPosition >= outputSize) {
+                    if (outputPosition >= outputSize)
+                    {
                         throw new SllzException("Compressed size is bigger than original size.");
                     }
 
                     inputPosition += match.Length;
                 }
-                else {
+                else
+                {
                     flag = (byte)(flag << 1);
                     bitsRemaining--;
-                    if (bitsRemaining == 0) {
+                    if (bitsRemaining == 0)
+                    {
                         outputData[flagPosition] = flag;
                         flag = 0x00;
                         bitsRemaining = 8;
                         flagPosition = outputPosition;
                         outputPosition++;
-                        if (outputPosition >= outputSize) {
+                        if (outputPosition >= outputSize)
+                        {
                             throw new SllzException("Compressed size is bigger than original size.");
                         }
                     }
 
                     outputData[outputPosition++] = inputData[inputPosition++];
-                    if (outputPosition >= outputSize) {
+                    if (outputPosition >= outputSize)
+                    {
                         throw new SllzException("Compressed size is bigger than original size.");
                     }
                 }
             }
 
-            if (bitsRemaining != 8) {
-                while (bitsRemaining > 0) {
+            if (bitsRemaining != 8)
+            {
+                while (bitsRemaining > 0)
+                {
                     flag = (byte)(flag << 1);
                     bitsRemaining--;
                 }
@@ -191,13 +209,16 @@ namespace TF3.Common.Yakuza.Converters.Sllz
 
             uint currentLength = maxOffsetLength;
 
-            while (currentLength >= 3) {
+            while (currentLength >= 3)
+            {
                 ReadOnlySpan<byte> pattern = bytes.Slice((int)inputPosition, (int)currentLength);
 
                 int pos = data.LastIndexOf(pattern);
 
-                if (pos >= 0) {
-                    return new Match {
+                if (pos >= 0)
+                {
+                    return new Match
+                    {
                         Length = currentLength,
                         Offset = (uint)(windowSize - pos),
                     };

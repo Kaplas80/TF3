@@ -1,4 +1,4 @@
-// Copyright (c) 2020 Kaplas
+// Copyright (c) 2021 Kaplas
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -40,15 +40,17 @@ namespace TF3.Common.Yakuza.Converters.Sllz
         /// <returns>The decompressed binary.</returns>
         public BinaryFormat Convert(BinaryFormat source)
         {
-            if (source == null) {
+            if (source == null)
+            {
                 throw new ArgumentNullException(nameof(source));
             }
 
-            var reader = new DataReader(source.Stream) {
+            var reader = new DataReader(source.Stream)
+            {
                 DefaultEncoding = Encoding.ASCII,
             };
 
-            source.Stream.Seek(4);
+            _ = source.Stream.Seek(4, SeekOrigin.Begin);
             byte endianness = reader.ReadByte();
             reader.Endianness = endianness == 0 ? EndiannessMode.LittleEndian : EndiannessMode.BigEndian;
 
@@ -58,7 +60,7 @@ namespace TF3.Common.Yakuza.Converters.Sllz
             var header = reader.Read<SllzHeader>() as SllzHeader;
             CheckHeader(header);
 
-            reader.Stream.Seek(header.HeaderSize);
+            _ = reader.Stream.Seek(header.HeaderSize, SeekOrigin.Begin);
 
             byte[] compressedData = reader.ReadBytes((int)(header.CompressedSize - header.HeaderSize));
             byte[] decompressedData = Decompress(compressedData, header.OriginalSize);
@@ -73,15 +75,18 @@ namespace TF3.Common.Yakuza.Converters.Sllz
 
         private static void CheckHeader(SllzHeader header)
         {
-            if (header == null) {
+            if (header == null)
+            {
                 throw new ArgumentNullException(nameof(header));
             }
 
-            if (header.Magic != "SLLZ") {
+            if (header.Magic != "SLLZ")
+            {
                 throw new FormatException($"SLLZ zlib: Bad magic Id ({header.Magic} != SLLZ)");
             }
 
-            if (header.CompressionType != CompressionType.Zlib) {
+            if (header.CompressionType != CompressionType.Zlib)
+            {
                 throw new FormatException($"SLLZ zlib: Bad Compression Type ({header.CompressionType})");
             }
         }
@@ -93,7 +98,8 @@ namespace TF3.Common.Yakuza.Converters.Sllz
             uint inputPosition = 0;
             uint outputPosition = 0;
 
-            while (outputPosition < decompressedSize) {
+            while (outputPosition < decompressedSize)
+            {
                 uint compressedChunkSize = (uint)((inputData[inputPosition] << 16) |
                                                  (inputData[inputPosition + 1] << 8) |
                                                  inputData[inputPosition + 2]);
@@ -102,13 +108,15 @@ namespace TF3.Common.Yakuza.Converters.Sllz
 
                 bool isCompressed = (compressedChunkSize & 0x00800000) == 0;
 
-                if (isCompressed) {
+                if (isCompressed)
+                {
                     byte[] decompressedData = ZlibDecompress(
                         inputData,
                         (int)(inputPosition + 5),
                         (int)(compressedChunkSize - 5));
 
-                    if (decompressedChunkSize != decompressedData.Length) {
+                    if (decompressedChunkSize != decompressedData.Length)
+                    {
                         throw new FormatException("SLLZ zlib: Wrong decompressed data.");
                     }
 
@@ -119,7 +127,8 @@ namespace TF3.Common.Yakuza.Converters.Sllz
                         outputPosition,
                         decompressedData.Length);
                 }
-                else {
+                else
+                {
                     Array.Copy(
                         inputData,
                         inputPosition + 5,

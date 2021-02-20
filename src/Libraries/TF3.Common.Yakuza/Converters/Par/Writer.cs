@@ -1,4 +1,4 @@
-// Copyright (c) 2020 Kaplas
+// Copyright (c) 2021 Kaplas
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -34,7 +34,8 @@ namespace TF3.Common.Yakuza.Converters.Par
     /// </summary>
     public class Writer : IConverter<NodeContainerFormat, BinaryFormat>, IInitializer<WriterParameters>
     {
-        private WriterParameters writerParameters = new () {
+        private WriterParameters _writerParameters = new ()
+        {
             PlatformId = Platform.PlayStation3,
             Endianness = Endianness.BigEndian,
             Version = 0x00020001,
@@ -46,7 +47,7 @@ namespace TF3.Common.Yakuza.Converters.Par
         /// Initializes the writer parameters.
         /// </summary>
         /// <param name="parameters">Writer configuration.</param>
-        public void Initialize(WriterParameters parameters) => writerParameters = parameters;
+        public void Initialize(WriterParameters parameters) => _writerParameters = parameters;
 
         /// <summary>
         /// Converts a BinaryFormat into a NodeContainerFormat.
@@ -56,30 +57,28 @@ namespace TF3.Common.Yakuza.Converters.Par
         /// <exception cref="ArgumentNullException">Thrown if source is null.</exception>
         public virtual BinaryFormat Convert(NodeContainerFormat source)
         {
-            if (source == null) {
+            if (source == null)
+            {
                 throw new ArgumentNullException(nameof(source));
             }
-
-#pragma warning disable CA1308 // Normalize strings to uppercase
 
             // Reorder nodes
             source.Root.SortChildren((x, y) =>
                 string.CompareOrdinal(x.Name.ToLowerInvariant(), y.Name.ToLowerInvariant()));
-
-#pragma warning restore CA1308 // Normalize strings to uppercase
 
             // Fill node indexes
             FillNodeIndexes(source.Root);
 
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
 
-            DataStream stream = writerParameters.OutputStream ?? DataStreamFactory.FromMemory();
+            DataStream stream = _writerParameters.OutputStream ?? DataStreamFactory.FromMemory();
 
             stream.Position = 0;
 
-            var writer = new DataWriter(stream) {
+            var writer = new DataWriter(stream)
+            {
                 DefaultEncoding = Encoding.GetEncoding(1252),
-                Endianness = writerParameters.Endianness == Endianness.LittleEndian
+                Endianness = _writerParameters.Endianness == Endianness.LittleEndian
                     ? EndiannessMode.LittleEndian
                     : EndiannessMode.BigEndian,
             };
@@ -88,38 +87,45 @@ namespace TF3.Common.Yakuza.Converters.Par
             var files = new List<Node>();
             uint fileOffset = 0;
             uint maxFileSize = 0;
-            foreach (Node node in Navigator.IterateNodes(source.Root)) {
-                if (!node.IsContainer) {
+            foreach (Node node in Navigator.IterateNodes(source.Root))
+            {
+                if (!node.IsContainer)
+                {
                     uint compressedSize = (uint)node.Tags["CompressedSize"];
                     fileOffset = RoundSize(fileOffset, compressedSize);
-                    if (compressedSize > maxFileSize) {
+                    if (compressedSize > maxFileSize)
+                    {
                         maxFileSize = compressedSize;
                     }
 
                     files.Add(node);
                 }
-                else {
+                else
+                {
                     directories.Add(node);
                 }
             }
 
-            if (maxFileSize >= 0xFFFFFFFF) {
+            if (maxFileSize >= 0xFFFFFFFF)
+            {
                 throw new FormatException("Can not add files over 4GB");
             }
 
-            var header = new FileHeader {
+            var header = new FileHeader
+            {
                 Magic = "PARC",
-                PlatformId = writerParameters.PlatformId,
-                Endianness = writerParameters.Endianness,
+                PlatformId = _writerParameters.PlatformId,
+                Endianness = _writerParameters.Endianness,
                 SizeExtended = 0,
                 Relocated = 0,
-                Version = writerParameters.Version,
+                Version = _writerParameters.Version,
                 Size = 0,
             };
 
             uint directoryStartOffset = (uint)(0x20 + (0x40 * (directories.Count + files.Count)));
             uint fileStartOffset = (uint)(directoryStartOffset + (0x20 * directories.Count));
-            var index = new ParIndex {
+            var index = new ParIndex
+            {
                 DirectoryCount = (uint)directories.Count,
                 DirectoryStartOffset = directoryStartOffset,
                 FileCount = (uint)files.Count,
@@ -127,23 +133,28 @@ namespace TF3.Common.Yakuza.Converters.Par
             };
 
             uint headerSize = RoundSize((uint)((0x20 * files.Count) + fileStartOffset));
-            writer.Stream.Length = RoundSize(fileOffset + headerSize);
+            writer.Stream.SetLength(RoundSize(fileOffset + headerSize));
 
             uint currentOffset = headerSize;
 
-            if (writerParameters.WriteDataSize) {
+            if (_writerParameters.WriteDataSize)
+            {
                 header.Size = headerSize + fileOffset;
             }
 
             writer.WriteOfType(header);
             writer.WriteOfType(index);
 
-            for (int i = 0; i < directories.Count; i++) {
+            for (int i = 0; i < directories.Count; i++)
+            {
                 Node node = directories[i];
                 writer.Write(node.Name, 0x40, false);
-                writer.Stream.PushToPosition(directoryStartOffset + (i * 0x20));
 
-                var directoryInfo = new ParDirectoryInfo {
+                long returnPosition = writer.Stream.Position;
+                _ = writer.Stream.Seek(directoryStartOffset + (i * 0x20), System.IO.SeekOrigin.Begin);
+
+                var directoryInfo = new ParDirectoryInfo
+                {
                     SubdirectoryCount = (uint)node.Tags["SubdirectoryCount"],
                     SubdirectoryStartIndex = (uint)node.Tags["SubdirectoryStartIndex"],
                     FileCount = (uint)node.Tags["FileCount"],
@@ -154,15 +165,19 @@ namespace TF3.Common.Yakuza.Converters.Par
                 writer.WriteOfType(directoryInfo);
                 writer.WritePadding(0x00, 0x20);
 
-                writer.Stream.PopPosition();
+                _ = writer.Stream.Seek(returnPosition, System.IO.SeekOrigin.Begin);
             }
 
-            for (int i = 0; i < files.Count; i++) {
+            for (int i = 0; i < files.Count; i++)
+            {
                 Node node = files[i];
                 writer.Write(node.Name, 0x40, false);
-                writer.Stream.PushToPosition(fileStartOffset + (i * 0x20));
 
-                var fileInfo = new ParFileInfo {
+                long returnPosition = writer.Stream.Position;
+                _ = writer.Stream.Seek(fileStartOffset + (i * 0x20), System.IO.SeekOrigin.Begin);
+
+                var fileInfo = new ParFileInfo
+                {
                     Flags = (uint)node.Tags["Flags"],
                     OriginalSize = (uint)node.Tags["OriginalSize"],
                     CompressedSize = (uint)node.Tags["CompressedSize"],
@@ -176,13 +191,14 @@ namespace TF3.Common.Yakuza.Converters.Par
 
                 currentOffset = RoundOffset(currentOffset, fileInfo.CompressedSize);
 
-                writer.Stream.PushToPosition(currentOffset);
+                long returnPosition2 = writer.Stream.Position;
+                _ = writer.Stream.Seek(currentOffset, System.IO.SeekOrigin.Begin);
                 node.Stream.WriteTo(writer.Stream);
-                writer.Stream.PopPosition();
+                _ = writer.Stream.Seek(returnPosition2, System.IO.SeekOrigin.Begin);
 
                 currentOffset += fileInfo.CompressedSize;
 
-                writer.Stream.PopPosition();
+                _ = writer.Stream.Seek(returnPosition, System.IO.SeekOrigin.Begin);
             }
 
             return new BinaryFormat(stream);
@@ -190,15 +206,18 @@ namespace TF3.Common.Yakuza.Converters.Par
 
         private static void FillNodeIndexes(Node root)
         {
-            if (!root.IsContainer) {
+            if (!root.IsContainer)
+            {
                 throw new FormatException("Root node must be a directory.");
             }
 
             uint subdirectoryIndex = 1;
             uint fileIndex = 0;
 
-            foreach (Node node in Navigator.IterateNodes(root)) {
-                if (!node.IsContainer) {
+            foreach (Node node in Navigator.IterateNodes(root))
+            {
+                if (!node.IsContainer)
+                {
                     continue;
                 }
 
@@ -221,7 +240,8 @@ namespace TF3.Common.Yakuza.Converters.Par
 
         private static uint RoundOffset(uint offset, uint size)
         {
-            if (RoundNeeded(offset, size)) {
+            if (RoundNeeded(offset, size))
+            {
                 offset = RoundSize(offset);
             }
 

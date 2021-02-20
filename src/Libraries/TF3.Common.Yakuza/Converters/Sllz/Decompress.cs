@@ -1,4 +1,4 @@
-// Copyright (c) 2020 Kaplas
+// Copyright (c) 2021 Kaplas
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -38,13 +38,15 @@ namespace TF3.Common.Yakuza.Converters.Sllz
         /// <returns>The decompressed binary.</returns>
         public BinaryFormat Convert(BinaryFormat source)
         {
-            if (source == null) {
+            if (source == null)
+            {
                 throw new ArgumentNullException(nameof(source));
             }
 
             source.Stream.Position = 0;
 
-            var reader = new DataReader(source.Stream) {
+            var reader = new DataReader(source.Stream)
+            {
                 DefaultEncoding = Encoding.ASCII,
             };
 
@@ -58,7 +60,8 @@ namespace TF3.Common.Yakuza.Converters.Sllz
             var header = reader.Read<SllzHeader>() as SllzHeader;
             CheckHeader(header);
 
-            return header.CompressionType switch {
+            return header.CompressionType switch
+            {
                 CompressionType.Standard => (BinaryFormat)ConvertFormat.With<DecompressStandard>(source),
                 CompressionType.Zlib => (BinaryFormat)ConvertFormat.With<DecompressZlib>(source),
                 _ => throw new FormatException($"SLLZ: Bad Compression Type ({header.CompressionType})"),
@@ -67,15 +70,18 @@ namespace TF3.Common.Yakuza.Converters.Sllz
 
         private static void CheckHeader(SllzHeader header)
         {
-            if (header == null) {
+            if (header == null)
+            {
                 throw new ArgumentNullException(nameof(header));
             }
 
-            if (header.Magic != "SLLZ") {
+            if (header.Magic != "SLLZ")
+            {
                 throw new FormatException($"SLLZ: Bad magic Id ({header.Magic} != SLLZ)");
             }
 
-            if (header.CompressionType is not CompressionType.Standard and not CompressionType.Zlib) {
+            if (header.CompressionType is not CompressionType.Standard and not CompressionType.Zlib)
+            {
                 throw new FormatException($"SLLZ: Bad Compression Type ({header.CompressionType})");
             }
         }

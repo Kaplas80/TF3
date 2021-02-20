@@ -17,49 +17,86 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-namespace TF3.Common.Yakuza.Types
+namespace TF3.Plugin.YakuzaKiwami2.Enums
 {
-    using TF3.Common.Yakuza.Enums;
-    using Yarhl.IO.Serialization.Attributes;
-
     /// <summary>
-    /// SLLZ compressed file header.
+    /// Possible field types in ARMP files.
     /// </summary>
-    [Serializable]
-    public class SllzHeader
+    public enum FieldType
     {
         /// <summary>
-        /// Gets or sets the file magic number: "SLLZ".
+        /// Unsigned integer (8 bits).
         /// </summary>
-        [BinaryString(FixedSize = 4, Terminator = null)]
-        public string Magic { get; set; }
+        UInt8 = 0x00,
 
         /// <summary>
-        /// Gets or sets the file endianness.
+        /// Unsigned integer (16 bits).
         /// </summary>
-        [BinaryEnum(ReadAs = typeof(byte), WriteAs = typeof(byte))]
-        public Endianness Endianness { get; set; }
+        UInt16 = 0x01,
 
         /// <summary>
-        /// Gets or sets the compressor type.
+        /// Unsigned integer (32 bits).
         /// </summary>
-        [BinaryEnum(ReadAs = typeof(byte), WriteAs = typeof(byte))]
-        public CompressionType CompressionType { get; set; }
+        UInt32 = 0x02,
 
         /// <summary>
-        /// Gets or sets the header size.
+        /// Unsigned integer (64 bits).
         /// </summary>
-        public ushort HeaderSize { get; set; }
+        UInt64 = 0x03,
 
         /// <summary>
-        /// Gets or sets the original file size.
+        /// Signed integer (8 bits).
         /// </summary>
-        public uint OriginalSize { get; set; }
+        Int8 = 0x04,
 
         /// <summary>
-        /// Gets or sets the compressed file size.
-        /// <remarks>Includes the header size.</remarks>
+        /// Signed integer (16 bits).
         /// </summary>
-        public uint CompressedSize { get; set; }
+        Int16 = 0x05,
+
+        /// <summary>
+        /// Signed integer (32 bits).
+        /// </summary>
+        Int32 = 0x06,
+
+        /// <summary>
+        /// Signed integer (64 bits).
+        /// </summary>
+        Int64 = 0x07,
+
+        /// <summary>
+        /// Floating-point number (16 bits).
+        /// </summary>
+        Float16 = 0x08,
+
+        /// <summary>
+        /// Floating-point number (32 bits).
+        /// </summary>
+        Float32 = 0x09,
+
+        /// <summary>
+        /// Floating-point number (64 bits).
+        /// </summary>
+        Float64 = 0x0A,
+
+        /// <summary>
+        /// Boolean.
+        /// </summary>
+        Boolean = 0x0B,
+
+        /// <summary>
+        /// String.
+        /// </summary>
+        String = 0x0C,
+
+        /// <summary>
+        /// Table.
+        /// </summary>
+        Table = 0x0D,
+
+        /// <summary>
+        /// Unused field.
+        /// </summary>
+        Unused = 0xFF,
     }
 }

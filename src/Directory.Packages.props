@@ -1,7 +1,8 @@
 <Project>
     <!-- Centralize dependency management -->
     <ItemGroup>
-        <PackageVersion Include="Yarhl" Version="3.1.0" />
+        <PackageVersion Include="Yarhl" Version="3.1.1-preview.9" />
+        <PackageVersion Include="Yarhl.Media" Version="3.1.1-preview.9" />
 
         <PackageVersion Include="nunit" Version="3.12.0" />
         <PackageVersion Include="NUnit3TestAdapter" Version="3.17.0" />
@@ -15,5 +16,6 @@
         <PackageVersion Include="Roslynator.Analyzers" Version="3.0.0" />
 
         <PackageVersion Include="DotNetZip" Version="1.15.0" />
+        <PackageVersion Include="EPPlus" Version="5.5.3" />
     </ItemGroup>
 </Project>
