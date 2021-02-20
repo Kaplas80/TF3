@@ -1,0 +1,645 @@
+{
+  "homepages": [],
+  "source_base_path": "/home/runner/work/TF3/TF3/docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../CONTRIBUTING.md",
+      "output": {
+        ".html": {
+          "relative_path": "CONTRIBUTING.html",
+          "hash": "pGOIZkBySXTsEuNOJsR/ew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html",
+          "hash": "RCTjegYrFYhlk+JmvlYJTg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Common.Yakuza.Converters.Par.Reader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Common.Yakuza.Converters.Par.Reader.html",
+          "hash": "UGHbm2zPgQOE1eZ0E43QhA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Common.Yakuza.Converters.Par.Writer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Common.Yakuza.Converters.Par.Writer.html",
+          "hash": "99mYVVJQQxCigz3uBDtq5g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Common.Yakuza.Converters.Par.WriterParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Common.Yakuza.Converters.Par.WriterParameters.html",
+          "hash": "4yE3U3klo8nU6vFRx19b5Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Common.Yakuza.Converters.Par.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Common.Yakuza.Converters.Par.html",
+          "hash": "RIkIavpNyxouOo1gXNKaqg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Common.Yakuza.Converters.Sllz.Compress.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Common.Yakuza.Converters.Sllz.Compress.html",
+          "hash": "6rsEyjEN/ZL2cZ0sWax8ag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Common.Yakuza.Converters.Sllz.CompressStandard.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Common.Yakuza.Converters.Sllz.CompressStandard.html",
+          "hash": "HbDshzqNYGhqyRspOQ9rpQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Common.Yakuza.Converters.Sllz.CompressZlib.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Common.Yakuza.Converters.Sllz.CompressZlib.html",
+          "hash": "dSTV/InoHi7EDLKT6ud6Yw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Common.Yakuza.Converters.Sllz.CompressorParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Common.Yakuza.Converters.Sllz.CompressorParameters.html",
+          "hash": "o1DABSzSx6t1vi2+1LNtmg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Common.Yakuza.Converters.Sllz.Decompress.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Common.Yakuza.Converters.Sllz.Decompress.html",
+          "hash": "vuXi+o3kGQQfQOsCJxGKkQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Common.Yakuza.Converters.Sllz.DecompressStandard.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Common.Yakuza.Converters.Sllz.DecompressStandard.html",
+          "hash": "HRDkgMx23ZkYYpBCSXBJbA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Common.Yakuza.Converters.Sllz.DecompressZlib.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Common.Yakuza.Converters.Sllz.DecompressZlib.html",
+          "hash": "r1vpqtpj02va3ezc9QdocQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Common.Yakuza.Converters.Sllz.SllzException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Common.Yakuza.Converters.Sllz.SllzException.html",
+          "hash": "a6L6a0gK+oDSsRKASn8sgQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Common.Yakuza.Converters.Sllz.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Common.Yakuza.Converters.Sllz.html",
+          "hash": "KCyF8iAaSAS6g2JfYTh41w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Common.Yakuza.Enums.CompressionType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Common.Yakuza.Enums.CompressionType.html",
+          "hash": "WzrslgFsDGurJh55YJTUHg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Common.Yakuza.Enums.Endianness.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Common.Yakuza.Enums.Endianness.html",
+          "hash": "S6Am8Sz5nl73nd8JcxrxJg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Common.Yakuza.Enums.Platform.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Common.Yakuza.Enums.Platform.html",
+          "hash": "YwlizBJaJIU32AY+pgGfvA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Common.Yakuza.Enums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Common.Yakuza.Enums.html",
+          "hash": "vGXVX1EqaIPu47C4iTHb3w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Common.Yakuza.Types.FileHeader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Common.Yakuza.Types.FileHeader.html",
+          "hash": "w3yNznEWPhmWP+yvYAwZhw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Common.Yakuza.Types.ParDirectoryInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Common.Yakuza.Types.ParDirectoryInfo.html",
+          "hash": "FedUcaww7fsNGi3CqS+Aow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Common.Yakuza.Types.ParFileInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Common.Yakuza.Types.ParFileInfo.html",
+          "hash": "pwdwHjwjb6YCtSXDMEmtuw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Common.Yakuza.Types.ParIndex.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Common.Yakuza.Types.ParIndex.html",
+          "hash": "b7J0PjuRKCyAa+B+MWHcTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Common.Yakuza.Types.SllzHeader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Common.Yakuza.Types.SllzHeader.html",
+          "hash": "7pBSkHZd/KXE5qCcWj0ayA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Common.Yakuza.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Common.Yakuza.Types.html",
+          "hash": "GTDLsEk0y2gMLM0Zi9xX3Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Plugin.YakuzaKiwami2.Converters.Armp.PoReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Plugin.YakuzaKiwami2.Converters.Armp.PoReader.html",
+          "hash": "wEFJcF047RhHF7rl8FPsZA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Plugin.YakuzaKiwami2.Converters.Armp.PoWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Plugin.YakuzaKiwami2.Converters.Armp.PoWriter.html",
+          "hash": "LvA5y2efDk8L+8k8WuMC6g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Plugin.YakuzaKiwami2.Converters.Armp.Reader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Plugin.YakuzaKiwami2.Converters.Armp.Reader.html",
+          "hash": "ZDqabdZZbHM5eo13ubM0jw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Plugin.YakuzaKiwami2.Converters.Armp.Writer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Plugin.YakuzaKiwami2.Converters.Armp.Writer.html",
+          "hash": "fUF9+f/ZkhMCuhp2mLBA3Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Plugin.YakuzaKiwami2.Converters.Armp.XlsxReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Plugin.YakuzaKiwami2.Converters.Armp.XlsxReader.html",
+          "hash": "Vs19ADxKMxwrpalt3n4H9g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Plugin.YakuzaKiwami2.Converters.Armp.XlsxWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Plugin.YakuzaKiwami2.Converters.Armp.XlsxWriter.html",
+          "hash": "npSrMGnF8Ivmb1yPqRAbJQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Plugin.YakuzaKiwami2.Converters.Armp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Plugin.YakuzaKiwami2.Converters.Armp.html",
+          "hash": "ioWZGndtHaILmJopdfKuGw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Plugin.YakuzaKiwami2.Enums.FieldType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Plugin.YakuzaKiwami2.Enums.FieldType.html",
+          "hash": "zYrXDq9qVDIB9A1eEdlmvg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Plugin.YakuzaKiwami2.Enums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Plugin.YakuzaKiwami2.Enums.html",
+          "hash": "D9Fyj8x81JOvwsh/MfXUvQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Plugin.YakuzaKiwami2.Formats.ArmpTable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Plugin.YakuzaKiwami2.Formats.ArmpTable.html",
+          "hash": "5DXevQDSZfszrrfiYkNCmA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Plugin.YakuzaKiwami2.Formats.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Plugin.YakuzaKiwami2.Formats.html",
+          "hash": "mpLDiqwOsQ18sO9ORvwoxA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Plugin.YakuzaKiwami2.Types.ArmpTableHeader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Plugin.YakuzaKiwami2.Types.ArmpTableHeader.html",
+          "hash": "Bv8WcP+zK5YoJr+2H0/tiA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Plugin.YakuzaKiwami2.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Plugin.YakuzaKiwami2.Types.html",
+          "hash": "2JUQNeGZOR2MhQWr1lQrVA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "dev/Changelog.md",
+      "output": {
+        ".html": {
+          "relative_path": "dev/Changelog.html",
+          "hash": "Y4nQhsYukfg8yTHp05zSGQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "dev/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "dev/toc.html",
+          "hash": "bDU0/EVdjpyd+6v2/ZBXrQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "guides/Contributing.md",
+      "output": {
+        ".html": {
+          "relative_path": "guides/Contributing.html",
+          "hash": "xE82BIg7dGIDHoHmwV4sMA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "guides/First-Steps.md",
+      "output": {
+        ".html": {
+          "relative_path": "guides/First-Steps.html",
+          "hash": "9ECEM1GbsGuGDo59KfK7zQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "guides/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "guides/toc.html",
+          "hash": "GpD1UeriQPvrBrKwMHHfyg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/favicon.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/favicon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logo_128.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/logo_128.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logo_48.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/logo_48.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "iH3sQ5f+6fyym0q3qq1h5w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "n3IlANPU9pAbF81WUkLM8w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 6,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 36,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
