@@ -22,8 +22,10 @@ namespace TF3.Tests.YakuzaKiwami2
     using NUnit.Framework;
     using TF3.Plugin.YakuzaKiwami2.Converters.Armp;
     using TF3.Plugin.YakuzaKiwami2.Formats;
+    using Yarhl.FileFormat;
     using Yarhl.FileSystem;
     using Yarhl.IO;
+    using Yarhl.Media.Text;
 
     [TestFixture]
     public class ArmpTests
@@ -939,6 +941,27 @@ namespace TF3.Tests.YakuzaKiwami2
             ArmpTable result = node.GetFormatAs<ArmpTable>();
 
             Assert.IsTrue(expected.Equals(result));
+        }
+
+        [Test]
+        public void ExportToPo()
+        {
+            DataStream original = DataStreamFactory.FromArray(ArmpData, 0, ArmpData.Length);
+            Node node = NodeFactory.FromSubstream("ArmpTest", original, 0, ArmpData.Length);
+            _ = node.TransformWith<Reader>();
+            Assert.IsTrue(node.Stream == null);
+            ArmpTable table = node.GetFormatAs<ArmpTable>();
+
+            _ = node.TransformWith<PoWriter>();
+            NodeContainerFormat nodeContainer = node.GetFormatAs<NodeContainerFormat>();
+            Po po = nodeContainer.Root.Children[0].GetFormatAs<Po>();
+            Assert.IsTrue(table.ValueStringCount == po.Entries.Count);
+            Assert.IsTrue(table.ValueStrings[0] == "YAKUZA KIWAMI 2");
+            po.Entries[0].Translated = "Translation Test";
+
+            nodeContainer.Root.Children[0].Tags["TableName"] = "Main";
+            _ = ConvertFormat.With<PoReader, ArmpTable>(table, nodeContainer);
+            Assert.IsTrue(table.ValueStrings[0] == "Translation Test");
         }
     }
 }
