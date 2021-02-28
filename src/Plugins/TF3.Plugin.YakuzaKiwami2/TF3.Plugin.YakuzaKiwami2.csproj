@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="../../Libraries/TF3.Common.Core/TF3.Common.Core.csproj" />
     <ProjectReference Include="../../Libraries/TF3.Common.Yakuza/TF3.Common.Yakuza.csproj" />
   </ItemGroup>
 

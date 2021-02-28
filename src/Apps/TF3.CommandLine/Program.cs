@@ -19,6 +19,11 @@
 // SOFTWARE.
 namespace TF3.CommandLine
 {
+    using System;
+    using System.Linq;
+    using global::CommandLine;
+    using TF3.Common.Core;
+
     /// <summary>
     /// Main program class.
     /// </summary>
@@ -30,7 +35,39 @@ namespace TF3.CommandLine
         /// <param name="args">Application arguments.</param>
         public static void Main(string[] args)
         {
-            // Method intentionally left empty.
+            PluginManager.LoadPlugins("plugins");
+
+            Parser.Default.ParseArguments<Options.ListPluginsOptions, Options.NewProjectOptions>(args)
+                .WithParsed<Options.ListPluginsOptions>(_ => ListPlugins())
+                .WithParsed<Options.NewProjectOptions>(options => NewProject(options));
+        }
+
+        private static void ListPlugins()
+        {
+            int maxNameLength = PluginManager.Plugins.Max<IPlugin>(x => x.Name.Length);
+            int maxGameLength = PluginManager.Plugins.Max<IPlugin>(x => x.Game.Length);
+            Console.WriteLine("Available plugins:");
+            Console.WriteLine();
+            Console.WriteLine(string.Format($"{{0, {-maxNameLength}}}\t{{1, {-maxGameLength}}}", "Name", "Game"));
+            Console.WriteLine($"{new string('=', maxNameLength)}\t{new string('=', maxGameLength)}");
+            foreach (IPlugin plugin in PluginManager.Plugins)
+            {
+                Console.WriteLine(string.Format($"{{0, {-maxNameLength}}}\t{{1, {-maxGameLength}}}", plugin.Name, plugin.Game));
+            }
+        }
+
+        private static void NewProject(Options.NewProjectOptions options)
+        {
+            IPlugin plugin = PluginManager.Plugins.FirstOrDefault(x => x.Id == options.Game || x.Name == options.Game);
+
+            if (plugin == null)
+            {
+                Console.WriteLine($"ERROR: There is no plugin available for {options.Game}");
+                ListPlugins();
+                return;
+            }
+
+            using var project = TranslationProject.New(options.Output, plugin.Id, !string.IsNullOrEmpty(options.Language) ? options.Language : "und");
         }
     }
 }

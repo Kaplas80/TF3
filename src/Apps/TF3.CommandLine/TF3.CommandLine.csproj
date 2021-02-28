@@ -7,8 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../../Plugins/TF3.Plugin.YakuzaKiwami2/TF3.Plugin.YakuzaKiwami2.csproj" />
-
+    <PackageReference Include="CommandLineParser" />
     <PackageReference Include="Yarhl" />
+    <PackageReference Include="Yarhl.Media" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Libraries\TF3.Common.Core\TF3.Common.Core.csproj" />
   </ItemGroup>
 </Project>
