@@ -71,23 +71,20 @@ namespace TF3.Plugin.YakuzaKiwami2
                 }
 
                 var scanningArgs = new FileScanningEventArgs { FileName = Path.Combine(dbParPath, n.Path) };
-                var scannedArgs = new FileScannedEventArgs { FileName = Path.Combine(dbParPath, n.Path) };
+                var scannedArgs = new FileScannedEventArgs { FileName = Path.Combine(dbParPath, n.Path), Included = false };
                 OnFileScanning(scanningArgs);
 
-                if (scanningArgs.Cancel)
-                {
-                    scannedArgs.Included = false;
-                }
-                else
+                if (!scanningArgs.Cancel)
                 {
                     try
                     {
-                        ulong checksum = Common.Core.Helpers.ChecksumHelper.Calculate(n.Stream);
-
                         if (n.Tags["Flags"] == 0x80000000)
                         {
+                            // File is compressed
                             _ = n.TransformWith<Common.Yakuza.Converters.Sllz.Decompress>();
                         }
+
+                        ulong checksum = Common.Core.Helpers.ChecksumHelper.Calculate(n.Stream);
 
                         _ = n.TransformWith<Converters.Armp.Reader>();
 
@@ -107,14 +104,10 @@ namespace TF3.Plugin.YakuzaKiwami2
 
                             scannedArgs.Included = true;
                         }
-                        else
-                        {
-                            scannedArgs.Included = false;
-                        }
                     }
                     catch (Exception)
                     {
-                        scannedArgs.Included = false;
+                        // File is not an ARMP
                     }
                 }
 
