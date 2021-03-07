@@ -10,5 +10,6 @@
 
   <ItemGroup>
     <PackageReference Include="LiteDB" />
+    <PackageReference Include="Standart.Hash.xxHash" />
   </ItemGroup>
 </Project>

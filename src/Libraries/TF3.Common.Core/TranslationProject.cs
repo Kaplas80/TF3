@@ -28,7 +28,6 @@ namespace TF3.Common.Core
     /// </summary>
     public class TranslationProject : IDisposable
     {
-        private static TranslationProject _instance;
         private LiteDB.LiteDatabase _database;
         private bool _disposedValue;
 
@@ -40,6 +39,20 @@ namespace TF3.Common.Core
         }
 
         /// <summary>
+        /// Gets the project info.
+        /// </summary>
+        public Models.ProjectInfo Info
+        {
+            get
+            {
+                LiteDB.ILiteCollection<Models.ProjectInfo> col = _database.GetCollection<Models.ProjectInfo>("info");
+
+                // There is only one value in the collection, so the predicate isn't important.
+                return col.FindOne(x => !string.IsNullOrEmpty(x.PluginId));
+            }
+        }
+
+        /// <summary>
         /// Creates a new <see cref="TranslationProject"/>.
         /// </summary>
         /// <param name="path">Path to save the project.</param>
@@ -48,7 +61,7 @@ namespace TF3.Common.Core
         /// <returns>The new project.</returns>
         public static TranslationProject New(string path, string pluginId, string lang = "und")
         {
-            _instance = new TranslationProject();
+            var project = new TranslationProject();
 
             if (!Directory.Exists(path))
             {
@@ -57,11 +70,11 @@ namespace TF3.Common.Core
 
             string dbPath = Path.Combine(path, "project.tf3");
 
-            _instance._database = new LiteDB.LiteDatabase(dbPath);
-            LiteDB.ILiteCollection<POCO.ProjectInfo> col = _instance._database.GetCollection<POCO.ProjectInfo>("info");
-            col.Insert(new POCO.ProjectInfo { PluginId = pluginId, Language = lang });
+            project._database = new LiteDB.LiteDatabase(dbPath);
+            LiteDB.ILiteCollection<Models.ProjectInfo> col = project._database.GetCollection<Models.ProjectInfo>("info");
+            col.Insert(new Models.ProjectInfo { PluginId = pluginId, Language = lang });
 
-            return _instance;
+            return project;
         }
 
         /// <summary>
@@ -71,15 +84,25 @@ namespace TF3.Common.Core
         /// <returns>The opened project.</returns>
         public static TranslationProject Open(string dbPath)
         {
-            _instance = new TranslationProject();
+            var project = new TranslationProject();
             if (!File.Exists(dbPath))
             {
                 throw new FileNotFoundException($"{dbPath} not found.");
             }
 
-            _instance._database = new LiteDB.LiteDatabase(dbPath);
+            project._database = new LiteDB.LiteDatabase(dbPath);
 
-            return _instance;
+            return project;
+        }
+
+        /// <summary>
+        /// Add a file to the project.
+        /// </summary>
+        /// <param name="file">The file info.</param>
+        public void AddFile(Models.File file)
+        {
+            LiteDB.ILiteCollection<Models.File> col = _database.GetCollection<Models.File>("files");
+            col.Insert(file);
         }
 
         /// <inheritdoc/>

@@ -23,6 +23,7 @@ namespace TF3.CommandLine
     using System.Linq;
     using global::CommandLine;
     using TF3.Common.Core;
+    using TF3.Common.Core.Models;
 
     /// <summary>
     /// Main program class.
@@ -37,9 +38,10 @@ namespace TF3.CommandLine
         {
             PluginManager.LoadPlugins("plugins");
 
-            Parser.Default.ParseArguments<Options.ListPluginsOptions, Options.NewProjectOptions>(args)
+            Parser.Default.ParseArguments<Options.ListPluginsOptions, Options.NewProjectOptions, Options.ScanFilesOptions>(args)
                 .WithParsed<Options.ListPluginsOptions>(_ => ListPlugins())
-                .WithParsed<Options.NewProjectOptions>(options => NewProject(options));
+                .WithParsed<Options.NewProjectOptions>(options => NewProject(options))
+                .WithParsed<Options.ScanFilesOptions>(options => ScanFiles(options));
         }
 
         private static void ListPlugins()
@@ -60,7 +62,7 @@ namespace TF3.CommandLine
         {
             IPlugin plugin = PluginManager.Plugins.FirstOrDefault(x => x.Id == options.Game || x.Name == options.Game);
 
-            if (plugin == null)
+            if (plugin is null)
             {
                 Console.WriteLine($"ERROR: There is no plugin available for {options.Game}");
                 ListPlugins();
@@ -68,6 +70,31 @@ namespace TF3.CommandLine
             }
 
             using var project = TranslationProject.New(options.Output, plugin.Id, !string.IsNullOrEmpty(options.Language) ? options.Language : "und");
+        }
+
+        private static void ScanFiles(Options.ScanFilesOptions options)
+        {
+            using var project = TranslationProject.Open(options.Project);
+
+            ProjectInfo info = project.Info;
+
+            if (info is null)
+            {
+                Console.WriteLine($"ERROR: No project info found.");
+                return;
+            }
+
+            IPlugin plugin = PluginManager.Plugins.FirstOrDefault(x => x.Id == info.PluginId);
+
+            if (plugin is null)
+            {
+                Console.WriteLine($"ERROR: Plugin not available.");
+                return;
+            }
+
+            plugin.FileScanning += (sender, args) => Console.Write(args.FileName);
+            plugin.FileScanned += (sender, args) => Console.WriteLine(args.Included ? " YES" : " NO");
+            plugin.Scan(project, options.Game);
         }
     }
 }

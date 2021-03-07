@@ -18,21 +18,21 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-namespace TF3.Common.Core.POCO
+namespace TF3.Common.Core.Enums
 {
     /// <summary>
-    /// Project info.
+    /// File container types.
     /// </summary>
-    public class ProjectInfo
+    public enum ContainerType
     {
         /// <summary>
-        /// Gets or sets the plugin id used in the project.
+        /// Container is a directory.
         /// </summary>
-        public string PluginId { get; set; }
+        Directory,
 
         /// <summary>
-        /// Gets or sets the translation language.
+        /// Container is an archive (zip, rar...).
         /// </summary>
-        public string Language { get; set; }
+        Archive,
     }
 }

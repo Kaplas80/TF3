@@ -17,59 +17,44 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-namespace TF3.Common.Core
+
+namespace TF3.Common.Core.Models
 {
-    using System;
     using TF3.Common.Core.Enums;
 
     /// <summary>
-    /// Interface for TF3 plugins.
+    /// Translatable file info.
     /// </summary>
-    public interface IPlugin
+    public class File
     {
         /// <summary>
-        /// Triggers BEFORE a file is scanned.
+        /// Gets or sets the file name.
         /// </summary>
-        event EventHandler<EventArgs.FileScanningEventArgs> FileScanning;
+        public string Name { get; set; }
 
         /// <summary>
-        /// Triggers AFTER a file is scanned.
+        /// Gets or sets the file container path.
         /// </summary>
-        event EventHandler<EventArgs.FileScannedEventArgs> FileScanned;
+        public string ContainerPath { get; set; }
 
         /// <summary>
-        /// Gets the plugin ID.
-        /// <remarks>It must be UNIQUE, so using a generated Guid is recommended.</remarks>
+        /// Gets or sets the file container type.
         /// </summary>
-        string Id { get; }
+        public ContainerType ContainerType { get; set; }
 
         /// <summary>
-        /// Gets the plugin name alias (short name).
+        /// Gets or sets the file relative path to the container root.
         /// </summary>
-        string Name { get; }
+        public string RelativePath { get; set; }
 
         /// <summary>
-        /// Gets the plugin game name.
+        /// Gets or sets the file contents type.
         /// </summary>
-        string Game { get; }
+        public ContentType Contents { get; set; }
 
         /// <summary>
-        /// Gets the platform where the plugin is useable.
+        /// Gets or sets the file checksum.
         /// </summary>
-        Platform Platform { get; }
-
-        /// <summary>
-        /// Scans the game installation directory for known files.
-        /// </summary>
-        /// <param name="project">Project to use.</param>
-        /// <param name="gameDir">Game installation directory.</param>
-        void Scan(TranslationProject project, string gameDir);
-
-        /// <summary>
-        /// Extract texts from game files.
-        /// </summary>
-        /// <param name="installationPath">Game installation path (to read from).</param>
-        /// <param name="outputPath">Output directory.</param>
-        void ExtractTexts(string installationPath, string outputPath);
+        public ulong CheckSum { get; set; }
     }
 }
