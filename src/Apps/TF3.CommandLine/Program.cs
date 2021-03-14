@@ -20,6 +20,7 @@
 namespace TF3.CommandLine
 {
     using System;
+    using System.IO;
     using System.Linq;
     using global::CommandLine;
     using TF3.Common.Core;
@@ -38,10 +39,11 @@ namespace TF3.CommandLine
         {
             PluginManager.LoadPlugins("plugins");
 
-            Parser.Default.ParseArguments<Options.ListPluginsOptions, Options.NewProjectOptions, Options.ScanFilesOptions>(args)
+            Parser.Default.ParseArguments<Options.ListPluginsOptions, Options.NewProjectOptions, Options.ScanFilesOptions, Options.ExtractOptions>(args)
                 .WithParsed<Options.ListPluginsOptions>(_ => ListPlugins())
                 .WithParsed<Options.NewProjectOptions>(options => NewProject(options))
-                .WithParsed<Options.ScanFilesOptions>(options => ScanFiles(options));
+                .WithParsed<Options.ScanFilesOptions>(options => ScanFiles(options))
+                .WithParsed<Options.ExtractOptions>(options => Extract(options));
         }
 
         private static void ListPlugins()
@@ -95,6 +97,30 @@ namespace TF3.CommandLine
             plugin.FileScanning += (sender, args) => Console.Write(args.FileName);
             plugin.FileScanned += (sender, args) => Console.WriteLine(args.Included ? " YES" : " NO");
             plugin.Scan(project, options.Game);
+        }
+
+        private static void Extract(Options.ExtractOptions options)
+        {
+            using var project = TranslationProject.Open(options.Project);
+
+            ProjectInfo info = project.Info;
+
+            if (info is null)
+            {
+                Console.WriteLine($"ERROR: No project info found.");
+                return;
+            }
+
+            IPlugin plugin = PluginManager.Plugins.FirstOrDefault(x => x.Id == info.PluginId);
+
+            if (plugin is null)
+            {
+                Console.WriteLine($"ERROR: Plugin not available.");
+                return;
+            }
+
+            string directory = Path.GetDirectoryName(options.Project);
+            plugin.ExtractTexts(project, Path.Combine(directory, "texts"));
         }
     }
 }

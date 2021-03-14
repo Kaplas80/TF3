@@ -20,8 +20,8 @@
 namespace TF3.Tests.YakuzaKiwami2
 {
     using NUnit.Framework;
-    using TF3.Plugin.YakuzaKiwami2.Converters.Armp;
-    using TF3.Plugin.YakuzaKiwami2.Formats;
+    using TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp;
+    using TF3.YarhlPlugin.YakuzaKiwami2.Formats;
     using Yarhl.FileFormat;
     using Yarhl.FileSystem;
     using Yarhl.IO;

@@ -17,59 +17,57 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-namespace TF3.Common.Core
+namespace TF3.YarhlPlugin.YakuzaCommon.Types
 {
-    using System;
-    using TF3.Common.Core.Enums;
+    using Yarhl.IO.Serialization.Attributes;
 
     /// <summary>
-    /// Interface for TF3 plugins.
+    /// Par file info.
     /// </summary>
-    public interface IPlugin
+    [Serializable]
+    public class ParFileInfo
     {
         /// <summary>
-        /// Triggers BEFORE a file is scanned.
+        /// Gets or sets the file flags.
         /// </summary>
-        event EventHandler<EventArgs.FileScanningEventArgs> FileScanning;
+        /// <remarks>For now, only 0x80000000 (IsCompressed).</remarks>
+        public uint Flags { get; set; }
 
         /// <summary>
-        /// Triggers AFTER a file is scanned.
+        /// Gets or sets the original file size.
         /// </summary>
-        event EventHandler<EventArgs.FileScannedEventArgs> FileScanned;
+        public uint OriginalSize { get; set; }
 
         /// <summary>
-        /// Gets the plugin ID.
-        /// <remarks>It must be UNIQUE, so using a generated Guid is recommended.</remarks>
+        /// Gets or sets the compressed file size.
         /// </summary>
-        string Id { get; }
+        public uint CompressedSize { get; set; }
 
         /// <summary>
-        /// Gets the plugin name alias (short name).
+        /// Gets or sets the offset of the data inside the PAR archive (lower part).
         /// </summary>
-        string Name { get; }
+        public uint DataOffset { get; set; }
 
         /// <summary>
-        /// Gets the plugin game name.
+        /// Gets or sets the file attributes.
         /// </summary>
-        string Game { get; }
+        public uint RawAttributes { get; set; }
 
         /// <summary>
-        /// Gets the platform where the plugin is useable.
+        /// Gets or sets the offset of the data inside the PAR archive (higher part).
         /// </summary>
-        Platform Platform { get; }
+        public uint ExtendedOffset { get; set; }
 
         /// <summary>
-        /// Scans the game installation directory for known files.
+        /// Gets or sets the file timestamp.
         /// </summary>
-        /// <param name="project">Project to use.</param>
-        /// <param name="gameDir">Game installation directory.</param>
-        void Scan(TranslationProject project, string gameDir);
+        /// <remarks>Number of seconds from 1970/01/01.</remarks>
+        public ulong Timestamp { get; set; }
 
         /// <summary>
-        /// Extract texts from game files.
+        /// Check if file is compressed.
         /// </summary>
-        /// <param name="project">Project to use.</param>
-        /// <param name="outputPath">Output directory.</param>
-        void ExtractTexts(TranslationProject project, string outputPath);
+        /// <returns>True if the file is compressed.</returns>
+        public bool IsCompressed() => (Flags & 0x80000000) == 0x8000000;
     }
 }

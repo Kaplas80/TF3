@@ -21,6 +21,7 @@
 namespace TF3.Common.Core
 {
     using System;
+    using System.Collections.Generic;
     using System.IO;
 
     /// <summary>
@@ -49,6 +50,23 @@ namespace TF3.Common.Core
 
                 // There is only one value in the collection, so the predicate isn't important.
                 return col.FindOne(x => !string.IsNullOrEmpty(x.PluginId));
+            }
+        }
+
+        /// <summary>
+        /// Gets the text files.
+        /// </summary>
+        public IList<Models.File> TextFiles
+        {
+            get
+            {
+                LiteDB.ILiteCollection<Models.File> col = _database.GetCollection<Models.File>("files");
+                col.EnsureIndex(x => x.Contents);
+
+                return col.Query()
+                    .Where(x => x.Contents == Enums.ContentType.Text)
+                    .OrderBy(x => x.ContainerPath)
+                    .ToList();
             }
         }
 

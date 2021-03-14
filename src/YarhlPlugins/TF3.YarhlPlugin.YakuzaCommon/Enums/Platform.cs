@@ -17,59 +17,67 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-namespace TF3.Common.Core
+namespace TF3.YarhlPlugin.YakuzaCommon.Enums
 {
-    using System;
-    using TF3.Common.Core.Enums;
-
     /// <summary>
-    /// Interface for TF3 plugins.
+    /// Platforms ids.
+    /// <remarks>Only <see cref="PlayStation3"/> is used in PAR archives.</remarks>
     /// </summary>
-    public interface IPlugin
+    public enum Platform
     {
         /// <summary>
-        /// Triggers BEFORE a file is scanned.
+        /// Microsoft Windows 32bits
         /// </summary>
-        event EventHandler<EventArgs.FileScanningEventArgs> FileScanning;
+        Win32 = 0x0,
 
         /// <summary>
-        /// Triggers AFTER a file is scanned.
+        /// Microsoft Xbox 360
         /// </summary>
-        event EventHandler<EventArgs.FileScannedEventArgs> FileScanned;
+        Xbox360 = 0x1,
 
         /// <summary>
-        /// Gets the plugin ID.
-        /// <remarks>It must be UNIQUE, so using a generated Guid is recommended.</remarks>
+        /// Sony PlayStation 3
         /// </summary>
-        string Id { get; }
+        PlayStation3 = 0x2,
 
         /// <summary>
-        /// Gets the plugin name alias (short name).
+        /// Nintendo Wii
         /// </summary>
-        string Name { get; }
+        Wii = 0x3,
 
         /// <summary>
-        /// Gets the plugin game name.
+        /// Sony PS Vita
         /// </summary>
-        string Game { get; }
+        Vita = 0x4,
 
         /// <summary>
-        /// Gets the platform where the plugin is useable.
+        /// Nintendo 3DS
         /// </summary>
-        Platform Platform { get; }
+        Nintendo3Ds = 0x5,
 
         /// <summary>
-        /// Scans the game installation directory for known files.
+        /// Nintendo Wii U
         /// </summary>
-        /// <param name="project">Project to use.</param>
-        /// <param name="gameDir">Game installation directory.</param>
-        void Scan(TranslationProject project, string gameDir);
+        WiiU = 0x6,
 
         /// <summary>
-        /// Extract texts from game files.
+        /// Microsoft Windows 64bits
         /// </summary>
-        /// <param name="project">Project to use.</param>
-        /// <param name="outputPath">Output directory.</param>
-        void ExtractTexts(TranslationProject project, string outputPath);
+        Win64 = 0x20,
+
+        /// <summary>
+        /// Sony PlayStation 4
+        /// </summary>
+        PlayStation4 = 0x21,
+
+        /// <summary>
+        /// Durango (Microsoft Xbox ONE codename)
+        /// </summary>
+        Durango = 0x22,
+
+        /// <summary>
+        /// Generic platform
+        /// </summary>
+        Generic = 0xFF,
     }
 }

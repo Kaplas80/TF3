@@ -1,0 +1,690 @@
+containers:
+- name: db.par
+  path: data/db.par
+  type: Archive
+  checksum: 15875901786622737460
+  files:
+  - name: access_type.bin
+    path: /db.par/./en/access_type.bin
+    type: Armp
+    checksum: 4242800203691963010
+  - name: asset_asset_name_lexus2.bin
+    path: /db.par/./en/asset_asset_name_lexus2.bin
+    type: Armp
+    checksum: 6611397992344678311
+  - name: auth.bin
+    path: /db.par/./en/auth.bin
+    type: Armp
+    checksum: 12303818200609094221
+  - name: auth_costume_change.bin
+    path: /db.par/./en/auth_costume_change.bin
+    type: Armp
+    checksum: 13368855849483337642
+  - name: battle_tougijyo_bonus.bin
+    path: /db.par/./en/battle_tougijyo_bonus.bin
+    type: Armp
+    checksum: 17314166472504000766
+  - name: battle_tougijyo_fighter_info.bin
+    path: /db.par/./en/battle_tougijyo_fighter_info.bin
+    type: Armp
+    checksum: 7941311895638341509
+  - name: battle_tougijyo_message.bin
+    path: /db.par/./en/battle_tougijyo_message.bin
+    type: Armp
+    checksum: 13120082436562810800
+  - name: battle_tougijyo_select_match.bin
+    path: /db.par/./en/battle_tougijyo_select_match.bin
+    type: Armp
+    checksum: 4116423287201473576
+  - name: bouncer_mission.bin
+    path: /db.par/./en/bouncer_mission.bin
+    type: Armp
+    checksum: 1878698517043347365
+  - name: caption.bin
+    path: /db.par/./en/caption.bin
+    type: Armp
+    checksum: 12741295388229842819
+  - name: character_npc_soldier_name_group.bin
+    path: /db.par/./en/character_npc_soldier_name_group.bin
+    type: Armp
+    checksum: 16529000801059153668
+  - name: clan_creator_main_menu.bin
+    path: /db.par/./en/clan_creator_main_menu.bin
+    type: Armp
+    checksum: 2884610846256335151
+  - name: clan_creator_member.bin
+    path: /db.par/./en/clan_creator_member.bin
+    type: Armp
+    checksum: 16613784335269174457
+  - name: clan_creator_mission.bin
+    path: /db.par/./en/clan_creator_mission.bin
+    type: Armp
+    checksum: 7805474802063164968
+  - name: clan_creator_rarity.bin
+    path: /db.par/./en/clan_creator_rarity.bin
+    type: Armp
+    checksum: 2743982872618172961
+  - name: clan_creator_skill.bin
+    path: /db.par/./en/clan_creator_skill.bin
+    type: Armp
+    checksum: 16290100044243612862
+  - name: clan_creator_special_attack.bin
+    path: /db.par/./en/clan_creator_special_attack.bin
+    type: Armp
+    checksum: 5106121896685725265
+  - name: complete.bin
+    path: /db.par/./en/complete.bin
+    type: Armp
+    checksum: 1022420744564793511
+  - name: complete_category.bin
+    path: /db.par/./en/complete_category.bin
+    type: Armp
+    checksum: 3334259622940426630
+  - name: complete_checklist.bin
+    path: /db.par/./en/complete_checklist.bin
+    type: Armp
+    checksum: 13433943154388256781
+  - name: controller_guide.bin
+    path: /db.par/./en/controller_guide.bin
+    type: Armp
+    checksum: 11189820840716709138
+  - name: hact_najimi.bin
+    path: /db.par/./en/hact_najimi.bin
+    type: Armp
+    checksum: 11082046416116538607
+  - name: item.bin
+    path: /db.par/./en/item.bin
+    type: Armp
+    checksum: 10311998727076622209
+  - name: item_buff.bin
+    path: /db.par/./en/item_buff.bin
+    type: Armp
+    checksum: 8706903333796976684
+  - name: item_special.bin
+    path: /db.par/./en/item_special.bin
+    type: Armp
+    checksum: 4224616351552388308
+  - name: manual.bin
+    path: /db.par/./en/manual.bin
+    type: Armp
+    checksum: 15669638481751372076
+  - name: map_place.bin
+    path: /db.par/./en/map_place.bin
+    type: Armp
+    checksum: 11534968418958188742
+  - name: message_dialog.bin
+    path: /db.par/./en/message_dialog.bin
+    type: Armp
+    checksum: 5210222690450269416
+  - name: minigame_batting_center_course.bin
+    path: /db.par/./en/minigame_batting_center_course.bin
+    type: Armp
+    checksum: 6108722484931457876
+  - name: minigame_batting_center_message.bin
+    path: /db.par/./en/minigame_batting_center_message.bin
+    type: Armp
+    checksum: 2796034327130430583
+  - name: minigame_batting_center_type_of_pitch.bin
+    path: /db.par/./en/minigame_batting_center_type_of_pitch.bin
+    type: Armp
+    checksum: 2290139259757389261
+  - name: minigame_cabaret_cabaret.bin
+    path: /db.par/./en/minigame_cabaret_cabaret.bin
+    type: Armp
+    checksum: 30403420414724232
+  - name: minigame_cabaret_island_cast.bin
+    path: /db.par/./en/minigame_cabaret_island_cast.bin
+    type: Armp
+    checksum: 15948984360421695628
+  - name: minigame_cabaret_island_coordinate_accessory_bracelet.bin
+    path: /db.par/./en/minigame_cabaret_island_coordinate_accessory_bracelet.bin
+    type: Armp
+    checksum: 13335690990632550099
+  - name: minigame_cabaret_island_coordinate_accessory_category.bin
+    path: /db.par/./en/minigame_cabaret_island_coordinate_accessory_category.bin
+    type: Armp
+    checksum: 9746378554416631242
+  - name: minigame_cabaret_island_coordinate_accessory_earrings.bin
+    path: /db.par/./en/minigame_cabaret_island_coordinate_accessory_earrings.bin
+    type: Armp
+    checksum: 6019690558795017730
+  - name: minigame_cabaret_island_coordinate_accessory_glasses.bin
+    path: /db.par/./en/minigame_cabaret_island_coordinate_accessory_glasses.bin
+    type: Armp
+    checksum: 15319914171881955153
+  - name: minigame_cabaret_island_coordinate_accessory_hair.bin
+    path: /db.par/./en/minigame_cabaret_island_coordinate_accessory_hair.bin
+    type: Armp
+    checksum: 7690477767751022295
+  - name: minigame_cabaret_island_coordinate_accessory_nail.bin
+    path: /db.par/./en/minigame_cabaret_island_coordinate_accessory_nail.bin
+    type: Armp
+    checksum: 1773843027005236662
+  - name: minigame_cabaret_island_coordinate_accessory_necklace.bin
+    path: /db.par/./en/minigame_cabaret_island_coordinate_accessory_necklace.bin
+    type: Armp
+    checksum: 1127894232605195958
+  - name: minigame_cabaret_island_coordinate_accessory_perfume.bin
+    path: /db.par/./en/minigame_cabaret_island_coordinate_accessory_perfume.bin
+    type: Armp
+    checksum: 7831760348444647251
+  - name: minigame_cabaret_island_coordinate_accessory_ring.bin
+    path: /db.par/./en/minigame_cabaret_island_coordinate_accessory_ring.bin
+    type: Armp
+    checksum: 1924710380859323402
+  - name: minigame_cabaret_island_coordinate_accessory_watches.bin
+    path: /db.par/./en/minigame_cabaret_island_coordinate_accessory_watches.bin
+    type: Armp
+    checksum: 10640775743101583662
+  - name: minigame_cabaret_island_coordinate_dress.bin
+    path: /db.par/./en/minigame_cabaret_island_coordinate_dress.bin
+    type: Armp
+    checksum: 2867095167470468034
+  - name: minigame_cabaret_island_coordinate_hair_style.bin
+    path: /db.par/./en/minigame_cabaret_island_coordinate_hair_style.bin
+    type: Armp
+    checksum: 13933198224658962170
+  - name: minigame_cabaret_island_coordinate_makeup_category.bin
+    path: /db.par/./en/minigame_cabaret_island_coordinate_makeup_category.bin
+    type: Armp
+    checksum: 15087318298523864421
+  - name: minigame_cabaret_island_coordinate_makeup_cheek.bin
+    path: /db.par/./en/minigame_cabaret_island_coordinate_makeup_cheek.bin
+    type: Armp
+    checksum: 3605702184046705514
+  - name: minigame_cabaret_island_coordinate_makeup_color_contact.bin
+    path: /db.par/./en/minigame_cabaret_island_coordinate_makeup_color_contact.bin
+    type: Armp
+    checksum: 3194511836016880268
+  - name: minigame_cabaret_island_coordinate_makeup_eyebrows.bin
+    path: /db.par/./en/minigame_cabaret_island_coordinate_makeup_eyebrows.bin
+    type: Armp
+    checksum: 9967172786212433058
+  - name: minigame_cabaret_island_coordinate_makeup_eyelashes.bin
+    path: /db.par/./en/minigame_cabaret_island_coordinate_makeup_eyelashes.bin
+    type: Armp
+    checksum: 3489648366047778836
+  - name: minigame_cabaret_island_coordinate_makeup_eyeline.bin
+    path: /db.par/./en/minigame_cabaret_island_coordinate_makeup_eyeline.bin
+    type: Armp
+    checksum: 12260660354042252821
+  - name: minigame_cabaret_island_coordinate_makeup_eyeshadow.bin
+    path: /db.par/./en/minigame_cabaret_island_coordinate_makeup_eyeshadow.bin
+    type: Armp
+    checksum: 14849091954779378294
+  - name: minigame_cabaret_island_coordinate_makeup_lip.bin
+    path: /db.par/./en/minigame_cabaret_island_coordinate_makeup_lip.bin
+    type: Armp
+    checksum: 1577987860428639699
+  - name: minigame_cabaret_island_event.bin
+    path: /db.par/./en/minigame_cabaret_island_event.bin
+    type: Armp
+    checksum: 11616630608656371239
+  - name: minigame_cabaret_island_event_choices.bin
+    path: /db.par/./en/minigame_cabaret_island_event_choices.bin
+    type: Armp
+    checksum: 4261580146873969219
+  - name: minigame_cabaret_island_grandprix_commentary_message.bin
+    path: /db.par/./en/minigame_cabaret_island_grandprix_commentary_message.bin
+    type: Armp
+    checksum: 4068480199883842964
+  - name: minigame_cabaret_island_grandprix_evaluation_message.bin
+    path: /db.par/./en/minigame_cabaret_island_grandprix_evaluation_message.bin
+    type: Armp
+    checksum: 14952563916885252890
+  - name: minigame_cabaret_island_grandprix_ranking.bin
+    path: /db.par/./en/minigame_cabaret_island_grandprix_ranking.bin
+    type: Armp
+    checksum: 2478945115386949276
+  - name: minigame_cabaret_island_grandprix_sequence_infomation.bin
+    path: /db.par/./en/minigame_cabaret_island_grandprix_sequence_infomation.bin
+    type: Armp
+    checksum: 5504323690304799101
+  - name: minigame_cabaret_island_guest_category.bin
+    path: /db.par/./en/minigame_cabaret_island_guest_category.bin
+    type: Armp
+    checksum: 7795610162700915986
+  - name: minigame_cabaret_island_hierarchy_open.bin
+    path: /db.par/./en/minigame_cabaret_island_hierarchy_open.bin
+    type: Armp
+    checksum: 1482151520714113678
+  - name: minigame_cabaret_island_potential.bin
+    path: /db.par/./en/minigame_cabaret_island_potential.bin
+    type: Armp
+    checksum: 17178408646648960341
+  - name: minigame_cabaret_island_rival.bin
+    path: /db.par/./en/minigame_cabaret_island_rival.bin
+    type: Armp
+    checksum: 1527195952954215610
+  - name: minigame_cabaret_island_shop_lineup.bin
+    path: /db.par/./en/minigame_cabaret_island_shop_lineup.bin
+    type: Armp
+    checksum: 7461705774438609011
+  - name: minigame_cabaret_island_simulation.bin
+    path: /db.par/./en/minigame_cabaret_island_simulation.bin
+    type: Armp
+    checksum: 605427030914614997
+  - name: minigame_darts_dart_kind.bin
+    path: /db.par/./en/minigame_darts_dart_kind.bin
+    type: Armp
+    checksum: 9959013289443636228
+  - name: minigame_darts_rival_info.bin
+    path: /db.par/./en/minigame_darts_rival_info.bin
+    type: Armp
+    checksum: 13548348226449550456
+  - name: minigame_golf_driving_range_message.bin
+    path: /db.par/./en/minigame_golf_driving_range_message.bin
+    type: Armp
+    checksum: 8887571544269405832
+  - name: minigame_gravure_shooting_studio_course_data.bin
+    path: /db.par/./en/minigame_gravure_shooting_studio_course_data.bin
+    type: Armp
+    checksum: 1669178233733955243
+  - name: minigame_gravure_shooting_studio_message.bin
+    path: /db.par/./en/minigame_gravure_shooting_studio_message.bin
+    type: Armp
+    checksum: 13598922039764381991
+  - name: minigame_gravure_shooting_studio_movie_data.bin
+    path: /db.par/./en/minigame_gravure_shooting_studio_movie_data.bin
+    type: Armp
+    checksum: 13557483718156704604
+  - name: minigame_gravure_shooting_studio_question_data.bin
+    path: /db.par/./en/minigame_gravure_shooting_studio_question_data.bin
+    type: Armp
+    checksum: 14513740978344905419
+  - name: minigame_gravure_shooting_studio_select_word_data.bin
+    path: /db.par/./en/minigame_gravure_shooting_studio_select_word_data.bin
+    type: Armp
+    checksum: 3333519045750681896
+  - name: minigame_gravure_shooting_studio_telop_data.bin
+    path: /db.par/./en/minigame_gravure_shooting_studio_telop_data.bin
+    type: Armp
+    checksum: 1313269615680820345
+  - name: minigame_gravure_shooting_studio_woman_data.bin
+    path: /db.par/./en/minigame_gravure_shooting_studio_woman_data.bin
+    type: Armp
+    checksum: 6207715842861257259
+  - name: minigame_hanafuda_string_hanafuda.bin
+    path: /db.par/./en/minigame_hanafuda_string_hanafuda.bin
+    type: Armp
+    checksum: 4325517875292157910
+  - name: minigame_hanafuda_string_mainmenu.bin
+    path: /db.par/./en/minigame_hanafuda_string_mainmenu.bin
+    type: Armp
+    checksum: 1975755914937724559
+  - name: minigame_mahjong_string_agari.bin
+    path: /db.par/./en/minigame_mahjong_string_agari.bin
+    type: Armp
+    checksum: 3494689410219920980
+  - name: minigame_mahjong_string_command.bin
+    path: /db.par/./en/minigame_mahjong_string_command.bin
+    type: Armp
+    checksum: 10894227164493719306
+  - name: minigame_mahjong_string_common.bin
+    path: /db.par/./en/minigame_mahjong_string_common.bin
+    type: Armp
+    checksum: 14155350113869608143
+  - name: minigame_mahjong_string_kyoku.bin
+    path: /db.par/./en/minigame_mahjong_string_kyoku.bin
+    type: Armp
+    checksum: 4043582486060299323
+  - name: minigame_mahjong_string_mainmenu.bin
+    path: /db.par/./en/minigame_mahjong_string_mainmenu.bin
+    type: Armp
+    checksum: 15012413630825682529
+  - name: minigame_mahjong_string_mangan.bin
+    path: /db.par/./en/minigame_mahjong_string_mangan.bin
+    type: Armp
+    checksum: 11759032804123324662
+  - name: minigame_mahjong_string_npc.bin
+    path: /db.par/./en/minigame_mahjong_string_npc.bin
+    type: Armp
+    checksum: 18260826124647891391
+  - name: minigame_mahjong_string_npc_name_rank_kamuro.bin
+    path: /db.par/./en/minigame_mahjong_string_npc_name_rank_kamuro.bin
+    type: Armp
+    checksum: 10190688732854917454
+  - name: minigame_mahjong_string_ranking_name.bin
+    path: /db.par/./en/minigame_mahjong_string_ranking_name.bin
+    type: Armp
+    checksum: 7933397676550134998
+  - name: minigame_mahjong_string_setting.bin
+    path: /db.par/./en/minigame_mahjong_string_setting.bin
+    type: Armp
+    checksum: 2874652112592775931
+  - name: minigame_mahjong_string_yaku.bin
+    path: /db.par/./en/minigame_mahjong_string_yaku.bin
+    type: Armp
+    checksum: 7902272238999227765
+  - name: minigame_mahjong_string_yakuman.bin
+    path: /db.par/./en/minigame_mahjong_string_yakuman.bin
+    type: Armp
+    checksum: 5947290917024083605
+  - name: minigame_oichokabu_string_oichokabu.bin
+    path: /db.par/./en/minigame_oichokabu_string_oichokabu.bin
+    type: Armp
+    checksum: 17112368579222796113
+  - name: minigame_poker_com_1.bin
+    path: /db.par/./en/minigame_poker_com_1.bin
+    type: Armp
+    checksum: 16245702250189846719
+  - name: minigame_poker_com_2.bin
+    path: /db.par/./en/minigame_poker_com_2.bin
+    type: Armp
+    checksum: 5542493064694216053
+  - name: minigame_poker_com_3.bin
+    path: /db.par/./en/minigame_poker_com_3.bin
+    type: Armp
+    checksum: 5030949592496470174
+  - name: minigame_poker_com_4.bin
+    path: /db.par/./en/minigame_poker_com_4.bin
+    type: Armp
+    checksum: 16685332422186734439
+  - name: minigame_poker_com_5.bin
+    path: /db.par/./en/minigame_poker_com_5.bin
+    type: Armp
+    checksum: 9087727161872468298
+  - name: minigame_poker_com_6.bin
+    path: /db.par/./en/minigame_poker_com_6.bin
+    type: Armp
+    checksum: 18253010934106267846
+  - name: minigame_poker_com_high_1.bin
+    path: /db.par/./en/minigame_poker_com_high_1.bin
+    type: Armp
+    checksum: 716692682352374111
+  - name: minigame_poker_com_high_2.bin
+    path: /db.par/./en/minigame_poker_com_high_2.bin
+    type: Armp
+    checksum: 16973407675424260014
+  - name: minigame_poker_com_high_3.bin
+    path: /db.par/./en/minigame_poker_com_high_3.bin
+    type: Armp
+    checksum: 15078179815740990193
+  - name: minigame_poker_com_high_4.bin
+    path: /db.par/./en/minigame_poker_com_high_4.bin
+    type: Armp
+    checksum: 14838424005347429059
+  - name: minigame_poker_com_high_5.bin
+    path: /db.par/./en/minigame_poker_com_high_5.bin
+    type: Armp
+    checksum: 7225291957014356063
+  - name: minigame_poker_com_high_6.bin
+    path: /db.par/./en/minigame_poker_com_high_6.bin
+    type: Armp
+    checksum: 9128736793230760057
+  - name: minigame_shogi_menu.bin
+    path: /db.par/./en/minigame_shogi_menu.bin
+    type: Armp
+    checksum: 4653191586460548794
+  - name: minigame_shogi_shogi.bin
+    path: /db.par/./en/minigame_shogi_shogi.bin
+    type: Armp
+    checksum: 3373090197933901126
+  - name: minigame_shogi_taikyoku_menu.bin
+    path: /db.par/./en/minigame_shogi_taikyoku_menu.bin
+    type: Armp
+    checksum: 15610396586769691408
+  - name: minigame_snack_event_telop_color.bin
+    path: /db.par/./en/minigame_snack_event_telop_color.bin
+    type: Armp
+    checksum: 14994763685166923997
+  - name: minigame_vf5_button_set.bin
+    path: /db.par/./en/minigame_vf5_button_set.bin
+    type: Armp
+    checksum: 14199012317042193129
+  - name: minigame_vf5_key_set.bin
+    path: /db.par/./en/minigame_vf5_key_set.bin
+    type: Armp
+    checksum: 69434363623656551
+  - name: minigame_video_param.bin
+    path: /db.par/./en/minigame_video_param.bin
+    type: Armp
+    checksum: 12481811643519926905
+  - name: mission_mission_kind.bin
+    path: /db.par/./en/mission_mission_kind.bin
+    type: Armp
+    checksum: 15242712800062280816
+  - name: msg.bin
+    path: /db.par/./en/msg.bin
+    type: Armp
+    checksum: 1976308098150505624
+  - name: option.bin
+    path: /db.par/./en/option.bin
+    type: Armp
+    checksum: 17501080844641265468
+  - name: pause_camera_filter.bin
+    path: /db.par/./en/pause_camera_filter.bin
+    type: Armp
+    checksum: 2707030233493792461
+  - name: pause_mail.bin
+    path: /db.par/./en/pause_mail.bin
+    type: Armp
+    checksum: 7993621981676639450
+  - name: pause_others.bin
+    path: /db.par/./en/pause_others.bin
+    type: Armp
+    checksum: 17795668703707572591
+  - name: pause_profile.bin
+    path: /db.par/./en/pause_profile.bin
+    type: Armp
+    checksum: 18029645183577123610
+  - name: pause_tutorial.bin
+    path: /db.par/./en/pause_tutorial.bin
+    type: Armp
+    checksum: 10645183650624724308
+  - name: play_go_message.bin
+    path: /db.par/./en/play_go_message.bin
+    type: Armp
+    checksum: 3023593046421963699
+  - name: player.bin
+    path: /db.par/./en/player.bin
+    type: Armp
+    checksum: 5970466621103404976
+  - name: player_ability.bin
+    path: /db.par/./en/player_ability.bin
+    type: Armp
+    checksum: 12122536932100217183
+  - name: player_ability_rank.bin
+    path: /db.par/./en/player_ability_rank.bin
+    type: Armp
+    checksum: 4386208742096443119
+  - name: player_equip_bonus.bin
+    path: /db.par/./en/player_equip_bonus.bin
+    type: Armp
+    checksum: 3489331807887823129
+  - name: player_point.bin
+    path: /db.par/./en/player_point.bin
+    type: Armp
+    checksum: 50228401754220612
+  - name: player_skill.bin
+    path: /db.par/./en/player_skill.bin
+    type: Armp
+    checksum: 13783534288887535714
+  - name: player_skill_category.bin
+    path: /db.par/./en/player_skill_category.bin
+    type: Armp
+    checksum: 15323067895544637949
+  - name: position_stage_warp.bin
+    path: /db.par/./en/position_stage_warp.bin
+    type: Armp
+    checksum: 9239655724666356504
+  - name: qloc_binding_actions_qloc_binding_actions.bin
+    path: /db.par/./en/qloc_binding_actions_qloc_binding_actions.bin
+    type: Armp
+    checksum: 9382791326138779548
+  - name: qloc_qloc_binding_actions.bin
+    path: /db.par/./en/qloc_qloc_binding_actions.bin
+    type: Armp
+    checksum: 7995754364486849586
+  - name: qloc_qloc_gamestates.bin
+    path: /db.par/./en/qloc_qloc_gamestates.bin
+    type: Armp
+    checksum: 12640452543689193554
+  - name: shop.bin
+    path: /db.par/./en/shop.bin
+    type: Armp
+    checksum: 7501402134254418380
+  - name: shop_bonus.bin
+    path: /db.par/./en/shop_bonus.bin
+    type: Armp
+    checksum: 8601387398792778572
+  - name: shop_group.bin
+    path: /db.par/./en/shop_group.bin
+    type: Armp
+    checksum: 7909029237208095612
+  - name: sound_auth.bin
+    path: /db.par/./en/sound_auth.bin
+    type: Armp
+    checksum: 760842198173968323
+  - name: sound_auth_subtitles_speech_list_btl_hact.bin
+    path: /db.par/./en/sound_auth_subtitles_speech_list_btl_hact.bin
+    type: Armp
+    checksum: 17383414507279764288
+  - name: sound_auth_subtitles_speech_list_cab_aikadate.bin
+    path: /db.par/./en/sound_auth_subtitles_speech_list_cab_aikadate.bin
+    type: Armp
+    checksum: 6685592225102600381
+  - name: sound_auth_subtitles_speech_list_cab_kanadate.bin
+    path: /db.par/./en/sound_auth_subtitles_speech_list_cab_kanadate.bin
+    type: Armp
+    checksum: 5310306423605324555
+  - name: sound_auth_subtitles_speech_list_cab_kiraradate.bin
+    path: /db.par/./en/sound_auth_subtitles_speech_list_cab_kiraradate.bin
+    type: Armp
+    checksum: 4868442009716255343
+  - name: sound_auth_subtitles_speech_list_cab_koyukidate.bin
+    path: /db.par/./en/sound_auth_subtitles_speech_list_cab_koyukidate.bin
+    type: Armp
+    checksum: 15065460657928820337
+  - name: sound_auth_subtitles_speech_list_cab_main01.bin
+    path: /db.par/./en/sound_auth_subtitles_speech_list_cab_main01.bin
+    type: Armp
+    checksum: 2734319327640145929
+  - name: sound_auth_subtitles_speech_list_cab_main02.bin
+    path: /db.par/./en/sound_auth_subtitles_speech_list_cab_main02.bin
+    type: Armp
+    checksum: 3619005970303730915
+  - name: sound_auth_subtitles_speech_list_cab_main50.bin
+    path: /db.par/./en/sound_auth_subtitles_speech_list_cab_main50.bin
+    type: Armp
+    checksum: 1271753193991153938
+  - name: sound_auth_subtitles_speech_list_cab_shoukodate.bin
+    path: /db.par/./en/sound_auth_subtitles_speech_list_cab_shoukodate.bin
+    type: Armp
+    checksum: 12183258460245242060
+  - name: sound_auth_subtitles_speech_list_cab_yuadate.bin
+    path: /db.par/./en/sound_auth_subtitles_speech_list_cab_yuadate.bin
+    type: Armp
+    checksum: 4305028533580726370
+  - name: sound_auth_subtitles_speech_list_cln01.bin
+    path: /db.par/./en/sound_auth_subtitles_speech_list_cln01.bin
+    type: Armp
+    checksum: 5916454619871543941
+  - name: sound_auth_subtitles_speech_list_cln02.bin
+    path: /db.par/./en/sound_auth_subtitles_speech_list_cln02.bin
+    type: Armp
+    checksum: 15759435784142608423
+  - name: sound_auth_subtitles_speech_list_cln04.bin
+    path: /db.par/./en/sound_auth_subtitles_speech_list_cln04.bin
+    type: Armp
+    checksum: 1220322557593676649
+  - name: sound_auth_subtitles_speech_list_cln06.bin
+    path: /db.par/./en/sound_auth_subtitles_speech_list_cln06.bin
+    type: Armp
+    checksum: 17181632360017701610
+  - name: sound_auth_subtitles_speech_list_cln08.bin
+    path: /db.par/./en/sound_auth_subtitles_speech_list_cln08.bin
+    type: Armp
+    checksum: 3441150704774033919
+  - name: sound_auth_subtitles_speech_list_cln10.bin
+    path: /db.par/./en/sound_auth_subtitles_speech_list_cln10.bin
+    type: Armp
+    checksum: 3069881061831828524
+  - name: sound_auth_subtitles_speech_list_cln12.bin
+    path: /db.par/./en/sound_auth_subtitles_speech_list_cln12.bin
+    type: Armp
+    checksum: 3977120888203230969
+  - name: sound_auth_subtitles_speech_list_cln14.bin
+    path: /db.par/./en/sound_auth_subtitles_speech_list_cln14.bin
+    type: Armp
+    checksum: 15831418933033894444
+  - name: sound_auth_subtitles_speech_list_cln_main50.bin
+    path: /db.par/./en/sound_auth_subtitles_speech_list_cln_main50.bin
+    type: Armp
+    checksum: 4593518316634281394
+  - name: sound_auth_subtitles_speech_list_cln_main51.bin
+    path: /db.par/./en/sound_auth_subtitles_speech_list_cln_main51.bin
+    type: Armp
+    checksum: 6327665421865903204
+  - name: sound_auth_subtitles_speech_list_majima.bin
+    path: /db.par/./en/sound_auth_subtitles_speech_list_majima.bin
+    type: Armp
+    checksum: 3666312303214819852
+  - name: sound_auth_subtitles_speech_list_sub_a14.bin
+    path: /db.par/./en/sound_auth_subtitles_speech_list_sub_a14.bin
+    type: Armp
+    checksum: 7172469465649220436
+  - name: sound_cue_subtitle.bin
+    path: /db.par/./en/sound_cue_subtitle.bin
+    type: Armp
+    checksum: 16146743459251981273
+  - name: subgame_omg_key_preset.bin
+    path: /db.par/./en/subgame_omg_key_preset.bin
+    type: Armp
+    checksum: 10341242724658131085
+  - name: subgame_omg_keys.bin
+    path: /db.par/./en/subgame_omg_keys.bin
+    type: Armp
+    checksum: 9268727930811328710
+  - name: talk.bin
+    path: /db.par/./en/talk.bin
+    type: Armp
+    checksum: 7008545013363133263
+  - name: talk_category_title.bin
+    path: /db.par/./en/talk_category_title.bin
+    type: Armp
+    checksum: 9283094495776553650
+  - name: talk_input_number.bin
+    path: /db.par/./en/talk_input_number.bin
+    type: Armp
+    checksum: 13869906407184408043
+  - name: talk_popup_popup.bin
+    path: /db.par/./en/talk_popup_popup.bin
+    type: Armp
+    checksum: 133923892073099478
+  - name: talk_select.bin
+    path: /db.par/./en/talk_select.bin
+    type: Armp
+    checksum: 5239814833927809729
+  - name: talk_select_select.bin
+    path: /db.par/./en/talk_select_select.bin
+    type: Armp
+    checksum: 6586839614101099443
+  - name: talk_system_msg.bin
+    path: /db.par/./en/talk_system_msg.bin
+    type: Armp
+    checksum: 6485243776413705649
+  - name: talk_talker.bin
+    path: /db.par/./en/talk_talker.bin
+    type: Armp
+    checksum: 3800039050760796026
+  - name: title_movie.bin
+    path: /db.par/./en/title_movie.bin
+    type: Armp
+    checksum: 4720060124973489266
+  - name: title_movie_chapter.bin
+    path: /db.par/./en/title_movie_chapter.bin
+    type: Armp
+    checksum: 15768095211087630687
+  - name: title_root.bin
+    path: /db.par/./en/title_root.bin
+    type: Armp
+    checksum: 4445218555714098284
+  - name: trophy.bin
+    path: /db.par/./en/trophy.bin
+    type: Armp
+    checksum: 1668850749049635214
+  - name: ui_text.bin
+    path: /db.par/./en/ui_text.bin
+    type: Armp
+    checksum: 14077052412190338533

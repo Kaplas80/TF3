@@ -17,59 +17,86 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-namespace TF3.Common.Core
+namespace TF3.YarhlPlugin.YakuzaKiwami2.Enums
 {
-    using System;
-    using TF3.Common.Core.Enums;
-
     /// <summary>
-    /// Interface for TF3 plugins.
+    /// Possible field types in ARMP files.
     /// </summary>
-    public interface IPlugin
+    public enum FieldType
     {
         /// <summary>
-        /// Triggers BEFORE a file is scanned.
+        /// Unsigned integer (8 bits).
         /// </summary>
-        event EventHandler<EventArgs.FileScanningEventArgs> FileScanning;
+        UInt8 = 0x00,
 
         /// <summary>
-        /// Triggers AFTER a file is scanned.
+        /// Unsigned integer (16 bits).
         /// </summary>
-        event EventHandler<EventArgs.FileScannedEventArgs> FileScanned;
+        UInt16 = 0x01,
 
         /// <summary>
-        /// Gets the plugin ID.
-        /// <remarks>It must be UNIQUE, so using a generated Guid is recommended.</remarks>
+        /// Unsigned integer (32 bits).
         /// </summary>
-        string Id { get; }
+        UInt32 = 0x02,
 
         /// <summary>
-        /// Gets the plugin name alias (short name).
+        /// Unsigned integer (64 bits).
         /// </summary>
-        string Name { get; }
+        UInt64 = 0x03,
 
         /// <summary>
-        /// Gets the plugin game name.
+        /// Signed integer (8 bits).
         /// </summary>
-        string Game { get; }
+        Int8 = 0x04,
 
         /// <summary>
-        /// Gets the platform where the plugin is useable.
+        /// Signed integer (16 bits).
         /// </summary>
-        Platform Platform { get; }
+        Int16 = 0x05,
 
         /// <summary>
-        /// Scans the game installation directory for known files.
+        /// Signed integer (32 bits).
         /// </summary>
-        /// <param name="project">Project to use.</param>
-        /// <param name="gameDir">Game installation directory.</param>
-        void Scan(TranslationProject project, string gameDir);
+        Int32 = 0x06,
 
         /// <summary>
-        /// Extract texts from game files.
+        /// Signed integer (64 bits).
         /// </summary>
-        /// <param name="project">Project to use.</param>
-        /// <param name="outputPath">Output directory.</param>
-        void ExtractTexts(TranslationProject project, string outputPath);
+        Int64 = 0x07,
+
+        /// <summary>
+        /// Floating-point number (16 bits).
+        /// </summary>
+        Float16 = 0x08,
+
+        /// <summary>
+        /// Floating-point number (32 bits).
+        /// </summary>
+        Float32 = 0x09,
+
+        /// <summary>
+        /// Floating-point number (64 bits).
+        /// </summary>
+        Float64 = 0x0A,
+
+        /// <summary>
+        /// Boolean.
+        /// </summary>
+        Boolean = 0x0B,
+
+        /// <summary>
+        /// String.
+        /// </summary>
+        String = 0x0C,
+
+        /// <summary>
+        /// Table.
+        /// </summary>
+        Table = 0x0D,
+
+        /// <summary>
+        /// Unused field.
+        /// </summary>
+        Unused = 0xFF,
     }
 }

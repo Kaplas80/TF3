@@ -17,59 +17,54 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-namespace TF3.Common.Core
+namespace TF3.YarhlPlugin.YakuzaCommon.Types
 {
-    using System;
-    using TF3.Common.Core.Enums;
+    using TF3.YarhlPlugin.YakuzaCommon.Enums;
+    using Yarhl.IO.Serialization.Attributes;
 
     /// <summary>
-    /// Interface for TF3 plugins.
+    /// Archive header.
     /// </summary>
-    public interface IPlugin
+    [Serializable]
+    public class FileHeader
     {
         /// <summary>
-        /// Triggers BEFORE a file is scanned.
+        /// Gets or sets the file magic number.
         /// </summary>
-        event EventHandler<EventArgs.FileScanningEventArgs> FileScanning;
+        [BinaryString(FixedSize = 4, Terminator = null)]
+        public string Magic { get; set; }
 
         /// <summary>
-        /// Triggers AFTER a file is scanned.
+        /// Gets or sets the platform id value.
         /// </summary>
-        event EventHandler<EventArgs.FileScannedEventArgs> FileScanned;
+        [BinaryEnum(ReadAs = typeof(byte), WriteAs = typeof(byte))]
+        public Platform PlatformId { get; set; }
 
         /// <summary>
-        /// Gets the plugin ID.
-        /// <remarks>It must be UNIQUE, so using a generated Guid is recommended.</remarks>
+        /// Gets or sets the file endianness.
         /// </summary>
-        string Id { get; }
+        [BinaryEnum(ReadAs = typeof(byte), WriteAs = typeof(byte))]
+        public Endianness Endianness { get; set; }
 
         /// <summary>
-        /// Gets the plugin name alias (short name).
+        /// Gets or sets the size extended byte.
         /// </summary>
-        string Name { get; }
+        public byte SizeExtended { get; set; }
 
         /// <summary>
-        /// Gets the plugin game name.
+        /// Gets or sets the relocated byte.
         /// </summary>
-        string Game { get; }
+        public byte Relocated { get; set; }
 
         /// <summary>
-        /// Gets the platform where the plugin is useable.
+        /// Gets or sets the version value.
         /// </summary>
-        Platform Platform { get; }
+        public uint Version { get; set; }
 
         /// <summary>
-        /// Scans the game installation directory for known files.
+        /// Gets or sets the data size.
+        /// <remarks>In newer versions it is always 0.</remarks>
         /// </summary>
-        /// <param name="project">Project to use.</param>
-        /// <param name="gameDir">Game installation directory.</param>
-        void Scan(TranslationProject project, string gameDir);
-
-        /// <summary>
-        /// Extract texts from game files.
-        /// </summary>
-        /// <param name="project">Project to use.</param>
-        /// <param name="outputPath">Output directory.</param>
-        void ExtractTexts(TranslationProject project, string outputPath);
+        public uint Size { get; set; }
     }
 }

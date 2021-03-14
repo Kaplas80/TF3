@@ -25,7 +25,11 @@ namespace TF3.Plugin.YakuzaKiwami2
     using TF3.Common.Core;
     using TF3.Common.Core.Enums;
     using TF3.Common.Core.EventArgs;
+    using YamlDotNet.Serialization;
+    using YamlDotNet.Serialization.NamingConventions;
     using Yarhl.FileSystem;
+    using Yarhl.IO;
+    using Yarhl.Media.Text;
 
     /// <summary>
     /// Yakuza Kiwami 2 plugin.
@@ -42,7 +46,7 @@ namespace TF3.Plugin.YakuzaKiwami2
         public string Id => "ef6d1df4-dacc-4d3a-aa77-8e0f25bb21b4";
 
         /// <inheritdoc/>
-        public string Game => "Yakuza Kiwami 2 (Steam version, build 4058515)";
+        public string Game => "Yakuza Kiwami 2 English (Steam version, build 4058515)";
 
         /// <inheritdoc/>
         public string Name => "kiwami2pc";
@@ -60,42 +64,43 @@ namespace TF3.Plugin.YakuzaKiwami2
                 throw new FileNotFoundException("\"db.par\" not found.");
             }
 
-            using Node dbPar = NodeFactory.FromFile(dbParPath, Yarhl.IO.FileOpenMode.Read);
-            _ = dbPar.TransformWith<Common.Yakuza.Converters.Par.Reader>();
+            using Node dbPar = NodeFactory.FromFile(dbParPath, FileOpenMode.Read);
+            _ = dbPar.TransformWith<YarhlPlugin.YakuzaCommon.Converters.Par.Reader>();
 
-            foreach (Node n in Navigator.IterateNodes(dbPar))
+            foreach (Node node in Navigator.IterateNodes(dbPar))
             {
-                if (n.IsContainer)
+                if (node.IsContainer)
                 {
                     continue;
                 }
 
-                var scanningArgs = new FileScanningEventArgs { FileName = Path.Combine(dbParPath, n.Path) };
-                var scannedArgs = new FileScannedEventArgs { FileName = Path.Combine(dbParPath, n.Path), Included = false };
+                var scanningArgs = new FileScanningEventArgs { FileName = Path.Combine(dbParPath, node.Path) };
+                var scannedArgs = new FileScannedEventArgs { FileName = Path.Combine(dbParPath, node.Path), Included = false };
                 OnFileScanning(scanningArgs);
 
                 if (!scanningArgs.Cancel)
                 {
                     try
                     {
-                        if (n.Tags["Flags"] == 0x80000000)
+                        if (node.Tags["Flags"] == 0x80000000)
                         {
                             // File is compressed
-                            _ = n.TransformWith<Common.Yakuza.Converters.Sllz.Decompress>();
+                            _ = node.TransformWith<YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress>();
                         }
 
-                        ulong checksum = Common.Core.Helpers.ChecksumHelper.Calculate(n.Stream);
+                        ulong checksum = Common.Core.Helpers.ChecksumHelper.Calculate(node.Stream);
 
-                        _ = n.TransformWith<Converters.Armp.Reader>();
+                        _ = node.TransformWith<YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader>();
 
-                        if (n.GetFormatAs<Formats.ArmpTable>().ValueStringCount > 0)
+                        _ = node.TransformWith<YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter>();
+                        if (node.Children.Count > 0)
                         {
-                            var file = new TF3.Common.Core.Models.File
+                            var file = new Common.Core.Models.File
                             {
-                                Name = n.Name,
+                                Name = node.Name,
                                 ContainerPath = dbParPath,
                                 ContainerType = ContainerType.Archive,
-                                RelativePath = n.Path,
+                                RelativePath = node.Path,
                                 Contents = ContentType.Text,
                                 CheckSum = checksum,
                             };
@@ -116,9 +121,58 @@ namespace TF3.Plugin.YakuzaKiwami2
         }
 
         /// <inheritdoc/>
-        public void ExtractTexts(string installationPath, string outputPath)
+        public void ExtractTexts(TranslationProject project, string outputPath)
         {
-            // Method intentionally left empty.
+            Directory.CreateDirectory(outputPath);
+
+            string lastContainer = string.Empty;
+            Node containerNode = null;
+            foreach (Common.Core.Models.File file in project.TextFiles)
+            {
+                if (file.ContainerPath != lastContainer)
+                {
+                    containerNode?.Dispose();
+                    switch (file.ContainerType)
+                    {
+                        case ContainerType.Directory:
+                            containerNode = NodeFactory.FromDirectory(file.ContainerPath, "*", FileOpenMode.Read);
+                            break;
+                        case ContainerType.Archive:
+                            containerNode = NodeFactory.FromFile(file.ContainerPath, FileOpenMode.Read);
+                            _ = containerNode.TransformWith<YarhlPlugin.YakuzaCommon.Converters.Par.Reader>();
+                            break;
+                    }
+                }
+
+                Node node = Navigator.SearchNode(containerNode, file.RelativePath);
+
+                if (node == null)
+                {
+                    continue;
+                }
+
+                if (node.Tags.ContainsKey("Flags") && node.Tags["Flags"] == 0x80000000)
+                {
+                    _ = node.TransformWith<YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress>();
+                }
+
+                _ = node.TransformWith<YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader>();
+                _ = node.TransformWith<YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter>();
+
+                foreach (Node poNode in Navigator.IterateNodes(node))
+                {
+                    _ = poNode.TransformWith<Po2Binary>();
+                    BinaryFormat format = poNode.GetFormatAs<BinaryFormat>();
+                    if (format != null)
+                    {
+                        format.Stream.WriteTo(Path.Combine(outputPath, $"{node.Parent.Name}-{node.Name}-{poNode.Name}.po"));
+                    }
+                }
+
+                lastContainer = file.ContainerPath;
+            }
+
+            containerNode?.Dispose();
         }
 
         /// <summary>
