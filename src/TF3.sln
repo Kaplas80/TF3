@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TF3.CommandLine", "Apps\TF3.CommandLine\TF3.CommandLine.csproj", "{AC276F9E-D6BE-4031-B44D-AEFCBF2F203F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TF3.Common.Yakuza", "YarhlPlugins\TF3.YarhlPlugin.YakuzaCommon\TF3.YarhlPlugin.YakuzaCommon.csproj", "{DE2185DC-C3B2-4F02-9DBE-19AAEE208055}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TF3.YarhlPlugin.YakuzaCommon", "YarhlPlugins\TF3.YarhlPlugin.YakuzaCommon\TF3.YarhlPlugin.YakuzaCommon.csproj", "{DE2185DC-C3B2-4F02-9DBE-19AAEE208055}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TF3.Plugin.YakuzaKiwami2", "Plugins\TF3.Plugin.YakuzaKiwami2\TF3.Plugin.YakuzaKiwami2.csproj", "{3F0AE5D5-EAC6-4866-8AD6-1CC4F677E8EC}"
 EndProject
@@ -26,6 +26,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "YarhlPlugins", "YarhlPlugins", "{FE6CE2CA-D6A5-40A1-A26E-A33BB20318CA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TF3.YarhlPlugin.YakuzaKiwami2", "YarhlPlugins\TF3.YarhlPlugin.YakuzaKiwami2\TF3.YarhlPlugin.YakuzaKiwami2.csproj", "{94E921C7-B3F8-4441-BE37-13011236FF91}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{C69FAAFF-586B-4898-A1D6-E0BC6C4EFB03}"
+	ProjectSection(SolutionItems) = preProject
+		Scripts\TF3.Script.YakuzaKiwami2.yaml = Scripts\TF3.Script.YakuzaKiwami2.yaml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

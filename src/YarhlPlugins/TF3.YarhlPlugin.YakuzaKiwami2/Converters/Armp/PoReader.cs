@@ -24,13 +24,12 @@ namespace TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp
     using TF3.YarhlPlugin.YakuzaKiwami2.Enums;
     using TF3.YarhlPlugin.YakuzaKiwami2.Formats;
     using Yarhl.FileFormat;
-    using Yarhl.FileSystem;
     using Yarhl.Media.Text;
 
     /// <summary>
-    /// Inserts strings from Po files to an Armp table.
+    /// Inserts strings from Po file to an Armp table.
     /// </summary>
-    public class PoReader : IConverter<NodeContainerFormat, ArmpTable>, IInitializer<ArmpTable>
+    public class PoReader : IConverter<Po, ArmpTable>, IInitializer<ArmpTable>
     {
         private ArmpTable _original = null;
 
@@ -44,11 +43,11 @@ namespace TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp
         public void Initialize(ArmpTable parameters) => _original = parameters;
 
         /// <summary>
-        /// Inserts the translated strings from Po files in a Armp table.
+        /// Inserts the translated strings from Po file in a Armp table.
         /// </summary>
-        /// <param name="source">Collection of nodes in Po format.</param>
+        /// <param name="source">Po format.</param>
         /// <returns>The original Armp table with translated strings.</returns>
-        public ArmpTable Convert(NodeContainerFormat source)
+        public ArmpTable Convert(Po source)
         {
             if (source == null)
             {
@@ -62,29 +61,22 @@ namespace TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp
 
             ArmpTable result = _original;
 
-            InsertStrings(result, "Main", source.Root);
+            InsertStrings(result, "Main", source);
 
             return result;
         }
 
-        private void InsertStrings(ArmpTable table, string name, Node node)
+        private void InsertStrings(ArmpTable table, string name, Po po)
         {
-            Node translationNode = node.Children.FirstOrDefault(x => x.Tags["TableName"] == name);
-            if (translationNode != null)
+            foreach (PoEntry entry in po.Entries.Where(x => x.Context.Split('#')[0] == name))
             {
-                Po po = translationNode.GetFormatAs<Po>();
-
-                for (int i = 0; i < po.Entries.Count; i++)
-                {
-                    PoEntry entry = po.Entries[i];
-                    int index = int.Parse(entry.Context.Split('#')[1]);
-                    table.ValueStrings[index] = entry.Translated.Replace("\n", "\r\n");
-                }
+                int index = int.Parse(entry.Context.Split('#')[1]);
+                table.ValueStrings[index] = entry.Translated.Replace("\n", "\r\n");
             }
 
             if (table.Indexer != null)
             {
-                InsertStrings(table.Indexer, $"{name}_Idx", node);
+                InsertStrings(table.Indexer, $"{name}_Idx", po);
             }
 
             for (int fieldIndex = 0; fieldIndex < table.FieldCount; fieldIndex++)
@@ -120,7 +112,7 @@ namespace TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp
                                 recordId = table.RecordIds[recordIndex];
                             }
 
-                            InsertStrings((ArmpTable)obj, $"[{recordIndex}, {fieldIndex}]{recordId} ({fieldId})", node);
+                            InsertStrings((ArmpTable)obj, $"[{recordIndex}, {fieldIndex}]{recordId} ({fieldId})", po);
                         }
                     }
                 }

@@ -9,7 +9,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Yarhl" />
     <PackageReference Include="LiteDB" />
     <PackageReference Include="Standart.Hash.xxHash" />
+    <PackageReference Include="YamlDotNet" />
   </ItemGroup>
 </Project>

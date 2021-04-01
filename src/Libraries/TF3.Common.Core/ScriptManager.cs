@@ -20,48 +20,40 @@
 
 namespace TF3.Common.Core
 {
-    using System;
-    using System.Reflection;
-    using System.Runtime.Loader;
+    using System.Collections.Generic;
+    using System.IO;
+    using YamlDotNet.Serialization;
+    using YamlDotNet.Serialization.NamingConventions;
 
     /// <summary>
-    /// Plugin loader.
+    /// Script manager.
     /// </summary>
-    internal class PluginLoadContext : AssemblyLoadContext
+    public static class ScriptManager
     {
-        private readonly AssemblyDependencyResolver _resolver;
+        private static List<GameScript> _scripts = new ();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PluginLoadContext"/> class.
+        /// Gets a list of loaded scripts.
         /// </summary>
-        /// <param name="pluginPath">Plugin path.</param>
-        public PluginLoadContext(string pluginPath)
-        {
-            _resolver = new AssemblyDependencyResolver(pluginPath);
-        }
+        public static IReadOnlyList<GameScript> Scripts => _scripts.AsReadOnly();
 
-        /// <inheritdoc/>
-        protected override Assembly Load(AssemblyName assemblyName)
+        /// <summary>
+        /// Loads all the scripts in a directory.
+        /// </summary>
+        /// <param name="path">The directory containing the scripts.</param>
+        public static void LoadScripts(string path)
         {
-            string assemblyPath = _resolver.ResolveAssemblyToPath(assemblyName);
-            if (assemblyPath != null)
+            _scripts.Clear();
+            IDeserializer deserializer = new DeserializerBuilder()
+                                             .WithTypeConverter(new Yaml.ParameterInfoTypeConverter())
+                                             .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                                             .Build();
+            foreach (string file in Directory.EnumerateFiles(path, "TF3.Script.*.yaml"))
             {
-                return LoadFromAssemblyPath(assemblyPath);
+                string scriptContents = System.IO.File.ReadAllText(file);
+                GameScript script = deserializer.Deserialize<GameScript>(scriptContents);
+                _scripts.Add(script);
             }
-
-            return null;
-        }
-
-        /// <inheritdoc/>
-        protected override IntPtr LoadUnmanagedDll(string unmanagedDllName)
-        {
-            string libraryPath = _resolver.ResolveUnmanagedDllToPath(unmanagedDllName);
-            if (libraryPath != null)
-            {
-                return LoadUnmanagedDllFromPath(libraryPath);
-            }
-
-            return IntPtr.Zero;
         }
     }
 }

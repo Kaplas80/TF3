@@ -23,15 +23,14 @@ namespace TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp
     using TF3.YarhlPlugin.YakuzaKiwami2.Enums;
     using TF3.YarhlPlugin.YakuzaKiwami2.Formats;
     using Yarhl.FileFormat;
-    using Yarhl.FileSystem;
     using Yarhl.Media.Text;
 
     /// <summary>
-    /// Extracts Yakuza Kiwami 2 ARMP translatable strings to a collection of Po files.
+    /// Extracts Yakuza Kiwami 2 ARMP translatable strings to a Po file.
     /// </summary>
-    public class PoWriter : IConverter<ArmpTable, NodeContainerFormat>, IInitializer<PoHeader>
+    public class PoWriter : IConverter<ArmpTable, Po>, IInitializer<PoHeader>
     {
-        private PoHeader _poHeader = new PoHeader("NoName", "dummy@dummy.com", "en");
+        private PoHeader _poHeader = new ("NoName", "dummy@dummy.com", "en");
 
         /// <summary>
         /// Converter initializer.
@@ -40,30 +39,29 @@ namespace TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp
         public void Initialize(PoHeader parameters) => _poHeader = parameters;
 
         /// <summary>
-        /// Extracts strings to a Po files.
+        /// Extracts strings to a Po file.
         /// </summary>
         /// <param name="source">Input format.</param>
-        /// <returns>The po collection.</returns>
+        /// <returns>The po file.</returns>
         /// <exception cref="ArgumentNullException">Thrown if source is null.</exception>
-        public NodeContainerFormat Convert(ArmpTable source)
+        public Po Convert(ArmpTable source)
         {
             if (source == null)
             {
                 throw new ArgumentNullException(nameof(source));
             }
 
-            Node result = NodeFactory.CreateContainer("root");
+            var po = new Po(_poHeader);
 
-            ExtractStrings(source, "Main", result);
+            ExtractStrings(source, "Main", po);
 
-            return result.GetFormatAs<NodeContainerFormat>();
+            return po;
         }
 
-        private void ExtractStrings(ArmpTable table, string name, Node node)
+        private void ExtractStrings(ArmpTable table, string name, Po po)
         {
             if (table.ValueStringCount > 0)
             {
-                var po = new Po(_poHeader);
                 for (int i = 0; i < table.ValueStringCount; i++)
                 {
                     if (!string.IsNullOrEmpty(table.ValueStrings[i]))
@@ -77,14 +75,11 @@ namespace TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp
                         po.Add(entry);
                     }
                 }
-
-                var n = new Node(name, po);
-                node.Add(n);
             }
 
             if (table.Indexer != null)
             {
-                ExtractStrings(table.Indexer, $"{name}_Idx", node);
+                ExtractStrings(table.Indexer, $"{name}_Idx", po);
             }
 
             for (int fieldIndex = 0; fieldIndex < table.FieldCount; fieldIndex++)
@@ -120,7 +115,7 @@ namespace TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp
                                 recordId = table.RecordIds[recordIndex];
                             }
 
-                            ExtractStrings((ArmpTable)obj, $"[{recordIndex}, {fieldIndex}]{recordId} ({fieldId})", node);
+                            ExtractStrings((ArmpTable)obj, $"[{recordIndex}, {fieldIndex}]{recordId} ({fieldId})", po);
                         }
                     }
                 }

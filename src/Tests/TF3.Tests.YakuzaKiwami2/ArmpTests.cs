@@ -953,14 +953,12 @@ namespace TF3.Tests.YakuzaKiwami2
             ArmpTable table = node.GetFormatAs<ArmpTable>();
 
             _ = node.TransformWith<PoWriter>();
-            NodeContainerFormat nodeContainer = node.GetFormatAs<NodeContainerFormat>();
-            Po po = nodeContainer.Root.Children[0].GetFormatAs<Po>();
+            Po po = node.GetFormatAs<Po>();
             Assert.IsTrue(table.ValueStringCount == po.Entries.Count);
             Assert.IsTrue(table.ValueStrings[0] == "YAKUZA KIWAMI 2");
             po.Entries[0].Translated = "Translation Test";
 
-            nodeContainer.Root.Children[0].Tags["TableName"] = "Main";
-            _ = ConvertFormat.With<PoReader, ArmpTable>(table, nodeContainer);
+            _ = ConvertFormat.With<PoReader, ArmpTable>(table, po);
             Assert.IsTrue(table.ValueStrings[0] == "Translation Test");
         }
     }

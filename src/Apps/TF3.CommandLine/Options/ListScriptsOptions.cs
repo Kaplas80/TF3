@@ -21,10 +21,10 @@
 namespace TF3.CommandLine.Options
 {
     /// <summary>
-    /// Shows a list of available plugins.
+    /// Shows a list of available scripts.
     /// </summary>
-    [global::CommandLine.Verb("listplugins", HelpText = "Shows a list of available plugins.")]
-    public class ListPluginsOptions
+    [global::CommandLine.Verb("listscripts", HelpText = "Shows a list of available scripts.")]
+    public class ListScriptsOptions
     {
     }
 }

@@ -18,21 +18,33 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-namespace TF3.Plugin.YakuzaKiwami2.Config
+namespace TF3.Common.Core.Models
 {
     using System.Collections.Generic;
-    using TF3.Common.Core.Enums;
 
-    public class Container
+    /// <summary>
+    /// Game asset info.
+    /// </summary>
+    public class AssetInfo
     {
-        public string Name { get; set; }
+        /// <summary>
+        /// Gets or sets the asset id.
+        /// </summary>
+        public string Id { get; set; }
 
-        public string Path { get; set; }
+        /// <summary>
+        /// Gets or sets the list of files in this asset.
+        /// </summary>
+        public List<FileInfo> Files { get; set; }
 
-        public ContainerType Type { get; set; }
+        /// <summary>
+        /// Gets or sets the list of converters needed to read the asset.
+        /// </summary>
+        public List<ConverterInfo> Readers { get; set; }
 
-        public ulong Checksum { get; set; }
-
-        public List<File> Files { get; set; }
+        /// <summary>
+        /// Gets or sets the list of converters needed to write the asset.
+        /// </summary>
+        public List<ConverterInfo> Writers { get; set; }
     }
 }

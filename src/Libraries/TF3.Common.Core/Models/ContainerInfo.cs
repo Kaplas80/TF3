@@ -17,59 +17,50 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-namespace TF3.Common.Core
+
+namespace TF3.Common.Core.Models
 {
-    using System;
-    using TF3.Common.Core.Enums;
+    using System.Collections.Generic;
 
     /// <summary>
-    /// Interface for TF3 plugins.
+    /// Game file container info.
     /// </summary>
-    public interface IPlugin
+    public class ContainerInfo
     {
         /// <summary>
-        /// Triggers BEFORE a file is scanned.
+        /// Gets or sets the container id.
         /// </summary>
-        event EventHandler<EventArgs.FileScanningEventArgs> FileScanning;
+        public string Id { get; set; }
 
         /// <summary>
-        /// Triggers AFTER a file is scanned.
+        /// Gets or sets the container name.
         /// </summary>
-        event EventHandler<EventArgs.FileScannedEventArgs> FileScanned;
+        public string Name { get; set; }
 
         /// <summary>
-        /// Gets the plugin ID.
-        /// <remarks>It must be UNIQUE, so using a generated Guid is recommended.</remarks>
+        /// Gets or sets the container path.
         /// </summary>
-        string Id { get; }
+        public string Path { get; set; }
 
         /// <summary>
-        /// Gets the plugin name alias (short name).
+        /// Gets or sets the container checksum.
+        /// If it is 0, it won't be checked.
         /// </summary>
-        string Name { get; }
+        public ulong Checksum { get; set; }
 
         /// <summary>
-        /// Gets the plugin game name.
+        /// Gets or sets the list of converters needed to read the container.
         /// </summary>
-        string Game { get; }
+        public List<ConverterInfo> Readers { get; set; }
 
         /// <summary>
-        /// Gets the platform where the plugin is useable.
+        /// Gets or sets the list of converters needed to write the container.
         /// </summary>
-        Platform Platform { get; }
+        public List<ConverterInfo> Writers { get; set; }
 
         /// <summary>
-        /// Scans the game installation directory for known files.
+        /// Gets or sets the list of containers in this container.
         /// </summary>
-        /// <param name="project">Project to use.</param>
-        /// <param name="gameDir">Game installation directory.</param>
-        void Scan(TranslationProject project, string gameDir);
-
-        /// <summary>
-        /// Extract texts from game files.
-        /// </summary>
-        /// <param name="project">Project to use.</param>
-        /// <param name="outputPath">Output directory.</param>
-        void ExtractTexts(TranslationProject project, string outputPath);
+        public List<ContainerInfo> Containers { get; set; }
     }
 }

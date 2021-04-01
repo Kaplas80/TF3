@@ -18,10 +18,26 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-namespace TF3.Plugin.YakuzaKiwami2.Enums
+namespace TF3.Common.Core.Models
 {
-    public enum FileType
+    /// <summary>
+    /// Converter parameter info.
+    /// </summary>
+    public class ParameterInfo
     {
-        Armp,
+        /// <summary>
+        /// Gets or sets the parameter id.
+        /// </summary>
+        public string Id { get; set; }
+
+        /// <summary>
+        /// Gets or sets the parameter type name.
+        /// </summary>
+        public string TypeName { get; set; }
+
+        /// <summary>
+        /// Gets or sets the parameter value.
+        /// </summary>
+        public object Value { get; set; }
     }
 }

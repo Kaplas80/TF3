@@ -38,11 +38,6 @@ namespace TF3.Common.Core.Models
         public string ContainerPath { get; set; }
 
         /// <summary>
-        /// Gets or sets the file container type.
-        /// </summary>
-        public ContainerType ContainerType { get; set; }
-
-        /// <summary>
         /// Gets or sets the file relative path to the container root.
         /// </summary>
         public string RelativePath { get; set; }

@@ -56,6 +56,11 @@ namespace TF3.Common.Core.Helpers
         /// <returns>True if checksum matches with the expected value.</returns>
         public static bool Check(string file, ulong expected)
         {
+            if (expected == 0)
+            {
+                return true;
+            }
+
             ulong value = Calculate(file);
             return value == expected;
         }
@@ -68,6 +73,11 @@ namespace TF3.Common.Core.Helpers
         /// <returns>True if checksum matches with the expected value.</returns>
         public static bool Check(Stream stream, ulong expected)
         {
+            if (expected == 0)
+            {
+                return true;
+            }
+
             ulong value = Calculate(stream);
             return value == expected;
         }

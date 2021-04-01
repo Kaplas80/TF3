@@ -18,18 +18,26 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-namespace TF3.Plugin.YakuzaKiwami2.Config
+namespace TF3.Common.Core.Models
 {
-    using TF3.Plugin.YakuzaKiwami2.Enums;
-
-    public class File
+    /// <summary>
+    /// Yarhl converter info.
+    /// </summary>
+    public class ConverterInfo
     {
-        public string Name { get; set; }
+        /// <summary>
+        /// Gets or sets the converter type name.
+        /// </summary>
+        public string TypeName { get; set; }
 
-        public string Path { get; set; }
+        /// <summary>
+        /// Gets or sets the converter parameter id.
+        /// </summary>
+        public string ParameterId { get; set; }
 
-        public FileType Type { get; set; }
-
-        public ulong Checksum { get; set; }
+        /// <summary>
+        /// Gets or sets a value indicating whether the conversion can fail.
+        /// </summary>
+        public bool CanFail { get; set; }
     }
 }

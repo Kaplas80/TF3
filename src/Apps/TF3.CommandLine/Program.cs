@@ -20,11 +20,9 @@
 namespace TF3.CommandLine
 {
     using System;
-    using System.IO;
     using System.Linq;
     using global::CommandLine;
     using TF3.Common.Core;
-    using TF3.Common.Core.Models;
 
     /// <summary>
     /// Main program class.
@@ -37,90 +35,39 @@ namespace TF3.CommandLine
         /// <param name="args">Application arguments.</param>
         public static void Main(string[] args)
         {
-            PluginManager.LoadPlugins("plugins");
+            ScriptManager.LoadScripts("scripts");
 
-            Parser.Default.ParseArguments<Options.ListPluginsOptions, Options.NewProjectOptions, Options.ScanFilesOptions, Options.ExtractOptions>(args)
-                .WithParsed<Options.ListPluginsOptions>(_ => ListPlugins())
-                .WithParsed<Options.NewProjectOptions>(options => NewProject(options))
-                .WithParsed<Options.ScanFilesOptions>(options => ScanFiles(options))
-                .WithParsed<Options.ExtractOptions>(options => Extract(options));
+            Parser.Default.ParseArguments<Options.ListScriptsOptions, Options.NewProjectOptions, Options.ScanFilesOptions, Options.ExtractOptions>(args)
+                .WithParsed<Options.ListScriptsOptions>(ListScripts)
+                .WithParsed<Options.NewProjectOptions>(NewProject)
+                .WithParsed<Options.ScanFilesOptions>(ScanFiles)
+                .WithParsed<Options.ExtractOptions>(Extract);
         }
 
-        private static void ListPlugins()
+        private static void ListScripts(Options.ListScriptsOptions options)
         {
-            int maxNameLength = PluginManager.Plugins.Max<IPlugin>(x => x.Name.Length);
-            int maxGameLength = PluginManager.Plugins.Max<IPlugin>(x => x.Game.Length);
-            Console.WriteLine("Available plugins:");
+            int maxNameLength = ScriptManager.Scripts.Max(x => x.Name.Length);
+            int maxGameLength = ScriptManager.Scripts.Max(x => x.Game.Length);
+            Console.WriteLine("Available scripts:");
             Console.WriteLine();
             Console.WriteLine(string.Format($"{{0, {-maxNameLength}}}\t{{1, {-maxGameLength}}}", "Name", "Game"));
             Console.WriteLine($"{new string('=', maxNameLength)}\t{new string('=', maxGameLength)}");
-            foreach (IPlugin plugin in PluginManager.Plugins)
+            foreach (GameScript script in ScriptManager.Scripts)
             {
-                Console.WriteLine(string.Format($"{{0, {-maxNameLength}}}\t{{1, {-maxGameLength}}}", plugin.Name, plugin.Game));
+                Console.WriteLine(string.Format($"{{0, {-maxNameLength}}}\t{{1, {-maxGameLength}}}", script.Name, script.Game));
             }
         }
 
         private static void NewProject(Options.NewProjectOptions options)
         {
-            IPlugin plugin = PluginManager.Plugins.FirstOrDefault(x => x.Id == options.Game || x.Name == options.Game);
-
-            if (plugin is null)
-            {
-                Console.WriteLine($"ERROR: There is no plugin available for {options.Game}");
-                ListPlugins();
-                return;
-            }
-
-            using var project = TranslationProject.New(options.Output, plugin.Id, !string.IsNullOrEmpty(options.Language) ? options.Language : "und");
         }
 
         private static void ScanFiles(Options.ScanFilesOptions options)
         {
-            using var project = TranslationProject.Open(options.Project);
-
-            ProjectInfo info = project.Info;
-
-            if (info is null)
-            {
-                Console.WriteLine($"ERROR: No project info found.");
-                return;
-            }
-
-            IPlugin plugin = PluginManager.Plugins.FirstOrDefault(x => x.Id == info.PluginId);
-
-            if (plugin is null)
-            {
-                Console.WriteLine($"ERROR: Plugin not available.");
-                return;
-            }
-
-            plugin.FileScanning += (sender, args) => Console.Write(args.FileName);
-            plugin.FileScanned += (sender, args) => Console.WriteLine(args.Included ? " YES" : " NO");
-            plugin.Scan(project, options.Game);
         }
 
         private static void Extract(Options.ExtractOptions options)
         {
-            using var project = TranslationProject.Open(options.Project);
-
-            ProjectInfo info = project.Info;
-
-            if (info is null)
-            {
-                Console.WriteLine($"ERROR: No project info found.");
-                return;
-            }
-
-            IPlugin plugin = PluginManager.Plugins.FirstOrDefault(x => x.Id == info.PluginId);
-
-            if (plugin is null)
-            {
-                Console.WriteLine($"ERROR: Plugin not available.");
-                return;
-            }
-
-            string directory = Path.GetDirectoryName(options.Project);
-            plugin.ExtractTexts(project, Path.Combine(directory, "texts"));
         }
     }
 }

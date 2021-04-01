@@ -1,0 +1,3786 @@
+name: kiwami2pc
+game: Yakuza Kiwami 2 English (Steam version, build 4058515)
+parameters:
+- id: poHeader
+  typeName: Yarhl.Media.Text.PoHeader, Yarhl.Media, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+  value:
+    ProjectIdVersion: Traducción Yakuza Kiwami 2
+    ReportMsgidBugsTo: your@email.com
+    Language: es
+containers:
+- id: db.par
+  name: db.par
+  path: data/db.par
+  checksum: 15875901786622737460
+  readers:
+  - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Par.Reader
+    parameterId: ''
+    canFail: false
+  writers:
+  - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Par.Writer
+    parameterId: ''
+    canFail: false
+  containers: []
+assets:
+- id: access_type.bin
+  files:
+  - name: access_type.bin
+    containerId: db.par
+    path: ./en/access_type.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: asset_asset_name_lexus2.bin
+  files:
+  - name: asset_asset_name_lexus2.bin
+    containerId: db.par
+    path: ./en/asset_asset_name_lexus2.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: auth.bin
+  files:
+  - name: auth.bin
+    containerId: db.par
+    path: ./en/auth.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: auth_costume_change.bin
+  files:
+  - name: auth_costume_change.bin
+    containerId: db.par
+    path: ./en/auth_costume_change.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: battle_tougijyo_bonus.bin
+  files:
+  - name: battle_tougijyo_bonus.bin
+    containerId: db.par
+    path: ./en/battle_tougijyo_bonus.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: battle_tougijyo_fighter_info.bin
+  files:
+  - name: battle_tougijyo_fighter_info.bin
+    containerId: db.par
+    path: ./en/battle_tougijyo_fighter_info.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: battle_tougijyo_message.bin
+  files:
+  - name: battle_tougijyo_message.bin
+    containerId: db.par
+    path: ./en/battle_tougijyo_message.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: battle_tougijyo_select_match.bin
+  files:
+  - name: battle_tougijyo_select_match.bin
+    containerId: db.par
+    path: ./en/battle_tougijyo_select_match.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: bouncer_mission.bin
+  files:
+  - name: bouncer_mission.bin
+    containerId: db.par
+    path: ./en/bouncer_mission.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: caption.bin
+  files:
+  - name: caption.bin
+    containerId: db.par
+    path: ./en/caption.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: character_npc_soldier_name_group.bin
+  files:
+  - name: character_npc_soldier_name_group.bin
+    containerId: db.par
+    path: ./en/character_npc_soldier_name_group.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: clan_creator_main_menu.bin
+  files:
+  - name: clan_creator_main_menu.bin
+    containerId: db.par
+    path: ./en/clan_creator_main_menu.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: clan_creator_member.bin
+  files:
+  - name: clan_creator_member.bin
+    containerId: db.par
+    path: ./en/clan_creator_member.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: clan_creator_mission.bin
+  files:
+  - name: clan_creator_mission.bin
+    containerId: db.par
+    path: ./en/clan_creator_mission.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: clan_creator_rarity.bin
+  files:
+  - name: clan_creator_rarity.bin
+    containerId: db.par
+    path: ./en/clan_creator_rarity.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: clan_creator_skill.bin
+  files:
+  - name: clan_creator_skill.bin
+    containerId: db.par
+    path: ./en/clan_creator_skill.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: clan_creator_special_attack.bin
+  files:
+  - name: clan_creator_special_attack.bin
+    containerId: db.par
+    path: ./en/clan_creator_special_attack.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: complete.bin
+  files:
+  - name: complete.bin
+    containerId: db.par
+    path: ./en/complete.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: complete_category.bin
+  files:
+  - name: complete_category.bin
+    containerId: db.par
+    path: ./en/complete_category.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: complete_checklist.bin
+  files:
+  - name: complete_checklist.bin
+    containerId: db.par
+    path: ./en/complete_checklist.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: controller_guide.bin
+  files:
+  - name: controller_guide.bin
+    containerId: db.par
+    path: ./en/controller_guide.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: hact_najimi.bin
+  files:
+  - name: hact_najimi.bin
+    containerId: db.par
+    path: ./en/hact_najimi.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: item.bin
+  files:
+  - name: item.bin
+    containerId: db.par
+    path: ./en/item.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: item_buff.bin
+  files:
+  - name: item_buff.bin
+    containerId: db.par
+    path: ./en/item_buff.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: item_special.bin
+  files:
+  - name: item_special.bin
+    containerId: db.par
+    path: ./en/item_special.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: manual.bin
+  files:
+  - name: manual.bin
+    containerId: db.par
+    path: ./en/manual.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: map_place.bin
+  files:
+  - name: map_place.bin
+    containerId: db.par
+    path: ./en/map_place.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: message_dialog.bin
+  files:
+  - name: message_dialog.bin
+    containerId: db.par
+    path: ./en/message_dialog.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_batting_center_course.bin
+  files:
+  - name: minigame_batting_center_course.bin
+    containerId: db.par
+    path: ./en/minigame_batting_center_course.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_batting_center_message.bin
+  files:
+  - name: minigame_batting_center_message.bin
+    containerId: db.par
+    path: ./en/minigame_batting_center_message.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_batting_center_type_of_pitch.bin
+  files:
+  - name: minigame_batting_center_type_of_pitch.bin
+    containerId: db.par
+    path: ./en/minigame_batting_center_type_of_pitch.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_cabaret_cabaret.bin
+  files:
+  - name: minigame_cabaret_cabaret.bin
+    containerId: db.par
+    path: ./en/minigame_cabaret_cabaret.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_cabaret_island_cast.bin
+  files:
+  - name: minigame_cabaret_island_cast.bin
+    containerId: db.par
+    path: ./en/minigame_cabaret_island_cast.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_cabaret_island_coordinate_accessory_bracelet.bin
+  files:
+  - name: minigame_cabaret_island_coordinate_accessory_bracelet.bin
+    containerId: db.par
+    path: ./en/minigame_cabaret_island_coordinate_accessory_bracelet.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_cabaret_island_coordinate_accessory_category.bin
+  files:
+  - name: minigame_cabaret_island_coordinate_accessory_category.bin
+    containerId: db.par
+    path: ./en/minigame_cabaret_island_coordinate_accessory_category.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_cabaret_island_coordinate_accessory_earrings.bin
+  files:
+  - name: minigame_cabaret_island_coordinate_accessory_earrings.bin
+    containerId: db.par
+    path: ./en/minigame_cabaret_island_coordinate_accessory_earrings.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_cabaret_island_coordinate_accessory_glasses.bin
+  files:
+  - name: minigame_cabaret_island_coordinate_accessory_glasses.bin
+    containerId: db.par
+    path: ./en/minigame_cabaret_island_coordinate_accessory_glasses.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_cabaret_island_coordinate_accessory_hair.bin
+  files:
+  - name: minigame_cabaret_island_coordinate_accessory_hair.bin
+    containerId: db.par
+    path: ./en/minigame_cabaret_island_coordinate_accessory_hair.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_cabaret_island_coordinate_accessory_nail.bin
+  files:
+  - name: minigame_cabaret_island_coordinate_accessory_nail.bin
+    containerId: db.par
+    path: ./en/minigame_cabaret_island_coordinate_accessory_nail.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_cabaret_island_coordinate_accessory_necklace.bin
+  files:
+  - name: minigame_cabaret_island_coordinate_accessory_necklace.bin
+    containerId: db.par
+    path: ./en/minigame_cabaret_island_coordinate_accessory_necklace.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_cabaret_island_coordinate_accessory_perfume.bin
+  files:
+  - name: minigame_cabaret_island_coordinate_accessory_perfume.bin
+    containerId: db.par
+    path: ./en/minigame_cabaret_island_coordinate_accessory_perfume.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_cabaret_island_coordinate_accessory_ring.bin
+  files:
+  - name: minigame_cabaret_island_coordinate_accessory_ring.bin
+    containerId: db.par
+    path: ./en/minigame_cabaret_island_coordinate_accessory_ring.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_cabaret_island_coordinate_accessory_watches.bin
+  files:
+  - name: minigame_cabaret_island_coordinate_accessory_watches.bin
+    containerId: db.par
+    path: ./en/minigame_cabaret_island_coordinate_accessory_watches.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_cabaret_island_coordinate_dress.bin
+  files:
+  - name: minigame_cabaret_island_coordinate_dress.bin
+    containerId: db.par
+    path: ./en/minigame_cabaret_island_coordinate_dress.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_cabaret_island_coordinate_hair_style.bin
+  files:
+  - name: minigame_cabaret_island_coordinate_hair_style.bin
+    containerId: db.par
+    path: ./en/minigame_cabaret_island_coordinate_hair_style.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_cabaret_island_coordinate_makeup_category.bin
+  files:
+  - name: minigame_cabaret_island_coordinate_makeup_category.bin
+    containerId: db.par
+    path: ./en/minigame_cabaret_island_coordinate_makeup_category.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_cabaret_island_coordinate_makeup_cheek.bin
+  files:
+  - name: minigame_cabaret_island_coordinate_makeup_cheek.bin
+    containerId: db.par
+    path: ./en/minigame_cabaret_island_coordinate_makeup_cheek.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_cabaret_island_coordinate_makeup_color_contact.bin
+  files:
+  - name: minigame_cabaret_island_coordinate_makeup_color_contact.bin
+    containerId: db.par
+    path: ./en/minigame_cabaret_island_coordinate_makeup_color_contact.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_cabaret_island_coordinate_makeup_eyebrows.bin
+  files:
+  - name: minigame_cabaret_island_coordinate_makeup_eyebrows.bin
+    containerId: db.par
+    path: ./en/minigame_cabaret_island_coordinate_makeup_eyebrows.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_cabaret_island_coordinate_makeup_eyelashes.bin
+  files:
+  - name: minigame_cabaret_island_coordinate_makeup_eyelashes.bin
+    containerId: db.par
+    path: ./en/minigame_cabaret_island_coordinate_makeup_eyelashes.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_cabaret_island_coordinate_makeup_eyeline.bin
+  files:
+  - name: minigame_cabaret_island_coordinate_makeup_eyeline.bin
+    containerId: db.par
+    path: ./en/minigame_cabaret_island_coordinate_makeup_eyeline.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_cabaret_island_coordinate_makeup_eyeshadow.bin
+  files:
+  - name: minigame_cabaret_island_coordinate_makeup_eyeshadow.bin
+    containerId: db.par
+    path: ./en/minigame_cabaret_island_coordinate_makeup_eyeshadow.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_cabaret_island_coordinate_makeup_lip.bin
+  files:
+  - name: minigame_cabaret_island_coordinate_makeup_lip.bin
+    containerId: db.par
+    path: ./en/minigame_cabaret_island_coordinate_makeup_lip.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_cabaret_island_event.bin
+  files:
+  - name: minigame_cabaret_island_event.bin
+    containerId: db.par
+    path: ./en/minigame_cabaret_island_event.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_cabaret_island_event_choices.bin
+  files:
+  - name: minigame_cabaret_island_event_choices.bin
+    containerId: db.par
+    path: ./en/minigame_cabaret_island_event_choices.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_cabaret_island_grandprix_commentary_message.bin
+  files:
+  - name: minigame_cabaret_island_grandprix_commentary_message.bin
+    containerId: db.par
+    path: ./en/minigame_cabaret_island_grandprix_commentary_message.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_cabaret_island_grandprix_evaluation_message.bin
+  files:
+  - name: minigame_cabaret_island_grandprix_evaluation_message.bin
+    containerId: db.par
+    path: ./en/minigame_cabaret_island_grandprix_evaluation_message.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_cabaret_island_grandprix_ranking.bin
+  files:
+  - name: minigame_cabaret_island_grandprix_ranking.bin
+    containerId: db.par
+    path: ./en/minigame_cabaret_island_grandprix_ranking.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_cabaret_island_grandprix_sequence_infomation.bin
+  files:
+  - name: minigame_cabaret_island_grandprix_sequence_infomation.bin
+    containerId: db.par
+    path: ./en/minigame_cabaret_island_grandprix_sequence_infomation.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_cabaret_island_guest_category.bin
+  files:
+  - name: minigame_cabaret_island_guest_category.bin
+    containerId: db.par
+    path: ./en/minigame_cabaret_island_guest_category.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_cabaret_island_hierarchy_open.bin
+  files:
+  - name: minigame_cabaret_island_hierarchy_open.bin
+    containerId: db.par
+    path: ./en/minigame_cabaret_island_hierarchy_open.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_cabaret_island_potential.bin
+  files:
+  - name: minigame_cabaret_island_potential.bin
+    containerId: db.par
+    path: ./en/minigame_cabaret_island_potential.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_cabaret_island_rival.bin
+  files:
+  - name: minigame_cabaret_island_rival.bin
+    containerId: db.par
+    path: ./en/minigame_cabaret_island_rival.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_cabaret_island_shop_lineup.bin
+  files:
+  - name: minigame_cabaret_island_shop_lineup.bin
+    containerId: db.par
+    path: ./en/minigame_cabaret_island_shop_lineup.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_cabaret_island_simulation.bin
+  files:
+  - name: minigame_cabaret_island_simulation.bin
+    containerId: db.par
+    path: ./en/minigame_cabaret_island_simulation.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_darts_dart_kind.bin
+  files:
+  - name: minigame_darts_dart_kind.bin
+    containerId: db.par
+    path: ./en/minigame_darts_dart_kind.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_darts_rival_info.bin
+  files:
+  - name: minigame_darts_rival_info.bin
+    containerId: db.par
+    path: ./en/minigame_darts_rival_info.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_golf_driving_range_message.bin
+  files:
+  - name: minigame_golf_driving_range_message.bin
+    containerId: db.par
+    path: ./en/minigame_golf_driving_range_message.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_gravure_shooting_studio_course_data.bin
+  files:
+  - name: minigame_gravure_shooting_studio_course_data.bin
+    containerId: db.par
+    path: ./en/minigame_gravure_shooting_studio_course_data.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_gravure_shooting_studio_message.bin
+  files:
+  - name: minigame_gravure_shooting_studio_message.bin
+    containerId: db.par
+    path: ./en/minigame_gravure_shooting_studio_message.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_gravure_shooting_studio_movie_data.bin
+  files:
+  - name: minigame_gravure_shooting_studio_movie_data.bin
+    containerId: db.par
+    path: ./en/minigame_gravure_shooting_studio_movie_data.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_gravure_shooting_studio_question_data.bin
+  files:
+  - name: minigame_gravure_shooting_studio_question_data.bin
+    containerId: db.par
+    path: ./en/minigame_gravure_shooting_studio_question_data.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_gravure_shooting_studio_select_word_data.bin
+  files:
+  - name: minigame_gravure_shooting_studio_select_word_data.bin
+    containerId: db.par
+    path: ./en/minigame_gravure_shooting_studio_select_word_data.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_gravure_shooting_studio_telop_data.bin
+  files:
+  - name: minigame_gravure_shooting_studio_telop_data.bin
+    containerId: db.par
+    path: ./en/minigame_gravure_shooting_studio_telop_data.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_gravure_shooting_studio_woman_data.bin
+  files:
+  - name: minigame_gravure_shooting_studio_woman_data.bin
+    containerId: db.par
+    path: ./en/minigame_gravure_shooting_studio_woman_data.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_hanafuda_string_hanafuda.bin
+  files:
+  - name: minigame_hanafuda_string_hanafuda.bin
+    containerId: db.par
+    path: ./en/minigame_hanafuda_string_hanafuda.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_hanafuda_string_mainmenu.bin
+  files:
+  - name: minigame_hanafuda_string_mainmenu.bin
+    containerId: db.par
+    path: ./en/minigame_hanafuda_string_mainmenu.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_mahjong_string_agari.bin
+  files:
+  - name: minigame_mahjong_string_agari.bin
+    containerId: db.par
+    path: ./en/minigame_mahjong_string_agari.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_mahjong_string_command.bin
+  files:
+  - name: minigame_mahjong_string_command.bin
+    containerId: db.par
+    path: ./en/minigame_mahjong_string_command.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_mahjong_string_common.bin
+  files:
+  - name: minigame_mahjong_string_common.bin
+    containerId: db.par
+    path: ./en/minigame_mahjong_string_common.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_mahjong_string_kyoku.bin
+  files:
+  - name: minigame_mahjong_string_kyoku.bin
+    containerId: db.par
+    path: ./en/minigame_mahjong_string_kyoku.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_mahjong_string_mainmenu.bin
+  files:
+  - name: minigame_mahjong_string_mainmenu.bin
+    containerId: db.par
+    path: ./en/minigame_mahjong_string_mainmenu.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_mahjong_string_mangan.bin
+  files:
+  - name: minigame_mahjong_string_mangan.bin
+    containerId: db.par
+    path: ./en/minigame_mahjong_string_mangan.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_mahjong_string_npc.bin
+  files:
+  - name: minigame_mahjong_string_npc.bin
+    containerId: db.par
+    path: ./en/minigame_mahjong_string_npc.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_mahjong_string_npc_name_rank_kamuro.bin
+  files:
+  - name: minigame_mahjong_string_npc_name_rank_kamuro.bin
+    containerId: db.par
+    path: ./en/minigame_mahjong_string_npc_name_rank_kamuro.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_mahjong_string_ranking_name.bin
+  files:
+  - name: minigame_mahjong_string_ranking_name.bin
+    containerId: db.par
+    path: ./en/minigame_mahjong_string_ranking_name.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_mahjong_string_setting.bin
+  files:
+  - name: minigame_mahjong_string_setting.bin
+    containerId: db.par
+    path: ./en/minigame_mahjong_string_setting.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_mahjong_string_yaku.bin
+  files:
+  - name: minigame_mahjong_string_yaku.bin
+    containerId: db.par
+    path: ./en/minigame_mahjong_string_yaku.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_mahjong_string_yakuman.bin
+  files:
+  - name: minigame_mahjong_string_yakuman.bin
+    containerId: db.par
+    path: ./en/minigame_mahjong_string_yakuman.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_oichokabu_string_oichokabu.bin
+  files:
+  - name: minigame_oichokabu_string_oichokabu.bin
+    containerId: db.par
+    path: ./en/minigame_oichokabu_string_oichokabu.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_poker_com_1.bin
+  files:
+  - name: minigame_poker_com_1.bin
+    containerId: db.par
+    path: ./en/minigame_poker_com_1.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_poker_com_2.bin
+  files:
+  - name: minigame_poker_com_2.bin
+    containerId: db.par
+    path: ./en/minigame_poker_com_2.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_poker_com_3.bin
+  files:
+  - name: minigame_poker_com_3.bin
+    containerId: db.par
+    path: ./en/minigame_poker_com_3.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_poker_com_4.bin
+  files:
+  - name: minigame_poker_com_4.bin
+    containerId: db.par
+    path: ./en/minigame_poker_com_4.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_poker_com_5.bin
+  files:
+  - name: minigame_poker_com_5.bin
+    containerId: db.par
+    path: ./en/minigame_poker_com_5.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_poker_com_6.bin
+  files:
+  - name: minigame_poker_com_6.bin
+    containerId: db.par
+    path: ./en/minigame_poker_com_6.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_poker_com_high_1.bin
+  files:
+  - name: minigame_poker_com_high_1.bin
+    containerId: db.par
+    path: ./en/minigame_poker_com_high_1.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_poker_com_high_2.bin
+  files:
+  - name: minigame_poker_com_high_2.bin
+    containerId: db.par
+    path: ./en/minigame_poker_com_high_2.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_poker_com_high_3.bin
+  files:
+  - name: minigame_poker_com_high_3.bin
+    containerId: db.par
+    path: ./en/minigame_poker_com_high_3.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_poker_com_high_4.bin
+  files:
+  - name: minigame_poker_com_high_4.bin
+    containerId: db.par
+    path: ./en/minigame_poker_com_high_4.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_poker_com_high_5.bin
+  files:
+  - name: minigame_poker_com_high_5.bin
+    containerId: db.par
+    path: ./en/minigame_poker_com_high_5.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_poker_com_high_6.bin
+  files:
+  - name: minigame_poker_com_high_6.bin
+    containerId: db.par
+    path: ./en/minigame_poker_com_high_6.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_shogi_menu.bin
+  files:
+  - name: minigame_shogi_menu.bin
+    containerId: db.par
+    path: ./en/minigame_shogi_menu.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_shogi_shogi.bin
+  files:
+  - name: minigame_shogi_shogi.bin
+    containerId: db.par
+    path: ./en/minigame_shogi_shogi.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_shogi_taikyoku_menu.bin
+  files:
+  - name: minigame_shogi_taikyoku_menu.bin
+    containerId: db.par
+    path: ./en/minigame_shogi_taikyoku_menu.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_snack_event_telop_color.bin
+  files:
+  - name: minigame_snack_event_telop_color.bin
+    containerId: db.par
+    path: ./en/minigame_snack_event_telop_color.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_vf5_button_set.bin
+  files:
+  - name: minigame_vf5_button_set.bin
+    containerId: db.par
+    path: ./en/minigame_vf5_button_set.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_vf5_key_set.bin
+  files:
+  - name: minigame_vf5_key_set.bin
+    containerId: db.par
+    path: ./en/minigame_vf5_key_set.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: minigame_video_param.bin
+  files:
+  - name: minigame_video_param.bin
+    containerId: db.par
+    path: ./en/minigame_video_param.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: mission_mission_kind.bin
+  files:
+  - name: mission_mission_kind.bin
+    containerId: db.par
+    path: ./en/mission_mission_kind.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: msg.bin
+  files:
+  - name: msg.bin
+    containerId: db.par
+    path: ./en/msg.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: option.bin
+  files:
+  - name: option.bin
+    containerId: db.par
+    path: ./en/option.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: pause_camera_filter.bin
+  files:
+  - name: pause_camera_filter.bin
+    containerId: db.par
+    path: ./en/pause_camera_filter.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: pause_mail.bin
+  files:
+  - name: pause_mail.bin
+    containerId: db.par
+    path: ./en/pause_mail.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: pause_others.bin
+  files:
+  - name: pause_others.bin
+    containerId: db.par
+    path: ./en/pause_others.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: pause_profile.bin
+  files:
+  - name: pause_profile.bin
+    containerId: db.par
+    path: ./en/pause_profile.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: pause_tutorial.bin
+  files:
+  - name: pause_tutorial.bin
+    containerId: db.par
+    path: ./en/pause_tutorial.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: play_go_message.bin
+  files:
+  - name: play_go_message.bin
+    containerId: db.par
+    path: ./en/play_go_message.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: player.bin
+  files:
+  - name: player.bin
+    containerId: db.par
+    path: ./en/player.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: player_ability.bin
+  files:
+  - name: player_ability.bin
+    containerId: db.par
+    path: ./en/player_ability.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: player_ability_rank.bin
+  files:
+  - name: player_ability_rank.bin
+    containerId: db.par
+    path: ./en/player_ability_rank.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: player_equip_bonus.bin
+  files:
+  - name: player_equip_bonus.bin
+    containerId: db.par
+    path: ./en/player_equip_bonus.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: player_point.bin
+  files:
+  - name: player_point.bin
+    containerId: db.par
+    path: ./en/player_point.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: player_skill.bin
+  files:
+  - name: player_skill.bin
+    containerId: db.par
+    path: ./en/player_skill.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: player_skill_category.bin
+  files:
+  - name: player_skill_category.bin
+    containerId: db.par
+    path: ./en/player_skill_category.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: position_stage_warp.bin
+  files:
+  - name: position_stage_warp.bin
+    containerId: db.par
+    path: ./en/position_stage_warp.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: qloc_binding_actions_qloc_binding_actions.bin
+  files:
+  - name: qloc_binding_actions_qloc_binding_actions.bin
+    containerId: db.par
+    path: ./en/qloc_binding_actions_qloc_binding_actions.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: qloc_qloc_binding_actions.bin
+  files:
+  - name: qloc_qloc_binding_actions.bin
+    containerId: db.par
+    path: ./en/qloc_qloc_binding_actions.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: qloc_qloc_gamestates.bin
+  files:
+  - name: qloc_qloc_gamestates.bin
+    containerId: db.par
+    path: ./en/qloc_qloc_gamestates.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: shop.bin
+  files:
+  - name: shop.bin
+    containerId: db.par
+    path: ./en/shop.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: shop_bonus.bin
+  files:
+  - name: shop_bonus.bin
+    containerId: db.par
+    path: ./en/shop_bonus.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: shop_group.bin
+  files:
+  - name: shop_group.bin
+    containerId: db.par
+    path: ./en/shop_group.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: sound_auth.bin
+  files:
+  - name: sound_auth.bin
+    containerId: db.par
+    path: ./en/sound_auth.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: sound_auth_subtitles_speech_list_btl_hact.bin
+  files:
+  - name: sound_auth_subtitles_speech_list_btl_hact.bin
+    containerId: db.par
+    path: ./en/sound_auth_subtitles_speech_list_btl_hact.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: sound_auth_subtitles_speech_list_cab_aikadate.bin
+  files:
+  - name: sound_auth_subtitles_speech_list_cab_aikadate.bin
+    containerId: db.par
+    path: ./en/sound_auth_subtitles_speech_list_cab_aikadate.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: sound_auth_subtitles_speech_list_cab_kanadate.bin
+  files:
+  - name: sound_auth_subtitles_speech_list_cab_kanadate.bin
+    containerId: db.par
+    path: ./en/sound_auth_subtitles_speech_list_cab_kanadate.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: sound_auth_subtitles_speech_list_cab_kiraradate.bin
+  files:
+  - name: sound_auth_subtitles_speech_list_cab_kiraradate.bin
+    containerId: db.par
+    path: ./en/sound_auth_subtitles_speech_list_cab_kiraradate.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: sound_auth_subtitles_speech_list_cab_koyukidate.bin
+  files:
+  - name: sound_auth_subtitles_speech_list_cab_koyukidate.bin
+    containerId: db.par
+    path: ./en/sound_auth_subtitles_speech_list_cab_koyukidate.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: sound_auth_subtitles_speech_list_cab_main01.bin
+  files:
+  - name: sound_auth_subtitles_speech_list_cab_main01.bin
+    containerId: db.par
+    path: ./en/sound_auth_subtitles_speech_list_cab_main01.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: sound_auth_subtitles_speech_list_cab_main02.bin
+  files:
+  - name: sound_auth_subtitles_speech_list_cab_main02.bin
+    containerId: db.par
+    path: ./en/sound_auth_subtitles_speech_list_cab_main02.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: sound_auth_subtitles_speech_list_cab_main50.bin
+  files:
+  - name: sound_auth_subtitles_speech_list_cab_main50.bin
+    containerId: db.par
+    path: ./en/sound_auth_subtitles_speech_list_cab_main50.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: sound_auth_subtitles_speech_list_cab_shoukodate.bin
+  files:
+  - name: sound_auth_subtitles_speech_list_cab_shoukodate.bin
+    containerId: db.par
+    path: ./en/sound_auth_subtitles_speech_list_cab_shoukodate.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: sound_auth_subtitles_speech_list_cab_yuadate.bin
+  files:
+  - name: sound_auth_subtitles_speech_list_cab_yuadate.bin
+    containerId: db.par
+    path: ./en/sound_auth_subtitles_speech_list_cab_yuadate.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: sound_auth_subtitles_speech_list_cln01.bin
+  files:
+  - name: sound_auth_subtitles_speech_list_cln01.bin
+    containerId: db.par
+    path: ./en/sound_auth_subtitles_speech_list_cln01.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: sound_auth_subtitles_speech_list_cln02.bin
+  files:
+  - name: sound_auth_subtitles_speech_list_cln02.bin
+    containerId: db.par
+    path: ./en/sound_auth_subtitles_speech_list_cln02.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: sound_auth_subtitles_speech_list_cln04.bin
+  files:
+  - name: sound_auth_subtitles_speech_list_cln04.bin
+    containerId: db.par
+    path: ./en/sound_auth_subtitles_speech_list_cln04.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: sound_auth_subtitles_speech_list_cln06.bin
+  files:
+  - name: sound_auth_subtitles_speech_list_cln06.bin
+    containerId: db.par
+    path: ./en/sound_auth_subtitles_speech_list_cln06.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: sound_auth_subtitles_speech_list_cln08.bin
+  files:
+  - name: sound_auth_subtitles_speech_list_cln08.bin
+    containerId: db.par
+    path: ./en/sound_auth_subtitles_speech_list_cln08.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: sound_auth_subtitles_speech_list_cln10.bin
+  files:
+  - name: sound_auth_subtitles_speech_list_cln10.bin
+    containerId: db.par
+    path: ./en/sound_auth_subtitles_speech_list_cln10.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: sound_auth_subtitles_speech_list_cln12.bin
+  files:
+  - name: sound_auth_subtitles_speech_list_cln12.bin
+    containerId: db.par
+    path: ./en/sound_auth_subtitles_speech_list_cln12.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: sound_auth_subtitles_speech_list_cln14.bin
+  files:
+  - name: sound_auth_subtitles_speech_list_cln14.bin
+    containerId: db.par
+    path: ./en/sound_auth_subtitles_speech_list_cln14.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: sound_auth_subtitles_speech_list_cln_main50.bin
+  files:
+  - name: sound_auth_subtitles_speech_list_cln_main50.bin
+    containerId: db.par
+    path: ./en/sound_auth_subtitles_speech_list_cln_main50.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: sound_auth_subtitles_speech_list_cln_main51.bin
+  files:
+  - name: sound_auth_subtitles_speech_list_cln_main51.bin
+    containerId: db.par
+    path: ./en/sound_auth_subtitles_speech_list_cln_main51.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: sound_auth_subtitles_speech_list_majima.bin
+  files:
+  - name: sound_auth_subtitles_speech_list_majima.bin
+    containerId: db.par
+    path: ./en/sound_auth_subtitles_speech_list_majima.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: sound_auth_subtitles_speech_list_sub_a14.bin
+  files:
+  - name: sound_auth_subtitles_speech_list_sub_a14.bin
+    containerId: db.par
+    path: ./en/sound_auth_subtitles_speech_list_sub_a14.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: sound_cue_subtitle.bin
+  files:
+  - name: sound_cue_subtitle.bin
+    containerId: db.par
+    path: ./en/sound_cue_subtitle.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: subgame_omg_key_preset.bin
+  files:
+  - name: subgame_omg_key_preset.bin
+    containerId: db.par
+    path: ./en/subgame_omg_key_preset.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: subgame_omg_keys.bin
+  files:
+  - name: subgame_omg_keys.bin
+    containerId: db.par
+    path: ./en/subgame_omg_keys.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: talk.bin
+  files:
+  - name: talk.bin
+    containerId: db.par
+    path: ./en/talk.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: talk_category_title.bin
+  files:
+  - name: talk_category_title.bin
+    containerId: db.par
+    path: ./en/talk_category_title.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: talk_input_number.bin
+  files:
+  - name: talk_input_number.bin
+    containerId: db.par
+    path: ./en/talk_input_number.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: talk_popup_popup.bin
+  files:
+  - name: talk_popup_popup.bin
+    containerId: db.par
+    path: ./en/talk_popup_popup.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: talk_select.bin
+  files:
+  - name: talk_select.bin
+    containerId: db.par
+    path: ./en/talk_select.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: talk_select_select.bin
+  files:
+  - name: talk_select_select.bin
+    containerId: db.par
+    path: ./en/talk_select_select.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: talk_system_msg.bin
+  files:
+  - name: talk_system_msg.bin
+    containerId: db.par
+    path: ./en/talk_system_msg.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: talk_talker.bin
+  files:
+  - name: talk_talker.bin
+    containerId: db.par
+    path: ./en/talk_talker.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: title_movie.bin
+  files:
+  - name: title_movie.bin
+    containerId: db.par
+    path: ./en/title_movie.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: title_movie_chapter.bin
+  files:
+  - name: title_movie_chapter.bin
+    containerId: db.par
+    path: ./en/title_movie_chapter.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: title_root.bin
+  files:
+  - name: title_root.bin
+    containerId: db.par
+    path: ./en/title_root.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: trophy.bin
+  files:
+  - name: trophy.bin
+    containerId: db.par
+    path: ./en/trophy.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []
+- id: ui_text.bin
+  files:
+  - name: ui_text.bin
+    containerId: db.par
+    path: ./en/ui_text.bin
+    checksum: 0
+    readers:
+    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
+      parameterId: ''
+      canFail: true
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
+      parameterId: ''
+      canFail: false
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+      parameterId: poHeader
+      canFail: false
+    - typeName: Yarhl.Media.Text.Po2Binary
+      parameterId: ''
+      canFail: false
+    writers: []
+  readers: []
+  writers: []

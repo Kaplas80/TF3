@@ -18,21 +18,44 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-namespace TF3.Common.Core.Enums
+namespace TF3.Common.Core.Models
 {
+    using System.Collections.Generic;
+
     /// <summary>
-    /// File container types.
+    /// Game file info.
     /// </summary>
-    public enum ContainerType
+    public class FileInfo
     {
         /// <summary>
-        /// Container is a directory.
+        /// Gets or sets the file name.
         /// </summary>
-        Directory,
+        public string Name { get; set; }
 
         /// <summary>
-        /// Container is an archive (zip, rar...).
+        /// Gets or sets the container id.
         /// </summary>
-        Archive,
+        public string ContainerId { get; set; }
+
+        /// <summary>
+        /// Gets or sets the file path (inside the container).
+        /// </summary>
+        public string Path { get; set; }
+
+        /// <summary>
+        /// Gets or sets the file checksum.
+        /// If it is 0, it won't be checked.
+        /// </summary>
+        public ulong Checksum { get; set; }
+
+        /// <summary>
+        /// Gets or sets the list of converters needed to read the file.
+        /// </summary>
+        public List<ConverterInfo> Readers { get; set; }
+
+        /// <summary>
+        /// Gets or sets the list of converters needed to write the file.
+        /// </summary>
+        public List<ConverterInfo> Writers { get; set; }
     }
 }

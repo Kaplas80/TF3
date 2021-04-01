@@ -103,7 +103,7 @@ namespace TF3.Common.Core
         public static TranslationProject Open(string dbPath)
         {
             var project = new TranslationProject();
-            if (!File.Exists(dbPath))
+            if (!System.IO.File.Exists(dbPath))
             {
                 throw new FileNotFoundException($"{dbPath} not found.");
             }
