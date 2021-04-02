@@ -20,66 +20,63 @@
 namespace TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp
 {
     using System;
+    using System.Linq;
     using TF3.YarhlPlugin.YakuzaKiwami2.Enums;
     using TF3.YarhlPlugin.YakuzaKiwami2.Formats;
     using Yarhl.FileFormat;
     using Yarhl.Media.Text;
 
     /// <summary>
-    /// Extracts Yakuza Kiwami 2 ARMP translatable strings to a Po file.
+    /// Inserts strings from Po file to an Armp table.
     /// </summary>
-    public class PoWriter : IConverter<ArmpTable, Po>, IInitializer<PoHeader>
+    public class Translate : IConverter<ArmpTable, ArmpTable>, IInitializer<Po>
     {
-        private PoHeader _poHeader = new ("NoName", "dummy@dummy.com", "en");
+        private Po _translation = null;
 
         /// <summary>
         /// Converter initializer.
         /// </summary>
-        /// <param name="parameters">Header to use in created Po elements.</param>
-        public void Initialize(PoHeader parameters) => _poHeader = parameters;
+        /// <remarks>
+        /// Initialization is mandatory.
+        /// </remarks>
+        /// <param name="parameters">Po with translation.</param>
+        public void Initialize(Po parameters) => _translation = parameters;
 
         /// <summary>
-        /// Extracts strings to a Po file.
+        /// Inserts the translated strings from Po file in a Armp table.
         /// </summary>
-        /// <param name="source">Input format.</param>
-        /// <returns>The po file.</returns>
-        /// <exception cref="ArgumentNullException">Thrown if source is null.</exception>
-        public Po Convert(ArmpTable source)
+        /// <param name="source">Original Armp.</param>
+        /// <returns>Translated Armp.</returns>
+        public ArmpTable Convert(ArmpTable source)
         {
             if (source == null)
             {
                 throw new ArgumentNullException(nameof(source));
             }
 
-            var po = new Po(_poHeader);
+            if (_translation == null)
+            {
+                throw new InvalidOperationException("Uninitialized");
+            }
 
-            ExtractStrings(source, "Main", po);
+            ArmpTable result = source;
 
-            return po;
+            InsertStrings(result, "Main");
+
+            return result;
         }
 
-        private void ExtractStrings(ArmpTable table, string name, Po po)
+        private void InsertStrings(ArmpTable table, string name)
         {
-            if (table.ValueStringCount > 0)
+            foreach (PoEntry entry in _translation.Entries.Where(x => x.Context.Split('#')[0] == name))
             {
-                for (int i = 0; i < table.ValueStringCount; i++)
-                {
-                    if (!string.IsNullOrEmpty(table.ValueStrings[i]))
-                    {
-                        var entry = new PoEntry()
-                        {
-                            Original = table.ValueStrings[i].Replace("\r\n", "\n"),
-                            Translated = table.ValueStrings[i].Replace("\r\n", "\n"),
-                            Context = $"{name}#{i}",
-                        };
-                        po.Add(entry);
-                    }
-                }
+                int index = int.Parse(entry.Context.Split('#')[1]);
+                table.ValueStrings[index] = entry.Translated.Replace("\n", "\r\n");
             }
 
             if (table.Indexer != null)
             {
-                ExtractStrings(table.Indexer, $"{name}_Idx", po);
+                InsertStrings(table.Indexer, $"{name}_Idx");
             }
 
             for (int fieldIndex = 0; fieldIndex < table.FieldCount; fieldIndex++)
@@ -115,7 +112,7 @@ namespace TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp
                                 recordId = table.RecordIds[recordIndex];
                             }
 
-                            ExtractStrings((ArmpTable)obj, $"[{recordIndex}, {fieldIndex}]{recordId} ({fieldId})", po);
+                            InsertStrings((ArmpTable)obj, $"[{recordIndex}, {fieldIndex}]{recordId} ({fieldId})");
                         }
                     }
                 }

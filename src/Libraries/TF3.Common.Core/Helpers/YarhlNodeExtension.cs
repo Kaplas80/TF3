@@ -52,22 +52,16 @@ namespace TF3.Common.Core.Helpers
                     throw new UnknownConverterException($"Unknown converter: {converterInfo.TypeName}");
                 }
 
-                try
-                {
-                    IConverter converter = (IConverter)Activator.CreateInstance(metadata.Type);
+                IConverter converter = (IConverter)Activator.CreateInstance(metadata.Type);
 
-                    System.Reflection.MethodInfo initializer = metadata.Type.GetMethod("Initialize");
-                    ParameterInfo parameter = parameters.FirstOrDefault(x => x.Id == converterInfo.ParameterId);
-                    if (initializer != null && parameter != null)
-                    {
-                        _ = initializer.Invoke(converter, new object[] { parameter.Value });
-                    }
-
-                    node.ChangeFormat((IFormat)ConvertFormat.With(converter, node.Format));
-                }
-                catch (System.Exception) when (converterInfo.CanFail)
+                System.Reflection.MethodInfo initializer = metadata.Type.GetMethod("Initialize");
+                ParameterInfo parameter = parameters.FirstOrDefault(x => x.Id == converterInfo.ParameterId);
+                if (initializer != null && parameter != null)
                 {
+                    _ = initializer.Invoke(converter, new object[] { parameter.Value });
                 }
+
+                node.ChangeFormat((IFormat)ConvertFormat.With(converter, node.Format));
             }
         }
     }

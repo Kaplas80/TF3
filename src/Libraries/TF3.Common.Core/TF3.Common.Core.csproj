@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="Yarhl" />
+    <PackageReference Include="Yarhl.Media" />
     <PackageReference Include="LiteDB" />
     <PackageReference Include="Standart.Hash.xxHash" />
     <PackageReference Include="YamlDotNet" />

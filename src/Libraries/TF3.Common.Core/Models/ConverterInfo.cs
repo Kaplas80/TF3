@@ -34,10 +34,5 @@ namespace TF3.Common.Core.Models
         /// Gets or sets the converter parameter id.
         /// </summary>
         public string ParameterId { get; set; }
-
-        /// <summary>
-        /// Gets or sets a value indicating whether the conversion can fail.
-        /// </summary>
-        public bool CanFail { get; set; }
     }
 }

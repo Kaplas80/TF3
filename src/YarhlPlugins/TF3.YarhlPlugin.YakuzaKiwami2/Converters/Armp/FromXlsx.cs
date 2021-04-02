@@ -30,7 +30,7 @@ namespace TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp
     /// <summary>
     /// Converts a XLSX into Yakuza Kiwami 2 ARMP file.
     /// </summary>
-    public class XlsxReader : IConverter<BinaryFormat, ArmpTable>
+    public class FromXlsx : IConverter<BinaryFormat, ArmpTable>
     {
         /// <summary>
         /// Converts a Armp into a Excel binary.

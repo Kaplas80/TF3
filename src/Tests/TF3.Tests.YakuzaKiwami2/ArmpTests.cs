@@ -933,10 +933,10 @@ namespace TF3.Tests.YakuzaKiwami2
             Assert.IsTrue(node.Stream == null);
             ArmpTable expected = node.GetFormatAs<ArmpTable>();
 
-            _ = node.TransformWith<XlsxWriter>();
+            _ = node.TransformWith<ToXlsx>();
             Assert.IsFalse(node.Stream == null);
 
-            _ = node.TransformWith<XlsxReader>();
+            _ = node.TransformWith<FromXlsx>();
             Assert.IsTrue(node.Stream == null);
             ArmpTable result = node.GetFormatAs<ArmpTable>();
 
@@ -952,13 +952,13 @@ namespace TF3.Tests.YakuzaKiwami2
             Assert.IsTrue(node.Stream == null);
             ArmpTable table = node.GetFormatAs<ArmpTable>();
 
-            _ = node.TransformWith<PoWriter>();
+            _ = node.TransformWith<ExtractStrings>();
             Po po = node.GetFormatAs<Po>();
             Assert.IsTrue(table.ValueStringCount == po.Entries.Count);
             Assert.IsTrue(table.ValueStrings[0] == "YAKUZA KIWAMI 2");
             po.Entries[0].Translated = "Translation Test";
 
-            _ = ConvertFormat.With<PoReader, ArmpTable>(table, po);
+            _ = ConvertFormat.With<Translate, Po>(po, table);
             Assert.IsTrue(table.ValueStrings[0] == "Translation Test");
         }
     }

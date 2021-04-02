@@ -20,63 +20,66 @@
 namespace TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp
 {
     using System;
-    using System.Linq;
     using TF3.YarhlPlugin.YakuzaKiwami2.Enums;
     using TF3.YarhlPlugin.YakuzaKiwami2.Formats;
     using Yarhl.FileFormat;
     using Yarhl.Media.Text;
 
     /// <summary>
-    /// Inserts strings from Po file to an Armp table.
+    /// Extracts Yakuza Kiwami 2 ARMP translatable strings to a Po file.
     /// </summary>
-    public class PoReader : IConverter<Po, ArmpTable>, IInitializer<ArmpTable>
+    public class ExtractStrings : IConverter<ArmpTable, Po>, IInitializer<PoHeader>
     {
-        private ArmpTable _original = null;
+        private PoHeader _poHeader = new ("NoName", "dummy@dummy.com", "en");
 
         /// <summary>
         /// Converter initializer.
         /// </summary>
-        /// <remarks>
-        /// Initialization is mandatory.
-        /// </remarks>
-        /// <param name="parameters">Original Armp table.</param>
-        public void Initialize(ArmpTable parameters) => _original = parameters;
+        /// <param name="parameters">Header to use in created Po elements.</param>
+        public void Initialize(PoHeader parameters) => _poHeader = parameters;
 
         /// <summary>
-        /// Inserts the translated strings from Po file in a Armp table.
+        /// Extracts strings to a Po file.
         /// </summary>
-        /// <param name="source">Po format.</param>
-        /// <returns>The original Armp table with translated strings.</returns>
-        public ArmpTable Convert(Po source)
+        /// <param name="source">Input format.</param>
+        /// <returns>The po file.</returns>
+        /// <exception cref="ArgumentNullException">Thrown if source is null.</exception>
+        public Po Convert(ArmpTable source)
         {
             if (source == null)
             {
                 throw new ArgumentNullException(nameof(source));
             }
 
-            if (_original == null)
-            {
-                throw new InvalidOperationException("Uninitialized");
-            }
+            var po = new Po(_poHeader);
 
-            ArmpTable result = _original;
+            Extract(source, "Main", po);
 
-            InsertStrings(result, "Main", source);
-
-            return result;
+            return po;
         }
 
-        private void InsertStrings(ArmpTable table, string name, Po po)
+        private void Extract(ArmpTable table, string name, Po po)
         {
-            foreach (PoEntry entry in po.Entries.Where(x => x.Context.Split('#')[0] == name))
+            if (table.ValueStringCount > 0)
             {
-                int index = int.Parse(entry.Context.Split('#')[1]);
-                table.ValueStrings[index] = entry.Translated.Replace("\n", "\r\n");
+                for (int i = 0; i < table.ValueStringCount; i++)
+                {
+                    if (!string.IsNullOrEmpty(table.ValueStrings[i]))
+                    {
+                        var entry = new PoEntry()
+                        {
+                            Original = table.ValueStrings[i].Replace("\r\n", "\n"),
+                            Translated = table.ValueStrings[i].Replace("\r\n", "\n"),
+                            Context = $"{name}#{i}",
+                        };
+                        po.Add(entry);
+                    }
+                }
             }
 
             if (table.Indexer != null)
             {
-                InsertStrings(table.Indexer, $"{name}_Idx", po);
+                Extract(table.Indexer, $"{name}_Idx", po);
             }
 
             for (int fieldIndex = 0; fieldIndex < table.FieldCount; fieldIndex++)
@@ -112,7 +115,7 @@ namespace TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp
                                 recordId = table.RecordIds[recordIndex];
                             }
 
-                            InsertStrings((ArmpTable)obj, $"[{recordIndex}, {fieldIndex}]{recordId} ({fieldId})", po);
+                            Extract((ArmpTable)obj, $"[{recordIndex}, {fieldIndex}]{recordId} ({fieldId})", po);
                         }
                     }
                 }

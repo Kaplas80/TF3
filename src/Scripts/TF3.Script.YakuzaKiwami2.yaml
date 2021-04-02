@@ -15,11 +15,9 @@ containers:
   readers:
   - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Par.Reader
     parameterId: ''
-    canFail: false
   writers:
   - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Par.Writer
     parameterId: ''
-    canFail: false
   containers: []
 assets:
 - id: access_type.bin
@@ -31,16 +29,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -53,16 +47,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -75,16 +65,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -97,16 +83,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -119,16 +101,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -141,16 +119,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -163,16 +137,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -185,16 +155,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -207,16 +173,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -229,16 +191,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -251,16 +209,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -273,16 +227,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -295,16 +245,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -317,16 +263,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -339,16 +281,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -361,16 +299,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -381,18 +315,12 @@ assets:
     path: ./en/clan_creator_special_attack.bin
     checksum: 0
     readers:
-    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
-      parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -405,16 +333,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -427,16 +351,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -449,16 +369,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -471,16 +387,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -493,16 +405,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -515,16 +423,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -537,16 +441,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -559,16 +459,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -581,16 +477,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -603,16 +495,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -625,16 +513,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -647,16 +531,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -669,16 +549,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -689,18 +565,12 @@ assets:
     path: ./en/minigame_batting_center_type_of_pitch.bin
     checksum: 0
     readers:
-    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
-      parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -713,16 +583,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -735,16 +601,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -757,16 +619,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -779,16 +637,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -801,16 +655,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -823,16 +673,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -845,16 +691,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -867,16 +709,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -889,16 +727,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -911,16 +745,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -933,16 +763,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -955,16 +781,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -977,16 +799,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -997,18 +815,12 @@ assets:
     path: ./en/minigame_cabaret_island_coordinate_hair_style.bin
     checksum: 0
     readers:
-    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
-      parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1021,16 +833,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1043,16 +851,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1065,16 +869,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1087,16 +887,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1109,16 +905,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1131,16 +923,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1153,16 +941,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1175,16 +959,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1197,16 +977,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1217,18 +993,12 @@ assets:
     path: ./en/minigame_cabaret_island_event_choices.bin
     checksum: 0
     readers:
-    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
-      parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1241,16 +1011,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1263,16 +1029,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1283,18 +1045,12 @@ assets:
     path: ./en/minigame_cabaret_island_grandprix_ranking.bin
     checksum: 0
     readers:
-    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
-      parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1307,16 +1063,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1327,18 +1079,12 @@ assets:
     path: ./en/minigame_cabaret_island_guest_category.bin
     checksum: 0
     readers:
-    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
-      parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1351,16 +1097,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1373,16 +1115,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1395,16 +1133,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1415,18 +1149,12 @@ assets:
     path: ./en/minigame_cabaret_island_shop_lineup.bin
     checksum: 0
     readers:
-    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
-      parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1439,16 +1167,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1461,16 +1185,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1483,16 +1203,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1505,16 +1221,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1527,16 +1239,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1549,16 +1257,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1571,16 +1275,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1593,16 +1293,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1615,16 +1311,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1637,16 +1329,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1659,16 +1347,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1681,16 +1365,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1703,16 +1383,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1725,16 +1401,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1747,16 +1419,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1769,16 +1437,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1791,16 +1455,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1813,16 +1473,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1835,16 +1491,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1857,16 +1509,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1879,16 +1527,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1901,16 +1545,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1923,16 +1563,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1943,18 +1579,12 @@ assets:
     path: ./en/minigame_mahjong_string_yaku.bin
     checksum: 0
     readers:
-    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
-      parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1967,16 +1597,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -1989,16 +1615,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2011,16 +1633,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2033,16 +1651,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2055,16 +1669,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2077,16 +1687,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2099,16 +1705,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2121,16 +1723,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2143,16 +1741,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2165,16 +1759,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2187,16 +1777,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2209,16 +1795,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2231,16 +1813,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2253,16 +1831,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2275,16 +1849,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2297,16 +1867,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2317,18 +1883,12 @@ assets:
     path: ./en/minigame_shogi_taikyoku_menu.bin
     checksum: 0
     readers:
-    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
-      parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2341,16 +1901,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2363,16 +1919,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2385,16 +1937,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2407,16 +1955,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2429,16 +1973,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2451,16 +1991,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2473,16 +2009,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2495,16 +2027,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2517,16 +2045,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2539,16 +2063,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2561,16 +2081,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2583,16 +2099,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2605,16 +2117,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2627,16 +2135,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2649,16 +2153,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2671,16 +2171,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2693,16 +2189,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2715,16 +2207,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2737,16 +2225,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2759,16 +2243,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2781,16 +2261,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2803,16 +2279,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2825,16 +2297,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2847,16 +2315,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2869,16 +2333,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2891,16 +2351,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2913,16 +2369,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2935,16 +2387,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2955,18 +2403,12 @@ assets:
     path: ./en/sound_auth_subtitles_speech_list_btl_hact.bin
     checksum: 0
     readers:
-    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
-      parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -2979,16 +2421,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -3001,16 +2439,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -3023,16 +2457,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -3045,16 +2475,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -3067,16 +2493,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -3089,16 +2511,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -3111,16 +2529,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -3133,16 +2547,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -3155,16 +2565,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -3177,16 +2583,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -3199,16 +2601,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -3219,18 +2617,12 @@ assets:
     path: ./en/sound_auth_subtitles_speech_list_cln04.bin
     checksum: 0
     readers:
-    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
-      parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -3243,16 +2635,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -3263,18 +2651,12 @@ assets:
     path: ./en/sound_auth_subtitles_speech_list_cln08.bin
     checksum: 0
     readers:
-    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
-      parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -3285,18 +2667,12 @@ assets:
     path: ./en/sound_auth_subtitles_speech_list_cln10.bin
     checksum: 0
     readers:
-    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
-      parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -3307,18 +2683,12 @@ assets:
     path: ./en/sound_auth_subtitles_speech_list_cln12.bin
     checksum: 0
     readers:
-    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
-      parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -3331,16 +2701,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -3353,16 +2719,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -3375,16 +2737,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -3397,16 +2755,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -3419,16 +2773,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -3441,16 +2791,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -3463,16 +2809,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -3483,18 +2825,12 @@ assets:
     path: ./en/subgame_omg_keys.bin
     checksum: 0
     readers:
-    - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
-      parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -3507,16 +2843,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -3529,16 +2861,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -3551,16 +2879,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -3573,16 +2897,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -3595,16 +2915,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -3617,16 +2933,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -3639,16 +2951,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -3661,16 +2969,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -3683,16 +2987,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -3705,16 +3005,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -3727,16 +3023,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -3749,16 +3041,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
@@ -3771,16 +3059,12 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress
       parameterId: ''
-      canFail: true
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
-      canFail: false
-    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.PoWriter
+    - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
-      canFail: false
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
-      canFail: false
     writers: []
   readers: []
   writers: []
