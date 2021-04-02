@@ -31,10 +31,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -49,10 +52,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -67,10 +73,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -85,10 +94,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -103,10 +115,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -121,10 +136,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -139,10 +157,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -157,10 +178,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -175,10 +199,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -193,10 +220,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -211,10 +241,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -229,10 +262,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -247,10 +283,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -265,10 +304,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -283,10 +325,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -301,10 +346,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -317,10 +365,13 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -335,10 +386,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -353,10 +407,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -371,10 +428,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -389,10 +449,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -407,10 +470,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -425,10 +491,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -443,10 +512,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -461,10 +533,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -479,10 +554,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -497,10 +575,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -515,10 +596,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -533,10 +617,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -551,10 +638,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -567,10 +657,13 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -585,10 +678,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -603,10 +699,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -621,10 +720,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -639,10 +741,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -657,10 +762,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -675,10 +783,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -693,10 +804,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -711,10 +825,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -729,10 +846,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -747,10 +867,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -765,10 +888,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -783,10 +909,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -801,10 +930,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -817,10 +949,13 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -835,10 +970,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -853,10 +991,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -871,10 +1012,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -889,10 +1033,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -907,10 +1054,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -925,10 +1075,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -943,10 +1096,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -961,10 +1117,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -979,10 +1138,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -995,10 +1157,13 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1013,10 +1178,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1031,10 +1199,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1047,10 +1218,13 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1065,10 +1239,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1081,10 +1258,13 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1099,10 +1279,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1117,10 +1300,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1135,10 +1321,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1151,10 +1340,13 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1169,10 +1361,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1187,10 +1382,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1205,10 +1403,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1223,10 +1424,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1241,10 +1445,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1259,10 +1466,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1277,10 +1487,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1295,10 +1508,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1313,10 +1529,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1331,10 +1550,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1349,10 +1571,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1367,10 +1592,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1385,10 +1613,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1403,10 +1634,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1421,10 +1655,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1439,10 +1676,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1457,10 +1697,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1475,10 +1718,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1493,10 +1739,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1511,10 +1760,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1529,10 +1781,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1547,10 +1802,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1565,10 +1823,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1581,10 +1842,13 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1599,10 +1863,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1617,10 +1884,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1635,10 +1905,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1653,10 +1926,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1671,10 +1947,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1689,10 +1968,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1707,10 +1989,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1725,10 +2010,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1743,10 +2031,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1761,10 +2052,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1779,10 +2073,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1797,10 +2094,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1815,10 +2115,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1833,10 +2136,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1851,10 +2157,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1869,10 +2178,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1885,10 +2197,13 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1903,10 +2218,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1921,10 +2239,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1939,10 +2260,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1957,10 +2281,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1975,10 +2302,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -1993,10 +2323,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2011,10 +2344,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2029,10 +2365,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2047,10 +2386,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2065,10 +2407,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2083,10 +2428,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2101,10 +2449,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2119,10 +2470,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2137,10 +2491,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2155,10 +2512,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2173,10 +2533,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2191,10 +2554,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2209,10 +2575,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2227,10 +2596,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2245,10 +2617,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2263,10 +2638,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2281,10 +2659,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2299,10 +2680,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2317,10 +2701,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2335,10 +2722,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2353,10 +2743,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2371,10 +2764,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2389,10 +2785,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2405,10 +2804,13 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2423,10 +2825,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2441,10 +2846,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2459,10 +2867,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2477,10 +2888,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2495,10 +2909,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2513,10 +2930,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2531,10 +2951,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2549,10 +2972,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2567,10 +2993,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2585,10 +3014,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2603,10 +3035,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2619,10 +3054,13 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2637,10 +3075,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2653,10 +3094,13 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2669,10 +3113,13 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2685,10 +3132,13 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2703,10 +3153,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2721,10 +3174,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2739,10 +3195,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2757,10 +3216,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2775,10 +3237,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2793,10 +3258,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2811,10 +3279,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2827,10 +3298,13 @@ assets:
     readers:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2845,10 +3319,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2863,10 +3340,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2881,10 +3361,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2899,10 +3382,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2917,10 +3403,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2935,10 +3424,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2953,10 +3445,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2971,10 +3466,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -2989,10 +3487,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -3007,10 +3508,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -3025,10 +3529,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -3043,10 +3550,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []
@@ -3061,10 +3571,13 @@ assets:
       parameterId: ''
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader
       parameterId: ''
+    extractors:
     - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings
       parameterId: poHeader
     - typeName: Yarhl.Media.Text.Po2Binary
       parameterId: ''
+    translationReaders: []
+    inserters: []
     writers: []
   readers: []
   writers: []

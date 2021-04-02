@@ -54,6 +54,21 @@ namespace TF3.Common.Core.Models
         public List<ConverterInfo> Readers { get; set; }
 
         /// <summary>
+        /// Gets or sets the list of converters needed to extract the translatable contents.
+        /// </summary>
+        public List<ConverterInfo> Extractors { get; set; }
+
+        /// <summary>
+        /// Gets or sets the list of converters needed to read the translated contents.
+        /// </summary>
+        public List<ConverterInfo> TranslationReaders { get; set; }
+
+        /// <summary>
+        /// Gets or sets the list of converters needed to insert the translated contents.
+        /// </summary>
+        public List<ConverterInfo> Inserters { get; set; }
+
+        /// <summary>
         /// Gets or sets the list of converters needed to write the file.
         /// </summary>
         public List<ConverterInfo> Writers { get; set; }

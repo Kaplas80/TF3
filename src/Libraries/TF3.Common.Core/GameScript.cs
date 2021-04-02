@@ -91,12 +91,13 @@ namespace TF3.Common.Core
                         throw new FileNotFoundException($"File not found: {fileInfo.Name}");
                     }
 
-                    if (!Common.Core.Helpers.ChecksumHelper.Check(file.Stream, fileInfo.Checksum))
+                    if (!ChecksumHelper.Check(file.Stream, fileInfo.Checksum))
                     {
                         throw new ChecksumMismatchException($"Checksum mismatch in {fileInfo.Name}");
                     }
 
                     file.Transform(fileInfo.Readers, this.Parameters);
+                    file.Transform(fileInfo.Extractors, this.Parameters);
 
                     asset.Add(file);
                 }
@@ -122,7 +123,7 @@ namespace TF3.Common.Core
                     throw new DirectoryNotFoundException($"Parent: {parent.Path} - Node: {containerInfo.Path}");
                 }
 
-                if (!Common.Core.Helpers.ChecksumHelper.Check(node.Stream, containerInfo.Checksum))
+                if (!ChecksumHelper.Check(node.Stream, containerInfo.Checksum))
                 {
                     throw new ChecksumMismatchException($"Checksum mismatch in {containerInfo.Name}");
                 }
