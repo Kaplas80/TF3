@@ -43,13 +43,13 @@ namespace TF3.Common.Core.Models
         public List<FileInfo> Files { get; set; }
 
         /// <summary>
-        /// Gets or sets the list of converters needed to read the asset.
+        /// Gets or sets the list of converters needed to merge the asset files into a single format.
         /// </summary>
-        public List<ConverterInfo> Readers { get; set; }
+        public List<ConverterInfo> Mergers { get; set; }
 
         /// <summary>
-        /// Gets or sets the list of converters needed to write the asset.
+        /// Gets or sets the list of converters needed to extract the translatable contents.
         /// </summary>
-        public List<ConverterInfo> Writers { get; set; }
+        public List<ConverterInfo> Extractors { get; set; }
     }
 }

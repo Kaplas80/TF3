@@ -20,6 +20,7 @@
 
 namespace TF3.Common.Core
 {
+    using System;
     using System.Collections.Generic;
     using System.IO;
     using TF3.Common.Core.Exceptions;
@@ -96,16 +97,21 @@ namespace TF3.Common.Core
                         throw new ChecksumMismatchException($"Checksum mismatch in {fileInfo.Name}");
                     }
 
-                    file.Transform(fileInfo.Readers, this.Parameters);
-                    file.Transform(fileInfo.Extractors, this.Parameters);
-
+                    file.Transform(fileInfo.Readers, Parameters);
                     asset.Add(file);
                 }
 
-                asset.Transform(assetInfo.Readers, this.Parameters);
+                asset.Transform(assetInfo.Mergers, Parameters);
+
+                if (asset.Children.Count != 1)
+                {
+                    throw new FormatException("Mergers must return a single node NodeContainerFormat");
+                }
+
+                asset.Children[0].Transform(assetInfo.Extractors, Parameters);
 
                 int outputIndex = 0;
-                foreach (Node node in Navigator.IterateNodes(asset))
+                foreach (Node node in Navigator.IterateNodes(asset.Children[0]))
                 {
                     if (node.IsContainer)
                     {

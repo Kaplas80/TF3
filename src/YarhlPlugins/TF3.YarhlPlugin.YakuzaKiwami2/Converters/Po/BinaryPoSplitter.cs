@@ -23,42 +23,37 @@ namespace TF3.YarhlPlugin.YakuzaKiwami2.Converters.Po
     using System;
     using Yarhl.FileFormat;
     using Yarhl.FileSystem;
+    using Yarhl.IO;
 
     /// <summary>
     /// Po files splitter.
     /// </summary>
-    public class GroupSplitter : IConverter<NodeContainerFormat, NodeContainerFormat>
+    public class BinaryPoSplitter : IConverter<BinaryFormat, NodeContainerFormat>
     {
         /// <summary>
-        /// Splits a group of Po files in smaller parts.
+        /// Splits a Po file (BinaryFormat) in smaller parts.
         /// </summary>
-        /// <param name="source">Original Po files.</param>
+        /// <param name="source">Original Po file.</param>
         /// <returns>A container with the smaller parts.</returns>
-        public NodeContainerFormat Convert(NodeContainerFormat source)
+        public NodeContainerFormat Convert(BinaryFormat source)
         {
             if (source == null)
             {
                 throw new ArgumentNullException(nameof(source));
             }
 
-            foreach (Node node in source.Root.Children)
+            source.Stream.Seek(0);
+
+            Yarhl.Media.Text.Po po = (Yarhl.Media.Text.Po)ConvertFormat.With<Yarhl.Media.Text.Binary2Po>(source);
+
+            var result = (NodeContainerFormat)ConvertFormat.With<Splitter>(po);
+
+            foreach (Node n in result.Root.Children)
             {
-                if (node.Stream == null)
-                {
-                    continue;
-                }
-
-                node.Stream.Seek(0);
-                node.TransformWith<Yarhl.Media.Text.Binary2Po>();
-                node.TransformWith<Splitter>();
-
-                foreach (Node n in node.Children)
-                {
-                    n.TransformWith<Yarhl.Media.Text.Po2Binary>();
-                }
+                n.TransformWith<Yarhl.Media.Text.Po2Binary>();
             }
 
-            return source;
+            return result;
         }
     }
 }
