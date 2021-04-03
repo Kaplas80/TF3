@@ -65,7 +65,201 @@ assets:
   readers: []
   writers: []
 - id: auth.bin
-  outputNames: [ "auth.po" ]
+  outputNames:
+  - (auth.bin)a01_0013.po
+  - (auth.bin)a01_0015.po
+  - (auth.bin)a01_0020.po
+  - (auth.bin)a01_0030.po
+  - (auth.bin)a01_0040.po
+  - (auth.bin)a01_0080.po
+  - (auth.bin)a01_0105.po
+  - (auth.bin)a02_0030.po
+  - (auth.bin)a02_0040.po
+  - (auth.bin)a03_0010.po
+  - (auth.bin)a03_0050.po
+  - (auth.bin)a03_0080.po
+  - (auth.bin)a04_0030.po
+  - (auth.bin)a04_0090.po
+  - (auth.bin)a04_0100.po
+  - (auth.bin)a05_0010.po
+  - (auth.bin)a05_0020.po
+  - (auth.bin)a05_0040.po
+  - (auth.bin)a05_0110.po
+  - (auth.bin)a05_0140.po
+  - (auth.bin)a06_0020.po
+  - (auth.bin)a06_0030.po
+  - (auth.bin)a07_0010.po
+  - (auth.bin)a07_0050.po
+  - (auth.bin)a07_0060.po
+  - (auth.bin)a07_0075.po
+  - (auth.bin)a08_0130.po
+  - (auth.bin)a09_0020.po
+  - (auth.bin)a09_0060.po
+  - (auth.bin)a09_0090.po
+  - (auth.bin)a09_0140.po
+  - (auth.bin)a09_0150.po
+  - (auth.bin)a10_0010.po
+  - (auth.bin)a10_0030.po
+  - (auth.bin)a10_0050.po
+  - (auth.bin)a10_0060.po
+  - (auth.bin)a10_0080.po
+  - (auth.bin)a10_0150.po
+  - (auth.bin)a11_0040.po
+  - (auth.bin)a11_0060.po
+  - (auth.bin)a12_0040.po
+  - (auth.bin)a12_0050.po
+  - (auth.bin)a12_0080.po
+  - (auth.bin)a12_0100.po
+  - (auth.bin)a12_0160.po
+  - (auth.bin)a13_0070.po
+  - (auth.bin)a13_0090.po
+  - (auth.bin)a13_0100.po
+  - (auth.bin)a13_0170.po
+  - (auth.bin)a14_0020.po
+  - (auth.bin)a14_0050.po
+  - (auth.bin)a14_0090.po
+  - (auth.bin)a14_0120.po
+  - (auth.bin)a14_0130.po
+  - (auth.bin)a15_0020.po
+  - (auth.bin)a15_0080.po
+  - (auth.bin)a16_0010.po
+  - (auth.bin)a16_0020.po
+  - (auth.bin)a16_0050.po
+  - (auth.bin)a17_0010.po
+  - (auth.bin)a17_0020.po
+  - (auth.bin)c01_0018.po
+  - (auth.bin)c01_0025.po
+  - (auth.bin)c01_0035.po
+  - (auth.bin)c01_0050.po
+  - (auth.bin)c01_0060.po
+  - (auth.bin)c01_0070.po
+  - (auth.bin)c01_0090.po
+  - (auth.bin)c01_0100.po
+  - (auth.bin)c01_0110.po
+  - (auth.bin)c01_0120.po
+  - (auth.bin)c02_0010.po
+  - (auth.bin)c02_0060.po
+  - (auth.bin)c03_0020.po
+  - (auth.bin)c03_0030.po
+  - (auth.bin)c03_0040.po
+  - (auth.bin)c03_0060.po
+  - (auth.bin)c03_0070.po
+  - (auth.bin)c04_0010.po
+  - (auth.bin)c04_0015.po
+  - (auth.bin)c04_0020.po
+  - (auth.bin)c04_0040.po
+  - (auth.bin)c04_0050.po
+  - (auth.bin)c04_0060.po
+  - (auth.bin)c04_0070.po
+  - (auth.bin)c04_0080.po
+  - (auth.bin)c04_0110.po
+  - (auth.bin)c04_0120.po
+  - (auth.bin)c05_0030.po
+  - (auth.bin)c05_0050.po
+  - (auth.bin)c05_0060.po
+  - (auth.bin)c05_0070.po
+  - (auth.bin)c05_0080.po
+  - (auth.bin)c05_0090.po
+  - (auth.bin)c05_0100.po
+  - (auth.bin)c05_0120.po
+  - (auth.bin)c05_0130.po
+  - (auth.bin)c07_0020.po
+  - (auth.bin)c07_0070.po
+  - (auth.bin)c07_0080.po
+  - (auth.bin)c07_0090.po
+  - (auth.bin)c08_0010.po
+  - (auth.bin)c08_0030.po
+  - (auth.bin)c08_0040.po
+  - (auth.bin)c08_0060.po
+  - (auth.bin)c08_0110.po
+  - (auth.bin)c08_0120.po
+  - (auth.bin)c08_0150.po
+  - (auth.bin)c08_0160.po
+  - (auth.bin)c08_0170.po
+  - (auth.bin)c09_0010.po
+  - (auth.bin)c09_0030.po
+  - (auth.bin)c09_0040.po
+  - (auth.bin)c09_0050.po
+  - (auth.bin)c09_0080.po
+  - (auth.bin)c09_0100.po
+  - (auth.bin)c09_0110.po
+  - (auth.bin)c10_0020.po
+  - (auth.bin)c10_0070.po
+  - (auth.bin)c10_0090.po
+  - (auth.bin)c10_0100.po
+  - (auth.bin)c10_0110.po
+  - (auth.bin)c11_0010.po
+  - (auth.bin)c11_0030.po
+  - (auth.bin)c11_0050.po
+  - (auth.bin)c12_0010.po
+  - (auth.bin)c12_0020.po
+  - (auth.bin)c12_0030.po
+  - (auth.bin)c12_0060.po
+  - (auth.bin)c12_0090.po
+  - (auth.bin)c12_0110.po
+  - (auth.bin)c12_0130.po
+  - (auth.bin)c12_0140.po
+  - (auth.bin)c12_0150.po
+  - (auth.bin)c13_0010.po
+  - (auth.bin)c13_0020.po
+  - (auth.bin)c13_0030.po
+  - (auth.bin)c13_0080.po
+  - (auth.bin)c13_0130.po
+  - (auth.bin)c13_0140.po
+  - (auth.bin)c13_0150.po
+  - (auth.bin)c13_0160.po
+  - (auth.bin)c14_0010.po
+  - (auth.bin)c14_0030.po
+  - (auth.bin)c14_0040.po
+  - (auth.bin)c14_0060.po
+  - (auth.bin)c14_0070.po
+  - (auth.bin)c14_0100.po
+  - (auth.bin)c14_0110.po
+  - (auth.bin)c15_0010.po
+  - (auth.bin)c15_0040.po
+  - (auth.bin)c15_0050.po
+  - (auth.bin)c15_0060.po
+  - (auth.bin)c15_0070.po
+  - (auth.bin)c16_0040.po
+  - (auth.bin)s02_0060.po
+  - (auth.bin)s03_0010.po
+  - (auth.bin)s03_0020.po
+  - (auth.bin)s08_0010.po
+  - (auth.bin)s08_0020.po
+  - (auth.bin)s08_0023.po
+  - (auth.bin)s08_0025.po
+  - (auth.bin)s08_0030.po
+  - (auth.bin)c16_0030.po
+  - (auth.bin)s01_0010.po
+  - (auth.bin)s01_0020.po
+  - (auth.bin)s01_0030.po
+  - (auth.bin)s05_0010.po
+  - (auth.bin)s05_0020.po
+  - (auth.bin)s05_0030.po
+  - (auth.bin)s06_0010.po
+  - (auth.bin)s06_0020.po
+  - (auth.bin)s10_0010.po
+  - (auth.bin)s10_0020.po
+  - (auth.bin)a91_0010.po
+  - (auth.bin)a91_0020.po
+  - (auth.bin)a91_0030.po
+  - (auth.bin)a92_0010.po
+  - (auth.bin)a93_0010.po
+  - (auth.bin)a93_0020.po
+  - (auth.bin)a93_0030.po
+  - (auth.bin)a93_0040.po
+  - (auth.bin)a93_0050.po
+  - (auth.bin)a93_0060.po
+  - (auth.bin)a93_0070.po
+  - (auth.bin)a93_0080.po
+  - (auth.bin)a01_0016.po
+  - (auth.bin)s02_0010.po
+  - (auth.bin)s02_0020.po
+  - (auth.bin)c02_0043.po
+  - (auth.bin)r1_flashback_01.po
+  - (auth.bin)r1_flashback_02.po
+  - (auth.bin)r1_flashback_03.po
+  - (auth.bin)r1_flashback_04.po
   files:
   - name: auth.bin
     containerId: db.par
@@ -84,7 +278,9 @@ assets:
     translationReaders: []
     inserters: []
     writers: []
-  readers: []
+  readers:
+  - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Po.GroupSplitter
+    parameterId: ''
   writers: []
 - id: auth_costume_change.bin
   outputNames: [ "auth_costume_change.po" ]
@@ -569,7 +765,40 @@ assets:
   readers: []
   writers: []
 - id: manual.bin
-  outputNames: [ "manual.po" ]
+  outputNames:
+  - (manual.bin)Main.po
+  - (manual.bin)koikoi.po
+  - (manual.bin)kabu.po
+  - (manual.bin)poker.po
+  - (manual.bin)mahjong0.po
+  - (manual.bin)clan_creator0.po
+  - (manual.bin)mahjong1.po
+  - (manual.bin)karaoke0.po
+  - (manual.bin)darts0.po
+  - (manual.bin)batting0.po
+  - (manual.bin)cabaret0.po
+  - (manual.bin)clan_creator1.po
+  - (manual.bin)batting1.po
+  - (manual.bin)ufo_catcher0.po
+  - (manual.bin)toilets0.po
+  - (manual.bin)cabaret_island0.po
+  - (manual.bin)cabaret_island1.po
+  - (manual.bin)virtua_fighter2.po
+  - (manual.bin)virtualon.po
+  - (manual.bin)golf.po
+  - (manual.bin)gravure.po
+  - (manual.bin)bj.po
+  - (manual.bin)koikoi_yaku.po
+  - (manual.bin)poker_omh.po
+  - (manual.bin)poker_texas.po
+  - (manual.bin)poker_pine.po
+  - (manual.bin)poker_yaku.po
+  - (manual.bin)shogi_koma.po
+  - (manual.bin)batting2.po
+  - (manual.bin)clan_creator0_tgs.po
+  - (manual.bin)clan_creator1_tgs.po
+  - (manual.bin)bouncer.po
+  - (manual.bin)cabaret_island2.po
   files:
   - name: manual.bin
     containerId: db.par
@@ -588,7 +817,9 @@ assets:
     translationReaders: []
     inserters: []
     writers: []
-  readers: []
+  readers:
+  - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Po.GroupSplitter
+    parameterId: ''
   writers: []
 - id: map_place.bin
   outputNames: [ "map_place.po" ]
@@ -2907,7 +3138,28 @@ assets:
   readers: []
   writers: []
 - id: sound_auth.bin
-  outputNames: [ "sound_auth.po" ]
+  outputNames:
+  - (sound_auth.bin)speech_list_btl_hact.po
+  - (sound_auth.bin)speech_list_cab_kanadate.po
+  - (sound_auth.bin)speech_list_cab_main50.po
+  - (sound_auth.bin)speech_list_majima.po
+  - (sound_auth.bin)speech_list_cab_aikadate.po
+  - (sound_auth.bin)speech_list_cab_kiraradate.po
+  - (sound_auth.bin)speech_list_cab_shoukodate.po
+  - (sound_auth.bin)speech_list_cab_yuadate.po
+  - (sound_auth.bin)speech_list_cln_main50.po
+  - (sound_auth.bin)speech_list_cln_main51.po
+  - (sound_auth.bin)speech_list_cab_main01.po
+  - (sound_auth.bin)speech_list_cab_main02.po
+  - (sound_auth.bin)speech_list_cln01.po
+  - (sound_auth.bin)speech_list_cln02.po
+  - (sound_auth.bin)speech_list_cln04.po
+  - (sound_auth.bin)speech_list_cln06.po
+  - (sound_auth.bin)speech_list_cln08.po
+  - (sound_auth.bin)speech_list_cln10.po
+  - (sound_auth.bin)speech_list_cln12.po
+  - (sound_auth.bin)speech_list_cln14.po
+  - (sound_auth.bin)speech_list_cab_koyukidate.po
   files:
   - name: sound_auth.bin
     containerId: db.par
@@ -2926,7 +3178,9 @@ assets:
     translationReaders: []
     inserters: []
     writers: []
-  readers: []
+  readers:
+  - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Po.GroupSplitter
+    parameterId: ''
   writers: []
 - id: sound_auth_subtitles_speech_list_btl_hact.bin
   outputNames: [ "sound_auth_subtitles_speech_list_btl_hact.po" ]
@@ -3467,7 +3721,149 @@ assets:
   readers: []
   writers: []
 - id: talk.bin
-  outputNames: [ "talk.po" ]
+  outputNames:
+    - (talk.bin)lexus2_main_c01.po
+    - (talk.bin)lexus2_main_c02.po
+    - (talk.bin)lexus2_main_c03.po
+    - (talk.bin)lexus2_main_c04.po
+    - (talk.bin)lexus2_main_c05.po
+    - (talk.bin)lexus2_main_c06.po
+    - (talk.bin)lexus2_main_c07.po
+    - (talk.bin)lexus2_main_c08.po
+    - (talk.bin)lexus2_main_c09.po
+    - (talk.bin)lexus2_main_c10.po
+    - (talk.bin)lexus2_main_c11.po
+    - (talk.bin)lexus2_main_c12.po
+    - (talk.bin)lexus2_main_c13.po
+    - (talk.bin)lexus2_main_c14.po
+    - (talk.bin)lexus2_main_c15.po
+    - (talk.bin)lexus2_main_c16.po
+    - (talk.bin)lexus2_sub_a24.po
+    - (talk.bin)lexus2_sub_a28.po
+    - (talk.bin)lexus2_sub_a10.po
+    - (talk.bin)lexus2_sub_a17.po
+    - (talk.bin)lexus2_sub_b05.po
+    - (talk.bin)lexus2_sub_b23.po
+    - (talk.bin)lexus2_sub_a35.po
+    - (talk.bin)lexus2_sub_a36.po
+    - (talk.bin)lexus2_sub_b18.po
+    - (talk.bin)lexus2_sub_a22.po
+    - (talk.bin)lexus2_sub_a31.po
+    - (talk.bin)lexus2_sub_b08.po
+    - (talk.bin)lexus2_sub_b09.po
+    - (talk.bin)lexus2_sub_b07.po
+    - (talk.bin)lexus2_sub_b04.po
+    - (talk.bin)lexus2_sub_a33.po
+    - (talk.bin)lexus2_sub_a32.po
+    - (talk.bin)lexus2_sub_a34.po
+    - (talk.bin)lexus2_sub_b17.po
+    - (talk.bin)lexus2_playspot.po
+    - (talk.bin)lexus2_sub_b03.po
+    - (talk.bin)lexus2_sub_a05.po
+    - (talk.bin)lexus2_sub_a01.po
+    - (talk.bin)lexus2_sub_a02.po
+    - (talk.bin)lexus2_sub_a03.po
+    - (talk.bin)lexus2_sub_a04.po
+    - (talk.bin)lexus2_sub_a06.po
+    - (talk.bin)lexus2_sub_a07.po
+    - (talk.bin)lexus2_sub_a08.po
+    - (talk.bin)lexus2_sub_a09.po
+    - (talk.bin)lexus2_sub_a11.po
+    - (talk.bin)lexus2_sub_a12.po
+    - (talk.bin)lexus2_sub_a14.po
+    - (talk.bin)lexus2_sub_a15.po
+    - (talk.bin)lexus2_sub_a16.po
+    - (talk.bin)lexus2_sub_a20.po
+    - (talk.bin)lexus2_sub_a21.po
+    - (talk.bin)lexus2_sub_a23.po
+    - (talk.bin)lexus2_sub_a25.po
+    - (talk.bin)lexus2_sub_a26.po
+    - (talk.bin)lexus2_sub_a27.po
+    - (talk.bin)lexus2_sub_a29.po
+    - (talk.bin)lexus2_sub_a30.po
+    - (talk.bin)lexus2_sub_b01.po
+    - (talk.bin)lexus2_sub_b02.po
+    - (talk.bin)lexus2_sub_b06.po
+    - (talk.bin)lexus2_sub_b10.po
+    - (talk.bin)lexus2_sub_b11.po
+    - (talk.bin)lexus2_sub_b12.po
+    - (talk.bin)lexus2_sub_b16.po
+    - (talk.bin)lexus2_sub_b19.po
+    - (talk.bin)lexus2_sub_b13.po
+    - (talk.bin)lexus2_sub_b14.po
+    - (talk.bin)lexus2_sub_b15.po
+    - (talk.bin)lexus2_playspot_video.po
+    - (talk.bin)lexus2_sub_a13.po
+    - (talk.bin)lexus2_sub_a18.po
+    - (talk.bin)lexus2_sub_a19.po
+    - (talk.bin)lexus2_sub_b20.po
+    - (talk.bin)lexus2_sub_b21.po
+    - (talk.bin)lexus2_sub_b22.po
+    - (talk.bin)lexus2_locker.po
+    - (talk.bin)lexus2_minigame_bj.po
+    - (talk.bin)lexus2_minigame_poker.po
+    - (talk.bin)lexus2_main_majima.po
+    - (talk.bin)lexus2_shop.po
+    - (talk.bin)lexus2_playspot_cabaret.po
+    - (talk.bin)lexus2_minigame_nozoki.po
+    - (talk.bin)lexus2_lexus2_k_encboss.po
+    - (talk.bin)lexus2_playspot_clubsega.po
+    - (talk.bin)lexus2_minigame_ufo.po
+    - (talk.bin)lexus2_tougi.po
+    - (talk.bin)explanation_main_scenario.po
+    - (talk.bin)lexus2_haruka_onedari.po
+    - (talk.bin)lexus2_sub_a37.po
+    - (talk.bin)lexus2_sub_a38.po
+    - (talk.bin)lexus2_sub_a39.po
+    - (talk.bin)lexus2_sub_a40.po
+    - (talk.bin)lexus2_playspot_golf.po
+    - (talk.bin)lexus2_caba_main_03.po
+    - (talk.bin)lexus2_caba_main_04.po
+    - (talk.bin)lexus2_caba_main_05.po
+    - (talk.bin)lexus2_caba_main_06.po
+    - (talk.bin)lexus2_caba_main_07.po
+    - (talk.bin)lexus2_sub_b25.po
+    - (talk.bin)lexus2_sub_b26.po
+    - (talk.bin)lexus2_sinnkyuuinn.po
+    - (talk.bin)lexus2_caba_addsub.po
+    - (talk.bin)lexus2_caba_date_aika.po
+    - (talk.bin)lexus2_caba_date_kana.po
+    - (talk.bin)lexus2_caba_date_kirara.po
+    - (talk.bin)lexus2_caba_date_koyuki.po
+    - (talk.bin)lexus2_caba_date_shoko.po
+    - (talk.bin)lexus2_caba_date_yua.po
+    - (talk.bin)lexus2_sub_b27.po
+    - (talk.bin)lexus2_minigame_darts.po
+    - (talk.bin)lexus2_minigame_batting.po
+    - (talk.bin)lexus2_sub_b30.po
+    - (talk.bin)lexus2_sub_b31.po
+    - (talk.bin)lexus2_sub_b32.po
+    - (talk.bin)lexus2_caba_main_08.po
+    - (talk.bin)lexus2_caba_main_09.po
+    - (talk.bin)lexus2_sub_b24.po
+    - (talk.bin)lexus2_sub_a41.po
+    - (talk.bin)lexus2_lexus2_mj.po
+    - (talk.bin)lexus2_sub_b29.po
+    - (talk.bin)lexus2_sub_b33.po
+    - (talk.bin)lexus2_sub_b28.po
+    - (talk.bin)lexus2_cln_main_03.po
+    - (talk.bin)lexus2_cln_main_05.po
+    - (talk.bin)lexus2_cln_main_07.po
+    - (talk.bin)lexus2_cln_main_09.po
+    - (talk.bin)lexus2_cln_main_11.po
+    - (talk.bin)lexus2_cln_main_13.po
+    - (talk.bin)lexus2_cln_main_15.po
+    - (talk.bin)lexus2_cln_scout.po
+    - (talk.bin)lexus2_clan_snack01.po
+    - (talk.bin)lexus2_clan_snack02.po
+    - (talk.bin)lexus2_sub_a42.po
+    - (talk.bin)lexus2_photostudio.po
+    - (talk.bin)lexus2_playspot_bouncer.po
+    - (talk.bin)lexus2_caba_shop.po
+    - (talk.bin)lexus2_sub_a43.po
+    - (talk.bin)lexus2_main_c16_btl16_0010.po
+    - (talk.bin)lexus2_eve_enc.po
+    - (talk.bin)lexus2_minigame_karaoke.po
   files:
   - name: talk.bin
     containerId: db.par
@@ -3486,7 +3882,9 @@ assets:
     translationReaders: []
     inserters: []
     writers: []
-  readers: []
+  readers:
+  - typeName: TF3.YarhlPlugin.YakuzaKiwami2.Converters.Po.GroupSplitter
+    parameterId: ''
   writers: []
 - id: talk_category_title.bin
   outputNames: [ "talk_category_title.po" ]

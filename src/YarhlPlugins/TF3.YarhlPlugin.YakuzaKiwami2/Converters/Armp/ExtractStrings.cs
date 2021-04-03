@@ -68,8 +68,8 @@ namespace TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp
                     {
                         var entry = new PoEntry()
                         {
-                            Original = table.ValueStrings[i].Replace("\r\n", "\n"),
-                            Translated = table.ValueStrings[i].Replace("\r\n", "\n"),
+                            Original = table.ValueStrings[i].Replace("\\", "\\\\").Replace("\r\n", "\n"),
+                            Translated = table.ValueStrings[i].Replace("\\", "\\\\").Replace("\r\n", "\n"),
                             Context = $"{name}#{i}",
                         };
                         po.Add(entry);

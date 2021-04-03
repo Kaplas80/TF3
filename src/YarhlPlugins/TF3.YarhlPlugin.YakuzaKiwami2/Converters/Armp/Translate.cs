@@ -71,7 +71,7 @@ namespace TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp
             foreach (PoEntry entry in _translation.Entries.Where(x => x.Context.Split('#')[0] == name))
             {
                 int index = int.Parse(entry.Context.Split('#')[1]);
-                table.ValueStrings[index] = entry.Translated.Replace("\n", "\r\n");
+                table.ValueStrings[index] = entry.Translated.Replace("\\\\", "\\").Replace("\n", "\r\n");
             }
 
             if (table.Indexer != null)

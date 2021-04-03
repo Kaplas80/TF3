@@ -105,8 +105,13 @@ namespace TF3.Common.Core
                 asset.Transform(assetInfo.Readers, this.Parameters);
 
                 int outputIndex = 0;
-                foreach (Node node in asset.Children)
+                foreach (Node node in Navigator.IterateNodes(asset))
                 {
+                    if (node.IsContainer)
+                    {
+                        continue;
+                    }
+
                     node.Stream.WriteTo(Path.Combine(outputPath, assetInfo.OutputNames[outputIndex]));
                     outputIndex++;
                 }
