@@ -76,51 +76,7 @@ namespace TF3.Common.Core
 
             foreach (AssetInfo assetInfo in Assets)
             {
-                Node asset = NodeFactory.CreateContainer(assetInfo.Id);
-
-                foreach (Models.FileInfo fileInfo in assetInfo.Files)
-                {
-                    if (!containersDict.TryGetValue(fileInfo.ContainerId, out Node container))
-                    {
-                        throw new DirectoryNotFoundException($"Container not found: {fileInfo.ContainerId}");
-                    }
-
-                    Node file = Navigator.SearchNode(container, fileInfo.Path);
-
-                    if (file == null)
-                    {
-                        throw new FileNotFoundException($"File not found: {fileInfo.Name}");
-                    }
-
-                    if (!ChecksumHelper.Check(file.Stream, fileInfo.Checksum))
-                    {
-                        throw new ChecksumMismatchException($"Checksum mismatch in {fileInfo.Name}");
-                    }
-
-                    file.Transform(fileInfo.Readers, Parameters);
-                    asset.Add(file);
-                }
-
-                asset.Transform(assetInfo.Mergers, Parameters);
-
-                if (asset.Children.Count != 1)
-                {
-                    throw new FormatException("Mergers must return a single node NodeContainerFormat");
-                }
-
-                asset.Children[0].Transform(assetInfo.Extractors, Parameters);
-
-                int outputIndex = 0;
-                foreach (Node node in Navigator.IterateNodes(asset.Children[0]))
-                {
-                    if (node.IsContainer)
-                    {
-                        continue;
-                    }
-
-                    node.Stream.WriteTo(Path.Combine(outputPath, assetInfo.OutputNames[outputIndex]));
-                    outputIndex++;
-                }
+                ExtractAsset(assetInfo, containersDict, outputPath);
             }
         }
 
@@ -146,6 +102,62 @@ namespace TF3.Common.Core
 
                 ReadContainers(containerInfo.Containers, node, dictionary);
             }
+        }
+
+        private void ExtractAsset(AssetInfo assetInfo, Dictionary<string, Node> containers, string outputPath)
+        {
+            Node asset = ReadAssetFiles(assetInfo, containers);
+
+            if (asset.Children.Count != 1)
+            {
+                throw new FormatException("Mergers must return a single node NodeContainerFormat");
+            }
+
+            asset.Children[0].Transform(assetInfo.Extractors, Parameters);
+
+            int outputIndex = 0;
+            foreach (Node node in Navigator.IterateNodes(asset.Children[0]))
+            {
+                if (node.IsContainer)
+                {
+                    continue;
+                }
+
+                node.Stream.WriteTo(Path.Combine(outputPath, assetInfo.OutputNames[outputIndex]));
+                outputIndex++;
+            }
+        }
+
+        private Node ReadAssetFiles(AssetInfo assetInfo, Dictionary<string, Node> containers)
+        {
+            Node asset = NodeFactory.CreateContainer(assetInfo.Id);
+
+            foreach (Models.FileInfo fileInfo in assetInfo.Files)
+            {
+                if (!containers.TryGetValue(fileInfo.ContainerId, out Node container))
+                {
+                    throw new DirectoryNotFoundException($"Container not found: {fileInfo.ContainerId}");
+                }
+
+                Node file = Navigator.SearchNode(container, fileInfo.Path);
+
+                if (file == null)
+                {
+                    throw new FileNotFoundException($"File not found: {fileInfo.Name}");
+                }
+
+                if (!ChecksumHelper.Check(file.Stream, fileInfo.Checksum))
+                {
+                    throw new ChecksumMismatchException($"Checksum mismatch in {fileInfo.Name}");
+                }
+
+                file.Transform(fileInfo.Readers, Parameters);
+                asset.Add(file);
+            }
+
+            asset.Transform(assetInfo.Mergers, Parameters);
+
+            return asset;
         }
     }
 }
