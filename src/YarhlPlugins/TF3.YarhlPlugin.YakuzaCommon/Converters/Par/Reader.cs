@@ -170,7 +170,14 @@ namespace TF3.YarhlPlugin.YakuzaCommon.Converters.Par
                 long offset = ((long)fileInfo.ExtendedOffset << 32) | fileInfo.DataOffset;
                 DataStream stream = DataStreamFactory.FromStream(reader.Stream, offset, fileInfo.CompressedSize);
                 var binaryFormat = new ParFile(fileInfo, stream);
-                var file = new Node(fileName, binaryFormat);
+                var file = new Node(fileName, binaryFormat)
+                {
+                    Tags =
+                    {
+                        ["RawAttributes"] = fileInfo.RawAttributes,
+                        ["Timestamp"] = fileInfo.Timestamp,
+                    },
+                };
                 directory.Add(file);
             }
 

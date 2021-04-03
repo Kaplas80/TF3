@@ -21,6 +21,7 @@ namespace TF3.YarhlPlugin.YakuzaCommon.Converters.Par
 {
     using System;
     using System.Collections.Generic;
+    using System.IO;
     using System.Linq;
     using System.Text;
     using TF3.YarhlPlugin.YakuzaCommon.Enums;
@@ -180,9 +181,41 @@ namespace TF3.YarhlPlugin.YakuzaCommon.Converters.Par
                 ParFile file = node.GetFormatAs<ParFile>();
                 currentOffset = RoundOffset(currentOffset, file.FileInfo.CompressedSize);
                 file.FileInfo.DataOffset = currentOffset;
+                file.FileInfo.ExtendedOffset = 0;
+
+                if (node.Tags.ContainsKey("RawAttributes"))
+                {
+                    file.FileInfo.RawAttributes = node.Tags["RawAttributes"];
+                }
+                else if (node.Tags.ContainsKey("FileInfo"))
+                {
+                    FileInfo info = node.Tags["FileInfo"];
+                    file.FileInfo.RawAttributes = (uint)info.Attributes;
+                }
+                else
+                {
+                    file.FileInfo.RawAttributes = 0x20;
+                }
+
+                if (node.Tags.ContainsKey("Timestamp"))
+                {
+                    file.FileInfo.Timestamp = node.Tags["Timestamp"];
+                }
+                else if (node.Tags.ContainsKey("FileInfo"))
+                {
+                    DateTime baseDate = new DateTime(1970, 1, 1);
+                    FileInfo info = node.Tags["FileInfo"];
+                    file.FileInfo.Timestamp = (uint)(info.LastWriteTime - baseDate).TotalSeconds;
+                }
+                else
+                {
+                    DateTime baseDate = new DateTime(1970, 1, 1);
+                    file.FileInfo.Timestamp = (uint)(DateTime.Now - baseDate).TotalSeconds;
+                }
+
                 writer.WriteOfType(file.FileInfo);
 
-                _ = writer.Stream.Seek(currentOffset, System.IO.SeekOrigin.Begin);
+                _ = writer.Stream.Seek(currentOffset, SeekOrigin.Begin);
                 node.Stream.WriteTo(writer.Stream);
 
                 currentOffset += file.FileInfo.CompressedSize;
