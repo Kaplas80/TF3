@@ -51,5 +51,20 @@ namespace TF3.Common.Core.Models
         /// Gets or sets the list of converters needed to extract the translatable contents.
         /// </summary>
         public List<ConverterInfo> Extractors { get; set; }
+
+        /// <summary>
+        /// Gets or sets the list of converters needed to merge the translation files into a single node format.
+        /// </summary>
+        public List<ConverterInfo> TranslationMergers { get; set; }
+
+        /// <summary>
+        /// Gets or sets the name of the translator converter.
+        /// </summary>
+        public string Translator { get; set; }
+
+        /// <summary>
+        /// Gets or sets the list of converters needed to split the asset format into files.
+        /// </summary>
+        public List<ConverterInfo> Splitters { get; set; }
     }
 }

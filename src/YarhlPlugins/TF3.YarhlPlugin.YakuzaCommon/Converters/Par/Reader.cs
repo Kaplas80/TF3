@@ -22,6 +22,7 @@ namespace TF3.YarhlPlugin.YakuzaCommon.Converters.Par
     using System;
     using System.Text;
     using TF3.YarhlPlugin.YakuzaCommon.Enums;
+    using TF3.YarhlPlugin.YakuzaCommon.Formats;
     using TF3.YarhlPlugin.YakuzaCommon.Types;
     using Yarhl.FileFormat;
     using Yarhl.FileSystem;
@@ -168,21 +169,8 @@ namespace TF3.YarhlPlugin.YakuzaCommon.Converters.Par
 
                 long offset = ((long)fileInfo.ExtendedOffset << 32) | fileInfo.DataOffset;
                 DataStream stream = DataStreamFactory.FromStream(reader.Stream, offset, fileInfo.CompressedSize);
-                var binaryFormat = new BinaryFormat(stream);
-                var file = new Node(fileName, binaryFormat)
-                {
-                    Tags =
-                    {
-                        ["Flags"] = fileInfo.Flags,
-                        ["OriginalSize"] = fileInfo.OriginalSize,
-                        ["CompressedSize"] = fileInfo.CompressedSize,
-                        ["DataOffset"] = fileInfo.DataOffset,
-                        ["RawAttributes"] = fileInfo.RawAttributes,
-                        ["ExtendedOffset"] = fileInfo.ExtendedOffset,
-                        ["Timestamp"] = fileInfo.Timestamp,
-                    },
-                };
-
+                var binaryFormat = new ParFile(fileInfo, stream);
+                var file = new Node(fileName, binaryFormat);
                 directory.Add(file);
             }
 

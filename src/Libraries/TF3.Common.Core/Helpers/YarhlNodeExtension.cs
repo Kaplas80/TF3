@@ -45,7 +45,7 @@ namespace TF3.Common.Core.Helpers
             var yarhlConverters = PluginManager.Instance.GetConverters().Select(x => x.Metadata).ToList();
             foreach (ConverterInfo converterInfo in converters)
             {
-                ConverterMetadata metadata = yarhlConverters.FirstOrDefault(x => x.Name == converterInfo.TypeName);
+                ConverterMetadata metadata = yarhlConverters.Find(x => x.Name == converterInfo.TypeName);
 
                 if (metadata == null)
                 {
@@ -55,7 +55,7 @@ namespace TF3.Common.Core.Helpers
                 IConverter converter = (IConverter)Activator.CreateInstance(metadata.Type);
 
                 System.Reflection.MethodInfo initializer = metadata.Type.GetMethod("Initialize");
-                ParameterInfo parameter = parameters.FirstOrDefault(x => x.Id == converterInfo.ParameterId);
+                ParameterInfo parameter = parameters.Find(x => x.Id == converterInfo.ParameterId);
                 if (initializer != null && parameter != null)
                 {
                     _ = initializer.Invoke(converter, new object[] { parameter.Value });
@@ -63,6 +63,34 @@ namespace TF3.Common.Core.Helpers
 
                 node.ChangeFormat((IFormat)ConvertFormat.With(converter, node.Format));
             }
+        }
+
+        /// <summary>
+        /// Calls a translator converter.
+        /// </summary>
+        /// <param name="node">The original node.</param>
+        /// <param name="translation">The node with the translation.</param>
+        /// <param name="translator">The translator converter.</param>
+        public static void Translate(this Node node, Node translation, string translator)
+        {
+            var yarhlConverters = PluginManager.Instance.GetConverters().Select(x => x.Metadata).ToList();
+            ConverterMetadata metadata = yarhlConverters.Find(x => x.Name == translator);
+
+            if (metadata == null)
+            {
+                throw new UnknownConverterException($"Unknown converter: {translator}");
+            }
+
+            IConverter converter = (IConverter)Activator.CreateInstance(metadata.Type);
+
+            System.Reflection.MethodInfo initializer = metadata.Type.GetMethod("Initialize");
+
+            if (initializer != null)
+            {
+                _ = initializer.Invoke(converter, new object[] { translation.Children[0].Format });
+            }
+
+            node.Children[0].ChangeFormat((IFormat)ConvertFormat.With(converter, node.Children[0].Format));
         }
     }
 }

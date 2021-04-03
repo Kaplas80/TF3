@@ -24,6 +24,7 @@ namespace TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz
     using System.Text;
     using Ionic.Zlib;
     using TF3.YarhlPlugin.YakuzaCommon.Enums;
+    using TF3.YarhlPlugin.YakuzaCommon.Formats;
     using TF3.YarhlPlugin.YakuzaCommon.Types;
     using Yarhl.FileFormat;
     using Yarhl.IO;
@@ -31,7 +32,7 @@ namespace TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz
     /// <summary>
     /// Compress SLLZ zlib files.
     /// </summary>
-    public class CompressZlib : IConverter<BinaryFormat, BinaryFormat>, IInitializer<CompressorParameters>
+    public class CompressZlib : IConverter<BinaryFormat, ParFile>, IInitializer<CompressorParameters>
     {
         private CompressorParameters _compressorParameters = new ()
         {
@@ -51,7 +52,7 @@ namespace TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz
         /// </summary>
         /// <param name="source">Original format.</param>
         /// <returns>The compressed binary.</returns>
-        public BinaryFormat Convert(BinaryFormat source)
+        public ParFile Convert(BinaryFormat source)
         {
             if (source == null)
             {
@@ -72,7 +73,7 @@ namespace TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz
             catch (SllzException)
             {
                 // Data can't be compressed
-                return source;
+                return new ParFile(source.Stream);
             }
 
             DataStream outputDataStream = _compressorParameters.OutputStream ?? DataStreamFactory.FromMemory();
@@ -99,7 +100,18 @@ namespace TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz
             writer.WriteOfType(header);
             writer.Write(compressedData);
 
-            return new BinaryFormat(outputDataStream);
+            var fileInfo = new ParFileInfo
+            {
+                Flags = 0x80000000,
+                OriginalSize = (uint)source.Stream.Length,
+                CompressedSize = (uint)outputDataStream.Length,
+                DataOffset = 0,
+                RawAttributes = 0,
+                ExtendedOffset = 0,
+                Timestamp = 0,
+            };
+
+            return new ParFile(fileInfo, outputDataStream);
         }
 
         private static byte[] Compress(byte[] inputData)

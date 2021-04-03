@@ -15,4 +15,5 @@
     <PackageReference Include="Standart.Hash.xxHash" />
     <PackageReference Include="YamlDotNet" />
   </ItemGroup>
+
 </Project>

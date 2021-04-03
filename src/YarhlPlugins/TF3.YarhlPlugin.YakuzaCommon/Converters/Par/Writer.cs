@@ -24,6 +24,7 @@ namespace TF3.YarhlPlugin.YakuzaCommon.Converters.Par
     using System.Linq;
     using System.Text;
     using TF3.YarhlPlugin.YakuzaCommon.Enums;
+    using TF3.YarhlPlugin.YakuzaCommon.Formats;
     using TF3.YarhlPlugin.YakuzaCommon.Types;
     using Yarhl.FileFormat;
     using Yarhl.FileSystem;
@@ -50,7 +51,7 @@ namespace TF3.YarhlPlugin.YakuzaCommon.Converters.Par
         public void Initialize(WriterParameters parameters) => _writerParameters = parameters;
 
         /// <summary>
-        /// Converts a BinaryFormat into a NodeContainerFormat.
+        /// Converts a NodeContainerFormat into a BinaryFormat.
         /// </summary>
         /// <param name="source">Input format.</param>
         /// <returns>The node container format.</returns>
@@ -91,7 +92,7 @@ namespace TF3.YarhlPlugin.YakuzaCommon.Converters.Par
             {
                 if (!node.IsContainer)
                 {
-                    uint compressedSize = (uint)node.Tags["CompressedSize"];
+                    uint compressedSize = (uint)node.Stream.Length;
                     fileOffset = RoundSize(fileOffset, compressedSize);
                     if (compressedSize > maxFileSize)
                     {
@@ -176,27 +177,15 @@ namespace TF3.YarhlPlugin.YakuzaCommon.Converters.Par
                 long returnPosition = writer.Stream.Position;
                 _ = writer.Stream.Seek(fileStartOffset + (i * 0x20), System.IO.SeekOrigin.Begin);
 
-                var fileInfo = new ParFileInfo
-                {
-                    Flags = (uint)node.Tags["Flags"],
-                    OriginalSize = (uint)node.Tags["OriginalSize"],
-                    CompressedSize = (uint)node.Tags["CompressedSize"],
-                    DataOffset = (uint)node.Tags["DataOffset"],
-                    RawAttributes = (uint)node.Tags["RawAttributes"],
-                    ExtendedOffset = (uint)node.Tags["ExtendedOffset"],
-                    Timestamp = (ulong)node.Tags["Timestamp"],
-                };
+                ParFile file = node.GetFormatAs<ParFile>();
+                currentOffset = RoundOffset(currentOffset, file.FileInfo.CompressedSize);
+                file.FileInfo.DataOffset = currentOffset;
+                writer.WriteOfType(file.FileInfo);
 
-                writer.WriteOfType(fileInfo);
-
-                currentOffset = RoundOffset(currentOffset, fileInfo.CompressedSize);
-
-                long returnPosition2 = writer.Stream.Position;
                 _ = writer.Stream.Seek(currentOffset, System.IO.SeekOrigin.Begin);
                 node.Stream.WriteTo(writer.Stream);
-                _ = writer.Stream.Seek(returnPosition2, System.IO.SeekOrigin.Begin);
 
-                currentOffset += fileInfo.CompressedSize;
+                currentOffset += file.FileInfo.CompressedSize;
 
                 _ = writer.Stream.Seek(returnPosition, System.IO.SeekOrigin.Begin);
             }

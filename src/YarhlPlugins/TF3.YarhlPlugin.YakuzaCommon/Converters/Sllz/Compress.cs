@@ -21,13 +21,14 @@ namespace TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz
 {
     using System;
     using TF3.YarhlPlugin.YakuzaCommon.Enums;
+    using TF3.YarhlPlugin.YakuzaCommon.Formats;
     using Yarhl.FileFormat;
     using Yarhl.IO;
 
     /// <summary>
     /// Creates SLLZ files.
     /// </summary>
-    public class Compress : IConverter<BinaryFormat, BinaryFormat>, IInitializer<CompressorParameters>
+    public class Compress : IConverter<BinaryFormat, ParFile>, IInitializer<CompressorParameters>
     {
         private CompressorParameters _compressorParameters = new ()
         {
@@ -47,7 +48,7 @@ namespace TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz
         /// </summary>
         /// <param name="source">original format.</param>
         /// <returns>The compressed binary.</returns>
-        public BinaryFormat Convert(BinaryFormat source)
+        public ParFile Convert(BinaryFormat source)
         {
             if (source == null)
             {
@@ -56,8 +57,8 @@ namespace TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz
 
             return _compressorParameters.CompressionType switch
             {
-                CompressionType.Standard => (BinaryFormat)ConvertFormat.With<CompressStandard, CompressorParameters>(_compressorParameters, source),
-                CompressionType.Zlib => (BinaryFormat)ConvertFormat.With<CompressZlib, CompressorParameters>(_compressorParameters, source),
+                CompressionType.Standard => (ParFile)ConvertFormat.With<CompressStandard, CompressorParameters>(_compressorParameters, source),
+                CompressionType.Zlib => (ParFile)ConvertFormat.With<CompressZlib, CompressorParameters>(_compressorParameters, source),
                 _ => throw new FormatException($"SLLZ: Bad Compression Type ({_compressorParameters.CompressionType})")
             };
         }

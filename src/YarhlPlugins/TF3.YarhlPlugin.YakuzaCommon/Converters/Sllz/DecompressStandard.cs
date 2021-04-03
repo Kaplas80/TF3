@@ -23,6 +23,7 @@ namespace TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz
     using System.Collections.Generic;
     using System.Text;
     using TF3.YarhlPlugin.YakuzaCommon.Enums;
+    using TF3.YarhlPlugin.YakuzaCommon.Formats;
     using TF3.YarhlPlugin.YakuzaCommon.Types;
     using Yarhl.FileFormat;
     using Yarhl.IO;
@@ -30,14 +31,14 @@ namespace TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz
     /// <summary>
     /// Decompress SLLZ standard files.
     /// </summary>
-    public class DecompressStandard : IConverter<BinaryFormat, BinaryFormat>
+    public class DecompressStandard : IConverter<ParFile, ParFile>
     {
         /// <summary>
         /// Decompress a SLLZ standard compressed BinaryFormat.
         /// </summary>
         /// <param name="source">Compressed format.</param>
         /// <returns>The decompressed binary.</returns>
-        public BinaryFormat Convert(BinaryFormat source)
+        public ParFile Convert(ParFile source)
         {
             if (source == null)
             {
@@ -69,7 +70,18 @@ namespace TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz
                 0,
                 (int)header.OriginalSize);
 
-            return new BinaryFormat(newStream);
+            var fileInfo = new ParFileInfo
+            {
+                Flags = 0x00000000,
+                OriginalSize = (uint)newStream.Length,
+                CompressedSize = (uint)newStream.Length,
+                DataOffset = source.FileInfo.DataOffset,
+                RawAttributes = source.FileInfo.RawAttributes,
+                ExtendedOffset = source.FileInfo.ExtendedOffset,
+                Timestamp = source.FileInfo.Timestamp,
+            };
+
+            return new ParFile(fileInfo, newStream);
         }
 
         private static void CheckHeader(SllzHeader header)

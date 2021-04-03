@@ -22,6 +22,7 @@ namespace TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz
     using System;
     using System.Text;
     using TF3.YarhlPlugin.YakuzaCommon.Enums;
+    using TF3.YarhlPlugin.YakuzaCommon.Formats;
     using TF3.YarhlPlugin.YakuzaCommon.Types;
     using Yarhl.FileFormat;
     using Yarhl.IO;
@@ -29,14 +30,14 @@ namespace TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz
     /// <summary>
     /// Decompress SLLZ files.
     /// </summary>
-    public class Decompress : IConverter<BinaryFormat, BinaryFormat>
+    public class Decompress : IConverter<ParFile, ParFile>
     {
         /// <summary>
         /// Decompress a SLLZ compressed BinaryFormat.
         /// </summary>
         /// <param name="source">Compressed format.</param>
         /// <returns>The decompressed binary.</returns>
-        public BinaryFormat Convert(BinaryFormat source)
+        public ParFile Convert(ParFile source)
         {
             if (source == null)
             {
@@ -62,8 +63,8 @@ namespace TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz
 
             return header.CompressionType switch
             {
-                CompressionType.Standard => (BinaryFormat)ConvertFormat.With<DecompressStandard>(source),
-                CompressionType.Zlib => (BinaryFormat)ConvertFormat.With<DecompressZlib>(source),
+                CompressionType.Standard => (ParFile)ConvertFormat.With<DecompressStandard>(source),
+                CompressionType.Zlib => (ParFile)ConvertFormat.With<DecompressZlib>(source),
                 _ => throw new FormatException($"SLLZ: Bad Compression Type ({header.CompressionType})"),
             };
         }
