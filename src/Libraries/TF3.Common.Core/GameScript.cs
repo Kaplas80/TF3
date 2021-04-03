@@ -104,10 +104,11 @@ namespace TF3.Common.Core
 
                 asset.Transform(assetInfo.Readers, this.Parameters);
 
+                int outputIndex = 0;
                 foreach (Node node in asset.Children)
                 {
-                    node.Tags["OutputName"] = string.Concat(assetInfo.Id, ".po");
-                    node.Stream.WriteTo(Path.Combine(outputPath, node.Tags["OutputName"]));
+                    node.Stream.WriteTo(Path.Combine(outputPath, assetInfo.OutputNames[outputIndex]));
+                    outputIndex++;
                 }
             }
         }

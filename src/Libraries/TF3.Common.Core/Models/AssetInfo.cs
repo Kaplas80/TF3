@@ -33,6 +33,11 @@ namespace TF3.Common.Core.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// Gets or sets the list of output names.
+        /// </summary>
+        public List<string> OutputNames { get; set; }
+
+        /// <summary>
         /// Gets or sets the list of files in this asset.
         /// </summary>
         public List<FileInfo> Files { get; set; }
