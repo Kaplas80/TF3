@@ -1,0 +1,560 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ParameterInfoTypeConverter
+   | Translation Framework v3 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ParameterInfoTypeConverter
+   | Translation Framework v3 ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../dev/toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo_48.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+                
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../index.html" title="Home">Home</a>
+                      </li>
+                      <li>
+                          <a href="../guides/First-Steps.html" title="Guides">Guides</a>
+                      </li>
+                      <li>
+                          <a href="../dev/Changelog.html" title="API">API</a>
+                      </li>
+                      <li>
+                          <a href="https://github.com/Kaplas80/TF3" title="GitHub">GitHub</a>
+                      </li>
+                </ul>    </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+                  
+                  <ul class="nav level1">
+                    <li class="">
+                      <a href="../dev/Changelog.html" title="Changelog" class="">Changelog</a>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">API</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <span class="expand-stub"></span>
+                            <a href="../dev/../api/TF3.Common.Core.html" title="TF3.Common.Core" class="">TF3.Common.Core</a>
+                              
+                              <ul class="nav level3">
+                                <li class="">
+                                  <a href="../dev/../api/TF3.Common.Core.GameScript.html" title="GameScript" class="">GameScript</a>
+                                </li>
+                                <li class="">
+                                  <a href="../dev/../api/TF3.Common.Core.ScriptManager.html" title="ScriptManager" class="">ScriptManager</a>
+                                </li>
+                              </ul>  </li>
+                          <li class="">
+                            <span class="expand-stub"></span>
+                            <a href="../dev/../api/TF3.Common.Core.Exceptions.html" title="TF3.Common.Core.Exceptions" class="">TF3.Common.Core.Exceptions</a>
+                              
+                              <ul class="nav level3">
+                                <li class="">
+                                  <a href="../dev/../api/TF3.Common.Core.Exceptions.ChecksumMismatchException.html" title="ChecksumMismatchException" class="">ChecksumMismatchException</a>
+                                </li>
+                                <li class="">
+                                  <a href="../dev/../api/TF3.Common.Core.Exceptions.UnknownConverterException.html" title="UnknownConverterException" class="">UnknownConverterException</a>
+                                </li>
+                              </ul>  </li>
+                          <li class="">
+                            <span class="expand-stub"></span>
+                            <a href="../dev/../api/TF3.Common.Core.Helpers.html" title="TF3.Common.Core.Helpers" class="">TF3.Common.Core.Helpers</a>
+                              
+                              <ul class="nav level3">
+                                <li class="">
+                                  <a href="../dev/../api/TF3.Common.Core.Helpers.ChecksumHelper.html" title="ChecksumHelper" class="">ChecksumHelper</a>
+                                </li>
+                                <li class="">
+                                  <a href="../dev/../api/TF3.Common.Core.Helpers.YarhlNodeExtension.html" title="YarhlNodeExtension" class="">YarhlNodeExtension</a>
+                                </li>
+                              </ul>  </li>
+                          <li class="">
+                            <span class="expand-stub"></span>
+                            <a href="../dev/../api/TF3.Common.Core.Models.html" title="TF3.Common.Core.Models" class="">TF3.Common.Core.Models</a>
+                              
+                              <ul class="nav level3">
+                                <li class="">
+                                  <a href="../dev/../api/TF3.Common.Core.Models.AssetInfo.html" title="AssetInfo" class="">AssetInfo</a>
+                                </li>
+                                <li class="">
+                                  <a href="../dev/../api/TF3.Common.Core.Models.ContainerInfo.html" title="ContainerInfo" class="">ContainerInfo</a>
+                                </li>
+                                <li class="">
+                                  <a href="../dev/../api/TF3.Common.Core.Models.ConverterInfo.html" title="ConverterInfo" class="">ConverterInfo</a>
+                                </li>
+                                <li class="">
+                                  <a href="../dev/../api/TF3.Common.Core.Models.FileInfo.html" title="FileInfo" class="">FileInfo</a>
+                                </li>
+                                <li class="">
+                                  <a href="../dev/../api/TF3.Common.Core.Models.ParameterInfo.html" title="ParameterInfo" class="">ParameterInfo</a>
+                                </li>
+                              </ul>  </li>
+                          <li class="">
+                            <span class="expand-stub"></span>
+                            <a href="../dev/../api/TF3.Common.Core.Yaml.html" title="TF3.Common.Core.Yaml" class="">TF3.Common.Core.Yaml</a>
+                              
+                              <ul class="nav level3">
+                                <li class="">
+                                  <a href="../dev/../api/TF3.Common.Core.Yaml.ParameterInfoTypeConverter.html" title="ParameterInfoTypeConverter" class="">ParameterInfoTypeConverter</a>
+                                </li>
+                              </ul>  </li>
+                          <li class="">
+                            <span class="expand-stub"></span>
+                            <a href="../dev/../api/TF3.Core.Converters.html" title="TF3.Core.Converters" class="">TF3.Core.Converters</a>
+                              
+                              <ul class="nav level3">
+                                <li class="">
+                                  <a href="../dev/../api/TF3.Core.Converters.FormatToSingleNode.html" title="FormatToSingleNode" class="">FormatToSingleNode</a>
+                                </li>
+                                <li class="">
+                                  <a href="../dev/../api/TF3.Core.Converters.SingleNodeToFormat.html" title="SingleNodeToFormat" class="">SingleNodeToFormat</a>
+                                </li>
+                              </ul>  </li>
+                          <li class="">
+                            <span class="expand-stub"></span>
+                            <a href="../dev/../api/TF3.YarhlPlugin.YakuzaCommon.Converters.Par.html" title="TF3.YarhlPlugin.YakuzaCommon.Converters.Par" class="">TF3.YarhlPlugin.YakuzaCommon.Converters.Par</a>
+                              
+                              <ul class="nav level3">
+                                <li class="">
+                                  <a href="../dev/../api/TF3.YarhlPlugin.YakuzaCommon.Converters.Par.Reader.html" title="Reader" class="">Reader</a>
+                                </li>
+                                <li class="">
+                                  <a href="../dev/../api/TF3.YarhlPlugin.YakuzaCommon.Converters.Par.Writer.html" title="Writer" class="">Writer</a>
+                                </li>
+                                <li class="">
+                                  <a href="../dev/../api/TF3.YarhlPlugin.YakuzaCommon.Converters.Par.WriterParameters.html" title="WriterParameters" class="">WriterParameters</a>
+                                </li>
+                              </ul>  </li>
+                          <li class="">
+                            <span class="expand-stub"></span>
+                            <a href="../dev/../api/TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.html" title="TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz" class="">TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz</a>
+                              
+                              <ul class="nav level3">
+                                <li class="">
+                                  <a href="../dev/../api/TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Compress.html" title="Compress" class="">Compress</a>
+                                </li>
+                                <li class="">
+                                  <a href="../dev/../api/TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.CompressorParameters.html" title="CompressorParameters" class="">CompressorParameters</a>
+                                </li>
+                                <li class="">
+                                  <a href="../dev/../api/TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.CompressStandard.html" title="CompressStandard" class="">CompressStandard</a>
+                                </li>
+                                <li class="">
+                                  <a href="../dev/../api/TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.CompressZlib.html" title="CompressZlib" class="">CompressZlib</a>
+                                </li>
+                                <li class="">
+                                  <a href="../dev/../api/TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.Decompress.html" title="Decompress" class="">Decompress</a>
+                                </li>
+                                <li class="">
+                                  <a href="../dev/../api/TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.DecompressStandard.html" title="DecompressStandard" class="">DecompressStandard</a>
+                                </li>
+                                <li class="">
+                                  <a href="../dev/../api/TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.DecompressZlib.html" title="DecompressZlib" class="">DecompressZlib</a>
+                                </li>
+                                <li class="">
+                                  <a href="../dev/../api/TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz.SllzException.html" title="SllzException" class="">SllzException</a>
+                                </li>
+                              </ul>  </li>
+                          <li class="">
+                            <span class="expand-stub"></span>
+                            <a href="../dev/../api/TF3.YarhlPlugin.YakuzaCommon.Enums.html" title="TF3.YarhlPlugin.YakuzaCommon.Enums" class="">TF3.YarhlPlugin.YakuzaCommon.Enums</a>
+                              
+                              <ul class="nav level3">
+                                <li class="">
+                                  <a href="../dev/../api/TF3.YarhlPlugin.YakuzaCommon.Enums.CompressionType.html" title="CompressionType" class="">CompressionType</a>
+                                </li>
+                                <li class="">
+                                  <a href="../dev/../api/TF3.YarhlPlugin.YakuzaCommon.Enums.Endianness.html" title="Endianness" class="">Endianness</a>
+                                </li>
+                                <li class="">
+                                  <a href="../dev/../api/TF3.YarhlPlugin.YakuzaCommon.Enums.Platform.html" title="Platform" class="">Platform</a>
+                                </li>
+                              </ul>  </li>
+                          <li class="">
+                            <span class="expand-stub"></span>
+                            <a href="../dev/../api/TF3.YarhlPlugin.YakuzaCommon.Formats.html" title="TF3.YarhlPlugin.YakuzaCommon.Formats" class="">TF3.YarhlPlugin.YakuzaCommon.Formats</a>
+                              
+                              <ul class="nav level3">
+                                <li class="">
+                                  <a href="../dev/../api/TF3.YarhlPlugin.YakuzaCommon.Formats.ParFile.html" title="ParFile" class="">ParFile</a>
+                                </li>
+                              </ul>  </li>
+                          <li class="">
+                            <span class="expand-stub"></span>
+                            <a href="../dev/../api/TF3.YarhlPlugin.YakuzaCommon.Types.html" title="TF3.YarhlPlugin.YakuzaCommon.Types" class="">TF3.YarhlPlugin.YakuzaCommon.Types</a>
+                              
+                              <ul class="nav level3">
+                                <li class="">
+                                  <a href="../dev/../api/TF3.YarhlPlugin.YakuzaCommon.Types.FileHeader.html" title="FileHeader" class="">FileHeader</a>
+                                </li>
+                                <li class="">
+                                  <a href="../dev/../api/TF3.YarhlPlugin.YakuzaCommon.Types.ParDirectoryInfo.html" title="ParDirectoryInfo" class="">ParDirectoryInfo</a>
+                                </li>
+                                <li class="">
+                                  <a href="../dev/../api/TF3.YarhlPlugin.YakuzaCommon.Types.ParFileInfo.html" title="ParFileInfo" class="">ParFileInfo</a>
+                                </li>
+                                <li class="">
+                                  <a href="../dev/../api/TF3.YarhlPlugin.YakuzaCommon.Types.ParIndex.html" title="ParIndex" class="">ParIndex</a>
+                                </li>
+                                <li class="">
+                                  <a href="../dev/../api/TF3.YarhlPlugin.YakuzaCommon.Types.SllzHeader.html" title="SllzHeader" class="">SllzHeader</a>
+                                </li>
+                              </ul>  </li>
+                          <li class="">
+                            <span class="expand-stub"></span>
+                            <a href="../dev/../api/TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.html" title="TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp" class="">TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp</a>
+                              
+                              <ul class="nav level3">
+                                <li class="">
+                                  <a href="../dev/../api/TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ExtractStrings.html" title="ExtractStrings" class="">ExtractStrings</a>
+                                </li>
+                                <li class="">
+                                  <a href="../dev/../api/TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.FromXlsx.html" title="FromXlsx" class="">FromXlsx</a>
+                                </li>
+                                <li class="">
+                                  <a href="../dev/../api/TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Reader.html" title="Reader" class="">Reader</a>
+                                </li>
+                                <li class="">
+                                  <a href="../dev/../api/TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.ToXlsx.html" title="ToXlsx" class="">ToXlsx</a>
+                                </li>
+                                <li class="">
+                                  <a href="../dev/../api/TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Translate.html" title="Translate" class="">Translate</a>
+                                </li>
+                                <li class="">
+                                  <a href="../dev/../api/TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp.Writer.html" title="Writer" class="">Writer</a>
+                                </li>
+                              </ul>  </li>
+                          <li class="">
+                            <span class="expand-stub"></span>
+                            <a href="../dev/../api/TF3.YarhlPlugin.YakuzaKiwami2.Converters.Po.html" title="TF3.YarhlPlugin.YakuzaKiwami2.Converters.Po" class="">TF3.YarhlPlugin.YakuzaKiwami2.Converters.Po</a>
+                              
+                              <ul class="nav level3">
+                                <li class="">
+                                  <a href="../dev/../api/TF3.YarhlPlugin.YakuzaKiwami2.Converters.Po.BinaryPoSplitter.html" title="BinaryPoSplitter" class="">BinaryPoSplitter</a>
+                                </li>
+                                <li class="">
+                                  <a href="../dev/../api/TF3.YarhlPlugin.YakuzaKiwami2.Converters.Po.Merger.html" title="Merger" class="">Merger</a>
+                                </li>
+                                <li class="">
+                                  <a href="../dev/../api/TF3.YarhlPlugin.YakuzaKiwami2.Converters.Po.Splitter.html" title="Splitter" class="">Splitter</a>
+                                </li>
+                              </ul>  </li>
+                          <li class="">
+                            <span class="expand-stub"></span>
+                            <a href="../dev/../api/TF3.YarhlPlugin.YakuzaKiwami2.Enums.html" title="TF3.YarhlPlugin.YakuzaKiwami2.Enums" class="">TF3.YarhlPlugin.YakuzaKiwami2.Enums</a>
+                              
+                              <ul class="nav level3">
+                                <li class="">
+                                  <a href="../dev/../api/TF3.YarhlPlugin.YakuzaKiwami2.Enums.Endianness.html" title="Endianness" class="">Endianness</a>
+                                </li>
+                                <li class="">
+                                  <a href="../dev/../api/TF3.YarhlPlugin.YakuzaKiwami2.Enums.FieldType.html" title="FieldType" class="">FieldType</a>
+                                </li>
+                              </ul>  </li>
+                          <li class="">
+                            <span class="expand-stub"></span>
+                            <a href="../dev/../api/TF3.YarhlPlugin.YakuzaKiwami2.Formats.html" title="TF3.YarhlPlugin.YakuzaKiwami2.Formats" class="">TF3.YarhlPlugin.YakuzaKiwami2.Formats</a>
+                              
+                              <ul class="nav level3">
+                                <li class="">
+                                  <a href="../dev/../api/TF3.YarhlPlugin.YakuzaKiwami2.Formats.ArmpTable.html" title="ArmpTable" class="">ArmpTable</a>
+                                </li>
+                              </ul>  </li>
+                          <li class="">
+                            <span class="expand-stub"></span>
+                            <a href="../dev/../api/TF3.YarhlPlugin.YakuzaKiwami2.Types.html" title="TF3.YarhlPlugin.YakuzaKiwami2.Types" class="">TF3.YarhlPlugin.YakuzaKiwami2.Types</a>
+                              
+                              <ul class="nav level3">
+                                <li class="">
+                                  <a href="../dev/../api/TF3.YarhlPlugin.YakuzaKiwami2.Types.ArmpTableHeader.html" title="ArmpTableHeader" class="">ArmpTableHeader</a>
+                                </li>
+                                <li class="">
+                                  <a href="../dev/../api/TF3.YarhlPlugin.YakuzaKiwami2.Types.FileHeader.html" title="FileHeader" class="">FileHeader</a>
+                                </li>
+                              </ul>  </li>
+                        </ul>  </li>
+                  </ul>        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="TF3.Common.Core.Yaml.ParameterInfoTypeConverter">
+  
+  
+  <h1 id="TF3_Common_Core_Yaml_ParameterInfoTypeConverter" data-uid="TF3.Common.Core.Yaml.ParameterInfoTypeConverter" class="text-break">Class ParameterInfoTypeConverter
+  </h1>
+  <div class="markdown level0 summary"><p>YamlDotNet type converter for ParameterInfo.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">ParameterInfoTypeConverter</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="TF3.Common.Core.Yaml.html">TF3.Common.Core.Yaml</a></h6>
+  <h6><strong>Assembly</strong>: TF3.Core.dll</h6>
+  <h5 id="TF3_Common_Core_Yaml_ParameterInfoTypeConverter_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ParameterInfoTypeConverter : IYamlTypeConverter</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Kaplas80/TF3/new/develop/docs/apidoc/new?filename=TF3_Common_Core_Yaml_ParameterInfoTypeConverter_Accepts_Type_.md&amp;value=---%0Auid%3A%20TF3.Common.Core.Yaml.ParameterInfoTypeConverter.Accepts(Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Kaplas80/TF3/blob/develop/src/Libraries/TF3.Core/Yaml/ParameterInfoTypeConverter.cs/#L35">View Source</a>
+  </span>
+  <a id="TF3_Common_Core_Yaml_ParameterInfoTypeConverter_Accepts_" data-uid="TF3.Common.Core.Yaml.ParameterInfoTypeConverter.Accepts*"></a>
+  <h4 id="TF3_Common_Core_Yaml_ParameterInfoTypeConverter_Accepts_Type_" data-uid="TF3.Common.Core.Yaml.ParameterInfoTypeConverter.Accepts(Type)">Accepts(Type)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Accepts(Type type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Kaplas80/TF3/new/develop/docs/apidoc/new?filename=TF3_Common_Core_Yaml_ParameterInfoTypeConverter_ReadYaml_IParser_Type_.md&amp;value=---%0Auid%3A%20TF3.Common.Core.Yaml.ParameterInfoTypeConverter.ReadYaml(IParser%2CType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Kaplas80/TF3/blob/develop/src/Libraries/TF3.Core/Yaml/ParameterInfoTypeConverter.cs/#L38">View Source</a>
+  </span>
+  <a id="TF3_Common_Core_Yaml_ParameterInfoTypeConverter_ReadYaml_" data-uid="TF3.Common.Core.Yaml.ParameterInfoTypeConverter.ReadYaml*"></a>
+  <h4 id="TF3_Common_Core_Yaml_ParameterInfoTypeConverter_ReadYaml_IParser_Type_" data-uid="TF3.Common.Core.Yaml.ParameterInfoTypeConverter.ReadYaml(IParser,Type)">ReadYaml(IParser, Type)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object ReadYaml(IParser parser, Type type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IParser</span></td>
+        <td><span class="parametername">parser</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Kaplas80/TF3/new/develop/docs/apidoc/new?filename=TF3_Common_Core_Yaml_ParameterInfoTypeConverter_WriteYaml_IEmitter_System_Object_Type_.md&amp;value=---%0Auid%3A%20TF3.Common.Core.Yaml.ParameterInfoTypeConverter.WriteYaml(IEmitter%2CSystem.Object%2CType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Kaplas80/TF3/blob/develop/src/Libraries/TF3.Core/Yaml/ParameterInfoTypeConverter.cs/#L87">View Source</a>
+  </span>
+  <a id="TF3_Common_Core_Yaml_ParameterInfoTypeConverter_WriteYaml_" data-uid="TF3.Common.Core.Yaml.ParameterInfoTypeConverter.WriteYaml*"></a>
+  <h4 id="TF3_Common_Core_Yaml_ParameterInfoTypeConverter_WriteYaml_IEmitter_System_Object_Type_" data-uid="TF3.Common.Core.Yaml.ParameterInfoTypeConverter.WriteYaml(IEmitter,System.Object,Type)">WriteYaml(IEmitter, Object, Type)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteYaml(IEmitter emitter, object value, Type type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEmitter</span></td>
+        <td><span class="parametername">emitter</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Kaplas80/TF3/new/develop/docs/apidoc/new?filename=TF3_Common_Core_Yaml_ParameterInfoTypeConverter.md&amp;value=---%0Auid%3A%20TF3.Common.Core.Yaml.ParameterInfoTypeConverter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Kaplas80/TF3/blob/develop/src/Libraries/TF3.Core/Yaml/ParameterInfoTypeConverter.cs/#L32" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright (c) 2021 Kaplas
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
