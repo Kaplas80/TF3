@@ -21,7 +21,7 @@ namespace TF3.Tests.Yakuza
 {
     using System;
     using NUnit.Framework;
-    using TF3.Common.Yakuza.Converters.Par;
+    using TF3.YarhlPlugin.YakuzaCommon.Converters.Par;
     using Yarhl.FileSystem;
     using Yarhl.IO;
 

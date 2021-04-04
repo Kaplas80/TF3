@@ -20,8 +20,8 @@
 namespace TF3.Tests.Yakuza
 {
     using NUnit.Framework;
-    using TF3.Common.Yakuza.Converters.Sllz;
-    using TF3.Common.Yakuza.Enums;
+    using TF3.YarhlPlugin.YakuzaCommon.Converters.Sllz;
+    using TF3.YarhlPlugin.YakuzaCommon.Enums;
     using Yarhl.FileSystem;
     using Yarhl.IO;
 
