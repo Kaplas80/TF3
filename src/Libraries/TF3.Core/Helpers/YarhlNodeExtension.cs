@@ -87,10 +87,10 @@ namespace TF3.Common.Core.Helpers
 
             if (initializer != null)
             {
-                _ = initializer.Invoke(converter, new object[] { translation.Children[0].Format });
+                _ = initializer.Invoke(converter, new object[] { translation.Format });
             }
 
-            node.Children[0].ChangeFormat((IFormat)ConvertFormat.With(converter, node.Children[0].Format));
+            node.ChangeFormat((IFormat)ConvertFormat.With(converter, node.Format));
         }
     }
 }

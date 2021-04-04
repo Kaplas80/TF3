@@ -117,7 +117,16 @@ namespace TF3.Common.Core
                         throw new DirectoryNotFoundException($"Container not found: {fileInfo.ContainerId}");
                     }
 
-                    Node newFile = Navigator.SearchNode(asset, fileInfo.Name);
+                    Node newFile;
+                    if (asset.Children[0].Name == "single_node")
+                    {
+                        newFile = asset.Children[0];
+                    }
+                    else
+                    {
+                        newFile = Navigator.SearchNode(asset, fileInfo.Name);
+                    }
+
                     newFile.Transform(fileInfo.Writers, Parameters);
 
                     Node originalFile = Navigator.SearchNode(container, fileInfo.Path);
@@ -186,23 +195,29 @@ namespace TF3.Common.Core
         {
             Node asset = ReadAsset(assetInfo, containers);
 
-            if (asset.Children.Count != 1)
-            {
-                throw new FormatException("Mergers must return a single node NodeContainerFormat");
-            }
+            asset.Transform(assetInfo.Extractors, Parameters);
 
-            asset.Children[0].Transform(assetInfo.Extractors, Parameters);
-
-            int outputIndex = 0;
-            foreach (Node node in Navigator.IterateNodes(asset))
+            if (asset.IsContainer)
             {
-                if (node.IsContainer)
+                int outputIndex = 0;
+                foreach (Node node in Navigator.IterateNodes(asset))
                 {
-                    continue;
-                }
+                    if (node.IsContainer)
+                    {
+                        continue;
+                    }
 
-                node.Stream.WriteTo(Path.Combine(outputPath, assetInfo.OutputNames[outputIndex]));
-                outputIndex++;
+                    node.Stream.WriteTo(Path.Combine(outputPath, assetInfo.OutputNames[outputIndex]));
+                    outputIndex++;
+                }
+            }
+            else if (asset.Stream != null)
+            {
+                asset.Stream.WriteTo(Path.Combine(outputPath, assetInfo.OutputNames[0]));
+            }
+            else
+            {
+                throw new FormatException("Can't extract asset.");
             }
         }
 

@@ -27,14 +27,14 @@ namespace TF3.YarhlPlugin.YakuzaKiwami2.Converters.Po
     /// <summary>
     /// Po files merger.
     /// </summary>
-    public class BinaryPoMerger : IConverter<NodeContainerFormat, NodeContainerFormat>
+    public class Merger : IConverter<NodeContainerFormat, Yarhl.Media.Text.Po>
     {
         /// <summary>
         /// Merges all parts (BinaryFormat) in a Po file.
         /// </summary>
         /// <param name="source">Po parts.</param>
         /// <returns>The merged Po.</returns>
-        public NodeContainerFormat Convert(NodeContainerFormat source)
+        public Yarhl.Media.Text.Po Convert(NodeContainerFormat source)
         {
             if (source == null)
             {
@@ -51,9 +51,7 @@ namespace TF3.YarhlPlugin.YakuzaKiwami2.Converters.Po
                 po.Add(poPart.Entries);
             }
 
-            NodeContainerFormat result = new NodeContainerFormat();
-            result.Root.Add(new Node("merged", po));
-            return result;
+            return po;
         }
     }
 }
