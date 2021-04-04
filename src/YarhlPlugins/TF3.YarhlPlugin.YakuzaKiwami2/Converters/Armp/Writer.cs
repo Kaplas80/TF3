@@ -22,10 +22,9 @@ namespace TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp
     using System;
     using System.Collections.Generic;
     using System.Text;
-    using TF3.YarhlPlugin.YakuzaCommon.Enums;
-    using TF3.YarhlPlugin.YakuzaCommon.Types;
     using TF3.YarhlPlugin.YakuzaKiwami2.Enums;
     using TF3.YarhlPlugin.YakuzaKiwami2.Formats;
+    using TF3.YarhlPlugin.YakuzaKiwami2.Types;
     using Yarhl.FileFormat;
     using Yarhl.IO;
 
@@ -58,7 +57,7 @@ namespace TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp
             var header = new FileHeader
             {
                 Magic = "armp",
-                PlatformId = Platform.Win32,
+                PlatformId = 0,
                 Endianness = Endianness.LittleEndian,
                 SizeExtended = 0,
                 Relocated = 0,

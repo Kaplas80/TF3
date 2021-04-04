@@ -14,8 +14,4 @@
     <PackageReference Include="EPPlus" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="../TF3.YarhlPlugin.YakuzaCommon/TF3.YarhlPlugin.YakuzaCommon.csproj" />
-  </ItemGroup>
-
 </Project>

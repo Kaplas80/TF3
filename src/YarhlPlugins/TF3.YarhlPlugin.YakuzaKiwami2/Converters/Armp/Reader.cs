@@ -21,8 +21,6 @@ namespace TF3.YarhlPlugin.YakuzaKiwami2.Converters.Armp
 {
     using System;
     using System.Text;
-    using TF3.YarhlPlugin.YakuzaCommon.Enums;
-    using TF3.YarhlPlugin.YakuzaCommon.Types;
     using TF3.YarhlPlugin.YakuzaKiwami2.Enums;
     using TF3.YarhlPlugin.YakuzaKiwami2.Formats;
     using TF3.YarhlPlugin.YakuzaKiwami2.Types;
