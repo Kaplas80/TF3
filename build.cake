@@ -11,8 +11,8 @@ Task("Define-Project")
     info.StableNuGetFeedToken = info.GitHubToken;
 
     info.AddLibraryProjects("src/Libraries/TF3.Core/TF3.Core.csproj");
-    info.AddLibraryProjects("src/YarhlPlugins/TF3.YarhlPlugin.YakuzaCommon/TF3.Plugin.YakuzaCommon.csproj");
-    info.AddLibraryProjects("src/YarhlPlugins/TF3.YarhlPlugin.YakuzaKiwami2/TF3.Plugin.YakuzaKiwami2.csproj");
+    info.AddLibraryProjects("src/YarhlPlugins/TF3.YarhlPlugin.YakuzaCommon/TF3.YarhlPlugin.YakuzaCommon.csproj");
+    info.AddLibraryProjects("src/YarhlPlugins/TF3.YarhlPlugin.YakuzaKiwami2/TF3.YarhlPlugin.YakuzaKiwami2.csproj");
     info.AddApplicationProjects("src/Apps/TF3.CommandLine/TF3.CommandLine.csproj");
     info.AddTestProjects("src/Tests/TF3.Tests.Yakuza/TF3.Tests.Yakuza.csproj");
     info.AddTestProjects("src/Tests/TF3.Tests.YakuzaKiwami2/TF3.Tests.YakuzaKiwami2.csproj");
