@@ -18,38 +18,38 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-namespace TF3.Common.Core.Models
+namespace TF3.CommandLine.Options
 {
-    using TF3.Common.Core.Enums;
+    using global::CommandLine;
 
     /// <summary>
-    /// Translatable file info.
+    /// Rebuild editable contents.
     /// </summary>
-    public class File
+    [Verb("rebuild", HelpText = "Rebuild editable contents.")]
+    public class RebuildOptions
     {
         /// <summary>
-        /// Gets or sets the file name.
+        /// Gets or sets the script to use.
         /// </summary>
-        public string Name { get; set; }
+        [Option("script", Required = true, HelpText = "Script to use")]
+        public string Script { get; set; }
 
         /// <summary>
-        /// Gets or sets the file container path.
+        /// Gets or sets the game directory.
         /// </summary>
-        public string ContainerPath { get; set; }
+        [Option("install-dir", Required = true, HelpText = "Game directory.")]
+        public string GameDir { get; set; }
 
         /// <summary>
-        /// Gets or sets the file relative path to the container root.
+        /// Gets or sets the translation directory.
         /// </summary>
-        public string RelativePath { get; set; }
+        [Option("translation-dir", Required = true, HelpText = "Translation directory.")]
+        public string TranslationDir { get; set; }
 
         /// <summary>
-        /// Gets or sets the file contents type.
+        /// Gets or sets the output directory.
         /// </summary>
-        public ContentType Contents { get; set; }
-
-        /// <summary>
-        /// Gets or sets the file checksum.
-        /// </summary>
-        public ulong CheckSum { get; set; }
+        [Option("output-dir", Required = true, HelpText = "Output directory.")]
+        public string Output { get; set; }
     }
 }

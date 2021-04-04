@@ -50,7 +50,7 @@ namespace TF3.Common.Core
                                              .Build();
             foreach (string file in Directory.EnumerateFiles(path, "TF3.Script.*.yaml"))
             {
-                string scriptContents = System.IO.File.ReadAllText(file);
+                string scriptContents = File.ReadAllText(file);
                 GameScript script = deserializer.Deserialize<GameScript>(scriptContents);
                 _scripts.Add(script);
             }

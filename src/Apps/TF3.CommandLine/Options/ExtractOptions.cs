@@ -29,9 +29,21 @@ namespace TF3.CommandLine.Options
     public class ExtractOptions
     {
         /// <summary>
-        /// Gets or sets the project file.
+        /// Gets or sets the script to use.
         /// </summary>
-        [Option("project", Required = true, HelpText = "Project file.")]
-        public string Project { get; set; }
+        [Option("script", Required = true, HelpText = "Script to use")]
+        public string Script { get; set; }
+
+        /// <summary>
+        /// Gets or sets the game directory.
+        /// </summary>
+        [Option("install-dir", Required = true, HelpText = "Game directory.")]
+        public string GameDir { get; set; }
+
+        /// <summary>
+        /// Gets or sets the output directory.
+        /// </summary>
+        [Option("output-dir", Required = true, HelpText = "Output directory.")]
+        public string Output { get; set; }
     }
 }

@@ -21,7 +21,7 @@ containers:
   containers: []
 assets:
 - id: access_type.bin
-  outputNames: [ "access_type.po" ]
+  outputNames: [ "text/access_type.po" ]
   files:
   - name: access_type.bin
     containerId: db.par
@@ -53,7 +53,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: asset_asset_name_lexus2.bin
-  outputNames: [ "asset_asset_name_lexus2.po" ]
+  outputNames: [ "text/asset_asset_name_lexus2.po" ]
   files:
   - name: asset_asset_name_lexus2.bin
     containerId: db.par
@@ -86,200 +86,200 @@ assets:
     parameterId: ''
 - id: auth.bin
   outputNames:
-  - (auth.bin)a01_0013.po
-  - (auth.bin)a01_0015.po
-  - (auth.bin)a01_0020.po
-  - (auth.bin)a01_0030.po
-  - (auth.bin)a01_0040.po
-  - (auth.bin)a01_0080.po
-  - (auth.bin)a01_0105.po
-  - (auth.bin)a02_0030.po
-  - (auth.bin)a02_0040.po
-  - (auth.bin)a03_0010.po
-  - (auth.bin)a03_0050.po
-  - (auth.bin)a03_0080.po
-  - (auth.bin)a04_0030.po
-  - (auth.bin)a04_0090.po
-  - (auth.bin)a04_0100.po
-  - (auth.bin)a05_0010.po
-  - (auth.bin)a05_0020.po
-  - (auth.bin)a05_0040.po
-  - (auth.bin)a05_0110.po
-  - (auth.bin)a05_0140.po
-  - (auth.bin)a06_0020.po
-  - (auth.bin)a06_0030.po
-  - (auth.bin)a07_0010.po
-  - (auth.bin)a07_0050.po
-  - (auth.bin)a07_0060.po
-  - (auth.bin)a07_0075.po
-  - (auth.bin)a08_0130.po
-  - (auth.bin)a09_0020.po
-  - (auth.bin)a09_0060.po
-  - (auth.bin)a09_0090.po
-  - (auth.bin)a09_0140.po
-  - (auth.bin)a09_0150.po
-  - (auth.bin)a10_0010.po
-  - (auth.bin)a10_0030.po
-  - (auth.bin)a10_0050.po
-  - (auth.bin)a10_0060.po
-  - (auth.bin)a10_0080.po
-  - (auth.bin)a10_0150.po
-  - (auth.bin)a11_0040.po
-  - (auth.bin)a11_0060.po
-  - (auth.bin)a12_0040.po
-  - (auth.bin)a12_0050.po
-  - (auth.bin)a12_0080.po
-  - (auth.bin)a12_0100.po
-  - (auth.bin)a12_0160.po
-  - (auth.bin)a13_0070.po
-  - (auth.bin)a13_0090.po
-  - (auth.bin)a13_0100.po
-  - (auth.bin)a13_0170.po
-  - (auth.bin)a14_0020.po
-  - (auth.bin)a14_0050.po
-  - (auth.bin)a14_0090.po
-  - (auth.bin)a14_0120.po
-  - (auth.bin)a14_0130.po
-  - (auth.bin)a15_0020.po
-  - (auth.bin)a15_0080.po
-  - (auth.bin)a16_0010.po
-  - (auth.bin)a16_0020.po
-  - (auth.bin)a16_0050.po
-  - (auth.bin)a17_0010.po
-  - (auth.bin)a17_0020.po
-  - (auth.bin)c01_0018.po
-  - (auth.bin)c01_0025.po
-  - (auth.bin)c01_0035.po
-  - (auth.bin)c01_0050.po
-  - (auth.bin)c01_0060.po
-  - (auth.bin)c01_0070.po
-  - (auth.bin)c01_0090.po
-  - (auth.bin)c01_0100.po
-  - (auth.bin)c01_0110.po
-  - (auth.bin)c01_0120.po
-  - (auth.bin)c02_0010.po
-  - (auth.bin)c02_0060.po
-  - (auth.bin)c03_0020.po
-  - (auth.bin)c03_0030.po
-  - (auth.bin)c03_0040.po
-  - (auth.bin)c03_0060.po
-  - (auth.bin)c03_0070.po
-  - (auth.bin)c04_0010.po
-  - (auth.bin)c04_0015.po
-  - (auth.bin)c04_0020.po
-  - (auth.bin)c04_0040.po
-  - (auth.bin)c04_0050.po
-  - (auth.bin)c04_0060.po
-  - (auth.bin)c04_0070.po
-  - (auth.bin)c04_0080.po
-  - (auth.bin)c04_0110.po
-  - (auth.bin)c04_0120.po
-  - (auth.bin)c05_0030.po
-  - (auth.bin)c05_0050.po
-  - (auth.bin)c05_0060.po
-  - (auth.bin)c05_0070.po
-  - (auth.bin)c05_0080.po
-  - (auth.bin)c05_0090.po
-  - (auth.bin)c05_0100.po
-  - (auth.bin)c05_0120.po
-  - (auth.bin)c05_0130.po
-  - (auth.bin)c07_0020.po
-  - (auth.bin)c07_0070.po
-  - (auth.bin)c07_0080.po
-  - (auth.bin)c07_0090.po
-  - (auth.bin)c08_0010.po
-  - (auth.bin)c08_0030.po
-  - (auth.bin)c08_0040.po
-  - (auth.bin)c08_0060.po
-  - (auth.bin)c08_0110.po
-  - (auth.bin)c08_0120.po
-  - (auth.bin)c08_0150.po
-  - (auth.bin)c08_0160.po
-  - (auth.bin)c08_0170.po
-  - (auth.bin)c09_0010.po
-  - (auth.bin)c09_0030.po
-  - (auth.bin)c09_0040.po
-  - (auth.bin)c09_0050.po
-  - (auth.bin)c09_0080.po
-  - (auth.bin)c09_0100.po
-  - (auth.bin)c09_0110.po
-  - (auth.bin)c10_0020.po
-  - (auth.bin)c10_0070.po
-  - (auth.bin)c10_0090.po
-  - (auth.bin)c10_0100.po
-  - (auth.bin)c10_0110.po
-  - (auth.bin)c11_0010.po
-  - (auth.bin)c11_0030.po
-  - (auth.bin)c11_0050.po
-  - (auth.bin)c12_0010.po
-  - (auth.bin)c12_0020.po
-  - (auth.bin)c12_0030.po
-  - (auth.bin)c12_0060.po
-  - (auth.bin)c12_0090.po
-  - (auth.bin)c12_0110.po
-  - (auth.bin)c12_0130.po
-  - (auth.bin)c12_0140.po
-  - (auth.bin)c12_0150.po
-  - (auth.bin)c13_0010.po
-  - (auth.bin)c13_0020.po
-  - (auth.bin)c13_0030.po
-  - (auth.bin)c13_0080.po
-  - (auth.bin)c13_0130.po
-  - (auth.bin)c13_0140.po
-  - (auth.bin)c13_0150.po
-  - (auth.bin)c13_0160.po
-  - (auth.bin)c14_0010.po
-  - (auth.bin)c14_0030.po
-  - (auth.bin)c14_0040.po
-  - (auth.bin)c14_0060.po
-  - (auth.bin)c14_0070.po
-  - (auth.bin)c14_0100.po
-  - (auth.bin)c14_0110.po
-  - (auth.bin)c15_0010.po
-  - (auth.bin)c15_0040.po
-  - (auth.bin)c15_0050.po
-  - (auth.bin)c15_0060.po
-  - (auth.bin)c15_0070.po
-  - (auth.bin)c16_0040.po
-  - (auth.bin)s02_0060.po
-  - (auth.bin)s03_0010.po
-  - (auth.bin)s03_0020.po
-  - (auth.bin)s08_0010.po
-  - (auth.bin)s08_0020.po
-  - (auth.bin)s08_0023.po
-  - (auth.bin)s08_0025.po
-  - (auth.bin)s08_0030.po
-  - (auth.bin)c16_0030.po
-  - (auth.bin)s01_0010.po
-  - (auth.bin)s01_0020.po
-  - (auth.bin)s01_0030.po
-  - (auth.bin)s05_0010.po
-  - (auth.bin)s05_0020.po
-  - (auth.bin)s05_0030.po
-  - (auth.bin)s06_0010.po
-  - (auth.bin)s06_0020.po
-  - (auth.bin)s10_0010.po
-  - (auth.bin)s10_0020.po
-  - (auth.bin)a91_0010.po
-  - (auth.bin)a91_0020.po
-  - (auth.bin)a91_0030.po
-  - (auth.bin)a92_0010.po
-  - (auth.bin)a93_0010.po
-  - (auth.bin)a93_0020.po
-  - (auth.bin)a93_0030.po
-  - (auth.bin)a93_0040.po
-  - (auth.bin)a93_0050.po
-  - (auth.bin)a93_0060.po
-  - (auth.bin)a93_0070.po
-  - (auth.bin)a93_0080.po
-  - (auth.bin)a01_0016.po
-  - (auth.bin)s02_0010.po
-  - (auth.bin)s02_0020.po
-  - (auth.bin)c02_0043.po
-  - (auth.bin)r1_flashback_01.po
-  - (auth.bin)r1_flashback_02.po
-  - (auth.bin)r1_flashback_03.po
-  - (auth.bin)r1_flashback_04.po
+  - text/(auth.bin)a01_0013.po
+  - text/(auth.bin)a01_0015.po
+  - text/(auth.bin)a01_0020.po
+  - text/(auth.bin)a01_0030.po
+  - text/(auth.bin)a01_0040.po
+  - text/(auth.bin)a01_0080.po
+  - text/(auth.bin)a01_0105.po
+  - text/(auth.bin)a02_0030.po
+  - text/(auth.bin)a02_0040.po
+  - text/(auth.bin)a03_0010.po
+  - text/(auth.bin)a03_0050.po
+  - text/(auth.bin)a03_0080.po
+  - text/(auth.bin)a04_0030.po
+  - text/(auth.bin)a04_0090.po
+  - text/(auth.bin)a04_0100.po
+  - text/(auth.bin)a05_0010.po
+  - text/(auth.bin)a05_0020.po
+  - text/(auth.bin)a05_0040.po
+  - text/(auth.bin)a05_0110.po
+  - text/(auth.bin)a05_0140.po
+  - text/(auth.bin)a06_0020.po
+  - text/(auth.bin)a06_0030.po
+  - text/(auth.bin)a07_0010.po
+  - text/(auth.bin)a07_0050.po
+  - text/(auth.bin)a07_0060.po
+  - text/(auth.bin)a07_0075.po
+  - text/(auth.bin)a08_0130.po
+  - text/(auth.bin)a09_0020.po
+  - text/(auth.bin)a09_0060.po
+  - text/(auth.bin)a09_0090.po
+  - text/(auth.bin)a09_0140.po
+  - text/(auth.bin)a09_0150.po
+  - text/(auth.bin)a10_0010.po
+  - text/(auth.bin)a10_0030.po
+  - text/(auth.bin)a10_0050.po
+  - text/(auth.bin)a10_0060.po
+  - text/(auth.bin)a10_0080.po
+  - text/(auth.bin)a10_0150.po
+  - text/(auth.bin)a11_0040.po
+  - text/(auth.bin)a11_0060.po
+  - text/(auth.bin)a12_0040.po
+  - text/(auth.bin)a12_0050.po
+  - text/(auth.bin)a12_0080.po
+  - text/(auth.bin)a12_0100.po
+  - text/(auth.bin)a12_0160.po
+  - text/(auth.bin)a13_0070.po
+  - text/(auth.bin)a13_0090.po
+  - text/(auth.bin)a13_0100.po
+  - text/(auth.bin)a13_0170.po
+  - text/(auth.bin)a14_0020.po
+  - text/(auth.bin)a14_0050.po
+  - text/(auth.bin)a14_0090.po
+  - text/(auth.bin)a14_0120.po
+  - text/(auth.bin)a14_0130.po
+  - text/(auth.bin)a15_0020.po
+  - text/(auth.bin)a15_0080.po
+  - text/(auth.bin)a16_0010.po
+  - text/(auth.bin)a16_0020.po
+  - text/(auth.bin)a16_0050.po
+  - text/(auth.bin)a17_0010.po
+  - text/(auth.bin)a17_0020.po
+  - text/(auth.bin)c01_0018.po
+  - text/(auth.bin)c01_0025.po
+  - text/(auth.bin)c01_0035.po
+  - text/(auth.bin)c01_0050.po
+  - text/(auth.bin)c01_0060.po
+  - text/(auth.bin)c01_0070.po
+  - text/(auth.bin)c01_0090.po
+  - text/(auth.bin)c01_0100.po
+  - text/(auth.bin)c01_0110.po
+  - text/(auth.bin)c01_0120.po
+  - text/(auth.bin)c02_0010.po
+  - text/(auth.bin)c02_0060.po
+  - text/(auth.bin)c03_0020.po
+  - text/(auth.bin)c03_0030.po
+  - text/(auth.bin)c03_0040.po
+  - text/(auth.bin)c03_0060.po
+  - text/(auth.bin)c03_0070.po
+  - text/(auth.bin)c04_0010.po
+  - text/(auth.bin)c04_0015.po
+  - text/(auth.bin)c04_0020.po
+  - text/(auth.bin)c04_0040.po
+  - text/(auth.bin)c04_0050.po
+  - text/(auth.bin)c04_0060.po
+  - text/(auth.bin)c04_0070.po
+  - text/(auth.bin)c04_0080.po
+  - text/(auth.bin)c04_0110.po
+  - text/(auth.bin)c04_0120.po
+  - text/(auth.bin)c05_0030.po
+  - text/(auth.bin)c05_0050.po
+  - text/(auth.bin)c05_0060.po
+  - text/(auth.bin)c05_0070.po
+  - text/(auth.bin)c05_0080.po
+  - text/(auth.bin)c05_0090.po
+  - text/(auth.bin)c05_0100.po
+  - text/(auth.bin)c05_0120.po
+  - text/(auth.bin)c05_0130.po
+  - text/(auth.bin)c07_0020.po
+  - text/(auth.bin)c07_0070.po
+  - text/(auth.bin)c07_0080.po
+  - text/(auth.bin)c07_0090.po
+  - text/(auth.bin)c08_0010.po
+  - text/(auth.bin)c08_0030.po
+  - text/(auth.bin)c08_0040.po
+  - text/(auth.bin)c08_0060.po
+  - text/(auth.bin)c08_0110.po
+  - text/(auth.bin)c08_0120.po
+  - text/(auth.bin)c08_0150.po
+  - text/(auth.bin)c08_0160.po
+  - text/(auth.bin)c08_0170.po
+  - text/(auth.bin)c09_0010.po
+  - text/(auth.bin)c09_0030.po
+  - text/(auth.bin)c09_0040.po
+  - text/(auth.bin)c09_0050.po
+  - text/(auth.bin)c09_0080.po
+  - text/(auth.bin)c09_0100.po
+  - text/(auth.bin)c09_0110.po
+  - text/(auth.bin)c10_0020.po
+  - text/(auth.bin)c10_0070.po
+  - text/(auth.bin)c10_0090.po
+  - text/(auth.bin)c10_0100.po
+  - text/(auth.bin)c10_0110.po
+  - text/(auth.bin)c11_0010.po
+  - text/(auth.bin)c11_0030.po
+  - text/(auth.bin)c11_0050.po
+  - text/(auth.bin)c12_0010.po
+  - text/(auth.bin)c12_0020.po
+  - text/(auth.bin)c12_0030.po
+  - text/(auth.bin)c12_0060.po
+  - text/(auth.bin)c12_0090.po
+  - text/(auth.bin)c12_0110.po
+  - text/(auth.bin)c12_0130.po
+  - text/(auth.bin)c12_0140.po
+  - text/(auth.bin)c12_0150.po
+  - text/(auth.bin)c13_0010.po
+  - text/(auth.bin)c13_0020.po
+  - text/(auth.bin)c13_0030.po
+  - text/(auth.bin)c13_0080.po
+  - text/(auth.bin)c13_0130.po
+  - text/(auth.bin)c13_0140.po
+  - text/(auth.bin)c13_0150.po
+  - text/(auth.bin)c13_0160.po
+  - text/(auth.bin)c14_0010.po
+  - text/(auth.bin)c14_0030.po
+  - text/(auth.bin)c14_0040.po
+  - text/(auth.bin)c14_0060.po
+  - text/(auth.bin)c14_0070.po
+  - text/(auth.bin)c14_0100.po
+  - text/(auth.bin)c14_0110.po
+  - text/(auth.bin)c15_0010.po
+  - text/(auth.bin)c15_0040.po
+  - text/(auth.bin)c15_0050.po
+  - text/(auth.bin)c15_0060.po
+  - text/(auth.bin)c15_0070.po
+  - text/(auth.bin)c16_0040.po
+  - text/(auth.bin)s02_0060.po
+  - text/(auth.bin)s03_0010.po
+  - text/(auth.bin)s03_0020.po
+  - text/(auth.bin)s08_0010.po
+  - text/(auth.bin)s08_0020.po
+  - text/(auth.bin)s08_0023.po
+  - text/(auth.bin)s08_0025.po
+  - text/(auth.bin)s08_0030.po
+  - text/(auth.bin)c16_0030.po
+  - text/(auth.bin)s01_0010.po
+  - text/(auth.bin)s01_0020.po
+  - text/(auth.bin)s01_0030.po
+  - text/(auth.bin)s05_0010.po
+  - text/(auth.bin)s05_0020.po
+  - text/(auth.bin)s05_0030.po
+  - text/(auth.bin)s06_0010.po
+  - text/(auth.bin)s06_0020.po
+  - text/(auth.bin)s10_0010.po
+  - text/(auth.bin)s10_0020.po
+  - text/(auth.bin)a91_0010.po
+  - text/(auth.bin)a91_0020.po
+  - text/(auth.bin)a91_0030.po
+  - text/(auth.bin)a92_0010.po
+  - text/(auth.bin)a93_0010.po
+  - text/(auth.bin)a93_0020.po
+  - text/(auth.bin)a93_0030.po
+  - text/(auth.bin)a93_0040.po
+  - text/(auth.bin)a93_0050.po
+  - text/(auth.bin)a93_0060.po
+  - text/(auth.bin)a93_0070.po
+  - text/(auth.bin)a93_0080.po
+  - text/(auth.bin)a01_0016.po
+  - text/(auth.bin)s02_0010.po
+  - text/(auth.bin)s02_0020.po
+  - text/(auth.bin)c02_0043.po
+  - text/(auth.bin)r1_flashback_01.po
+  - text/(auth.bin)r1_flashback_02.po
+  - text/(auth.bin)r1_flashback_03.po
+  - text/(auth.bin)r1_flashback_04.po
   files:
   - name: auth.bin
     containerId: db.par
@@ -313,7 +313,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: auth_costume_change.bin
-  outputNames: [ "auth_costume_change.po" ]
+  outputNames: [ "text/auth_costume_change.po" ]
   files:
   - name: auth_costume_change.bin
     containerId: db.par
@@ -345,7 +345,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: battle_tougijyo_bonus.bin
-  outputNames: [ "battle_tougijyo_bonus.po" ]
+  outputNames: [ "text/battle_tougijyo_bonus.po" ]
   files:
   - name: battle_tougijyo_bonus.bin
     containerId: db.par
@@ -377,7 +377,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: battle_tougijyo_fighter_info.bin
-  outputNames: [ "battle_tougijyo_fighter_info.po" ]
+  outputNames: [ "text/battle_tougijyo_fighter_info.po" ]
   files:
   - name: battle_tougijyo_fighter_info.bin
     containerId: db.par
@@ -409,7 +409,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: battle_tougijyo_message.bin
-  outputNames: [ "battle_tougijyo_message.po" ]
+  outputNames: [ "text/battle_tougijyo_message.po" ]
   files:
   - name: battle_tougijyo_message.bin
     containerId: db.par
@@ -441,7 +441,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: battle_tougijyo_select_match.bin
-  outputNames: [ "battle_tougijyo_select_match.po" ]
+  outputNames: [ "text/battle_tougijyo_select_match.po" ]
   files:
   - name: battle_tougijyo_select_match.bin
     containerId: db.par
@@ -473,7 +473,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: bouncer_mission.bin
-  outputNames: [ "bouncer_mission.po" ]
+  outputNames: [ "text/bouncer_mission.po" ]
   files:
   - name: bouncer_mission.bin
     containerId: db.par
@@ -505,7 +505,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: caption.bin
-  outputNames: [ "caption.po" ]
+  outputNames: [ "text/caption.po" ]
   files:
   - name: caption.bin
     containerId: db.par
@@ -537,7 +537,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: character_npc_soldier_name_group.bin
-  outputNames: [ "character_npc_soldier_name_group.po" ]
+  outputNames: [ "text/character_npc_soldier_name_group.po" ]
   files:
   - name: character_npc_soldier_name_group.bin
     containerId: db.par
@@ -569,7 +569,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: clan_creator_main_menu.bin
-  outputNames: [ "clan_creator_main_menu.po" ]
+  outputNames: [ "text/clan_creator_main_menu.po" ]
   files:
   - name: clan_creator_main_menu.bin
     containerId: db.par
@@ -601,7 +601,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: clan_creator_member.bin
-  outputNames: [ "clan_creator_member.po" ]
+  outputNames: [ "text/clan_creator_member.po" ]
   files:
   - name: clan_creator_member.bin
     containerId: db.par
@@ -633,7 +633,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: clan_creator_mission.bin
-  outputNames: [ "clan_creator_mission.po" ]
+  outputNames: [ "text/clan_creator_mission.po" ]
   files:
   - name: clan_creator_mission.bin
     containerId: db.par
@@ -665,7 +665,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: clan_creator_rarity.bin
-  outputNames: [ "clan_creator_rarity.po" ]
+  outputNames: [ "text/clan_creator_rarity.po" ]
   files:
   - name: clan_creator_rarity.bin
     containerId: db.par
@@ -697,7 +697,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: clan_creator_skill.bin
-  outputNames: [ "clan_creator_skill.po" ]
+  outputNames: [ "text/clan_creator_skill.po" ]
   files:
   - name: clan_creator_skill.bin
     containerId: db.par
@@ -729,7 +729,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: clan_creator_special_attack.bin
-  outputNames: [ "clan_creator_special_attack.po" ]
+  outputNames: [ "text/clan_creator_special_attack.po" ]
   files:
   - name: clan_creator_special_attack.bin
     containerId: db.par
@@ -759,7 +759,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: complete.bin
-  outputNames: [ "complete.po" ]
+  outputNames: [ "text/complete.po" ]
   files:
   - name: complete.bin
     containerId: db.par
@@ -791,7 +791,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: complete_category.bin
-  outputNames: [ "complete_category.po" ]
+  outputNames: [ "text/complete_category.po" ]
   files:
   - name: complete_category.bin
     containerId: db.par
@@ -823,7 +823,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: complete_checklist.bin
-  outputNames: [ "complete_checklist.po" ]
+  outputNames: [ "text/complete_checklist.po" ]
   files:
   - name: complete_checklist.bin
     containerId: db.par
@@ -855,7 +855,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: controller_guide.bin
-  outputNames: [ "controller_guide.po" ]
+  outputNames: [ "text/controller_guide.po" ]
   files:
   - name: controller_guide.bin
     containerId: db.par
@@ -887,7 +887,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: hact_najimi.bin
-  outputNames: [ "hact_najimi.po" ]
+  outputNames: [ "text/hact_najimi.po" ]
   files:
   - name: hact_najimi.bin
     containerId: db.par
@@ -919,7 +919,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: item.bin
-  outputNames: [ "item.po" ]
+  outputNames: [ "text/item.po" ]
   files:
   - name: item.bin
     containerId: db.par
@@ -951,7 +951,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: item_buff.bin
-  outputNames: [ "item_buff.po" ]
+  outputNames: [ "text/item_buff.po" ]
   files:
   - name: item_buff.bin
     containerId: db.par
@@ -983,7 +983,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: item_special.bin
-  outputNames: [ "item_special.po" ]
+  outputNames: [ "text/item_special.po" ]
   files:
   - name: item_special.bin
     containerId: db.par
@@ -1016,39 +1016,39 @@ assets:
     parameterId: ''
 - id: manual.bin
   outputNames:
-  - (manual.bin)Main.po
-  - (manual.bin)koikoi.po
-  - (manual.bin)kabu.po
-  - (manual.bin)poker.po
-  - (manual.bin)mahjong0.po
-  - (manual.bin)clan_creator0.po
-  - (manual.bin)mahjong1.po
-  - (manual.bin)karaoke0.po
-  - (manual.bin)darts0.po
-  - (manual.bin)batting0.po
-  - (manual.bin)cabaret0.po
-  - (manual.bin)clan_creator1.po
-  - (manual.bin)batting1.po
-  - (manual.bin)ufo_catcher0.po
-  - (manual.bin)toilets0.po
-  - (manual.bin)cabaret_island0.po
-  - (manual.bin)cabaret_island1.po
-  - (manual.bin)virtua_fighter2.po
-  - (manual.bin)virtualon.po
-  - (manual.bin)golf.po
-  - (manual.bin)gravure.po
-  - (manual.bin)bj.po
-  - (manual.bin)koikoi_yaku.po
-  - (manual.bin)poker_omh.po
-  - (manual.bin)poker_texas.po
-  - (manual.bin)poker_pine.po
-  - (manual.bin)poker_yaku.po
-  - (manual.bin)shogi_koma.po
-  - (manual.bin)batting2.po
-  - (manual.bin)clan_creator0_tgs.po
-  - (manual.bin)clan_creator1_tgs.po
-  - (manual.bin)bouncer.po
-  - (manual.bin)cabaret_island2.po
+  - text/(manual.bin)Main.po
+  - text/(manual.bin)koikoi.po
+  - text/(manual.bin)kabu.po
+  - text/(manual.bin)poker.po
+  - text/(manual.bin)mahjong0.po
+  - text/(manual.bin)clan_creator0.po
+  - text/(manual.bin)mahjong1.po
+  - text/(manual.bin)karaoke0.po
+  - text/(manual.bin)darts0.po
+  - text/(manual.bin)batting0.po
+  - text/(manual.bin)cabaret0.po
+  - text/(manual.bin)clan_creator1.po
+  - text/(manual.bin)batting1.po
+  - text/(manual.bin)ufo_catcher0.po
+  - text/(manual.bin)toilets0.po
+  - text/(manual.bin)cabaret_island0.po
+  - text/(manual.bin)cabaret_island1.po
+  - text/(manual.bin)virtua_fighter2.po
+  - text/(manual.bin)virtualon.po
+  - text/(manual.bin)golf.po
+  - text/(manual.bin)gravure.po
+  - text/(manual.bin)bj.po
+  - text/(manual.bin)koikoi_yaku.po
+  - text/(manual.bin)poker_omh.po
+  - text/(manual.bin)poker_texas.po
+  - text/(manual.bin)poker_pine.po
+  - text/(manual.bin)poker_yaku.po
+  - text/(manual.bin)shogi_koma.po
+  - text/(manual.bin)batting2.po
+  - text/(manual.bin)clan_creator0_tgs.po
+  - text/(manual.bin)clan_creator1_tgs.po
+  - text/(manual.bin)bouncer.po
+  - text/(manual.bin)cabaret_island2.po
   files:
   - name: manual.bin
     containerId: db.par
@@ -1082,7 +1082,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: map_place.bin
-  outputNames: [ "map_place.po" ]
+  outputNames: [ "text/map_place.po" ]
   files:
   - name: map_place.bin
     containerId: db.par
@@ -1114,7 +1114,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: message_dialog.bin
-  outputNames: [ "message_dialog.po" ]
+  outputNames: [ "text/message_dialog.po" ]
   files:
   - name: message_dialog.bin
     containerId: db.par
@@ -1146,7 +1146,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_batting_center_course.bin
-  outputNames: [ "minigame_batting_center_course.po" ]
+  outputNames: [ "text/minigame_batting_center_course.po" ]
   files:
   - name: minigame_batting_center_course.bin
     containerId: db.par
@@ -1178,7 +1178,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_batting_center_message.bin
-  outputNames: [ "minigame_batting_center_message.po" ]
+  outputNames: [ "text/minigame_batting_center_message.po" ]
   files:
   - name: minigame_batting_center_message.bin
     containerId: db.par
@@ -1210,7 +1210,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_batting_center_type_of_pitch.bin
-  outputNames: [ "minigame_batting_center_type_of_pitch.po" ]
+  outputNames: [ "text/minigame_batting_center_type_of_pitch.po" ]
   files:
   - name: minigame_batting_center_type_of_pitch.bin
     containerId: db.par
@@ -1240,7 +1240,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_cabaret_cabaret.bin
-  outputNames: [ "minigame_cabaret_cabaret.po" ]
+  outputNames: [ "text/minigame_cabaret_cabaret.po" ]
   files:
   - name: minigame_cabaret_cabaret.bin
     containerId: db.par
@@ -1272,7 +1272,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_cabaret_island_cast.bin
-  outputNames: [ "minigame_cabaret_island_cast.po" ]
+  outputNames: [ "text/minigame_cabaret_island_cast.po" ]
   files:
   - name: minigame_cabaret_island_cast.bin
     containerId: db.par
@@ -1304,7 +1304,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_cabaret_island_coordinate_accessory_bracelet.bin
-  outputNames: [ "minigame_cabaret_island_coordinate_accessory_bracelet.po" ]
+  outputNames: [ "text/minigame_cabaret_island_coordinate_accessory_bracelet.po" ]
   files:
   - name: minigame_cabaret_island_coordinate_accessory_bracelet.bin
     containerId: db.par
@@ -1336,7 +1336,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_cabaret_island_coordinate_accessory_category.bin
-  outputNames: [ "minigame_cabaret_island_coordinate_accessory_category.po" ]
+  outputNames: [ "text/minigame_cabaret_island_coordinate_accessory_category.po" ]
   files:
   - name: minigame_cabaret_island_coordinate_accessory_category.bin
     containerId: db.par
@@ -1368,7 +1368,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_cabaret_island_coordinate_accessory_earrings.bin
-  outputNames: [ "minigame_cabaret_island_coordinate_accessory_earrings.po" ]
+  outputNames: [ "text/minigame_cabaret_island_coordinate_accessory_earrings.po" ]
   files:
   - name: minigame_cabaret_island_coordinate_accessory_earrings.bin
     containerId: db.par
@@ -1400,7 +1400,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_cabaret_island_coordinate_accessory_glasses.bin
-  outputNames: [ "minigame_cabaret_island_coordinate_accessory_glasses.po" ]
+  outputNames: [ "text/minigame_cabaret_island_coordinate_accessory_glasses.po" ]
   files:
   - name: minigame_cabaret_island_coordinate_accessory_glasses.bin
     containerId: db.par
@@ -1432,7 +1432,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_cabaret_island_coordinate_accessory_hair.bin
-  outputNames: [ "minigame_cabaret_island_coordinate_accessory_hair.po" ]
+  outputNames: [ "text/minigame_cabaret_island_coordinate_accessory_hair.po" ]
   files:
   - name: minigame_cabaret_island_coordinate_accessory_hair.bin
     containerId: db.par
@@ -1464,7 +1464,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_cabaret_island_coordinate_accessory_nail.bin
-  outputNames: [ "minigame_cabaret_island_coordinate_accessory_nail.po" ]
+  outputNames: [ "text/minigame_cabaret_island_coordinate_accessory_nail.po" ]
   files:
   - name: minigame_cabaret_island_coordinate_accessory_nail.bin
     containerId: db.par
@@ -1496,7 +1496,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_cabaret_island_coordinate_accessory_necklace.bin
-  outputNames: [ "minigame_cabaret_island_coordinate_accessory_necklace.po" ]
+  outputNames: [ "text/minigame_cabaret_island_coordinate_accessory_necklace.po" ]
   files:
   - name: minigame_cabaret_island_coordinate_accessory_necklace.bin
     containerId: db.par
@@ -1528,7 +1528,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_cabaret_island_coordinate_accessory_perfume.bin
-  outputNames: [ "minigame_cabaret_island_coordinate_accessory_perfume.po" ]
+  outputNames: [ "text/minigame_cabaret_island_coordinate_accessory_perfume.po" ]
   files:
   - name: minigame_cabaret_island_coordinate_accessory_perfume.bin
     containerId: db.par
@@ -1560,7 +1560,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_cabaret_island_coordinate_accessory_ring.bin
-  outputNames: [ "minigame_cabaret_island_coordinate_accessory_ring.po" ]
+  outputNames: [ "text/minigame_cabaret_island_coordinate_accessory_ring.po" ]
   files:
   - name: minigame_cabaret_island_coordinate_accessory_ring.bin
     containerId: db.par
@@ -1592,7 +1592,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_cabaret_island_coordinate_accessory_watches.bin
-  outputNames: [ "minigame_cabaret_island_coordinate_accessory_watches.po" ]
+  outputNames: [ "text/minigame_cabaret_island_coordinate_accessory_watches.po" ]
   files:
   - name: minigame_cabaret_island_coordinate_accessory_watches.bin
     containerId: db.par
@@ -1624,7 +1624,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_cabaret_island_coordinate_dress.bin
-  outputNames: [ "minigame_cabaret_island_coordinate_dress.po" ]
+  outputNames: [ "text/minigame_cabaret_island_coordinate_dress.po" ]
   files:
   - name: minigame_cabaret_island_coordinate_dress.bin
     containerId: db.par
@@ -1656,7 +1656,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_cabaret_island_coordinate_hair_style.bin
-  outputNames: [ "minigame_cabaret_island_coordinate_hair_style.po" ]
+  outputNames: [ "text/minigame_cabaret_island_coordinate_hair_style.po" ]
   files:
   - name: minigame_cabaret_island_coordinate_hair_style.bin
     containerId: db.par
@@ -1686,7 +1686,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_cabaret_island_coordinate_makeup_category.bin
-  outputNames: [ "minigame_cabaret_island_coordinate_makeup_category.po" ]
+  outputNames: [ "text/minigame_cabaret_island_coordinate_makeup_category.po" ]
   files:
   - name: minigame_cabaret_island_coordinate_makeup_category.bin
     containerId: db.par
@@ -1718,7 +1718,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_cabaret_island_coordinate_makeup_cheek.bin
-  outputNames: [ "minigame_cabaret_island_coordinate_makeup_cheek.po" ]
+  outputNames: [ "text/minigame_cabaret_island_coordinate_makeup_cheek.po" ]
   files:
   - name: minigame_cabaret_island_coordinate_makeup_cheek.bin
     containerId: db.par
@@ -1750,7 +1750,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_cabaret_island_coordinate_makeup_color_contact.bin
-  outputNames: [ "minigame_cabaret_island_coordinate_makeup_color_contact.po" ]
+  outputNames: [ "text/minigame_cabaret_island_coordinate_makeup_color_contact.po" ]
   files:
   - name: minigame_cabaret_island_coordinate_makeup_color_contact.bin
     containerId: db.par
@@ -1782,7 +1782,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_cabaret_island_coordinate_makeup_eyebrows.bin
-  outputNames: [ "minigame_cabaret_island_coordinate_makeup_eyebrows.po" ]
+  outputNames: [ "text/minigame_cabaret_island_coordinate_makeup_eyebrows.po" ]
   files:
   - name: minigame_cabaret_island_coordinate_makeup_eyebrows.bin
     containerId: db.par
@@ -1814,7 +1814,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_cabaret_island_coordinate_makeup_eyelashes.bin
-  outputNames: [ "minigame_cabaret_island_coordinate_makeup_eyelashes.po" ]
+  outputNames: [ "text/minigame_cabaret_island_coordinate_makeup_eyelashes.po" ]
   files:
   - name: minigame_cabaret_island_coordinate_makeup_eyelashes.bin
     containerId: db.par
@@ -1846,7 +1846,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_cabaret_island_coordinate_makeup_eyeline.bin
-  outputNames: [ "minigame_cabaret_island_coordinate_makeup_eyeline.po" ]
+  outputNames: [ "text/minigame_cabaret_island_coordinate_makeup_eyeline.po" ]
   files:
   - name: minigame_cabaret_island_coordinate_makeup_eyeline.bin
     containerId: db.par
@@ -1878,7 +1878,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_cabaret_island_coordinate_makeup_eyeshadow.bin
-  outputNames: [ "minigame_cabaret_island_coordinate_makeup_eyeshadow.po" ]
+  outputNames: [ "text/minigame_cabaret_island_coordinate_makeup_eyeshadow.po" ]
   files:
   - name: minigame_cabaret_island_coordinate_makeup_eyeshadow.bin
     containerId: db.par
@@ -1910,7 +1910,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_cabaret_island_coordinate_makeup_lip.bin
-  outputNames: [ "minigame_cabaret_island_coordinate_makeup_lip.po" ]
+  outputNames: [ "text/minigame_cabaret_island_coordinate_makeup_lip.po" ]
   files:
   - name: minigame_cabaret_island_coordinate_makeup_lip.bin
     containerId: db.par
@@ -1942,7 +1942,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_cabaret_island_event.bin
-  outputNames: [ "minigame_cabaret_island_event.po" ]
+  outputNames: [ "text/minigame_cabaret_island_event.po" ]
   files:
   - name: minigame_cabaret_island_event.bin
     containerId: db.par
@@ -1974,7 +1974,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_cabaret_island_event_choices.bin
-  outputNames: [ "minigame_cabaret_island_event_choices.po" ]
+  outputNames: [ "text/minigame_cabaret_island_event_choices.po" ]
   files:
   - name: minigame_cabaret_island_event_choices.bin
     containerId: db.par
@@ -2004,7 +2004,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_cabaret_island_grandprix_commentary_message.bin
-  outputNames: [ "minigame_cabaret_island_grandprix_commentary_message.po" ]
+  outputNames: [ "text/minigame_cabaret_island_grandprix_commentary_message.po" ]
   files:
   - name: minigame_cabaret_island_grandprix_commentary_message.bin
     containerId: db.par
@@ -2036,7 +2036,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_cabaret_island_grandprix_evaluation_message.bin
-  outputNames: [ "minigame_cabaret_island_grandprix_evaluation_message.po" ]
+  outputNames: [ "text/minigame_cabaret_island_grandprix_evaluation_message.po" ]
   files:
   - name: minigame_cabaret_island_grandprix_evaluation_message.bin
     containerId: db.par
@@ -2068,7 +2068,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_cabaret_island_grandprix_ranking.bin
-  outputNames: [ "minigame_cabaret_island_grandprix_ranking.po" ]
+  outputNames: [ "text/minigame_cabaret_island_grandprix_ranking.po" ]
   files:
   - name: minigame_cabaret_island_grandprix_ranking.bin
     containerId: db.par
@@ -2098,7 +2098,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_cabaret_island_grandprix_sequence_infomation.bin
-  outputNames: [ "minigame_cabaret_island_grandprix_sequence_infomation.po" ]
+  outputNames: [ "text/minigame_cabaret_island_grandprix_sequence_infomation.po" ]
   files:
   - name: minigame_cabaret_island_grandprix_sequence_infomation.bin
     containerId: db.par
@@ -2130,7 +2130,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_cabaret_island_guest_category.bin
-  outputNames: [ "minigame_cabaret_island_guest_category.po" ]
+  outputNames: [ "text/minigame_cabaret_island_guest_category.po" ]
   files:
   - name: minigame_cabaret_island_guest_category.bin
     containerId: db.par
@@ -2160,7 +2160,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_cabaret_island_hierarchy_open.bin
-  outputNames: [ "minigame_cabaret_island_hierarchy_open.po" ]
+  outputNames: [ "text/minigame_cabaret_island_hierarchy_open.po" ]
   files:
   - name: minigame_cabaret_island_hierarchy_open.bin
     containerId: db.par
@@ -2192,7 +2192,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_cabaret_island_potential.bin
-  outputNames: [ "minigame_cabaret_island_potential.po" ]
+  outputNames: [ "text/minigame_cabaret_island_potential.po" ]
   files:
   - name: minigame_cabaret_island_potential.bin
     containerId: db.par
@@ -2224,7 +2224,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_cabaret_island_rival.bin
-  outputNames: [ "minigame_cabaret_island_rival.po" ]
+  outputNames: [ "text/minigame_cabaret_island_rival.po" ]
   files:
   - name: minigame_cabaret_island_rival.bin
     containerId: db.par
@@ -2256,7 +2256,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_cabaret_island_shop_lineup.bin
-  outputNames: [ "minigame_cabaret_island_shop_lineup.po" ]
+  outputNames: [ "text/minigame_cabaret_island_shop_lineup.po" ]
   files:
   - name: minigame_cabaret_island_shop_lineup.bin
     containerId: db.par
@@ -2286,7 +2286,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_cabaret_island_simulation.bin
-  outputNames: [ "minigame_cabaret_island_simulation.po" ]
+  outputNames: [ "text/minigame_cabaret_island_simulation.po" ]
   files:
   - name: minigame_cabaret_island_simulation.bin
     containerId: db.par
@@ -2318,7 +2318,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_darts_dart_kind.bin
-  outputNames: [ "minigame_darts_dart_kind.po" ]
+  outputNames: [ "text/minigame_darts_dart_kind.po" ]
   files:
   - name: minigame_darts_dart_kind.bin
     containerId: db.par
@@ -2350,7 +2350,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_darts_rival_info.bin
-  outputNames: [ "minigame_darts_rival_info.po" ]
+  outputNames: [ "text/minigame_darts_rival_info.po" ]
   files:
   - name: minigame_darts_rival_info.bin
     containerId: db.par
@@ -2382,7 +2382,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_golf_driving_range_message.bin
-  outputNames: [ "minigame_golf_driving_range_message.po" ]
+  outputNames: [ "text/minigame_golf_driving_range_message.po" ]
   files:
   - name: minigame_golf_driving_range_message.bin
     containerId: db.par
@@ -2414,7 +2414,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_gravure_shooting_studio_course_data.bin
-  outputNames: [ "minigame_gravure_shooting_studio_course_data.po" ]
+  outputNames: [ "text/minigame_gravure_shooting_studio_course_data.po" ]
   files:
   - name: minigame_gravure_shooting_studio_course_data.bin
     containerId: db.par
@@ -2446,7 +2446,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_gravure_shooting_studio_message.bin
-  outputNames: [ "minigame_gravure_shooting_studio_message.po" ]
+  outputNames: [ "text/minigame_gravure_shooting_studio_message.po" ]
   files:
   - name: minigame_gravure_shooting_studio_message.bin
     containerId: db.par
@@ -2478,7 +2478,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_gravure_shooting_studio_movie_data.bin
-  outputNames: [ "minigame_gravure_shooting_studio_movie_data.po" ]
+  outputNames: [ "text/minigame_gravure_shooting_studio_movie_data.po" ]
   files:
   - name: minigame_gravure_shooting_studio_movie_data.bin
     containerId: db.par
@@ -2510,7 +2510,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_gravure_shooting_studio_question_data.bin
-  outputNames: [ "minigame_gravure_shooting_studio_question_data.po" ]
+  outputNames: [ "text/minigame_gravure_shooting_studio_question_data.po" ]
   files:
   - name: minigame_gravure_shooting_studio_question_data.bin
     containerId: db.par
@@ -2542,7 +2542,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_gravure_shooting_studio_select_word_data.bin
-  outputNames: [ "minigame_gravure_shooting_studio_select_word_data.po" ]
+  outputNames: [ "text/minigame_gravure_shooting_studio_select_word_data.po" ]
   files:
   - name: minigame_gravure_shooting_studio_select_word_data.bin
     containerId: db.par
@@ -2574,7 +2574,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_gravure_shooting_studio_telop_data.bin
-  outputNames: [ "minigame_gravure_shooting_studio_telop_data.po" ]
+  outputNames: [ "text/minigame_gravure_shooting_studio_telop_data.po" ]
   files:
   - name: minigame_gravure_shooting_studio_telop_data.bin
     containerId: db.par
@@ -2606,7 +2606,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_gravure_shooting_studio_woman_data.bin
-  outputNames: [ "minigame_gravure_shooting_studio_woman_data.po" ]
+  outputNames: [ "text/minigame_gravure_shooting_studio_woman_data.po" ]
   files:
   - name: minigame_gravure_shooting_studio_woman_data.bin
     containerId: db.par
@@ -2638,7 +2638,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_hanafuda_string_hanafuda.bin
-  outputNames: [ "minigame_hanafuda_string_hanafuda.po" ]
+  outputNames: [ "text/minigame_hanafuda_string_hanafuda.po" ]
   files:
   - name: minigame_hanafuda_string_hanafuda.bin
     containerId: db.par
@@ -2670,7 +2670,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_hanafuda_string_mainmenu.bin
-  outputNames: [ "minigame_hanafuda_string_mainmenu.po" ]
+  outputNames: [ "text/minigame_hanafuda_string_mainmenu.po" ]
   files:
   - name: minigame_hanafuda_string_mainmenu.bin
     containerId: db.par
@@ -2702,7 +2702,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_mahjong_string_agari.bin
-  outputNames: [ "minigame_mahjong_string_agari.po" ]
+  outputNames: [ "text/minigame_mahjong_string_agari.po" ]
   files:
   - name: minigame_mahjong_string_agari.bin
     containerId: db.par
@@ -2734,7 +2734,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_mahjong_string_command.bin
-  outputNames: [ "minigame_mahjong_string_command.po" ]
+  outputNames: [ "text/minigame_mahjong_string_command.po" ]
   files:
   - name: minigame_mahjong_string_command.bin
     containerId: db.par
@@ -2766,7 +2766,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_mahjong_string_common.bin
-  outputNames: [ "minigame_mahjong_string_common.po" ]
+  outputNames: [ "text/minigame_mahjong_string_common.po" ]
   files:
   - name: minigame_mahjong_string_common.bin
     containerId: db.par
@@ -2798,7 +2798,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_mahjong_string_kyoku.bin
-  outputNames: [ "minigame_mahjong_string_kyoku.po" ]
+  outputNames: [ "text/minigame_mahjong_string_kyoku.po" ]
   files:
   - name: minigame_mahjong_string_kyoku.bin
     containerId: db.par
@@ -2830,7 +2830,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_mahjong_string_mainmenu.bin
-  outputNames: [ "minigame_mahjong_string_mainmenu.po" ]
+  outputNames: [ "text/minigame_mahjong_string_mainmenu.po" ]
   files:
   - name: minigame_mahjong_string_mainmenu.bin
     containerId: db.par
@@ -2862,7 +2862,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_mahjong_string_mangan.bin
-  outputNames: [ "minigame_mahjong_string_mangan.po" ]
+  outputNames: [ "text/minigame_mahjong_string_mangan.po" ]
   files:
   - name: minigame_mahjong_string_mangan.bin
     containerId: db.par
@@ -2894,7 +2894,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_mahjong_string_npc.bin
-  outputNames: [ "minigame_mahjong_string_npc.po" ]
+  outputNames: [ "text/minigame_mahjong_string_npc.po" ]
   files:
   - name: minigame_mahjong_string_npc.bin
     containerId: db.par
@@ -2926,7 +2926,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_mahjong_string_npc_name_rank_kamuro.bin
-  outputNames: [ "minigame_mahjong_string_npc_name_rank_kamuro.po" ]
+  outputNames: [ "text/minigame_mahjong_string_npc_name_rank_kamuro.po" ]
   files:
   - name: minigame_mahjong_string_npc_name_rank_kamuro.bin
     containerId: db.par
@@ -2958,7 +2958,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_mahjong_string_ranking_name.bin
-  outputNames: [ "minigame_mahjong_string_ranking_name.po" ]
+  outputNames: [ "text/minigame_mahjong_string_ranking_name.po" ]
   files:
   - name: minigame_mahjong_string_ranking_name.bin
     containerId: db.par
@@ -2990,7 +2990,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_mahjong_string_setting.bin
-  outputNames: [ "minigame_mahjong_string_setting.po" ]
+  outputNames: [ "text/minigame_mahjong_string_setting.po" ]
   files:
   - name: minigame_mahjong_string_setting.bin
     containerId: db.par
@@ -3022,7 +3022,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_mahjong_string_yaku.bin
-  outputNames: [ "minigame_mahjong_string_yaku.po" ]
+  outputNames: [ "text/minigame_mahjong_string_yaku.po" ]
   files:
   - name: minigame_mahjong_string_yaku.bin
     containerId: db.par
@@ -3052,7 +3052,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_mahjong_string_yakuman.bin
-  outputNames: [ "minigame_mahjong_string_yakuman.po" ]
+  outputNames: [ "text/minigame_mahjong_string_yakuman.po" ]
   files:
   - name: minigame_mahjong_string_yakuman.bin
     containerId: db.par
@@ -3084,7 +3084,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_oichokabu_string_oichokabu.bin
-  outputNames: [ "minigame_oichokabu_string_oichokabu.po" ]
+  outputNames: [ "text/minigame_oichokabu_string_oichokabu.po" ]
   files:
   - name: minigame_oichokabu_string_oichokabu.bin
     containerId: db.par
@@ -3116,7 +3116,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_poker_com_1.bin
-  outputNames: [ "minigame_poker_com_1.po" ]
+  outputNames: [ "text/minigame_poker_com_1.po" ]
   files:
   - name: minigame_poker_com_1.bin
     containerId: db.par
@@ -3148,7 +3148,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_poker_com_2.bin
-  outputNames: [ "minigame_poker_com_2.po" ]
+  outputNames: [ "text/minigame_poker_com_2.po" ]
   files:
   - name: minigame_poker_com_2.bin
     containerId: db.par
@@ -3180,7 +3180,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_poker_com_3.bin
-  outputNames: [ "minigame_poker_com_3.po" ]
+  outputNames: [ "text/minigame_poker_com_3.po" ]
   files:
   - name: minigame_poker_com_3.bin
     containerId: db.par
@@ -3212,7 +3212,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_poker_com_4.bin
-  outputNames: [ "minigame_poker_com_4.po" ]
+  outputNames: [ "text/minigame_poker_com_4.po" ]
   files:
   - name: minigame_poker_com_4.bin
     containerId: db.par
@@ -3244,7 +3244,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_poker_com_5.bin
-  outputNames: [ "minigame_poker_com_5.po" ]
+  outputNames: [ "text/minigame_poker_com_5.po" ]
   files:
   - name: minigame_poker_com_5.bin
     containerId: db.par
@@ -3276,7 +3276,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_poker_com_6.bin
-  outputNames: [ "minigame_poker_com_6.po" ]
+  outputNames: [ "text/minigame_poker_com_6.po" ]
   files:
   - name: minigame_poker_com_6.bin
     containerId: db.par
@@ -3308,7 +3308,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_poker_com_high_1.bin
-  outputNames: [ "minigame_poker_com_high_1.po" ]
+  outputNames: [ "text/minigame_poker_com_high_1.po" ]
   files:
   - name: minigame_poker_com_high_1.bin
     containerId: db.par
@@ -3340,7 +3340,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_poker_com_high_2.bin
-  outputNames: [ "minigame_poker_com_high_2.po" ]
+  outputNames: [ "text/minigame_poker_com_high_2.po" ]
   files:
   - name: minigame_poker_com_high_2.bin
     containerId: db.par
@@ -3372,7 +3372,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_poker_com_high_3.bin
-  outputNames: [ "minigame_poker_com_high_3.po" ]
+  outputNames: [ "text/minigame_poker_com_high_3.po" ]
   files:
   - name: minigame_poker_com_high_3.bin
     containerId: db.par
@@ -3404,7 +3404,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_poker_com_high_4.bin
-  outputNames: [ "minigame_poker_com_high_4.po" ]
+  outputNames: [ "text/minigame_poker_com_high_4.po" ]
   files:
   - name: minigame_poker_com_high_4.bin
     containerId: db.par
@@ -3436,7 +3436,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_poker_com_high_5.bin
-  outputNames: [ "minigame_poker_com_high_5.po" ]
+  outputNames: [ "text/minigame_poker_com_high_5.po" ]
   files:
   - name: minigame_poker_com_high_5.bin
     containerId: db.par
@@ -3468,7 +3468,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_poker_com_high_6.bin
-  outputNames: [ "minigame_poker_com_high_6.po" ]
+  outputNames: [ "text/minigame_poker_com_high_6.po" ]
   files:
   - name: minigame_poker_com_high_6.bin
     containerId: db.par
@@ -3500,7 +3500,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_shogi_menu.bin
-  outputNames: [ "minigame_shogi_menu.po" ]
+  outputNames: [ "text/minigame_shogi_menu.po" ]
   files:
   - name: minigame_shogi_menu.bin
     containerId: db.par
@@ -3532,7 +3532,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_shogi_shogi.bin
-  outputNames: [ "minigame_shogi_shogi.po" ]
+  outputNames: [ "text/minigame_shogi_shogi.po" ]
   files:
   - name: minigame_shogi_shogi.bin
     containerId: db.par
@@ -3564,7 +3564,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_shogi_taikyoku_menu.bin
-  outputNames: [ "minigame_shogi_taikyoku_menu.po" ]
+  outputNames: [ "text/minigame_shogi_taikyoku_menu.po" ]
   files:
   - name: minigame_shogi_taikyoku_menu.bin
     containerId: db.par
@@ -3594,7 +3594,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_snack_event_telop_color.bin
-  outputNames: [ "minigame_snack_event_telop_color.po" ]
+  outputNames: [ "text/minigame_snack_event_telop_color.po" ]
   files:
   - name: minigame_snack_event_telop_color.bin
     containerId: db.par
@@ -3626,7 +3626,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_vf5_button_set.bin
-  outputNames: [ "minigame_vf5_button_set.po" ]
+  outputNames: [ "text/minigame_vf5_button_set.po" ]
   files:
   - name: minigame_vf5_button_set.bin
     containerId: db.par
@@ -3658,7 +3658,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_vf5_key_set.bin
-  outputNames: [ "minigame_vf5_key_set.po" ]
+  outputNames: [ "text/minigame_vf5_key_set.po" ]
   files:
   - name: minigame_vf5_key_set.bin
     containerId: db.par
@@ -3690,7 +3690,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: minigame_video_param.bin
-  outputNames: [ "minigame_video_param.po" ]
+  outputNames: [ "text/minigame_video_param.po" ]
   files:
   - name: minigame_video_param.bin
     containerId: db.par
@@ -3722,7 +3722,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: mission_mission_kind.bin
-  outputNames: [ "mission_mission_kind.po" ]
+  outputNames: [ "text/mission_mission_kind.po" ]
   files:
   - name: mission_mission_kind.bin
     containerId: db.par
@@ -3754,7 +3754,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: msg.bin
-  outputNames: [ "msg.po" ]
+  outputNames: [ "text/msg.po" ]
   files:
   - name: msg.bin
     containerId: db.par
@@ -3786,7 +3786,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: option.bin
-  outputNames: [ "option.po" ]
+  outputNames: [ "text/option.po" ]
   files:
   - name: option.bin
     containerId: db.par
@@ -3818,7 +3818,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: pause_camera_filter.bin
-  outputNames: [ "pause_camera_filter.po" ]
+  outputNames: [ "text/pause_camera_filter.po" ]
   files:
   - name: pause_camera_filter.bin
     containerId: db.par
@@ -3850,7 +3850,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: pause_mail.bin
-  outputNames: [ "pause_mail.po" ]
+  outputNames: [ "text/pause_mail.po" ]
   files:
   - name: pause_mail.bin
     containerId: db.par
@@ -3882,7 +3882,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: pause_others.bin
-  outputNames: [ "pause_others.po" ]
+  outputNames: [ "text/pause_others.po" ]
   files:
   - name: pause_others.bin
     containerId: db.par
@@ -3914,7 +3914,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: pause_profile.bin
-  outputNames: [ "pause_profile.po" ]
+  outputNames: [ "text/pause_profile.po" ]
   files:
   - name: pause_profile.bin
     containerId: db.par
@@ -3946,7 +3946,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: pause_tutorial.bin
-  outputNames: [ "pause_tutorial.po" ]
+  outputNames: [ "text/pause_tutorial.po" ]
   files:
   - name: pause_tutorial.bin
     containerId: db.par
@@ -3978,7 +3978,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: play_go_message.bin
-  outputNames: [ "play_go_message.po" ]
+  outputNames: [ "text/play_go_message.po" ]
   files:
   - name: play_go_message.bin
     containerId: db.par
@@ -4010,7 +4010,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: player.bin
-  outputNames: [ "player.po" ]
+  outputNames: [ "text/player.po" ]
   files:
   - name: player.bin
     containerId: db.par
@@ -4042,7 +4042,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: player_ability.bin
-  outputNames: [ "player_ability.po" ]
+  outputNames: [ "text/player_ability.po" ]
   files:
   - name: player_ability.bin
     containerId: db.par
@@ -4074,7 +4074,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: player_ability_rank.bin
-  outputNames: [ "player_ability_rank.po" ]
+  outputNames: [ "text/player_ability_rank.po" ]
   files:
   - name: player_ability_rank.bin
     containerId: db.par
@@ -4106,7 +4106,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: player_equip_bonus.bin
-  outputNames: [ "player_equip_bonus.po" ]
+  outputNames: [ "text/player_equip_bonus.po" ]
   files:
   - name: player_equip_bonus.bin
     containerId: db.par
@@ -4138,7 +4138,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: player_point.bin
-  outputNames: [ "player_point.po" ]
+  outputNames: [ "text/player_point.po" ]
   files:
   - name: player_point.bin
     containerId: db.par
@@ -4170,7 +4170,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: player_skill.bin
-  outputNames: [ "player_skill.po" ]
+  outputNames: [ "text/player_skill.po" ]
   files:
   - name: player_skill.bin
     containerId: db.par
@@ -4202,7 +4202,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: player_skill_category.bin
-  outputNames: [ "player_skill_category.po" ]
+  outputNames: [ "text/player_skill_category.po" ]
   files:
   - name: player_skill_category.bin
     containerId: db.par
@@ -4234,7 +4234,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: position_stage_warp.bin
-  outputNames: [ "position_stage_warp.po" ]
+  outputNames: [ "text/position_stage_warp.po" ]
   files:
   - name: position_stage_warp.bin
     containerId: db.par
@@ -4266,7 +4266,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: qloc_binding_actions_qloc_binding_actions.bin
-  outputNames: [ "qloc_binding_actions_qloc_binding_actions.po" ]
+  outputNames: [ "text/qloc_binding_actions_qloc_binding_actions.po" ]
   files:
   - name: qloc_binding_actions_qloc_binding_actions.bin
     containerId: db.par
@@ -4298,7 +4298,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: qloc_qloc_binding_actions.bin
-  outputNames: [ "qloc_qloc_binding_actions.po" ]
+  outputNames: [ "text/qloc_qloc_binding_actions.po" ]
   files:
   - name: qloc_qloc_binding_actions.bin
     containerId: db.par
@@ -4330,7 +4330,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: qloc_qloc_gamestates.bin
-  outputNames: [ "qloc_qloc_gamestates.po" ]
+  outputNames: [ "text/qloc_qloc_gamestates.po" ]
   files:
   - name: qloc_qloc_gamestates.bin
     containerId: db.par
@@ -4362,7 +4362,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: shop.bin
-  outputNames: [ "shop.po" ]
+  outputNames: [ "text/shop.po" ]
   files:
   - name: shop.bin
     containerId: db.par
@@ -4394,7 +4394,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: shop_bonus.bin
-  outputNames: [ "shop_bonus.po" ]
+  outputNames: [ "text/shop_bonus.po" ]
   files:
   - name: shop_bonus.bin
     containerId: db.par
@@ -4426,7 +4426,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: shop_group.bin
-  outputNames: [ "shop_group.po" ]
+  outputNames: [ "text/shop_group.po" ]
   files:
   - name: shop_group.bin
     containerId: db.par
@@ -4459,27 +4459,27 @@ assets:
     parameterId: ''
 - id: sound_auth.bin
   outputNames:
-  - (sound_auth.bin)speech_list_btl_hact.po
-  - (sound_auth.bin)speech_list_cab_kanadate.po
-  - (sound_auth.bin)speech_list_cab_main50.po
-  - (sound_auth.bin)speech_list_majima.po
-  - (sound_auth.bin)speech_list_cab_aikadate.po
-  - (sound_auth.bin)speech_list_cab_kiraradate.po
-  - (sound_auth.bin)speech_list_cab_shoukodate.po
-  - (sound_auth.bin)speech_list_cab_yuadate.po
-  - (sound_auth.bin)speech_list_cln_main50.po
-  - (sound_auth.bin)speech_list_cln_main51.po
-  - (sound_auth.bin)speech_list_cab_main01.po
-  - (sound_auth.bin)speech_list_cab_main02.po
-  - (sound_auth.bin)speech_list_cln01.po
-  - (sound_auth.bin)speech_list_cln02.po
-  - (sound_auth.bin)speech_list_cln04.po
-  - (sound_auth.bin)speech_list_cln06.po
-  - (sound_auth.bin)speech_list_cln08.po
-  - (sound_auth.bin)speech_list_cln10.po
-  - (sound_auth.bin)speech_list_cln12.po
-  - (sound_auth.bin)speech_list_cln14.po
-  - (sound_auth.bin)speech_list_cab_koyukidate.po
+  - text/(sound_auth.bin)speech_list_btl_hact.po
+  - text/(sound_auth.bin)speech_list_cab_kanadate.po
+  - text/(sound_auth.bin)speech_list_cab_main50.po
+  - text/(sound_auth.bin)speech_list_majima.po
+  - text/(sound_auth.bin)speech_list_cab_aikadate.po
+  - text/(sound_auth.bin)speech_list_cab_kiraradate.po
+  - text/(sound_auth.bin)speech_list_cab_shoukodate.po
+  - text/(sound_auth.bin)speech_list_cab_yuadate.po
+  - text/(sound_auth.bin)speech_list_cln_main50.po
+  - text/(sound_auth.bin)speech_list_cln_main51.po
+  - text/(sound_auth.bin)speech_list_cab_main01.po
+  - text/(sound_auth.bin)speech_list_cab_main02.po
+  - text/(sound_auth.bin)speech_list_cln01.po
+  - text/(sound_auth.bin)speech_list_cln02.po
+  - text/(sound_auth.bin)speech_list_cln04.po
+  - text/(sound_auth.bin)speech_list_cln06.po
+  - text/(sound_auth.bin)speech_list_cln08.po
+  - text/(sound_auth.bin)speech_list_cln10.po
+  - text/(sound_auth.bin)speech_list_cln12.po
+  - text/(sound_auth.bin)speech_list_cln14.po
+  - text/(sound_auth.bin)speech_list_cab_koyukidate.po
   files:
   - name: sound_auth.bin
     containerId: db.par
@@ -4513,7 +4513,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: sound_auth_subtitles_speech_list_btl_hact.bin
-  outputNames: [ "sound_auth_subtitles_speech_list_btl_hact.po" ]
+  outputNames: [ "text/sound_auth_subtitles_speech_list_btl_hact.po" ]
   files:
   - name: sound_auth_subtitles_speech_list_btl_hact.bin
     containerId: db.par
@@ -4543,7 +4543,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: sound_auth_subtitles_speech_list_cab_aikadate.bin
-  outputNames: [ "sound_auth_subtitles_speech_list_cab_aikadate.po" ]
+  outputNames: [ "text/sound_auth_subtitles_speech_list_cab_aikadate.po" ]
   files:
   - name: sound_auth_subtitles_speech_list_cab_aikadate.bin
     containerId: db.par
@@ -4575,7 +4575,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: sound_auth_subtitles_speech_list_cab_kanadate.bin
-  outputNames: [ "sound_auth_subtitles_speech_list_cab_kanadate.po" ]
+  outputNames: [ "text/sound_auth_subtitles_speech_list_cab_kanadate.po" ]
   files:
   - name: sound_auth_subtitles_speech_list_cab_kanadate.bin
     containerId: db.par
@@ -4607,7 +4607,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: sound_auth_subtitles_speech_list_cab_kiraradate.bin
-  outputNames: [ "sound_auth_subtitles_speech_list_cab_kiraradate.po" ]
+  outputNames: [ "text/sound_auth_subtitles_speech_list_cab_kiraradate.po" ]
   files:
   - name: sound_auth_subtitles_speech_list_cab_kiraradate.bin
     containerId: db.par
@@ -4639,7 +4639,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: sound_auth_subtitles_speech_list_cab_koyukidate.bin
-  outputNames: [ "sound_auth_subtitles_speech_list_cab_koyukidate.po" ]
+  outputNames: [ "text/sound_auth_subtitles_speech_list_cab_koyukidate.po" ]
   files:
   - name: sound_auth_subtitles_speech_list_cab_koyukidate.bin
     containerId: db.par
@@ -4671,7 +4671,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: sound_auth_subtitles_speech_list_cab_main01.bin
-  outputNames: [ "sound_auth_subtitles_speech_list_cab_main01.po" ]
+  outputNames: [ "text/sound_auth_subtitles_speech_list_cab_main01.po" ]
   files:
   - name: sound_auth_subtitles_speech_list_cab_main01.bin
     containerId: db.par
@@ -4703,7 +4703,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: sound_auth_subtitles_speech_list_cab_main02.bin
-  outputNames: [ "sound_auth_subtitles_speech_list_cab_main02.po" ]
+  outputNames: [ "text/sound_auth_subtitles_speech_list_cab_main02.po" ]
   files:
   - name: sound_auth_subtitles_speech_list_cab_main02.bin
     containerId: db.par
@@ -4735,7 +4735,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: sound_auth_subtitles_speech_list_cab_main50.bin
-  outputNames: [ "sound_auth_subtitles_speech_list_cab_main50.po" ]
+  outputNames: [ "text/sound_auth_subtitles_speech_list_cab_main50.po" ]
   files:
   - name: sound_auth_subtitles_speech_list_cab_main50.bin
     containerId: db.par
@@ -4767,7 +4767,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: sound_auth_subtitles_speech_list_cab_shoukodate.bin
-  outputNames: [ "sound_auth_subtitles_speech_list_cab_shoukodate.po" ]
+  outputNames: [ "text/sound_auth_subtitles_speech_list_cab_shoukodate.po" ]
   files:
   - name: sound_auth_subtitles_speech_list_cab_shoukodate.bin
     containerId: db.par
@@ -4799,7 +4799,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: sound_auth_subtitles_speech_list_cab_yuadate.bin
-  outputNames: [ "sound_auth_subtitles_speech_list_cab_yuadate.po" ]
+  outputNames: [ "text/sound_auth_subtitles_speech_list_cab_yuadate.po" ]
   files:
   - name: sound_auth_subtitles_speech_list_cab_yuadate.bin
     containerId: db.par
@@ -4831,7 +4831,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: sound_auth_subtitles_speech_list_cln01.bin
-  outputNames: [ "sound_auth_subtitles_speech_list_cln01.po" ]
+  outputNames: [ "text/sound_auth_subtitles_speech_list_cln01.po" ]
   files:
   - name: sound_auth_subtitles_speech_list_cln01.bin
     containerId: db.par
@@ -4863,7 +4863,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: sound_auth_subtitles_speech_list_cln02.bin
-  outputNames: [ "sound_auth_subtitles_speech_list_cln02.po" ]
+  outputNames: [ "text/sound_auth_subtitles_speech_list_cln02.po" ]
   files:
   - name: sound_auth_subtitles_speech_list_cln02.bin
     containerId: db.par
@@ -4895,7 +4895,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: sound_auth_subtitles_speech_list_cln04.bin
-  outputNames: [ "sound_auth_subtitles_speech_list_cln04.po" ]
+  outputNames: [ "text/sound_auth_subtitles_speech_list_cln04.po" ]
   files:
   - name: sound_auth_subtitles_speech_list_cln04.bin
     containerId: db.par
@@ -4925,7 +4925,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: sound_auth_subtitles_speech_list_cln06.bin
-  outputNames: [ "sound_auth_subtitles_speech_list_cln06.po" ]
+  outputNames: [ "text/sound_auth_subtitles_speech_list_cln06.po" ]
   files:
   - name: sound_auth_subtitles_speech_list_cln06.bin
     containerId: db.par
@@ -4957,7 +4957,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: sound_auth_subtitles_speech_list_cln08.bin
-  outputNames: [ "sound_auth_subtitles_speech_list_cln08.po" ]
+  outputNames: [ "text/sound_auth_subtitles_speech_list_cln08.po" ]
   files:
   - name: sound_auth_subtitles_speech_list_cln08.bin
     containerId: db.par
@@ -4987,7 +4987,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: sound_auth_subtitles_speech_list_cln10.bin
-  outputNames: [ "sound_auth_subtitles_speech_list_cln10.po" ]
+  outputNames: [ "text/sound_auth_subtitles_speech_list_cln10.po" ]
   files:
   - name: sound_auth_subtitles_speech_list_cln10.bin
     containerId: db.par
@@ -5017,7 +5017,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: sound_auth_subtitles_speech_list_cln12.bin
-  outputNames: [ "sound_auth_subtitles_speech_list_cln12.po" ]
+  outputNames: [ "text/sound_auth_subtitles_speech_list_cln12.po" ]
   files:
   - name: sound_auth_subtitles_speech_list_cln12.bin
     containerId: db.par
@@ -5047,7 +5047,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: sound_auth_subtitles_speech_list_cln14.bin
-  outputNames: [ "sound_auth_subtitles_speech_list_cln14.po" ]
+  outputNames: [ "text/sound_auth_subtitles_speech_list_cln14.po" ]
   files:
   - name: sound_auth_subtitles_speech_list_cln14.bin
     containerId: db.par
@@ -5079,7 +5079,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: sound_auth_subtitles_speech_list_cln_main50.bin
-  outputNames: [ "sound_auth_subtitles_speech_list_cln_main50.po" ]
+  outputNames: [ "text/sound_auth_subtitles_speech_list_cln_main50.po" ]
   files:
   - name: sound_auth_subtitles_speech_list_cln_main50.bin
     containerId: db.par
@@ -5111,7 +5111,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: sound_auth_subtitles_speech_list_cln_main51.bin
-  outputNames: [ "sound_auth_subtitles_speech_list_cln_main51.po" ]
+  outputNames: [ "text/sound_auth_subtitles_speech_list_cln_main51.po" ]
   files:
   - name: sound_auth_subtitles_speech_list_cln_main51.bin
     containerId: db.par
@@ -5143,7 +5143,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: sound_auth_subtitles_speech_list_majima.bin
-  outputNames: [ "sound_auth_subtitles_speech_list_majima.po" ]
+  outputNames: [ "text/sound_auth_subtitles_speech_list_majima.po" ]
   files:
   - name: sound_auth_subtitles_speech_list_majima.bin
     containerId: db.par
@@ -5175,7 +5175,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: sound_auth_subtitles_speech_list_sub_a14.bin
-  outputNames: [ "sound_auth_subtitles_speech_list_sub_a14.po" ]
+  outputNames: [ "text/sound_auth_subtitles_speech_list_sub_a14.po" ]
   files:
   - name: sound_auth_subtitles_speech_list_sub_a14.bin
     containerId: db.par
@@ -5207,7 +5207,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: sound_cue_subtitle.bin
-  outputNames: [ "sound_cue_subtitle.po" ]
+  outputNames: [ "text/sound_cue_subtitle.po" ]
   files:
   - name: sound_cue_subtitle.bin
     containerId: db.par
@@ -5239,7 +5239,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: subgame_omg_key_preset.bin
-  outputNames: [ "subgame_omg_key_preset.po" ]
+  outputNames: [ "text/subgame_omg_key_preset.po" ]
   files:
   - name: subgame_omg_key_preset.bin
     containerId: db.par
@@ -5271,7 +5271,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: subgame_omg_keys.bin
-  outputNames: [ "subgame_omg_keys.po" ]
+  outputNames: [ "text/subgame_omg_keys.po" ]
   files:
   - name: subgame_omg_keys.bin
     containerId: db.par
@@ -5302,148 +5302,148 @@ assets:
     parameterId: ''
 - id: talk.bin
   outputNames:
-    - (talk.bin)lexus2_main_c01.po
-    - (talk.bin)lexus2_main_c02.po
-    - (talk.bin)lexus2_main_c03.po
-    - (talk.bin)lexus2_main_c04.po
-    - (talk.bin)lexus2_main_c05.po
-    - (talk.bin)lexus2_main_c06.po
-    - (talk.bin)lexus2_main_c07.po
-    - (talk.bin)lexus2_main_c08.po
-    - (talk.bin)lexus2_main_c09.po
-    - (talk.bin)lexus2_main_c10.po
-    - (talk.bin)lexus2_main_c11.po
-    - (talk.bin)lexus2_main_c12.po
-    - (talk.bin)lexus2_main_c13.po
-    - (talk.bin)lexus2_main_c14.po
-    - (talk.bin)lexus2_main_c15.po
-    - (talk.bin)lexus2_main_c16.po
-    - (talk.bin)lexus2_sub_a24.po
-    - (talk.bin)lexus2_sub_a28.po
-    - (talk.bin)lexus2_sub_a10.po
-    - (talk.bin)lexus2_sub_a17.po
-    - (talk.bin)lexus2_sub_b05.po
-    - (talk.bin)lexus2_sub_b23.po
-    - (talk.bin)lexus2_sub_a35.po
-    - (talk.bin)lexus2_sub_a36.po
-    - (talk.bin)lexus2_sub_b18.po
-    - (talk.bin)lexus2_sub_a22.po
-    - (talk.bin)lexus2_sub_a31.po
-    - (talk.bin)lexus2_sub_b08.po
-    - (talk.bin)lexus2_sub_b09.po
-    - (talk.bin)lexus2_sub_b07.po
-    - (talk.bin)lexus2_sub_b04.po
-    - (talk.bin)lexus2_sub_a33.po
-    - (talk.bin)lexus2_sub_a32.po
-    - (talk.bin)lexus2_sub_a34.po
-    - (talk.bin)lexus2_sub_b17.po
-    - (talk.bin)lexus2_playspot.po
-    - (talk.bin)lexus2_sub_b03.po
-    - (talk.bin)lexus2_sub_a05.po
-    - (talk.bin)lexus2_sub_a01.po
-    - (talk.bin)lexus2_sub_a02.po
-    - (talk.bin)lexus2_sub_a03.po
-    - (talk.bin)lexus2_sub_a04.po
-    - (talk.bin)lexus2_sub_a06.po
-    - (talk.bin)lexus2_sub_a07.po
-    - (talk.bin)lexus2_sub_a08.po
-    - (talk.bin)lexus2_sub_a09.po
-    - (talk.bin)lexus2_sub_a11.po
-    - (talk.bin)lexus2_sub_a12.po
-    - (talk.bin)lexus2_sub_a14.po
-    - (talk.bin)lexus2_sub_a15.po
-    - (talk.bin)lexus2_sub_a16.po
-    - (talk.bin)lexus2_sub_a20.po
-    - (talk.bin)lexus2_sub_a21.po
-    - (talk.bin)lexus2_sub_a23.po
-    - (talk.bin)lexus2_sub_a25.po
-    - (talk.bin)lexus2_sub_a26.po
-    - (talk.bin)lexus2_sub_a27.po
-    - (talk.bin)lexus2_sub_a29.po
-    - (talk.bin)lexus2_sub_a30.po
-    - (talk.bin)lexus2_sub_b01.po
-    - (talk.bin)lexus2_sub_b02.po
-    - (talk.bin)lexus2_sub_b06.po
-    - (talk.bin)lexus2_sub_b10.po
-    - (talk.bin)lexus2_sub_b11.po
-    - (talk.bin)lexus2_sub_b12.po
-    - (talk.bin)lexus2_sub_b16.po
-    - (talk.bin)lexus2_sub_b19.po
-    - (talk.bin)lexus2_sub_b13.po
-    - (talk.bin)lexus2_sub_b14.po
-    - (talk.bin)lexus2_sub_b15.po
-    - (talk.bin)lexus2_playspot_video.po
-    - (talk.bin)lexus2_sub_a13.po
-    - (talk.bin)lexus2_sub_a18.po
-    - (talk.bin)lexus2_sub_a19.po
-    - (talk.bin)lexus2_sub_b20.po
-    - (talk.bin)lexus2_sub_b21.po
-    - (talk.bin)lexus2_sub_b22.po
-    - (talk.bin)lexus2_locker.po
-    - (talk.bin)lexus2_minigame_bj.po
-    - (talk.bin)lexus2_minigame_poker.po
-    - (talk.bin)lexus2_main_majima.po
-    - (talk.bin)lexus2_shop.po
-    - (talk.bin)lexus2_playspot_cabaret.po
-    - (talk.bin)lexus2_minigame_nozoki.po
-    - (talk.bin)lexus2_lexus2_k_encboss.po
-    - (talk.bin)lexus2_playspot_clubsega.po
-    - (talk.bin)lexus2_minigame_ufo.po
-    - (talk.bin)lexus2_tougi.po
-    - (talk.bin)explanation_main_scenario.po
-    - (talk.bin)lexus2_haruka_onedari.po
-    - (talk.bin)lexus2_sub_a37.po
-    - (talk.bin)lexus2_sub_a38.po
-    - (talk.bin)lexus2_sub_a39.po
-    - (talk.bin)lexus2_sub_a40.po
-    - (talk.bin)lexus2_playspot_golf.po
-    - (talk.bin)lexus2_caba_main_03.po
-    - (talk.bin)lexus2_caba_main_04.po
-    - (talk.bin)lexus2_caba_main_05.po
-    - (talk.bin)lexus2_caba_main_06.po
-    - (talk.bin)lexus2_caba_main_07.po
-    - (talk.bin)lexus2_sub_b25.po
-    - (talk.bin)lexus2_sub_b26.po
-    - (talk.bin)lexus2_sinnkyuuinn.po
-    - (talk.bin)lexus2_caba_addsub.po
-    - (talk.bin)lexus2_caba_date_aika.po
-    - (talk.bin)lexus2_caba_date_kana.po
-    - (talk.bin)lexus2_caba_date_kirara.po
-    - (talk.bin)lexus2_caba_date_koyuki.po
-    - (talk.bin)lexus2_caba_date_shoko.po
-    - (talk.bin)lexus2_caba_date_yua.po
-    - (talk.bin)lexus2_sub_b27.po
-    - (talk.bin)lexus2_minigame_darts.po
-    - (talk.bin)lexus2_minigame_batting.po
-    - (talk.bin)lexus2_sub_b30.po
-    - (talk.bin)lexus2_sub_b31.po
-    - (talk.bin)lexus2_sub_b32.po
-    - (talk.bin)lexus2_caba_main_08.po
-    - (talk.bin)lexus2_caba_main_09.po
-    - (talk.bin)lexus2_sub_b24.po
-    - (talk.bin)lexus2_sub_a41.po
-    - (talk.bin)lexus2_lexus2_mj.po
-    - (talk.bin)lexus2_sub_b29.po
-    - (talk.bin)lexus2_sub_b33.po
-    - (talk.bin)lexus2_sub_b28.po
-    - (talk.bin)lexus2_cln_main_03.po
-    - (talk.bin)lexus2_cln_main_05.po
-    - (talk.bin)lexus2_cln_main_07.po
-    - (talk.bin)lexus2_cln_main_09.po
-    - (talk.bin)lexus2_cln_main_11.po
-    - (talk.bin)lexus2_cln_main_13.po
-    - (talk.bin)lexus2_cln_main_15.po
-    - (talk.bin)lexus2_cln_scout.po
-    - (talk.bin)lexus2_clan_snack01.po
-    - (talk.bin)lexus2_clan_snack02.po
-    - (talk.bin)lexus2_sub_a42.po
-    - (talk.bin)lexus2_photostudio.po
-    - (talk.bin)lexus2_playspot_bouncer.po
-    - (talk.bin)lexus2_caba_shop.po
-    - (talk.bin)lexus2_sub_a43.po
-    - (talk.bin)lexus2_main_c16_btl16_0010.po
-    - (talk.bin)lexus2_eve_enc.po
-    - (talk.bin)lexus2_minigame_karaoke.po
+    - text/(talk.bin)lexus2_main_c01.po
+    - text/(talk.bin)lexus2_main_c02.po
+    - text/(talk.bin)lexus2_main_c03.po
+    - text/(talk.bin)lexus2_main_c04.po
+    - text/(talk.bin)lexus2_main_c05.po
+    - text/(talk.bin)lexus2_main_c06.po
+    - text/(talk.bin)lexus2_main_c07.po
+    - text/(talk.bin)lexus2_main_c08.po
+    - text/(talk.bin)lexus2_main_c09.po
+    - text/(talk.bin)lexus2_main_c10.po
+    - text/(talk.bin)lexus2_main_c11.po
+    - text/(talk.bin)lexus2_main_c12.po
+    - text/(talk.bin)lexus2_main_c13.po
+    - text/(talk.bin)lexus2_main_c14.po
+    - text/(talk.bin)lexus2_main_c15.po
+    - text/(talk.bin)lexus2_main_c16.po
+    - text/(talk.bin)lexus2_sub_a24.po
+    - text/(talk.bin)lexus2_sub_a28.po
+    - text/(talk.bin)lexus2_sub_a10.po
+    - text/(talk.bin)lexus2_sub_a17.po
+    - text/(talk.bin)lexus2_sub_b05.po
+    - text/(talk.bin)lexus2_sub_b23.po
+    - text/(talk.bin)lexus2_sub_a35.po
+    - text/(talk.bin)lexus2_sub_a36.po
+    - text/(talk.bin)lexus2_sub_b18.po
+    - text/(talk.bin)lexus2_sub_a22.po
+    - text/(talk.bin)lexus2_sub_a31.po
+    - text/(talk.bin)lexus2_sub_b08.po
+    - text/(talk.bin)lexus2_sub_b09.po
+    - text/(talk.bin)lexus2_sub_b07.po
+    - text/(talk.bin)lexus2_sub_b04.po
+    - text/(talk.bin)lexus2_sub_a33.po
+    - text/(talk.bin)lexus2_sub_a32.po
+    - text/(talk.bin)lexus2_sub_a34.po
+    - text/(talk.bin)lexus2_sub_b17.po
+    - text/(talk.bin)lexus2_playspot.po
+    - text/(talk.bin)lexus2_sub_b03.po
+    - text/(talk.bin)lexus2_sub_a05.po
+    - text/(talk.bin)lexus2_sub_a01.po
+    - text/(talk.bin)lexus2_sub_a02.po
+    - text/(talk.bin)lexus2_sub_a03.po
+    - text/(talk.bin)lexus2_sub_a04.po
+    - text/(talk.bin)lexus2_sub_a06.po
+    - text/(talk.bin)lexus2_sub_a07.po
+    - text/(talk.bin)lexus2_sub_a08.po
+    - text/(talk.bin)lexus2_sub_a09.po
+    - text/(talk.bin)lexus2_sub_a11.po
+    - text/(talk.bin)lexus2_sub_a12.po
+    - text/(talk.bin)lexus2_sub_a14.po
+    - text/(talk.bin)lexus2_sub_a15.po
+    - text/(talk.bin)lexus2_sub_a16.po
+    - text/(talk.bin)lexus2_sub_a20.po
+    - text/(talk.bin)lexus2_sub_a21.po
+    - text/(talk.bin)lexus2_sub_a23.po
+    - text/(talk.bin)lexus2_sub_a25.po
+    - text/(talk.bin)lexus2_sub_a26.po
+    - text/(talk.bin)lexus2_sub_a27.po
+    - text/(talk.bin)lexus2_sub_a29.po
+    - text/(talk.bin)lexus2_sub_a30.po
+    - text/(talk.bin)lexus2_sub_b01.po
+    - text/(talk.bin)lexus2_sub_b02.po
+    - text/(talk.bin)lexus2_sub_b06.po
+    - text/(talk.bin)lexus2_sub_b10.po
+    - text/(talk.bin)lexus2_sub_b11.po
+    - text/(talk.bin)lexus2_sub_b12.po
+    - text/(talk.bin)lexus2_sub_b16.po
+    - text/(talk.bin)lexus2_sub_b19.po
+    - text/(talk.bin)lexus2_sub_b13.po
+    - text/(talk.bin)lexus2_sub_b14.po
+    - text/(talk.bin)lexus2_sub_b15.po
+    - text/(talk.bin)lexus2_playspot_video.po
+    - text/(talk.bin)lexus2_sub_a13.po
+    - text/(talk.bin)lexus2_sub_a18.po
+    - text/(talk.bin)lexus2_sub_a19.po
+    - text/(talk.bin)lexus2_sub_b20.po
+    - text/(talk.bin)lexus2_sub_b21.po
+    - text/(talk.bin)lexus2_sub_b22.po
+    - text/(talk.bin)lexus2_locker.po
+    - text/(talk.bin)lexus2_minigame_bj.po
+    - text/(talk.bin)lexus2_minigame_poker.po
+    - text/(talk.bin)lexus2_main_majima.po
+    - text/(talk.bin)lexus2_shop.po
+    - text/(talk.bin)lexus2_playspot_cabaret.po
+    - text/(talk.bin)lexus2_minigame_nozoki.po
+    - text/(talk.bin)lexus2_lexus2_k_encboss.po
+    - text/(talk.bin)lexus2_playspot_clubsega.po
+    - text/(talk.bin)lexus2_minigame_ufo.po
+    - text/(talk.bin)lexus2_tougi.po
+    - text/(talk.bin)explanation_main_scenario.po
+    - text/(talk.bin)lexus2_haruka_onedari.po
+    - text/(talk.bin)lexus2_sub_a37.po
+    - text/(talk.bin)lexus2_sub_a38.po
+    - text/(talk.bin)lexus2_sub_a39.po
+    - text/(talk.bin)lexus2_sub_a40.po
+    - text/(talk.bin)lexus2_playspot_golf.po
+    - text/(talk.bin)lexus2_caba_main_03.po
+    - text/(talk.bin)lexus2_caba_main_04.po
+    - text/(talk.bin)lexus2_caba_main_05.po
+    - text/(talk.bin)lexus2_caba_main_06.po
+    - text/(talk.bin)lexus2_caba_main_07.po
+    - text/(talk.bin)lexus2_sub_b25.po
+    - text/(talk.bin)lexus2_sub_b26.po
+    - text/(talk.bin)lexus2_sinnkyuuinn.po
+    - text/(talk.bin)lexus2_caba_addsub.po
+    - text/(talk.bin)lexus2_caba_date_aika.po
+    - text/(talk.bin)lexus2_caba_date_kana.po
+    - text/(talk.bin)lexus2_caba_date_kirara.po
+    - text/(talk.bin)lexus2_caba_date_koyuki.po
+    - text/(talk.bin)lexus2_caba_date_shoko.po
+    - text/(talk.bin)lexus2_caba_date_yua.po
+    - text/(talk.bin)lexus2_sub_b27.po
+    - text/(talk.bin)lexus2_minigame_darts.po
+    - text/(talk.bin)lexus2_minigame_batting.po
+    - text/(talk.bin)lexus2_sub_b30.po
+    - text/(talk.bin)lexus2_sub_b31.po
+    - text/(talk.bin)lexus2_sub_b32.po
+    - text/(talk.bin)lexus2_caba_main_08.po
+    - text/(talk.bin)lexus2_caba_main_09.po
+    - text/(talk.bin)lexus2_sub_b24.po
+    - text/(talk.bin)lexus2_sub_a41.po
+    - text/(talk.bin)lexus2_lexus2_mj.po
+    - text/(talk.bin)lexus2_sub_b29.po
+    - text/(talk.bin)lexus2_sub_b33.po
+    - text/(talk.bin)lexus2_sub_b28.po
+    - text/(talk.bin)lexus2_cln_main_03.po
+    - text/(talk.bin)lexus2_cln_main_05.po
+    - text/(talk.bin)lexus2_cln_main_07.po
+    - text/(talk.bin)lexus2_cln_main_09.po
+    - text/(talk.bin)lexus2_cln_main_11.po
+    - text/(talk.bin)lexus2_cln_main_13.po
+    - text/(talk.bin)lexus2_cln_main_15.po
+    - text/(talk.bin)lexus2_cln_scout.po
+    - text/(talk.bin)lexus2_clan_snack01.po
+    - text/(talk.bin)lexus2_clan_snack02.po
+    - text/(talk.bin)lexus2_sub_a42.po
+    - text/(talk.bin)lexus2_photostudio.po
+    - text/(talk.bin)lexus2_playspot_bouncer.po
+    - text/(talk.bin)lexus2_caba_shop.po
+    - text/(talk.bin)lexus2_sub_a43.po
+    - text/(talk.bin)lexus2_main_c16_btl16_0010.po
+    - text/(talk.bin)lexus2_eve_enc.po
+    - text/(talk.bin)lexus2_minigame_karaoke.po
   files:
   - name: talk.bin
     containerId: db.par
@@ -5477,7 +5477,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: talk_category_title.bin
-  outputNames: [ "talk_category_title.po" ]
+  outputNames: [ "text/talk_category_title.po" ]
   files:
   - name: talk_category_title.bin
     containerId: db.par
@@ -5509,7 +5509,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: talk_input_number.bin
-  outputNames: [ "talk_input_number.po" ]
+  outputNames: [ "text/talk_input_number.po" ]
   files:
   - name: talk_input_number.bin
     containerId: db.par
@@ -5541,7 +5541,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: talk_popup_popup.bin
-  outputNames: [ "talk_popup_popup.po" ]
+  outputNames: [ "text/talk_popup_popup.po" ]
   files:
   - name: talk_popup_popup.bin
     containerId: db.par
@@ -5573,7 +5573,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: talk_select.bin
-  outputNames: [ "talk_select.po" ]
+  outputNames: [ "text/talk_select.po" ]
   files:
   - name: talk_select.bin
     containerId: db.par
@@ -5605,7 +5605,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: talk_select_select.bin
-  outputNames: [ "talk_select_select.po" ]
+  outputNames: [ "text/talk_select_select.po" ]
   files:
   - name: talk_select_select.bin
     containerId: db.par
@@ -5637,7 +5637,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: talk_system_msg.bin
-  outputNames: [ "talk_system_msg.po" ]
+  outputNames: [ "text/talk_system_msg.po" ]
   files:
   - name: talk_system_msg.bin
     containerId: db.par
@@ -5669,7 +5669,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: talk_talker.bin
-  outputNames: [ "talk_talker.po" ]
+  outputNames: [ "text/talk_talker.po" ]
   files:
   - name: talk_talker.bin
     containerId: db.par
@@ -5701,7 +5701,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: title_movie.bin
-  outputNames: [ "title_movie.po" ]
+  outputNames: [ "text/title_movie.po" ]
   files:
   - name: title_movie.bin
     containerId: db.par
@@ -5733,7 +5733,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: title_movie_chapter.bin
-  outputNames: [ "title_movie_chapter.po" ]
+  outputNames: [ "text/title_movie_chapter.po" ]
   files:
   - name: title_movie_chapter.bin
     containerId: db.par
@@ -5765,7 +5765,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: title_root.bin
-  outputNames: [ "title_root.po" ]
+  outputNames: [ "text/title_root.po" ]
   files:
   - name: title_root.bin
     containerId: db.par
@@ -5797,7 +5797,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: trophy.bin
-  outputNames: [ "trophy.po" ]
+  outputNames: [ "text/trophy.po" ]
   files:
   - name: trophy.bin
     containerId: db.par
@@ -5829,7 +5829,7 @@ assets:
   - typeName: TF3.Core.Converters.FormatToSingleNode
     parameterId: ''
 - id: ui_text.bin
-  outputNames: [ "ui_text.po" ]
+  outputNames: [ "text/ui_text.po" ]
   files:
   - name: ui_text.bin
     containerId: db.par

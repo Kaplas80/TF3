@@ -37,11 +37,10 @@ namespace TF3.CommandLine
         {
             ScriptManager.LoadScripts("scripts");
 
-            Parser.Default.ParseArguments<Options.ListScriptsOptions, Options.NewProjectOptions, Options.ScanFilesOptions, Options.ExtractOptions>(args)
+            Parser.Default.ParseArguments<Options.ListScriptsOptions, Options.ExtractOptions, Options.RebuildOptions>(args)
                 .WithParsed<Options.ListScriptsOptions>(ListScripts)
-                .WithParsed<Options.NewProjectOptions>(NewProject)
-                .WithParsed<Options.ScanFilesOptions>(ScanFiles)
-                .WithParsed<Options.ExtractOptions>(Extract);
+                .WithParsed<Options.ExtractOptions>(Extract)
+                .WithParsed<Options.RebuildOptions>(Rebuild);
         }
 
         private static void ListScripts(Options.ListScriptsOptions options)
@@ -58,16 +57,86 @@ namespace TF3.CommandLine
             }
         }
 
-        private static void NewProject(Options.NewProjectOptions options)
-        {
-        }
-
-        private static void ScanFiles(Options.ScanFilesOptions options)
-        {
-        }
-
         private static void Extract(Options.ExtractOptions options)
         {
+            GameScript script = ScriptManager.Scripts.FirstOrDefault(x => x.Name == options.Script);
+
+            if (script == null)
+            {
+                Console.WriteLine($"Script '{options.Script}' not found.");
+                Console.WriteLine();
+                ListScripts(null);
+                return;
+            }
+
+            if (!System.IO.Directory.Exists(options.GameDir))
+            {
+                Console.WriteLine($"Invalid game path: {options.GameDir}");
+                return;
+            }
+
+            if (System.IO.Directory.Exists(options.Output))
+            {
+                Console.Write($"Output directory already exists. Overwrite (y/N)? ");
+                string overwrite = Console.ReadLine();
+
+                if (!string.Equals(overwrite, "Y", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    Console.WriteLine("Cancelled by user.");
+                    return;
+                }
+
+                System.IO.Directory.Delete(options.Output, true);
+            }
+
+            System.IO.Directory.CreateDirectory(options.Output);
+
+            Console.WriteLine("Extracting game assets...");
+            script.ExtractAssets(options.GameDir, options.Output);
+        }
+
+        private static void Rebuild(Options.RebuildOptions options)
+        {
+            GameScript script = ScriptManager.Scripts.FirstOrDefault(x => x.Name == options.Script);
+
+            if (script == null)
+            {
+                Console.WriteLine($"Script '{options.Script}' not found.");
+                Console.WriteLine();
+                ListScripts(null);
+                return;
+            }
+
+            if (!System.IO.Directory.Exists(options.GameDir))
+            {
+                Console.WriteLine($"Invalid game path: {options.GameDir}");
+                return;
+            }
+
+            if (!System.IO.Directory.Exists(options.TranslationDir))
+            {
+                Console.WriteLine($"Invalid tranlation path: {options.TranslationDir}");
+                return;
+            }
+
+            if (System.IO.Directory.Exists(options.Output))
+            {
+                Console.Write($"Output directory already exists. Overwrite (y/N)? ");
+                string overwrite = Console.ReadLine();
+
+                if (!string.Equals(overwrite, "Y", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    Console.WriteLine("Cancelled by user.");
+                    return;
+                }
+
+                System.IO.Directory.Delete(options.Output, true);
+            }
+
+            System.IO.Directory.CreateDirectory(options.Output);
+
+            Console.WriteLine("Rebuilding game assets...");
+            script.RebuildAssets(options.GameDir, options.TranslationDir, options.Output);
         }
     }
 }
