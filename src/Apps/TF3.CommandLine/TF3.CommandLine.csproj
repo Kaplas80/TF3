@@ -11,6 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Libraries\TF3.Common.Core\TF3.Common.Core.csproj" />
+    <ProjectReference Include="..\..\Libraries\TF3.Core\TF3.Core.csproj" />
   </ItemGroup>
 </Project>

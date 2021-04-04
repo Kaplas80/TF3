@@ -17,7 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7FA27372
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TF3.Tests.YakuzaKiwami2", "Tests\TF3.Tests.YakuzaKiwami2\TF3.Tests.YakuzaKiwami2.csproj", "{1B27ECFA-677E-47EF-9806-C012C952341A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TF3.Common.Core", "Libraries\TF3.Common.Core\TF3.Common.Core.csproj", "{7BB9F59E-DF6E-424F-87A9-61D1F03737EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TF3.Core", "Libraries\TF3.Core\TF3.Core.csproj", "{7BB9F59E-DF6E-424F-87A9-61D1F03737EB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "YarhlPlugins", "YarhlPlugins", "{FE6CE2CA-D6A5-40A1-A26E-A33BB20318CA}"
 EndProject
