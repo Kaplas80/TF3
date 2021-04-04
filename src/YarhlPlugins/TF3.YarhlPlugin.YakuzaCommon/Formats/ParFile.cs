@@ -23,10 +23,15 @@ namespace TF3.YarhlPlugin.YakuzaCommon.Formats
     using TF3.YarhlPlugin.YakuzaCommon.Types;
     using Yarhl.IO;
 
+    /// <summary>
+    /// File inside a PAR container.
+    /// </summary>
     public class ParFile : BinaryFormat
     {
-        public ParFileInfo FileInfo { get; set; }
-
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ParFile"/> class.
+        /// </summary>
+        /// <param name="stream">Binary stream.</param>
         public ParFile(System.IO.Stream stream)
             : base(stream, 0, stream.Length)
         {
@@ -42,10 +47,20 @@ namespace TF3.YarhlPlugin.YakuzaCommon.Formats
             };
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ParFile"/> class.
+        /// </summary>
+        /// <param name="fileInfo">File parameters.</param>
+        /// <param name="stream">Binary stream.</param>
         public ParFile(ParFileInfo fileInfo, System.IO.Stream stream)
             : base(stream, 0, stream.Length)
         {
             FileInfo = fileInfo;
         }
+
+        /// <summary>
+        /// Gets or sets the file parameters.
+        /// </summary>
+        public ParFileInfo FileInfo { get; set; }
     }
 }
