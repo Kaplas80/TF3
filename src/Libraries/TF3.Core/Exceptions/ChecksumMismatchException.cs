@@ -18,7 +18,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-namespace TF3.Common.Core.Exceptions
+namespace TF3.Core.Exceptions
 {
     using System;
     using System.Runtime.Serialization;

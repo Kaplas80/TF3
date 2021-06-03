@@ -1,9 +1,9 @@
 <Project>
     <!-- Centralize dependency management -->
     <ItemGroup>
-        <PackageVersion Include="Yarhl" Version="3.1.1-preview.13" />
-        <PackageVersion Include="Yarhl.Media" Version="3.1.1-preview.13" />
-
+        <PackageVersion Include="Yarhl" Version="3.1.1-preview.28" />
+        <PackageVersion Include="Yarhl.Media" Version="3.1.1-preview.28" />
+      
         <PackageVersion Include="CommandLineParser" Version="2.8.0" />
 
         <PackageVersion Include="DotNetZip" Version="1.15.0" />

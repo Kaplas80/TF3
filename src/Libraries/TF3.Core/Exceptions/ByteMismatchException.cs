@@ -24,45 +24,45 @@ namespace TF3.Core.Exceptions
     using System.Runtime.Serialization;
 
     /// <summary>
-    /// Exception thrown when a Yarhl converter is not found.
+    /// Exception thrown when byte doesn't match with the expected one when applying a patch.
     /// </summary>
     [Serializable]
-    public class UnknownConverterException : Exception
+    public class ByteMismatchException : Exception
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="UnknownConverterException"/> class.
+        /// Initializes a new instance of the <see cref="ByteMismatchException"/> class.
         /// </summary>
-        public UnknownConverterException()
+        public ByteMismatchException()
             : base()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="UnknownConverterException"/> class.
+        /// Initializes a new instance of the <see cref="ByteMismatchException"/> class.
         /// </summary>
         /// <param name="message">The error message that explains the reason for the exception.</param>
-        public UnknownConverterException(string message)
+        public ByteMismatchException(string message)
             : base(message)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="UnknownConverterException"/> class.
+        /// Initializes a new instance of the <see cref="ByteMismatchException"/> class.
         /// </summary>
         /// <param name="message">The error message that explains the reason for the exception.</param>
         /// <param name="innerException">The exception that is the cause of the current exception,
         /// or a null reference (Nothing in Visual Basic) if no inner exception is specified.</param>
-        public UnknownConverterException(string message, Exception innerException)
+        public ByteMismatchException(string message, Exception innerException)
             : base(message, innerException)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="UnknownConverterException"/> class.
+        /// Initializes a new instance of the <see cref="ByteMismatchException"/> class.
         /// </summary>
         /// <param name="info">The System.Runtime.Serialization.SerializationInfo that holds the serialized object data about the exception being thrown.</param>
         /// <param name="context">The System.Runtime.Serialization.StreamingContext that contains contextual information about the source or destination.</param>
-        protected UnknownConverterException(SerializationInfo info, StreamingContext context)
+        protected ByteMismatchException(SerializationInfo info, StreamingContext context)
             : base(info, context)
         {
         }

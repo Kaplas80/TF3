@@ -18,21 +18,40 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-namespace TF3.Core.Models
+namespace TF3.Core.Formats
 {
+    using System.Collections.Generic;
+    using Yarhl.FileFormat;
+
     /// <summary>
-    /// Yarhl converter info.
+    /// Binary patch format.
+    /// <remarks>Similar to 1337 patch format.</remarks>
     /// </summary>
-    public class ConverterInfo
+    public class BinaryPatch : IFormat
     {
         /// <summary>
-        /// Gets or sets the converter type name.
+        /// Initializes a new instance of the <see cref="BinaryPatch"/> class.
         /// </summary>
-        public string TypeName { get; set; }
+        public BinaryPatch()
+        {
+            FileName = string.Empty;
+            RawOffset = 0;
+            Patches = new List<(long, byte, byte)>();
+        }
 
         /// <summary>
-        /// Gets or sets the converter parameter id.
+        /// Gets or sets the file to apply patch.
         /// </summary>
-        public string ParameterId { get; set; }
+        public string FileName { get; set; }
+
+        /// <summary>
+        /// Gets or sets the data raw offset.
+        /// </summary>
+        public long RawOffset { get; set; }
+
+        /// <summary>
+        /// Gets or sets the list of byte replacements.
+        /// </summary>
+        public List<(long Rva, byte OriginalByte, byte NewByte)> Patches { get; set; }
     }
 }

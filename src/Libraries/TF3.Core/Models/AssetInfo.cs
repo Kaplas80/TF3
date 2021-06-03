@@ -18,7 +18,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-namespace TF3.Common.Core.Models
+namespace TF3.Core.Models
 {
     using System.Collections.Generic;
 
@@ -40,7 +40,7 @@ namespace TF3.Common.Core.Models
         /// <summary>
         /// Gets or sets the list of files in this asset.
         /// </summary>
-        public List<FileInfo> Files { get; set; }
+        public List<AssetFileInfo> Files { get; set; }
 
         /// <summary>
         /// Gets or sets the list of converters needed to merge the asset files into a single format.

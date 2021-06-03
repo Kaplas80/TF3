@@ -18,7 +18,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-namespace TF3.Common.Core.Helpers
+namespace TF3.Core.Helpers
 {
     using System.IO;
     using Standart.Hash.xxHash;
