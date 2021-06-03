@@ -18,14 +18,15 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-namespace TF3.Common.Core
+namespace TF3.Core
 {
     using System;
     using System.Collections.Generic;
     using System.IO;
-    using TF3.Common.Core.Exceptions;
-    using TF3.Common.Core.Helpers;
-    using TF3.Common.Core.Models;
+    using System.Linq;
+    using TF3.Core.Exceptions;
+    using TF3.Core.Helpers;
+    using TF3.Core.Models;
     using Yarhl.FileSystem;
 
     /// <summary>
@@ -54,6 +55,11 @@ namespace TF3.Common.Core
         public List<AssetInfo> Assets { get; set; }
 
         /// <summary>
+        /// Gets or sets the list of patches.
+        /// </summary>
+        public List<PatchInfo> Patches { get; set; }
+
+        /// <summary>
         /// Gets or sets the list of parameters.
         /// </summary>
         public List<ParameterInfo> Parameters { get; set; }
@@ -63,7 +69,7 @@ namespace TF3.Common.Core
         /// </summary>
         /// <param name="gamePath">Game install directory.</param>
         /// <param name="outputPath">Output directory.</param>
-        public void ExtractAssets(string gamePath, string outputPath)
+        public void Extract(string gamePath, string outputPath)
         {
             Directory.CreateDirectory(outputPath);
 
@@ -84,62 +90,31 @@ namespace TF3.Common.Core
         /// Rebuild all translatable assets from the game.
         /// </summary>
         /// <param name="gamePath">Game install directory.</param>
-        /// <param name="translationPath">Translation directory.</param>
+        /// <param name="translationPath">Translation and patches directory.</param>
         /// <param name="outputPath">Output directory.</param>
-        public void RebuildAssets(string gamePath, string translationPath, string outputPath)
+        public void Rebuild(string gamePath, string translationPath, string outputPath)
         {
             Directory.CreateDirectory(outputPath);
 
             var containersDict = new Dictionary<string, Node>();
-            var containersDict2 = new Dictionary<string, Node>();
-
             Node gameRoot = NodeFactory.FromDirectory(gamePath, "*", "root", true, Yarhl.IO.FileOpenMode.Read);
-            Node gameRoot2 = NodeFactory.FromDirectory(gamePath, "*", "root", true, Yarhl.IO.FileOpenMode.Read);
             containersDict.Add("root", gameRoot);
-            containersDict2.Add("root", gameRoot2);
 
             ReadContainers(Containers, gameRoot, containersDict);
-            ReadContainers(Containers, gameRoot2, containersDict2);
 
             foreach (AssetInfo assetInfo in Assets)
             {
-                Node asset = ReadAsset(assetInfo, containersDict); // This removes the nodes from their original parents. That's why there is a containersDict2.
-                Node translation = ReadTranslation(assetInfo, translationPath);
-
-                asset.Translate(translation, assetInfo.Translator);
-
-                asset.Transform(assetInfo.Splitters, Parameters);
-
-                foreach (Models.FileInfo fileInfo in assetInfo.Files)
-                {
-                    if (!containersDict2.TryGetValue(fileInfo.ContainerId, out Node container))
-                    {
-                        throw new DirectoryNotFoundException($"Container not found: {fileInfo.ContainerId}");
-                    }
-
-                    Node newFile;
-                    if (asset.Children[0].Name == "single_node")
-                    {
-                        newFile = asset.Children[0];
-                    }
-                    else
-                    {
-                        newFile = Navigator.SearchNode(asset, fileInfo.Name);
-                    }
-
-                    newFile.Transform(fileInfo.Writers, Parameters);
-
-                    Node originalFile = Navigator.SearchNode(container, fileInfo.Path);
-
-                    originalFile.ChangeFormat(newFile.Format);
-                    originalFile.Tags["Changed"] = true;
-                    originalFile.Tags["OutputPath"] = fileInfo.Path;
-                }
+                TranslateAsset(assetInfo, containersDict, translationPath);
             }
 
-            WriteContainers(Containers, gameRoot2);
+            foreach (PatchInfo patchInfo in Patches)
+            {
+                ApplyPatch(patchInfo, containersDict, translationPath);
+            }
 
-            foreach (Node node in Navigator.IterateNodes(gameRoot2))
+            WriteContainers(Containers, gameRoot);
+
+            foreach (Node node in Navigator.IterateNodes(gameRoot))
             {
                 if (node.Tags.ContainsKey("Changed"))
                 {
@@ -225,48 +200,116 @@ namespace TF3.Common.Core
         {
             Node asset = NodeFactory.CreateContainer(assetInfo.Id);
 
-            foreach (Models.FileInfo fileInfo in assetInfo.Files)
+            foreach (AssetFileInfo fileInfo in assetInfo.Files)
             {
-                if (!containers.TryGetValue(fileInfo.ContainerId, out Node container))
-                {
-                    throw new DirectoryNotFoundException($"Container not found: {fileInfo.ContainerId}");
-                }
+                Node file = ReadFile(fileInfo, containers);
 
-                Node file = Navigator.SearchNode(container, fileInfo.Path);
-
-                if (file == null)
-                {
-                    throw new FileNotFoundException($"File not found: {fileInfo.Name}");
-                }
-
-                if (!ChecksumHelper.Check(file.Stream, fileInfo.Checksum))
-                {
-                    throw new ChecksumMismatchException($"Checksum mismatch in {fileInfo.Name}");
-                }
-
-                file.Transform(fileInfo.Readers, Parameters);
-                asset.Add(file);
+                // Add call will remove the node from its original parent, so we need to make a copy
+                Node newFile = new Node(file);
+                newFile.Transform(fileInfo.Readers, Parameters);
+                asset.Add(newFile);
             }
 
             asset.Transform(assetInfo.Mergers, Parameters);
             return asset;
         }
 
+        private Node ReadFile(Models.FileInfo fileInfo, Dictionary<string, Node> containers)
+        {
+            if (!containers.TryGetValue(fileInfo.ContainerId, out Node container))
+            {
+                throw new DirectoryNotFoundException($"Container not found: {fileInfo.ContainerId}");
+            }
+
+            Node file = Navigator.SearchNode(container, fileInfo.Path);
+
+            if (file == null)
+            {
+                throw new FileNotFoundException($"File not found: {fileInfo.Name}");
+            }
+
+            if (!ChecksumHelper.Check(file.Stream, fileInfo.Checksum))
+            {
+                throw new ChecksumMismatchException($"Checksum mismatch in {fileInfo.Name}");
+            }
+
+            return file;
+        }
+
+        private void TranslateAsset(AssetInfo assetInfo, Dictionary<string, Node> containers, string translationPath)
+        {
+            Node translation = ReadTranslation(assetInfo, translationPath);
+            if (translation == null)
+            {
+                // Skip the asset if there is no translation
+                return;
+            }
+
+            Node asset = ReadAsset(assetInfo, containers);
+
+            asset.Translate(translation, assetInfo.Translator);
+
+            asset.Transform(assetInfo.Splitters, Parameters);
+
+            foreach (AssetFileInfo fileInfo in assetInfo.Files)
+            {
+                if (!containers.TryGetValue(fileInfo.ContainerId, out Node container))
+                {
+                    throw new DirectoryNotFoundException($"Container not found: {fileInfo.ContainerId}");
+                }
+
+                Node newFile = asset.Children[0].Name == "single_node"
+                    ? asset.Children[0]
+                    : Navigator.SearchNode(asset, fileInfo.Name);
+
+                newFile.Transform(fileInfo.Writers, Parameters);
+
+                Node originalFile = Navigator.SearchNode(container, fileInfo.Path);
+
+                originalFile.ChangeFormat(newFile.Format);
+                originalFile.Tags["Changed"] = true;
+                originalFile.Tags["OutputPath"] = fileInfo.Path;
+            }
+        }
+
         private Node ReadTranslation(AssetInfo assetInfo, string translationPath)
         {
             Node translation = NodeFactory.CreateContainer(string.Concat(assetInfo.Id, "_Translation"));
 
-            foreach (string outputFile in assetInfo.OutputNames)
+            foreach (string outputFile in assetInfo.OutputNames.Select(file => Path.Combine(translationPath, file)))
             {
-                string path = Path.Combine(translationPath, outputFile);
-
-                Node file = NodeFactory.FromFile(path, Yarhl.IO.FileOpenMode.Read);
-
-                translation.Add(file);
+                if (File.Exists(outputFile))
+                {
+                    Node node = NodeFactory.FromFile(outputFile, Yarhl.IO.FileOpenMode.Read);
+                    translation.Add(node);
+                }
+                else
+                {
+                    // All files are needed for translating. If any of them is missing, skip the translation of this asset.
+                    return null;
+                }
             }
 
             translation.Transform(assetInfo.TranslationMergers, Parameters);
             return translation;
+        }
+
+        private void ApplyPatch(PatchInfo patchInfo, Dictionary<string, Node> containers, string translationPath)
+        {
+            Node patch = NodeFactory.FromFile(Path.Combine(translationPath, "patches", patchInfo.Patch), Yarhl.IO.FileOpenMode.Read);
+            if (patch == null)
+            {
+                // Skip if there is no patch file
+                return;
+            }
+
+            patch.TransformWith<Converters.BinaryPatch.Reader, long>(-patchInfo.VirtualAddress + patchInfo.RawAddress);
+
+            Node file = ReadFile(patchInfo.File, containers);
+            file.TransformWith<Converters.BinaryPatch.Apply, Formats.BinaryPatch>(patch.GetFormatAs<Formats.BinaryPatch>());
+
+            file.Tags["Changed"] = true;
+            file.Tags["OutputPath"] = patchInfo.File.Path;
         }
     }
 }

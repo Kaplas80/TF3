@@ -18,13 +18,13 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-namespace TF3.Common.Core.Helpers
+namespace TF3.Core.Helpers
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using TF3.Common.Core.Exceptions;
-    using TF3.Common.Core.Models;
+    using TF3.Core.Exceptions;
+    using TF3.Core.Models;
     using Yarhl;
     using Yarhl.FileFormat;
     using Yarhl.FileSystem;

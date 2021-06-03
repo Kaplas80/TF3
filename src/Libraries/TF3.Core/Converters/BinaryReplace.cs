@@ -1,4 +1,4 @@
-// Copyright (c) 2021 Kaplas
+﻿// Copyright (c) 2021 Kaplas
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -18,21 +18,43 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-namespace TF3.Core.Models
+namespace TF3.Core.Converters
 {
+    using System;
+    using Yarhl.FileFormat;
+    using Yarhl.IO;
+
     /// <summary>
-    /// Yarhl converter info.
+    /// BinaryFormat replacer.
     /// </summary>
-    public class ConverterInfo
+    public class BinaryReplace : IConverter<BinaryFormat, BinaryFormat>, IInitializer<BinaryFormat>
     {
-        /// <summary>
-        /// Gets or sets the converter type name.
-        /// </summary>
-        public string TypeName { get; set; }
+        private BinaryFormat _newBinaryFormat = null;
 
         /// <summary>
-        /// Gets or sets the converter parameter id.
+        /// Set the new binary.
         /// </summary>
-        public string ParameterId { get; set; }
+        /// <param name="parameters">The new binary.</param>
+        public void Initialize(BinaryFormat parameters) => _newBinaryFormat = parameters;
+
+        /// <summary>
+        /// Fully replace a BinaryFormat.
+        /// </summary>
+        /// <param name="source">The original binary format.</param>
+        /// <returns>The new binary format.</returns>
+        public BinaryFormat Convert(BinaryFormat source)
+        {
+            if (source == null)
+            {
+                throw new ArgumentNullException(nameof(source));
+            }
+
+            if (_newBinaryFormat == null)
+            {
+                throw new InvalidOperationException("Uninitialized.");
+            }
+
+            return _newBinaryFormat;
+        }
     }
 }

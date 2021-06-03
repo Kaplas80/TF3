@@ -21,18 +21,33 @@
 namespace TF3.Core.Models
 {
     /// <summary>
-    /// Yarhl converter info.
+    /// Binary patch info.
     /// </summary>
-    public class ConverterInfo
+    public class PatchInfo
     {
         /// <summary>
-        /// Gets or sets the converter type name.
+        /// Gets or sets the patch id.
         /// </summary>
-        public string TypeName { get; set; }
+        public string Id { get; set; }
 
         /// <summary>
-        /// Gets or sets the converter parameter id.
+        /// Gets or sets the file to patch.
         /// </summary>
-        public string ParameterId { get; set; }
+        public FileInfo File { get; set; }
+
+        /// <summary>
+        /// Gets or sets the patch to apply.
+        /// </summary>
+        public string Patch { get; set; }
+
+        /// <summary>
+        /// Gets or sets the data virtual address (in exe files).
+        /// </summary>
+        public long VirtualAddress { get; set; }
+
+        /// <summary>
+        /// Gets or sets the data raw address (in exe files).
+        /// </summary>
+        public long RawAddress { get; set; }
     }
 }

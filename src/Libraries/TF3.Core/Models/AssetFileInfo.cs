@@ -20,19 +20,21 @@
 
 namespace TF3.Core.Models
 {
+    using System.Collections.Generic;
+
     /// <summary>
-    /// Yarhl converter info.
+    /// Game asset file info.
     /// </summary>
-    public class ConverterInfo
+    public class AssetFileInfo : FileInfo
     {
         /// <summary>
-        /// Gets or sets the converter type name.
+        /// Gets or sets the list of converters needed to read the file.
         /// </summary>
-        public string TypeName { get; set; }
+        public List<ConverterInfo> Readers { get; set; }
 
         /// <summary>
-        /// Gets or sets the converter parameter id.
+        /// Gets or sets the list of converters needed to write the file.
         /// </summary>
-        public string ParameterId { get; set; }
+        public List<ConverterInfo> Writers { get; set; }
     }
 }

@@ -17,12 +17,13 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
+
 namespace TF3.CommandLine
 {
     using System;
     using System.Linq;
     using global::CommandLine;
-    using TF3.Common.Core;
+    using TF3.Core;
 
     /// <summary>
     /// Main program class.
@@ -92,7 +93,7 @@ namespace TF3.CommandLine
             System.IO.Directory.CreateDirectory(options.Output);
 
             Console.WriteLine("Extracting game assets...");
-            script.ExtractAssets(options.GameDir, options.Output);
+            script.Extract(options.GameDir, options.Output);
         }
 
         private static void Rebuild(Options.RebuildOptions options)
@@ -136,7 +137,7 @@ namespace TF3.CommandLine
             System.IO.Directory.CreateDirectory(options.Output);
 
             Console.WriteLine("Rebuilding game assets...");
-            script.RebuildAssets(options.GameDir, options.TranslationDir, options.Output);
+            script.Rebuild(options.GameDir, options.TranslationDir, options.Output);
         }
     }
 }

@@ -18,10 +18,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-namespace TF3.Common.Core.Models
+namespace TF3.Core.Models
 {
-    using System.Collections.Generic;
-
     /// <summary>
     /// Game file info.
     /// </summary>
@@ -47,15 +45,5 @@ namespace TF3.Common.Core.Models
         /// If it is 0, it won't be checked.
         /// </summary>
         public ulong Checksum { get; set; }
-
-        /// <summary>
-        /// Gets or sets the list of converters needed to read the file.
-        /// </summary>
-        public List<ConverterInfo> Readers { get; set; }
-
-        /// <summary>
-        /// Gets or sets the list of converters needed to write the file.
-        /// </summary>
-        public List<ConverterInfo> Writers { get; set; }
     }
 }

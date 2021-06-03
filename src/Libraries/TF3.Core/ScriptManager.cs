@@ -18,12 +18,13 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-namespace TF3.Common.Core
+namespace TF3.Core
 {
     using System.Collections.Generic;
     using System.IO;
     using YamlDotNet.Serialization;
     using YamlDotNet.Serialization.NamingConventions;
+    using Yarhl;
 
     /// <summary>
     /// Script manager.
@@ -43,6 +44,9 @@ namespace TF3.Common.Core
         /// <param name="path">The directory containing the scripts.</param>
         public static void LoadScripts(string path)
         {
+            // This is needed to load all the Yarhl plugins and make their types available in scripts.
+            _ = PluginManager.Instance;
+
             _scripts.Clear();
             IDeserializer deserializer = new DeserializerBuilder()
                                              .WithTypeConverter(new Yaml.ParameterInfoTypeConverter())
