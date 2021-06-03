@@ -38,11 +38,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/TF3.Common.Core.Exceptions.ChecksumMismatchException.yml",
+      "source_relative_path": "api/TF3.Core.Converters.BinaryPatch.Apply.yml",
       "output": {
         ".html": {
-          "relative_path": "api/TF3.Common.Core.Exceptions.ChecksumMismatchException.html",
-          "hash": "VlMj+NLDoKKoBRhkmaC+lw=="
+          "relative_path": "api/TF3.Core.Converters.BinaryPatch.Apply.html",
+          "hash": "r6enEYp3D1pDYsWBcw95BA=="
         }
       },
       "is_incremental": false,
@@ -50,11 +50,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/TF3.Common.Core.Exceptions.UnknownConverterException.yml",
+      "source_relative_path": "api/TF3.Core.Converters.BinaryPatch.Reader.yml",
       "output": {
         ".html": {
-          "relative_path": "api/TF3.Common.Core.Exceptions.UnknownConverterException.html",
-          "hash": "7iUeIHRzAc7Ibt7FncOuSg=="
+          "relative_path": "api/TF3.Core.Converters.BinaryPatch.Reader.html",
+          "hash": "etBif/SG2Zb9Ne4NRvIR7g=="
         }
       },
       "is_incremental": false,
@@ -62,11 +62,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/TF3.Common.Core.Exceptions.yml",
+      "source_relative_path": "api/TF3.Core.Converters.BinaryPatch.yml",
       "output": {
         ".html": {
-          "relative_path": "api/TF3.Common.Core.Exceptions.html",
-          "hash": "N7oFzPEkLnRNDX9O14BkLA=="
+          "relative_path": "api/TF3.Core.Converters.BinaryPatch.html",
+          "hash": "2Ll16IscPACJsW1rRzaDkA=="
         }
       },
       "is_incremental": false,
@@ -74,167 +74,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/TF3.Common.Core.GameScript.yml",
+      "source_relative_path": "api/TF3.Core.Converters.BinaryReplace.yml",
       "output": {
         ".html": {
-          "relative_path": "api/TF3.Common.Core.GameScript.html",
-          "hash": "1JuY6EfAoSI3K/Ezqqh95w=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TF3.Common.Core.Helpers.ChecksumHelper.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TF3.Common.Core.Helpers.ChecksumHelper.html",
-          "hash": "olEEVFGRcc+ZJipEMuXnyQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TF3.Common.Core.Helpers.YarhlNodeExtension.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TF3.Common.Core.Helpers.YarhlNodeExtension.html",
-          "hash": "R10twA5Pm2V0exEpc2it+w=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TF3.Common.Core.Helpers.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TF3.Common.Core.Helpers.html",
-          "hash": "kQenvwby4Z6Zcgt+P6q8WQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TF3.Common.Core.Models.AssetInfo.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TF3.Common.Core.Models.AssetInfo.html",
-          "hash": "rg762AhSfuMYpI6EfwBOtQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TF3.Common.Core.Models.ContainerInfo.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TF3.Common.Core.Models.ContainerInfo.html",
-          "hash": "xUZ4FjL9jLll0F5d5J60LQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TF3.Common.Core.Models.ConverterInfo.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TF3.Common.Core.Models.ConverterInfo.html",
-          "hash": "OEec2KMFUiWuVnzQpfYA6w=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TF3.Common.Core.Models.FileInfo.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TF3.Common.Core.Models.FileInfo.html",
-          "hash": "pN6H/KhOCZi0m5Pjb98/1g=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TF3.Common.Core.Models.ParameterInfo.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TF3.Common.Core.Models.ParameterInfo.html",
-          "hash": "IrOt755JNR4We1nm1P4R1w=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TF3.Common.Core.Models.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TF3.Common.Core.Models.html",
-          "hash": "cIaIiFQawBofGYt18CLIFQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TF3.Common.Core.ScriptManager.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TF3.Common.Core.ScriptManager.html",
-          "hash": "JHPBKaNJyYzxUsP0Ob7+hg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TF3.Common.Core.Yaml.ParameterInfoTypeConverter.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TF3.Common.Core.Yaml.ParameterInfoTypeConverter.html",
-          "hash": "YllYRvc//M4N4QEhC8fTsQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TF3.Common.Core.Yaml.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TF3.Common.Core.Yaml.html",
-          "hash": "C2fhPFjUkIVHbPXkDPil1Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TF3.Common.Core.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TF3.Common.Core.html",
-          "hash": "QunJP/SBHh84FhS3FzekRg=="
+          "relative_path": "api/TF3.Core.Converters.BinaryReplace.html",
+          "hash": "p7086hTjo9NqFJK1q/Xfqw=="
         }
       },
       "is_incremental": false,
@@ -246,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Converters.FormatToSingleNode.html",
-          "hash": "MeRRUMi1l57UQ8j1jKQPxw=="
+          "hash": "9CEWWzjng2H2TpL26zmW6g=="
         }
       },
       "is_incremental": false,
@@ -258,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Converters.SingleNodeToFormat.html",
-          "hash": "Y2kx3PgwInTNxz7FLTjCUQ=="
+          "hash": "r06rM4n0JXo5V3dHITDeAA=="
         }
       },
       "is_incremental": false,
@@ -270,7 +114,271 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Converters.html",
-          "hash": "zFrXt1I8Fj9dITM+FaAfgA=="
+          "hash": "XE92xK5LwoAXPryW/F2T1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Exceptions.ByteMismatchException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Exceptions.ByteMismatchException.html",
+          "hash": "1yMc2yVML6Es1GyNj0XD4A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Exceptions.ChecksumMismatchException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Exceptions.ChecksumMismatchException.html",
+          "hash": "bHbyFRrB1nuJ/LJQZXn6sQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Exceptions.UnknownConverterException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Exceptions.UnknownConverterException.html",
+          "hash": "U7giEesozeNbTXp4Vsxukw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Exceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Exceptions.html",
+          "hash": "uyG/P1kdLmgySLvI+hA8Dw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Formats.BinaryPatch.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Formats.BinaryPatch.html",
+          "hash": "KqLVYr/YgzAS8rGJv1Tr0w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Formats.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Formats.html",
+          "hash": "TOvTvIgXKl/fbQw67+rXmA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.GameScript.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.GameScript.html",
+          "hash": "R87ztDVwZYqmV9olrnaOMg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Helpers.ChecksumHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Helpers.ChecksumHelper.html",
+          "hash": "JgR9I2t790t6rD6JblD/Kw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Helpers.YarhlNodeExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Helpers.YarhlNodeExtension.html",
+          "hash": "j6Ala/CyXnS9mFLAGuwQoQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Helpers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Helpers.html",
+          "hash": "ekE6mDsp2trID/PLrtv31Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Models.AssetFileInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Models.AssetFileInfo.html",
+          "hash": "A9R8iakwuO8AzNzP8zR9Aw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Models.AssetInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Models.AssetInfo.html",
+          "hash": "DvThHO2m6obUV3EIKqRS6g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Models.ContainerInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Models.ContainerInfo.html",
+          "hash": "RWP9Qsy6TWcET9QhcCJ3DA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Models.ConverterInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Models.ConverterInfo.html",
+          "hash": "3k0vQxqxIvu+bgcwNNEfsw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Models.FileInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Models.FileInfo.html",
+          "hash": "XHsUjk9LwByBnylIW3weTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Models.ParameterInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Models.ParameterInfo.html",
+          "hash": "nUpzOe1qwGyULG8YanySMQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Models.PatchInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Models.PatchInfo.html",
+          "hash": "iO3bwZbbNFl3thnvOxRjzg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Models.html",
+          "hash": "SorGBehVhV0+gofeLxacmQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.ScriptManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.ScriptManager.html",
+          "hash": "QU5njWjFvZTrAs3O3bLQNQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Yaml.ParameterInfoTypeConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Yaml.ParameterInfoTypeConverter.html",
+          "hash": "nOrul7IdBoUdLeNMGMJ2yQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Yaml.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Yaml.html",
+          "hash": "h6cVYRU1AQ1KbpKKwTWZzg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.html",
+          "hash": "ulVMquNTR0EhHGTbUOJtLA=="
         }
       },
       "is_incremental": false,
@@ -282,7 +390,7 @@
       "output": {
         ".html": {
           "relative_path": "dev/Changelog.html",
-          "hash": "NbM98X+uav6jQrG+AYlk4Q=="
+          "hash": "AItUZtJul3dbRyKucA1hLw=="
         }
       },
       "is_incremental": false,
@@ -294,7 +402,7 @@
       "output": {
         ".html": {
           "relative_path": "dev/toc.html",
-          "hash": "BXCmkbJ/qreHynxgzq11ow=="
+          "hash": "o/ll9nPDjI+qxryB+XJdRw=="
         }
       },
       "is_incremental": false,
@@ -414,7 +522,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 20,
+          "total_file_count": 29,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

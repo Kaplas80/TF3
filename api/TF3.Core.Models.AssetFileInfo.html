@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Namespace TF3.Core.Converters
+    <title>Class AssetFileInfo
    | Translation Framework v3 </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Namespace TF3.Core.Converters
+    <meta name="title" content="Class AssetFileInfo
    | Translation Framework v3 ">
     <meta name="generator" content="docfx 2.56.7.0">
     
@@ -224,24 +224,105 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="TF3.Core.Converters">
+            <article class="content wrap" id="_content" data-uid="TF3.Core.Models.AssetFileInfo">
   
-  <h1 id="TF3_Core_Converters" data-uid="TF3.Core.Converters" class="text-break">Namespace TF3.Core.Converters
+  
+  <h1 id="TF3_Core_Models_AssetFileInfo" data-uid="TF3.Core.Models.AssetFileInfo" class="text-break">Class AssetFileInfo
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Game asset file info.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
-  <div class="markdown level0 remarks"></div>
-    <h3 id="classes">Classes
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="TF3.Core.Models.FileInfo.html">FileInfo</a></div>
+    <div class="level2"><span class="xref">AssetFileInfo</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="TF3.Core.Models.FileInfo.html#TF3_Core_Models_FileInfo_Name">FileInfo.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="TF3.Core.Models.FileInfo.html#TF3_Core_Models_FileInfo_ContainerId">FileInfo.ContainerId</a>
+    </div>
+    <div>
+      <a class="xref" href="TF3.Core.Models.FileInfo.html#TF3_Core_Models_FileInfo_Path">FileInfo.Path</a>
+    </div>
+    <div>
+      <a class="xref" href="TF3.Core.Models.FileInfo.html#TF3_Core_Models_FileInfo_Checksum">FileInfo.Checksum</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="TF3.Core.Models.html">TF3.Core.Models</a></h6>
+  <h6><strong>Assembly</strong>: TF3.Core.dll</h6>
+  <h5 id="TF3_Core_Models_AssetFileInfo_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AssetFileInfo : FileInfo</code></pre>
+  </div>
+  <h3 id="properties">Properties
   </h3>
-      <h4><a class="xref" href="TF3.Core.Converters.BinaryReplace.html">BinaryReplace</a></h4>
-      <section><p>BinaryFormat replacer.</p>
-</section>
-      <h4><a class="xref" href="TF3.Core.Converters.FormatToSingleNode.html">FormatToSingleNode</a></h4>
-      <section><p>Converts a IFormat to a NodeContainerFormat.</p>
-</section>
-      <h4><a class="xref" href="TF3.Core.Converters.SingleNodeToFormat.html">SingleNodeToFormat</a></h4>
-      <section><p>Converts a NodeContainerFormat to the format of the first children.</p>
-</section>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Kaplas80/TF3/new/develop/docs/apidoc/new?filename=TF3_Core_Models_AssetFileInfo_Readers.md&amp;value=---%0Auid%3A%20TF3.Core.Models.AssetFileInfo.Readers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Kaplas80/TF3/blob/develop/src/Libraries/TF3.Core/Models/AssetFileInfo.cs/#L33">View Source</a>
+  </span>
+  <a id="TF3_Core_Models_AssetFileInfo_Readers_" data-uid="TF3.Core.Models.AssetFileInfo.Readers*"></a>
+  <h4 id="TF3_Core_Models_AssetFileInfo_Readers" data-uid="TF3.Core.Models.AssetFileInfo.Readers">Readers</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the list of converters needed to read the file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;ConverterInfo&gt; Readers { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">List</span>&lt;<a class="xref" href="TF3.Core.Models.ConverterInfo.html">ConverterInfo</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Kaplas80/TF3/new/develop/docs/apidoc/new?filename=TF3_Core_Models_AssetFileInfo_Writers.md&amp;value=---%0Auid%3A%20TF3.Core.Models.AssetFileInfo.Writers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Kaplas80/TF3/blob/develop/src/Libraries/TF3.Core/Models/AssetFileInfo.cs/#L38">View Source</a>
+  </span>
+  <a id="TF3_Core_Models_AssetFileInfo_Writers_" data-uid="TF3.Core.Models.AssetFileInfo.Writers*"></a>
+  <h4 id="TF3_Core_Models_AssetFileInfo_Writers" data-uid="TF3.Core.Models.AssetFileInfo.Writers">Writers</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the list of converters needed to write the file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;ConverterInfo&gt; Writers { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">List</span>&lt;<a class="xref" href="TF3.Core.Models.ConverterInfo.html">ConverterInfo</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
@@ -249,6 +330,12 @@
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Kaplas80/TF3/new/develop/docs/apidoc/new?filename=TF3_Core_Models_AssetFileInfo.md&amp;value=---%0Auid%3A%20TF3.Core.Models.AssetFileInfo%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Kaplas80/TF3/blob/develop/src/Libraries/TF3.Core/Models/AssetFileInfo.cs/#L28" class="contribution-link">View Source</a>
+                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
