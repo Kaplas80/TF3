@@ -92,7 +92,26 @@ namespace TF3.CommandLine
 
             System.IO.Directory.CreateDirectory(options.Output);
 
-            Console.WriteLine("Extracting game assets...");
+            int totalAssets = 0;
+            int processedAssets = 0;
+            script.ScriptExtracting += (_, args) =>
+            {
+                Console.WriteLine($"Extracting \"{args.Data.Name}\" assets...");
+                totalAssets = args.Data.Assets.Count;
+            };
+
+            script.ScriptExtracted += (_, _) =>
+            {
+                Console.WriteLine();
+                Console.WriteLine("Extraction finished!");
+            };
+
+            script.AssetExtracted += (_, _) =>
+            {
+                processedAssets++;
+                Console.Write($"\rAssets extracted {processedAssets} / {totalAssets}");
+            };
+
             script.Extract(options.GameDir, options.Output);
         }
 
@@ -136,7 +155,26 @@ namespace TF3.CommandLine
 
             System.IO.Directory.CreateDirectory(options.Output);
 
-            Console.WriteLine("Rebuilding game assets...");
+            int totalAssets = 0;
+            int processedAssets = 0;
+            script.ScriptRebuilding += (_, args) =>
+            {
+                Console.WriteLine($"Rebuilding \"{args.Data.Name}\" assets...");
+                totalAssets = args.Data.Assets.Count;
+            };
+
+            script.ScriptRebuilt += (_, _) =>
+            {
+                Console.WriteLine();
+                Console.WriteLine("Rebuilding finished!");
+            };
+
+            script.AssetTranslated += (_, _) =>
+            {
+                processedAssets++;
+                Console.Write($"\rAssets translated {processedAssets} / {totalAssets}");
+            };
+
             script.Rebuild(options.GameDir, options.TranslationDir, options.Output);
         }
     }
