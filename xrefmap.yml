@@ -172,6 +172,140 @@ references:
   isSpec: "True"
   fullName: TF3.Core.Converters.SingleNodeToFormat.Convert
   nameWithType: SingleNodeToFormat.Convert
+- uid: TF3.Core.EventArgs
+  name: TF3.Core.EventArgs
+  href: api/TF3.Core.EventArgs.html
+  commentId: N:TF3.Core.EventArgs
+  fullName: TF3.Core.EventArgs
+  nameWithType: TF3.Core.EventArgs
+- uid: TF3.Core.EventArgs.AssetEventArgs
+  name: AssetEventArgs
+  href: api/TF3.Core.EventArgs.AssetEventArgs.html
+  commentId: T:TF3.Core.EventArgs.AssetEventArgs
+  fullName: TF3.Core.EventArgs.AssetEventArgs
+  nameWithType: AssetEventArgs
+- uid: TF3.Core.EventArgs.AssetEventArgs.#ctor(TF3.Core.Models.AssetInfo)
+  name: AssetEventArgs(AssetInfo)
+  href: api/TF3.Core.EventArgs.AssetEventArgs.html#TF3_Core_EventArgs_AssetEventArgs__ctor_TF3_Core_Models_AssetInfo_
+  commentId: M:TF3.Core.EventArgs.AssetEventArgs.#ctor(TF3.Core.Models.AssetInfo)
+  fullName: TF3.Core.EventArgs.AssetEventArgs.AssetEventArgs(TF3.Core.Models.AssetInfo)
+  nameWithType: AssetEventArgs.AssetEventArgs(AssetInfo)
+- uid: TF3.Core.EventArgs.AssetEventArgs.#ctor*
+  name: AssetEventArgs
+  href: api/TF3.Core.EventArgs.AssetEventArgs.html#TF3_Core_EventArgs_AssetEventArgs__ctor_
+  commentId: Overload:TF3.Core.EventArgs.AssetEventArgs.#ctor
+  isSpec: "True"
+  fullName: TF3.Core.EventArgs.AssetEventArgs.AssetEventArgs
+  nameWithType: AssetEventArgs.AssetEventArgs
+- uid: TF3.Core.EventArgs.AssetEventArgs.Data
+  name: Data
+  href: api/TF3.Core.EventArgs.AssetEventArgs.html#TF3_Core_EventArgs_AssetEventArgs_Data
+  commentId: P:TF3.Core.EventArgs.AssetEventArgs.Data
+  fullName: TF3.Core.EventArgs.AssetEventArgs.Data
+  nameWithType: AssetEventArgs.Data
+- uid: TF3.Core.EventArgs.AssetEventArgs.Data*
+  name: Data
+  href: api/TF3.Core.EventArgs.AssetEventArgs.html#TF3_Core_EventArgs_AssetEventArgs_Data_
+  commentId: Overload:TF3.Core.EventArgs.AssetEventArgs.Data
+  isSpec: "True"
+  fullName: TF3.Core.EventArgs.AssetEventArgs.Data
+  nameWithType: AssetEventArgs.Data
+- uid: TF3.Core.EventArgs.ContainerEventArgs
+  name: ContainerEventArgs
+  href: api/TF3.Core.EventArgs.ContainerEventArgs.html
+  commentId: T:TF3.Core.EventArgs.ContainerEventArgs
+  fullName: TF3.Core.EventArgs.ContainerEventArgs
+  nameWithType: ContainerEventArgs
+- uid: TF3.Core.EventArgs.ContainerEventArgs.#ctor(TF3.Core.Models.ContainerInfo)
+  name: ContainerEventArgs(ContainerInfo)
+  href: api/TF3.Core.EventArgs.ContainerEventArgs.html#TF3_Core_EventArgs_ContainerEventArgs__ctor_TF3_Core_Models_ContainerInfo_
+  commentId: M:TF3.Core.EventArgs.ContainerEventArgs.#ctor(TF3.Core.Models.ContainerInfo)
+  fullName: TF3.Core.EventArgs.ContainerEventArgs.ContainerEventArgs(TF3.Core.Models.ContainerInfo)
+  nameWithType: ContainerEventArgs.ContainerEventArgs(ContainerInfo)
+- uid: TF3.Core.EventArgs.ContainerEventArgs.#ctor*
+  name: ContainerEventArgs
+  href: api/TF3.Core.EventArgs.ContainerEventArgs.html#TF3_Core_EventArgs_ContainerEventArgs__ctor_
+  commentId: Overload:TF3.Core.EventArgs.ContainerEventArgs.#ctor
+  isSpec: "True"
+  fullName: TF3.Core.EventArgs.ContainerEventArgs.ContainerEventArgs
+  nameWithType: ContainerEventArgs.ContainerEventArgs
+- uid: TF3.Core.EventArgs.ContainerEventArgs.Data
+  name: Data
+  href: api/TF3.Core.EventArgs.ContainerEventArgs.html#TF3_Core_EventArgs_ContainerEventArgs_Data
+  commentId: P:TF3.Core.EventArgs.ContainerEventArgs.Data
+  fullName: TF3.Core.EventArgs.ContainerEventArgs.Data
+  nameWithType: ContainerEventArgs.Data
+- uid: TF3.Core.EventArgs.ContainerEventArgs.Data*
+  name: Data
+  href: api/TF3.Core.EventArgs.ContainerEventArgs.html#TF3_Core_EventArgs_ContainerEventArgs_Data_
+  commentId: Overload:TF3.Core.EventArgs.ContainerEventArgs.Data
+  isSpec: "True"
+  fullName: TF3.Core.EventArgs.ContainerEventArgs.Data
+  nameWithType: ContainerEventArgs.Data
+- uid: TF3.Core.EventArgs.PatchEventArgs
+  name: PatchEventArgs
+  href: api/TF3.Core.EventArgs.PatchEventArgs.html
+  commentId: T:TF3.Core.EventArgs.PatchEventArgs
+  fullName: TF3.Core.EventArgs.PatchEventArgs
+  nameWithType: PatchEventArgs
+- uid: TF3.Core.EventArgs.PatchEventArgs.#ctor(TF3.Core.Models.PatchInfo)
+  name: PatchEventArgs(PatchInfo)
+  href: api/TF3.Core.EventArgs.PatchEventArgs.html#TF3_Core_EventArgs_PatchEventArgs__ctor_TF3_Core_Models_PatchInfo_
+  commentId: M:TF3.Core.EventArgs.PatchEventArgs.#ctor(TF3.Core.Models.PatchInfo)
+  fullName: TF3.Core.EventArgs.PatchEventArgs.PatchEventArgs(TF3.Core.Models.PatchInfo)
+  nameWithType: PatchEventArgs.PatchEventArgs(PatchInfo)
+- uid: TF3.Core.EventArgs.PatchEventArgs.#ctor*
+  name: PatchEventArgs
+  href: api/TF3.Core.EventArgs.PatchEventArgs.html#TF3_Core_EventArgs_PatchEventArgs__ctor_
+  commentId: Overload:TF3.Core.EventArgs.PatchEventArgs.#ctor
+  isSpec: "True"
+  fullName: TF3.Core.EventArgs.PatchEventArgs.PatchEventArgs
+  nameWithType: PatchEventArgs.PatchEventArgs
+- uid: TF3.Core.EventArgs.PatchEventArgs.Data
+  name: Data
+  href: api/TF3.Core.EventArgs.PatchEventArgs.html#TF3_Core_EventArgs_PatchEventArgs_Data
+  commentId: P:TF3.Core.EventArgs.PatchEventArgs.Data
+  fullName: TF3.Core.EventArgs.PatchEventArgs.Data
+  nameWithType: PatchEventArgs.Data
+- uid: TF3.Core.EventArgs.PatchEventArgs.Data*
+  name: Data
+  href: api/TF3.Core.EventArgs.PatchEventArgs.html#TF3_Core_EventArgs_PatchEventArgs_Data_
+  commentId: Overload:TF3.Core.EventArgs.PatchEventArgs.Data
+  isSpec: "True"
+  fullName: TF3.Core.EventArgs.PatchEventArgs.Data
+  nameWithType: PatchEventArgs.Data
+- uid: TF3.Core.EventArgs.ScriptEventArgs
+  name: ScriptEventArgs
+  href: api/TF3.Core.EventArgs.ScriptEventArgs.html
+  commentId: T:TF3.Core.EventArgs.ScriptEventArgs
+  fullName: TF3.Core.EventArgs.ScriptEventArgs
+  nameWithType: ScriptEventArgs
+- uid: TF3.Core.EventArgs.ScriptEventArgs.#ctor(TF3.Core.GameScript)
+  name: ScriptEventArgs(GameScript)
+  href: api/TF3.Core.EventArgs.ScriptEventArgs.html#TF3_Core_EventArgs_ScriptEventArgs__ctor_TF3_Core_GameScript_
+  commentId: M:TF3.Core.EventArgs.ScriptEventArgs.#ctor(TF3.Core.GameScript)
+  fullName: TF3.Core.EventArgs.ScriptEventArgs.ScriptEventArgs(TF3.Core.GameScript)
+  nameWithType: ScriptEventArgs.ScriptEventArgs(GameScript)
+- uid: TF3.Core.EventArgs.ScriptEventArgs.#ctor*
+  name: ScriptEventArgs
+  href: api/TF3.Core.EventArgs.ScriptEventArgs.html#TF3_Core_EventArgs_ScriptEventArgs__ctor_
+  commentId: Overload:TF3.Core.EventArgs.ScriptEventArgs.#ctor
+  isSpec: "True"
+  fullName: TF3.Core.EventArgs.ScriptEventArgs.ScriptEventArgs
+  nameWithType: ScriptEventArgs.ScriptEventArgs
+- uid: TF3.Core.EventArgs.ScriptEventArgs.Data
+  name: Data
+  href: api/TF3.Core.EventArgs.ScriptEventArgs.html#TF3_Core_EventArgs_ScriptEventArgs_Data
+  commentId: P:TF3.Core.EventArgs.ScriptEventArgs.Data
+  fullName: TF3.Core.EventArgs.ScriptEventArgs.Data
+  nameWithType: ScriptEventArgs.Data
+- uid: TF3.Core.EventArgs.ScriptEventArgs.Data*
+  name: Data
+  href: api/TF3.Core.EventArgs.ScriptEventArgs.html#TF3_Core_EventArgs_ScriptEventArgs_Data_
+  commentId: Overload:TF3.Core.EventArgs.ScriptEventArgs.Data
+  isSpec: "True"
+  fullName: TF3.Core.EventArgs.ScriptEventArgs.Data
+  nameWithType: ScriptEventArgs.Data
 - uid: TF3.Core.Exceptions
   name: TF3.Core.Exceptions
   href: api/TF3.Core.Exceptions.html
@@ -359,6 +493,30 @@ references:
   commentId: T:TF3.Core.GameScript
   fullName: TF3.Core.GameScript
   nameWithType: GameScript
+- uid: TF3.Core.GameScript.AssetExtracted
+  name: AssetExtracted
+  href: api/TF3.Core.GameScript.html#TF3_Core_GameScript_AssetExtracted
+  commentId: E:TF3.Core.GameScript.AssetExtracted
+  fullName: TF3.Core.GameScript.AssetExtracted
+  nameWithType: GameScript.AssetExtracted
+- uid: TF3.Core.GameScript.AssetExtracting
+  name: AssetExtracting
+  href: api/TF3.Core.GameScript.html#TF3_Core_GameScript_AssetExtracting
+  commentId: E:TF3.Core.GameScript.AssetExtracting
+  fullName: TF3.Core.GameScript.AssetExtracting
+  nameWithType: GameScript.AssetExtracting
+- uid: TF3.Core.GameScript.AssetRead
+  name: AssetRead
+  href: api/TF3.Core.GameScript.html#TF3_Core_GameScript_AssetRead
+  commentId: E:TF3.Core.GameScript.AssetRead
+  fullName: TF3.Core.GameScript.AssetRead
+  nameWithType: GameScript.AssetRead
+- uid: TF3.Core.GameScript.AssetReading
+  name: AssetReading
+  href: api/TF3.Core.GameScript.html#TF3_Core_GameScript_AssetReading
+  commentId: E:TF3.Core.GameScript.AssetReading
+  fullName: TF3.Core.GameScript.AssetReading
+  nameWithType: GameScript.AssetReading
 - uid: TF3.Core.GameScript.Assets
   name: Assets
   href: api/TF3.Core.GameScript.html#TF3_Core_GameScript_Assets
@@ -372,6 +530,36 @@ references:
   isSpec: "True"
   fullName: TF3.Core.GameScript.Assets
   nameWithType: GameScript.Assets
+- uid: TF3.Core.GameScript.AssetTranslated
+  name: AssetTranslated
+  href: api/TF3.Core.GameScript.html#TF3_Core_GameScript_AssetTranslated
+  commentId: E:TF3.Core.GameScript.AssetTranslated
+  fullName: TF3.Core.GameScript.AssetTranslated
+  nameWithType: GameScript.AssetTranslated
+- uid: TF3.Core.GameScript.AssetTranslating
+  name: AssetTranslating
+  href: api/TF3.Core.GameScript.html#TF3_Core_GameScript_AssetTranslating
+  commentId: E:TF3.Core.GameScript.AssetTranslating
+  fullName: TF3.Core.GameScript.AssetTranslating
+  nameWithType: GameScript.AssetTranslating
+- uid: TF3.Core.GameScript.AssetTranslationFailed
+  name: AssetTranslationFailed
+  href: api/TF3.Core.GameScript.html#TF3_Core_GameScript_AssetTranslationFailed
+  commentId: E:TF3.Core.GameScript.AssetTranslationFailed
+  fullName: TF3.Core.GameScript.AssetTranslationFailed
+  nameWithType: GameScript.AssetTranslationFailed
+- uid: TF3.Core.GameScript.ContainerRead
+  name: ContainerRead
+  href: api/TF3.Core.GameScript.html#TF3_Core_GameScript_ContainerRead
+  commentId: E:TF3.Core.GameScript.ContainerRead
+  fullName: TF3.Core.GameScript.ContainerRead
+  nameWithType: GameScript.ContainerRead
+- uid: TF3.Core.GameScript.ContainerReading
+  name: ContainerReading
+  href: api/TF3.Core.GameScript.html#TF3_Core_GameScript_ContainerReading
+  commentId: E:TF3.Core.GameScript.ContainerReading
+  fullName: TF3.Core.GameScript.ContainerReading
+  nameWithType: GameScript.ContainerReading
 - uid: TF3.Core.GameScript.Containers
   name: Containers
   href: api/TF3.Core.GameScript.html#TF3_Core_GameScript_Containers
@@ -385,6 +573,18 @@ references:
   isSpec: "True"
   fullName: TF3.Core.GameScript.Containers
   nameWithType: GameScript.Containers
+- uid: TF3.Core.GameScript.ContainerWrited
+  name: ContainerWrited
+  href: api/TF3.Core.GameScript.html#TF3_Core_GameScript_ContainerWrited
+  commentId: E:TF3.Core.GameScript.ContainerWrited
+  fullName: TF3.Core.GameScript.ContainerWrited
+  nameWithType: GameScript.ContainerWrited
+- uid: TF3.Core.GameScript.ContainerWriting
+  name: ContainerWriting
+  href: api/TF3.Core.GameScript.html#TF3_Core_GameScript_ContainerWriting
+  commentId: E:TF3.Core.GameScript.ContainerWriting
+  fullName: TF3.Core.GameScript.ContainerWriting
+  nameWithType: GameScript.ContainerWriting
 - uid: TF3.Core.GameScript.Extract(System.String,System.String)
   name: Extract(String, String)
   href: api/TF3.Core.GameScript.html#TF3_Core_GameScript_Extract_System_String_System_String_
@@ -437,6 +637,18 @@ references:
   isSpec: "True"
   fullName: TF3.Core.GameScript.Parameters
   nameWithType: GameScript.Parameters
+- uid: TF3.Core.GameScript.PatchApplied
+  name: PatchApplied
+  href: api/TF3.Core.GameScript.html#TF3_Core_GameScript_PatchApplied
+  commentId: E:TF3.Core.GameScript.PatchApplied
+  fullName: TF3.Core.GameScript.PatchApplied
+  nameWithType: GameScript.PatchApplied
+- uid: TF3.Core.GameScript.PatchApplying
+  name: PatchApplying
+  href: api/TF3.Core.GameScript.html#TF3_Core_GameScript_PatchApplying
+  commentId: E:TF3.Core.GameScript.PatchApplying
+  fullName: TF3.Core.GameScript.PatchApplying
+  nameWithType: GameScript.PatchApplying
 - uid: TF3.Core.GameScript.Patches
   name: Patches
   href: api/TF3.Core.GameScript.html#TF3_Core_GameScript_Patches
@@ -450,6 +662,12 @@ references:
   isSpec: "True"
   fullName: TF3.Core.GameScript.Patches
   nameWithType: GameScript.Patches
+- uid: TF3.Core.GameScript.PatchSkipped
+  name: PatchSkipped
+  href: api/TF3.Core.GameScript.html#TF3_Core_GameScript_PatchSkipped
+  commentId: E:TF3.Core.GameScript.PatchSkipped
+  fullName: TF3.Core.GameScript.PatchSkipped
+  nameWithType: GameScript.PatchSkipped
 - uid: TF3.Core.GameScript.Rebuild(System.String,System.String,System.String)
   name: Rebuild(String, String, String)
   href: api/TF3.Core.GameScript.html#TF3_Core_GameScript_Rebuild_System_String_System_String_System_String_
@@ -463,6 +681,30 @@ references:
   isSpec: "True"
   fullName: TF3.Core.GameScript.Rebuild
   nameWithType: GameScript.Rebuild
+- uid: TF3.Core.GameScript.ScriptExtracted
+  name: ScriptExtracted
+  href: api/TF3.Core.GameScript.html#TF3_Core_GameScript_ScriptExtracted
+  commentId: E:TF3.Core.GameScript.ScriptExtracted
+  fullName: TF3.Core.GameScript.ScriptExtracted
+  nameWithType: GameScript.ScriptExtracted
+- uid: TF3.Core.GameScript.ScriptExtracting
+  name: ScriptExtracting
+  href: api/TF3.Core.GameScript.html#TF3_Core_GameScript_ScriptExtracting
+  commentId: E:TF3.Core.GameScript.ScriptExtracting
+  fullName: TF3.Core.GameScript.ScriptExtracting
+  nameWithType: GameScript.ScriptExtracting
+- uid: TF3.Core.GameScript.ScriptRebuilding
+  name: ScriptRebuilding
+  href: api/TF3.Core.GameScript.html#TF3_Core_GameScript_ScriptRebuilding
+  commentId: E:TF3.Core.GameScript.ScriptRebuilding
+  fullName: TF3.Core.GameScript.ScriptRebuilding
+  nameWithType: GameScript.ScriptRebuilding
+- uid: TF3.Core.GameScript.ScriptRebuilt
+  name: ScriptRebuilt
+  href: api/TF3.Core.GameScript.html#TF3_Core_GameScript_ScriptRebuilt
+  commentId: E:TF3.Core.GameScript.ScriptRebuilt
+  fullName: TF3.Core.GameScript.ScriptRebuilt
+  nameWithType: GameScript.ScriptRebuilt
 - uid: TF3.Core.Helpers
   name: TF3.Core.Helpers
   href: api/TF3.Core.Helpers.html

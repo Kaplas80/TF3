@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Converters.BinaryPatch.Apply.html",
-          "hash": "r6enEYp3D1pDYsWBcw95BA=="
+          "hash": "ABNGt++eYR/Y5xz9YUPjfw=="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Converters.BinaryPatch.Reader.html",
-          "hash": "etBif/SG2Zb9Ne4NRvIR7g=="
+          "hash": "0rBays/Wb6/N7LoG/V7U7w=="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Converters.BinaryPatch.html",
-          "hash": "2Ll16IscPACJsW1rRzaDkA=="
+          "hash": "n4+xZWT5BbkExhaBfepeMg=="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Converters.BinaryReplace.html",
-          "hash": "p7086hTjo9NqFJK1q/Xfqw=="
+          "hash": "2a/wRdqxV/mPQhiGTU/Bnw=="
         }
       },
       "is_incremental": false,
@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Converters.FormatToSingleNode.html",
-          "hash": "9CEWWzjng2H2TpL26zmW6g=="
+          "hash": "05VhSmwJ+WPX3t3jZvYOyQ=="
         }
       },
       "is_incremental": false,
@@ -102,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Converters.SingleNodeToFormat.html",
-          "hash": "r06rM4n0JXo5V3dHITDeAA=="
+          "hash": "vMWKvDh4GCNS1c4P+bhiLg=="
         }
       },
       "is_incremental": false,
@@ -114,7 +114,67 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Converters.html",
-          "hash": "XE92xK5LwoAXPryW/F2T1g=="
+          "hash": "sf5/C1FJEA1t9aekFLndTA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.EventArgs.AssetEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.EventArgs.AssetEventArgs.html",
+          "hash": "tgcLxXeqUdVPjvmbrtdDuw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.EventArgs.ContainerEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.EventArgs.ContainerEventArgs.html",
+          "hash": "nZPWRpXutAmRVdaraM4pdg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.EventArgs.PatchEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.EventArgs.PatchEventArgs.html",
+          "hash": "6LbLVDpKzXwlaunqHmaapA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.EventArgs.ScriptEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.EventArgs.ScriptEventArgs.html",
+          "hash": "nJhVAF8NLy6WS0NSAgulsA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.EventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.EventArgs.html",
+          "hash": "sN4TYbHlIsdMkCWf8As2fQ=="
         }
       },
       "is_incremental": false,
@@ -126,7 +186,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Exceptions.ByteMismatchException.html",
-          "hash": "1yMc2yVML6Es1GyNj0XD4A=="
+          "hash": "nBwDM9ElE9IRbeMg8IAaPg=="
         }
       },
       "is_incremental": false,
@@ -138,7 +198,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Exceptions.ChecksumMismatchException.html",
-          "hash": "bHbyFRrB1nuJ/LJQZXn6sQ=="
+          "hash": "dVkc/vP7SAbBVbiZVJlndg=="
         }
       },
       "is_incremental": false,
@@ -150,7 +210,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Exceptions.UnknownConverterException.html",
-          "hash": "U7giEesozeNbTXp4Vsxukw=="
+          "hash": "g8HBqzlKSwtiDwJZBNbHBw=="
         }
       },
       "is_incremental": false,
@@ -162,7 +222,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Exceptions.html",
-          "hash": "uyG/P1kdLmgySLvI+hA8Dw=="
+          "hash": "yMp86Qk1L22Dmj/J6F1sFw=="
         }
       },
       "is_incremental": false,
@@ -174,7 +234,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Formats.BinaryPatch.html",
-          "hash": "KqLVYr/YgzAS8rGJv1Tr0w=="
+          "hash": "U4Nakrsjvh9rqBlBQbrfmw=="
         }
       },
       "is_incremental": false,
@@ -186,7 +246,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Formats.html",
-          "hash": "TOvTvIgXKl/fbQw67+rXmA=="
+          "hash": "6irqFnVz2xSzUfIfqKZA1Q=="
         }
       },
       "is_incremental": false,
@@ -198,7 +258,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.GameScript.html",
-          "hash": "R87ztDVwZYqmV9olrnaOMg=="
+          "hash": "nLoTKZS1a3MzFOUpRr/O9w=="
         }
       },
       "is_incremental": false,
@@ -210,7 +270,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Helpers.ChecksumHelper.html",
-          "hash": "JgR9I2t790t6rD6JblD/Kw=="
+          "hash": "cHoXmUoLvqDYv9JOG2QAdw=="
         }
       },
       "is_incremental": false,
@@ -222,7 +282,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Helpers.YarhlNodeExtension.html",
-          "hash": "j6Ala/CyXnS9mFLAGuwQoQ=="
+          "hash": "+6T/fBb+5v1+cjkfQ3Nr+g=="
         }
       },
       "is_incremental": false,
@@ -234,7 +294,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Helpers.html",
-          "hash": "ekE6mDsp2trID/PLrtv31Q=="
+          "hash": "7Bo4gIltom6WOQs1i16A4w=="
         }
       },
       "is_incremental": false,
@@ -246,7 +306,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Models.AssetFileInfo.html",
-          "hash": "A9R8iakwuO8AzNzP8zR9Aw=="
+          "hash": "cBUxdxnrz0l5V4YgXiXASw=="
         }
       },
       "is_incremental": false,
@@ -258,7 +318,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Models.AssetInfo.html",
-          "hash": "DvThHO2m6obUV3EIKqRS6g=="
+          "hash": "O159A2Rw1wndfKfoqGi1FQ=="
         }
       },
       "is_incremental": false,
@@ -270,7 +330,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Models.ContainerInfo.html",
-          "hash": "RWP9Qsy6TWcET9QhcCJ3DA=="
+          "hash": "Q1Oy8cKDHSZVKW8nyWkkDg=="
         }
       },
       "is_incremental": false,
@@ -282,7 +342,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Models.ConverterInfo.html",
-          "hash": "3k0vQxqxIvu+bgcwNNEfsw=="
+          "hash": "laZ83L9LDS+cOfQoiIPTAA=="
         }
       },
       "is_incremental": false,
@@ -294,7 +354,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Models.FileInfo.html",
-          "hash": "XHsUjk9LwByBnylIW3weTw=="
+          "hash": "/r4e0HQyl89ZiyNfkcUtXw=="
         }
       },
       "is_incremental": false,
@@ -306,7 +366,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Models.ParameterInfo.html",
-          "hash": "nUpzOe1qwGyULG8YanySMQ=="
+          "hash": "jw0/U1/Bovf6z1PLytsYKQ=="
         }
       },
       "is_incremental": false,
@@ -318,7 +378,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Models.PatchInfo.html",
-          "hash": "iO3bwZbbNFl3thnvOxRjzg=="
+          "hash": "LSA6r/5U3+2AAziMVXlmWQ=="
         }
       },
       "is_incremental": false,
@@ -330,7 +390,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Models.html",
-          "hash": "SorGBehVhV0+gofeLxacmQ=="
+          "hash": "cjfT9xJzk1tYLJAYVGpRlA=="
         }
       },
       "is_incremental": false,
@@ -342,7 +402,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.ScriptManager.html",
-          "hash": "QU5njWjFvZTrAs3O3bLQNQ=="
+          "hash": "RQUKV5Cd4P5s+66VJJUrFQ=="
         }
       },
       "is_incremental": false,
@@ -354,7 +414,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Yaml.ParameterInfoTypeConverter.html",
-          "hash": "nOrul7IdBoUdLeNMGMJ2yQ=="
+          "hash": "XRB3AWWF4JZHF8GvSIjg+A=="
         }
       },
       "is_incremental": false,
@@ -366,7 +426,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Yaml.html",
-          "hash": "h6cVYRU1AQ1KbpKKwTWZzg=="
+          "hash": "J2h7qfVyTEATtDl0rClu+Q=="
         }
       },
       "is_incremental": false,
@@ -378,7 +438,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.html",
-          "hash": "ulVMquNTR0EhHGTbUOJtLA=="
+          "hash": "lYZ+pbZheAXMnJrlxyOoxw=="
         }
       },
       "is_incremental": false,
@@ -390,7 +450,7 @@
       "output": {
         ".html": {
           "relative_path": "dev/Changelog.html",
-          "hash": "AItUZtJul3dbRyKucA1hLw=="
+          "hash": "49y3fY8XCZnN7itF27+QOw=="
         }
       },
       "is_incremental": false,
@@ -402,7 +462,7 @@
       "output": {
         ".html": {
           "relative_path": "dev/toc.html",
-          "hash": "o/ll9nPDjI+qxryB+XJdRw=="
+          "hash": "WwQDsqENQzHsPBmmujiJ6Q=="
         }
       },
       "is_incremental": false,
@@ -522,7 +582,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 29,
+          "total_file_count": 34,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
