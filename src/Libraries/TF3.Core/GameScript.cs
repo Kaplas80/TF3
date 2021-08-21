@@ -24,6 +24,7 @@ namespace TF3.Core
     using System.Collections.Generic;
     using System.IO;
     using System.Linq;
+    using TF3.Core.EventArgs;
     using TF3.Core.Exceptions;
     using TF3.Core.Helpers;
     using TF3.Core.Models;
@@ -34,6 +35,96 @@ namespace TF3.Core
     /// </summary>
     public class GameScript
     {
+        /// <summary>
+        /// Event triggered BEFORE extraction begins.
+        /// </summary>
+        public event EventHandler<ScriptEventArgs> ScriptExtracting;
+
+        /// <summary>
+        /// Event triggered AFTER extraction ends.
+        /// </summary>
+        public event EventHandler<ScriptEventArgs> ScriptExtracted;
+
+        /// <summary>
+        /// Event triggered BEFORE rebuilding begins.
+        /// </summary>
+        public event EventHandler<ScriptEventArgs> ScriptRebuilding;
+
+        /// <summary>
+        /// Event triggered AFTER rebuilding ends.
+        /// </summary>
+        public event EventHandler<ScriptEventArgs> ScriptRebuilt;
+
+        /// <summary>
+        /// Event triggered BEFORE a container is read.
+        /// </summary>
+        public event EventHandler<ContainerEventArgs> ContainerReading;
+
+        /// <summary>
+        /// Event triggered AFTER a container is read.
+        /// </summary>
+        public event EventHandler<ContainerEventArgs> ContainerRead;
+
+        /// <summary>
+        /// Event triggered BEFORE a container is written.
+        /// </summary>
+        public event EventHandler<ContainerEventArgs> ContainerWriting;
+
+        /// <summary>
+        /// Event triggered AFTER a container is written.
+        /// </summary>
+        public event EventHandler<ContainerEventArgs> ContainerWrited;
+
+        /// <summary>
+        /// Event triggered BEFORE asset extraction begins.
+        /// </summary>
+        public event EventHandler<AssetEventArgs> AssetExtracting;
+
+        /// <summary>
+        /// Event triggered AFTER asset extraction ends.
+        /// </summary>
+        public event EventHandler<AssetEventArgs> AssetExtracted;
+
+        /// <summary>
+        /// Event triggered BEFORE an asset is read.
+        /// </summary>
+        public event EventHandler<AssetEventArgs> AssetReading;
+
+        /// <summary>
+        /// Event triggered AFTER an asset is read.
+        /// </summary>
+        public event EventHandler<AssetEventArgs> AssetRead;
+
+        /// <summary>
+        /// Event triggered BEFORE an asset is translated.
+        /// </summary>
+        public event EventHandler<AssetEventArgs> AssetTranslating;
+
+        /// <summary>
+        /// Event triggered AFTER an asset is translated.
+        /// </summary>
+        public event EventHandler<AssetEventArgs> AssetTranslated;
+
+        /// <summary>
+        /// Event triggered if an asset failed to translate (missing files).
+        /// </summary>
+        public event EventHandler<AssetEventArgs> AssetTranslationFailed;
+
+        /// <summary>
+        /// Event triggered BEFORE a patch is applied.
+        /// </summary>
+        public event EventHandler<PatchEventArgs> PatchApplying;
+
+        /// <summary>
+        /// Event triggered AFTER a patch is appiled.
+        /// </summary>
+        public event EventHandler<PatchEventArgs> PatchApplied;
+
+        /// <summary>
+        /// Event triggered AFTER a patch is skipped.
+        /// </summary>
+        public event EventHandler<PatchEventArgs> PatchSkipped;
+
         /// <summary>
         /// Gets or sets the script name (short name).
         /// </summary>
@@ -71,6 +162,7 @@ namespace TF3.Core
         /// <param name="outputPath">Output directory.</param>
         public void Extract(string gamePath, string outputPath)
         {
+            ScriptExtracting?.Invoke(this, new ScriptEventArgs(this));
             Directory.CreateDirectory(outputPath);
 
             var containersDict = new Dictionary<string, Node>();
@@ -84,6 +176,8 @@ namespace TF3.Core
             {
                 ExtractAsset(assetInfo, containersDict, outputPath);
             }
+
+            ScriptExtracted?.Invoke(this, new ScriptEventArgs(this));
         }
 
         /// <summary>
@@ -94,6 +188,7 @@ namespace TF3.Core
         /// <param name="outputPath">Output directory.</param>
         public void Rebuild(string gamePath, string translationPath, string outputPath)
         {
+            ScriptRebuilding?.Invoke(this, new ScriptEventArgs(this));
             Directory.CreateDirectory(outputPath);
 
             var containersDict = new Dictionary<string, Node>();
@@ -121,12 +216,16 @@ namespace TF3.Core
                     node.Stream.WriteTo(Path.Combine(outputPath, node.Tags["OutputPath"]));
                 }
             }
+
+            ScriptRebuilt?.Invoke(this, new ScriptEventArgs(this));
         }
 
         private void ReadContainers(IList<ContainerInfo> containers, Node parent, Dictionary<string, Node> dictionary)
         {
             foreach (ContainerInfo containerInfo in containers)
             {
+                ContainerReading?.Invoke(this, new ContainerEventArgs(containerInfo));
+
                 Node node = Navigator.SearchNode(parent, containerInfo.Path);
 
                 if (node == null)
@@ -144,6 +243,8 @@ namespace TF3.Core
                 dictionary.Add(containerInfo.Id, node);
 
                 ReadContainers(containerInfo.Containers, node, dictionary);
+
+                ContainerRead?.Invoke(this, new ContainerEventArgs(containerInfo));
             }
         }
 
@@ -151,6 +252,8 @@ namespace TF3.Core
         {
             foreach (ContainerInfo containerInfo in containers)
             {
+                ContainerWriting?.Invoke(this, new ContainerEventArgs(containerInfo));
+
                 Node node = Navigator.SearchNode(parent, containerInfo.Path);
 
                 if (node == null)
@@ -163,11 +266,15 @@ namespace TF3.Core
                 node.Transform(containerInfo.Writers, Parameters);
                 node.Tags["Changed"] = true;
                 node.Tags["OutputPath"] = containerInfo.Path;
+
+                ContainerWrited?.Invoke(this, new ContainerEventArgs(containerInfo));
             }
         }
 
         private void ExtractAsset(AssetInfo assetInfo, Dictionary<string, Node> containers, string outputPath)
         {
+            AssetExtracting?.Invoke(this, new AssetEventArgs(assetInfo));
+
             Node asset = ReadAsset(assetInfo, containers);
 
             asset.Transform(assetInfo.Extractors, Parameters);
@@ -194,10 +301,13 @@ namespace TF3.Core
             {
                 throw new FormatException("Can't extract asset.");
             }
+
+            AssetExtracted?.Invoke(this, new AssetEventArgs(assetInfo));
         }
 
         private Node ReadAsset(AssetInfo assetInfo, Dictionary<string, Node> containers)
         {
+            AssetReading?.Invoke(this, new AssetEventArgs(assetInfo));
             Node asset = NodeFactory.CreateContainer(assetInfo.Id);
 
             foreach (AssetFileInfo fileInfo in assetInfo.Files)
@@ -211,6 +321,8 @@ namespace TF3.Core
             }
 
             asset.Transform(assetInfo.Mergers, Parameters);
+
+            AssetRead?.Invoke(this, new AssetEventArgs(assetInfo));
             return asset;
         }
 
@@ -238,6 +350,7 @@ namespace TF3.Core
 
         private void TranslateAsset(AssetInfo assetInfo, Dictionary<string, Node> containers, string translationPath)
         {
+            AssetTranslating?.Invoke(this, new AssetEventArgs(assetInfo));
             Node translation = ReadTranslation(assetInfo, translationPath);
             if (translation == null)
             {
@@ -270,6 +383,8 @@ namespace TF3.Core
                 originalFile.Tags["Changed"] = true;
                 originalFile.Tags["OutputPath"] = fileInfo.Path;
             }
+
+            AssetTranslated?.Invoke(this, new AssetEventArgs(assetInfo));
         }
 
         private Node ReadTranslation(AssetInfo assetInfo, string translationPath)
@@ -286,6 +401,7 @@ namespace TF3.Core
                 else
                 {
                     // All files are needed for translating. If any of them is missing, skip the translation of this asset.
+                    AssetTranslationFailed?.Invoke(this, new AssetEventArgs(assetInfo));
                     return null;
                 }
             }
@@ -296,10 +412,12 @@ namespace TF3.Core
 
         private void ApplyPatch(PatchInfo patchInfo, Dictionary<string, Node> containers, string translationPath)
         {
+            PatchApplying?.Invoke(this, new PatchEventArgs(patchInfo));
             Node patch = NodeFactory.FromFile(Path.Combine(translationPath, "patches", patchInfo.Patch), Yarhl.IO.FileOpenMode.Read);
             if (patch == null)
             {
                 // Skip if there is no patch file
+                PatchSkipped?.Invoke(this, new PatchEventArgs(patchInfo));
                 return;
             }
 
@@ -310,6 +428,8 @@ namespace TF3.Core
 
             file.Tags["Changed"] = true;
             file.Tags["OutputPath"] = patchInfo.File.Path;
+
+            PatchApplied?.Invoke(this, new PatchEventArgs(patchInfo));
         }
     }
 }
