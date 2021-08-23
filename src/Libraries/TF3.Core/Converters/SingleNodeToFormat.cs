@@ -46,7 +46,15 @@ namespace TF3.Core.Converters
                 throw new FormatException("Node must have 1 children exactly.");
             }
 
-            return source.Root.Children[0].Format;
+            if (source.Root.Children[0].Format is ICloneableFormat)
+            {
+                Node clone = new Node(source.Root.Children[0]);
+                return clone.Format;
+            }
+            else
+            {
+                return source.Root.Children[0].Format;
+            }
         }
     }
 }

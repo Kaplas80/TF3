@@ -55,7 +55,19 @@ namespace TF3.Core.Converters
             }
 
             NodeContainerFormat result = new NodeContainerFormat();
-            result.Root.Add(new Node(_nodeName, source));
+            Node newNode = new Node(_nodeName);
+
+            if (source is ICloneableFormat)
+            {
+                ICloneableFormat cloneableFormat = source as ICloneableFormat;
+                newNode.ChangeFormat((ICloneableFormat)cloneableFormat.DeepClone());
+            }
+            else
+            {
+                newNode.ChangeFormat(source);
+            }
+
+            result.Root.Add(newNode);
             return result;
         }
     }
