@@ -24,6 +24,7 @@ namespace TF3.Core
     using System.Collections.Generic;
     using System.IO;
     using System.Linq;
+    using TF3.Core.Converters;
     using TF3.Core.EventArgs;
     using TF3.Core.Exceptions;
     using TF3.Core.Helpers;
@@ -174,7 +175,14 @@ namespace TF3.Core
 
             foreach (AssetInfo assetInfo in Assets)
             {
-                ExtractAsset(assetInfo, containersDict, outputPath);
+                try
+                {
+                    ExtractAsset(assetInfo, containersDict, outputPath);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine($"Error extracting asset: {assetInfo.Id} - {e.Message}");
+                }
             }
 
             ScriptExtracted?.Invoke(this, new ScriptEventArgs(this));
@@ -320,7 +328,10 @@ namespace TF3.Core
                 asset.Add(newFile);
             }
 
-            asset.Transform(assetInfo.Mergers, Parameters);
+            if (asset.Children.Count == 1)
+            {
+                asset.TransformWith<SingleNodeToFormat>();
+            }
 
             AssetRead?.Invoke(this, new AssetEventArgs(assetInfo));
             return asset;
@@ -362,7 +373,10 @@ namespace TF3.Core
 
             asset.Translate(translation, assetInfo.Translator);
 
-            asset.Transform(assetInfo.Splitters, Parameters);
+            if (!asset.IsContainer)
+            {
+                asset.TransformWith<FormatToSingleNode>();
+            }
 
             foreach (AssetFileInfo fileInfo in assetInfo.Files)
             {
@@ -407,6 +421,12 @@ namespace TF3.Core
             }
 
             translation.Transform(assetInfo.TranslationMergers, Parameters);
+
+            if (translation.Children.Count == 1)
+            {
+                translation.TransformWith<SingleNodeToFormat>();
+            }
+
             return translation;
         }
 

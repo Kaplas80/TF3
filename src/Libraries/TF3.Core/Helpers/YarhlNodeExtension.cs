@@ -61,7 +61,8 @@ namespace TF3.Core.Helpers
                     _ = initializer.Invoke(converter, new object[] { parameter.Value });
                 }
 
-                node.ChangeFormat((IFormat)ConvertFormat.With(converter, node.Format));
+                IFormat newFormat = (IFormat)ConvertFormat.With(converter, node.Format);
+                node.ChangeFormat(newFormat);
             }
         }
 
@@ -90,7 +91,8 @@ namespace TF3.Core.Helpers
                 _ = initializer.Invoke(converter, new object[] { translation.Format });
             }
 
-            node.ChangeFormat((IFormat)ConvertFormat.With(converter, node.Format));
+            IFormat newFormat = (IFormat)ConvertFormat.With(converter, node.Format);
+            node.ChangeFormat(newFormat);
         }
     }
 }
