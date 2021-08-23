@@ -873,19 +873,6 @@ references:
   isSpec: "True"
   fullName: TF3.Core.Models.AssetInfo.Id
   nameWithType: AssetInfo.Id
-- uid: TF3.Core.Models.AssetInfo.Mergers
-  name: Mergers
-  href: api/TF3.Core.Models.AssetInfo.html#TF3_Core_Models_AssetInfo_Mergers
-  commentId: P:TF3.Core.Models.AssetInfo.Mergers
-  fullName: TF3.Core.Models.AssetInfo.Mergers
-  nameWithType: AssetInfo.Mergers
-- uid: TF3.Core.Models.AssetInfo.Mergers*
-  name: Mergers
-  href: api/TF3.Core.Models.AssetInfo.html#TF3_Core_Models_AssetInfo_Mergers_
-  commentId: Overload:TF3.Core.Models.AssetInfo.Mergers
-  isSpec: "True"
-  fullName: TF3.Core.Models.AssetInfo.Mergers
-  nameWithType: AssetInfo.Mergers
 - uid: TF3.Core.Models.AssetInfo.OutputNames
   name: OutputNames
   href: api/TF3.Core.Models.AssetInfo.html#TF3_Core_Models_AssetInfo_OutputNames
@@ -899,19 +886,6 @@ references:
   isSpec: "True"
   fullName: TF3.Core.Models.AssetInfo.OutputNames
   nameWithType: AssetInfo.OutputNames
-- uid: TF3.Core.Models.AssetInfo.Splitters
-  name: Splitters
-  href: api/TF3.Core.Models.AssetInfo.html#TF3_Core_Models_AssetInfo_Splitters
-  commentId: P:TF3.Core.Models.AssetInfo.Splitters
-  fullName: TF3.Core.Models.AssetInfo.Splitters
-  nameWithType: AssetInfo.Splitters
-- uid: TF3.Core.Models.AssetInfo.Splitters*
-  name: Splitters
-  href: api/TF3.Core.Models.AssetInfo.html#TF3_Core_Models_AssetInfo_Splitters_
-  commentId: Overload:TF3.Core.Models.AssetInfo.Splitters
-  isSpec: "True"
-  fullName: TF3.Core.Models.AssetInfo.Splitters
-  nameWithType: AssetInfo.Splitters
 - uid: TF3.Core.Models.AssetInfo.TranslationMergers
   name: TranslationMergers
   href: api/TF3.Core.Models.AssetInfo.html#TF3_Core_Models_AssetInfo_TranslationMergers
