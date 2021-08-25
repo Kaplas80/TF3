@@ -12,7 +12,10 @@
         <PackageVersion Include="YamlDotNet" Version="9.1.4" />
 
         <PackageVersion Include="EPPlus" Version="5.5.3" />
-
+        <PackageVersion Include="BCnEncoder.Net" Version="2.0.3" />
+        <PackageVersion Include="BCnEncoder.Net.ImageSharp" Version="1.0.4" />
+        <PackageVersion Include="SixLabors.ImageSharp" Version="1.0.3" />
+      
         <PackageVersion Include="nunit" Version="3.12.0" />
         <PackageVersion Include="NUnit3TestAdapter" Version="3.17.0" />
         <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="16.8.0"/>
