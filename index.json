@@ -19,6 +19,36 @@
     "title": "Class BinaryReplace | Translation Framework v3",
     "keywords": "Class BinaryReplace BinaryFormat replacer. Inheritance Object BinaryReplace Implements IInitializer < BinaryFormat > Namespace : TF3.Core.Converters Assembly : TF3.Core.dll Syntax public class BinaryReplace : IConverter<BinaryFormat, BinaryFormat>, IInitializer<BinaryFormat> Methods | Improve this Doc View Source Convert(BinaryFormat) Fully replace a BinaryFormat. Declaration public BinaryFormat Convert(BinaryFormat source) Parameters Type Name Description BinaryFormat source The original binary format. Returns Type Description BinaryFormat The new binary format. | Improve this Doc View Source Initialize(BinaryFormat) Set the new binary. Declaration public void Initialize(BinaryFormat parameters) Parameters Type Name Description BinaryFormat parameters The new binary. Implements IInitializer<>"
   },
+  "api/TF3.Core.Converters.DdsImage.ExtractToPng.html": {
+    "href": "api/TF3.Core.Converters.DdsImage.ExtractToPng.html",
+    "title": "Class ExtractToPng | Translation Framework v3",
+    "keywords": "Class ExtractToPng DDS to PNG converter. Inheritance Object ExtractToPng Namespace : TF3.Core.Converters.DdsImage Assembly : TF3.Core.dll Syntax public class ExtractToPng : IConverter<DdsFileFormat, BinaryFormat> Methods | Improve this Doc View Source Convert(DdsFileFormat) Converts a DDS file into PNG. Declaration public BinaryFormat Convert(DdsFileFormat source) Parameters Type Name Description DdsFileFormat source The DDS file. Returns Type Description BinaryFormat The PNG file."
+  },
+  "api/TF3.Core.Converters.DdsImage.ExtractToTga.html": {
+    "href": "api/TF3.Core.Converters.DdsImage.ExtractToTga.html",
+    "title": "Class ExtractToTga | Translation Framework v3",
+    "keywords": "Class ExtractToTga DDS to TGA converter. Inheritance Object ExtractToTga Namespace : TF3.Core.Converters.DdsImage Assembly : TF3.Core.dll Syntax public class ExtractToTga : IConverter<DdsFileFormat, BinaryFormat> Methods | Improve this Doc View Source Convert(DdsFileFormat) Converts a DDS file into TGA. Declaration public BinaryFormat Convert(DdsFileFormat source) Parameters Type Name Description DdsFileFormat source The DDS file. Returns Type Description BinaryFormat The TGA file."
+  },
+  "api/TF3.Core.Converters.DdsImage.html": {
+    "href": "api/TF3.Core.Converters.DdsImage.html",
+    "title": "Namespace TF3.Core.Converters.DdsImage | Translation Framework v3",
+    "keywords": "Namespace TF3.Core.Converters.DdsImage Classes ExtractToPng DDS to PNG converter. ExtractToTga DDS to TGA converter. Reader DDS file reader. Replace Replaces the original DDS with a new one. Writer DDS file writer."
+  },
+  "api/TF3.Core.Converters.DdsImage.Reader.html": {
+    "href": "api/TF3.Core.Converters.DdsImage.Reader.html",
+    "title": "Class Reader | Translation Framework v3",
+    "keywords": "Class Reader DDS file reader. Inheritance Object Reader Namespace : TF3.Core.Converters.DdsImage Assembly : TF3.Core.dll Syntax public class Reader : IConverter<BinaryFormat, DdsFileFormat> Methods | Improve this Doc View Source Convert(BinaryFormat) Reads a DDS file. Declaration public DdsFileFormat Convert(BinaryFormat source) Parameters Type Name Description BinaryFormat source The DDS file. Returns Type Description DdsFileFormat The DDS format."
+  },
+  "api/TF3.Core.Converters.DdsImage.Replace.html": {
+    "href": "api/TF3.Core.Converters.DdsImage.Replace.html",
+    "title": "Class Replace | Translation Framework v3",
+    "keywords": "Class Replace Replaces the original DDS with a new one. Inheritance Object Replace Implements IInitializer < BinaryFormat > Namespace : TF3.Core.Converters.DdsImage Assembly : TF3.Core.dll Syntax public class Replace : IConverter<DdsFileFormat, DdsFileFormat>, IInitializer<BinaryFormat> Methods | Improve this Doc View Source Convert(DdsFileFormat) Replaces the original DDS with a new one. Declaration public DdsFileFormat Convert(DdsFileFormat source) Parameters Type Name Description DdsFileFormat source Original DDS. Returns Type Description DdsFileFormat New DDS. | Improve this Doc View Source Initialize(BinaryFormat) Converter initializer. Declaration public void Initialize(BinaryFormat parameters) Parameters Type Name Description BinaryFormat parameters New image binary. Remarks Initialization is mandatory. Implements IInitializer<>"
+  },
+  "api/TF3.Core.Converters.DdsImage.Writer.html": {
+    "href": "api/TF3.Core.Converters.DdsImage.Writer.html",
+    "title": "Class Writer | Translation Framework v3",
+    "keywords": "Class Writer DDS file writer. Inheritance Object Writer Namespace : TF3.Core.Converters.DdsImage Assembly : TF3.Core.dll Syntax public class Writer : IConverter<DdsFileFormat, BinaryFormat> Methods | Improve this Doc View Source Convert(DdsFileFormat) Writes a DDS file. Declaration public BinaryFormat Convert(DdsFileFormat source) Parameters Type Name Description DdsFileFormat source The DDS format. Returns Type Description BinaryFormat The DDS file."
+  },
   "api/TF3.Core.Converters.FormatToSingleNode.html": {
     "href": "api/TF3.Core.Converters.FormatToSingleNode.html",
     "title": "Class FormatToSingleNode | Translation Framework v3",
@@ -84,10 +114,15 @@
     "title": "Class BinaryPatch | Translation Framework v3",
     "keywords": "Class BinaryPatch Binary patch format. Similar to 1337 patch format. Inheritance Object BinaryPatch Namespace : TF3.Core.Formats Assembly : TF3.Core.dll Syntax public class BinaryPatch : IFormat Constructors | Improve this Doc View Source BinaryPatch() Initializes a new instance of the BinaryPatch class. Declaration public BinaryPatch() Properties | Improve this Doc View Source FileName Gets or sets the file to apply patch. Declaration public string FileName { get; set; } Property Value Type Description String | Improve this Doc View Source Patches Gets or sets the list of byte replacements. Declaration public List<(long Rva, byte OriginalByte, byte NewByte)> Patches { get; set; } Property Value Type Description List < ValueTuple < Int64 , Byte , Byte >> | Improve this Doc View Source RawOffset Gets or sets the data raw offset. Declaration public long RawOffset { get; set; } Property Value Type Description Int64"
   },
+  "api/TF3.Core.Formats.DdsFileFormat.html": {
+    "href": "api/TF3.Core.Formats.DdsFileFormat.html",
+    "title": "Class DdsFileFormat | Translation Framework v3",
+    "keywords": "Class DdsFileFormat IFormat wrapper for BCnEncoder.Shared.ImageFiles.DdsFile. Inheritance Object DdsFileFormat Namespace : TF3.Core.Formats Assembly : TF3.Core.dll Syntax public class DdsFileFormat : IFormat Constructors | Improve this Doc View Source DdsFileFormat() Initializes a new instance of the DdsFileFormat class. Declaration public DdsFileFormat() Properties | Improve this Doc View Source Internal Gets or sets the DdsFile. Declaration public DdsFile Internal { get; set; } Property Value Type Description DdsFile"
+  },
   "api/TF3.Core.Formats.html": {
     "href": "api/TF3.Core.Formats.html",
     "title": "Namespace TF3.Core.Formats | Translation Framework v3",
-    "keywords": "Namespace TF3.Core.Formats Classes BinaryPatch Binary patch format. Similar to 1337 patch format."
+    "keywords": "Namespace TF3.Core.Formats Classes BinaryPatch Binary patch format. Similar to 1337 patch format. DdsFileFormat IFormat wrapper for BCnEncoder.Shared.ImageFiles.DdsFile."
   },
   "api/TF3.Core.GameScript.html": {
     "href": "api/TF3.Core.GameScript.html",
