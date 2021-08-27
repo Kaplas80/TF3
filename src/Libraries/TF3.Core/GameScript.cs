@@ -433,10 +433,19 @@ namespace TF3.Core
         private void ApplyPatch(PatchInfo patchInfo, Dictionary<string, Node> containers, string translationPath)
         {
             PatchApplying?.Invoke(this, new PatchEventArgs(patchInfo));
-            Node patch = NodeFactory.FromFile(Path.Combine(translationPath, "patches", patchInfo.Patch), Yarhl.IO.FileOpenMode.Read);
-            if (patch == null)
+
+            string path = Path.Combine(translationPath, "patches", patchInfo.Patch);
+            if (!File.Exists(path))
             {
                 // Skip if there is no patch file
+                PatchSkipped?.Invoke(this, new PatchEventArgs(patchInfo));
+                return;
+            }
+
+            Node patch = NodeFactory.FromFile(path, Yarhl.IO.FileOpenMode.Read);
+            if (patch == null)
+            {
+                // Skip if there is an error reading the patch
                 PatchSkipped?.Invoke(this, new PatchEventArgs(patchInfo));
                 return;
             }

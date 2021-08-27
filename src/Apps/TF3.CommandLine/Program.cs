@@ -24,6 +24,7 @@ namespace TF3.CommandLine
     using System.Linq;
     using global::CommandLine;
     using TF3.Core;
+    using TF3.Core.EventArgs;
 
     /// <summary>
     /// Main program class.
@@ -173,6 +174,12 @@ namespace TF3.CommandLine
             {
                 processedAssets++;
                 Console.Write($"\rAssets translated {processedAssets} / {totalAssets}");
+            };
+
+            script.AssetTranslationFailed += (_, args) =>
+            {
+                Console.WriteLine();
+                Console.WriteLine($"WARNING!! Asset not translated: {args.Data.Id}");
             };
 
             script.Rebuild(options.GameDir, options.TranslationDir, options.Output);
