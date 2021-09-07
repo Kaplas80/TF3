@@ -20,6 +20,8 @@
 
 namespace TF3.Core.Models
 {
+    using System.Text.Json;
+
     /// <summary>
     /// Converter parameter info.
     /// </summary>
@@ -38,6 +40,6 @@ namespace TF3.Core.Models
         /// <summary>
         /// Gets or sets the parameter value.
         /// </summary>
-        public object Value { get; set; }
+        public JsonElement Value { get; set; }
     }
 }

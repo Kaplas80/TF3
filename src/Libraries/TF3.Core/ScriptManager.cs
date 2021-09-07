@@ -22,8 +22,7 @@ namespace TF3.Core
 {
     using System.Collections.Generic;
     using System.IO;
-    using YamlDotNet.Serialization;
-    using YamlDotNet.Serialization.NamingConventions;
+    using System.Text.Json;
     using Yarhl;
 
     /// <summary>
@@ -48,14 +47,11 @@ namespace TF3.Core
             _ = PluginManager.Instance;
 
             _scripts.Clear();
-            IDeserializer deserializer = new DeserializerBuilder()
-                                             .WithTypeConverter(new Yaml.ParameterInfoTypeConverter())
-                                             .WithNamingConvention(CamelCaseNamingConvention.Instance)
-                                             .Build();
-            foreach (string file in Directory.EnumerateFiles(path, "TF3.Script.*.yaml"))
+
+            foreach (string file in Directory.EnumerateFiles(path, "TF3.Script.*.json"))
             {
                 string scriptContents = File.ReadAllText(file);
-                GameScript script = deserializer.Deserialize<GameScript>(scriptContents);
+                GameScript script = JsonSerializer.Deserialize<GameScript>(scriptContents);
                 _scripts.Add(script);
             }
         }
