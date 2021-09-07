@@ -182,7 +182,7 @@
   "api/TF3.Core.Models.ParameterInfo.html": {
     "href": "api/TF3.Core.Models.ParameterInfo.html",
     "title": "Class ParameterInfo | Translation Framework v3",
-    "keywords": "Class ParameterInfo Converter parameter info. Inheritance Object ParameterInfo Namespace : TF3.Core.Models Assembly : TF3.Core.dll Syntax public class ParameterInfo : object Properties | Improve this Doc View Source Id Gets or sets the parameter id. Declaration public string Id { get; set; } Property Value Type Description String | Improve this Doc View Source TypeName Gets or sets the parameter type name. Declaration public string TypeName { get; set; } Property Value Type Description String | Improve this Doc View Source Value Gets or sets the parameter value. Declaration public object Value { get; set; } Property Value Type Description Object"
+    "keywords": "Class ParameterInfo Converter parameter info. Inheritance Object ParameterInfo Namespace : TF3.Core.Models Assembly : TF3.Core.dll Syntax public class ParameterInfo : object Properties | Improve this Doc View Source Id Gets or sets the parameter id. Declaration public string Id { get; set; } Property Value Type Description String | Improve this Doc View Source TypeName Gets or sets the parameter type name. Declaration public string TypeName { get; set; } Property Value Type Description String | Improve this Doc View Source Value Gets or sets the parameter value. Declaration public JsonElement Value { get; set; } Property Value Type Description JsonElement"
   },
   "api/TF3.Core.Models.PatchInfo.html": {
     "href": "api/TF3.Core.Models.PatchInfo.html",
@@ -194,16 +194,6 @@
     "title": "Class ScriptManager | Translation Framework v3",
     "keywords": "Class ScriptManager Script manager. Inheritance Object ScriptManager Namespace : TF3.Core Assembly : TF3.Core.dll Syntax public static class ScriptManager : object Properties | Improve this Doc View Source Scripts Gets a list of loaded scripts. Declaration public static IReadOnlyList<GameScript> Scripts { get; } Property Value Type Description IReadOnlyList < GameScript > Methods | Improve this Doc View Source LoadScripts(String) Loads all the scripts in a directory. Declaration public static void LoadScripts(string path) Parameters Type Name Description String path The directory containing the scripts."
   },
-  "api/TF3.Core.Yaml.html": {
-    "href": "api/TF3.Core.Yaml.html",
-    "title": "Namespace TF3.Core.Yaml | Translation Framework v3",
-    "keywords": "Namespace TF3.Core.Yaml Classes ParameterInfoTypeConverter YamlDotNet type converter for ParameterInfo."
-  },
-  "api/TF3.Core.Yaml.ParameterInfoTypeConverter.html": {
-    "href": "api/TF3.Core.Yaml.ParameterInfoTypeConverter.html",
-    "title": "Class ParameterInfoTypeConverter | Translation Framework v3",
-    "keywords": "Class ParameterInfoTypeConverter YamlDotNet type converter for ParameterInfo. Inheritance Object ParameterInfoTypeConverter Namespace : TF3.Core.Yaml Assembly : TF3.Core.dll Syntax public class ParameterInfoTypeConverter : IYamlTypeConverter Methods | Improve this Doc View Source Accepts(Type) Declaration public bool Accepts(Type type) Parameters Type Name Description Type type Returns Type Description Boolean | Improve this Doc View Source ReadYaml(IParser, Type) Declaration public object ReadYaml(IParser parser, Type type) Parameters Type Name Description IParser parser Type type Returns Type Description Object | Improve this Doc View Source WriteYaml(IEmitter, Object, Type) Declaration public void WriteYaml(IEmitter emitter, object value, Type type) Parameters Type Name Description IEmitter emitter Object value Type type"
-  },
   "CONTRIBUTING.html": {
     "href": "CONTRIBUTING.html",
     "title": "Contributing to the project | Translation Framework v3",
@@ -212,7 +202,7 @@
   "dev/Changelog.html": {
     "href": "dev/Changelog.html",
     "title": "vNext (December 20, 2020) | Translation Framework v3",
-    "keywords": "vNext (December 20, 2020) As part of this release we had 5 issues closed. Enhancements #5 Move plugins to new projects #4 Use scripts #3 Read and write ARMP files #2 Read and write PAR archives #1 Read and Write Yakuza PAR archives"
+    "keywords": "vNext (December 20, 2020) As part of this release we had 6 issues closed. Enhancements #9 Replace YAML with JSON #5 Move plugins to new projects #4 Use scripts #3 Read and write ARMP files #2 Read and write PAR archives #1 Read and Write Yakuza PAR archives"
   },
   "guides/Contributing.html": {
     "href": "guides/Contributing.html",
