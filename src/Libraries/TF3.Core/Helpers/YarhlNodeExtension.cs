@@ -23,6 +23,7 @@ namespace TF3.Core.Helpers
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using System.Text.Json;
     using TF3.Core.Exceptions;
     using TF3.Core.Models;
     using Yarhl;
@@ -58,7 +59,10 @@ namespace TF3.Core.Helpers
                 ParameterInfo parameter = parameters.Find(x => x.Id == converterInfo.ParameterId);
                 if (initializer != null && parameter != null)
                 {
-                    _ = initializer.Invoke(converter, new object[] { parameter.Value });
+                    string json = parameter.Value.GetRawText();
+                    Type parameterType = Type.GetType(parameter.TypeName);
+                    object value = JsonSerializer.Deserialize(json, parameterType);
+                    _ = initializer.Invoke(converter, new object[] { value });
                 }
 
                 IFormat newFormat = (IFormat)ConvertFormat.With(converter, node.Format);
