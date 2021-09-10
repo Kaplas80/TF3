@@ -89,38 +89,6 @@ references:
   isSpec: "True"
   fullName: TF3.Core.Converters.BinaryPatch.Reader.Initialize
   nameWithType: Reader.Initialize
-- uid: TF3.Core.Converters.BinaryReplace
-  name: BinaryReplace
-  href: api/TF3.Core.Converters.BinaryReplace.html
-  commentId: T:TF3.Core.Converters.BinaryReplace
-  fullName: TF3.Core.Converters.BinaryReplace
-  nameWithType: BinaryReplace
-- uid: TF3.Core.Converters.BinaryReplace.Convert(BinaryFormat)
-  name: Convert(BinaryFormat)
-  href: api/TF3.Core.Converters.BinaryReplace.html#TF3_Core_Converters_BinaryReplace_Convert_BinaryFormat_
-  commentId: M:TF3.Core.Converters.BinaryReplace.Convert(BinaryFormat)
-  fullName: TF3.Core.Converters.BinaryReplace.Convert(BinaryFormat)
-  nameWithType: BinaryReplace.Convert(BinaryFormat)
-- uid: TF3.Core.Converters.BinaryReplace.Convert*
-  name: Convert
-  href: api/TF3.Core.Converters.BinaryReplace.html#TF3_Core_Converters_BinaryReplace_Convert_
-  commentId: Overload:TF3.Core.Converters.BinaryReplace.Convert
-  isSpec: "True"
-  fullName: TF3.Core.Converters.BinaryReplace.Convert
-  nameWithType: BinaryReplace.Convert
-- uid: TF3.Core.Converters.BinaryReplace.Initialize(BinaryFormat)
-  name: Initialize(BinaryFormat)
-  href: api/TF3.Core.Converters.BinaryReplace.html#TF3_Core_Converters_BinaryReplace_Initialize_BinaryFormat_
-  commentId: M:TF3.Core.Converters.BinaryReplace.Initialize(BinaryFormat)
-  fullName: TF3.Core.Converters.BinaryReplace.Initialize(BinaryFormat)
-  nameWithType: BinaryReplace.Initialize(BinaryFormat)
-- uid: TF3.Core.Converters.BinaryReplace.Initialize*
-  name: Initialize
-  href: api/TF3.Core.Converters.BinaryReplace.html#TF3_Core_Converters_BinaryReplace_Initialize_
-  commentId: Overload:TF3.Core.Converters.BinaryReplace.Initialize
-  isSpec: "True"
-  fullName: TF3.Core.Converters.BinaryReplace.Initialize
-  nameWithType: BinaryReplace.Initialize
 - uid: TF3.Core.Converters.DdsImage
   name: TF3.Core.Converters.DdsImage
   href: api/TF3.Core.Converters.DdsImage.html
@@ -235,6 +203,38 @@ references:
   isSpec: "True"
   fullName: TF3.Core.Converters.DdsImage.Writer.Convert
   nameWithType: Writer.Convert
+- uid: TF3.Core.Converters.FormatReplace
+  name: FormatReplace
+  href: api/TF3.Core.Converters.FormatReplace.html
+  commentId: T:TF3.Core.Converters.FormatReplace
+  fullName: TF3.Core.Converters.FormatReplace
+  nameWithType: FormatReplace
+- uid: TF3.Core.Converters.FormatReplace.Convert(IFormat)
+  name: Convert(IFormat)
+  href: api/TF3.Core.Converters.FormatReplace.html#TF3_Core_Converters_FormatReplace_Convert_IFormat_
+  commentId: M:TF3.Core.Converters.FormatReplace.Convert(IFormat)
+  fullName: TF3.Core.Converters.FormatReplace.Convert(IFormat)
+  nameWithType: FormatReplace.Convert(IFormat)
+- uid: TF3.Core.Converters.FormatReplace.Convert*
+  name: Convert
+  href: api/TF3.Core.Converters.FormatReplace.html#TF3_Core_Converters_FormatReplace_Convert_
+  commentId: Overload:TF3.Core.Converters.FormatReplace.Convert
+  isSpec: "True"
+  fullName: TF3.Core.Converters.FormatReplace.Convert
+  nameWithType: FormatReplace.Convert
+- uid: TF3.Core.Converters.FormatReplace.Initialize(IFormat)
+  name: Initialize(IFormat)
+  href: api/TF3.Core.Converters.FormatReplace.html#TF3_Core_Converters_FormatReplace_Initialize_IFormat_
+  commentId: M:TF3.Core.Converters.FormatReplace.Initialize(IFormat)
+  fullName: TF3.Core.Converters.FormatReplace.Initialize(IFormat)
+  nameWithType: FormatReplace.Initialize(IFormat)
+- uid: TF3.Core.Converters.FormatReplace.Initialize*
+  name: Initialize
+  href: api/TF3.Core.Converters.FormatReplace.html#TF3_Core_Converters_FormatReplace_Initialize_
+  commentId: Overload:TF3.Core.Converters.FormatReplace.Initialize
+  isSpec: "True"
+  fullName: TF3.Core.Converters.FormatReplace.Initialize
+  nameWithType: FormatReplace.Initialize
 - uid: TF3.Core.Converters.FormatToSingleNode
   name: FormatToSingleNode
   href: api/TF3.Core.Converters.FormatToSingleNode.html
@@ -267,6 +267,31 @@ references:
   isSpec: "True"
   fullName: TF3.Core.Converters.FormatToSingleNode.Initialize
   nameWithType: FormatToSingleNode.Initialize
+- uid: TF3.Core.Converters.Po
+  name: TF3.Core.Converters.Po
+  href: api/TF3.Core.Converters.Po.html
+  commentId: N:TF3.Core.Converters.Po
+  fullName: TF3.Core.Converters.Po
+  nameWithType: TF3.Core.Converters.Po
+- uid: TF3.Core.Converters.Po.NodeContainerToPo
+  name: NodeContainerToPo
+  href: api/TF3.Core.Converters.Po.NodeContainerToPo.html
+  commentId: T:TF3.Core.Converters.Po.NodeContainerToPo
+  fullName: TF3.Core.Converters.Po.NodeContainerToPo
+  nameWithType: NodeContainerToPo
+- uid: TF3.Core.Converters.Po.NodeContainerToPo.Convert(NodeContainerFormat)
+  name: Convert(NodeContainerFormat)
+  href: api/TF3.Core.Converters.Po.NodeContainerToPo.html#TF3_Core_Converters_Po_NodeContainerToPo_Convert_NodeContainerFormat_
+  commentId: M:TF3.Core.Converters.Po.NodeContainerToPo.Convert(NodeContainerFormat)
+  fullName: TF3.Core.Converters.Po.NodeContainerToPo.Convert(NodeContainerFormat)
+  nameWithType: NodeContainerToPo.Convert(NodeContainerFormat)
+- uid: TF3.Core.Converters.Po.NodeContainerToPo.Convert*
+  name: Convert
+  href: api/TF3.Core.Converters.Po.NodeContainerToPo.html#TF3_Core_Converters_Po_NodeContainerToPo_Convert_
+  commentId: Overload:TF3.Core.Converters.Po.NodeContainerToPo.Convert
+  isSpec: "True"
+  fullName: TF3.Core.Converters.Po.NodeContainerToPo.Convert
+  nameWithType: NodeContainerToPo.Convert
 - uid: TF3.Core.Converters.SingleNodeToFormat
   name: SingleNodeToFormat
   href: api/TF3.Core.Converters.SingleNodeToFormat.html

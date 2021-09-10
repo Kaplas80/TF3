@@ -14,11 +14,6 @@
     "title": "Class Reader | Translation Framework v3",
     "keywords": "Class Reader Patch file reader. Inheritance Object Reader Implements IInitializer < Int64 > Namespace : TF3.Core.Converters.BinaryPatch Assembly : TF3.Core.dll Syntax public class Reader : IConverter<BinaryFormat, BinaryPatch>, IInitializer<long> Methods | Improve this Doc View Source Convert(BinaryFormat) Reads a patch file. Declaration public BinaryPatch Convert(BinaryFormat source) Parameters Type Name Description BinaryFormat source The patch file. Returns Type Description BinaryPatch The patch. | Improve this Doc View Source Initialize(Int64) Initialize the reader. Declaration public void Initialize(long parameters) Parameters Type Name Description Int64 parameters File Raw Offset. Implements IInitializer<>"
   },
-  "api/TF3.Core.Converters.BinaryReplace.html": {
-    "href": "api/TF3.Core.Converters.BinaryReplace.html",
-    "title": "Class BinaryReplace | Translation Framework v3",
-    "keywords": "Class BinaryReplace BinaryFormat replacer. Inheritance Object BinaryReplace Implements IInitializer < BinaryFormat > Namespace : TF3.Core.Converters Assembly : TF3.Core.dll Syntax public class BinaryReplace : IConverter<BinaryFormat, BinaryFormat>, IInitializer<BinaryFormat> Methods | Improve this Doc View Source Convert(BinaryFormat) Fully replace a BinaryFormat. Declaration public BinaryFormat Convert(BinaryFormat source) Parameters Type Name Description BinaryFormat source The original binary format. Returns Type Description BinaryFormat The new binary format. | Improve this Doc View Source Initialize(BinaryFormat) Set the new binary. Declaration public void Initialize(BinaryFormat parameters) Parameters Type Name Description BinaryFormat parameters The new binary. Implements IInitializer<>"
-  },
   "api/TF3.Core.Converters.DdsImage.ExtractToPng.html": {
     "href": "api/TF3.Core.Converters.DdsImage.ExtractToPng.html",
     "title": "Class ExtractToPng | Translation Framework v3",
@@ -49,6 +44,11 @@
     "title": "Class Writer | Translation Framework v3",
     "keywords": "Class Writer DDS file writer. Inheritance Object Writer Namespace : TF3.Core.Converters.DdsImage Assembly : TF3.Core.dll Syntax public class Writer : IConverter<DdsFileFormat, BinaryFormat> Methods | Improve this Doc View Source Convert(DdsFileFormat) Writes a DDS file. Declaration public BinaryFormat Convert(DdsFileFormat source) Parameters Type Name Description DdsFileFormat source The DDS format. Returns Type Description BinaryFormat The DDS file."
   },
+  "api/TF3.Core.Converters.FormatReplace.html": {
+    "href": "api/TF3.Core.Converters.FormatReplace.html",
+    "title": "Class FormatReplace | Translation Framework v3",
+    "keywords": "Class FormatReplace Format replacer. Inheritance Object FormatReplace Implements IInitializer < IFormat > Namespace : TF3.Core.Converters Assembly : TF3.Core.dll Syntax public class FormatReplace : IConverter<IFormat, IFormat>, IInitializer<IFormat> Methods | Improve this Doc View Source Convert(IFormat) Fully replace a IFormat. Declaration public IFormat Convert(IFormat source) Parameters Type Name Description IFormat source The original format. Returns Type Description IFormat The new format. | Improve this Doc View Source Initialize(IFormat) Set the new format. Declaration public void Initialize(IFormat parameters) Parameters Type Name Description IFormat parameters The new format. Implements IInitializer<>"
+  },
   "api/TF3.Core.Converters.FormatToSingleNode.html": {
     "href": "api/TF3.Core.Converters.FormatToSingleNode.html",
     "title": "Class FormatToSingleNode | Translation Framework v3",
@@ -57,7 +57,17 @@
   "api/TF3.Core.Converters.html": {
     "href": "api/TF3.Core.Converters.html",
     "title": "Namespace TF3.Core.Converters | Translation Framework v3",
-    "keywords": "Namespace TF3.Core.Converters Classes BinaryReplace BinaryFormat replacer. FormatToSingleNode Converts a IFormat to a NodeContainerFormat. SingleNodeToFormat Converts a NodeContainerFormat to the format of the first children."
+    "keywords": "Namespace TF3.Core.Converters Classes FormatReplace Format replacer. FormatToSingleNode Converts a IFormat to a NodeContainerFormat. SingleNodeToFormat Converts a NodeContainerFormat to the format of the first children."
+  },
+  "api/TF3.Core.Converters.Po.html": {
+    "href": "api/TF3.Core.Converters.Po.html",
+    "title": "Namespace TF3.Core.Converters.Po | Translation Framework v3",
+    "keywords": "Namespace TF3.Core.Converters.Po Classes NodeContainerToPo Po files merger."
+  },
+  "api/TF3.Core.Converters.Po.NodeContainerToPo.html": {
+    "href": "api/TF3.Core.Converters.Po.NodeContainerToPo.html",
+    "title": "Class NodeContainerToPo | Translation Framework v3",
+    "keywords": "Class NodeContainerToPo Po files merger. Inheritance Object NodeContainerToPo Namespace : TF3.Core.Converters.Po Assembly : TF3.Core.dll Syntax public class NodeContainerToPo : IConverter<NodeContainerFormat, Yarhl.Media.Text.Po> Methods | Improve this Doc View Source Convert(NodeContainerFormat) Merges all parts (BinaryFormat) in a Po file. Declaration public Yarhl.Media.Text.Po Convert(NodeContainerFormat source) Parameters Type Name Description NodeContainerFormat source Po parts. Returns Type Description Yarhl.Media.Text.Po The merged Po."
   },
   "api/TF3.Core.Converters.SingleNodeToFormat.html": {
     "href": "api/TF3.Core.Converters.SingleNodeToFormat.html",
