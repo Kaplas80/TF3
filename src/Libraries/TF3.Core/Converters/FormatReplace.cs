@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2021 Kaplas
+// Copyright (c) 2021 Kaplas
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -22,39 +22,38 @@ namespace TF3.Core.Converters
 {
     using System;
     using Yarhl.FileFormat;
-    using Yarhl.IO;
 
     /// <summary>
-    /// BinaryFormat replacer.
+    /// Format replacer.
     /// </summary>
-    public class BinaryReplace : IConverter<BinaryFormat, BinaryFormat>, IInitializer<BinaryFormat>
+    public class FormatReplace : IConverter<IFormat, IFormat>, IInitializer<IFormat>
     {
-        private BinaryFormat _newBinaryFormat = null;
+        private IFormat _newFormat = null;
 
         /// <summary>
-        /// Set the new binary.
+        /// Set the new format.
         /// </summary>
-        /// <param name="parameters">The new binary.</param>
-        public void Initialize(BinaryFormat parameters) => _newBinaryFormat = parameters;
+        /// <param name="parameters">The new format.</param>
+        public void Initialize(IFormat parameters) => _newFormat = parameters;
 
         /// <summary>
-        /// Fully replace a BinaryFormat.
+        /// Fully replace a IFormat.
         /// </summary>
-        /// <param name="source">The original binary format.</param>
-        /// <returns>The new binary format.</returns>
-        public BinaryFormat Convert(BinaryFormat source)
+        /// <param name="source">The original format.</param>
+        /// <returns>The new format.</returns>
+        public IFormat Convert(IFormat source)
         {
             if (source == null)
             {
                 throw new ArgumentNullException(nameof(source));
             }
 
-            if (_newBinaryFormat == null)
+            if (_newFormat == null)
             {
                 throw new InvalidOperationException("Uninitialized.");
             }
 
-            return _newBinaryFormat;
+            return _newFormat;
         }
     }
 }
