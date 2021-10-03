@@ -20,12 +20,14 @@
 
 namespace TF3.Core.Formats
 {
+    using System.Diagnostics.CodeAnalysis;
     using BCnEncoder.Shared.ImageFiles;
     using Yarhl.FileFormat;
 
     /// <summary>
     /// IFormat wrapper for BCnEncoder.Shared.ImageFiles.DdsFile.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     public class DdsFileFormat : IFormat
     {
         /// <summary>

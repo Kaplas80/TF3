@@ -20,11 +20,13 @@
 
 namespace TF3.Core.EventArgs
 {
+    using System.Diagnostics.CodeAnalysis;
     using TF3.Core.Models;
 
     /// <summary>
     /// Asset events arguments.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     public class AssetEventArgs
     {
         /// <summary>

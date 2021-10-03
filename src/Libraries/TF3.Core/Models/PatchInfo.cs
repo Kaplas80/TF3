@@ -20,9 +20,12 @@
 
 namespace TF3.Core.Models
 {
+    using System.Diagnostics.CodeAnalysis;
+
     /// <summary>
     /// Binary patch info.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     public class PatchInfo
     {
         /// <summary>

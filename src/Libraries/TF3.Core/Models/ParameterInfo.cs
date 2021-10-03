@@ -20,11 +20,13 @@
 
 namespace TF3.Core.Models
 {
+    using System.Diagnostics.CodeAnalysis;
     using System.Text.Json;
 
     /// <summary>
     /// Converter parameter info.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     public class ParameterInfo
     {
         /// <summary>
