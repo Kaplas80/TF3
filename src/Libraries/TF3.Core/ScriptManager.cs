@@ -23,6 +23,7 @@ namespace TF3.Core
     using System.Collections.Generic;
     using System.IO;
     using System.Text.Json;
+    using Dahomey.Json;
     using Yarhl;
 
     /// <summary>
@@ -46,14 +47,25 @@ namespace TF3.Core
             // This is needed to load all the Yarhl plugins and make their types available in scripts.
             _ = PluginManager.Instance;
 
-            _scripts.Clear();
+            Clear();
+
+            JsonSerializerOptions options = new JsonSerializerOptions().SetupExtensions();
+            options.SetMissingMemberHandling(MissingMemberHandling.Error);
 
             foreach (string file in Directory.EnumerateFiles(path, "TF3.Script.*.json"))
             {
                 string scriptContents = File.ReadAllText(file);
-                GameScript script = JsonSerializer.Deserialize<GameScript>(scriptContents);
+                GameScript script = JsonSerializer.Deserialize<GameScript>(scriptContents, options);
                 _scripts.Add(script);
             }
+        }
+
+        /// <summary>
+        /// Empties the loaded scripts.
+        /// </summary>
+        public static void Clear()
+        {
+            _scripts.Clear();
         }
     }
 }
