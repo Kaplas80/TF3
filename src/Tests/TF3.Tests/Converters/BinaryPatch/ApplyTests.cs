@@ -31,7 +31,11 @@
         [Test]
         public void MismatchByteThrowsException()
         {
-            BinaryPatch patch = new () { FileName = "test.exe", RawOffset = 0, };
+            BinaryPatch patch = new ()
+            {
+                FileName = "test.exe",
+                RawOffset = 0,
+            };
             patch.Patches.Add((4, 0x21, 0x30));
 
             using DataStream ds = DataStreamFactory.FromArray(_testData, 0, _testData.Length);
@@ -44,7 +48,11 @@
         [Test]
         public void ApplyPatchWithoutOffset()
         {
-            BinaryPatch patch = new () { FileName = "test.exe", RawOffset = 0, };
+            BinaryPatch patch = new ()
+            {
+                FileName = "test.exe",
+                RawOffset = 0,
+            };
             patch.Patches.Add((4, 0x20, 0x30));
 
             using DataStream ds = DataStreamFactory.FromArray(_testData, 0, _testData.Length);
@@ -63,7 +71,11 @@
         [Test]
         public void ApplyPatchWithOffset()
         {
-            BinaryPatch patch = new () { FileName = "test.exe", RawOffset = 3, };
+            BinaryPatch patch = new ()
+            {
+                FileName = "test.exe",
+                RawOffset = 3,
+            };
             patch.Patches.Add((4, 0x72, 0x62));
 
             using DataStream ds = DataStreamFactory.FromArray(_testData, 0, _testData.Length);

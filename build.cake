@@ -4,7 +4,7 @@ Task("Define-Project")
     .Description("Fill specific project information")
     .Does<BuildInfo>(info =>
 {
-    info.CoverageTarget = 25;
+    info.CoverageTarget = 100;
     info.PreviewNuGetFeed = "https://nuget.pkg.github.com/Kaplas80/index.json";
     info.PreviewNuGetFeedToken = info.GitHubToken;
     info.StableNuGetFeed = "https://nuget.pkg.github.com/Kaplas80/index.json";

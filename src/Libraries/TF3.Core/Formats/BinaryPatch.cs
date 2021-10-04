@@ -21,14 +21,12 @@
 namespace TF3.Core.Formats
 {
     using System.Collections.Generic;
-    using System.Diagnostics.CodeAnalysis;
     using Yarhl.FileFormat;
 
     /// <summary>
     /// Binary patch format.
     /// <remarks>Similar to 1337 patch format.</remarks>
     /// </summary>
-    [ExcludeFromCodeCoverage]
     public class BinaryPatch : IFormat
     {
         /// <summary>
