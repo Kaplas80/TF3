@@ -744,18 +744,18 @@ references:
   isSpec: "True"
   fullName: TF3.Core.GameScript.Containers
   nameWithType: GameScript.Containers
-- uid: TF3.Core.GameScript.ContainerWrited
-  name: ContainerWrited
-  href: api/TF3.Core.GameScript.html#TF3_Core_GameScript_ContainerWrited
-  commentId: E:TF3.Core.GameScript.ContainerWrited
-  fullName: TF3.Core.GameScript.ContainerWrited
-  nameWithType: GameScript.ContainerWrited
 - uid: TF3.Core.GameScript.ContainerWriting
   name: ContainerWriting
   href: api/TF3.Core.GameScript.html#TF3_Core_GameScript_ContainerWriting
   commentId: E:TF3.Core.GameScript.ContainerWriting
   fullName: TF3.Core.GameScript.ContainerWriting
   nameWithType: GameScript.ContainerWriting
+- uid: TF3.Core.GameScript.ContainerWrote
+  name: ContainerWrote
+  href: api/TF3.Core.GameScript.html#TF3_Core_GameScript_ContainerWrote
+  commentId: E:TF3.Core.GameScript.ContainerWrote
+  fullName: TF3.Core.GameScript.ContainerWrote
+  nameWithType: GameScript.ContainerWrote
 - uid: TF3.Core.GameScript.Extract(System.String,System.String)
   name: Extract(String, String)
   href: api/TF3.Core.GameScript.html#TF3_Core_GameScript_Extract_System_String_System_String_
@@ -888,25 +888,6 @@ references:
   commentId: T:TF3.Core.Helpers.ChecksumHelper
   fullName: TF3.Core.Helpers.ChecksumHelper
   nameWithType: ChecksumHelper
-- uid: TF3.Core.Helpers.ChecksumHelper.Calculate(Stream)
-  name: Calculate(Stream)
-  href: api/TF3.Core.Helpers.ChecksumHelper.html#TF3_Core_Helpers_ChecksumHelper_Calculate_Stream_
-  commentId: M:TF3.Core.Helpers.ChecksumHelper.Calculate(Stream)
-  fullName: TF3.Core.Helpers.ChecksumHelper.Calculate(Stream)
-  nameWithType: ChecksumHelper.Calculate(Stream)
-- uid: TF3.Core.Helpers.ChecksumHelper.Calculate(System.String)
-  name: Calculate(String)
-  href: api/TF3.Core.Helpers.ChecksumHelper.html#TF3_Core_Helpers_ChecksumHelper_Calculate_System_String_
-  commentId: M:TF3.Core.Helpers.ChecksumHelper.Calculate(System.String)
-  fullName: TF3.Core.Helpers.ChecksumHelper.Calculate(System.String)
-  nameWithType: ChecksumHelper.Calculate(String)
-- uid: TF3.Core.Helpers.ChecksumHelper.Calculate*
-  name: Calculate
-  href: api/TF3.Core.Helpers.ChecksumHelper.html#TF3_Core_Helpers_ChecksumHelper_Calculate_
-  commentId: Overload:TF3.Core.Helpers.ChecksumHelper.Calculate
-  isSpec: "True"
-  fullName: TF3.Core.Helpers.ChecksumHelper.Calculate
-  nameWithType: ChecksumHelper.Calculate
 - uid: TF3.Core.Helpers.ChecksumHelper.Check(Stream,System.UInt64)
   name: Check(Stream, UInt64)
   href: api/TF3.Core.Helpers.ChecksumHelper.html#TF3_Core_Helpers_ChecksumHelper_Check_Stream_System_UInt64_
@@ -1392,6 +1373,19 @@ references:
   commentId: T:TF3.Core.ScriptManager
   fullName: TF3.Core.ScriptManager
   nameWithType: ScriptManager
+- uid: TF3.Core.ScriptManager.Clear
+  name: Clear()
+  href: api/TF3.Core.ScriptManager.html#TF3_Core_ScriptManager_Clear
+  commentId: M:TF3.Core.ScriptManager.Clear
+  fullName: TF3.Core.ScriptManager.Clear()
+  nameWithType: ScriptManager.Clear()
+- uid: TF3.Core.ScriptManager.Clear*
+  name: Clear
+  href: api/TF3.Core.ScriptManager.html#TF3_Core_ScriptManager_Clear_
+  commentId: Overload:TF3.Core.ScriptManager.Clear
+  isSpec: "True"
+  fullName: TF3.Core.ScriptManager.Clear
+  nameWithType: ScriptManager.Clear
 - uid: TF3.Core.ScriptManager.LoadScripts(System.String)
   name: LoadScripts(String)
   href: api/TF3.Core.ScriptManager.html#TF3_Core_ScriptManager_LoadScripts_System_String_
