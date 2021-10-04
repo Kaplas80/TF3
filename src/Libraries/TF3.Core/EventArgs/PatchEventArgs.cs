@@ -20,11 +20,13 @@
 
 namespace TF3.Core.EventArgs
 {
+    using System.Diagnostics.CodeAnalysis;
     using TF3.Core.Models;
 
     /// <summary>
     /// Patch events arguments.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     public class PatchEventArgs
     {
         /// <summary>

@@ -29,26 +29,6 @@ namespace TF3.Core.Helpers
     public static class ChecksumHelper
     {
         /// <summary>
-        /// Calculate the checksum of a file.
-        /// </summary>
-        /// <param name="file">The input file.</param>
-        /// <returns>The checksum value.</returns>
-        public static ulong Calculate(string file)
-        {
-            return Calculate(new FileStream(file, FileMode.Open, FileAccess.Read));
-        }
-
-        /// <summary>
-        /// Calculate the checksum of a stream.
-        /// </summary>
-        /// <param name="stream">The input stream.</param>
-        /// <returns>The checksum value.</returns>
-        public static ulong Calculate(Stream stream)
-        {
-            return xxHash64.ComputeHash(stream);
-        }
-
-        /// <summary>
         /// Validates the checksum of a file.
         /// </summary>
         /// <param name="file">The input file.</param>
@@ -80,6 +60,27 @@ namespace TF3.Core.Helpers
 
             ulong value = Calculate(stream);
             return value == expected;
+        }
+
+        /// <summary>
+        /// Calculate the checksum of a file.
+        /// </summary>
+        /// <param name="file">The input file.</param>
+        /// <returns>The checksum value.</returns>
+        private static ulong Calculate(string file)
+        {
+            using FileStream s = new (file, FileMode.Open, FileAccess.Read);
+            return Calculate(s);
+        }
+
+        /// <summary>
+        /// Calculate the checksum of a stream.
+        /// </summary>
+        /// <param name="stream">The input stream.</param>
+        /// <returns>The checksum value.</returns>
+        private static ulong Calculate(Stream stream)
+        {
+            return xxHash64.ComputeHash(stream);
         }
     }
 }

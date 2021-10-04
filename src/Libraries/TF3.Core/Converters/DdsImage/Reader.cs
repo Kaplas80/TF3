@@ -43,8 +43,11 @@ namespace TF3.Core.Converters.DdsImage
                 throw new ArgumentNullException(nameof(source));
             }
 
-            DdsFileFormat result = new ();
-            result.Internal = DdsFile.Load(source.Stream);
+            source.Stream.Seek(0);
+            DdsFileFormat result = new ()
+            {
+                Internal = DdsFile.Load(source.Stream),
+            };
 
             return result;
         }

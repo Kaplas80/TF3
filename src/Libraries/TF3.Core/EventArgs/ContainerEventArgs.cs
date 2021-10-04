@@ -20,11 +20,13 @@
 
 namespace TF3.Core.EventArgs
 {
+    using System.Diagnostics.CodeAnalysis;
     using TF3.Core.Models;
 
     /// <summary>
     /// Container events arguments.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     public class ContainerEventArgs
     {
         /// <summary>

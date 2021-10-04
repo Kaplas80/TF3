@@ -21,10 +21,12 @@
 namespace TF3.Core.Models
 {
     using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
 
     /// <summary>
     /// Game asset file info.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     public class AssetFileInfo : FileInfo
     {
         /// <summary>

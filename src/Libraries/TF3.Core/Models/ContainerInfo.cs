@@ -21,10 +21,12 @@
 namespace TF3.Core.Models
 {
     using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
 
     /// <summary>
     /// Game file container info.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     public class ContainerInfo
     {
         /// <summary>

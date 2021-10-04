@@ -21,6 +21,7 @@
 namespace TF3.Core.Converters.DdsImage
 {
     using System;
+    using System.Diagnostics.CodeAnalysis;
     using BCnEncoder.Encoder;
     using BCnEncoder.ImageSharp;
     using BCnEncoder.Shared;
@@ -36,7 +37,7 @@ namespace TF3.Core.Converters.DdsImage
     /// </summary>
     public class Replace : IConverter<DdsFileFormat, DdsFileFormat>, IInitializer<BinaryFormat>
     {
-        private Image<Rgba32> _newImage = null;
+        private Image<Rgba32> _newImage;
 
         /// <summary>
         /// Converter initializer.
@@ -68,30 +69,29 @@ namespace TF3.Core.Converters.DdsImage
                 throw new InvalidOperationException("Uninitialized");
             }
 
-            BcEncoder encoder = new ();
+            BcEncoder encoder = new ()
+            {
+                OutputOptions =
+                {
+                    GenerateMipMaps = source.Internal.header.dwMipMapCount > 0,
+                    Quality = CompressionQuality.Balanced,
+                    Format = GetCompressionFormat(source.Internal),
+                    FileFormat = OutputFileFormat.Dds,
+                },
+            };
 
-            encoder.OutputOptions.GenerateMipMaps = source.Internal.header.dwMipMapCount > 0;
-            encoder.OutputOptions.Quality = CompressionQuality.Balanced;
-            encoder.OutputOptions.Format = GetCompressionFormat(source.Internal);
-            encoder.OutputOptions.FileFormat = OutputFileFormat.Dds;
-
-            var result = new DdsFileFormat();
-            result.Internal = encoder.EncodeToDds(_newImage);
+            DdsFileFormat result = new ()
+            {
+                Internal = encoder.EncodeToDds(_newImage),
+            };
 
             return result;
         }
 
+        [ExcludeFromCodeCoverage(Justification = "Too many cases")]
         private static CompressionFormat GetCompressionFormat(DdsFile dds)
         {
-            DxgiFormat format;
-            if (dds.header.ddsPixelFormat.IsDxt10Format)
-            {
-                format = dds.dx10Header.dxgiFormat;
-            }
-            else
-            {
-                format = dds.header.ddsPixelFormat.DxgiFormat;
-            }
+            DxgiFormat format = dds.header.ddsPixelFormat.IsDxt10Format ? dds.dx10Header.dxgiFormat : dds.header.ddsPixelFormat.DxgiFormat;
 
             return format switch
             {

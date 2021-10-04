@@ -20,9 +20,12 @@
 
 namespace TF3.Core.EventArgs
 {
+    using System.Diagnostics.CodeAnalysis;
+
     /// <summary>
     /// Script events arguments.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     public class ScriptEventArgs
     {
         /// <summary>

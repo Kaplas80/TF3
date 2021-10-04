@@ -22,6 +22,7 @@ namespace TF3.Core
 {
     using System;
     using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
     using System.IO;
     using System.Linq;
     using TF3.Core.Converters;
@@ -34,6 +35,7 @@ namespace TF3.Core
     /// <summary>
     /// Game script. Includes all the needed info to extract and repack game files.
     /// </summary>
+    [ExcludeFromCodeCoverage(Justification = "Public methods can not be tested without a real game script.")]
     public class GameScript
     {
         /// <summary>
@@ -74,7 +76,7 @@ namespace TF3.Core
         /// <summary>
         /// Event triggered AFTER a container is written.
         /// </summary>
-        public event EventHandler<ContainerEventArgs> ContainerWrited;
+        public event EventHandler<ContainerEventArgs> ContainerWrote;
 
         /// <summary>
         /// Event triggered BEFORE asset extraction begins.
@@ -166,7 +168,7 @@ namespace TF3.Core
             ScriptExtracting?.Invoke(this, new ScriptEventArgs(this));
             Directory.CreateDirectory(outputPath);
 
-            var containersDict = new Dictionary<string, Node>();
+            Dictionary<string, Node> containersDict = new ();
 
             Node gameRoot = NodeFactory.FromDirectory(gamePath, "*", "root", true, Yarhl.IO.FileOpenMode.Read);
             containersDict.Add("root", gameRoot);
@@ -199,7 +201,7 @@ namespace TF3.Core
             ScriptRebuilding?.Invoke(this, new ScriptEventArgs(this));
             Directory.CreateDirectory(outputPath);
 
-            var containersDict = new Dictionary<string, Node>();
+            Dictionary<string, Node> containersDict = new ();
             Node gameRoot = NodeFactory.FromDirectory(gamePath, "*", "root", true, Yarhl.IO.FileOpenMode.Read);
             containersDict.Add("root", gameRoot);
 
@@ -275,7 +277,7 @@ namespace TF3.Core
                 node.Tags["Changed"] = true;
                 node.Tags["OutputPath"] = containerInfo.Path;
 
-                ContainerWrited?.Invoke(this, new ContainerEventArgs(containerInfo));
+                ContainerWrote?.Invoke(this, new ContainerEventArgs(containerInfo));
             }
         }
 
@@ -323,7 +325,7 @@ namespace TF3.Core
                 Node file = ReadFile(fileInfo, containers);
 
                 // Add call will remove the node from its original parent, so we need to make a copy
-                Node newFile = new Node(file);
+                Node newFile = new (file);
                 newFile.Transform(fileInfo.Readers, Parameters);
                 asset.Add(newFile);
             }

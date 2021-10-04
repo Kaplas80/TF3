@@ -20,9 +20,12 @@
 
 namespace TF3.Core.Models
 {
+    using System.Diagnostics.CodeAnalysis;
+
     /// <summary>
     /// Yarhl converter info.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     public class ConverterInfo
     {
         /// <summary>

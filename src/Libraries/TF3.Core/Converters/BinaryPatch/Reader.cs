@@ -31,7 +31,7 @@ namespace TF3.Core.Converters.BinaryPatch
     /// </summary>
     public class Reader : IConverter<BinaryFormat, BinaryPatch>, IInitializer<long>
     {
-        private long _rawOffset = 0;
+        private long _rawOffset;
 
         /// <summary>
         /// Initialize the reader.
@@ -63,23 +63,25 @@ namespace TF3.Core.Converters.BinaryPatch
             {
                 string line = reader.ReadLine();
 
-                if (string.IsNullOrEmpty(line))
+                if (string.IsNullOrWhiteSpace(line))
                 {
                     continue;
                 }
 
                 line = line.Trim();
+                string[] split;
                 switch (line[0])
                 {
                     case ';':
                         continue;
 
                     case '>':
-                        result.FileName = line.Substring(1);
+                        split = line.Split(';');
+                        result.FileName = split[0].Substring(1);
                         break;
 
                     default:
-                        string[] split = line.Split(';');
+                        split = line.Split(';');
                         string[] patchInfo = split[0].Split(':');
                         string[] bytes = patchInfo[1].Split("->");
                         long address = long.Parse(patchInfo[0], System.Globalization.NumberStyles.HexNumber);

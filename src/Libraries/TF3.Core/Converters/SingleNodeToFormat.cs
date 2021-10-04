@@ -48,7 +48,7 @@ namespace TF3.Core.Converters
 
             if (source.Root.Children[0].Format is ICloneableFormat)
             {
-                Node clone = new Node(source.Root.Children[0]);
+                Node clone = new (source.Root.Children[0]);
                 return clone.Format;
             }
             else

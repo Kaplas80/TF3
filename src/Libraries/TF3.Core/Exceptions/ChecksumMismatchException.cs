@@ -21,12 +21,14 @@
 namespace TF3.Core.Exceptions
 {
     using System;
+    using System.Diagnostics.CodeAnalysis;
     using System.Runtime.Serialization;
 
     /// <summary>
     /// Exception thrown when checksum doesn't match with the expected one.
     /// </summary>
     [Serializable]
+    [ExcludeFromCodeCoverage]
     public class ChecksumMismatchException : Exception
     {
         /// <summary>

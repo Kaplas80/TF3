@@ -21,12 +21,14 @@
 namespace TF3.Core.Exceptions
 {
     using System;
+    using System.Diagnostics.CodeAnalysis;
     using System.Runtime.Serialization;
 
     /// <summary>
     /// Exception thrown when byte doesn't match with the expected one when applying a patch.
     /// </summary>
     [Serializable]
+    [ExcludeFromCodeCoverage]
     public class ByteMismatchException : Exception
     {
         /// <summary>

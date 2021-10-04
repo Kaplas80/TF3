@@ -53,20 +53,20 @@ namespace TF3.Core.Helpers
                     throw new UnknownConverterException($"Unknown converter: {converterInfo.TypeName}");
                 }
 
-                IConverter converter = (IConverter)Activator.CreateInstance(metadata.Type);
-
-                System.Reflection.MethodInfo initializer = metadata.Type.GetMethod("Initialize");
                 ParameterInfo parameter = parameters.Find(x => x.Id == converterInfo.ParameterId);
-                if (initializer != null && parameter != null)
+                object[] initializerParameters = null;
+                if (parameter != null)
                 {
                     string json = parameter.Value.GetRawText();
                     Type parameterType = Type.GetType(parameter.TypeName);
-                    object value = JsonSerializer.Deserialize(json, parameterType);
-                    _ = initializer.Invoke(converter, new object[] { value });
+                    if (parameterType != null)
+                    {
+                        object value = JsonSerializer.Deserialize(json, parameterType);
+                        initializerParameters = new[] { value };
+                    }
                 }
 
-                IFormat newFormat = (IFormat)ConvertFormat.With(converter, node.Format);
-                node.ChangeFormat(newFormat);
+                node.ApplyChange(metadata, initializerParameters);
             }
         }
 
@@ -86,13 +86,18 @@ namespace TF3.Core.Helpers
                 throw new UnknownConverterException($"Unknown converter: {translator}");
             }
 
+            node.ApplyChange(metadata, new object[] { translation.Format });
+        }
+
+        private static void ApplyChange(this Node node, ConverterMetadata metadata, object[] parameters)
+        {
             IConverter converter = (IConverter)Activator.CreateInstance(metadata.Type);
 
             System.Reflection.MethodInfo initializer = metadata.Type.GetMethod("Initialize");
 
-            if (initializer != null)
+            if (initializer != null && parameters != null)
             {
-                _ = initializer.Invoke(converter, new object[] { translation.Format });
+                _ = initializer.Invoke(converter, parameters);
             }
 
             IFormat newFormat = (IFormat)ConvertFormat.With(converter, node.Format);

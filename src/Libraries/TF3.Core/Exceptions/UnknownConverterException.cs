@@ -21,12 +21,14 @@
 namespace TF3.Core.Exceptions
 {
     using System;
+    using System.Diagnostics.CodeAnalysis;
     using System.Runtime.Serialization;
 
     /// <summary>
     /// Exception thrown when a Yarhl converter is not found.
     /// </summary>
     [Serializable]
+    [ExcludeFromCodeCoverage]
     public class UnknownConverterException : Exception
     {
         /// <summary>
