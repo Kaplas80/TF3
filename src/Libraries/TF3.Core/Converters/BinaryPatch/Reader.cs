@@ -31,7 +31,7 @@ namespace TF3.Core.Converters.BinaryPatch
     /// </summary>
     public class Reader : IConverter<BinaryFormat, BinaryPatch>, IInitializer<long>
     {
-        private long _rawOffset = 0;
+        private long _rawOffset;
 
         /// <summary>
         /// Initialize the reader.

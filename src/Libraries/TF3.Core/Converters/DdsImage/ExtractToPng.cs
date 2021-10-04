@@ -46,7 +46,13 @@ namespace TF3.Core.Converters.DdsImage
                 throw new ArgumentNullException(nameof(source));
             }
 
-            BCnEncoder.Decoder.BcDecoder decoder = new () { OutputOptions = { Bc4Component = ColorComponent.Luminance } };
+            BCnEncoder.Decoder.BcDecoder decoder = new ()
+            {
+                OutputOptions =
+                {
+                    Bc4Component = ColorComponent.Luminance,
+                },
+            };
 
             using Image<Rgba32> image = decoder.DecodeToImageRgba32(source.Internal);
 

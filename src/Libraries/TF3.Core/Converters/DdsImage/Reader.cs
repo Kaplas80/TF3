@@ -44,7 +44,10 @@ namespace TF3.Core.Converters.DdsImage
             }
 
             source.Stream.Seek(0);
-            DdsFileFormat result = new () { Internal = DdsFile.Load(source.Stream) };
+            DdsFileFormat result = new ()
+            {
+                Internal = DdsFile.Load(source.Stream),
+            };
 
             return result;
         }

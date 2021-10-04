@@ -24,7 +24,6 @@ namespace TF3.CommandLine
     using System.Linq;
     using global::CommandLine;
     using TF3.Core;
-    using TF3.Core.EventArgs;
 
     /// <summary>
     /// Main program class.
@@ -51,11 +50,11 @@ namespace TF3.CommandLine
             int maxGameLength = ScriptManager.Scripts.Max(x => x.Game.Length);
             Console.WriteLine("Available scripts:");
             Console.WriteLine();
-            Console.WriteLine(string.Format($"{{0, {-maxNameLength}}}\t{{1, {-maxGameLength}}}", "Name", "Game"));
+            Console.WriteLine($"{{0, {-maxNameLength}}}\t{{1, {-maxGameLength}}}", "Name", "Game");
             Console.WriteLine($"{new string('=', maxNameLength)}\t{new string('=', maxGameLength)}");
             foreach (GameScript script in ScriptManager.Scripts)
             {
-                Console.WriteLine(string.Format($"{{0, {-maxNameLength}}}\t{{1, {-maxGameLength}}}", script.Name, script.Game));
+                Console.WriteLine($"{{0, {-maxNameLength}}}\t{{1, {-maxGameLength}}}", script.Name, script.Game);
             }
         }
 
@@ -79,7 +78,7 @@ namespace TF3.CommandLine
 
             if (System.IO.Directory.Exists(options.Output))
             {
-                Console.Write($"Output directory already exists. Overwrite (y/N)? ");
+                Console.Write("Output directory already exists. Overwrite (y/N)? ");
                 string overwrite = Console.ReadLine();
 
                 if (!string.Equals(overwrite, "Y", StringComparison.InvariantCultureIgnoreCase))
@@ -136,13 +135,13 @@ namespace TF3.CommandLine
 
             if (!System.IO.Directory.Exists(options.TranslationDir))
             {
-                Console.WriteLine($"Invalid tranlation path: {options.TranslationDir}");
+                Console.WriteLine($"Invalid translation path: {options.TranslationDir}");
                 return;
             }
 
             if (System.IO.Directory.Exists(options.Output))
             {
-                Console.Write($"Output directory already exists. Overwrite (y/N)? ");
+                Console.Write("Output directory already exists. Overwrite (y/N)? ");
                 string overwrite = Console.ReadLine();
 
                 if (!string.Equals(overwrite, "Y", StringComparison.InvariantCultureIgnoreCase))

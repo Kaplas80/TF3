@@ -69,7 +69,7 @@ namespace TF3.Core.Helpers
         /// <returns>The checksum value.</returns>
         private static ulong Calculate(string file)
         {
-            using FileStream s = new FileStream(file, FileMode.Open, FileAccess.Read);
+            using FileStream s = new (file, FileMode.Open, FileAccess.Read);
             return Calculate(s);
         }
 

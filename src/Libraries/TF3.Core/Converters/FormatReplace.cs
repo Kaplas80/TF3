@@ -28,7 +28,7 @@ namespace TF3.Core.Converters
     /// </summary>
     public class FormatReplace : IConverter<IFormat, IFormat>, IInitializer<IFormat>
     {
-        private IFormat _newFormat = null;
+        private IFormat _newFormat;
 
         /// <summary>
         /// Set the new format.

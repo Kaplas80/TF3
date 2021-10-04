@@ -37,7 +37,7 @@ namespace TF3.Core.Converters.DdsImage
     /// </summary>
     public class Replace : IConverter<DdsFileFormat, DdsFileFormat>, IInitializer<BinaryFormat>
     {
-        private Image<Rgba32> _newImage = null;
+        private Image<Rgba32> _newImage;
 
         /// <summary>
         /// Converter initializer.
