@@ -219,12 +219,9 @@ namespace TF3.Core
 
             WriteContainers(Containers, gameRoot);
 
-            foreach (Node node in Navigator.IterateNodes(gameRoot))
+            foreach (Node node in Navigator.IterateNodes(gameRoot).Where(x => x.Tags.ContainsKey("Changed")))
             {
-                if (node.Tags.ContainsKey("Changed"))
-                {
-                    node.Stream.WriteTo(Path.Combine(outputPath, node.Tags["OutputPath"]));
-                }
+                node.Stream.WriteTo(Path.Combine(outputPath, node.Tags["OutputPath"]));
             }
 
             ScriptRebuilt?.Invoke(this, new ScriptEventArgs(this));
