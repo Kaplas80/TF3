@@ -56,6 +56,8 @@ I do not support piracy, so you are on your own.
 
 That's normal. TF3 is a command line app, so you need a (very) basic computer knowledge to open a command line window and run the app in it.
 
+Probably, in the future, there will be a GUI.
+
 ## I'm translating a game but there are missing texts (or images...) in the extracted files.
 
 Probably I missed some files when I created the plugin. Please, open an issue in the github page of the plugin indicating the **exact** missing text (a screen capture is better).
