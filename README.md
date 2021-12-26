@@ -26,7 +26,13 @@ TF3.CommandLine.exe listscripts
 ### Extract assets
 
 ```shell
-TF3.CommandLine.exe extract --script [script-name] --install-dir [game-files-directory] --output-dir [outpur-directory]
+TF3.CommandLine.exe extract --script [script-name] --install-dir [game-files-directory] --output-dir [output-directory]
+```
+
+### Rebuild assets
+
+```shell
+TF3.CommandLine.exe rebuild --script [script-name] --install-dir [game-files-directory] --translation-dir [translation-files-directory] --output-dir [output-directory]
 ```
 
 ## Credits
