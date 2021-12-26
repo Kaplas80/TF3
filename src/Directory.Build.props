@@ -6,6 +6,11 @@
         <Copyright>Copyright (C) 2021 Kaplas</Copyright>
 
         <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+
+        <!-- Due to known issues, .NET 6 SDK may give a false warning
+             when packing apps if the SelfContained value is in the csproj
+             instead in the CLI command. -->
+        <NoWarn>NETSDK1179</NoWarn>
     </PropertyGroup>
 
     <PropertyGroup>
@@ -14,6 +19,7 @@
         <RepositoryUrl>https://github.com/kaplas80/TF3</RepositoryUrl>
         <PackageIcon>icon.png</PackageIcon>
         <PackageTags>net;csharp;romhacking;translation</PackageTags>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
 
     <!-- Deterministic and source link -->
