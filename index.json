@@ -122,7 +122,7 @@
   "api/TF3.Core.Formats.BinaryPatch.html": {
     "href": "api/TF3.Core.Formats.BinaryPatch.html",
     "title": "Class BinaryPatch | Translation Framework v3",
-    "keywords": "Class BinaryPatch Binary patch format. Similar to 1337 patch format. Inheritance Object BinaryPatch Namespace : TF3.Core.Formats Assembly : TF3.Core.dll Syntax public class BinaryPatch : IFormat Constructors | Improve this Doc View Source BinaryPatch() Initializes a new instance of the BinaryPatch class. Declaration public BinaryPatch() Properties | Improve this Doc View Source FileName Gets or sets the file to apply patch. Declaration public string FileName { get; set; } Property Value Type Description String | Improve this Doc View Source Patches Gets or sets the list of byte replacements. Declaration public List<(long Rva, byte OriginalByte, byte NewByte)> Patches { get; set; } Property Value Type Description List < ValueTuple < Int64 , Byte , Byte >> | Improve this Doc View Source RawOffset Gets or sets the data raw offset. Declaration public long RawOffset { get; set; } Property Value Type Description Int64"
+    "keywords": "Class BinaryPatch Binary patch format. Similar to 1337 patch format. Inheritance Object BinaryPatch Namespace : TF3.Core.Formats Assembly : TF3.Core.dll Syntax public class BinaryPatch : IFormat Constructors | Improve this Doc View Source BinaryPatch() Initializes a new instance of the BinaryPatch class. Declaration public BinaryPatch() Properties | Improve this Doc View Source FileName Gets or sets the file to apply patch. Declaration public string FileName { get; set; } Property Value Type Description String | Improve this Doc View Source Patches Gets or sets the list of byte replacements. Declaration public List<(long Rva, byte OriginalByte, byte NewByte)> Patches { get; set; } Property Value Type Description List < (, , ) < Int64 , Byte , Byte >> | Improve this Doc View Source RawOffset Gets or sets the data raw offset. Declaration public long RawOffset { get; set; } Property Value Type Description Int64"
   },
   "api/TF3.Core.Formats.DdsFileFormat.html": {
     "href": "api/TF3.Core.Formats.DdsFileFormat.html",
@@ -212,7 +212,7 @@
   "dev/Changelog.html": {
     "href": "dev/Changelog.html",
     "title": "vNext (December 20, 2020) | Translation Framework v3",
-    "keywords": "vNext (December 20, 2020) As part of this release we had 7 issues closed. Enhancements #10 Add tests #9 Replace YAML with JSON #5 Move plugins to new projects #4 Use scripts #3 Read and write ARMP files #2 Read and write PAR archives #1 Read and Write Yakuza PAR archives"
+    "keywords": "vNext (December 20, 2020) As part of this release we had 9 issues closed. enhancements #1 Read and Write Yakuza PAR archives #2 Read and write PAR archives #3 Read and write ARMP files #4 Use scripts #5 Move plugins to new projects #9 Replace YAML with JSON #10 Add tests #11 Update dependencies #12 Upgrade to .NET6 and update packages"
   },
   "guides/Contributing.html": {
     "href": "guides/Contributing.html",
@@ -227,11 +227,11 @@
   "index.html": {
     "href": "index.html",
     "title": "Translation Framework v3 (Powered by Yarhl) | Translation Framework v3",
-    "keywords": "Translation Framework v3 (Powered by Yarhl ) WIP - NOTHING TO SEE HERE Meanwhile, use Translation Framework v2 Credits Thanks to Pleonex for Yarhl and PleOps.Cake . Icon by Papirus Development Team ."
+    "keywords": "Translation Framework v3 (Powered by Yarhl ) Current State This framework is in alpha state and under active development. There might be breaking changes at any moment. Plugins Currently, 2 games are supported: Yakuza Kiwami 2 (Steam) Zwei: The Arges Adventure (Steam) Usage NOTE: This is a command line application. \"Double clicking\" on the exe is not enough. You have to copy plugins files to the app folders. See each plugin README for details. List available plugins TF3.CommandLine.exe listscripts Extract assets TF3.CommandLine.exe extract --script [script-name] --install-dir [game-files-directory] --output-dir [output-directory] Rebuild assets TF3.CommandLine.exe rebuild --script [script-name] --install-dir [game-files-directory] --translation-dir [translation-files-directory] --output-dir [output-directory] Credits Thanks to Pleonex for Yarhl and PleOps.Cake . Other libraries used: CommandLineParser , Dahomey.Json , xxHash , BCnEncoder.Net , ImageSharp Icon by Papirus Development Team ."
   },
   "README.html": {
     "href": "README.html",
     "title": "Translation Framework v3 (Powered by Yarhl) | Translation Framework v3",
-    "keywords": "Translation Framework v3 (Powered by Yarhl ) WIP - NOTHING TO SEE HERE Meanwhile, use Translation Framework v2 Credits Thanks to Pleonex for Yarhl and PleOps.Cake . Icon by Papirus Development Team ."
+    "keywords": "Translation Framework v3 (Powered by Yarhl ) Current State This framework is in alpha state and under active development. There might be breaking changes at any moment. Plugins Currently, 2 games are supported: Yakuza Kiwami 2 (Steam) Zwei: The Arges Adventure (Steam) Usage NOTE: This is a command line application. \"Double clicking\" on the exe is not enough. You have to copy plugins files to the app folders. See each plugin README for details. List available plugins TF3.CommandLine.exe listscripts Extract assets TF3.CommandLine.exe extract --script [script-name] --install-dir [game-files-directory] --output-dir [output-directory] Rebuild assets TF3.CommandLine.exe rebuild --script [script-name] --install-dir [game-files-directory] --translation-dir [translation-files-directory] --output-dir [output-directory] Credits Thanks to Pleonex for Yarhl and PleOps.Cake . Other libraries used: CommandLineParser , Dahomey.Json , xxHash , BCnEncoder.Net , ImageSharp Icon by Papirus Development Team ."
   }
 }
