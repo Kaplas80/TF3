@@ -1,4 +1,5 @@
 # Translation Framework v3 (Powered by [Yarhl](https://scenegate.github.io/Yarhl/))
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://choosealicense.com/licenses/mit/) ![Build and release](https://github.com/kaplas80/TF3/workflows/Build%20and%20release/badge.svg)
 
 ## Current State
 
