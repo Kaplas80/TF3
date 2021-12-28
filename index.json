@@ -211,8 +211,8 @@
   },
   "dev/Changelog.html": {
     "href": "dev/Changelog.html",
-    "title": "vNext (December 20, 2020) | Translation Framework v3",
-    "keywords": "vNext (December 20, 2020) As part of this release we had 9 issues closed. enhancements #1 Read and Write Yakuza PAR archives #2 Read and write PAR archives #3 Read and write ARMP files #4 Use scripts #5 Move plugins to new projects #9 Replace YAML with JSON #10 Add tests #11 Update dependencies #12 Upgrade to .NET6 and update packages"
+    "title": "v0.1.0 (December 27, 2021) | Translation Framework v3",
+    "keywords": "v0.1.0 (December 27, 2021) First alpha release"
   },
   "guides/Contributing.html": {
     "href": "guides/Contributing.html",
