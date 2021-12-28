@@ -14,8 +14,6 @@
     <PackageReference Include="Yarhl.Media" />
     <PackageReference Include="Dahomey.Json" />
     <PackageReference Include="Standart.Hash.xxHash" />
-    <PackageReference Include="System.Text.Json" />
-    <PackageReference Include="System.Drawing.Common" />
     <PackageReference Include="BCnEncoder.Net" />
     <PackageReference Include="BCnEncoder.Net.ImageSharp" />
     <PackageReference Include="SixLabors.ImageSharp" />
