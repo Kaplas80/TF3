@@ -16,7 +16,9 @@ Currently, 2 games are supported:
 
 **NOTE: This is a command line application. "Double clicking" on the exe is not enough.**
 
-You have to copy plugins files to the app folders. See each plugin README for details.
+1. Create `plugins` and `scripts` directories inside the app folder.
+2. Copy plugins files to the respective folders. See each plugin README for details.
+3. Run the app.
 
 ### List available plugins
 
@@ -41,5 +43,3 @@ TF3.CommandLine.exe rebuild --script [script-name] --install-dir [game-files-dir
 * Thanks to Pleonex for [Yarhl](https://scenegate.github.io/Yarhl/) and [PleOps.Cake](https://www.pleonex.dev/PleOps.Cake/).
 * Other libraries used: [CommandLineParser](https://github.com/commandlineparser/commandline), [Dahomey.Json](https://github.com/dahomey-technologies/Dahomey.Json), [xxHash](https://github.com/uranium62/xxHash), [BCnEncoder.Net](https://github.com/nominom/bcnencoder.net), [ImageSharp](https://sixlabors.com/products/imagesharp/)
 * Icon by [Papirus Development Team](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/).
-
-
