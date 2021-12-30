@@ -221,7 +221,21 @@ namespace TF3.Core
 
             foreach (Node node in Navigator.IterateNodes(gameRoot).Where(x => x.Tags.ContainsKey("Changed")))
             {
-                node.Stream.WriteTo(Path.Combine(outputPath, node.Tags["OutputPath"]));
+                List<string> outputPaths = node.Tags["OutputPath"];
+
+                if (outputPaths.Count == 1)
+                {
+                    node.Stream.WriteTo(Path.Combine(outputPath, outputPaths[0]));
+                }
+                else
+                {
+                    for (int i = 0; i < outputPaths.Count; i++)
+                    {
+                        Node n = Navigator.SearchNode(node, outputPaths[i]);
+
+                        n.Stream.WriteTo(Path.Combine(outputPath, outputPaths[i]));
+                    }
+                }
             }
 
             ScriptRebuilt?.Invoke(this, new ScriptEventArgs(this));
@@ -233,16 +247,40 @@ namespace TF3.Core
             {
                 ContainerReading?.Invoke(this, new ContainerEventArgs(containerInfo));
 
-                Node node = Navigator.SearchNode(parent, containerInfo.Path);
-
-                if (node == null)
+                Node node;
+                if (containerInfo.Paths.Count == 1)
                 {
-                    throw new DirectoryNotFoundException($"Parent: {parent.Path} - Node: {containerInfo.Path}");
+                    node = Navigator.SearchNode(parent, containerInfo.Paths[0]);
+
+                    if (node == null)
+                    {
+                        throw new DirectoryNotFoundException($"Parent: {parent.Path} - Node: {containerInfo.Paths[0]}");
+                    }
+
+                    if (!ChecksumHelper.Check(node.Stream, containerInfo.Checksums[0]))
+                    {
+                        throw new ChecksumMismatchException($"Checksum mismatch in {containerInfo.Name}");
+                    }
                 }
-
-                if (!ChecksumHelper.Check(node.Stream, containerInfo.Checksum))
+                else
                 {
-                    throw new ChecksumMismatchException($"Checksum mismatch in {containerInfo.Name}");
+                    node = NodeFactory.CreateContainer("multifile");
+                    for (int i = 0; i < containerInfo.Paths.Count; i++)
+                    {
+                        Node n = Navigator.SearchNode(parent, containerInfo.Paths[i]);
+
+                        if (n == null)
+                        {
+                            throw new DirectoryNotFoundException($"Parent: {parent.Path} - Node: {containerInfo.Paths[i]}");
+                        }
+
+                        if (!ChecksumHelper.Check(n.Stream, containerInfo.Checksums[i]))
+                        {
+                            throw new ChecksumMismatchException($"Checksum mismatch in {containerInfo.Name}");
+                        }
+
+                        node.Add(n);
+                    }
                 }
 
                 node.Transform(containerInfo.Readers, Parameters);
@@ -261,18 +299,37 @@ namespace TF3.Core
             {
                 ContainerWriting?.Invoke(this, new ContainerEventArgs(containerInfo));
 
-                Node node = Navigator.SearchNode(parent, containerInfo.Path);
-
-                if (node == null)
+                Node node;
+                if (containerInfo.Paths.Count == 1)
                 {
-                    throw new DirectoryNotFoundException($"Parent: {parent.Path} - Node: {containerInfo.Path}");
+                    node = Navigator.SearchNode(parent, containerInfo.Paths[0]);
+
+                    if (node == null)
+                    {
+                        throw new DirectoryNotFoundException($"Parent: {parent.Path} - Node: {containerInfo.Paths[0]}");
+                    }
+                }
+                else
+                {
+                    node = NodeFactory.CreateContainer("multifile");
+                    for (int i = 0; i < containerInfo.Paths.Count; i++)
+                    {
+                        Node n = Navigator.SearchNode(parent, containerInfo.Paths[i]);
+
+                        if (n == null)
+                        {
+                            throw new DirectoryNotFoundException($"Parent: {parent.Path} - Node: {containerInfo.Paths[i]}");
+                        }
+
+                        node.Add(n);
+                    }
                 }
 
                 WriteContainers(containerInfo.Containers, node);
 
                 node.Transform(containerInfo.Writers, Parameters);
                 node.Tags["Changed"] = true;
-                node.Tags["OutputPath"] = containerInfo.Path;
+                node.Tags["OutputPath"] = containerInfo.Paths;
 
                 ContainerWrote?.Invoke(this, new ContainerEventArgs(containerInfo));
             }
