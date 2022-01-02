@@ -12,6 +12,10 @@ Currently, 2 games are supported:
 * [Yakuza Kiwami 2 (Steam)](https://github.com/Kaplas80/TF3.YakuzaPlugins)
 * [Zwei: The Arges Adventure (Steam)](https://github.com/Kaplas80/TF3.ZweiPlugins)
 
+## Requisites
+
+* [.NET 6.0 runtime](https://dotnet.microsoft.com/en-us/download)
+
 ## Usage
 
 **NOTE: This is a command line application. "Double clicking" on the exe is not enough.**
