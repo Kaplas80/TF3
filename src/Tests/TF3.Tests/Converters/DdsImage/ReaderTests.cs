@@ -14,7 +14,7 @@
         [Test]
         public void NullSourceThrowsException()
         {
-            Reader converter = new ();
+            var converter = new Reader();
             _ = Assert.Throws<ArgumentNullException>(() => converter.Convert(null));
         }
 
@@ -22,8 +22,8 @@
         public void InvalidDdsThrowsException()
         {
             using DataStream ds = DataStreamFactory.FromArray(_invalidData, 0, _invalidData.Length);
-            using BinaryFormat format = new (ds);
-            Reader converter = new ();
+            using var format = new BinaryFormat(ds);
+            var converter = new Reader();
 
             _ = Assert.Throws<FormatException>(() => converter.Convert(format));
         }
@@ -32,8 +32,8 @@
         public void ReadDds()
         {
             using DataStream ds = DataStreamFactory.FromArray(_validData, 0, _validData.Length);
-            using BinaryFormat format = new (ds);
-            Reader converter = new ();
+            using var format = new BinaryFormat(ds);
+            var converter = new Reader();
 
             DdsFileFormat result = converter.Convert(format);
             Assert.IsNotNull(result);

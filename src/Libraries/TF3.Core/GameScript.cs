@@ -168,7 +168,7 @@ namespace TF3.Core
             ScriptExtracting?.Invoke(this, new ScriptEventArgs(this));
             Directory.CreateDirectory(outputPath);
 
-            Dictionary<string, Node> containersDict = new ();
+            var containersDict = new Dictionary<string, Node>();
 
             Node gameRoot = NodeFactory.FromDirectory(gamePath, "*", "root", true, Yarhl.IO.FileOpenMode.Read);
             containersDict.Add("root", gameRoot);
@@ -201,7 +201,7 @@ namespace TF3.Core
             ScriptRebuilding?.Invoke(this, new ScriptEventArgs(this));
             Directory.CreateDirectory(outputPath);
 
-            Dictionary<string, Node> containersDict = new ();
+            var containersDict = new Dictionary<string, Node>();
             Node gameRoot = NodeFactory.FromDirectory(gamePath, "*", "root", true, Yarhl.IO.FileOpenMode.Read);
             containersDict.Add("root", gameRoot);
 
@@ -379,7 +379,7 @@ namespace TF3.Core
                 Node file = ReadFile(fileInfo, containers);
 
                 // Add call will remove the node from its original parent, so we need to make a copy
-                Node newFile = new (file);
+                var newFile = new Node(file);
                 newFile.Transform(fileInfo.Readers, Parameters);
                 asset.Add(newFile);
             }

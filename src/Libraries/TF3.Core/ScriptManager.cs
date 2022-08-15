@@ -31,7 +31,7 @@ namespace TF3.Core
     /// </summary>
     public static class ScriptManager
     {
-        private static List<GameScript> _scripts = new ();
+        private static readonly List<GameScript> _scripts = new List<GameScript>();
 
         /// <summary>
         /// Gets a list of loaded scripts.

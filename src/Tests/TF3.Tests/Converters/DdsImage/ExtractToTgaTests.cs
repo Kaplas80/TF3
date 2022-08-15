@@ -14,15 +14,15 @@
         [Test]
         public void NullSourceThrowsException()
         {
-            ExtractToTga converter = new ();
+            var converter = new ExtractToTga();
             _ = Assert.Throws<ArgumentNullException>(() => converter.Convert(null));
         }
 
         [Test]
         public void NullDdsThrowsException()
         {
-            ExtractToTga converter = new ();
-            DdsFileFormat format = new ();
+            var converter = new ExtractToTga();
+            var format = new DdsFileFormat();
             _ = Assert.Throws<NullReferenceException>(() => converter.Convert(format));
         }
 
@@ -30,9 +30,9 @@
         public void Export()
         {
             using DataStream ds = DataStreamFactory.FromArray(_validData, 0, _validData.Length);
-            DdsFileFormat format = new () { Internal = DdsFile.Load(ds) };
+            var format = new DdsFileFormat() { Internal = DdsFile.Load(ds) };
 
-            ExtractToTga converter = new ();
+            var converter = new ExtractToTga();
 
             // TGA files do not have any magic number, so we can only check if no exception has been thrown
             BinaryFormat result = null;

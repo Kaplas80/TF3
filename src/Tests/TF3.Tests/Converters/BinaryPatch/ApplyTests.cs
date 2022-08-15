@@ -14,7 +14,7 @@
         [Test]
         public void NullSourceThrowsException()
         {
-            Apply converter = new ();
+            var converter = new Apply();
             _ = Assert.Throws<ArgumentNullException>(() => converter.Convert(null));
         }
 
@@ -22,8 +22,8 @@
         public void UninitializedConverterThrowsException()
         {
             using DataStream ds = DataStreamFactory.FromArray(_testData, 0, _testData.Length);
-            using BinaryFormat format = new (ds);
-            Apply converter = new ();
+            using var format = new BinaryFormat(ds);
+            var converter = new Apply();
 
             _ = Assert.Throws<InvalidOperationException>(() => converter.Convert(format));
         }
@@ -31,7 +31,7 @@
         [Test]
         public void MismatchByteThrowsException()
         {
-            BinaryPatch patch = new ()
+            var patch = new BinaryPatch()
             {
                 FileName = "test.exe",
                 RawOffset = 0,
@@ -39,8 +39,8 @@
             patch.Patches.Add((4, 0x21, 0x30));
 
             using DataStream ds = DataStreamFactory.FromArray(_testData, 0, _testData.Length);
-            using BinaryFormat format = new (ds);
-            Apply converter = new ();
+            using var format = new BinaryFormat(ds);
+            var converter = new Apply();
             converter.Initialize(patch);
             _ = Assert.Throws<ByteMismatchException>(() => converter.Convert(format));
         }
@@ -48,7 +48,7 @@
         [Test]
         public void ApplyPatchWithoutOffset()
         {
-            BinaryPatch patch = new ()
+            var patch = new BinaryPatch()
             {
                 FileName = "test.exe",
                 RawOffset = 0,
@@ -56,12 +56,12 @@
             patch.Patches.Add((4, 0x20, 0x30));
 
             using DataStream ds = DataStreamFactory.FromArray(_testData, 0, _testData.Length);
-            using BinaryFormat format = new (ds);
-            Apply converter = new ();
+            using var format = new BinaryFormat(ds);
+            var converter = new Apply();
             converter.Initialize(patch);
             converter.Convert(format);
 
-            DataReader reader = new (ds);
+            var reader = new DataReader(ds);
             ds.Position = 4;
 
             byte changedByte = reader.ReadByte();
@@ -71,7 +71,7 @@
         [Test]
         public void ApplyPatchWithOffset()
         {
-            BinaryPatch patch = new ()
+            var patch = new BinaryPatch()
             {
                 FileName = "test.exe",
                 RawOffset = 3,
@@ -79,12 +79,12 @@
             patch.Patches.Add((4, 0x72, 0x62));
 
             using DataStream ds = DataStreamFactory.FromArray(_testData, 0, _testData.Length);
-            using BinaryFormat format = new (ds);
-            Apply converter = new ();
+            using var format = new BinaryFormat(ds);
+            var converter = new Apply();
             converter.Initialize(patch);
             converter.Convert(format);
 
-            DataReader reader = new (ds);
+            var reader = new DataReader(ds);
             ds.Position = 7; // 4 + 3
 
             byte changedByte = reader.ReadByte();

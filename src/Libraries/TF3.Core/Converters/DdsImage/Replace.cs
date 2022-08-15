@@ -69,7 +69,7 @@ namespace TF3.Core.Converters.DdsImage
                 throw new InvalidOperationException("Uninitialized");
             }
 
-            BcEncoder encoder = new ()
+            var encoder = new BcEncoder()
             {
                 OutputOptions =
                 {
@@ -80,7 +80,7 @@ namespace TF3.Core.Converters.DdsImage
                 },
             };
 
-            DdsFileFormat result = new ()
+            var result = new DdsFileFormat()
             {
                 Internal = encoder.EncodeToDds(_newImage),
             };

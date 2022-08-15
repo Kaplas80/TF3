@@ -41,7 +41,7 @@ namespace TF3.Core.Converters.Po
                 throw new ArgumentNullException(nameof(source));
             }
 
-            Yarhl.Media.Text.Po po = new ();
+            var po = new Yarhl.Media.Text.Po();
 
             foreach (Node part in source.Root.Children)
             {

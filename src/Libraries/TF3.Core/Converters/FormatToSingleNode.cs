@@ -54,8 +54,8 @@ namespace TF3.Core.Converters
                 _nodeName = "single_node";
             }
 
-            NodeContainerFormat result = new ();
-            Node newNode = new (_nodeName);
+            var result = new NodeContainerFormat();
+            var newNode = new Node(_nodeName);
 
             if (source is ICloneableFormat cloneableFormat)
             {

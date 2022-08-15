@@ -11,7 +11,7 @@
         [Test]
         public void NullSourceThrowsException()
         {
-            Reader converter = new ();
+            var converter = new Reader();
             _ = Assert.Throws<ArgumentNullException>(() => converter.Convert(null));
         }
 
@@ -19,10 +19,10 @@
         public void NoFileNameThrowsException()
         {
             const string patch = "0000000000123456:01->02";
-            using BinaryFormat textFormat = new ();
+            using var textFormat = new BinaryFormat();
             new TextDataWriter(textFormat.Stream).Write(patch);
 
-            Reader converter = new ();
+            var converter = new Reader();
             _ = Assert.Throws<FormatException>(() => converter.Convert(textFormat));
         }
 
@@ -30,10 +30,10 @@
         public void NoPatchesThrowsException()
         {
             const string patch = ";Test\n>test.exe";
-            using BinaryFormat textFormat = new ();
+            using var textFormat = new BinaryFormat();
             new TextDataWriter(textFormat.Stream).Write(patch);
 
-            Reader converter = new ();
+            var converter = new Reader();
             _ = Assert.Throws<FormatException>(() => converter.Convert(textFormat));
         }
 
@@ -41,10 +41,10 @@
         public void UninitializedConverter()
         {
             const string patch = ">test.exe\n0000000000123456:01->02";
-            using BinaryFormat textFormat = new ();
+            using var textFormat = new BinaryFormat();
             new TextDataWriter(textFormat.Stream).Write(patch);
 
-            Reader converter = new ();
+            var converter = new Reader();
             BinaryPatch result = converter.Convert(textFormat);
 
             Assert.IsNotNull(result);
@@ -60,10 +60,10 @@
         public void InitializedConverter()
         {
             const string patch = ">test.exe\n0000000000123456:01->02";
-            using BinaryFormat textFormat = new ();
+            using var textFormat = new BinaryFormat();
             new TextDataWriter(textFormat.Stream).Write(patch);
 
-            Reader converter = new ();
+            var converter = new Reader();
             converter.Initialize(1000);
             BinaryPatch result = converter.Convert(textFormat);
 
@@ -80,10 +80,10 @@
         public void ReadEmptyStrings()
         {
             const string patch = ">test.exe\n    \n0000000000123456:01->02";
-            using BinaryFormat textFormat = new ();
+            using var textFormat = new BinaryFormat();
             new TextDataWriter(textFormat.Stream).Write(patch);
 
-            Reader converter = new ();
+            var converter = new Reader();
             BinaryPatch result = converter.Convert(textFormat);
 
             Assert.IsNotNull(result);
@@ -98,10 +98,10 @@
         public void ReadComments()
         {
             const string patch = ";This is a comment\n>test.exe\n0000000000123456:01->02;This is an inlined comment\n;This is another comment";
-            using BinaryFormat textFormat = new ();
+            using var textFormat = new BinaryFormat();
             new TextDataWriter(textFormat.Stream).Write(patch);
 
-            Reader converter = new ();
+            var converter = new Reader();
             BinaryPatch result = converter.Convert(textFormat);
 
             Assert.IsNotNull(result);

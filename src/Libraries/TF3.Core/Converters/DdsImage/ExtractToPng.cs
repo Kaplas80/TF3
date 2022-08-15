@@ -46,7 +46,7 @@ namespace TF3.Core.Converters.DdsImage
                 throw new ArgumentNullException(nameof(source));
             }
 
-            BCnEncoder.Decoder.BcDecoder decoder = new ()
+            var decoder = new BCnEncoder.Decoder.BcDecoder()
             {
                 OutputOptions =
                 {
