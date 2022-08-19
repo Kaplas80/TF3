@@ -1,4 +1,4 @@
-// Copyright (c) 2021 Kaplas
+// Copyright (c) 2022 Kaplas
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -69,7 +69,7 @@ namespace TF3.Core.Converters.DdsImage
                 throw new InvalidOperationException("Uninitialized");
             }
 
-            BcEncoder encoder = new ()
+            var encoder = new BcEncoder()
             {
                 OutputOptions =
                 {
@@ -80,7 +80,7 @@ namespace TF3.Core.Converters.DdsImage
                 },
             };
 
-            DdsFileFormat result = new ()
+            var result = new DdsFileFormat()
             {
                 Internal = encoder.EncodeToDds(_newImage),
             };

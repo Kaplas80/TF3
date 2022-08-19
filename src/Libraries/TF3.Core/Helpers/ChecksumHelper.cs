@@ -1,4 +1,4 @@
-// Copyright (c) 2021 Kaplas
+// Copyright (c) 2022 Kaplas
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -69,7 +69,7 @@ namespace TF3.Core.Helpers
         /// <returns>The checksum value.</returns>
         private static ulong Calculate(string file)
         {
-            using FileStream s = new (file, FileMode.Open, FileAccess.Read);
+            using var s = new FileStream(file, FileMode.Open, FileAccess.Read);
             return Calculate(s);
         }
 

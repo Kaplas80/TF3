@@ -1,4 +1,4 @@
-// Copyright (c) 2021 Kaplas
+// Copyright (c) 2022 Kaplas
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -40,15 +40,15 @@ namespace TF3.Core.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the container path.
+        /// Gets or sets the container paths.
         /// </summary>
-        public string Path { get; set; }
+        public List<string> Paths { get; set; }
 
         /// <summary>
-        /// Gets or sets the container checksum.
-        /// If it is 0, it won't be checked.
+        /// Gets or sets the container checksums.
+        /// If it is 0, the file won't be checked.
         /// </summary>
-        public ulong Checksum { get; set; }
+        public List<ulong> Checksums { get; set; }
 
         /// <summary>
         /// Gets or sets the list of converters needed to read the container.

@@ -16,7 +16,7 @@ namespace TF3.Tests
         {
             const string parameter = "{\"Id\":\"TestParameterId\",\"TypeName\":\"System.String\",\"Value\":\"Prueba\"}";
 
-            ConverterInfo converter = new () { TypeName = "TF3.Core.Converters.FormatToSingleNode", ParameterId = "TestParameterId", };
+            var converter = new ConverterInfo() { TypeName = "TF3.Core.Converters.FormatToSingleNode", ParameterId = "TestParameterId", };
             ParameterInfo parameterInfo = JsonSerializer.Deserialize<ParameterInfo>(parameter);
 
             using Node n = NodeFactory.FromMemory("test");
@@ -29,8 +29,8 @@ namespace TF3.Tests
         [Test]
         public void MultipleConverters()
         {
-            ConverterInfo converter1 = new () { TypeName = "TF3.Core.Converters.FormatToSingleNode", ParameterId = string.Empty, };
-            ConverterInfo converter2 = new () { TypeName = "TF3.Core.Converters.SingleNodeToFormat", ParameterId = string.Empty, };
+            var converter1 = new ConverterInfo() { TypeName = "TF3.Core.Converters.FormatToSingleNode", ParameterId = string.Empty, };
+            var converter2 = new ConverterInfo() { TypeName = "TF3.Core.Converters.SingleNodeToFormat", ParameterId = string.Empty, };
             using Node n = NodeFactory.FromMemory("test");
             Assert.IsFalse(n.IsContainer);
             n.Transform(new List<ConverterInfo>() { converter1, converter2 }, new List<ParameterInfo>());
@@ -41,7 +41,7 @@ namespace TF3.Tests
         [Test]
         public void UnknownConverterThrowsException()
         {
-            ConverterInfo converter = new () { TypeName = "TF3.Core.Converters.FormatToSingleNode1", ParameterId = string.Empty, };
+            var converter = new ConverterInfo() { TypeName = "TF3.Core.Converters.FormatToSingleNode1", ParameterId = string.Empty, };
             using Node n = NodeFactory.FromMemory("test");
             Assert.Throws<UnknownConverterException>(() => n.Transform(new List<ConverterInfo>() { converter }, new List<ParameterInfo>()));
         }

@@ -1,4 +1,4 @@
-// Copyright (c) 2021 Kaplas
+// Copyright (c) 2022 Kaplas
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -31,7 +31,7 @@ namespace TF3.Core
     /// </summary>
     public static class ScriptManager
     {
-        private static List<GameScript> _scripts = new ();
+        private static readonly List<GameScript> _scripts = new List<GameScript>();
 
         /// <summary>
         /// Gets a list of loaded scripts.

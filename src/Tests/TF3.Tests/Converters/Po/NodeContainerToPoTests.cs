@@ -13,7 +13,7 @@
         [Test]
         public void NullSourceThrowsException()
         {
-            NodeContainerToPo converter = new ();
+            var converter = new NodeContainerToPo();
             _ = Assert.Throws<ArgumentNullException>(() => converter.Convert(null));
         }
 
@@ -22,30 +22,30 @@
         {
             byte[] data = { 0x01, 0x02, 0x03 };
             using DataStream stream = DataStreamFactory.FromArray(data, 0, 3);
-            using NodeContainerFormat format = new ();
-            using BinaryFormat binaryFormat = new (stream);
-            using Node node = new ("Node", binaryFormat);
+            using var format = new NodeContainerFormat();
+            using var binaryFormat = new BinaryFormat(stream);
+            using var node = new Node("Node", binaryFormat);
             format.Root.Add(node);
 
-            NodeContainerToPo converter = new ();
+            var converter = new NodeContainerToPo();
             _ = Assert.Throws<FormatException>(() => converter.Convert(format));
         }
 
         [Test]
         public void OnePo()
         {
-            PoHeader header = new ("testId", "reporter", "es");
-            Po po = new (header);
-            PoEntry entry = new ("Test") { Translated = "Prueba" };
+            var header = new PoHeader("testId", "reporter", "es");
+            var po = new Po(header);
+            var entry = new PoEntry("Test") { Translated = "Prueba" };
             po.Add(entry);
 
             BinaryFormat poBinary = ConvertFormat.With<Po2Binary>(po) as BinaryFormat;
 
-            using NodeContainerFormat format = new ();
-            using Node node = new ("Node", poBinary);
+            using var format = new NodeContainerFormat();
+            using var node = new Node("Node", poBinary);
             format.Root.Add(node);
 
-            NodeContainerToPo converter = new ();
+            var converter = new NodeContainerToPo();
             Po result = converter.Convert(format);
 
             Assert.IsNotNull(result);
@@ -58,26 +58,26 @@
         [Test]
         public void MultiplePo()
         {
-            PoHeader header = new ("testId", "reporter", "es");
-            Po po1 = new (header);
-            PoEntry entry1 = new ("Test 1") { Translated = "Prueba 1" };
+            var header = new PoHeader("testId", "reporter", "es");
+            var po1 = new Po(header);
+            var entry1 = new PoEntry("Test 1") { Translated = "Prueba 1" };
             po1.Add(entry1);
 
             BinaryFormat poBinary1 = ConvertFormat.With<Po2Binary>(po1) as BinaryFormat;
 
-            Po po2 = new (header);
-            PoEntry entry2 = new ("Test 2") { Translated = "Prueba 2" };
+            var po2 = new Po(header);
+            var entry2 = new PoEntry("Test 2") { Translated = "Prueba 2" };
             po2.Add(entry2);
 
             BinaryFormat poBinary2 = ConvertFormat.With<Po2Binary>(po2) as BinaryFormat;
 
-            using NodeContainerFormat format = new ();
-            using Node node1 = new ("Node 1", poBinary1);
-            using Node node2 = new ("Node 2", poBinary2);
+            using var format = new NodeContainerFormat();
+            using var node1 = new Node("Node 1", poBinary1);
+            using var node2 = new Node("Node 2", poBinary2);
             format.Root.Add(node1);
             format.Root.Add(node2);
 
-            NodeContainerToPo converter = new ();
+            var converter = new NodeContainerToPo();
             Po result = converter.Convert(format);
 
             Assert.IsNotNull(result);

@@ -14,15 +14,15 @@
         [Test]
         public void NullSourceThrowsException()
         {
-            ExtractToPng converter = new ();
+            var converter = new ExtractToPng();
             _ = Assert.Throws<ArgumentNullException>(() => converter.Convert(null));
         }
 
         [Test]
         public void NullDdsThrowsException()
         {
-            ExtractToPng converter = new ();
-            DdsFileFormat format = new ();
+            var converter = new ExtractToPng();
+            var format = new DdsFileFormat();
             _ = Assert.Throws<NullReferenceException>(() => converter.Convert(format));
         }
 
@@ -30,19 +30,19 @@
         public void Export()
         {
             using DataStream ds = DataStreamFactory.FromArray(_validData, 0, _validData.Length);
-            DdsFileFormat format = new ()
+            var format = new DdsFileFormat()
             {
                 Internal = DdsFile.Load(ds),
             };
 
-            ExtractToPng converter = new ();
+            var converter = new ExtractToPng();
 
             BinaryFormat result = converter.Convert(format);
             Assert.IsNotNull(result);
             Assert.IsNotNull(result.Stream);
 
             result.Stream.Position = 0;
-            DataReader reader = new (result.Stream);
+            var reader = new DataReader(result.Stream);
             ulong magic = reader.ReadUInt64();
 
             Assert.AreEqual(727905341920923785, magic);

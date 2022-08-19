@@ -14,15 +14,15 @@
         [Test]
         public void NullSourceThrowsException()
         {
-            Writer converter = new ();
+            var converter = new Writer();
             _ = Assert.Throws<ArgumentNullException>(() => converter.Convert(null));
         }
 
         [Test]
         public void NullDdsThrowsException()
         {
-            Writer converter = new ();
-            DdsFileFormat format = new ();
+            var converter = new Writer();
+            var format = new DdsFileFormat();
             _ = Assert.Throws<NullReferenceException>(() => converter.Convert(format));
         }
 
@@ -30,19 +30,19 @@
         public void WriteDds()
         {
             using DataStream ds = DataStreamFactory.FromArray(_validData, 0, _validData.Length);
-            DdsFileFormat format = new ()
+            var format = new DdsFileFormat()
             {
                 Internal = DdsFile.Load(ds),
             };
 
-            Writer converter = new ();
+            var converter = new Writer();
 
             BinaryFormat result = converter.Convert(format);
             Assert.IsNotNull(result);
             Assert.IsNotNull(result.Stream);
 
             result.Stream.Position = 0;
-            DataReader reader = new (result.Stream);
+            var reader = new DataReader(result.Stream);
             uint magic = reader.ReadUInt32();
 
             Assert.AreEqual(542327876, magic);

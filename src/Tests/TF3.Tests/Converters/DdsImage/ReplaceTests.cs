@@ -16,7 +16,7 @@
         [Test]
         public void NullSourceThrowsException()
         {
-            Replace converter = new ();
+            var converter = new Replace();
             _ = Assert.Throws<ArgumentNullException>(() => converter.Convert(null));
         }
 
@@ -24,12 +24,12 @@
         public void UninitializedConverterThrowsException()
         {
             using DataStream ds = DataStreamFactory.FromArray(_validDds, 0, _validDds.Length);
-            DdsFileFormat format = new ()
+            var format = new DdsFileFormat()
             {
                 Internal = DdsFile.Load(ds),
             };
 
-            Replace converter = new ();
+            var converter = new Replace();
 
             _ = Assert.Throws<InvalidOperationException>(() => converter.Convert(format));
         }
@@ -38,9 +38,9 @@
         public void InvalidReplacementImageThrowsException()
         {
             using DataStream ds2 = DataStreamFactory.FromArray(_invalidData, 0, _invalidData.Length);
-            BinaryFormat bf = new (ds2);
+            var bf = new BinaryFormat(ds2);
 
-            Replace converter = new ();
+            var converter = new Replace();
             _ = Assert.Throws<SixLabors.ImageSharp.UnknownImageFormatException>(() => converter.Initialize(bf));
         }
 
@@ -49,13 +49,13 @@
         {
             using DataStream ds = DataStreamFactory.FromArray(_validDds, 0, _validDds.Length);
             using DataStream ds2 = DataStreamFactory.FromArray(_validPng, 0, _validPng.Length);
-            DdsFileFormat format = new ()
+            var format = new DdsFileFormat()
             {
                 Internal = DdsFile.Load(ds),
             };
-            BinaryFormat bf = new (ds2);
+            var bf = new BinaryFormat(ds2);
 
-            Replace converter = new ();
+            var converter = new Replace();
             converter.Initialize(bf);
 
             Assert.AreEqual(8, format.Internal.header.dwWidth);

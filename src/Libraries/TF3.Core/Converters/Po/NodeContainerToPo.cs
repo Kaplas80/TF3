@@ -1,4 +1,4 @@
-// Copyright (c) 2021 Kaplas
+// Copyright (c) 2022 Kaplas
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -41,7 +41,7 @@ namespace TF3.Core.Converters.Po
                 throw new ArgumentNullException(nameof(source));
             }
 
-            Yarhl.Media.Text.Po po = new ();
+            var po = new Yarhl.Media.Text.Po();
 
             foreach (Node part in source.Root.Children)
             {

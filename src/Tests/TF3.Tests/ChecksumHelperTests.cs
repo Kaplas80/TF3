@@ -45,7 +45,7 @@ namespace TF3.Tests
         [Test]
         public void CheckStream()
         {
-            using MemoryStream stream = new (Encoding.ASCII.GetBytes(TestData));
+            using var stream = new MemoryStream(Encoding.ASCII.GetBytes(TestData));
             bool result = ChecksumHelper.Check(stream, 0x5AB1599F68E64610);
             Assert.IsTrue(result);
             result = ChecksumHelper.Check(stream, 0x01);
@@ -66,7 +66,7 @@ namespace TF3.Tests
             File.WriteAllText(filePath, TestData);
             Assert.IsTrue(ChecksumHelper.Check(filePath, 0x00));
 
-            using MemoryStream stream = new (Encoding.ASCII.GetBytes(TestData));
+            using var stream = new MemoryStream(Encoding.ASCII.GetBytes(TestData));
             Assert.IsTrue(ChecksumHelper.Check(stream, 0x00));
         }
     }

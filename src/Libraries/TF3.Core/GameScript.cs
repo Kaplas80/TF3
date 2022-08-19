@@ -1,4 +1,4 @@
-// Copyright (c) 2021 Kaplas
+// Copyright (c) 2022 Kaplas
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -168,7 +168,7 @@ namespace TF3.Core
             ScriptExtracting?.Invoke(this, new ScriptEventArgs(this));
             Directory.CreateDirectory(outputPath);
 
-            Dictionary<string, Node> containersDict = new ();
+            var containersDict = new Dictionary<string, Node>();
 
             Node gameRoot = NodeFactory.FromDirectory(gamePath, "*", "root", true, Yarhl.IO.FileOpenMode.Read);
             containersDict.Add("root", gameRoot);
@@ -201,7 +201,7 @@ namespace TF3.Core
             ScriptRebuilding?.Invoke(this, new ScriptEventArgs(this));
             Directory.CreateDirectory(outputPath);
 
-            Dictionary<string, Node> containersDict = new ();
+            var containersDict = new Dictionary<string, Node>();
             Node gameRoot = NodeFactory.FromDirectory(gamePath, "*", "root", true, Yarhl.IO.FileOpenMode.Read);
             containersDict.Add("root", gameRoot);
 
@@ -221,7 +221,21 @@ namespace TF3.Core
 
             foreach (Node node in Navigator.IterateNodes(gameRoot).Where(x => x.Tags.ContainsKey("Changed")))
             {
-                node.Stream.WriteTo(Path.Combine(outputPath, node.Tags["OutputPath"]));
+                List<string> outputPaths = node.Tags["OutputPath"];
+
+                if (outputPaths.Count == 1)
+                {
+                    node.Stream.WriteTo(Path.Combine(outputPath, outputPaths[0]));
+                }
+                else
+                {
+                    for (int i = 0; i < outputPaths.Count; i++)
+                    {
+                        Node n = node.Children[i];
+
+                        n.Stream.WriteTo(Path.Combine(outputPath, outputPaths[i]));
+                    }
+                }
             }
 
             ScriptRebuilt?.Invoke(this, new ScriptEventArgs(this));
@@ -233,16 +247,40 @@ namespace TF3.Core
             {
                 ContainerReading?.Invoke(this, new ContainerEventArgs(containerInfo));
 
-                Node node = Navigator.SearchNode(parent, containerInfo.Path);
-
-                if (node == null)
+                Node node;
+                if (containerInfo.Paths.Count == 1)
                 {
-                    throw new DirectoryNotFoundException($"Parent: {parent.Path} - Node: {containerInfo.Path}");
+                    node = Navigator.SearchNode(parent, containerInfo.Paths[0]);
+
+                    if (node == null)
+                    {
+                        throw new DirectoryNotFoundException($"Parent: {parent.Path} - Node: {containerInfo.Paths[0]}");
+                    }
+
+                    if (!ChecksumHelper.Check(node.Stream, containerInfo.Checksums[0]))
+                    {
+                        throw new ChecksumMismatchException($"Checksum mismatch in {containerInfo.Name}");
+                    }
                 }
-
-                if (!ChecksumHelper.Check(node.Stream, containerInfo.Checksum))
+                else
                 {
-                    throw new ChecksumMismatchException($"Checksum mismatch in {containerInfo.Name}");
+                    node = NodeFactory.CreateContainer(containerInfo.Id);
+                    for (int i = 0; i < containerInfo.Paths.Count; i++)
+                    {
+                        Node n = Navigator.SearchNode(parent, containerInfo.Paths[i]);
+
+                        if (n == null)
+                        {
+                            throw new DirectoryNotFoundException($"Parent: {parent.Path} - Node: {containerInfo.Paths[i]}");
+                        }
+
+                        if (!ChecksumHelper.Check(n.Stream, containerInfo.Checksums[i]))
+                        {
+                            throw new ChecksumMismatchException($"Checksum mismatch in {containerInfo.Name}");
+                        }
+
+                        node.Add(n); // Removes the node 'n' from parent.
+                    }
                 }
 
                 node.Transform(containerInfo.Readers, Parameters);
@@ -250,6 +288,11 @@ namespace TF3.Core
                 dictionary.Add(containerInfo.Id, node);
 
                 ReadContainers(containerInfo.Containers, node, dictionary);
+
+                if (containerInfo.Paths.Count != 1)
+                {
+                    parent.Add(node); // Add the converted node to parent
+                }
 
                 ContainerRead?.Invoke(this, new ContainerEventArgs(containerInfo));
             }
@@ -261,18 +304,31 @@ namespace TF3.Core
             {
                 ContainerWriting?.Invoke(this, new ContainerEventArgs(containerInfo));
 
-                Node node = Navigator.SearchNode(parent, containerInfo.Path);
+                Node node;
 
-                if (node == null)
+                if (containerInfo.Paths.Count == 1)
                 {
-                    throw new DirectoryNotFoundException($"Parent: {parent.Path} - Node: {containerInfo.Path}");
+                    node = Navigator.SearchNode(parent, containerInfo.Paths[0]);
+
+                    if (node == null)
+                    {
+                        throw new DirectoryNotFoundException($"Parent: {parent.Path} - Node: {containerInfo.Paths[0]}");
+                    }
+                }
+                else
+                {
+                    node = Navigator.SearchNode(parent, containerInfo.Id);
+                    if (node == null)
+                    {
+                        throw new DirectoryNotFoundException($"Parent: {parent.Path} - Node: {containerInfo.Id}");
+                    }
                 }
 
                 WriteContainers(containerInfo.Containers, node);
 
                 node.Transform(containerInfo.Writers, Parameters);
                 node.Tags["Changed"] = true;
-                node.Tags["OutputPath"] = containerInfo.Path;
+                node.Tags["OutputPath"] = containerInfo.Paths;
 
                 ContainerWrote?.Invoke(this, new ContainerEventArgs(containerInfo));
             }
@@ -322,7 +378,7 @@ namespace TF3.Core
                 Node file = ReadFile(fileInfo, containers);
 
                 // Add call will remove the node from its original parent, so we need to make a copy
-                Node newFile = new (file);
+                var newFile = new Node(file);
                 newFile.Transform(fileInfo.Readers, Parameters);
                 asset.Add(newFile);
             }
@@ -394,7 +450,7 @@ namespace TF3.Core
 
                 originalFile.ChangeFormat(newFile.Format);
                 originalFile.Tags["Changed"] = true;
-                originalFile.Tags["OutputPath"] = fileInfo.Path;
+                originalFile.Tags["OutputPath"] = new List<string> { fileInfo.Path };
             }
 
             AssetTranslated?.Invoke(this, new AssetEventArgs(assetInfo));
@@ -455,7 +511,7 @@ namespace TF3.Core
             file.TransformWith<Converters.BinaryPatch.Apply, Formats.BinaryPatch>(patch.GetFormatAs<Formats.BinaryPatch>());
 
             file.Tags["Changed"] = true;
-            file.Tags["OutputPath"] = patchInfo.File.Path;
+            file.Tags["OutputPath"] = new List<string> { patchInfo.File.Path };
 
             PatchApplied?.Invoke(this, new PatchEventArgs(patchInfo));
         }

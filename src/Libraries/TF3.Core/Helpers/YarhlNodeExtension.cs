@@ -1,4 +1,4 @@
-// Copyright (c) 2021 Kaplas
+// Copyright (c) 2022 Kaplas
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -58,7 +58,7 @@ namespace TF3.Core.Helpers
                 if (parameter != null)
                 {
                     string json = parameter.Value.GetRawText();
-                    Type parameterType = Type.GetType(parameter.TypeName);
+                    var parameterType = Type.GetType(parameter.TypeName);
                     if (parameterType != null)
                     {
                         object value = JsonSerializer.Deserialize(json, parameterType);
@@ -91,7 +91,7 @@ namespace TF3.Core.Helpers
 
         private static void ApplyChange(this Node node, ConverterMetadata metadata, object[] parameters)
         {
-            IConverter converter = (IConverter)Activator.CreateInstance(metadata.Type);
+            var converter = (IConverter)Activator.CreateInstance(metadata.Type);
 
             System.Reflection.MethodInfo initializer = metadata.Type.GetMethod("Initialize");
 
@@ -100,7 +100,7 @@ namespace TF3.Core.Helpers
                 _ = initializer.Invoke(converter, parameters);
             }
 
-            IFormat newFormat = (IFormat)ConvertFormat.With(converter, node.Format);
+            var newFormat = (IFormat)ConvertFormat.With(converter, node.Format);
             node.ChangeFormat(newFormat);
         }
     }

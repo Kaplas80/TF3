@@ -1,4 +1,4 @@
-// Copyright (c) 2021 Kaplas
+// Copyright (c) 2022 Kaplas
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -46,7 +46,7 @@ namespace TF3.Core.Converters.DdsImage
                 throw new ArgumentNullException(nameof(source));
             }
 
-            BCnEncoder.Decoder.BcDecoder decoder = new ()
+            var decoder = new BCnEncoder.Decoder.BcDecoder()
             {
                 OutputOptions =
                 {
