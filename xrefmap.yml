@@ -1070,19 +1070,19 @@ references:
   commentId: T:TF3.Core.Models.ContainerInfo
   fullName: TF3.Core.Models.ContainerInfo
   nameWithType: ContainerInfo
-- uid: TF3.Core.Models.ContainerInfo.Checksum
-  name: Checksum
-  href: api/TF3.Core.Models.ContainerInfo.html#TF3_Core_Models_ContainerInfo_Checksum
-  commentId: P:TF3.Core.Models.ContainerInfo.Checksum
-  fullName: TF3.Core.Models.ContainerInfo.Checksum
-  nameWithType: ContainerInfo.Checksum
-- uid: TF3.Core.Models.ContainerInfo.Checksum*
-  name: Checksum
-  href: api/TF3.Core.Models.ContainerInfo.html#TF3_Core_Models_ContainerInfo_Checksum_
-  commentId: Overload:TF3.Core.Models.ContainerInfo.Checksum
+- uid: TF3.Core.Models.ContainerInfo.Checksums
+  name: Checksums
+  href: api/TF3.Core.Models.ContainerInfo.html#TF3_Core_Models_ContainerInfo_Checksums
+  commentId: P:TF3.Core.Models.ContainerInfo.Checksums
+  fullName: TF3.Core.Models.ContainerInfo.Checksums
+  nameWithType: ContainerInfo.Checksums
+- uid: TF3.Core.Models.ContainerInfo.Checksums*
+  name: Checksums
+  href: api/TF3.Core.Models.ContainerInfo.html#TF3_Core_Models_ContainerInfo_Checksums_
+  commentId: Overload:TF3.Core.Models.ContainerInfo.Checksums
   isSpec: "True"
-  fullName: TF3.Core.Models.ContainerInfo.Checksum
-  nameWithType: ContainerInfo.Checksum
+  fullName: TF3.Core.Models.ContainerInfo.Checksums
+  nameWithType: ContainerInfo.Checksums
 - uid: TF3.Core.Models.ContainerInfo.Containers
   name: Containers
   href: api/TF3.Core.Models.ContainerInfo.html#TF3_Core_Models_ContainerInfo_Containers
@@ -1122,19 +1122,19 @@ references:
   isSpec: "True"
   fullName: TF3.Core.Models.ContainerInfo.Name
   nameWithType: ContainerInfo.Name
-- uid: TF3.Core.Models.ContainerInfo.Path
-  name: Path
-  href: api/TF3.Core.Models.ContainerInfo.html#TF3_Core_Models_ContainerInfo_Path
-  commentId: P:TF3.Core.Models.ContainerInfo.Path
-  fullName: TF3.Core.Models.ContainerInfo.Path
-  nameWithType: ContainerInfo.Path
-- uid: TF3.Core.Models.ContainerInfo.Path*
-  name: Path
-  href: api/TF3.Core.Models.ContainerInfo.html#TF3_Core_Models_ContainerInfo_Path_
-  commentId: Overload:TF3.Core.Models.ContainerInfo.Path
+- uid: TF3.Core.Models.ContainerInfo.Paths
+  name: Paths
+  href: api/TF3.Core.Models.ContainerInfo.html#TF3_Core_Models_ContainerInfo_Paths
+  commentId: P:TF3.Core.Models.ContainerInfo.Paths
+  fullName: TF3.Core.Models.ContainerInfo.Paths
+  nameWithType: ContainerInfo.Paths
+- uid: TF3.Core.Models.ContainerInfo.Paths*
+  name: Paths
+  href: api/TF3.Core.Models.ContainerInfo.html#TF3_Core_Models_ContainerInfo_Paths_
+  commentId: Overload:TF3.Core.Models.ContainerInfo.Paths
   isSpec: "True"
-  fullName: TF3.Core.Models.ContainerInfo.Path
-  nameWithType: ContainerInfo.Path
+  fullName: TF3.Core.Models.ContainerInfo.Paths
+  nameWithType: ContainerInfo.Paths
 - uid: TF3.Core.Models.ContainerInfo.Readers
   name: Readers
   href: api/TF3.Core.Models.ContainerInfo.html#TF3_Core_Models_ContainerInfo_Readers
