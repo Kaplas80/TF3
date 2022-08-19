@@ -231,7 +231,7 @@ namespace TF3.Core
                 {
                     for (int i = 0; i < outputPaths.Count; i++)
                     {
-                        Node n = Navigator.SearchNode(node, outputPaths[i]);
+                        Node n = node.Children[i];
 
                         n.Stream.WriteTo(Path.Combine(outputPath, outputPaths[i]));
                     }
@@ -264,7 +264,7 @@ namespace TF3.Core
                 }
                 else
                 {
-                    node = NodeFactory.CreateContainer("multifile");
+                    node = NodeFactory.CreateContainer(containerInfo.Id);
                     for (int i = 0; i < containerInfo.Paths.Count; i++)
                     {
                         Node n = Navigator.SearchNode(parent, containerInfo.Paths[i]);
@@ -279,7 +279,7 @@ namespace TF3.Core
                             throw new ChecksumMismatchException($"Checksum mismatch in {containerInfo.Name}");
                         }
 
-                        node.Add(n);
+                        node.Add(n); // Removes the node 'n' from parent.
                     }
                 }
 
@@ -288,6 +288,11 @@ namespace TF3.Core
                 dictionary.Add(containerInfo.Id, node);
 
                 ReadContainers(containerInfo.Containers, node, dictionary);
+
+                if (containerInfo.Paths.Count != 1)
+                {
+                    parent.Add(node); // Add the converted node to parent
+                }
 
                 ContainerRead?.Invoke(this, new ContainerEventArgs(containerInfo));
             }
@@ -300,6 +305,7 @@ namespace TF3.Core
                 ContainerWriting?.Invoke(this, new ContainerEventArgs(containerInfo));
 
                 Node node;
+
                 if (containerInfo.Paths.Count == 1)
                 {
                     node = Navigator.SearchNode(parent, containerInfo.Paths[0]);
@@ -311,17 +317,10 @@ namespace TF3.Core
                 }
                 else
                 {
-                    node = NodeFactory.CreateContainer("multifile");
-                    for (int i = 0; i < containerInfo.Paths.Count; i++)
+                    node = Navigator.SearchNode(parent, containerInfo.Id);
+                    if (node == null)
                     {
-                        Node n = Navigator.SearchNode(parent, containerInfo.Paths[i]);
-
-                        if (n == null)
-                        {
-                            throw new DirectoryNotFoundException($"Parent: {parent.Path} - Node: {containerInfo.Paths[i]}");
-                        }
-
-                        node.Add(n);
+                        throw new DirectoryNotFoundException($"Parent: {parent.Path} - Node: {containerInfo.Id}");
                     }
                 }
 
@@ -451,7 +450,7 @@ namespace TF3.Core
 
                 originalFile.ChangeFormat(newFile.Format);
                 originalFile.Tags["Changed"] = true;
-                originalFile.Tags["OutputPath"] = fileInfo.Path;
+                originalFile.Tags["OutputPath"] = new List<string> { fileInfo.Path };
             }
 
             AssetTranslated?.Invoke(this, new AssetEventArgs(assetInfo));
@@ -512,7 +511,7 @@ namespace TF3.Core
             file.TransformWith<Converters.BinaryPatch.Apply, Formats.BinaryPatch>(patch.GetFormatAs<Formats.BinaryPatch>());
 
             file.Tags["Changed"] = true;
-            file.Tags["OutputPath"] = patchInfo.File.Path;
+            file.Tags["OutputPath"] = new List<string> { patchInfo.File.Path };
 
             PatchApplied?.Invoke(this, new PatchEventArgs(patchInfo));
         }
