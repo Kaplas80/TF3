@@ -4,7 +4,7 @@
         "src": [
           {
             "files": [
-              "Libraries/TF3.Core/TF3.Core.csproj"
+              "Libraries/TF3.Core/bin/**/TF3.Core.dll"
             ],
             "src": "../src"
           }
