@@ -344,16 +344,33 @@ namespace TF3.Core
 
             if (asset.IsContainer)
             {
-                int outputIndex = 0;
-                foreach (Node node in Navigator.IterateNodes(asset))
+                if (assetInfo.OutputNames.Count == 1 && assetInfo.OutputNames[0] == "*")
                 {
-                    if (node.IsContainer)
+                    // Use node names to extract
+                    foreach (Node node in Navigator.IterateNodes(asset))
                     {
-                        continue;
-                    }
+                        if (node.IsContainer)
+                        {
+                            continue;
+                        }
 
-                    node.Stream.WriteTo(Path.Combine(outputPath, assetInfo.OutputNames[outputIndex]));
-                    outputIndex++;
+                        string path = Path.Combine(outputPath, assetInfo.Id);
+                        node.Stream.WriteTo(path);
+                    }
+                }
+                else
+                {
+                    int outputIndex = 0;
+                    foreach (Node node in Navigator.IterateNodes(asset))
+                    {
+                        if (node.IsContainer)
+                        {
+                            continue;
+                        }
+
+                        node.Stream.WriteTo(Path.Combine(outputPath, assetInfo.OutputNames[outputIndex]));
+                        outputIndex++;
+                    }
                 }
             }
             else if (asset.Stream != null)
@@ -458,20 +475,31 @@ namespace TF3.Core
 
         private Node ReadTranslation(AssetInfo assetInfo, string translationPath)
         {
-            Node translation = NodeFactory.CreateContainer(string.Concat(assetInfo.Id, "_Translation"));
+            Node translation;
 
-            foreach (string outputFile in assetInfo.OutputNames.Select(file => Path.Combine(translationPath, file)))
+            if (assetInfo.OutputNames.Count == 1 && assetInfo.OutputNames[0] == "*")
             {
-                if (File.Exists(outputFile))
+                // Can't check if all translation files exists
+                string path = Path.Combine(translationPath, assetInfo.Id);
+                translation = NodeFactory.FromDirectory(path, "*", string.Concat(assetInfo.Id, "_Translation"), true);
+            }
+            else
+            {
+                translation = NodeFactory.CreateContainer(string.Concat(assetInfo.Id, "_Translation"));
+
+                foreach (string outputFile in assetInfo.OutputNames.Select(file => Path.Combine(translationPath, file)))
                 {
-                    Node node = NodeFactory.FromFile(outputFile, Yarhl.IO.FileOpenMode.Read);
-                    translation.Add(node);
-                }
-                else
-                {
-                    // All files are needed for translating. If any of them is missing, skip the translation of this asset.
-                    AssetTranslationFailed?.Invoke(this, new AssetEventArgs(assetInfo));
-                    return null;
+                    if (File.Exists(outputFile))
+                    {
+                        Node node = NodeFactory.FromFile(outputFile, Yarhl.IO.FileOpenMode.Read);
+                        translation.Add(node);
+                    }
+                    else
+                    {
+                        // All files are needed for translating. If any of them is missing, skip the translation of this asset.
+                        AssetTranslationFailed?.Invoke(this, new AssetEventArgs(assetInfo));
+                        return null;
+                    }
                 }
             }
 
