@@ -24,6 +24,7 @@ namespace TF3.Core.Helpers
     using System.Collections.Generic;
     using System.Linq;
     using System.Text.Json;
+    using System.Text.Json.Serialization;
     using TF3.Core.Exceptions;
     using TF3.Core.Models;
     using Yarhl;
@@ -43,6 +44,11 @@ namespace TF3.Core.Helpers
         /// <param name="parameters">Allowed parameters list.</param>
         public static void Transform(this Node node, List<ConverterInfo> converters, List<ParameterInfo> parameters)
         {
+            JsonSerializerOptions options = new JsonSerializerOptions
+            {
+                Converters = { new JsonStringEnumConverter(JsonNamingPolicy.CamelCase) },
+            };
+
             var yarhlConverters = PluginManager.Instance.GetConverters().Select(x => x.Metadata).ToList();
             foreach (ConverterInfo converterInfo in converters)
             {
@@ -61,7 +67,7 @@ namespace TF3.Core.Helpers
                     var parameterType = Type.GetType(parameter.TypeName);
                     if (parameterType != null)
                     {
-                        object value = JsonSerializer.Deserialize(json, parameterType);
+                        object value = JsonSerializer.Deserialize(json, parameterType, options);
                         initializerParameters = new[] { value };
                     }
                 }
