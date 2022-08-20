@@ -212,7 +212,7 @@
   "dev/Changelog.html": {
     "href": "dev/Changelog.html",
     "title": "vNext (January 02, 2022) | Translation Framework v3",
-    "keywords": "vNext (January 02, 2022) As part of this release we had 5 issues closed. Documentation #16 Add dotnet runtime to README.md #17 Update README.md enhancements #24 Multi file containers #25 Update build system to the latest version #26 Update package dependencies v0.1.1 (December 28, 2021) As part of this release we had 1 issue closed. enhancement #13 Fix dependencies v0.1.0 (December 27, 2021) First alpha release"
+    "keywords": "vNext (January 02, 2022) As part of this release we had 6 issues closed. Documentation #16 Add dotnet runtime to README.md #17 Update README.md enhancements #24 Multi file containers #25 Update build system to the latest version #26 Update package dependencies #27 Extract using node names if outputNames are unknown v0.1.1 (December 28, 2021) As part of this release we had 1 issue closed. enhancement #13 Fix dependencies v0.1.0 (December 27, 2021) First alpha release"
   },
   "guides/Contributing.html": {
     "href": "guides/Contributing.html",
