@@ -354,7 +354,7 @@ namespace TF3.Core
                             continue;
                         }
 
-                        string path = Path.Combine(outputPath, assetInfo.Id);
+                        string path = Path.Combine(outputPath, node.Path.Substring(1));
                         node.Stream.WriteTo(path);
                     }
                 }
