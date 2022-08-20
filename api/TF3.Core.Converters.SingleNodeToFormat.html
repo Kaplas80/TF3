@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SingleNodeToFormat
    | Translation Framework v3 ">
-    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="generator" content="docfx 2.59.0.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -279,23 +279,35 @@
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">SingleNodeToFormat</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">Yarhl.FileFormat.IConverter</span>&lt;<span class="xref">Yarhl.FileSystem.NodeContainerFormat</span>, <span class="xref">Yarhl.FileFormat.IFormat</span>&gt;</div>
+    <div><span class="xref">Yarhl.FileFormat.IConverter</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="TF3.Core.Converters.html">TF3.Core.Converters</a></h6>
   <h6><strong>Assembly</strong>: TF3.Core.dll</h6>
   <h5 id="TF3_Core_Converters_SingleNodeToFormat_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SingleNodeToFormat : IConverter&lt;NodeContainerFormat, IFormat&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class SingleNodeToFormat : Object</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="TF3_Core_Converters_SingleNodeToFormat__ctor_" data-uid="TF3.Core.Converters.SingleNodeToFormat.#ctor*"></a>
+  <h4 id="TF3_Core_Converters_SingleNodeToFormat__ctor" data-uid="TF3.Core.Converters.SingleNodeToFormat.#ctor">SingleNodeToFormat()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SingleNodeToFormat()</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Kaplas80/TF3/new/main/docs/apidoc/new?filename=TF3_Core_Converters_SingleNodeToFormat_Convert_NodeContainerFormat_.md&amp;value=---%0Auid%3A%20TF3.Core.Converters.SingleNodeToFormat.Convert(NodeContainerFormat)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Kaplas80/TF3/blob/main/src/Libraries/TF3.Core/Converters/SingleNodeToFormat.cs/#L37">View Source</a>
-  </span>
+  
+  
   <a id="TF3_Core_Converters_SingleNodeToFormat_Convert_" data-uid="TF3.Core.Converters.SingleNodeToFormat.Convert*"></a>
-  <h4 id="TF3_Core_Converters_SingleNodeToFormat_Convert_NodeContainerFormat_" data-uid="TF3.Core.Converters.SingleNodeToFormat.Convert(NodeContainerFormat)">Convert(NodeContainerFormat)</h4>
+  <h4 id="TF3_Core_Converters_SingleNodeToFormat_Convert_Yarhl_FileSystem_NodeContainerFormat_" data-uid="TF3.Core.Converters.SingleNodeToFormat.Convert(Yarhl.FileSystem.NodeContainerFormat)">Convert(NodeContainerFormat)</h4>
   <div class="markdown level1 summary"><p>Convert a NodeContainerFormat to the format of the first children.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -314,7 +326,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">NodeContainerFormat</span></td>
+        <td><span class="xref">Yarhl.FileSystem.NodeContainerFormat</span></td>
         <td><span class="parametername">source</span></td>
         <td><p>A 'single node' NodeContainerFormat.</p>
 </td>
@@ -331,12 +343,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IFormat</span></td>
+        <td><span class="xref">Yarhl.FileFormat.IFormat</span></td>
         <td><p>The format of the node.</p>
 </td>
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">Yarhl.FileFormat.IConverter&lt;, &gt;</span>
+  </div>
+  <div>
+      <span class="xref">Yarhl.FileFormat.IConverter</span>
+  </div>
 </article>
           </div>
           
@@ -344,12 +363,6 @@
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/Kaplas80/TF3/new/main/docs/apidoc/new?filename=TF3_Core_Converters_SingleNodeToFormat.md&amp;value=---%0Auid%3A%20TF3.Core.Converters.SingleNodeToFormat%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/Kaplas80/TF3/blob/main/src/Libraries/TF3.Core/Converters/SingleNodeToFormat.cs/#L30" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

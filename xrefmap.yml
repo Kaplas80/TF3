@@ -31,17 +31,28 @@ references:
   commentId: T:TF3.Core.Converters.BinaryPatch.Apply
   fullName: TF3.Core.Converters.BinaryPatch.Apply
   nameWithType: Apply
-- uid: TF3.Core.Converters.BinaryPatch.Apply.Convert(BinaryFormat)
+- uid: TF3.Core.Converters.BinaryPatch.Apply.#ctor
+  name: Apply()
+  href: api/TF3.Core.Converters.BinaryPatch.Apply.html#TF3_Core_Converters_BinaryPatch_Apply__ctor
+  commentId: M:TF3.Core.Converters.BinaryPatch.Apply.#ctor
+  fullName: TF3.Core.Converters.BinaryPatch.Apply.Apply()
+  nameWithType: Apply.Apply()
+- uid: TF3.Core.Converters.BinaryPatch.Apply.#ctor*
+  name: Apply
+  href: api/TF3.Core.Converters.BinaryPatch.Apply.html#TF3_Core_Converters_BinaryPatch_Apply__ctor_
+  commentId: Overload:TF3.Core.Converters.BinaryPatch.Apply.#ctor
+  fullName: TF3.Core.Converters.BinaryPatch.Apply.Apply
+  nameWithType: Apply.Apply
+- uid: TF3.Core.Converters.BinaryPatch.Apply.Convert(Yarhl.IO.BinaryFormat)
   name: Convert(BinaryFormat)
-  href: api/TF3.Core.Converters.BinaryPatch.Apply.html#TF3_Core_Converters_BinaryPatch_Apply_Convert_BinaryFormat_
-  commentId: M:TF3.Core.Converters.BinaryPatch.Apply.Convert(BinaryFormat)
-  fullName: TF3.Core.Converters.BinaryPatch.Apply.Convert(BinaryFormat)
+  href: api/TF3.Core.Converters.BinaryPatch.Apply.html#TF3_Core_Converters_BinaryPatch_Apply_Convert_Yarhl_IO_BinaryFormat_
+  commentId: M:TF3.Core.Converters.BinaryPatch.Apply.Convert(Yarhl.IO.BinaryFormat)
+  fullName: TF3.Core.Converters.BinaryPatch.Apply.Convert(Yarhl.IO.BinaryFormat)
   nameWithType: Apply.Convert(BinaryFormat)
 - uid: TF3.Core.Converters.BinaryPatch.Apply.Convert*
   name: Convert
   href: api/TF3.Core.Converters.BinaryPatch.Apply.html#TF3_Core_Converters_BinaryPatch_Apply_Convert_
   commentId: Overload:TF3.Core.Converters.BinaryPatch.Apply.Convert
-  isSpec: "True"
   fullName: TF3.Core.Converters.BinaryPatch.Apply.Convert
   nameWithType: Apply.Convert
 - uid: TF3.Core.Converters.BinaryPatch.Apply.Initialize(TF3.Core.Formats.BinaryPatch)
@@ -54,7 +65,6 @@ references:
   name: Initialize
   href: api/TF3.Core.Converters.BinaryPatch.Apply.html#TF3_Core_Converters_BinaryPatch_Apply_Initialize_
   commentId: Overload:TF3.Core.Converters.BinaryPatch.Apply.Initialize
-  isSpec: "True"
   fullName: TF3.Core.Converters.BinaryPatch.Apply.Initialize
   nameWithType: Apply.Initialize
 - uid: TF3.Core.Converters.BinaryPatch.Reader
@@ -63,17 +73,28 @@ references:
   commentId: T:TF3.Core.Converters.BinaryPatch.Reader
   fullName: TF3.Core.Converters.BinaryPatch.Reader
   nameWithType: Reader
-- uid: TF3.Core.Converters.BinaryPatch.Reader.Convert(BinaryFormat)
+- uid: TF3.Core.Converters.BinaryPatch.Reader.#ctor
+  name: Reader()
+  href: api/TF3.Core.Converters.BinaryPatch.Reader.html#TF3_Core_Converters_BinaryPatch_Reader__ctor
+  commentId: M:TF3.Core.Converters.BinaryPatch.Reader.#ctor
+  fullName: TF3.Core.Converters.BinaryPatch.Reader.Reader()
+  nameWithType: Reader.Reader()
+- uid: TF3.Core.Converters.BinaryPatch.Reader.#ctor*
+  name: Reader
+  href: api/TF3.Core.Converters.BinaryPatch.Reader.html#TF3_Core_Converters_BinaryPatch_Reader__ctor_
+  commentId: Overload:TF3.Core.Converters.BinaryPatch.Reader.#ctor
+  fullName: TF3.Core.Converters.BinaryPatch.Reader.Reader
+  nameWithType: Reader.Reader
+- uid: TF3.Core.Converters.BinaryPatch.Reader.Convert(Yarhl.IO.BinaryFormat)
   name: Convert(BinaryFormat)
-  href: api/TF3.Core.Converters.BinaryPatch.Reader.html#TF3_Core_Converters_BinaryPatch_Reader_Convert_BinaryFormat_
-  commentId: M:TF3.Core.Converters.BinaryPatch.Reader.Convert(BinaryFormat)
-  fullName: TF3.Core.Converters.BinaryPatch.Reader.Convert(BinaryFormat)
+  href: api/TF3.Core.Converters.BinaryPatch.Reader.html#TF3_Core_Converters_BinaryPatch_Reader_Convert_Yarhl_IO_BinaryFormat_
+  commentId: M:TF3.Core.Converters.BinaryPatch.Reader.Convert(Yarhl.IO.BinaryFormat)
+  fullName: TF3.Core.Converters.BinaryPatch.Reader.Convert(Yarhl.IO.BinaryFormat)
   nameWithType: Reader.Convert(BinaryFormat)
 - uid: TF3.Core.Converters.BinaryPatch.Reader.Convert*
   name: Convert
   href: api/TF3.Core.Converters.BinaryPatch.Reader.html#TF3_Core_Converters_BinaryPatch_Reader_Convert_
   commentId: Overload:TF3.Core.Converters.BinaryPatch.Reader.Convert
-  isSpec: "True"
   fullName: TF3.Core.Converters.BinaryPatch.Reader.Convert
   nameWithType: Reader.Convert
 - uid: TF3.Core.Converters.BinaryPatch.Reader.Initialize(System.Int64)
@@ -86,7 +107,6 @@ references:
   name: Initialize
   href: api/TF3.Core.Converters.BinaryPatch.Reader.html#TF3_Core_Converters_BinaryPatch_Reader_Initialize_
   commentId: Overload:TF3.Core.Converters.BinaryPatch.Reader.Initialize
-  isSpec: "True"
   fullName: TF3.Core.Converters.BinaryPatch.Reader.Initialize
   nameWithType: Reader.Initialize
 - uid: TF3.Core.Converters.DdsImage
@@ -101,6 +121,18 @@ references:
   commentId: T:TF3.Core.Converters.DdsImage.ExtractToPng
   fullName: TF3.Core.Converters.DdsImage.ExtractToPng
   nameWithType: ExtractToPng
+- uid: TF3.Core.Converters.DdsImage.ExtractToPng.#ctor
+  name: ExtractToPng()
+  href: api/TF3.Core.Converters.DdsImage.ExtractToPng.html#TF3_Core_Converters_DdsImage_ExtractToPng__ctor
+  commentId: M:TF3.Core.Converters.DdsImage.ExtractToPng.#ctor
+  fullName: TF3.Core.Converters.DdsImage.ExtractToPng.ExtractToPng()
+  nameWithType: ExtractToPng.ExtractToPng()
+- uid: TF3.Core.Converters.DdsImage.ExtractToPng.#ctor*
+  name: ExtractToPng
+  href: api/TF3.Core.Converters.DdsImage.ExtractToPng.html#TF3_Core_Converters_DdsImage_ExtractToPng__ctor_
+  commentId: Overload:TF3.Core.Converters.DdsImage.ExtractToPng.#ctor
+  fullName: TF3.Core.Converters.DdsImage.ExtractToPng.ExtractToPng
+  nameWithType: ExtractToPng.ExtractToPng
 - uid: TF3.Core.Converters.DdsImage.ExtractToPng.Convert(TF3.Core.Formats.DdsFileFormat)
   name: Convert(DdsFileFormat)
   href: api/TF3.Core.Converters.DdsImage.ExtractToPng.html#TF3_Core_Converters_DdsImage_ExtractToPng_Convert_TF3_Core_Formats_DdsFileFormat_
@@ -111,7 +143,6 @@ references:
   name: Convert
   href: api/TF3.Core.Converters.DdsImage.ExtractToPng.html#TF3_Core_Converters_DdsImage_ExtractToPng_Convert_
   commentId: Overload:TF3.Core.Converters.DdsImage.ExtractToPng.Convert
-  isSpec: "True"
   fullName: TF3.Core.Converters.DdsImage.ExtractToPng.Convert
   nameWithType: ExtractToPng.Convert
 - uid: TF3.Core.Converters.DdsImage.ExtractToTga
@@ -120,6 +151,18 @@ references:
   commentId: T:TF3.Core.Converters.DdsImage.ExtractToTga
   fullName: TF3.Core.Converters.DdsImage.ExtractToTga
   nameWithType: ExtractToTga
+- uid: TF3.Core.Converters.DdsImage.ExtractToTga.#ctor
+  name: ExtractToTga()
+  href: api/TF3.Core.Converters.DdsImage.ExtractToTga.html#TF3_Core_Converters_DdsImage_ExtractToTga__ctor
+  commentId: M:TF3.Core.Converters.DdsImage.ExtractToTga.#ctor
+  fullName: TF3.Core.Converters.DdsImage.ExtractToTga.ExtractToTga()
+  nameWithType: ExtractToTga.ExtractToTga()
+- uid: TF3.Core.Converters.DdsImage.ExtractToTga.#ctor*
+  name: ExtractToTga
+  href: api/TF3.Core.Converters.DdsImage.ExtractToTga.html#TF3_Core_Converters_DdsImage_ExtractToTga__ctor_
+  commentId: Overload:TF3.Core.Converters.DdsImage.ExtractToTga.#ctor
+  fullName: TF3.Core.Converters.DdsImage.ExtractToTga.ExtractToTga
+  nameWithType: ExtractToTga.ExtractToTga
 - uid: TF3.Core.Converters.DdsImage.ExtractToTga.Convert(TF3.Core.Formats.DdsFileFormat)
   name: Convert(DdsFileFormat)
   href: api/TF3.Core.Converters.DdsImage.ExtractToTga.html#TF3_Core_Converters_DdsImage_ExtractToTga_Convert_TF3_Core_Formats_DdsFileFormat_
@@ -130,7 +173,6 @@ references:
   name: Convert
   href: api/TF3.Core.Converters.DdsImage.ExtractToTga.html#TF3_Core_Converters_DdsImage_ExtractToTga_Convert_
   commentId: Overload:TF3.Core.Converters.DdsImage.ExtractToTga.Convert
-  isSpec: "True"
   fullName: TF3.Core.Converters.DdsImage.ExtractToTga.Convert
   nameWithType: ExtractToTga.Convert
 - uid: TF3.Core.Converters.DdsImage.Reader
@@ -139,17 +181,28 @@ references:
   commentId: T:TF3.Core.Converters.DdsImage.Reader
   fullName: TF3.Core.Converters.DdsImage.Reader
   nameWithType: Reader
-- uid: TF3.Core.Converters.DdsImage.Reader.Convert(BinaryFormat)
+- uid: TF3.Core.Converters.DdsImage.Reader.#ctor
+  name: Reader()
+  href: api/TF3.Core.Converters.DdsImage.Reader.html#TF3_Core_Converters_DdsImage_Reader__ctor
+  commentId: M:TF3.Core.Converters.DdsImage.Reader.#ctor
+  fullName: TF3.Core.Converters.DdsImage.Reader.Reader()
+  nameWithType: Reader.Reader()
+- uid: TF3.Core.Converters.DdsImage.Reader.#ctor*
+  name: Reader
+  href: api/TF3.Core.Converters.DdsImage.Reader.html#TF3_Core_Converters_DdsImage_Reader__ctor_
+  commentId: Overload:TF3.Core.Converters.DdsImage.Reader.#ctor
+  fullName: TF3.Core.Converters.DdsImage.Reader.Reader
+  nameWithType: Reader.Reader
+- uid: TF3.Core.Converters.DdsImage.Reader.Convert(Yarhl.IO.BinaryFormat)
   name: Convert(BinaryFormat)
-  href: api/TF3.Core.Converters.DdsImage.Reader.html#TF3_Core_Converters_DdsImage_Reader_Convert_BinaryFormat_
-  commentId: M:TF3.Core.Converters.DdsImage.Reader.Convert(BinaryFormat)
-  fullName: TF3.Core.Converters.DdsImage.Reader.Convert(BinaryFormat)
+  href: api/TF3.Core.Converters.DdsImage.Reader.html#TF3_Core_Converters_DdsImage_Reader_Convert_Yarhl_IO_BinaryFormat_
+  commentId: M:TF3.Core.Converters.DdsImage.Reader.Convert(Yarhl.IO.BinaryFormat)
+  fullName: TF3.Core.Converters.DdsImage.Reader.Convert(Yarhl.IO.BinaryFormat)
   nameWithType: Reader.Convert(BinaryFormat)
 - uid: TF3.Core.Converters.DdsImage.Reader.Convert*
   name: Convert
   href: api/TF3.Core.Converters.DdsImage.Reader.html#TF3_Core_Converters_DdsImage_Reader_Convert_
   commentId: Overload:TF3.Core.Converters.DdsImage.Reader.Convert
-  isSpec: "True"
   fullName: TF3.Core.Converters.DdsImage.Reader.Convert
   nameWithType: Reader.Convert
 - uid: TF3.Core.Converters.DdsImage.Replace
@@ -158,6 +211,18 @@ references:
   commentId: T:TF3.Core.Converters.DdsImage.Replace
   fullName: TF3.Core.Converters.DdsImage.Replace
   nameWithType: Replace
+- uid: TF3.Core.Converters.DdsImage.Replace.#ctor
+  name: Replace()
+  href: api/TF3.Core.Converters.DdsImage.Replace.html#TF3_Core_Converters_DdsImage_Replace__ctor
+  commentId: M:TF3.Core.Converters.DdsImage.Replace.#ctor
+  fullName: TF3.Core.Converters.DdsImage.Replace.Replace()
+  nameWithType: Replace.Replace()
+- uid: TF3.Core.Converters.DdsImage.Replace.#ctor*
+  name: Replace
+  href: api/TF3.Core.Converters.DdsImage.Replace.html#TF3_Core_Converters_DdsImage_Replace__ctor_
+  commentId: Overload:TF3.Core.Converters.DdsImage.Replace.#ctor
+  fullName: TF3.Core.Converters.DdsImage.Replace.Replace
+  nameWithType: Replace.Replace
 - uid: TF3.Core.Converters.DdsImage.Replace.Convert(TF3.Core.Formats.DdsFileFormat)
   name: Convert(DdsFileFormat)
   href: api/TF3.Core.Converters.DdsImage.Replace.html#TF3_Core_Converters_DdsImage_Replace_Convert_TF3_Core_Formats_DdsFileFormat_
@@ -168,20 +233,18 @@ references:
   name: Convert
   href: api/TF3.Core.Converters.DdsImage.Replace.html#TF3_Core_Converters_DdsImage_Replace_Convert_
   commentId: Overload:TF3.Core.Converters.DdsImage.Replace.Convert
-  isSpec: "True"
   fullName: TF3.Core.Converters.DdsImage.Replace.Convert
   nameWithType: Replace.Convert
-- uid: TF3.Core.Converters.DdsImage.Replace.Initialize(BinaryFormat)
+- uid: TF3.Core.Converters.DdsImage.Replace.Initialize(Yarhl.IO.BinaryFormat)
   name: Initialize(BinaryFormat)
-  href: api/TF3.Core.Converters.DdsImage.Replace.html#TF3_Core_Converters_DdsImage_Replace_Initialize_BinaryFormat_
-  commentId: M:TF3.Core.Converters.DdsImage.Replace.Initialize(BinaryFormat)
-  fullName: TF3.Core.Converters.DdsImage.Replace.Initialize(BinaryFormat)
+  href: api/TF3.Core.Converters.DdsImage.Replace.html#TF3_Core_Converters_DdsImage_Replace_Initialize_Yarhl_IO_BinaryFormat_
+  commentId: M:TF3.Core.Converters.DdsImage.Replace.Initialize(Yarhl.IO.BinaryFormat)
+  fullName: TF3.Core.Converters.DdsImage.Replace.Initialize(Yarhl.IO.BinaryFormat)
   nameWithType: Replace.Initialize(BinaryFormat)
 - uid: TF3.Core.Converters.DdsImage.Replace.Initialize*
   name: Initialize
   href: api/TF3.Core.Converters.DdsImage.Replace.html#TF3_Core_Converters_DdsImage_Replace_Initialize_
   commentId: Overload:TF3.Core.Converters.DdsImage.Replace.Initialize
-  isSpec: "True"
   fullName: TF3.Core.Converters.DdsImage.Replace.Initialize
   nameWithType: Replace.Initialize
 - uid: TF3.Core.Converters.DdsImage.Writer
@@ -190,6 +253,18 @@ references:
   commentId: T:TF3.Core.Converters.DdsImage.Writer
   fullName: TF3.Core.Converters.DdsImage.Writer
   nameWithType: Writer
+- uid: TF3.Core.Converters.DdsImage.Writer.#ctor
+  name: Writer()
+  href: api/TF3.Core.Converters.DdsImage.Writer.html#TF3_Core_Converters_DdsImage_Writer__ctor
+  commentId: M:TF3.Core.Converters.DdsImage.Writer.#ctor
+  fullName: TF3.Core.Converters.DdsImage.Writer.Writer()
+  nameWithType: Writer.Writer()
+- uid: TF3.Core.Converters.DdsImage.Writer.#ctor*
+  name: Writer
+  href: api/TF3.Core.Converters.DdsImage.Writer.html#TF3_Core_Converters_DdsImage_Writer__ctor_
+  commentId: Overload:TF3.Core.Converters.DdsImage.Writer.#ctor
+  fullName: TF3.Core.Converters.DdsImage.Writer.Writer
+  nameWithType: Writer.Writer
 - uid: TF3.Core.Converters.DdsImage.Writer.Convert(TF3.Core.Formats.DdsFileFormat)
   name: Convert(DdsFileFormat)
   href: api/TF3.Core.Converters.DdsImage.Writer.html#TF3_Core_Converters_DdsImage_Writer_Convert_TF3_Core_Formats_DdsFileFormat_
@@ -200,7 +275,6 @@ references:
   name: Convert
   href: api/TF3.Core.Converters.DdsImage.Writer.html#TF3_Core_Converters_DdsImage_Writer_Convert_
   commentId: Overload:TF3.Core.Converters.DdsImage.Writer.Convert
-  isSpec: "True"
   fullName: TF3.Core.Converters.DdsImage.Writer.Convert
   nameWithType: Writer.Convert
 - uid: TF3.Core.Converters.FormatReplace
@@ -209,30 +283,40 @@ references:
   commentId: T:TF3.Core.Converters.FormatReplace
   fullName: TF3.Core.Converters.FormatReplace
   nameWithType: FormatReplace
-- uid: TF3.Core.Converters.FormatReplace.Convert(IFormat)
+- uid: TF3.Core.Converters.FormatReplace.#ctor
+  name: FormatReplace()
+  href: api/TF3.Core.Converters.FormatReplace.html#TF3_Core_Converters_FormatReplace__ctor
+  commentId: M:TF3.Core.Converters.FormatReplace.#ctor
+  fullName: TF3.Core.Converters.FormatReplace.FormatReplace()
+  nameWithType: FormatReplace.FormatReplace()
+- uid: TF3.Core.Converters.FormatReplace.#ctor*
+  name: FormatReplace
+  href: api/TF3.Core.Converters.FormatReplace.html#TF3_Core_Converters_FormatReplace__ctor_
+  commentId: Overload:TF3.Core.Converters.FormatReplace.#ctor
+  fullName: TF3.Core.Converters.FormatReplace.FormatReplace
+  nameWithType: FormatReplace.FormatReplace
+- uid: TF3.Core.Converters.FormatReplace.Convert(Yarhl.FileFormat.IFormat)
   name: Convert(IFormat)
-  href: api/TF3.Core.Converters.FormatReplace.html#TF3_Core_Converters_FormatReplace_Convert_IFormat_
-  commentId: M:TF3.Core.Converters.FormatReplace.Convert(IFormat)
-  fullName: TF3.Core.Converters.FormatReplace.Convert(IFormat)
+  href: api/TF3.Core.Converters.FormatReplace.html#TF3_Core_Converters_FormatReplace_Convert_Yarhl_FileFormat_IFormat_
+  commentId: M:TF3.Core.Converters.FormatReplace.Convert(Yarhl.FileFormat.IFormat)
+  fullName: TF3.Core.Converters.FormatReplace.Convert(Yarhl.FileFormat.IFormat)
   nameWithType: FormatReplace.Convert(IFormat)
 - uid: TF3.Core.Converters.FormatReplace.Convert*
   name: Convert
   href: api/TF3.Core.Converters.FormatReplace.html#TF3_Core_Converters_FormatReplace_Convert_
   commentId: Overload:TF3.Core.Converters.FormatReplace.Convert
-  isSpec: "True"
   fullName: TF3.Core.Converters.FormatReplace.Convert
   nameWithType: FormatReplace.Convert
-- uid: TF3.Core.Converters.FormatReplace.Initialize(IFormat)
+- uid: TF3.Core.Converters.FormatReplace.Initialize(Yarhl.FileFormat.IFormat)
   name: Initialize(IFormat)
-  href: api/TF3.Core.Converters.FormatReplace.html#TF3_Core_Converters_FormatReplace_Initialize_IFormat_
-  commentId: M:TF3.Core.Converters.FormatReplace.Initialize(IFormat)
-  fullName: TF3.Core.Converters.FormatReplace.Initialize(IFormat)
+  href: api/TF3.Core.Converters.FormatReplace.html#TF3_Core_Converters_FormatReplace_Initialize_Yarhl_FileFormat_IFormat_
+  commentId: M:TF3.Core.Converters.FormatReplace.Initialize(Yarhl.FileFormat.IFormat)
+  fullName: TF3.Core.Converters.FormatReplace.Initialize(Yarhl.FileFormat.IFormat)
   nameWithType: FormatReplace.Initialize(IFormat)
 - uid: TF3.Core.Converters.FormatReplace.Initialize*
   name: Initialize
   href: api/TF3.Core.Converters.FormatReplace.html#TF3_Core_Converters_FormatReplace_Initialize_
   commentId: Overload:TF3.Core.Converters.FormatReplace.Initialize
-  isSpec: "True"
   fullName: TF3.Core.Converters.FormatReplace.Initialize
   nameWithType: FormatReplace.Initialize
 - uid: TF3.Core.Converters.FormatToSingleNode
@@ -241,17 +325,28 @@ references:
   commentId: T:TF3.Core.Converters.FormatToSingleNode
   fullName: TF3.Core.Converters.FormatToSingleNode
   nameWithType: FormatToSingleNode
-- uid: TF3.Core.Converters.FormatToSingleNode.Convert(IFormat)
+- uid: TF3.Core.Converters.FormatToSingleNode.#ctor
+  name: FormatToSingleNode()
+  href: api/TF3.Core.Converters.FormatToSingleNode.html#TF3_Core_Converters_FormatToSingleNode__ctor
+  commentId: M:TF3.Core.Converters.FormatToSingleNode.#ctor
+  fullName: TF3.Core.Converters.FormatToSingleNode.FormatToSingleNode()
+  nameWithType: FormatToSingleNode.FormatToSingleNode()
+- uid: TF3.Core.Converters.FormatToSingleNode.#ctor*
+  name: FormatToSingleNode
+  href: api/TF3.Core.Converters.FormatToSingleNode.html#TF3_Core_Converters_FormatToSingleNode__ctor_
+  commentId: Overload:TF3.Core.Converters.FormatToSingleNode.#ctor
+  fullName: TF3.Core.Converters.FormatToSingleNode.FormatToSingleNode
+  nameWithType: FormatToSingleNode.FormatToSingleNode
+- uid: TF3.Core.Converters.FormatToSingleNode.Convert(Yarhl.FileFormat.IFormat)
   name: Convert(IFormat)
-  href: api/TF3.Core.Converters.FormatToSingleNode.html#TF3_Core_Converters_FormatToSingleNode_Convert_IFormat_
-  commentId: M:TF3.Core.Converters.FormatToSingleNode.Convert(IFormat)
-  fullName: TF3.Core.Converters.FormatToSingleNode.Convert(IFormat)
+  href: api/TF3.Core.Converters.FormatToSingleNode.html#TF3_Core_Converters_FormatToSingleNode_Convert_Yarhl_FileFormat_IFormat_
+  commentId: M:TF3.Core.Converters.FormatToSingleNode.Convert(Yarhl.FileFormat.IFormat)
+  fullName: TF3.Core.Converters.FormatToSingleNode.Convert(Yarhl.FileFormat.IFormat)
   nameWithType: FormatToSingleNode.Convert(IFormat)
 - uid: TF3.Core.Converters.FormatToSingleNode.Convert*
   name: Convert
   href: api/TF3.Core.Converters.FormatToSingleNode.html#TF3_Core_Converters_FormatToSingleNode_Convert_
   commentId: Overload:TF3.Core.Converters.FormatToSingleNode.Convert
-  isSpec: "True"
   fullName: TF3.Core.Converters.FormatToSingleNode.Convert
   nameWithType: FormatToSingleNode.Convert
 - uid: TF3.Core.Converters.FormatToSingleNode.Initialize(System.String)
@@ -264,7 +359,6 @@ references:
   name: Initialize
   href: api/TF3.Core.Converters.FormatToSingleNode.html#TF3_Core_Converters_FormatToSingleNode_Initialize_
   commentId: Overload:TF3.Core.Converters.FormatToSingleNode.Initialize
-  isSpec: "True"
   fullName: TF3.Core.Converters.FormatToSingleNode.Initialize
   nameWithType: FormatToSingleNode.Initialize
 - uid: TF3.Core.Converters.Po
@@ -279,17 +373,28 @@ references:
   commentId: T:TF3.Core.Converters.Po.NodeContainerToPo
   fullName: TF3.Core.Converters.Po.NodeContainerToPo
   nameWithType: NodeContainerToPo
-- uid: TF3.Core.Converters.Po.NodeContainerToPo.Convert(NodeContainerFormat)
+- uid: TF3.Core.Converters.Po.NodeContainerToPo.#ctor
+  name: NodeContainerToPo()
+  href: api/TF3.Core.Converters.Po.NodeContainerToPo.html#TF3_Core_Converters_Po_NodeContainerToPo__ctor
+  commentId: M:TF3.Core.Converters.Po.NodeContainerToPo.#ctor
+  fullName: TF3.Core.Converters.Po.NodeContainerToPo.NodeContainerToPo()
+  nameWithType: NodeContainerToPo.NodeContainerToPo()
+- uid: TF3.Core.Converters.Po.NodeContainerToPo.#ctor*
+  name: NodeContainerToPo
+  href: api/TF3.Core.Converters.Po.NodeContainerToPo.html#TF3_Core_Converters_Po_NodeContainerToPo__ctor_
+  commentId: Overload:TF3.Core.Converters.Po.NodeContainerToPo.#ctor
+  fullName: TF3.Core.Converters.Po.NodeContainerToPo.NodeContainerToPo
+  nameWithType: NodeContainerToPo.NodeContainerToPo
+- uid: TF3.Core.Converters.Po.NodeContainerToPo.Convert(Yarhl.FileSystem.NodeContainerFormat)
   name: Convert(NodeContainerFormat)
-  href: api/TF3.Core.Converters.Po.NodeContainerToPo.html#TF3_Core_Converters_Po_NodeContainerToPo_Convert_NodeContainerFormat_
-  commentId: M:TF3.Core.Converters.Po.NodeContainerToPo.Convert(NodeContainerFormat)
-  fullName: TF3.Core.Converters.Po.NodeContainerToPo.Convert(NodeContainerFormat)
+  href: api/TF3.Core.Converters.Po.NodeContainerToPo.html#TF3_Core_Converters_Po_NodeContainerToPo_Convert_Yarhl_FileSystem_NodeContainerFormat_
+  commentId: M:TF3.Core.Converters.Po.NodeContainerToPo.Convert(Yarhl.FileSystem.NodeContainerFormat)
+  fullName: TF3.Core.Converters.Po.NodeContainerToPo.Convert(Yarhl.FileSystem.NodeContainerFormat)
   nameWithType: NodeContainerToPo.Convert(NodeContainerFormat)
 - uid: TF3.Core.Converters.Po.NodeContainerToPo.Convert*
   name: Convert
   href: api/TF3.Core.Converters.Po.NodeContainerToPo.html#TF3_Core_Converters_Po_NodeContainerToPo_Convert_
   commentId: Overload:TF3.Core.Converters.Po.NodeContainerToPo.Convert
-  isSpec: "True"
   fullName: TF3.Core.Converters.Po.NodeContainerToPo.Convert
   nameWithType: NodeContainerToPo.Convert
 - uid: TF3.Core.Converters.SingleNodeToFormat
@@ -298,17 +403,28 @@ references:
   commentId: T:TF3.Core.Converters.SingleNodeToFormat
   fullName: TF3.Core.Converters.SingleNodeToFormat
   nameWithType: SingleNodeToFormat
-- uid: TF3.Core.Converters.SingleNodeToFormat.Convert(NodeContainerFormat)
+- uid: TF3.Core.Converters.SingleNodeToFormat.#ctor
+  name: SingleNodeToFormat()
+  href: api/TF3.Core.Converters.SingleNodeToFormat.html#TF3_Core_Converters_SingleNodeToFormat__ctor
+  commentId: M:TF3.Core.Converters.SingleNodeToFormat.#ctor
+  fullName: TF3.Core.Converters.SingleNodeToFormat.SingleNodeToFormat()
+  nameWithType: SingleNodeToFormat.SingleNodeToFormat()
+- uid: TF3.Core.Converters.SingleNodeToFormat.#ctor*
+  name: SingleNodeToFormat
+  href: api/TF3.Core.Converters.SingleNodeToFormat.html#TF3_Core_Converters_SingleNodeToFormat__ctor_
+  commentId: Overload:TF3.Core.Converters.SingleNodeToFormat.#ctor
+  fullName: TF3.Core.Converters.SingleNodeToFormat.SingleNodeToFormat
+  nameWithType: SingleNodeToFormat.SingleNodeToFormat
+- uid: TF3.Core.Converters.SingleNodeToFormat.Convert(Yarhl.FileSystem.NodeContainerFormat)
   name: Convert(NodeContainerFormat)
-  href: api/TF3.Core.Converters.SingleNodeToFormat.html#TF3_Core_Converters_SingleNodeToFormat_Convert_NodeContainerFormat_
-  commentId: M:TF3.Core.Converters.SingleNodeToFormat.Convert(NodeContainerFormat)
-  fullName: TF3.Core.Converters.SingleNodeToFormat.Convert(NodeContainerFormat)
+  href: api/TF3.Core.Converters.SingleNodeToFormat.html#TF3_Core_Converters_SingleNodeToFormat_Convert_Yarhl_FileSystem_NodeContainerFormat_
+  commentId: M:TF3.Core.Converters.SingleNodeToFormat.Convert(Yarhl.FileSystem.NodeContainerFormat)
+  fullName: TF3.Core.Converters.SingleNodeToFormat.Convert(Yarhl.FileSystem.NodeContainerFormat)
   nameWithType: SingleNodeToFormat.Convert(NodeContainerFormat)
 - uid: TF3.Core.Converters.SingleNodeToFormat.Convert*
   name: Convert
   href: api/TF3.Core.Converters.SingleNodeToFormat.html#TF3_Core_Converters_SingleNodeToFormat_Convert_
   commentId: Overload:TF3.Core.Converters.SingleNodeToFormat.Convert
-  isSpec: "True"
   fullName: TF3.Core.Converters.SingleNodeToFormat.Convert
   nameWithType: SingleNodeToFormat.Convert
 - uid: TF3.Core.EventArgs
@@ -333,7 +449,6 @@ references:
   name: AssetEventArgs
   href: api/TF3.Core.EventArgs.AssetEventArgs.html#TF3_Core_EventArgs_AssetEventArgs__ctor_
   commentId: Overload:TF3.Core.EventArgs.AssetEventArgs.#ctor
-  isSpec: "True"
   fullName: TF3.Core.EventArgs.AssetEventArgs.AssetEventArgs
   nameWithType: AssetEventArgs.AssetEventArgs
 - uid: TF3.Core.EventArgs.AssetEventArgs.Data
@@ -346,7 +461,6 @@ references:
   name: Data
   href: api/TF3.Core.EventArgs.AssetEventArgs.html#TF3_Core_EventArgs_AssetEventArgs_Data_
   commentId: Overload:TF3.Core.EventArgs.AssetEventArgs.Data
-  isSpec: "True"
   fullName: TF3.Core.EventArgs.AssetEventArgs.Data
   nameWithType: AssetEventArgs.Data
 - uid: TF3.Core.EventArgs.ContainerEventArgs
@@ -365,7 +479,6 @@ references:
   name: ContainerEventArgs
   href: api/TF3.Core.EventArgs.ContainerEventArgs.html#TF3_Core_EventArgs_ContainerEventArgs__ctor_
   commentId: Overload:TF3.Core.EventArgs.ContainerEventArgs.#ctor
-  isSpec: "True"
   fullName: TF3.Core.EventArgs.ContainerEventArgs.ContainerEventArgs
   nameWithType: ContainerEventArgs.ContainerEventArgs
 - uid: TF3.Core.EventArgs.ContainerEventArgs.Data
@@ -378,7 +491,6 @@ references:
   name: Data
   href: api/TF3.Core.EventArgs.ContainerEventArgs.html#TF3_Core_EventArgs_ContainerEventArgs_Data_
   commentId: Overload:TF3.Core.EventArgs.ContainerEventArgs.Data
-  isSpec: "True"
   fullName: TF3.Core.EventArgs.ContainerEventArgs.Data
   nameWithType: ContainerEventArgs.Data
 - uid: TF3.Core.EventArgs.PatchEventArgs
@@ -397,7 +509,6 @@ references:
   name: PatchEventArgs
   href: api/TF3.Core.EventArgs.PatchEventArgs.html#TF3_Core_EventArgs_PatchEventArgs__ctor_
   commentId: Overload:TF3.Core.EventArgs.PatchEventArgs.#ctor
-  isSpec: "True"
   fullName: TF3.Core.EventArgs.PatchEventArgs.PatchEventArgs
   nameWithType: PatchEventArgs.PatchEventArgs
 - uid: TF3.Core.EventArgs.PatchEventArgs.Data
@@ -410,7 +521,6 @@ references:
   name: Data
   href: api/TF3.Core.EventArgs.PatchEventArgs.html#TF3_Core_EventArgs_PatchEventArgs_Data_
   commentId: Overload:TF3.Core.EventArgs.PatchEventArgs.Data
-  isSpec: "True"
   fullName: TF3.Core.EventArgs.PatchEventArgs.Data
   nameWithType: PatchEventArgs.Data
 - uid: TF3.Core.EventArgs.ScriptEventArgs
@@ -429,7 +539,6 @@ references:
   name: ScriptEventArgs
   href: api/TF3.Core.EventArgs.ScriptEventArgs.html#TF3_Core_EventArgs_ScriptEventArgs__ctor_
   commentId: Overload:TF3.Core.EventArgs.ScriptEventArgs.#ctor
-  isSpec: "True"
   fullName: TF3.Core.EventArgs.ScriptEventArgs.ScriptEventArgs
   nameWithType: ScriptEventArgs.ScriptEventArgs
 - uid: TF3.Core.EventArgs.ScriptEventArgs.Data
@@ -442,7 +551,6 @@ references:
   name: Data
   href: api/TF3.Core.EventArgs.ScriptEventArgs.html#TF3_Core_EventArgs_ScriptEventArgs_Data_
   commentId: Overload:TF3.Core.EventArgs.ScriptEventArgs.Data
-  isSpec: "True"
   fullName: TF3.Core.EventArgs.ScriptEventArgs.Data
   nameWithType: ScriptEventArgs.Data
 - uid: TF3.Core.Exceptions
@@ -463,11 +571,11 @@ references:
   commentId: M:TF3.Core.Exceptions.ByteMismatchException.#ctor
   fullName: TF3.Core.Exceptions.ByteMismatchException.ByteMismatchException()
   nameWithType: ByteMismatchException.ByteMismatchException()
-- uid: TF3.Core.Exceptions.ByteMismatchException.#ctor(SerializationInfo,StreamingContext)
+- uid: TF3.Core.Exceptions.ByteMismatchException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
   name: ByteMismatchException(SerializationInfo, StreamingContext)
-  href: api/TF3.Core.Exceptions.ByteMismatchException.html#TF3_Core_Exceptions_ByteMismatchException__ctor_SerializationInfo_StreamingContext_
-  commentId: M:TF3.Core.Exceptions.ByteMismatchException.#ctor(SerializationInfo,StreamingContext)
-  fullName: TF3.Core.Exceptions.ByteMismatchException.ByteMismatchException(SerializationInfo, StreamingContext)
+  href: api/TF3.Core.Exceptions.ByteMismatchException.html#TF3_Core_Exceptions_ByteMismatchException__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_
+  commentId: M:TF3.Core.Exceptions.ByteMismatchException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  fullName: TF3.Core.Exceptions.ByteMismatchException.ByteMismatchException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
   nameWithType: ByteMismatchException.ByteMismatchException(SerializationInfo, StreamingContext)
 - uid: TF3.Core.Exceptions.ByteMismatchException.#ctor(System.String)
   name: ByteMismatchException(String)
@@ -475,17 +583,16 @@ references:
   commentId: M:TF3.Core.Exceptions.ByteMismatchException.#ctor(System.String)
   fullName: TF3.Core.Exceptions.ByteMismatchException.ByteMismatchException(System.String)
   nameWithType: ByteMismatchException.ByteMismatchException(String)
-- uid: TF3.Core.Exceptions.ByteMismatchException.#ctor(System.String,Exception)
+- uid: TF3.Core.Exceptions.ByteMismatchException.#ctor(System.String,System.Exception)
   name: ByteMismatchException(String, Exception)
-  href: api/TF3.Core.Exceptions.ByteMismatchException.html#TF3_Core_Exceptions_ByteMismatchException__ctor_System_String_Exception_
-  commentId: M:TF3.Core.Exceptions.ByteMismatchException.#ctor(System.String,Exception)
-  fullName: TF3.Core.Exceptions.ByteMismatchException.ByteMismatchException(System.String, Exception)
+  href: api/TF3.Core.Exceptions.ByteMismatchException.html#TF3_Core_Exceptions_ByteMismatchException__ctor_System_String_System_Exception_
+  commentId: M:TF3.Core.Exceptions.ByteMismatchException.#ctor(System.String,System.Exception)
+  fullName: TF3.Core.Exceptions.ByteMismatchException.ByteMismatchException(System.String, System.Exception)
   nameWithType: ByteMismatchException.ByteMismatchException(String, Exception)
 - uid: TF3.Core.Exceptions.ByteMismatchException.#ctor*
   name: ByteMismatchException
   href: api/TF3.Core.Exceptions.ByteMismatchException.html#TF3_Core_Exceptions_ByteMismatchException__ctor_
   commentId: Overload:TF3.Core.Exceptions.ByteMismatchException.#ctor
-  isSpec: "True"
   fullName: TF3.Core.Exceptions.ByteMismatchException.ByteMismatchException
   nameWithType: ByteMismatchException.ByteMismatchException
 - uid: TF3.Core.Exceptions.ChecksumMismatchException
@@ -500,11 +607,11 @@ references:
   commentId: M:TF3.Core.Exceptions.ChecksumMismatchException.#ctor
   fullName: TF3.Core.Exceptions.ChecksumMismatchException.ChecksumMismatchException()
   nameWithType: ChecksumMismatchException.ChecksumMismatchException()
-- uid: TF3.Core.Exceptions.ChecksumMismatchException.#ctor(SerializationInfo,StreamingContext)
+- uid: TF3.Core.Exceptions.ChecksumMismatchException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
   name: ChecksumMismatchException(SerializationInfo, StreamingContext)
-  href: api/TF3.Core.Exceptions.ChecksumMismatchException.html#TF3_Core_Exceptions_ChecksumMismatchException__ctor_SerializationInfo_StreamingContext_
-  commentId: M:TF3.Core.Exceptions.ChecksumMismatchException.#ctor(SerializationInfo,StreamingContext)
-  fullName: TF3.Core.Exceptions.ChecksumMismatchException.ChecksumMismatchException(SerializationInfo, StreamingContext)
+  href: api/TF3.Core.Exceptions.ChecksumMismatchException.html#TF3_Core_Exceptions_ChecksumMismatchException__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_
+  commentId: M:TF3.Core.Exceptions.ChecksumMismatchException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  fullName: TF3.Core.Exceptions.ChecksumMismatchException.ChecksumMismatchException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
   nameWithType: ChecksumMismatchException.ChecksumMismatchException(SerializationInfo, StreamingContext)
 - uid: TF3.Core.Exceptions.ChecksumMismatchException.#ctor(System.String)
   name: ChecksumMismatchException(String)
@@ -512,17 +619,16 @@ references:
   commentId: M:TF3.Core.Exceptions.ChecksumMismatchException.#ctor(System.String)
   fullName: TF3.Core.Exceptions.ChecksumMismatchException.ChecksumMismatchException(System.String)
   nameWithType: ChecksumMismatchException.ChecksumMismatchException(String)
-- uid: TF3.Core.Exceptions.ChecksumMismatchException.#ctor(System.String,Exception)
+- uid: TF3.Core.Exceptions.ChecksumMismatchException.#ctor(System.String,System.Exception)
   name: ChecksumMismatchException(String, Exception)
-  href: api/TF3.Core.Exceptions.ChecksumMismatchException.html#TF3_Core_Exceptions_ChecksumMismatchException__ctor_System_String_Exception_
-  commentId: M:TF3.Core.Exceptions.ChecksumMismatchException.#ctor(System.String,Exception)
-  fullName: TF3.Core.Exceptions.ChecksumMismatchException.ChecksumMismatchException(System.String, Exception)
+  href: api/TF3.Core.Exceptions.ChecksumMismatchException.html#TF3_Core_Exceptions_ChecksumMismatchException__ctor_System_String_System_Exception_
+  commentId: M:TF3.Core.Exceptions.ChecksumMismatchException.#ctor(System.String,System.Exception)
+  fullName: TF3.Core.Exceptions.ChecksumMismatchException.ChecksumMismatchException(System.String, System.Exception)
   nameWithType: ChecksumMismatchException.ChecksumMismatchException(String, Exception)
 - uid: TF3.Core.Exceptions.ChecksumMismatchException.#ctor*
   name: ChecksumMismatchException
   href: api/TF3.Core.Exceptions.ChecksumMismatchException.html#TF3_Core_Exceptions_ChecksumMismatchException__ctor_
   commentId: Overload:TF3.Core.Exceptions.ChecksumMismatchException.#ctor
-  isSpec: "True"
   fullName: TF3.Core.Exceptions.ChecksumMismatchException.ChecksumMismatchException
   nameWithType: ChecksumMismatchException.ChecksumMismatchException
 - uid: TF3.Core.Exceptions.UnknownConverterException
@@ -537,11 +643,11 @@ references:
   commentId: M:TF3.Core.Exceptions.UnknownConverterException.#ctor
   fullName: TF3.Core.Exceptions.UnknownConverterException.UnknownConverterException()
   nameWithType: UnknownConverterException.UnknownConverterException()
-- uid: TF3.Core.Exceptions.UnknownConverterException.#ctor(SerializationInfo,StreamingContext)
+- uid: TF3.Core.Exceptions.UnknownConverterException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
   name: UnknownConverterException(SerializationInfo, StreamingContext)
-  href: api/TF3.Core.Exceptions.UnknownConverterException.html#TF3_Core_Exceptions_UnknownConverterException__ctor_SerializationInfo_StreamingContext_
-  commentId: M:TF3.Core.Exceptions.UnknownConverterException.#ctor(SerializationInfo,StreamingContext)
-  fullName: TF3.Core.Exceptions.UnknownConverterException.UnknownConverterException(SerializationInfo, StreamingContext)
+  href: api/TF3.Core.Exceptions.UnknownConverterException.html#TF3_Core_Exceptions_UnknownConverterException__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_
+  commentId: M:TF3.Core.Exceptions.UnknownConverterException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  fullName: TF3.Core.Exceptions.UnknownConverterException.UnknownConverterException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
   nameWithType: UnknownConverterException.UnknownConverterException(SerializationInfo, StreamingContext)
 - uid: TF3.Core.Exceptions.UnknownConverterException.#ctor(System.String)
   name: UnknownConverterException(String)
@@ -549,17 +655,16 @@ references:
   commentId: M:TF3.Core.Exceptions.UnknownConverterException.#ctor(System.String)
   fullName: TF3.Core.Exceptions.UnknownConverterException.UnknownConverterException(System.String)
   nameWithType: UnknownConverterException.UnknownConverterException(String)
-- uid: TF3.Core.Exceptions.UnknownConverterException.#ctor(System.String,Exception)
+- uid: TF3.Core.Exceptions.UnknownConverterException.#ctor(System.String,System.Exception)
   name: UnknownConverterException(String, Exception)
-  href: api/TF3.Core.Exceptions.UnknownConverterException.html#TF3_Core_Exceptions_UnknownConverterException__ctor_System_String_Exception_
-  commentId: M:TF3.Core.Exceptions.UnknownConverterException.#ctor(System.String,Exception)
-  fullName: TF3.Core.Exceptions.UnknownConverterException.UnknownConverterException(System.String, Exception)
+  href: api/TF3.Core.Exceptions.UnknownConverterException.html#TF3_Core_Exceptions_UnknownConverterException__ctor_System_String_System_Exception_
+  commentId: M:TF3.Core.Exceptions.UnknownConverterException.#ctor(System.String,System.Exception)
+  fullName: TF3.Core.Exceptions.UnknownConverterException.UnknownConverterException(System.String, System.Exception)
   nameWithType: UnknownConverterException.UnknownConverterException(String, Exception)
 - uid: TF3.Core.Exceptions.UnknownConverterException.#ctor*
   name: UnknownConverterException
   href: api/TF3.Core.Exceptions.UnknownConverterException.html#TF3_Core_Exceptions_UnknownConverterException__ctor_
   commentId: Overload:TF3.Core.Exceptions.UnknownConverterException.#ctor
-  isSpec: "True"
   fullName: TF3.Core.Exceptions.UnknownConverterException.UnknownConverterException
   nameWithType: UnknownConverterException.UnknownConverterException
 - uid: TF3.Core.Formats
@@ -584,7 +689,6 @@ references:
   name: BinaryPatch
   href: api/TF3.Core.Formats.BinaryPatch.html#TF3_Core_Formats_BinaryPatch__ctor_
   commentId: Overload:TF3.Core.Formats.BinaryPatch.#ctor
-  isSpec: "True"
   fullName: TF3.Core.Formats.BinaryPatch.BinaryPatch
   nameWithType: BinaryPatch.BinaryPatch
 - uid: TF3.Core.Formats.BinaryPatch.FileName
@@ -597,7 +701,6 @@ references:
   name: FileName
   href: api/TF3.Core.Formats.BinaryPatch.html#TF3_Core_Formats_BinaryPatch_FileName_
   commentId: Overload:TF3.Core.Formats.BinaryPatch.FileName
-  isSpec: "True"
   fullName: TF3.Core.Formats.BinaryPatch.FileName
   nameWithType: BinaryPatch.FileName
 - uid: TF3.Core.Formats.BinaryPatch.Patches
@@ -610,7 +713,6 @@ references:
   name: Patches
   href: api/TF3.Core.Formats.BinaryPatch.html#TF3_Core_Formats_BinaryPatch_Patches_
   commentId: Overload:TF3.Core.Formats.BinaryPatch.Patches
-  isSpec: "True"
   fullName: TF3.Core.Formats.BinaryPatch.Patches
   nameWithType: BinaryPatch.Patches
 - uid: TF3.Core.Formats.BinaryPatch.RawOffset
@@ -623,7 +725,6 @@ references:
   name: RawOffset
   href: api/TF3.Core.Formats.BinaryPatch.html#TF3_Core_Formats_BinaryPatch_RawOffset_
   commentId: Overload:TF3.Core.Formats.BinaryPatch.RawOffset
-  isSpec: "True"
   fullName: TF3.Core.Formats.BinaryPatch.RawOffset
   nameWithType: BinaryPatch.RawOffset
 - uid: TF3.Core.Formats.DdsFileFormat
@@ -642,7 +743,6 @@ references:
   name: DdsFileFormat
   href: api/TF3.Core.Formats.DdsFileFormat.html#TF3_Core_Formats_DdsFileFormat__ctor_
   commentId: Overload:TF3.Core.Formats.DdsFileFormat.#ctor
-  isSpec: "True"
   fullName: TF3.Core.Formats.DdsFileFormat.DdsFileFormat
   nameWithType: DdsFileFormat.DdsFileFormat
 - uid: TF3.Core.Formats.DdsFileFormat.Internal
@@ -655,7 +755,6 @@ references:
   name: Internal
   href: api/TF3.Core.Formats.DdsFileFormat.html#TF3_Core_Formats_DdsFileFormat_Internal_
   commentId: Overload:TF3.Core.Formats.DdsFileFormat.Internal
-  isSpec: "True"
   fullName: TF3.Core.Formats.DdsFileFormat.Internal
   nameWithType: DdsFileFormat.Internal
 - uid: TF3.Core.GameScript
@@ -664,6 +763,18 @@ references:
   commentId: T:TF3.Core.GameScript
   fullName: TF3.Core.GameScript
   nameWithType: GameScript
+- uid: TF3.Core.GameScript.#ctor
+  name: GameScript()
+  href: api/TF3.Core.GameScript.html#TF3_Core_GameScript__ctor
+  commentId: M:TF3.Core.GameScript.#ctor
+  fullName: TF3.Core.GameScript.GameScript()
+  nameWithType: GameScript.GameScript()
+- uid: TF3.Core.GameScript.#ctor*
+  name: GameScript
+  href: api/TF3.Core.GameScript.html#TF3_Core_GameScript__ctor_
+  commentId: Overload:TF3.Core.GameScript.#ctor
+  fullName: TF3.Core.GameScript.GameScript
+  nameWithType: GameScript.GameScript
 - uid: TF3.Core.GameScript.AssetExtracted
   name: AssetExtracted
   href: api/TF3.Core.GameScript.html#TF3_Core_GameScript_AssetExtracted
@@ -698,7 +809,6 @@ references:
   name: Assets
   href: api/TF3.Core.GameScript.html#TF3_Core_GameScript_Assets_
   commentId: Overload:TF3.Core.GameScript.Assets
-  isSpec: "True"
   fullName: TF3.Core.GameScript.Assets
   nameWithType: GameScript.Assets
 - uid: TF3.Core.GameScript.AssetTranslated
@@ -741,7 +851,6 @@ references:
   name: Containers
   href: api/TF3.Core.GameScript.html#TF3_Core_GameScript_Containers_
   commentId: Overload:TF3.Core.GameScript.Containers
-  isSpec: "True"
   fullName: TF3.Core.GameScript.Containers
   nameWithType: GameScript.Containers
 - uid: TF3.Core.GameScript.ContainerWriting
@@ -766,7 +875,6 @@ references:
   name: Extract
   href: api/TF3.Core.GameScript.html#TF3_Core_GameScript_Extract_
   commentId: Overload:TF3.Core.GameScript.Extract
-  isSpec: "True"
   fullName: TF3.Core.GameScript.Extract
   nameWithType: GameScript.Extract
 - uid: TF3.Core.GameScript.Game
@@ -779,7 +887,6 @@ references:
   name: Game
   href: api/TF3.Core.GameScript.html#TF3_Core_GameScript_Game_
   commentId: Overload:TF3.Core.GameScript.Game
-  isSpec: "True"
   fullName: TF3.Core.GameScript.Game
   nameWithType: GameScript.Game
 - uid: TF3.Core.GameScript.Name
@@ -792,7 +899,6 @@ references:
   name: Name
   href: api/TF3.Core.GameScript.html#TF3_Core_GameScript_Name_
   commentId: Overload:TF3.Core.GameScript.Name
-  isSpec: "True"
   fullName: TF3.Core.GameScript.Name
   nameWithType: GameScript.Name
 - uid: TF3.Core.GameScript.Parameters
@@ -805,7 +911,6 @@ references:
   name: Parameters
   href: api/TF3.Core.GameScript.html#TF3_Core_GameScript_Parameters_
   commentId: Overload:TF3.Core.GameScript.Parameters
-  isSpec: "True"
   fullName: TF3.Core.GameScript.Parameters
   nameWithType: GameScript.Parameters
 - uid: TF3.Core.GameScript.PatchApplied
@@ -830,7 +935,6 @@ references:
   name: Patches
   href: api/TF3.Core.GameScript.html#TF3_Core_GameScript_Patches_
   commentId: Overload:TF3.Core.GameScript.Patches
-  isSpec: "True"
   fullName: TF3.Core.GameScript.Patches
   nameWithType: GameScript.Patches
 - uid: TF3.Core.GameScript.PatchSkipped
@@ -849,7 +953,6 @@ references:
   name: Rebuild
   href: api/TF3.Core.GameScript.html#TF3_Core_GameScript_Rebuild_
   commentId: Overload:TF3.Core.GameScript.Rebuild
-  isSpec: "True"
   fullName: TF3.Core.GameScript.Rebuild
   nameWithType: GameScript.Rebuild
 - uid: TF3.Core.GameScript.ScriptExtracted
@@ -888,11 +991,11 @@ references:
   commentId: T:TF3.Core.Helpers.ChecksumHelper
   fullName: TF3.Core.Helpers.ChecksumHelper
   nameWithType: ChecksumHelper
-- uid: TF3.Core.Helpers.ChecksumHelper.Check(Stream,System.UInt64)
+- uid: TF3.Core.Helpers.ChecksumHelper.Check(System.IO.Stream,System.UInt64)
   name: Check(Stream, UInt64)
-  href: api/TF3.Core.Helpers.ChecksumHelper.html#TF3_Core_Helpers_ChecksumHelper_Check_Stream_System_UInt64_
-  commentId: M:TF3.Core.Helpers.ChecksumHelper.Check(Stream,System.UInt64)
-  fullName: TF3.Core.Helpers.ChecksumHelper.Check(Stream, System.UInt64)
+  href: api/TF3.Core.Helpers.ChecksumHelper.html#TF3_Core_Helpers_ChecksumHelper_Check_System_IO_Stream_System_UInt64_
+  commentId: M:TF3.Core.Helpers.ChecksumHelper.Check(System.IO.Stream,System.UInt64)
+  fullName: TF3.Core.Helpers.ChecksumHelper.Check(System.IO.Stream, System.UInt64)
   nameWithType: ChecksumHelper.Check(Stream, UInt64)
 - uid: TF3.Core.Helpers.ChecksumHelper.Check(System.String,System.UInt64)
   name: Check(String, UInt64)
@@ -904,7 +1007,6 @@ references:
   name: Check
   href: api/TF3.Core.Helpers.ChecksumHelper.html#TF3_Core_Helpers_ChecksumHelper_Check_
   commentId: Overload:TF3.Core.Helpers.ChecksumHelper.Check
-  isSpec: "True"
   fullName: TF3.Core.Helpers.ChecksumHelper.Check
   nameWithType: ChecksumHelper.Check
 - uid: TF3.Core.Helpers.YarhlNodeExtension
@@ -913,33 +1015,31 @@ references:
   commentId: T:TF3.Core.Helpers.YarhlNodeExtension
   fullName: TF3.Core.Helpers.YarhlNodeExtension
   nameWithType: YarhlNodeExtension
-- uid: TF3.Core.Helpers.YarhlNodeExtension.Transform(Node,List{TF3.Core.Models.ConverterInfo},List{TF3.Core.Models.ParameterInfo})
+- uid: TF3.Core.Helpers.YarhlNodeExtension.Transform(Yarhl.FileSystem.Node,System.Collections.Generic.List{TF3.Core.Models.ConverterInfo},System.Collections.Generic.List{TF3.Core.Models.ParameterInfo})
   name: Transform(Node, List<ConverterInfo>, List<ParameterInfo>)
-  href: api/TF3.Core.Helpers.YarhlNodeExtension.html#TF3_Core_Helpers_YarhlNodeExtension_Transform_Node_List_TF3_Core_Models_ConverterInfo__List_TF3_Core_Models_ParameterInfo__
-  commentId: M:TF3.Core.Helpers.YarhlNodeExtension.Transform(Node,List{TF3.Core.Models.ConverterInfo},List{TF3.Core.Models.ParameterInfo})
+  href: api/TF3.Core.Helpers.YarhlNodeExtension.html#TF3_Core_Helpers_YarhlNodeExtension_Transform_Yarhl_FileSystem_Node_System_Collections_Generic_List_TF3_Core_Models_ConverterInfo__System_Collections_Generic_List_TF3_Core_Models_ParameterInfo__
+  commentId: M:TF3.Core.Helpers.YarhlNodeExtension.Transform(Yarhl.FileSystem.Node,System.Collections.Generic.List{TF3.Core.Models.ConverterInfo},System.Collections.Generic.List{TF3.Core.Models.ParameterInfo})
   name.vb: Transform(Node, List(Of ConverterInfo), List(Of ParameterInfo))
-  fullName: TF3.Core.Helpers.YarhlNodeExtension.Transform(Node, List<TF3.Core.Models.ConverterInfo>, List<TF3.Core.Models.ParameterInfo>)
-  fullName.vb: TF3.Core.Helpers.YarhlNodeExtension.Transform(Node, List(Of TF3.Core.Models.ConverterInfo), List(Of TF3.Core.Models.ParameterInfo))
+  fullName: TF3.Core.Helpers.YarhlNodeExtension.Transform(Yarhl.FileSystem.Node, System.Collections.Generic.List<TF3.Core.Models.ConverterInfo>, System.Collections.Generic.List<TF3.Core.Models.ParameterInfo>)
+  fullName.vb: TF3.Core.Helpers.YarhlNodeExtension.Transform(Yarhl.FileSystem.Node, System.Collections.Generic.List(Of TF3.Core.Models.ConverterInfo), System.Collections.Generic.List(Of TF3.Core.Models.ParameterInfo))
   nameWithType: YarhlNodeExtension.Transform(Node, List<ConverterInfo>, List<ParameterInfo>)
   nameWithType.vb: YarhlNodeExtension.Transform(Node, List(Of ConverterInfo), List(Of ParameterInfo))
 - uid: TF3.Core.Helpers.YarhlNodeExtension.Transform*
   name: Transform
   href: api/TF3.Core.Helpers.YarhlNodeExtension.html#TF3_Core_Helpers_YarhlNodeExtension_Transform_
   commentId: Overload:TF3.Core.Helpers.YarhlNodeExtension.Transform
-  isSpec: "True"
   fullName: TF3.Core.Helpers.YarhlNodeExtension.Transform
   nameWithType: YarhlNodeExtension.Transform
-- uid: TF3.Core.Helpers.YarhlNodeExtension.Translate(Node,Node,System.String)
+- uid: TF3.Core.Helpers.YarhlNodeExtension.Translate(Yarhl.FileSystem.Node,Yarhl.FileSystem.Node,System.String)
   name: Translate(Node, Node, String)
-  href: api/TF3.Core.Helpers.YarhlNodeExtension.html#TF3_Core_Helpers_YarhlNodeExtension_Translate_Node_Node_System_String_
-  commentId: M:TF3.Core.Helpers.YarhlNodeExtension.Translate(Node,Node,System.String)
-  fullName: TF3.Core.Helpers.YarhlNodeExtension.Translate(Node, Node, System.String)
+  href: api/TF3.Core.Helpers.YarhlNodeExtension.html#TF3_Core_Helpers_YarhlNodeExtension_Translate_Yarhl_FileSystem_Node_Yarhl_FileSystem_Node_System_String_
+  commentId: M:TF3.Core.Helpers.YarhlNodeExtension.Translate(Yarhl.FileSystem.Node,Yarhl.FileSystem.Node,System.String)
+  fullName: TF3.Core.Helpers.YarhlNodeExtension.Translate(Yarhl.FileSystem.Node, Yarhl.FileSystem.Node, System.String)
   nameWithType: YarhlNodeExtension.Translate(Node, Node, String)
 - uid: TF3.Core.Helpers.YarhlNodeExtension.Translate*
   name: Translate
   href: api/TF3.Core.Helpers.YarhlNodeExtension.html#TF3_Core_Helpers_YarhlNodeExtension_Translate_
   commentId: Overload:TF3.Core.Helpers.YarhlNodeExtension.Translate
-  isSpec: "True"
   fullName: TF3.Core.Helpers.YarhlNodeExtension.Translate
   nameWithType: YarhlNodeExtension.Translate
 - uid: TF3.Core.Models
@@ -954,6 +1054,18 @@ references:
   commentId: T:TF3.Core.Models.AssetFileInfo
   fullName: TF3.Core.Models.AssetFileInfo
   nameWithType: AssetFileInfo
+- uid: TF3.Core.Models.AssetFileInfo.#ctor
+  name: AssetFileInfo()
+  href: api/TF3.Core.Models.AssetFileInfo.html#TF3_Core_Models_AssetFileInfo__ctor
+  commentId: M:TF3.Core.Models.AssetFileInfo.#ctor
+  fullName: TF3.Core.Models.AssetFileInfo.AssetFileInfo()
+  nameWithType: AssetFileInfo.AssetFileInfo()
+- uid: TF3.Core.Models.AssetFileInfo.#ctor*
+  name: AssetFileInfo
+  href: api/TF3.Core.Models.AssetFileInfo.html#TF3_Core_Models_AssetFileInfo__ctor_
+  commentId: Overload:TF3.Core.Models.AssetFileInfo.#ctor
+  fullName: TF3.Core.Models.AssetFileInfo.AssetFileInfo
+  nameWithType: AssetFileInfo.AssetFileInfo
 - uid: TF3.Core.Models.AssetFileInfo.Readers
   name: Readers
   href: api/TF3.Core.Models.AssetFileInfo.html#TF3_Core_Models_AssetFileInfo_Readers
@@ -964,7 +1076,6 @@ references:
   name: Readers
   href: api/TF3.Core.Models.AssetFileInfo.html#TF3_Core_Models_AssetFileInfo_Readers_
   commentId: Overload:TF3.Core.Models.AssetFileInfo.Readers
-  isSpec: "True"
   fullName: TF3.Core.Models.AssetFileInfo.Readers
   nameWithType: AssetFileInfo.Readers
 - uid: TF3.Core.Models.AssetFileInfo.Writers
@@ -977,7 +1088,6 @@ references:
   name: Writers
   href: api/TF3.Core.Models.AssetFileInfo.html#TF3_Core_Models_AssetFileInfo_Writers_
   commentId: Overload:TF3.Core.Models.AssetFileInfo.Writers
-  isSpec: "True"
   fullName: TF3.Core.Models.AssetFileInfo.Writers
   nameWithType: AssetFileInfo.Writers
 - uid: TF3.Core.Models.AssetInfo
@@ -986,6 +1096,18 @@ references:
   commentId: T:TF3.Core.Models.AssetInfo
   fullName: TF3.Core.Models.AssetInfo
   nameWithType: AssetInfo
+- uid: TF3.Core.Models.AssetInfo.#ctor
+  name: AssetInfo()
+  href: api/TF3.Core.Models.AssetInfo.html#TF3_Core_Models_AssetInfo__ctor
+  commentId: M:TF3.Core.Models.AssetInfo.#ctor
+  fullName: TF3.Core.Models.AssetInfo.AssetInfo()
+  nameWithType: AssetInfo.AssetInfo()
+- uid: TF3.Core.Models.AssetInfo.#ctor*
+  name: AssetInfo
+  href: api/TF3.Core.Models.AssetInfo.html#TF3_Core_Models_AssetInfo__ctor_
+  commentId: Overload:TF3.Core.Models.AssetInfo.#ctor
+  fullName: TF3.Core.Models.AssetInfo.AssetInfo
+  nameWithType: AssetInfo.AssetInfo
 - uid: TF3.Core.Models.AssetInfo.Extractors
   name: Extractors
   href: api/TF3.Core.Models.AssetInfo.html#TF3_Core_Models_AssetInfo_Extractors
@@ -996,7 +1118,6 @@ references:
   name: Extractors
   href: api/TF3.Core.Models.AssetInfo.html#TF3_Core_Models_AssetInfo_Extractors_
   commentId: Overload:TF3.Core.Models.AssetInfo.Extractors
-  isSpec: "True"
   fullName: TF3.Core.Models.AssetInfo.Extractors
   nameWithType: AssetInfo.Extractors
 - uid: TF3.Core.Models.AssetInfo.Files
@@ -1009,7 +1130,6 @@ references:
   name: Files
   href: api/TF3.Core.Models.AssetInfo.html#TF3_Core_Models_AssetInfo_Files_
   commentId: Overload:TF3.Core.Models.AssetInfo.Files
-  isSpec: "True"
   fullName: TF3.Core.Models.AssetInfo.Files
   nameWithType: AssetInfo.Files
 - uid: TF3.Core.Models.AssetInfo.Id
@@ -1022,7 +1142,6 @@ references:
   name: Id
   href: api/TF3.Core.Models.AssetInfo.html#TF3_Core_Models_AssetInfo_Id_
   commentId: Overload:TF3.Core.Models.AssetInfo.Id
-  isSpec: "True"
   fullName: TF3.Core.Models.AssetInfo.Id
   nameWithType: AssetInfo.Id
 - uid: TF3.Core.Models.AssetInfo.OutputNames
@@ -1035,7 +1154,6 @@ references:
   name: OutputNames
   href: api/TF3.Core.Models.AssetInfo.html#TF3_Core_Models_AssetInfo_OutputNames_
   commentId: Overload:TF3.Core.Models.AssetInfo.OutputNames
-  isSpec: "True"
   fullName: TF3.Core.Models.AssetInfo.OutputNames
   nameWithType: AssetInfo.OutputNames
 - uid: TF3.Core.Models.AssetInfo.TranslationMergers
@@ -1048,7 +1166,6 @@ references:
   name: TranslationMergers
   href: api/TF3.Core.Models.AssetInfo.html#TF3_Core_Models_AssetInfo_TranslationMergers_
   commentId: Overload:TF3.Core.Models.AssetInfo.TranslationMergers
-  isSpec: "True"
   fullName: TF3.Core.Models.AssetInfo.TranslationMergers
   nameWithType: AssetInfo.TranslationMergers
 - uid: TF3.Core.Models.AssetInfo.Translator
@@ -1061,7 +1178,6 @@ references:
   name: Translator
   href: api/TF3.Core.Models.AssetInfo.html#TF3_Core_Models_AssetInfo_Translator_
   commentId: Overload:TF3.Core.Models.AssetInfo.Translator
-  isSpec: "True"
   fullName: TF3.Core.Models.AssetInfo.Translator
   nameWithType: AssetInfo.Translator
 - uid: TF3.Core.Models.ContainerInfo
@@ -1070,6 +1186,18 @@ references:
   commentId: T:TF3.Core.Models.ContainerInfo
   fullName: TF3.Core.Models.ContainerInfo
   nameWithType: ContainerInfo
+- uid: TF3.Core.Models.ContainerInfo.#ctor
+  name: ContainerInfo()
+  href: api/TF3.Core.Models.ContainerInfo.html#TF3_Core_Models_ContainerInfo__ctor
+  commentId: M:TF3.Core.Models.ContainerInfo.#ctor
+  fullName: TF3.Core.Models.ContainerInfo.ContainerInfo()
+  nameWithType: ContainerInfo.ContainerInfo()
+- uid: TF3.Core.Models.ContainerInfo.#ctor*
+  name: ContainerInfo
+  href: api/TF3.Core.Models.ContainerInfo.html#TF3_Core_Models_ContainerInfo__ctor_
+  commentId: Overload:TF3.Core.Models.ContainerInfo.#ctor
+  fullName: TF3.Core.Models.ContainerInfo.ContainerInfo
+  nameWithType: ContainerInfo.ContainerInfo
 - uid: TF3.Core.Models.ContainerInfo.Checksums
   name: Checksums
   href: api/TF3.Core.Models.ContainerInfo.html#TF3_Core_Models_ContainerInfo_Checksums
@@ -1080,7 +1208,6 @@ references:
   name: Checksums
   href: api/TF3.Core.Models.ContainerInfo.html#TF3_Core_Models_ContainerInfo_Checksums_
   commentId: Overload:TF3.Core.Models.ContainerInfo.Checksums
-  isSpec: "True"
   fullName: TF3.Core.Models.ContainerInfo.Checksums
   nameWithType: ContainerInfo.Checksums
 - uid: TF3.Core.Models.ContainerInfo.Containers
@@ -1093,7 +1220,6 @@ references:
   name: Containers
   href: api/TF3.Core.Models.ContainerInfo.html#TF3_Core_Models_ContainerInfo_Containers_
   commentId: Overload:TF3.Core.Models.ContainerInfo.Containers
-  isSpec: "True"
   fullName: TF3.Core.Models.ContainerInfo.Containers
   nameWithType: ContainerInfo.Containers
 - uid: TF3.Core.Models.ContainerInfo.Id
@@ -1106,7 +1232,6 @@ references:
   name: Id
   href: api/TF3.Core.Models.ContainerInfo.html#TF3_Core_Models_ContainerInfo_Id_
   commentId: Overload:TF3.Core.Models.ContainerInfo.Id
-  isSpec: "True"
   fullName: TF3.Core.Models.ContainerInfo.Id
   nameWithType: ContainerInfo.Id
 - uid: TF3.Core.Models.ContainerInfo.Name
@@ -1119,7 +1244,6 @@ references:
   name: Name
   href: api/TF3.Core.Models.ContainerInfo.html#TF3_Core_Models_ContainerInfo_Name_
   commentId: Overload:TF3.Core.Models.ContainerInfo.Name
-  isSpec: "True"
   fullName: TF3.Core.Models.ContainerInfo.Name
   nameWithType: ContainerInfo.Name
 - uid: TF3.Core.Models.ContainerInfo.Paths
@@ -1132,7 +1256,6 @@ references:
   name: Paths
   href: api/TF3.Core.Models.ContainerInfo.html#TF3_Core_Models_ContainerInfo_Paths_
   commentId: Overload:TF3.Core.Models.ContainerInfo.Paths
-  isSpec: "True"
   fullName: TF3.Core.Models.ContainerInfo.Paths
   nameWithType: ContainerInfo.Paths
 - uid: TF3.Core.Models.ContainerInfo.Readers
@@ -1145,7 +1268,6 @@ references:
   name: Readers
   href: api/TF3.Core.Models.ContainerInfo.html#TF3_Core_Models_ContainerInfo_Readers_
   commentId: Overload:TF3.Core.Models.ContainerInfo.Readers
-  isSpec: "True"
   fullName: TF3.Core.Models.ContainerInfo.Readers
   nameWithType: ContainerInfo.Readers
 - uid: TF3.Core.Models.ContainerInfo.Writers
@@ -1158,7 +1280,6 @@ references:
   name: Writers
   href: api/TF3.Core.Models.ContainerInfo.html#TF3_Core_Models_ContainerInfo_Writers_
   commentId: Overload:TF3.Core.Models.ContainerInfo.Writers
-  isSpec: "True"
   fullName: TF3.Core.Models.ContainerInfo.Writers
   nameWithType: ContainerInfo.Writers
 - uid: TF3.Core.Models.ConverterInfo
@@ -1167,6 +1288,18 @@ references:
   commentId: T:TF3.Core.Models.ConverterInfo
   fullName: TF3.Core.Models.ConverterInfo
   nameWithType: ConverterInfo
+- uid: TF3.Core.Models.ConverterInfo.#ctor
+  name: ConverterInfo()
+  href: api/TF3.Core.Models.ConverterInfo.html#TF3_Core_Models_ConverterInfo__ctor
+  commentId: M:TF3.Core.Models.ConverterInfo.#ctor
+  fullName: TF3.Core.Models.ConverterInfo.ConverterInfo()
+  nameWithType: ConverterInfo.ConverterInfo()
+- uid: TF3.Core.Models.ConverterInfo.#ctor*
+  name: ConverterInfo
+  href: api/TF3.Core.Models.ConverterInfo.html#TF3_Core_Models_ConverterInfo__ctor_
+  commentId: Overload:TF3.Core.Models.ConverterInfo.#ctor
+  fullName: TF3.Core.Models.ConverterInfo.ConverterInfo
+  nameWithType: ConverterInfo.ConverterInfo
 - uid: TF3.Core.Models.ConverterInfo.ParameterId
   name: ParameterId
   href: api/TF3.Core.Models.ConverterInfo.html#TF3_Core_Models_ConverterInfo_ParameterId
@@ -1177,7 +1310,6 @@ references:
   name: ParameterId
   href: api/TF3.Core.Models.ConverterInfo.html#TF3_Core_Models_ConverterInfo_ParameterId_
   commentId: Overload:TF3.Core.Models.ConverterInfo.ParameterId
-  isSpec: "True"
   fullName: TF3.Core.Models.ConverterInfo.ParameterId
   nameWithType: ConverterInfo.ParameterId
 - uid: TF3.Core.Models.ConverterInfo.TypeName
@@ -1190,7 +1322,6 @@ references:
   name: TypeName
   href: api/TF3.Core.Models.ConverterInfo.html#TF3_Core_Models_ConverterInfo_TypeName_
   commentId: Overload:TF3.Core.Models.ConverterInfo.TypeName
-  isSpec: "True"
   fullName: TF3.Core.Models.ConverterInfo.TypeName
   nameWithType: ConverterInfo.TypeName
 - uid: TF3.Core.Models.FileInfo
@@ -1199,6 +1330,18 @@ references:
   commentId: T:TF3.Core.Models.FileInfo
   fullName: TF3.Core.Models.FileInfo
   nameWithType: FileInfo
+- uid: TF3.Core.Models.FileInfo.#ctor
+  name: FileInfo()
+  href: api/TF3.Core.Models.FileInfo.html#TF3_Core_Models_FileInfo__ctor
+  commentId: M:TF3.Core.Models.FileInfo.#ctor
+  fullName: TF3.Core.Models.FileInfo.FileInfo()
+  nameWithType: FileInfo.FileInfo()
+- uid: TF3.Core.Models.FileInfo.#ctor*
+  name: FileInfo
+  href: api/TF3.Core.Models.FileInfo.html#TF3_Core_Models_FileInfo__ctor_
+  commentId: Overload:TF3.Core.Models.FileInfo.#ctor
+  fullName: TF3.Core.Models.FileInfo.FileInfo
+  nameWithType: FileInfo.FileInfo
 - uid: TF3.Core.Models.FileInfo.Checksum
   name: Checksum
   href: api/TF3.Core.Models.FileInfo.html#TF3_Core_Models_FileInfo_Checksum
@@ -1209,7 +1352,6 @@ references:
   name: Checksum
   href: api/TF3.Core.Models.FileInfo.html#TF3_Core_Models_FileInfo_Checksum_
   commentId: Overload:TF3.Core.Models.FileInfo.Checksum
-  isSpec: "True"
   fullName: TF3.Core.Models.FileInfo.Checksum
   nameWithType: FileInfo.Checksum
 - uid: TF3.Core.Models.FileInfo.ContainerId
@@ -1222,7 +1364,6 @@ references:
   name: ContainerId
   href: api/TF3.Core.Models.FileInfo.html#TF3_Core_Models_FileInfo_ContainerId_
   commentId: Overload:TF3.Core.Models.FileInfo.ContainerId
-  isSpec: "True"
   fullName: TF3.Core.Models.FileInfo.ContainerId
   nameWithType: FileInfo.ContainerId
 - uid: TF3.Core.Models.FileInfo.Name
@@ -1235,7 +1376,6 @@ references:
   name: Name
   href: api/TF3.Core.Models.FileInfo.html#TF3_Core_Models_FileInfo_Name_
   commentId: Overload:TF3.Core.Models.FileInfo.Name
-  isSpec: "True"
   fullName: TF3.Core.Models.FileInfo.Name
   nameWithType: FileInfo.Name
 - uid: TF3.Core.Models.FileInfo.Path
@@ -1248,7 +1388,6 @@ references:
   name: Path
   href: api/TF3.Core.Models.FileInfo.html#TF3_Core_Models_FileInfo_Path_
   commentId: Overload:TF3.Core.Models.FileInfo.Path
-  isSpec: "True"
   fullName: TF3.Core.Models.FileInfo.Path
   nameWithType: FileInfo.Path
 - uid: TF3.Core.Models.ParameterInfo
@@ -1257,6 +1396,18 @@ references:
   commentId: T:TF3.Core.Models.ParameterInfo
   fullName: TF3.Core.Models.ParameterInfo
   nameWithType: ParameterInfo
+- uid: TF3.Core.Models.ParameterInfo.#ctor
+  name: ParameterInfo()
+  href: api/TF3.Core.Models.ParameterInfo.html#TF3_Core_Models_ParameterInfo__ctor
+  commentId: M:TF3.Core.Models.ParameterInfo.#ctor
+  fullName: TF3.Core.Models.ParameterInfo.ParameterInfo()
+  nameWithType: ParameterInfo.ParameterInfo()
+- uid: TF3.Core.Models.ParameterInfo.#ctor*
+  name: ParameterInfo
+  href: api/TF3.Core.Models.ParameterInfo.html#TF3_Core_Models_ParameterInfo__ctor_
+  commentId: Overload:TF3.Core.Models.ParameterInfo.#ctor
+  fullName: TF3.Core.Models.ParameterInfo.ParameterInfo
+  nameWithType: ParameterInfo.ParameterInfo
 - uid: TF3.Core.Models.ParameterInfo.Id
   name: Id
   href: api/TF3.Core.Models.ParameterInfo.html#TF3_Core_Models_ParameterInfo_Id
@@ -1267,7 +1418,6 @@ references:
   name: Id
   href: api/TF3.Core.Models.ParameterInfo.html#TF3_Core_Models_ParameterInfo_Id_
   commentId: Overload:TF3.Core.Models.ParameterInfo.Id
-  isSpec: "True"
   fullName: TF3.Core.Models.ParameterInfo.Id
   nameWithType: ParameterInfo.Id
 - uid: TF3.Core.Models.ParameterInfo.TypeName
@@ -1280,7 +1430,6 @@ references:
   name: TypeName
   href: api/TF3.Core.Models.ParameterInfo.html#TF3_Core_Models_ParameterInfo_TypeName_
   commentId: Overload:TF3.Core.Models.ParameterInfo.TypeName
-  isSpec: "True"
   fullName: TF3.Core.Models.ParameterInfo.TypeName
   nameWithType: ParameterInfo.TypeName
 - uid: TF3.Core.Models.ParameterInfo.Value
@@ -1293,7 +1442,6 @@ references:
   name: Value
   href: api/TF3.Core.Models.ParameterInfo.html#TF3_Core_Models_ParameterInfo_Value_
   commentId: Overload:TF3.Core.Models.ParameterInfo.Value
-  isSpec: "True"
   fullName: TF3.Core.Models.ParameterInfo.Value
   nameWithType: ParameterInfo.Value
 - uid: TF3.Core.Models.PatchInfo
@@ -1302,6 +1450,18 @@ references:
   commentId: T:TF3.Core.Models.PatchInfo
   fullName: TF3.Core.Models.PatchInfo
   nameWithType: PatchInfo
+- uid: TF3.Core.Models.PatchInfo.#ctor
+  name: PatchInfo()
+  href: api/TF3.Core.Models.PatchInfo.html#TF3_Core_Models_PatchInfo__ctor
+  commentId: M:TF3.Core.Models.PatchInfo.#ctor
+  fullName: TF3.Core.Models.PatchInfo.PatchInfo()
+  nameWithType: PatchInfo.PatchInfo()
+- uid: TF3.Core.Models.PatchInfo.#ctor*
+  name: PatchInfo
+  href: api/TF3.Core.Models.PatchInfo.html#TF3_Core_Models_PatchInfo__ctor_
+  commentId: Overload:TF3.Core.Models.PatchInfo.#ctor
+  fullName: TF3.Core.Models.PatchInfo.PatchInfo
+  nameWithType: PatchInfo.PatchInfo
 - uid: TF3.Core.Models.PatchInfo.File
   name: File
   href: api/TF3.Core.Models.PatchInfo.html#TF3_Core_Models_PatchInfo_File
@@ -1312,7 +1472,6 @@ references:
   name: File
   href: api/TF3.Core.Models.PatchInfo.html#TF3_Core_Models_PatchInfo_File_
   commentId: Overload:TF3.Core.Models.PatchInfo.File
-  isSpec: "True"
   fullName: TF3.Core.Models.PatchInfo.File
   nameWithType: PatchInfo.File
 - uid: TF3.Core.Models.PatchInfo.Id
@@ -1325,7 +1484,6 @@ references:
   name: Id
   href: api/TF3.Core.Models.PatchInfo.html#TF3_Core_Models_PatchInfo_Id_
   commentId: Overload:TF3.Core.Models.PatchInfo.Id
-  isSpec: "True"
   fullName: TF3.Core.Models.PatchInfo.Id
   nameWithType: PatchInfo.Id
 - uid: TF3.Core.Models.PatchInfo.Patch
@@ -1338,7 +1496,6 @@ references:
   name: Patch
   href: api/TF3.Core.Models.PatchInfo.html#TF3_Core_Models_PatchInfo_Patch_
   commentId: Overload:TF3.Core.Models.PatchInfo.Patch
-  isSpec: "True"
   fullName: TF3.Core.Models.PatchInfo.Patch
   nameWithType: PatchInfo.Patch
 - uid: TF3.Core.Models.PatchInfo.RawAddress
@@ -1351,7 +1508,6 @@ references:
   name: RawAddress
   href: api/TF3.Core.Models.PatchInfo.html#TF3_Core_Models_PatchInfo_RawAddress_
   commentId: Overload:TF3.Core.Models.PatchInfo.RawAddress
-  isSpec: "True"
   fullName: TF3.Core.Models.PatchInfo.RawAddress
   nameWithType: PatchInfo.RawAddress
 - uid: TF3.Core.Models.PatchInfo.VirtualAddress
@@ -1364,7 +1520,6 @@ references:
   name: VirtualAddress
   href: api/TF3.Core.Models.PatchInfo.html#TF3_Core_Models_PatchInfo_VirtualAddress_
   commentId: Overload:TF3.Core.Models.PatchInfo.VirtualAddress
-  isSpec: "True"
   fullName: TF3.Core.Models.PatchInfo.VirtualAddress
   nameWithType: PatchInfo.VirtualAddress
 - uid: TF3.Core.ScriptManager
@@ -1383,7 +1538,6 @@ references:
   name: Clear
   href: api/TF3.Core.ScriptManager.html#TF3_Core_ScriptManager_Clear_
   commentId: Overload:TF3.Core.ScriptManager.Clear
-  isSpec: "True"
   fullName: TF3.Core.ScriptManager.Clear
   nameWithType: ScriptManager.Clear
 - uid: TF3.Core.ScriptManager.LoadScripts(System.String)
@@ -1396,7 +1550,6 @@ references:
   name: LoadScripts
   href: api/TF3.Core.ScriptManager.html#TF3_Core_ScriptManager_LoadScripts_
   commentId: Overload:TF3.Core.ScriptManager.LoadScripts
-  isSpec: "True"
   fullName: TF3.Core.ScriptManager.LoadScripts
   nameWithType: ScriptManager.LoadScripts
 - uid: TF3.Core.ScriptManager.Scripts
@@ -1409,6 +1562,5 @@ references:
   name: Scripts
   href: api/TF3.Core.ScriptManager.html#TF3_Core_ScriptManager_Scripts_
   commentId: Overload:TF3.Core.ScriptManager.Scripts
-  isSpec: "True"
   fullName: TF3.Core.ScriptManager.Scripts
   nameWithType: ScriptManager.Scripts
