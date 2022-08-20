@@ -11,7 +11,7 @@
 
   <ItemGroup>
     <PackageReference Include="Yarhl" />
-    <PackageReference Include="Yarhl.Media" />
+    <PackageReference Include="Yarhl.Media.Text" />
     <PackageReference Include="Dahomey.Json" />
     <PackageReference Include="Standart.Hash.xxHash" />
     <PackageReference Include="BCnEncoder.Net" />
