@@ -3,6 +3,7 @@
     using System;
     using BCnEncoder.Shared.ImageFiles;
     using NUnit.Framework;
+    using TF3.Core.Converters.Common;
     using TF3.Core.Converters.DdsImage;
     using TF3.Core.Formats;
     using Yarhl.IO;
@@ -14,14 +15,16 @@
         [Test]
         public void NullSourceThrowsException()
         {
-            var converter = new ExtractToPng();
+            var converter = new Extractor();
+            converter.Initialize(new ImageExtractorParameters());
             _ = Assert.Throws<ArgumentNullException>(() => converter.Convert(null));
         }
 
         [Test]
         public void NullDdsThrowsException()
         {
-            var converter = new ExtractToPng();
+            var converter = new Extractor();
+            converter.Initialize(new ImageExtractorParameters());
             var format = new DdsFileFormat();
             _ = Assert.Throws<NullReferenceException>(() => converter.Convert(format));
         }
@@ -35,7 +38,8 @@
                 Internal = DdsFile.Load(ds),
             };
 
-            var converter = new ExtractToPng();
+            var converter = new Extractor();
+            converter.Initialize(new ImageExtractorParameters());
 
             BinaryFormat result = converter.Convert(format);
             Assert.IsNotNull(result);

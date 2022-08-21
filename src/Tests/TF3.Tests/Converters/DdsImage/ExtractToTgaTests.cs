@@ -3,7 +3,9 @@
     using System;
     using BCnEncoder.Shared.ImageFiles;
     using NUnit.Framework;
+    using TF3.Core.Converters.Common;
     using TF3.Core.Converters.DdsImage;
+    using TF3.Core.Enums;
     using TF3.Core.Formats;
     using Yarhl.IO;
 
@@ -14,14 +16,16 @@
         [Test]
         public void NullSourceThrowsException()
         {
-            var converter = new ExtractToTga();
+            var converter = new Extractor();
+            converter.Initialize(new ImageExtractorParameters { ImageFormat = BitmapExtractionFormat.Tga });
             _ = Assert.Throws<ArgumentNullException>(() => converter.Convert(null));
         }
 
         [Test]
         public void NullDdsThrowsException()
         {
-            var converter = new ExtractToTga();
+            var converter = new Extractor();
+            converter.Initialize(new ImageExtractorParameters { ImageFormat = BitmapExtractionFormat.Tga });
             var format = new DdsFileFormat();
             _ = Assert.Throws<NullReferenceException>(() => converter.Convert(format));
         }
@@ -32,7 +36,8 @@
             using DataStream ds = DataStreamFactory.FromArray(_validData, 0, _validData.Length);
             var format = new DdsFileFormat() { Internal = DdsFile.Load(ds) };
 
-            var converter = new ExtractToTga();
+            var converter = new Extractor();
+            converter.Initialize(new ImageExtractorParameters { ImageFormat = BitmapExtractionFormat.Tga });
 
             // TGA files do not have any magic number, so we can only check if no exception has been thrown
             BinaryFormat result = null;
