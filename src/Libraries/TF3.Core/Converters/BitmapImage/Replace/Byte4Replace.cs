@@ -18,48 +18,28 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-namespace TF3.Core.Converters.DdsImage
+namespace TF3.Core.Converters.BitmapImage.Replace
 {
-    using System;
-    using BCnEncoder.ImageSharp;
-    using BCnEncoder.Shared;
     using SixLabors.ImageSharp;
     using SixLabors.ImageSharp.PixelFormats;
-    using TF3.Core.Formats;
-    using Yarhl.FileFormat;
     using Yarhl.IO;
 
     /// <summary>
-    /// DDS to TGA converter.
+    /// Replaces the original image with a new one.
     /// </summary>
-    public class ExtractToTga : IConverter<DdsFileFormat, BinaryFormat>
+    public class Byte4Replace : AbstractReplace
     {
         /// <summary>
-        /// Converts a DDS file into TGA.
+        /// Converter initializer.
         /// </summary>
-        /// <param name="source">The DDS file.</param>
-        /// <returns>The TGA file.</returns>
-        public BinaryFormat Convert(DdsFileFormat source)
+        /// <remarks>
+        /// Initialization is mandatory.
+        /// </remarks>
+        /// <param name="parameters">New image binary.</param>
+        public override void Initialize(BinaryFormat parameters)
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
-
-            var decoder = new BCnEncoder.Decoder.BcDecoder
-            {
-                OutputOptions =
-                {
-                    Bc4Component = ColorComponent.Luminance,
-                },
-            };
-
-            using Image<Rgba32> image = decoder.DecodeToImageRgba32(source.Internal);
-
-            var result = new BinaryFormat();
-            image.SaveAsTga(result.Stream);
-
-            return result;
+            parameters.Stream.Seek(0);
+            SetNewImage(Image.Load<Byte4>(parameters.Stream));
         }
     }
 }

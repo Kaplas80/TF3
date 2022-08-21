@@ -80,12 +80,10 @@ namespace TF3.Core.Converters.DdsImage
                 },
             };
 
-            var result = new DdsFileFormat()
+            return new DdsFileFormat()
             {
                 Internal = encoder.EncodeToDds(_newImage),
             };
-
-            return result;
         }
 
         [ExcludeFromCodeCoverage(Justification = "Too many cases")]

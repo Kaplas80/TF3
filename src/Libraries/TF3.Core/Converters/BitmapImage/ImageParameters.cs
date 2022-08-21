@@ -1,4 +1,4 @@
-// Copyright (c) 2022 Kaplas
+// Copyright (c) 2021 Kaplas
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -17,41 +17,38 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-
 namespace TF3.Core.Converters.BitmapImage
 {
-    using System;
-    using BCnEncoder.ImageSharp;
-    using BCnEncoder.Shared;
-    using SixLabors.ImageSharp;
-    using SixLabors.ImageSharp.PixelFormats;
-    using TF3.Core.Formats;
-    using Yarhl.FileFormat;
-    using Yarhl.IO;
+    using TF3.Core.Enums;
 
     /// <summary>
-    /// Bitmap to PNG converter.
+    /// Parameters for Bitmap reader.
     /// </summary>
-    public class ExtractToPng : IConverter<BitmapFileFormat, BinaryFormat>
+    public class ImageParameters
     {
         /// <summary>
-        /// Converts a Bitmap file into PNG.
+        /// Initializes a new instance of the <see cref="ImageParameters"/> class.
         /// </summary>
-        /// <param name="source">The Bitmap file.</param>
-        /// <returns>The PNG file.</returns>
-        public BinaryFormat Convert(BitmapFileFormat source)
+        public ImageParameters()
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
-
-            var result = new BinaryFormat();
-            source.Internal.SaveAsPng(result.Stream);
-
-            source.Internal.Dispose();
-
-            return result;
+            PixelFormat = BitmapPixelFormat.Undefined;
+            ImageWidth = 0;
+            ImageHeight = 0;
         }
+
+        /// <summary>
+        /// Gets or sets a value indicating the image pixel format.
+        /// </summary>
+        public BitmapPixelFormat PixelFormat { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating the image width (in pixels).
+        /// </summary>
+        public int ImageWidth { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating the image height (in pixels).
+        /// </summary>
+        public int ImageHeight { get; set; }
     }
 }

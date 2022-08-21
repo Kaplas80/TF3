@@ -17,38 +17,26 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-namespace TF3.Core.Converters.BitmapImage
+namespace TF3.Core.Converters.Common
 {
     using TF3.Core.Enums;
 
     /// <summary>
-    /// Parameters for Bitmap reader.
+    /// Parameters for Bitmap extractor.
     /// </summary>
-    public class ReaderParameters
+    public class ImageExtractorParameters
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ReaderParameters"/> class.
+        /// Initializes a new instance of the <see cref="ImageExtractorParameters"/> class.
         /// </summary>
-        public ReaderParameters()
+        public ImageExtractorParameters()
         {
-            PixelFormat = BitmapPixelFormat.Undefined;
-            ImageWidth = 0;
-            ImageHeight = 0;
+            ImageFormat = BitmapExtractionFormat.Png;
         }
 
         /// <summary>
         /// Gets or sets a value indicating the image pixel format.
         /// </summary>
-        public BitmapPixelFormat PixelFormat { get; set; }
-
-        /// <summary>
-        /// Gets or sets a value indicating the image width (in pixels).
-        /// </summary>
-        public int ImageWidth { get; set; }
-
-        /// <summary>
-        /// Gets or sets a value indicating the image height (in pixels).
-        /// </summary>
-        public int ImageHeight { get; set; }
+        public BitmapExtractionFormat ImageFormat { get; set; }
     }
 }

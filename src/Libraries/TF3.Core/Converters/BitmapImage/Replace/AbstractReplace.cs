@@ -18,36 +18,57 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-namespace TF3.Core.Converters.DdsImage
+namespace TF3.Core.Converters.BitmapImage.Replace
 {
     using System;
-    using BCnEncoder.Shared.ImageFiles;
+    using SixLabors.ImageSharp;
     using TF3.Core.Formats;
     using Yarhl.FileFormat;
     using Yarhl.IO;
 
     /// <summary>
-    /// DDS file reader.
+    /// Replaces the original image with a new one.
     /// </summary>
-    public class Reader : IConverter<BinaryFormat, DdsFileFormat>
+    public abstract class AbstractReplace : IConverter<BitmapFileFormat, BitmapFileFormat>, IInitializer<BinaryFormat>
     {
+        private Image _newImage;
+
         /// <summary>
-        /// Reads a DDS file.
+        /// Converter initializer.
         /// </summary>
-        /// <param name="source">The DDS file.</param>
-        /// <returns>The DDS format.</returns>
-        public DdsFileFormat Convert(BinaryFormat source)
+        /// <remarks>
+        /// Initialization is mandatory.
+        /// </remarks>
+        /// <param name="parameters">New image binary.</param>
+        public abstract void Initialize(BinaryFormat parameters);
+
+        /// <summary>
+        /// Replaces the original bitmap with a new one.
+        /// </summary>
+        /// <param name="source">Original bitmap.</param>
+        /// <returns>New bitmap.</returns>
+        public BitmapFileFormat Convert(BitmapFileFormat source)
         {
             if (source == null)
             {
                 throw new ArgumentNullException(nameof(source));
             }
 
-            source.Stream.Seek(0);
-            return new DdsFileFormat()
+            if (_newImage == null)
             {
-                Internal = DdsFile.Load(source.Stream),
+                throw new InvalidOperationException("Uninitialized");
+            }
+
+            return new BitmapFileFormat()
+            {
+                Internal = _newImage,
             };
         }
+
+        /// <summary>
+        /// Sets the new image to insert.
+        /// </summary>
+        /// <param name="value">New image.</param>
+        protected void SetNewImage(Image value) => _newImage = value;
     }
 }
