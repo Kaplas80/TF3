@@ -290,7 +290,7 @@ namespace TF3.Core.Converters.BitmapImage
                 }
 
                 default:
-                    throw new FormatException("Unknown image format");
+                    throw new InvalidOperationException("Unknown image format");
             }
 
             return new BinaryFormat(DataStreamFactory.FromArray(pixelBytes));

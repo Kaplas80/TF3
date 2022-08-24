@@ -96,7 +96,7 @@ namespace TF3.Core.Converters.BitmapImage
                 BitmapPixelFormat.RgbaVector => Image.LoadPixelData<RgbaVector>(imageData, _readerParameters.ImageWidth, _readerParameters.ImageHeight),
                 BitmapPixelFormat.Short2 => Image.LoadPixelData<Short2>(imageData, _readerParameters.ImageWidth, _readerParameters.ImageHeight),
                 BitmapPixelFormat.Short4 => Image.LoadPixelData<Short4>(imageData, _readerParameters.ImageWidth, _readerParameters.ImageHeight),
-                _ => throw new FormatException("Unknown image format"),
+                _ => throw new InvalidOperationException("Unknown image format"),
             };
 
             var result = new BitmapFileFormat()
