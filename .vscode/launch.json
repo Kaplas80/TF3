@@ -1,19 +1,19 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": ".NET Core Launch (console)",
-            "type": "coreclr",
-            "request": "launch",
-            "preLaunchTask": "Cake: Run Build",
-            "program": "${workspaceFolder}/src/Applications/TF3.CommandLine/bin/Debug/net5.0/TF3.CommandLine.dll",
-            "args": [],
-            "cwd": "${workspaceFolder}",
-            "stopAtEntry": false,
-            "console": "internalConsole"
-        }
-    ]
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": ".NET Core Launch (console)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "Cake: Run Build",
+      "program": "${workspaceFolder}/src/Apps/TF3.CommandLine/bin/Debug/net6.0/win-x64/TF3.CommandLine.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/src/Apps/TF3.CommandLine/bin/Debug/net6.0/win-x64",
+      "stopAtEntry": false,
+      "console": "internalConsole"
+    }
+  ]
 }
