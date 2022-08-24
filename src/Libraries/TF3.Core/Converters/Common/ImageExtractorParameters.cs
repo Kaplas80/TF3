@@ -1,4 +1,4 @@
-// Copyright (c) 2022 Kaplas
+// Copyright (c) 2021 Kaplas
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -17,37 +17,26 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-
-namespace TF3.Core.Converters.DdsImage
+namespace TF3.Core.Converters.Common
 {
-    using System;
-    using BCnEncoder.Shared.ImageFiles;
-    using TF3.Core.Formats;
-    using Yarhl.FileFormat;
-    using Yarhl.IO;
+    using TF3.Core.Enums;
 
     /// <summary>
-    /// DDS file reader.
+    /// Parameters for Bitmap extractor.
     /// </summary>
-    public class Reader : IConverter<BinaryFormat, DdsFileFormat>
+    public class ImageExtractorParameters
     {
         /// <summary>
-        /// Reads a DDS file.
+        /// Initializes a new instance of the <see cref="ImageExtractorParameters"/> class.
         /// </summary>
-        /// <param name="source">The DDS file.</param>
-        /// <returns>The DDS format.</returns>
-        public DdsFileFormat Convert(BinaryFormat source)
+        public ImageExtractorParameters()
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
-
-            source.Stream.Seek(0);
-            return new DdsFileFormat()
-            {
-                Internal = DdsFile.Load(source.Stream),
-            };
+            ImageFormat = BitmapExtractionFormat.Png;
         }
+
+        /// <summary>
+        /// Gets or sets a value indicating the image pixel format.
+        /// </summary>
+        public BitmapExtractionFormat ImageFormat { get; set; }
     }
 }

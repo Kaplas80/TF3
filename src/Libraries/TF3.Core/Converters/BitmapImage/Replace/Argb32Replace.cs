@@ -18,36 +18,28 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-namespace TF3.Core.Converters.DdsImage
+namespace TF3.Core.Converters.BitmapImage.Replace
 {
-    using System;
-    using BCnEncoder.Shared.ImageFiles;
-    using TF3.Core.Formats;
-    using Yarhl.FileFormat;
+    using SixLabors.ImageSharp;
+    using SixLabors.ImageSharp.PixelFormats;
     using Yarhl.IO;
 
     /// <summary>
-    /// DDS file reader.
+    /// Replaces the original image with a new one.
     /// </summary>
-    public class Reader : IConverter<BinaryFormat, DdsFileFormat>
+    public class Argb32Replace : AbstractReplace
     {
         /// <summary>
-        /// Reads a DDS file.
+        /// Converter initializer.
         /// </summary>
-        /// <param name="source">The DDS file.</param>
-        /// <returns>The DDS format.</returns>
-        public DdsFileFormat Convert(BinaryFormat source)
+        /// <remarks>
+        /// Initialization is mandatory.
+        /// </remarks>
+        /// <param name="parameters">New image binary.</param>
+        public override void Initialize(BinaryFormat parameters)
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
-
-            source.Stream.Seek(0);
-            return new DdsFileFormat()
-            {
-                Internal = DdsFile.Load(source.Stream),
-            };
+            parameters.Stream.Seek(0);
+            SetNewImage(Image.Load<Argb32>(parameters.Stream));
         }
     }
 }

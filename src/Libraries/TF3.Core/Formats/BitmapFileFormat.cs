@@ -18,36 +18,27 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-namespace TF3.Core.Converters.DdsImage
+namespace TF3.Core.Formats
 {
-    using System;
-    using BCnEncoder.Shared.ImageFiles;
-    using TF3.Core.Formats;
+    using SixLabors.ImageSharp;
     using Yarhl.FileFormat;
-    using Yarhl.IO;
 
     /// <summary>
-    /// DDS file reader.
+    /// IFormat wrapper for SixLabors.ImageSharp.Image.
     /// </summary>
-    public class Reader : IConverter<BinaryFormat, DdsFileFormat>
+    public class BitmapFileFormat : IFormat
     {
         /// <summary>
-        /// Reads a DDS file.
+        /// Initializes a new instance of the <see cref="BitmapFileFormat"/> class.
         /// </summary>
-        /// <param name="source">The DDS file.</param>
-        /// <returns>The DDS format.</returns>
-        public DdsFileFormat Convert(BinaryFormat source)
+        public BitmapFileFormat()
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
-
-            source.Stream.Seek(0);
-            return new DdsFileFormat()
-            {
-                Internal = DdsFile.Load(source.Stream),
-            };
+            Internal = null;
         }
+
+        /// <summary>
+        /// Gets or sets the Image.
+        /// </summary>
+        public Image Internal { get; set; }
     }
 }

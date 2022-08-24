@@ -18,36 +18,60 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-namespace TF3.Core.Converters.DdsImage
+namespace TF3.Core.Converters.BitmapImage
 {
     using System;
-    using BCnEncoder.Shared.ImageFiles;
+    using SixLabors.ImageSharp;
+    using TF3.Core.Converters.Common;
+    using TF3.Core.Enums;
     using TF3.Core.Formats;
     using Yarhl.FileFormat;
     using Yarhl.IO;
 
     /// <summary>
-    /// DDS file reader.
+    /// Bitmap to PNG converter.
     /// </summary>
-    public class Reader : IConverter<BinaryFormat, DdsFileFormat>
+    public class Extractor : IConverter<BitmapFileFormat, BinaryFormat>, IInitializer<ImageExtractorParameters>
     {
+        private ImageExtractorParameters _extractorParameters = new ImageExtractorParameters();
+
         /// <summary>
-        /// Reads a DDS file.
+        /// Initializes the extractor parameters.
         /// </summary>
-        /// <param name="source">The DDS file.</param>
-        /// <returns>The DDS format.</returns>
-        public DdsFileFormat Convert(BinaryFormat source)
+        /// <param name="parameters">Extractor configuration.</param>
+        public void Initialize(ImageExtractorParameters parameters) => _extractorParameters = parameters;
+
+        /// <summary>
+        /// Converts a Bitmap file to a known format.
+        /// </summary>
+        /// <param name="source">The Bitmap file.</param>
+        /// <returns>The output file.</returns>
+        public BinaryFormat Convert(BitmapFileFormat source)
         {
             if (source == null)
             {
                 throw new ArgumentNullException(nameof(source));
             }
 
-            source.Stream.Seek(0);
-            return new DdsFileFormat()
+            var result = new BinaryFormat();
+
+            switch (_extractorParameters.ImageFormat)
             {
-                Internal = DdsFile.Load(source.Stream),
-            };
+                case BitmapExtractionFormat.Png:
+                    source.Internal.SaveAsPng(result.Stream);
+                    break;
+
+                case BitmapExtractionFormat.Tga:
+                    source.Internal.SaveAsTga(result.Stream);
+                    break;
+
+                default:
+                    throw new FormatException("Unknown image format");
+            }
+
+            source.Internal.Dispose();
+
+            return result;
         }
     }
 }
