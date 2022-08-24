@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Converters.BinaryPatch.Apply.html",
-          "hash": "L7118zqDFhAAKMyssYWPVldbF/T5Ao/yyTDiXso1MWk="
+          "hash": "nW4KcgD9A6YvX9tABuYIKsJmR4TSWoJqq4kXdkkUIjU="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Converters.BinaryPatch.Reader.html",
-          "hash": "xc0iJcGKSMdsYz4/7zIBmrpyvrFsY1la4kJ2c8PkEwI="
+          "hash": "waJ5glAcViYJ0I0/xCSMJwtK8JwJTCaDMKnUQEgDcl0="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Converters.BinaryPatch.html",
-          "hash": "iXlXyYn2lBUdqUYkLjF7hIFP8YjA3zOGdL2tTt3GU6M="
+          "hash": "/sBhJP30yILLqyI+V8AyAGGtWp/CwArJwm16uGtM2M0="
         }
       },
       "is_incremental": false,
@@ -74,11 +74,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/TF3.Core.Converters.DdsImage.ExtractToPng.yml",
+      "source_relative_path": "api/TF3.Core.Converters.BitmapImage.Extractor.yml",
       "output": {
         ".html": {
-          "relative_path": "api/TF3.Core.Converters.DdsImage.ExtractToPng.html",
-          "hash": "cNRWv1bAF9Df602vwh5RB/laeQ8gIrxjFEeY2DinEvg="
+          "relative_path": "api/TF3.Core.Converters.BitmapImage.Extractor.html",
+          "hash": "GX+e/gn/8G+Fp1zNMl2N20AtoPEAeDalH33kbzRzdAE="
         }
       },
       "is_incremental": false,
@@ -86,11 +86,455 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/TF3.Core.Converters.DdsImage.ExtractToTga.yml",
+      "source_relative_path": "api/TF3.Core.Converters.BitmapImage.ImageParameters.yml",
       "output": {
         ".html": {
-          "relative_path": "api/TF3.Core.Converters.DdsImage.ExtractToTga.html",
-          "hash": "7lXP2mtrg57sXl6Pq9sYJO0RqFN9zhzm/cwtRWIdFyU="
+          "relative_path": "api/TF3.Core.Converters.BitmapImage.ImageParameters.html",
+          "hash": "baWqg5kqaPyLSVkuPUsUobKr04qq3PUtgeVXkJJeHS0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Converters.BitmapImage.Reader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Converters.BitmapImage.Reader.html",
+          "hash": "KRcFo1te6YtwTvexQzv9OYPfHgCLd0IKqphCNJqXBak="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.A8Replace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.A8Replace.html",
+          "hash": "DbNbzQLYBgIohAe/tSUDBwaFX5fyEXIZpcpFoOGy890="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.Abgr32Replace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.Abgr32Replace.html",
+          "hash": "k+Xy0PYWMRfCC65NCbqml4/Pj4kIZ5esRlh6u26rQ+s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.AbstractReplace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.AbstractReplace.html",
+          "hash": "Xu6h93mr8uHNwqOZRL6C9eebh8As15P5ZRxtcuh7iZA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.Argb32Replace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.Argb32Replace.html",
+          "hash": "gZaUaZz4/rIIfhbLFWzzV4WaUcMbHw+5MK+GTKt9W2Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.Bgr24Replace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.Bgr24Replace.html",
+          "hash": "hkMJL23Y6ED04VUaj+MtxZwnfZcG0tAxkuZxCR5zaj0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.Bgr565Replace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.Bgr565Replace.html",
+          "hash": "7OO4mQlDyUj42En1nEF9Tn8j+o4XmeGj8JyPdI2ciK0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.Bgra32Replace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.Bgra32Replace.html",
+          "hash": "1WtAsrvVZFBSgADBrktxyn/sir7oGXOC6ArqT5YBod0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.Bgra4444Replace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.Bgra4444Replace.html",
+          "hash": "O7HLpfM0aGAjx6UuXe8SWTEe46y2KieEtFV2Ln+Y3eA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.Bgra5551Replace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.Bgra5551Replace.html",
+          "hash": "Ws1i1r/ZPmSXHbqd7jl0qGg6HvHFhmoocBvd0E1saFs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.Byte4Replace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.Byte4Replace.html",
+          "hash": "FPBHITXu+ve1k0fEdPE+bcBVaKHM/nNY1duJUgMG1f0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.HalfSingleReplace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.HalfSingleReplace.html",
+          "hash": "wEYa0R4NPV2J7ycP32dvjEaTpDsVoEo4KGvxUMU1iXw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.HalfVector2Replace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.HalfVector2Replace.html",
+          "hash": "W80JqDYaCrdW3FquNsV8l3M/264zG0fzOeHcg7eK/5w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.HalfVector4Replace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.HalfVector4Replace.html",
+          "hash": "6AhA6ngvcYfzAJ8OEwraq4+qKGF+FjDiWTDCcYBFT00="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.L16Replace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.L16Replace.html",
+          "hash": "1W2U991p0i1INfxmd+Z7PCUqWmMP89rcR5dJBCwsgB8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.L8Replace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.L8Replace.html",
+          "hash": "cMwnBMfQh4Dd0eHj68JYv7jl2PbMQBjIlnhCu+I+MrI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.La16Replace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.La16Replace.html",
+          "hash": "hyIKhgdM0bC1EcnKvH71opj45SgV51dPX+2ihK6yFgc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.La32Replace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.La32Replace.html",
+          "hash": "m4qoJ4AgKxsJtXOyHIJOFvIGg4PHX1FP8YUUrCmToq8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.NormalizedByte2Replace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.NormalizedByte2Replace.html",
+          "hash": "Us7ljObinVJL9qJ/nOM5Pr0ZdFQUfw6qqP2KHC1Jg1U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.NormalizedByte4Replace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.NormalizedByte4Replace.html",
+          "hash": "2CrLyeji6hLTSZwfzUIsPtPTPqJG1nsKlLKgqUjg0yk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.NormalizedShort2Replace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.NormalizedShort2Replace.html",
+          "hash": "urSh6gk1CNIU8idOqo/c9vgr9yM6O3B/nsuoDDMEbOE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.NormalizedShort4Replace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.NormalizedShort4Replace.html",
+          "hash": "1woEHmfVTNHVXNuSUSlhP15kADcNHV4DEJGNjNMkAec="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.Rg32Replace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.Rg32Replace.html",
+          "hash": "izeQ84TslLefGKHd5fsDjgnzbbCmaTq/3wFTpDbkW0U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.Rgb24Replace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.Rgb24Replace.html",
+          "hash": "iTTD0BM4DqQVMCLRLT1Z6aBZqNhCHFXitASOPiHK1BM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.Rgb48Replace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.Rgb48Replace.html",
+          "hash": "YvmoCGHGMpBJiIFnEvikOod8LpVaQmU4fhLfyLEI5v8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.Rgba1010102Replace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.Rgba1010102Replace.html",
+          "hash": "HvYTEZFcqfzMdvLPEJM92Oc0Y/Ey/8IAWaSKg1B7eEs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.Rgba32Replace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.Rgba32Replace.html",
+          "hash": "7r67fyHCGrS48A9yJEe3TWov1wzGi+U0fEJ8FUHiBM8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.Rgba64Replace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.Rgba64Replace.html",
+          "hash": "7TT+2kMtFanv5yUSTgdBfwZ3EoIy2AdGt4aL8RgdIpQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.RgbaVectorReplace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.RgbaVectorReplace.html",
+          "hash": "u0djMhllvhMZMR804RLsefkl7is6HTx82V+m3oM0Myo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.Short2Replace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.Short2Replace.html",
+          "hash": "OXUpmsUQx5WtwgRWbX214lGfZs1vu0BUQ41+1UN/2U8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.Short4Replace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.Short4Replace.html",
+          "hash": "pWyFfuZu4rAI1H2cDKW3OIxYZwyWdh0vN97T6JrPvt0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Converters.BitmapImage.Replace.html",
+          "hash": "/4s15OnKqK8YLi5Xu7T3cO/u7KfO1XqVw/BQDTMGHvg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Converters.BitmapImage.Writer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Converters.BitmapImage.Writer.html",
+          "hash": "MvLvMh0dnF8VvHudv/KYV9605MZbuMKXp0AY7BPyHI4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Converters.BitmapImage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Converters.BitmapImage.html",
+          "hash": "FPuCwVtF/1BvmYvCyIj2BAV6OUw1VlW4P02TzEdO+YQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Converters.Common.ImageExtractorParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Converters.Common.ImageExtractorParameters.html",
+          "hash": "lOqEv9gOj8CzYrwh1FE891UObWL2EmF6+taahODDArA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Converters.Common.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Converters.Common.html",
+          "hash": "xt0crk4Y6Nc6vi0rSUF6UvSSFY/6c+DY2ZOHTkpYvIg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Converters.DdsImage.Extractor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Converters.DdsImage.Extractor.html",
+          "hash": "mc5tvvZwfMuP8Z6jTYhNdM5IZIEr4PMdUz3JwnINVzE="
         }
       },
       "is_incremental": false,
@@ -102,7 +546,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Converters.DdsImage.Reader.html",
-          "hash": "or1FvuSk+5vX690W2HEIwOR9kYkX5OcM6S90XqzMdBg="
+          "hash": "3Sc5A3AojzLX3WQJhB3ZI4EJ7NV3laJpNMEr8esfaZM="
         }
       },
       "is_incremental": false,
@@ -114,7 +558,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Converters.DdsImage.Replace.html",
-          "hash": "DByTfvpR7t2J6aw5n/cK9e7WScNgyR59cwr/+JGjtSo="
+          "hash": "acb7JA1Ooey2lVgOG9qJxLEHKn0l2xvBEc9BDIESWAc="
         }
       },
       "is_incremental": false,
@@ -126,7 +570,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Converters.DdsImage.Writer.html",
-          "hash": "vPVPQEVrVpz/66Ih95gqqYvFf1XSpQbM1y/fmTsAXV8="
+          "hash": "O/LOUdgtdxh8f3EHvL0s276e6mq/sYlppX1bv+1Yfdk="
         }
       },
       "is_incremental": false,
@@ -138,7 +582,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Converters.DdsImage.html",
-          "hash": "wmyubJg+Zfx9fqRCOTN1Bu0KnZq7kl0asscrYpo2ZEI="
+          "hash": "vzbNOzza8vEKtVv1qsh0qOWQM/Wvrz7vDC022CxmRkM="
         }
       },
       "is_incremental": false,
@@ -150,7 +594,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Converters.FormatReplace.html",
-          "hash": "egny4121iqG9GMaHRDJ40NyvfaOkv9SgCwxUEna6A8Y="
+          "hash": "mU777tRhIaWWjpjhCm6jgUj0WB2geMogTzGhToWiDGo="
         }
       },
       "is_incremental": false,
@@ -162,7 +606,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Converters.FormatToSingleNode.html",
-          "hash": "1mthQiZLuMIaqJi0/ixa59i/jHaodLsvCfpgjdENxzs="
+          "hash": "sW8iGlQQCsm5cc+BG0KRNjYv7+D7w0IHkILPdIFjY94="
         }
       },
       "is_incremental": false,
@@ -174,7 +618,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Converters.Po.NodeContainerToPo.html",
-          "hash": "Ou3dM30ymqMwvX6YWBC3+OYj7oPBQGsPeZlS7v+TyV4="
+          "hash": "9t0vTCkFGAOzKPtIL4XFbxvG3cpNYU6+IadHAIUq7qQ="
         }
       },
       "is_incremental": false,
@@ -186,7 +630,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Converters.Po.html",
-          "hash": "ZKve0yJ2eLXdluDMBHa36cHAXAs5xiEI3Rsx4ic6ruY="
+          "hash": "s7FzxBWcs8qXXiGU6UqM0smUOlM91Dk2IN4eOQkJlPk="
         }
       },
       "is_incremental": false,
@@ -198,7 +642,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Converters.SingleNodeToFormat.html",
-          "hash": "Ezxp5U3ePQBSCLfgQm5CNZZ9qqO2nLh0oUWkU2h38Jw="
+          "hash": "cZUZeqeq51hRaxFmYjbk8KBtuXzIyOCl8gpRo4lQDc4="
         }
       },
       "is_incremental": false,
@@ -210,7 +654,43 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Converters.html",
-          "hash": "/9WZSRxwNVsghTn1J7hwISUtzfeOBfHTlx2yCSl/9zU="
+          "hash": "qHEepJtPqp2Wk4f/asyA8IBbI2A2jl0RuJTSilo9ngk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Enums.BitmapExtractionFormat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Enums.BitmapExtractionFormat.html",
+          "hash": "OIxs3p2xWkiIchM/aQeH9BwA8p/XNMvsE1ma33sUisw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Enums.BitmapPixelFormat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Enums.BitmapPixelFormat.html",
+          "hash": "vLdcI0sVVKse0GqbxqX/pPzL6oy3mBoWpnFsk4eFg5g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Enums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Enums.html",
+          "hash": "syGr1ncRyCeHXbwh0O9YRQ2BxuXHfDNpB/JIeXFzUJo="
         }
       },
       "is_incremental": false,
@@ -222,7 +702,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.EventArgs.AssetEventArgs.html",
-          "hash": "UDmP/D94wKf7GqRsXvYw2yUu9Qwp2Ansv4WIyxuh89E="
+          "hash": "4NsdpJ/KzE9iaSmAZSmBCHpiMjBRz6Dy6JCYiStLPQ4="
         }
       },
       "is_incremental": false,
@@ -234,7 +714,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.EventArgs.ContainerEventArgs.html",
-          "hash": "PQJMLLrmBfD1neMxnl8MXvXfTpGHG6NtMYgqgbsxbtc="
+          "hash": "Hcqqu48oZQuNatYqhYbuzAurRD08rKPqmZJYWc5WZa0="
         }
       },
       "is_incremental": false,
@@ -246,7 +726,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.EventArgs.PatchEventArgs.html",
-          "hash": "BzYv6e6fUurWBgJsQwddCFy4ADVhK6NEs99W8ao38+w="
+          "hash": "/1+A47+QoHVCwAA5P1BkvdPGAG+mL5sx7MebYTCV6h8="
         }
       },
       "is_incremental": false,
@@ -258,7 +738,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.EventArgs.ScriptEventArgs.html",
-          "hash": "YF6gKm9goZ31xkaNcAZAHtiYwweqgVrLIJMcQ9BPibI="
+          "hash": "kVVzGYlH9sGDYQNF4VqsjkHgBsRf4lEghe3avTXLkwY="
         }
       },
       "is_incremental": false,
@@ -270,7 +750,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.EventArgs.html",
-          "hash": "EkRBiLsnh1N4x0KDR7Yj/YDGdsBwbxUcwTsNNEhXfyI="
+          "hash": "fwJVUAmHpK/I+59zM6D3L/QiZd2Y4pVOmT1g6+il0gc="
         }
       },
       "is_incremental": false,
@@ -282,7 +762,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Exceptions.ByteMismatchException.html",
-          "hash": "IK5Hq9E+pMZ+YIzrQDQOqCjCdvtIetKDBfw3U7e+Ook="
+          "hash": "g+9OOFOmo8EgQCqM8kBlsbfb3IxRovdrn8nSnSOvVCI="
         }
       },
       "is_incremental": false,
@@ -294,7 +774,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Exceptions.ChecksumMismatchException.html",
-          "hash": "q9O3YZQRFcGCVIpGN9MsKM9F//nle6tCP0My9ZLbQyo="
+          "hash": "steeDIzl5MX15oAee0sM/8BIoL3Lma8WMIam21R0u7Q="
         }
       },
       "is_incremental": false,
@@ -306,7 +786,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Exceptions.UnknownConverterException.html",
-          "hash": "4FSAMb+tymgItg6UJ0lLEFJ+MPKgq5xQ2PuF6cFRfxQ="
+          "hash": "e9RemD3VwIonitHoSbqNYpraCDpiPUl8zYVlhD25UFQ="
         }
       },
       "is_incremental": false,
@@ -318,7 +798,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Exceptions.html",
-          "hash": "EqxRlGw8Fym/3A0j476oaeAc9PZKIu5KUR55MkmEYAc="
+          "hash": "HHOwEqYWX4TbTDv6wKZG0M8r4bmP8Y/j+qMv8nq+Ktc="
         }
       },
       "is_incremental": false,
@@ -330,7 +810,19 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Formats.BinaryPatch.html",
-          "hash": "DzAX06M7NVem5XMbkDrTXYJW9qtxS8EaqtwQZyCiBl8="
+          "hash": "7nnF1VDZYpzKONOf9kEmw5IqXyRXdMZ8oV9LTzLjl74="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TF3.Core.Formats.BitmapFileFormat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TF3.Core.Formats.BitmapFileFormat.html",
+          "hash": "UwVIfoKGFrA//lB9YCemrF5tEjyCA/J7tERkPzT/e+o="
         }
       },
       "is_incremental": false,
@@ -342,7 +834,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Formats.DdsFileFormat.html",
-          "hash": "FtgAnDCQESXGSbD6rtq/w5IbgydYMNHQp38OM4dNVg0="
+          "hash": "viSZzTX91Psk/pRyNXeEK1ItasezSsxDlrFOR+y6Su8="
         }
       },
       "is_incremental": false,
@@ -354,7 +846,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Formats.html",
-          "hash": "JjYvmpMQYdhbQpzuK6ykwd19ItxRaAxw10zRFJReV7o="
+          "hash": "n+Luie6cIhmjq8P0cMA2P546WBjKjBhYAG0rrX8+XtI="
         }
       },
       "is_incremental": false,
@@ -366,7 +858,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.GameScript.html",
-          "hash": "ODWJEZqRaJT2wPFTxsuKM5frGjLExRe5IS+MC2fFgNA="
+          "hash": "JR/aFYhI/X6KKCfgmV2+/WrTGqWu0Zw3UsRPsUIuWIk="
         }
       },
       "is_incremental": false,
@@ -378,7 +870,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Helpers.ChecksumHelper.html",
-          "hash": "D4S0/5SYIEUyr8BJW8IFCEaPm8g6k+UmgZHRWR6EOxg="
+          "hash": "Hw4fTUdacONNkdpcdVWLD9m27hMrGw81jW5DjZEmmRk="
         }
       },
       "is_incremental": false,
@@ -390,7 +882,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Helpers.YarhlNodeExtension.html",
-          "hash": "w3u3H+K5bxbY4dIgueZqxtE4cO5H1orSZm4rPeeLWe8="
+          "hash": "c9qoOT+POiTrSqVEQuyI/A8fYTGBNNql7uD3DOHVU6M="
         }
       },
       "is_incremental": false,
@@ -402,7 +894,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Helpers.html",
-          "hash": "KeYqN/flgiK2B0sh8SWiEOtaNxFSUi3gtCEvPKLMCzk="
+          "hash": "AgQQp2ORZVZm+m9nGL/SM1pwN8LxOb49ZM51sQTQaIY="
         }
       },
       "is_incremental": false,
@@ -414,7 +906,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Models.AssetFileInfo.html",
-          "hash": "f348ZCbe1gxQGeSL3+AIuxqWgmz+yLE0NKkNc+fD4U4="
+          "hash": "ISrXCliOqiZYzjnURmo3WEb7xe6lr4z1wvrLfdIlJKs="
         }
       },
       "is_incremental": false,
@@ -426,7 +918,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Models.AssetInfo.html",
-          "hash": "oegfle7o4kyr8Rxfvgjw6iy8n7qNcxSK2rQLYOy4wGE="
+          "hash": "6ln9ImI466Giw0ky+Trf39uuP2n2n3mRj3fp0QC6LVU="
         }
       },
       "is_incremental": false,
@@ -438,7 +930,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Models.ContainerInfo.html",
-          "hash": "evbTJUyITAHYX6yGwe4rWI5L/7aoECzD8V1BgMNDymw="
+          "hash": "GygDpUu8Wqgm2/WswKFXdM1/NbTiHU3G5qauHoYXsEo="
         }
       },
       "is_incremental": false,
@@ -450,7 +942,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Models.ConverterInfo.html",
-          "hash": "6k5TZbHYysA3jKmqw1ikBlvso4unysx6x+pKVh7D92o="
+          "hash": "Q7QEQJ7vXdbcz1LinUiy2KK/B0N9UeGSnJGSfD6ALcc="
         }
       },
       "is_incremental": false,
@@ -462,7 +954,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Models.FileInfo.html",
-          "hash": "9HKD8wHB6z8xSSjzUN6jeJKXHIoc5LC8ytkFOgc2oJo="
+          "hash": "fDc2O2YoYmKQieGWiV3Tvj2+CN2vsMVACwJyQNKtOVg="
         }
       },
       "is_incremental": false,
@@ -474,7 +966,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Models.ParameterInfo.html",
-          "hash": "n6ZMVJXRPkany0ywt9R2xlCpvgfSZ3Zq7rxqEfPQoak="
+          "hash": "eYKm9i7WKepeAfY3Qj7DJAFrO3uTBxYOEu8k91J17ro="
         }
       },
       "is_incremental": false,
@@ -486,7 +978,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Models.PatchInfo.html",
-          "hash": "yK79d656scAYPPqU3IKmWwkr1s+uPQd8RnrV54xdy3M="
+          "hash": "278WPm5X2nEH6EwSfbWUlvQUq1i335Hf45J5BvgmXuc="
         }
       },
       "is_incremental": false,
@@ -498,7 +990,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Models.html",
-          "hash": "pJWuP3Kcpe/+7ybaOrfNH6Cktw5E5mnHSuoJDxv1IJ0="
+          "hash": "1/pmW9U1cKrX/vqmzLZbgJgJiBSvuYBUNQ6u+uFnPBo="
         }
       },
       "is_incremental": false,
@@ -510,7 +1002,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.ScriptManager.html",
-          "hash": "tsQvO2tCfpEfTi5+U7di8PrUz3BG67EX8kur/jhmoew="
+          "hash": "0ZuNu4imEEzg+ts3rm5FG6w9Fs58W9TpB/68zur8V6Y="
         }
       },
       "is_incremental": false,
@@ -522,7 +1014,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.html",
-          "hash": "/WlIs1hmDwTsoLn6BMzWm4JAw4whxiuHQwGlnonXS9k="
+          "hash": "kf9m6AvpfBuRTMIPqaucilYxJBfJGkuD3GWfrfh1U/c="
         }
       },
       "is_incremental": false,
@@ -534,7 +1026,7 @@
       "output": {
         ".html": {
           "relative_path": "dev/Changelog.html",
-          "hash": "/0MZp0I25tKDsYE6uFhCHAHIEki40JdlZdsK5WZktwk="
+          "hash": "PMv04TWB6siulcXbFeaA32dXFBSDFBR6fZDPHMwAQ2c="
         }
       },
       "is_incremental": false,
@@ -546,7 +1038,7 @@
       "output": {
         ".html": {
           "relative_path": "dev/toc.html",
-          "hash": "Xu2RyBgIVVGga0yACgK6aPOxKKIluAruUyLQULMo8no="
+          "hash": "fn26xTLUduEgpRsCETVFR3dRJWSyByKQuwVyiacg19A="
         }
       },
       "is_incremental": false,
@@ -666,7 +1158,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 41,
+          "total_file_count": 82,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
