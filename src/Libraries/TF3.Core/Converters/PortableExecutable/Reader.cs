@@ -64,7 +64,7 @@ namespace TF3.Core.Converters.PortableExecutable
                 throw new InvalidOperationException("Uninitialized");
             }
 
-            if (!File.Exists(string.Concat("./plugins/", _filename)))
+            if (!File.Exists(_filename))
             {
                 throw new FileNotFoundException("File not found", _filename);
             }
@@ -73,7 +73,7 @@ namespace TF3.Core.Converters.PortableExecutable
             options.SetMissingMemberHandling(MissingMemberHandling.Error);
             options.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
 
-            string scriptContents = File.ReadAllText(string.Concat("./plugins/", _filename));
+            string scriptContents = File.ReadAllText(_filename);
             List<PortableExecutableStringInfo> stringInfo = JsonSerializer.Deserialize<List<PortableExecutableStringInfo>>(scriptContents, options);
 
             source.Stream.Position = 0;
