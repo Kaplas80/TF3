@@ -17,6 +17,7 @@
     <PackageReference Include="BCnEncoder.Net" />
     <PackageReference Include="BCnEncoder.Net.ImageSharp" />
     <PackageReference Include="SixLabors.ImageSharp" />
+    <PackageReference Include="AsmResolver.PE.File" />
   </ItemGroup>
 
 </Project>

@@ -1,9 +1,8 @@
 {
-  "profiles": {
-    "TF3.CommandLine": {
-        "commandName": "Project",
-        //"commandLineArgs": "extract --script \"zwei-arges-pc\" --install-dir \"G:\\Games\\Zwei The Arges Adventure\" --output-dir \"C:\\tmp\\test-zwei\""
-        "commandLineArgs": "extract --script kiwami2pc --install-dir \"H:\\Games\\Yakuza Kiwami 2\" --output-dir \"C:\\tmp\\kiwami2\""
+    "profiles": {
+        "TF3.CommandLine": {
+            "commandName": "Project",
+            "commandLineArgs": ""
+        }
     }
-  }
 }
