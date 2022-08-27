@@ -1531,6 +1531,204 @@ references:
   commentId: Overload:TF3.Core.Converters.Po.NodeContainerToPo.Convert
   fullName: TF3.Core.Converters.Po.NodeContainerToPo.Convert
   nameWithType: NodeContainerToPo.Convert
+- uid: TF3.Core.Converters.PortableExecutable
+  name: TF3.Core.Converters.PortableExecutable
+  href: api/TF3.Core.Converters.PortableExecutable.html
+  commentId: N:TF3.Core.Converters.PortableExecutable
+  fullName: TF3.Core.Converters.PortableExecutable
+  nameWithType: TF3.Core.Converters.PortableExecutable
+- uid: TF3.Core.Converters.PortableExecutable.ExtractStrings
+  name: ExtractStrings
+  href: api/TF3.Core.Converters.PortableExecutable.ExtractStrings.html
+  commentId: T:TF3.Core.Converters.PortableExecutable.ExtractStrings
+  fullName: TF3.Core.Converters.PortableExecutable.ExtractStrings
+  nameWithType: ExtractStrings
+- uid: TF3.Core.Converters.PortableExecutable.ExtractStrings.#ctor
+  name: ExtractStrings()
+  href: api/TF3.Core.Converters.PortableExecutable.ExtractStrings.html#TF3_Core_Converters_PortableExecutable_ExtractStrings__ctor
+  commentId: M:TF3.Core.Converters.PortableExecutable.ExtractStrings.#ctor
+  fullName: TF3.Core.Converters.PortableExecutable.ExtractStrings.ExtractStrings()
+  nameWithType: ExtractStrings.ExtractStrings()
+- uid: TF3.Core.Converters.PortableExecutable.ExtractStrings.#ctor*
+  name: ExtractStrings
+  href: api/TF3.Core.Converters.PortableExecutable.ExtractStrings.html#TF3_Core_Converters_PortableExecutable_ExtractStrings__ctor_
+  commentId: Overload:TF3.Core.Converters.PortableExecutable.ExtractStrings.#ctor
+  fullName: TF3.Core.Converters.PortableExecutable.ExtractStrings.ExtractStrings
+  nameWithType: ExtractStrings.ExtractStrings
+- uid: TF3.Core.Converters.PortableExecutable.ExtractStrings.Convert(TF3.Core.Formats.PortableExecutableFileFormat)
+  name: Convert(PortableExecutableFileFormat)
+  href: api/TF3.Core.Converters.PortableExecutable.ExtractStrings.html#TF3_Core_Converters_PortableExecutable_ExtractStrings_Convert_TF3_Core_Formats_PortableExecutableFileFormat_
+  commentId: M:TF3.Core.Converters.PortableExecutable.ExtractStrings.Convert(TF3.Core.Formats.PortableExecutableFileFormat)
+  fullName: TF3.Core.Converters.PortableExecutable.ExtractStrings.Convert(TF3.Core.Formats.PortableExecutableFileFormat)
+  nameWithType: ExtractStrings.Convert(PortableExecutableFileFormat)
+- uid: TF3.Core.Converters.PortableExecutable.ExtractStrings.Convert*
+  name: Convert
+  href: api/TF3.Core.Converters.PortableExecutable.ExtractStrings.html#TF3_Core_Converters_PortableExecutable_ExtractStrings_Convert_
+  commentId: Overload:TF3.Core.Converters.PortableExecutable.ExtractStrings.Convert
+  fullName: TF3.Core.Converters.PortableExecutable.ExtractStrings.Convert
+  nameWithType: ExtractStrings.Convert
+- uid: TF3.Core.Converters.PortableExecutable.ExtractStrings.Initialize(Yarhl.Media.Text.PoHeader)
+  name: Initialize(PoHeader)
+  href: api/TF3.Core.Converters.PortableExecutable.ExtractStrings.html#TF3_Core_Converters_PortableExecutable_ExtractStrings_Initialize_Yarhl_Media_Text_PoHeader_
+  commentId: M:TF3.Core.Converters.PortableExecutable.ExtractStrings.Initialize(Yarhl.Media.Text.PoHeader)
+  fullName: TF3.Core.Converters.PortableExecutable.ExtractStrings.Initialize(Yarhl.Media.Text.PoHeader)
+  nameWithType: ExtractStrings.Initialize(PoHeader)
+- uid: TF3.Core.Converters.PortableExecutable.ExtractStrings.Initialize*
+  name: Initialize
+  href: api/TF3.Core.Converters.PortableExecutable.ExtractStrings.html#TF3_Core_Converters_PortableExecutable_ExtractStrings_Initialize_
+  commentId: Overload:TF3.Core.Converters.PortableExecutable.ExtractStrings.Initialize
+  fullName: TF3.Core.Converters.PortableExecutable.ExtractStrings.Initialize
+  nameWithType: ExtractStrings.Initialize
+- uid: TF3.Core.Converters.PortableExecutable.ExtractStrings.ProcessString(System.String)
+  name: ProcessString(String)
+  href: api/TF3.Core.Converters.PortableExecutable.ExtractStrings.html#TF3_Core_Converters_PortableExecutable_ExtractStrings_ProcessString_System_String_
+  commentId: M:TF3.Core.Converters.PortableExecutable.ExtractStrings.ProcessString(System.String)
+  fullName: TF3.Core.Converters.PortableExecutable.ExtractStrings.ProcessString(System.String)
+  nameWithType: ExtractStrings.ProcessString(String)
+- uid: TF3.Core.Converters.PortableExecutable.ExtractStrings.ProcessString*
+  name: ProcessString
+  href: api/TF3.Core.Converters.PortableExecutable.ExtractStrings.html#TF3_Core_Converters_PortableExecutable_ExtractStrings_ProcessString_
+  commentId: Overload:TF3.Core.Converters.PortableExecutable.ExtractStrings.ProcessString
+  fullName: TF3.Core.Converters.PortableExecutable.ExtractStrings.ProcessString
+  nameWithType: ExtractStrings.ProcessString
+- uid: TF3.Core.Converters.PortableExecutable.Reader
+  name: Reader
+  href: api/TF3.Core.Converters.PortableExecutable.Reader.html
+  commentId: T:TF3.Core.Converters.PortableExecutable.Reader
+  fullName: TF3.Core.Converters.PortableExecutable.Reader
+  nameWithType: Reader
+- uid: TF3.Core.Converters.PortableExecutable.Reader.#ctor
+  name: Reader()
+  href: api/TF3.Core.Converters.PortableExecutable.Reader.html#TF3_Core_Converters_PortableExecutable_Reader__ctor
+  commentId: M:TF3.Core.Converters.PortableExecutable.Reader.#ctor
+  fullName: TF3.Core.Converters.PortableExecutable.Reader.Reader()
+  nameWithType: Reader.Reader()
+- uid: TF3.Core.Converters.PortableExecutable.Reader.#ctor*
+  name: Reader
+  href: api/TF3.Core.Converters.PortableExecutable.Reader.html#TF3_Core_Converters_PortableExecutable_Reader__ctor_
+  commentId: Overload:TF3.Core.Converters.PortableExecutable.Reader.#ctor
+  fullName: TF3.Core.Converters.PortableExecutable.Reader.Reader
+  nameWithType: Reader.Reader
+- uid: TF3.Core.Converters.PortableExecutable.Reader.Convert(Yarhl.IO.BinaryFormat)
+  name: Convert(BinaryFormat)
+  href: api/TF3.Core.Converters.PortableExecutable.Reader.html#TF3_Core_Converters_PortableExecutable_Reader_Convert_Yarhl_IO_BinaryFormat_
+  commentId: M:TF3.Core.Converters.PortableExecutable.Reader.Convert(Yarhl.IO.BinaryFormat)
+  fullName: TF3.Core.Converters.PortableExecutable.Reader.Convert(Yarhl.IO.BinaryFormat)
+  nameWithType: Reader.Convert(BinaryFormat)
+- uid: TF3.Core.Converters.PortableExecutable.Reader.Convert*
+  name: Convert
+  href: api/TF3.Core.Converters.PortableExecutable.Reader.html#TF3_Core_Converters_PortableExecutable_Reader_Convert_
+  commentId: Overload:TF3.Core.Converters.PortableExecutable.Reader.Convert
+  fullName: TF3.Core.Converters.PortableExecutable.Reader.Convert
+  nameWithType: Reader.Convert
+- uid: TF3.Core.Converters.PortableExecutable.Reader.Initialize(System.String)
+  name: Initialize(String)
+  href: api/TF3.Core.Converters.PortableExecutable.Reader.html#TF3_Core_Converters_PortableExecutable_Reader_Initialize_System_String_
+  commentId: M:TF3.Core.Converters.PortableExecutable.Reader.Initialize(System.String)
+  fullName: TF3.Core.Converters.PortableExecutable.Reader.Initialize(System.String)
+  nameWithType: Reader.Initialize(String)
+- uid: TF3.Core.Converters.PortableExecutable.Reader.Initialize*
+  name: Initialize
+  href: api/TF3.Core.Converters.PortableExecutable.Reader.html#TF3_Core_Converters_PortableExecutable_Reader_Initialize_
+  commentId: Overload:TF3.Core.Converters.PortableExecutable.Reader.Initialize
+  fullName: TF3.Core.Converters.PortableExecutable.Reader.Initialize
+  nameWithType: Reader.Initialize
+- uid: TF3.Core.Converters.PortableExecutable.Translate
+  name: Translate
+  href: api/TF3.Core.Converters.PortableExecutable.Translate.html
+  commentId: T:TF3.Core.Converters.PortableExecutable.Translate
+  fullName: TF3.Core.Converters.PortableExecutable.Translate
+  nameWithType: Translate
+- uid: TF3.Core.Converters.PortableExecutable.Translate.#ctor
+  name: Translate()
+  href: api/TF3.Core.Converters.PortableExecutable.Translate.html#TF3_Core_Converters_PortableExecutable_Translate__ctor
+  commentId: M:TF3.Core.Converters.PortableExecutable.Translate.#ctor
+  fullName: TF3.Core.Converters.PortableExecutable.Translate.Translate()
+  nameWithType: Translate.Translate()
+- uid: TF3.Core.Converters.PortableExecutable.Translate.#ctor*
+  name: Translate
+  href: api/TF3.Core.Converters.PortableExecutable.Translate.html#TF3_Core_Converters_PortableExecutable_Translate__ctor_
+  commentId: Overload:TF3.Core.Converters.PortableExecutable.Translate.#ctor
+  fullName: TF3.Core.Converters.PortableExecutable.Translate.Translate
+  nameWithType: Translate.Translate
+- uid: TF3.Core.Converters.PortableExecutable.Translate.Convert(TF3.Core.Formats.PortableExecutableFileFormat)
+  name: Convert(PortableExecutableFileFormat)
+  href: api/TF3.Core.Converters.PortableExecutable.Translate.html#TF3_Core_Converters_PortableExecutable_Translate_Convert_TF3_Core_Formats_PortableExecutableFileFormat_
+  commentId: M:TF3.Core.Converters.PortableExecutable.Translate.Convert(TF3.Core.Formats.PortableExecutableFileFormat)
+  fullName: TF3.Core.Converters.PortableExecutable.Translate.Convert(TF3.Core.Formats.PortableExecutableFileFormat)
+  nameWithType: Translate.Convert(PortableExecutableFileFormat)
+- uid: TF3.Core.Converters.PortableExecutable.Translate.Convert*
+  name: Convert
+  href: api/TF3.Core.Converters.PortableExecutable.Translate.html#TF3_Core_Converters_PortableExecutable_Translate_Convert_
+  commentId: Overload:TF3.Core.Converters.PortableExecutable.Translate.Convert
+  fullName: TF3.Core.Converters.PortableExecutable.Translate.Convert
+  nameWithType: Translate.Convert
+- uid: TF3.Core.Converters.PortableExecutable.Translate.Initialize(Yarhl.Media.Text.Po)
+  name: Initialize(Po)
+  href: api/TF3.Core.Converters.PortableExecutable.Translate.html#TF3_Core_Converters_PortableExecutable_Translate_Initialize_Yarhl_Media_Text_Po_
+  commentId: M:TF3.Core.Converters.PortableExecutable.Translate.Initialize(Yarhl.Media.Text.Po)
+  fullName: TF3.Core.Converters.PortableExecutable.Translate.Initialize(Yarhl.Media.Text.Po)
+  nameWithType: Translate.Initialize(Po)
+- uid: TF3.Core.Converters.PortableExecutable.Translate.Initialize*
+  name: Initialize
+  href: api/TF3.Core.Converters.PortableExecutable.Translate.html#TF3_Core_Converters_PortableExecutable_Translate_Initialize_
+  commentId: Overload:TF3.Core.Converters.PortableExecutable.Translate.Initialize
+  fullName: TF3.Core.Converters.PortableExecutable.Translate.Initialize
+  nameWithType: Translate.Initialize
+- uid: TF3.Core.Converters.PortableExecutable.Translate.WriteReference(System.UInt32,System.UInt32,System.UInt32,AsmResolver.PE.File.PEFile,Yarhl.IO.DataStream)
+  name: WriteReference(UInt32, UInt32, UInt32, PEFile, DataStream)
+  href: api/TF3.Core.Converters.PortableExecutable.Translate.html#TF3_Core_Converters_PortableExecutable_Translate_WriteReference_System_UInt32_System_UInt32_System_UInt32_AsmResolver_PE_File_PEFile_Yarhl_IO_DataStream_
+  commentId: M:TF3.Core.Converters.PortableExecutable.Translate.WriteReference(System.UInt32,System.UInt32,System.UInt32,AsmResolver.PE.File.PEFile,Yarhl.IO.DataStream)
+  fullName: TF3.Core.Converters.PortableExecutable.Translate.WriteReference(System.UInt32, System.UInt32, System.UInt32, AsmResolver.PE.File.PEFile, Yarhl.IO.DataStream)
+  nameWithType: Translate.WriteReference(UInt32, UInt32, UInt32, PEFile, DataStream)
+- uid: TF3.Core.Converters.PortableExecutable.Translate.WriteReference*
+  name: WriteReference
+  href: api/TF3.Core.Converters.PortableExecutable.Translate.html#TF3_Core_Converters_PortableExecutable_Translate_WriteReference_
+  commentId: Overload:TF3.Core.Converters.PortableExecutable.Translate.WriteReference
+  fullName: TF3.Core.Converters.PortableExecutable.Translate.WriteReference
+  nameWithType: Translate.WriteReference
+- uid: TF3.Core.Converters.PortableExecutable.Translate.WriteString(Yarhl.Media.Text.PoEntry,Yarhl.IO.DataWriter)
+  name: WriteString(PoEntry, DataWriter)
+  href: api/TF3.Core.Converters.PortableExecutable.Translate.html#TF3_Core_Converters_PortableExecutable_Translate_WriteString_Yarhl_Media_Text_PoEntry_Yarhl_IO_DataWriter_
+  commentId: M:TF3.Core.Converters.PortableExecutable.Translate.WriteString(Yarhl.Media.Text.PoEntry,Yarhl.IO.DataWriter)
+  fullName: TF3.Core.Converters.PortableExecutable.Translate.WriteString(Yarhl.Media.Text.PoEntry, Yarhl.IO.DataWriter)
+  nameWithType: Translate.WriteString(PoEntry, DataWriter)
+- uid: TF3.Core.Converters.PortableExecutable.Translate.WriteString*
+  name: WriteString
+  href: api/TF3.Core.Converters.PortableExecutable.Translate.html#TF3_Core_Converters_PortableExecutable_Translate_WriteString_
+  commentId: Overload:TF3.Core.Converters.PortableExecutable.Translate.WriteString
+  fullName: TF3.Core.Converters.PortableExecutable.Translate.WriteString
+  nameWithType: Translate.WriteString
+- uid: TF3.Core.Converters.PortableExecutable.Writer
+  name: Writer
+  href: api/TF3.Core.Converters.PortableExecutable.Writer.html
+  commentId: T:TF3.Core.Converters.PortableExecutable.Writer
+  fullName: TF3.Core.Converters.PortableExecutable.Writer
+  nameWithType: Writer
+- uid: TF3.Core.Converters.PortableExecutable.Writer.#ctor
+  name: Writer()
+  href: api/TF3.Core.Converters.PortableExecutable.Writer.html#TF3_Core_Converters_PortableExecutable_Writer__ctor
+  commentId: M:TF3.Core.Converters.PortableExecutable.Writer.#ctor
+  fullName: TF3.Core.Converters.PortableExecutable.Writer.Writer()
+  nameWithType: Writer.Writer()
+- uid: TF3.Core.Converters.PortableExecutable.Writer.#ctor*
+  name: Writer
+  href: api/TF3.Core.Converters.PortableExecutable.Writer.html#TF3_Core_Converters_PortableExecutable_Writer__ctor_
+  commentId: Overload:TF3.Core.Converters.PortableExecutable.Writer.#ctor
+  fullName: TF3.Core.Converters.PortableExecutable.Writer.Writer
+  nameWithType: Writer.Writer
+- uid: TF3.Core.Converters.PortableExecutable.Writer.Convert(TF3.Core.Formats.PortableExecutableFileFormat)
+  name: Convert(PortableExecutableFileFormat)
+  href: api/TF3.Core.Converters.PortableExecutable.Writer.html#TF3_Core_Converters_PortableExecutable_Writer_Convert_TF3_Core_Formats_PortableExecutableFileFormat_
+  commentId: M:TF3.Core.Converters.PortableExecutable.Writer.Convert(TF3.Core.Formats.PortableExecutableFileFormat)
+  fullName: TF3.Core.Converters.PortableExecutable.Writer.Convert(TF3.Core.Formats.PortableExecutableFileFormat)
+  nameWithType: Writer.Convert(PortableExecutableFileFormat)
+- uid: TF3.Core.Converters.PortableExecutable.Writer.Convert*
+  name: Convert
+  href: api/TF3.Core.Converters.PortableExecutable.Writer.html#TF3_Core_Converters_PortableExecutable_Writer_Convert_
+  commentId: Overload:TF3.Core.Converters.PortableExecutable.Writer.Convert
+  fullName: TF3.Core.Converters.PortableExecutable.Writer.Convert
+  nameWithType: Writer.Convert
 - uid: TF3.Core.Converters.SingleNodeToFormat
   name: SingleNodeToFormat
   href: api/TF3.Core.Converters.SingleNodeToFormat.html
@@ -2143,6 +2341,60 @@ references:
   commentId: Overload:TF3.Core.Formats.DdsFileFormat.Internal
   fullName: TF3.Core.Formats.DdsFileFormat.Internal
   nameWithType: DdsFileFormat.Internal
+- uid: TF3.Core.Formats.PortableExecutableFileFormat
+  name: PortableExecutableFileFormat
+  href: api/TF3.Core.Formats.PortableExecutableFileFormat.html
+  commentId: T:TF3.Core.Formats.PortableExecutableFileFormat
+  fullName: TF3.Core.Formats.PortableExecutableFileFormat
+  nameWithType: PortableExecutableFileFormat
+- uid: TF3.Core.Formats.PortableExecutableFileFormat.#ctor
+  name: PortableExecutableFileFormat()
+  href: api/TF3.Core.Formats.PortableExecutableFileFormat.html#TF3_Core_Formats_PortableExecutableFileFormat__ctor
+  commentId: M:TF3.Core.Formats.PortableExecutableFileFormat.#ctor
+  fullName: TF3.Core.Formats.PortableExecutableFileFormat.PortableExecutableFileFormat()
+  nameWithType: PortableExecutableFileFormat.PortableExecutableFileFormat()
+- uid: TF3.Core.Formats.PortableExecutableFileFormat.#ctor*
+  name: PortableExecutableFileFormat
+  href: api/TF3.Core.Formats.PortableExecutableFileFormat.html#TF3_Core_Formats_PortableExecutableFileFormat__ctor_
+  commentId: Overload:TF3.Core.Formats.PortableExecutableFileFormat.#ctor
+  fullName: TF3.Core.Formats.PortableExecutableFileFormat.PortableExecutableFileFormat
+  nameWithType: PortableExecutableFileFormat.PortableExecutableFileFormat
+- uid: TF3.Core.Formats.PortableExecutableFileFormat.DeepClone
+  name: DeepClone()
+  href: api/TF3.Core.Formats.PortableExecutableFileFormat.html#TF3_Core_Formats_PortableExecutableFileFormat_DeepClone
+  commentId: M:TF3.Core.Formats.PortableExecutableFileFormat.DeepClone
+  fullName: TF3.Core.Formats.PortableExecutableFileFormat.DeepClone()
+  nameWithType: PortableExecutableFileFormat.DeepClone()
+- uid: TF3.Core.Formats.PortableExecutableFileFormat.DeepClone*
+  name: DeepClone
+  href: api/TF3.Core.Formats.PortableExecutableFileFormat.html#TF3_Core_Formats_PortableExecutableFileFormat_DeepClone_
+  commentId: Overload:TF3.Core.Formats.PortableExecutableFileFormat.DeepClone
+  fullName: TF3.Core.Formats.PortableExecutableFileFormat.DeepClone
+  nameWithType: PortableExecutableFileFormat.DeepClone
+- uid: TF3.Core.Formats.PortableExecutableFileFormat.Internal
+  name: Internal
+  href: api/TF3.Core.Formats.PortableExecutableFileFormat.html#TF3_Core_Formats_PortableExecutableFileFormat_Internal
+  commentId: P:TF3.Core.Formats.PortableExecutableFileFormat.Internal
+  fullName: TF3.Core.Formats.PortableExecutableFileFormat.Internal
+  nameWithType: PortableExecutableFileFormat.Internal
+- uid: TF3.Core.Formats.PortableExecutableFileFormat.Internal*
+  name: Internal
+  href: api/TF3.Core.Formats.PortableExecutableFileFormat.html#TF3_Core_Formats_PortableExecutableFileFormat_Internal_
+  commentId: Overload:TF3.Core.Formats.PortableExecutableFileFormat.Internal
+  fullName: TF3.Core.Formats.PortableExecutableFileFormat.Internal
+  nameWithType: PortableExecutableFileFormat.Internal
+- uid: TF3.Core.Formats.PortableExecutableFileFormat.StringInfo
+  name: StringInfo
+  href: api/TF3.Core.Formats.PortableExecutableFileFormat.html#TF3_Core_Formats_PortableExecutableFileFormat_StringInfo
+  commentId: P:TF3.Core.Formats.PortableExecutableFileFormat.StringInfo
+  fullName: TF3.Core.Formats.PortableExecutableFileFormat.StringInfo
+  nameWithType: PortableExecutableFileFormat.StringInfo
+- uid: TF3.Core.Formats.PortableExecutableFileFormat.StringInfo*
+  name: StringInfo
+  href: api/TF3.Core.Formats.PortableExecutableFileFormat.html#TF3_Core_Formats_PortableExecutableFileFormat_StringInfo_
+  commentId: Overload:TF3.Core.Formats.PortableExecutableFileFormat.StringInfo
+  fullName: TF3.Core.Formats.PortableExecutableFileFormat.StringInfo
+  nameWithType: PortableExecutableFileFormat.StringInfo
 - uid: TF3.Core.GameScript
   name: GameScript
   href: api/TF3.Core.GameScript.html
@@ -2395,6 +2647,129 @@ references:
   commentId: Overload:TF3.Core.Helpers.ChecksumHelper.Check
   fullName: TF3.Core.Helpers.ChecksumHelper.Check
   nameWithType: ChecksumHelper.Check
+- uid: TF3.Core.Helpers.HexStringJsonConverter
+  name: HexStringJsonConverter
+  href: api/TF3.Core.Helpers.HexStringJsonConverter.html
+  commentId: T:TF3.Core.Helpers.HexStringJsonConverter
+  fullName: TF3.Core.Helpers.HexStringJsonConverter
+  nameWithType: HexStringJsonConverter
+- uid: TF3.Core.Helpers.HexStringJsonConverter.#ctor
+  name: HexStringJsonConverter()
+  href: api/TF3.Core.Helpers.HexStringJsonConverter.html#TF3_Core_Helpers_HexStringJsonConverter__ctor
+  commentId: M:TF3.Core.Helpers.HexStringJsonConverter.#ctor
+  fullName: TF3.Core.Helpers.HexStringJsonConverter.HexStringJsonConverter()
+  nameWithType: HexStringJsonConverter.HexStringJsonConverter()
+- uid: TF3.Core.Helpers.HexStringJsonConverter.#ctor*
+  name: HexStringJsonConverter
+  href: api/TF3.Core.Helpers.HexStringJsonConverter.html#TF3_Core_Helpers_HexStringJsonConverter__ctor_
+  commentId: Overload:TF3.Core.Helpers.HexStringJsonConverter.#ctor
+  fullName: TF3.Core.Helpers.HexStringJsonConverter.HexStringJsonConverter
+  nameWithType: HexStringJsonConverter.HexStringJsonConverter
+- uid: TF3.Core.Helpers.HexStringJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  href: api/TF3.Core.Helpers.HexStringJsonConverter.html#TF3_Core_Helpers_HexStringJsonConverter_Read_System_Text_Json_Utf8JsonReader__System_Type_System_Text_Json_JsonSerializerOptions_
+  commentId: M:TF3.Core.Helpers.HexStringJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name.vb: Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: TF3.Core.Helpers.HexStringJsonConverter.Read(ref System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  fullName.vb: TF3.Core.Helpers.HexStringJsonConverter.Read(ByRef System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  nameWithType: HexStringJsonConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType.vb: HexStringJsonConverter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: TF3.Core.Helpers.HexStringJsonConverter.Read*
+  name: Read
+  href: api/TF3.Core.Helpers.HexStringJsonConverter.html#TF3_Core_Helpers_HexStringJsonConverter_Read_
+  commentId: Overload:TF3.Core.Helpers.HexStringJsonConverter.Read
+  fullName: TF3.Core.Helpers.HexStringJsonConverter.Read
+  nameWithType: HexStringJsonConverter.Read
+- uid: TF3.Core.Helpers.HexStringJsonConverter.Write(System.Text.Json.Utf8JsonWriter,System.Int32,System.Text.Json.JsonSerializerOptions)
+  name: Write(Utf8JsonWriter, Int32, JsonSerializerOptions)
+  href: api/TF3.Core.Helpers.HexStringJsonConverter.html#TF3_Core_Helpers_HexStringJsonConverter_Write_System_Text_Json_Utf8JsonWriter_System_Int32_System_Text_Json_JsonSerializerOptions_
+  commentId: M:TF3.Core.Helpers.HexStringJsonConverter.Write(System.Text.Json.Utf8JsonWriter,System.Int32,System.Text.Json.JsonSerializerOptions)
+  fullName: TF3.Core.Helpers.HexStringJsonConverter.Write(System.Text.Json.Utf8JsonWriter, System.Int32, System.Text.Json.JsonSerializerOptions)
+  nameWithType: HexStringJsonConverter.Write(Utf8JsonWriter, Int32, JsonSerializerOptions)
+- uid: TF3.Core.Helpers.HexStringJsonConverter.Write*
+  name: Write
+  href: api/TF3.Core.Helpers.HexStringJsonConverter.html#TF3_Core_Helpers_HexStringJsonConverter_Write_
+  commentId: Overload:TF3.Core.Helpers.HexStringJsonConverter.Write
+  fullName: TF3.Core.Helpers.HexStringJsonConverter.Write
+  nameWithType: HexStringJsonConverter.Write
+- uid: TF3.Core.Helpers.HexStringListJsonConverter
+  name: HexStringListJsonConverter
+  href: api/TF3.Core.Helpers.HexStringListJsonConverter.html
+  commentId: T:TF3.Core.Helpers.HexStringListJsonConverter
+  fullName: TF3.Core.Helpers.HexStringListJsonConverter
+  nameWithType: HexStringListJsonConverter
+- uid: TF3.Core.Helpers.HexStringListJsonConverter.#ctor
+  name: HexStringListJsonConverter()
+  href: api/TF3.Core.Helpers.HexStringListJsonConverter.html#TF3_Core_Helpers_HexStringListJsonConverter__ctor
+  commentId: M:TF3.Core.Helpers.HexStringListJsonConverter.#ctor
+  fullName: TF3.Core.Helpers.HexStringListJsonConverter.HexStringListJsonConverter()
+  nameWithType: HexStringListJsonConverter.HexStringListJsonConverter()
+- uid: TF3.Core.Helpers.HexStringListJsonConverter.#ctor*
+  name: HexStringListJsonConverter
+  href: api/TF3.Core.Helpers.HexStringListJsonConverter.html#TF3_Core_Helpers_HexStringListJsonConverter__ctor_
+  commentId: Overload:TF3.Core.Helpers.HexStringListJsonConverter.#ctor
+  fullName: TF3.Core.Helpers.HexStringListJsonConverter.HexStringListJsonConverter
+  nameWithType: HexStringListJsonConverter.HexStringListJsonConverter
+- uid: TF3.Core.Helpers.HexStringListJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  href: api/TF3.Core.Helpers.HexStringListJsonConverter.html#TF3_Core_Helpers_HexStringListJsonConverter_Read_System_Text_Json_Utf8JsonReader__System_Type_System_Text_Json_JsonSerializerOptions_
+  commentId: M:TF3.Core.Helpers.HexStringListJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name.vb: Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: TF3.Core.Helpers.HexStringListJsonConverter.Read(ref System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  fullName.vb: TF3.Core.Helpers.HexStringListJsonConverter.Read(ByRef System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  nameWithType: HexStringListJsonConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType.vb: HexStringListJsonConverter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: TF3.Core.Helpers.HexStringListJsonConverter.Read*
+  name: Read
+  href: api/TF3.Core.Helpers.HexStringListJsonConverter.html#TF3_Core_Helpers_HexStringListJsonConverter_Read_
+  commentId: Overload:TF3.Core.Helpers.HexStringListJsonConverter.Read
+  fullName: TF3.Core.Helpers.HexStringListJsonConverter.Read
+  nameWithType: HexStringListJsonConverter.Read
+- uid: TF3.Core.Helpers.HexStringListJsonConverter.Write(System.Text.Json.Utf8JsonWriter,System.Collections.Generic.List{System.Int32},System.Text.Json.JsonSerializerOptions)
+  name: Write(Utf8JsonWriter, List<Int32>, JsonSerializerOptions)
+  href: api/TF3.Core.Helpers.HexStringListJsonConverter.html#TF3_Core_Helpers_HexStringListJsonConverter_Write_System_Text_Json_Utf8JsonWriter_System_Collections_Generic_List_System_Int32__System_Text_Json_JsonSerializerOptions_
+  commentId: M:TF3.Core.Helpers.HexStringListJsonConverter.Write(System.Text.Json.Utf8JsonWriter,System.Collections.Generic.List{System.Int32},System.Text.Json.JsonSerializerOptions)
+  name.vb: Write(Utf8JsonWriter, List(Of Int32), JsonSerializerOptions)
+  fullName: TF3.Core.Helpers.HexStringListJsonConverter.Write(System.Text.Json.Utf8JsonWriter, System.Collections.Generic.List<System.Int32>, System.Text.Json.JsonSerializerOptions)
+  fullName.vb: TF3.Core.Helpers.HexStringListJsonConverter.Write(System.Text.Json.Utf8JsonWriter, System.Collections.Generic.List(Of System.Int32), System.Text.Json.JsonSerializerOptions)
+  nameWithType: HexStringListJsonConverter.Write(Utf8JsonWriter, List<Int32>, JsonSerializerOptions)
+  nameWithType.vb: HexStringListJsonConverter.Write(Utf8JsonWriter, List(Of Int32), JsonSerializerOptions)
+- uid: TF3.Core.Helpers.HexStringListJsonConverter.Write*
+  name: Write
+  href: api/TF3.Core.Helpers.HexStringListJsonConverter.html#TF3_Core_Helpers_HexStringListJsonConverter_Write_
+  commentId: Overload:TF3.Core.Helpers.HexStringListJsonConverter.Write
+  fullName: TF3.Core.Helpers.HexStringListJsonConverter.Write
+  nameWithType: HexStringListJsonConverter.Write
+- uid: TF3.Core.Helpers.MapStringLib
+  name: MapStringLib
+  href: api/TF3.Core.Helpers.MapStringLib.html
+  commentId: T:TF3.Core.Helpers.MapStringLib
+  fullName: TF3.Core.Helpers.MapStringLib
+  nameWithType: MapStringLib
+- uid: TF3.Core.Helpers.MapStringLib.ToFullWidth(System.String)
+  name: ToFullWidth(String)
+  href: api/TF3.Core.Helpers.MapStringLib.html#TF3_Core_Helpers_MapStringLib_ToFullWidth_System_String_
+  commentId: M:TF3.Core.Helpers.MapStringLib.ToFullWidth(System.String)
+  fullName: TF3.Core.Helpers.MapStringLib.ToFullWidth(System.String)
+  nameWithType: MapStringLib.ToFullWidth(String)
+- uid: TF3.Core.Helpers.MapStringLib.ToFullWidth*
+  name: ToFullWidth
+  href: api/TF3.Core.Helpers.MapStringLib.html#TF3_Core_Helpers_MapStringLib_ToFullWidth_
+  commentId: Overload:TF3.Core.Helpers.MapStringLib.ToFullWidth
+  fullName: TF3.Core.Helpers.MapStringLib.ToFullWidth
+  nameWithType: MapStringLib.ToFullWidth
+- uid: TF3.Core.Helpers.MapStringLib.ToHalfWidth(System.String)
+  name: ToHalfWidth(String)
+  href: api/TF3.Core.Helpers.MapStringLib.html#TF3_Core_Helpers_MapStringLib_ToHalfWidth_System_String_
+  commentId: M:TF3.Core.Helpers.MapStringLib.ToHalfWidth(System.String)
+  fullName: TF3.Core.Helpers.MapStringLib.ToHalfWidth(System.String)
+  nameWithType: MapStringLib.ToHalfWidth(String)
+- uid: TF3.Core.Helpers.MapStringLib.ToHalfWidth*
+  name: ToHalfWidth
+  href: api/TF3.Core.Helpers.MapStringLib.html#TF3_Core_Helpers_MapStringLib_ToHalfWidth_
+  commentId: Overload:TF3.Core.Helpers.MapStringLib.ToHalfWidth
+  fullName: TF3.Core.Helpers.MapStringLib.ToHalfWidth
+  nameWithType: MapStringLib.ToHalfWidth
 - uid: TF3.Core.Helpers.YarhlNodeExtension
   name: YarhlNodeExtension
   href: api/TF3.Core.Helpers.YarhlNodeExtension.html
@@ -2908,6 +3283,84 @@ references:
   commentId: Overload:TF3.Core.Models.PatchInfo.VirtualAddress
   fullName: TF3.Core.Models.PatchInfo.VirtualAddress
   nameWithType: PatchInfo.VirtualAddress
+- uid: TF3.Core.Models.PortableExecutableStringInfo
+  name: PortableExecutableStringInfo
+  href: api/TF3.Core.Models.PortableExecutableStringInfo.html
+  commentId: T:TF3.Core.Models.PortableExecutableStringInfo
+  fullName: TF3.Core.Models.PortableExecutableStringInfo
+  nameWithType: PortableExecutableStringInfo
+- uid: TF3.Core.Models.PortableExecutableStringInfo.#ctor
+  name: PortableExecutableStringInfo()
+  href: api/TF3.Core.Models.PortableExecutableStringInfo.html#TF3_Core_Models_PortableExecutableStringInfo__ctor
+  commentId: M:TF3.Core.Models.PortableExecutableStringInfo.#ctor
+  fullName: TF3.Core.Models.PortableExecutableStringInfo.PortableExecutableStringInfo()
+  nameWithType: PortableExecutableStringInfo.PortableExecutableStringInfo()
+- uid: TF3.Core.Models.PortableExecutableStringInfo.#ctor*
+  name: PortableExecutableStringInfo
+  href: api/TF3.Core.Models.PortableExecutableStringInfo.html#TF3_Core_Models_PortableExecutableStringInfo__ctor_
+  commentId: Overload:TF3.Core.Models.PortableExecutableStringInfo.#ctor
+  fullName: TF3.Core.Models.PortableExecutableStringInfo.PortableExecutableStringInfo
+  nameWithType: PortableExecutableStringInfo.PortableExecutableStringInfo
+- uid: TF3.Core.Models.PortableExecutableStringInfo.Address
+  name: Address
+  href: api/TF3.Core.Models.PortableExecutableStringInfo.html#TF3_Core_Models_PortableExecutableStringInfo_Address
+  commentId: P:TF3.Core.Models.PortableExecutableStringInfo.Address
+  fullName: TF3.Core.Models.PortableExecutableStringInfo.Address
+  nameWithType: PortableExecutableStringInfo.Address
+- uid: TF3.Core.Models.PortableExecutableStringInfo.Address*
+  name: Address
+  href: api/TF3.Core.Models.PortableExecutableStringInfo.html#TF3_Core_Models_PortableExecutableStringInfo_Address_
+  commentId: Overload:TF3.Core.Models.PortableExecutableStringInfo.Address
+  fullName: TF3.Core.Models.PortableExecutableStringInfo.Address
+  nameWithType: PortableExecutableStringInfo.Address
+- uid: TF3.Core.Models.PortableExecutableStringInfo.Encoding
+  name: Encoding
+  href: api/TF3.Core.Models.PortableExecutableStringInfo.html#TF3_Core_Models_PortableExecutableStringInfo_Encoding
+  commentId: P:TF3.Core.Models.PortableExecutableStringInfo.Encoding
+  fullName: TF3.Core.Models.PortableExecutableStringInfo.Encoding
+  nameWithType: PortableExecutableStringInfo.Encoding
+- uid: TF3.Core.Models.PortableExecutableStringInfo.Encoding*
+  name: Encoding
+  href: api/TF3.Core.Models.PortableExecutableStringInfo.html#TF3_Core_Models_PortableExecutableStringInfo_Encoding_
+  commentId: Overload:TF3.Core.Models.PortableExecutableStringInfo.Encoding
+  fullName: TF3.Core.Models.PortableExecutableStringInfo.Encoding
+  nameWithType: PortableExecutableStringInfo.Encoding
+- uid: TF3.Core.Models.PortableExecutableStringInfo.FoundString
+  name: FoundString
+  href: api/TF3.Core.Models.PortableExecutableStringInfo.html#TF3_Core_Models_PortableExecutableStringInfo_FoundString
+  commentId: P:TF3.Core.Models.PortableExecutableStringInfo.FoundString
+  fullName: TF3.Core.Models.PortableExecutableStringInfo.FoundString
+  nameWithType: PortableExecutableStringInfo.FoundString
+- uid: TF3.Core.Models.PortableExecutableStringInfo.FoundString*
+  name: FoundString
+  href: api/TF3.Core.Models.PortableExecutableStringInfo.html#TF3_Core_Models_PortableExecutableStringInfo_FoundString_
+  commentId: Overload:TF3.Core.Models.PortableExecutableStringInfo.FoundString
+  fullName: TF3.Core.Models.PortableExecutableStringInfo.FoundString
+  nameWithType: PortableExecutableStringInfo.FoundString
+- uid: TF3.Core.Models.PortableExecutableStringInfo.Pointers
+  name: Pointers
+  href: api/TF3.Core.Models.PortableExecutableStringInfo.html#TF3_Core_Models_PortableExecutableStringInfo_Pointers
+  commentId: P:TF3.Core.Models.PortableExecutableStringInfo.Pointers
+  fullName: TF3.Core.Models.PortableExecutableStringInfo.Pointers
+  nameWithType: PortableExecutableStringInfo.Pointers
+- uid: TF3.Core.Models.PortableExecutableStringInfo.Pointers*
+  name: Pointers
+  href: api/TF3.Core.Models.PortableExecutableStringInfo.html#TF3_Core_Models_PortableExecutableStringInfo_Pointers_
+  commentId: Overload:TF3.Core.Models.PortableExecutableStringInfo.Pointers
+  fullName: TF3.Core.Models.PortableExecutableStringInfo.Pointers
+  nameWithType: PortableExecutableStringInfo.Pointers
+- uid: TF3.Core.Models.PortableExecutableStringInfo.Size
+  name: Size
+  href: api/TF3.Core.Models.PortableExecutableStringInfo.html#TF3_Core_Models_PortableExecutableStringInfo_Size
+  commentId: P:TF3.Core.Models.PortableExecutableStringInfo.Size
+  fullName: TF3.Core.Models.PortableExecutableStringInfo.Size
+  nameWithType: PortableExecutableStringInfo.Size
+- uid: TF3.Core.Models.PortableExecutableStringInfo.Size*
+  name: Size
+  href: api/TF3.Core.Models.PortableExecutableStringInfo.html#TF3_Core_Models_PortableExecutableStringInfo_Size_
+  commentId: Overload:TF3.Core.Models.PortableExecutableStringInfo.Size
+  fullName: TF3.Core.Models.PortableExecutableStringInfo.Size
+  nameWithType: PortableExecutableStringInfo.Size
 - uid: TF3.Core.ScriptManager
   name: ScriptManager
   href: api/TF3.Core.ScriptManager.html

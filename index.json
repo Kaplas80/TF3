@@ -254,6 +254,31 @@
     "title": "Class NodeContainerToPo | Translation Framework v3",
     "keywords": "Class NodeContainerToPo Po files merger. Inheritance Object NodeContainerToPo Implements Yarhl.FileFormat.IConverter < Yarhl.FileSystem.NodeContainerFormat , Yarhl.Media.Text.Po > Yarhl.FileFormat.IConverter Namespace : TF3.Core.Converters.Po Assembly : TF3.Core.dll Syntax public class NodeContainerToPo : Object Constructors NodeContainerToPo() Declaration public NodeContainerToPo() Methods Convert(NodeContainerFormat) Merges all parts (BinaryFormat) in a Po file. Declaration public Po Convert(NodeContainerFormat source) Parameters Type Name Description Yarhl.FileSystem.NodeContainerFormat source Po parts. Returns Type Description Yarhl.Media.Text.Po The merged Po. Implements Yarhl.FileFormat.IConverter<, > Yarhl.FileFormat.IConverter"
   },
+  "api/TF3.Core.Converters.PortableExecutable.ExtractStrings.html": {
+    "href": "api/TF3.Core.Converters.PortableExecutable.ExtractStrings.html",
+    "title": "Class ExtractStrings | Translation Framework v3",
+    "keywords": "Class ExtractStrings Extracts .exe translatable strings to a Po file. Inheritance Object ExtractStrings Implements Yarhl.FileFormat.IConverter < PortableExecutableFileFormat , Yarhl.Media.Text.Po > Yarhl.FileFormat.IConverter Yarhl.FileFormat.IInitializer < Yarhl.Media.Text.PoHeader > Namespace : TF3.Core.Converters.PortableExecutable Assembly : TF3.Core.dll Syntax public class ExtractStrings : Object Constructors ExtractStrings() Declaration public ExtractStrings() Methods Convert(PortableExecutableFileFormat) Extracts strings to a Po file. Declaration public Po Convert(PortableExecutableFileFormat source) Parameters Type Name Description PortableExecutableFileFormat source Input format. Returns Type Description Yarhl.Media.Text.Po The po file. Exceptions Type Condition ArgumentNullException Thrown if source is null. Initialize(PoHeader) Converter initializer. Declaration public void Initialize(PoHeader parameters) Parameters Type Name Description Yarhl.Media.Text.PoHeader parameters Header to use in created Po elements. ProcessString(String) Some games may need string processing before writing the Po. For example, converting from fullwidth to halfwidth or replacing some characters. Declaration protected virtual string ProcessString(string value) Parameters Type Name Description String value The original string. Returns Type Description String A processed string. Implements Yarhl.FileFormat.IConverter<, > Yarhl.FileFormat.IConverter Yarhl.FileFormat.IInitializer<>"
+  },
+  "api/TF3.Core.Converters.PortableExecutable.html": {
+    "href": "api/TF3.Core.Converters.PortableExecutable.html",
+    "title": "Namespace TF3.Core.Converters.PortableExecutable | Translation Framework v3",
+    "keywords": "Namespace TF3.Core.Converters.PortableExecutable Classes ExtractStrings Extracts .exe translatable strings to a Po file. Reader Deserializes PE files. Translate Inserts strings from Po file to the game Portable executable. Writer Serializes PE files."
+  },
+  "api/TF3.Core.Converters.PortableExecutable.Reader.html": {
+    "href": "api/TF3.Core.Converters.PortableExecutable.Reader.html",
+    "title": "Class Reader | Translation Framework v3",
+    "keywords": "Class Reader Deserializes PE files. Inheritance Object Reader Implements Yarhl.FileFormat.IConverter < Yarhl.IO.BinaryFormat , PortableExecutableFileFormat > Yarhl.FileFormat.IConverter Yarhl.FileFormat.IInitializer < String > Namespace : TF3.Core.Converters.PortableExecutable Assembly : TF3.Core.dll Syntax public class Reader : Object Constructors Reader() Declaration public Reader() Methods Convert(BinaryFormat) Converts a BinaryFormat into a PEFile. Declaration public PortableExecutableFileFormat Convert(BinaryFormat source) Parameters Type Name Description Yarhl.IO.BinaryFormat source Input format. Returns Type Description PortableExecutableFileFormat The PEFile format. Exceptions Type Condition ArgumentNullException Thrown if source is null. Initialize(String) Converter initializer. Declaration public void Initialize(string filename) Parameters Type Name Description String filename Reader config. Remarks Initialization is mandatory. Implements Yarhl.FileFormat.IConverter<, > Yarhl.FileFormat.IConverter Yarhl.FileFormat.IInitializer<>"
+  },
+  "api/TF3.Core.Converters.PortableExecutable.Translate.html": {
+    "href": "api/TF3.Core.Converters.PortableExecutable.Translate.html",
+    "title": "Class Translate | Translation Framework v3",
+    "keywords": "Class Translate Inserts strings from Po file to the game Portable executable. Inheritance Object Translate Implements Yarhl.FileFormat.IConverter < PortableExecutableFileFormat , PortableExecutableFileFormat > Yarhl.FileFormat.IConverter Yarhl.FileFormat.IInitializer < Yarhl.Media.Text.Po > Namespace : TF3.Core.Converters.PortableExecutable Assembly : TF3.Core.dll Syntax public class Translate : Object Constructors Translate() Declaration public Translate() Methods Convert(PortableExecutableFileFormat) Inserts the translated strings from Po file in a PortableExecutable file. Declaration public PortableExecutableFileFormat Convert(PortableExecutableFileFormat source) Parameters Type Name Description PortableExecutableFileFormat source Original Portable executable. Returns Type Description PortableExecutableFileFormat Translated Portable executable. Initialize(Po) Converter initializer. Declaration public void Initialize(Po parameters) Parameters Type Name Description Yarhl.Media.Text.Po parameters Po with translation. Remarks Initialization is mandatory. WriteReference(UInt32, UInt32, UInt32, PEFile, DataStream) Modifies the string references to point to the new address. Declaration protected virtual void WriteReference(uint reference, uint originalStringAddress, uint newStringAddress, PEFile peFile, DataStream peFileStream) Parameters Type Name Description UInt32 reference The reference address. UInt32 originalStringAddress The original string address. UInt32 newStringAddress The new string address. AsmResolver.PE.File.PEFile peFile The PEFile. Yarhl.IO.DataStream peFileStream The PEFile bytes. Exceptions Type Condition NotImplementedException Thrown if instruction opcode is not recognized. WriteString(PoEntry, DataWriter) Writes the translated string to the DataWriter, allowing modifications. Declaration protected virtual void WriteString(PoEntry entry, DataWriter writer) Parameters Type Name Description Yarhl.Media.Text.PoEntry entry The PoEntry with the string info. Yarhl.IO.DataWriter writer The DataWriter. Implements Yarhl.FileFormat.IConverter<, > Yarhl.FileFormat.IConverter Yarhl.FileFormat.IInitializer<>"
+  },
+  "api/TF3.Core.Converters.PortableExecutable.Writer.html": {
+    "href": "api/TF3.Core.Converters.PortableExecutable.Writer.html",
+    "title": "Class Writer | Translation Framework v3",
+    "keywords": "Class Writer Serializes PE files. Inheritance Object Writer Implements Yarhl.FileFormat.IConverter < PortableExecutableFileFormat , Yarhl.IO.BinaryFormat > Yarhl.FileFormat.IConverter Namespace : TF3.Core.Converters.PortableExecutable Assembly : TF3.Core.dll Syntax public class Writer : Object Constructors Writer() Declaration public Writer() Methods Convert(PortableExecutableFileFormat) Converts a PEFile into a BinaryFormat . Declaration public BinaryFormat Convert(PortableExecutableFileFormat source) Parameters Type Name Description PortableExecutableFileFormat source Input format. Returns Type Description Yarhl.IO.BinaryFormat The BinaryFormat format. Exceptions Type Condition ArgumentNullException Thrown if source is null. Implements Yarhl.FileFormat.IConverter<, > Yarhl.FileFormat.IConverter"
+  },
   "api/TF3.Core.Converters.SingleNodeToFormat.html": {
     "href": "api/TF3.Core.Converters.SingleNodeToFormat.html",
     "title": "Class SingleNodeToFormat | Translation Framework v3",
@@ -337,7 +362,12 @@
   "api/TF3.Core.Formats.html": {
     "href": "api/TF3.Core.Formats.html",
     "title": "Namespace TF3.Core.Formats | Translation Framework v3",
-    "keywords": "Namespace TF3.Core.Formats Classes BinaryPatch Binary patch format. Similar to 1337 patch format. BitmapFileFormat IFormat wrapper for SixLabors.ImageSharp.Image. DdsFileFormat IFormat wrapper for BCnEncoder.Shared.ImageFiles.DdsFile."
+    "keywords": "Namespace TF3.Core.Formats Classes BinaryPatch Binary patch format. Similar to 1337 patch format. BitmapFileFormat IFormat wrapper for SixLabors.ImageSharp.Image. DdsFileFormat IFormat wrapper for BCnEncoder.Shared.ImageFiles.DdsFile. PortableExecutableFileFormat IFormat wrapper for AsmResolver.PE.File.PEFile."
+  },
+  "api/TF3.Core.Formats.PortableExecutableFileFormat.html": {
+    "href": "api/TF3.Core.Formats.PortableExecutableFileFormat.html",
+    "title": "Class PortableExecutableFileFormat | Translation Framework v3",
+    "keywords": "Class PortableExecutableFileFormat IFormat wrapper for AsmResolver.PE.File.PEFile. Inheritance Object PortableExecutableFileFormat Implements Yarhl.FileFormat.ICloneableFormat Yarhl.FileFormat.IFormat Namespace : TF3.Core.Formats Assembly : TF3.Core.dll Syntax public class PortableExecutableFileFormat : Object Constructors PortableExecutableFileFormat() Initializes a new instance of the PortableExecutableFileFormat class. Declaration public PortableExecutableFileFormat() Properties Internal Gets or sets the PEFile. Declaration public PEFile Internal { get; set; } Property Value Type Description AsmResolver.PE.File.PEFile StringInfo Gets or sets the PEFile. Declaration public List<PortableExecutableStringInfo> StringInfo { get; set; } Property Value Type Description List < PortableExecutableStringInfo > Methods DeepClone() Declaration public object DeepClone() Returns Type Description Object Implements Yarhl.FileFormat.ICloneableFormat Yarhl.FileFormat.IFormat"
   },
   "api/TF3.Core.GameScript.html": {
     "href": "api/TF3.Core.GameScript.html",
@@ -349,10 +379,25 @@
     "title": "Class ChecksumHelper | Translation Framework v3",
     "keywords": "Class ChecksumHelper Checksum functions. Inheritance Object ChecksumHelper Namespace : TF3.Core.Helpers Assembly : TF3.Core.dll Syntax public static class ChecksumHelper : Object Methods Check(Stream, UInt64) Validates the checksum of a stream. Declaration public static bool Check(Stream stream, ulong expected) Parameters Type Name Description Stream stream The input stream. UInt64 expected The expected checksum value. Returns Type Description Boolean True if checksum matches with the expected value. Check(String, UInt64) Validates the checksum of a file. Declaration public static bool Check(string file, ulong expected) Parameters Type Name Description String file The input file. UInt64 expected The expected checksum value. Returns Type Description Boolean True if checksum matches with the expected value."
   },
+  "api/TF3.Core.Helpers.HexStringJsonConverter.html": {
+    "href": "api/TF3.Core.Helpers.HexStringJsonConverter.html",
+    "title": "Class HexStringJsonConverter | Translation Framework v3",
+    "keywords": "Class HexStringJsonConverter Json serializer for hexadecimal numbers. Inheritance Object HexStringJsonConverter Namespace : TF3.Core.Helpers Assembly : TF3.Core.dll Syntax public sealed class HexStringJsonConverter : JsonConverter<int> Constructors HexStringJsonConverter() Declaration public HexStringJsonConverter() Methods Read(ref Utf8JsonReader, Type, JsonSerializerOptions) Declaration public override int Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options) Parameters Type Name Description Utf8JsonReader reader Type typeToConvert JsonSerializerOptions options Returns Type Description Int32 Write(Utf8JsonWriter, Int32, JsonSerializerOptions) Declaration public override void Write(Utf8JsonWriter writer, int value, JsonSerializerOptions options) Parameters Type Name Description Utf8JsonWriter writer Int32 value JsonSerializerOptions options"
+  },
+  "api/TF3.Core.Helpers.HexStringListJsonConverter.html": {
+    "href": "api/TF3.Core.Helpers.HexStringListJsonConverter.html",
+    "title": "Class HexStringListJsonConverter | Translation Framework v3",
+    "keywords": "Class HexStringListJsonConverter Json serializer for hexadecimal number arrays. Inheritance Object HexStringListJsonConverter Namespace : TF3.Core.Helpers Assembly : TF3.Core.dll Syntax public sealed class HexStringListJsonConverter : JsonConverter<List<int>> Constructors HexStringListJsonConverter() Declaration public HexStringListJsonConverter() Methods Read(ref Utf8JsonReader, Type, JsonSerializerOptions) Declaration public override List<int> Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options) Parameters Type Name Description Utf8JsonReader reader Type typeToConvert JsonSerializerOptions options Returns Type Description List < Int32 > Write(Utf8JsonWriter, List<Int32>, JsonSerializerOptions) Declaration public override void Write(Utf8JsonWriter writer, List<int> value, JsonSerializerOptions options) Parameters Type Name Description Utf8JsonWriter writer List < Int32 > value JsonSerializerOptions options"
+  },
   "api/TF3.Core.Helpers.html": {
     "href": "api/TF3.Core.Helpers.html",
     "title": "Namespace TF3.Core.Helpers | Translation Framework v3",
-    "keywords": "Namespace TF3.Core.Helpers Classes ChecksumHelper Checksum functions. YarhlNodeExtension Node extension methods."
+    "keywords": "Namespace TF3.Core.Helpers Classes ChecksumHelper Checksum functions. HexStringJsonConverter Json serializer for hexadecimal numbers. HexStringListJsonConverter Json serializer for hexadecimal number arrays. MapStringLib Converter between FullWidth and HalfWidth characters. https://source.winehq.org/source/dlls/kernel32/locale.c . YarhlNodeExtension Node extension methods."
+  },
+  "api/TF3.Core.Helpers.MapStringLib.html": {
+    "href": "api/TF3.Core.Helpers.MapStringLib.html",
+    "title": "Class MapStringLib | Translation Framework v3",
+    "keywords": "Class MapStringLib Converter between FullWidth and HalfWidth characters. https://source.winehq.org/source/dlls/kernel32/locale.c . Inheritance Object MapStringLib Namespace : TF3.Core.Helpers Assembly : TF3.Core.dll Syntax public static class MapStringLib : Object Methods ToFullWidth(String) Converts a string to full width characters. Declaration public static string ToFullWidth(string input) Parameters Type Name Description String input The input string. Returns Type Description String The full width string. ToHalfWidth(String) Converts a string to half width characters. Declaration public static string ToHalfWidth(string input) Parameters Type Name Description String input The input string. Returns Type Description String The half width string."
   },
   "api/TF3.Core.Helpers.YarhlNodeExtension.html": {
     "href": "api/TF3.Core.Helpers.YarhlNodeExtension.html",
@@ -392,7 +437,7 @@
   "api/TF3.Core.Models.html": {
     "href": "api/TF3.Core.Models.html",
     "title": "Namespace TF3.Core.Models | Translation Framework v3",
-    "keywords": "Namespace TF3.Core.Models Classes AssetFileInfo Game asset file info. AssetInfo Game asset info. ContainerInfo Game file container info. ConverterInfo Yarhl converter info. FileInfo Game file info. ParameterInfo Converter parameter info. PatchInfo Binary patch info."
+    "keywords": "Namespace TF3.Core.Models Classes AssetFileInfo Game asset file info. AssetInfo Game asset info. ContainerInfo Game file container info. ConverterInfo Yarhl converter info. FileInfo Game file info. ParameterInfo Converter parameter info. PatchInfo Binary patch info. PortableExecutableStringInfo Parameters for Portable Executable reading."
   },
   "api/TF3.Core.Models.ParameterInfo.html": {
     "href": "api/TF3.Core.Models.ParameterInfo.html",
@@ -403,6 +448,11 @@
     "href": "api/TF3.Core.Models.PatchInfo.html",
     "title": "Class PatchInfo | Translation Framework v3",
     "keywords": "Class PatchInfo Binary patch info. Inheritance Object PatchInfo Namespace : TF3.Core.Models Assembly : TF3.Core.dll Syntax public class PatchInfo : Object Constructors PatchInfo() Declaration public PatchInfo() Properties File Gets or sets the file to patch. Declaration public FileInfo File { get; set; } Property Value Type Description FileInfo Id Gets or sets the patch id. Declaration public string Id { get; set; } Property Value Type Description String Patch Gets or sets the patch to apply. Declaration public string Patch { get; set; } Property Value Type Description String RawAddress Gets or sets the data raw address (in exe files). Declaration public long RawAddress { get; set; } Property Value Type Description Int64 VirtualAddress Gets or sets the data virtual address (in exe files). Declaration public long VirtualAddress { get; set; } Property Value Type Description Int64"
+  },
+  "api/TF3.Core.Models.PortableExecutableStringInfo.html": {
+    "href": "api/TF3.Core.Models.PortableExecutableStringInfo.html",
+    "title": "Class PortableExecutableStringInfo | Translation Framework v3",
+    "keywords": "Class PortableExecutableStringInfo Parameters for Portable Executable reading. Inheritance Object PortableExecutableStringInfo Namespace : TF3.Core.Models Assembly : TF3.Core.dll Syntax public class PortableExecutableStringInfo : Object Constructors PortableExecutableStringInfo() Declaration public PortableExecutableStringInfo() Properties Address Gets or sets the string address inside the executable file. Declaration public int Address { get; set; } Property Value Type Description Int32 Encoding Gets or sets the string encoding. Declaration public string Encoding { get; set; } Property Value Type Description String FoundString Gets or sets the string found inside the executable file. Declaration public string FoundString { get; set; } Property Value Type Description String Pointers Gets or sets the list of pointers referencing the string. Declaration public List<int> Pointers { get; set; } Property Value Type Description List < Int32 > Size Gets or sets the size in bytes of the string. Declaration public int Size { get; set; } Property Value Type Description Int32"
   },
   "api/TF3.Core.ScriptManager.html": {
     "href": "api/TF3.Core.ScriptManager.html",
@@ -417,7 +467,7 @@
   "dev/Changelog.html": {
     "href": "dev/Changelog.html",
     "title": "vNext (January 02, 2022) | Translation Framework v3",
-    "keywords": "vNext (January 02, 2022) As part of this release we had 7 issues closed. Documentation #16 Add dotnet runtime to README.md #17 Update README.md enhancements #24 Multi file containers #25 Update build system to the latest version #26 Update package dependencies #27 Extract using node names if outputNames are unknown #28 Bitmap converters v0.1.1 (December 28, 2021) As part of this release we had 1 issue closed. enhancement #13 Fix dependencies v0.1.0 (December 27, 2021) First alpha release"
+    "keywords": "vNext (January 02, 2022) As part of this release we had 8 issues closed. Documentation #16 Add dotnet runtime to README.md #17 Update README.md enhancements #24 Multi file containers #25 Update build system to the latest version #26 Update package dependencies #27 Extract using node names if outputNames are unknown #28 Bitmap converters #29 Portable executable converters v0.1.1 (December 28, 2021) As part of this release we had 1 issue closed. enhancement #13 Fix dependencies v0.1.0 (December 27, 2021) First alpha release"
   },
   "guides/Contributing.html": {
     "href": "guides/Contributing.html",

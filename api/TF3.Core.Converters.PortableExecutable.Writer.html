@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class GameScript
+    <title>Class Writer
    | Translation Framework v3 </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class GameScript
+    <meta name="title" content="Class Writer
    | Translation Framework v3 ">
     <meta name="generator" content="docfx 2.59.0.0">
     
@@ -434,207 +434,54 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="TF3.Core.GameScript">
+            <article class="content wrap" id="_content" data-uid="TF3.Core.Converters.PortableExecutable.Writer">
   
   
-  <h1 id="TF3_Core_GameScript" data-uid="TF3.Core.GameScript" class="text-break">Class GameScript
+  <h1 id="TF3_Core_Converters_PortableExecutable_Writer" data-uid="TF3.Core.Converters.PortableExecutable.Writer" class="text-break">Class Writer
   </h1>
-  <div class="markdown level0 summary"><p>Game script. Includes all the needed info to extract and repack game files.</p>
+  <div class="markdown level0 summary"><p>Serializes PE files.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">GameScript</span></div>
+    <div class="level1"><span class="xref">Writer</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="TF3.Core.html">TF3.Core</a></h6>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">Yarhl.FileFormat.IConverter</span>&lt;<a class="xref" href="TF3.Core.Formats.PortableExecutableFileFormat.html">PortableExecutableFileFormat</a>, <span class="xref">Yarhl.IO.BinaryFormat</span>&gt;</div>
+    <div><span class="xref">Yarhl.FileFormat.IConverter</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="TF3.Core.Converters.PortableExecutable.html">TF3.Core.Converters.PortableExecutable</a></h6>
   <h6><strong>Assembly</strong>: TF3.Core.dll</h6>
-  <h5 id="TF3_Core_GameScript_syntax">Syntax</h5>
+  <h5 id="TF3_Core_Converters_PortableExecutable_Writer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GameScript : Object</code></pre>
+    <pre><code class="lang-csharp hljs">public class Writer : Object</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   
   
-  <a id="TF3_Core_GameScript__ctor_" data-uid="TF3.Core.GameScript.#ctor*"></a>
-  <h4 id="TF3_Core_GameScript__ctor" data-uid="TF3.Core.GameScript.#ctor">GameScript()</h4>
+  <a id="TF3_Core_Converters_PortableExecutable_Writer__ctor_" data-uid="TF3.Core.Converters.PortableExecutable.Writer.#ctor*"></a>
+  <h4 id="TF3_Core_Converters_PortableExecutable_Writer__ctor" data-uid="TF3.Core.Converters.PortableExecutable.Writer.#ctor">Writer()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GameScript()</code></pre>
+    <pre><code class="lang-csharp hljs">public Writer()</code></pre>
   </div>
-  <h3 id="properties">Properties
-  </h3>
-  
-  
-  <a id="TF3_Core_GameScript_Assets_" data-uid="TF3.Core.GameScript.Assets*"></a>
-  <h4 id="TF3_Core_GameScript_Assets" data-uid="TF3.Core.GameScript.Assets">Assets</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the list of translatable assets.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;AssetInfo&gt; Assets { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="TF3.Core.Models.AssetInfo.html">AssetInfo</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="TF3_Core_GameScript_Containers_" data-uid="TF3.Core.GameScript.Containers*"></a>
-  <h4 id="TF3_Core_GameScript_Containers" data-uid="TF3.Core.GameScript.Containers">Containers</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the list of containers in the game.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;ContainerInfo&gt; Containers { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="TF3.Core.Models.ContainerInfo.html">ContainerInfo</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="TF3_Core_GameScript_Game_" data-uid="TF3.Core.GameScript.Game*"></a>
-  <h4 id="TF3_Core_GameScript_Game" data-uid="TF3.Core.GameScript.Game">Game</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the script game name.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Game { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="TF3_Core_GameScript_Name_" data-uid="TF3.Core.GameScript.Name*"></a>
-  <h4 id="TF3_Core_GameScript_Name" data-uid="TF3.Core.GameScript.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the script name (short name).</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="TF3_Core_GameScript_Parameters_" data-uid="TF3.Core.GameScript.Parameters*"></a>
-  <h4 id="TF3_Core_GameScript_Parameters" data-uid="TF3.Core.GameScript.Parameters">Parameters</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the list of parameters.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;ParameterInfo&gt; Parameters { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="TF3.Core.Models.ParameterInfo.html">ParameterInfo</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="TF3_Core_GameScript_Patches_" data-uid="TF3.Core.GameScript.Patches*"></a>
-  <h4 id="TF3_Core_GameScript_Patches" data-uid="TF3.Core.GameScript.Patches">Patches</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the list of patches.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;PatchInfo&gt; Patches { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="TF3.Core.Models.PatchInfo.html">PatchInfo</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   
   
-  <a id="TF3_Core_GameScript_Extract_" data-uid="TF3.Core.GameScript.Extract*"></a>
-  <h4 id="TF3_Core_GameScript_Extract_System_String_System_String_" data-uid="TF3.Core.GameScript.Extract(System.String,System.String)">Extract(String, String)</h4>
-  <div class="markdown level1 summary"><p>Extracts all translatable assets from the game.</p>
+  <a id="TF3_Core_Converters_PortableExecutable_Writer_Convert_" data-uid="TF3.Core.Converters.PortableExecutable.Writer.Convert*"></a>
+  <h4 id="TF3_Core_Converters_PortableExecutable_Writer_Convert_TF3_Core_Formats_PortableExecutableFileFormat_" data-uid="TF3.Core.Converters.PortableExecutable.Writer.Convert(TF3.Core.Formats.PortableExecutableFileFormat)">Convert(PortableExecutableFileFormat)</h4>
+  <div class="markdown level1 summary"><p>Converts a PEFile into a BinaryFormat .</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Extract(string gamePath, string outputPath)</code></pre>
+    <pre><code class="lang-csharp hljs">public BinaryFormat Convert(PortableExecutableFileFormat source)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -647,512 +494,52 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">gamePath</span></td>
-        <td><p>Game install directory.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">outputPath</span></td>
-        <td><p>Output directory.</p>
+        <td><a class="xref" href="TF3.Core.Formats.PortableExecutableFileFormat.html">PortableExecutableFileFormat</a></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>Input format.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="TF3_Core_GameScript_Rebuild_" data-uid="TF3.Core.GameScript.Rebuild*"></a>
-  <h4 id="TF3_Core_GameScript_Rebuild_System_String_System_String_System_String_" data-uid="TF3.Core.GameScript.Rebuild(System.String,System.String,System.String)">Rebuild(String, String, String)</h4>
-  <div class="markdown level1 summary"><p>Rebuild all translatable assets from the game.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Rebuild(string gamePath, string translationPath, string outputPath)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">gamePath</span></td>
-        <td><p>Game install directory.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">translationPath</span></td>
-        <td><p>Translation and patches directory.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">outputPath</span></td>
-        <td><p>Output directory.</p>
+        <td><span class="xref">Yarhl.IO.BinaryFormat</span></td>
+        <td><p>The BinaryFormat format.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h3 id="events">Events
-  </h3>
-  
-  
-  <h4 id="TF3_Core_GameScript_AssetExtracted" data-uid="TF3.Core.GameScript.AssetExtracted">AssetExtracted</h4>
-  <div class="markdown level1 summary"><p>Event triggered AFTER asset extraction ends.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event EventHandler&lt;AssetEventArgs&gt; AssetExtracted</code></pre>
-  </div>
-  <h5 class="eventType">Event Type</h5>
+  <h5 class="exceptions">Exceptions</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
+        <th>Condition</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="TF3.Core.EventArgs.AssetEventArgs.html">AssetEventArgs</a>&gt;</td>
-        <td></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown if source is null.</p>
+</td>
       </tr>
     </tbody>
   </table>
-  
-  
-  <h4 id="TF3_Core_GameScript_AssetExtracting" data-uid="TF3.Core.GameScript.AssetExtracting">AssetExtracting</h4>
-  <div class="markdown level1 summary"><p>Event triggered BEFORE asset extraction begins.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event EventHandler&lt;AssetEventArgs&gt; AssetExtracting</code></pre>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">Yarhl.FileFormat.IConverter&lt;, &gt;</span>
   </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="TF3.Core.EventArgs.AssetEventArgs.html">AssetEventArgs</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="TF3_Core_GameScript_AssetRead" data-uid="TF3.Core.GameScript.AssetRead">AssetRead</h4>
-  <div class="markdown level1 summary"><p>Event triggered AFTER an asset is read.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event EventHandler&lt;AssetEventArgs&gt; AssetRead</code></pre>
+  <div>
+      <span class="xref">Yarhl.FileFormat.IConverter</span>
   </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="TF3.Core.EventArgs.AssetEventArgs.html">AssetEventArgs</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="TF3_Core_GameScript_AssetReading" data-uid="TF3.Core.GameScript.AssetReading">AssetReading</h4>
-  <div class="markdown level1 summary"><p>Event triggered BEFORE an asset is read.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event EventHandler&lt;AssetEventArgs&gt; AssetReading</code></pre>
-  </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="TF3.Core.EventArgs.AssetEventArgs.html">AssetEventArgs</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="TF3_Core_GameScript_AssetTranslated" data-uid="TF3.Core.GameScript.AssetTranslated">AssetTranslated</h4>
-  <div class="markdown level1 summary"><p>Event triggered AFTER an asset is translated.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event EventHandler&lt;AssetEventArgs&gt; AssetTranslated</code></pre>
-  </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="TF3.Core.EventArgs.AssetEventArgs.html">AssetEventArgs</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="TF3_Core_GameScript_AssetTranslating" data-uid="TF3.Core.GameScript.AssetTranslating">AssetTranslating</h4>
-  <div class="markdown level1 summary"><p>Event triggered BEFORE an asset is translated.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event EventHandler&lt;AssetEventArgs&gt; AssetTranslating</code></pre>
-  </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="TF3.Core.EventArgs.AssetEventArgs.html">AssetEventArgs</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="TF3_Core_GameScript_AssetTranslationFailed" data-uid="TF3.Core.GameScript.AssetTranslationFailed">AssetTranslationFailed</h4>
-  <div class="markdown level1 summary"><p>Event triggered if an asset failed to translate (missing files).</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event EventHandler&lt;AssetEventArgs&gt; AssetTranslationFailed</code></pre>
-  </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="TF3.Core.EventArgs.AssetEventArgs.html">AssetEventArgs</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="TF3_Core_GameScript_ContainerRead" data-uid="TF3.Core.GameScript.ContainerRead">ContainerRead</h4>
-  <div class="markdown level1 summary"><p>Event triggered AFTER a container is read.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event EventHandler&lt;ContainerEventArgs&gt; ContainerRead</code></pre>
-  </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="TF3.Core.EventArgs.ContainerEventArgs.html">ContainerEventArgs</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="TF3_Core_GameScript_ContainerReading" data-uid="TF3.Core.GameScript.ContainerReading">ContainerReading</h4>
-  <div class="markdown level1 summary"><p>Event triggered BEFORE a container is read.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event EventHandler&lt;ContainerEventArgs&gt; ContainerReading</code></pre>
-  </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="TF3.Core.EventArgs.ContainerEventArgs.html">ContainerEventArgs</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="TF3_Core_GameScript_ContainerWriting" data-uid="TF3.Core.GameScript.ContainerWriting">ContainerWriting</h4>
-  <div class="markdown level1 summary"><p>Event triggered BEFORE a container is written.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event EventHandler&lt;ContainerEventArgs&gt; ContainerWriting</code></pre>
-  </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="TF3.Core.EventArgs.ContainerEventArgs.html">ContainerEventArgs</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="TF3_Core_GameScript_ContainerWrote" data-uid="TF3.Core.GameScript.ContainerWrote">ContainerWrote</h4>
-  <div class="markdown level1 summary"><p>Event triggered AFTER a container is written.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event EventHandler&lt;ContainerEventArgs&gt; ContainerWrote</code></pre>
-  </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="TF3.Core.EventArgs.ContainerEventArgs.html">ContainerEventArgs</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="TF3_Core_GameScript_PatchApplied" data-uid="TF3.Core.GameScript.PatchApplied">PatchApplied</h4>
-  <div class="markdown level1 summary"><p>Event triggered AFTER a patch is appiled.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event EventHandler&lt;PatchEventArgs&gt; PatchApplied</code></pre>
-  </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="TF3.Core.EventArgs.PatchEventArgs.html">PatchEventArgs</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="TF3_Core_GameScript_PatchApplying" data-uid="TF3.Core.GameScript.PatchApplying">PatchApplying</h4>
-  <div class="markdown level1 summary"><p>Event triggered BEFORE a patch is applied.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event EventHandler&lt;PatchEventArgs&gt; PatchApplying</code></pre>
-  </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="TF3.Core.EventArgs.PatchEventArgs.html">PatchEventArgs</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="TF3_Core_GameScript_PatchSkipped" data-uid="TF3.Core.GameScript.PatchSkipped">PatchSkipped</h4>
-  <div class="markdown level1 summary"><p>Event triggered AFTER a patch is skipped.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event EventHandler&lt;PatchEventArgs&gt; PatchSkipped</code></pre>
-  </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="TF3.Core.EventArgs.PatchEventArgs.html">PatchEventArgs</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="TF3_Core_GameScript_ScriptExtracted" data-uid="TF3.Core.GameScript.ScriptExtracted">ScriptExtracted</h4>
-  <div class="markdown level1 summary"><p>Event triggered AFTER extraction ends.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event EventHandler&lt;ScriptEventArgs&gt; ScriptExtracted</code></pre>
-  </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="TF3.Core.EventArgs.ScriptEventArgs.html">ScriptEventArgs</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="TF3_Core_GameScript_ScriptExtracting" data-uid="TF3.Core.GameScript.ScriptExtracting">ScriptExtracting</h4>
-  <div class="markdown level1 summary"><p>Event triggered BEFORE extraction begins.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event EventHandler&lt;ScriptEventArgs&gt; ScriptExtracting</code></pre>
-  </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="TF3.Core.EventArgs.ScriptEventArgs.html">ScriptEventArgs</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="TF3_Core_GameScript_ScriptRebuilding" data-uid="TF3.Core.GameScript.ScriptRebuilding">ScriptRebuilding</h4>
-  <div class="markdown level1 summary"><p>Event triggered BEFORE rebuilding begins.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event EventHandler&lt;ScriptEventArgs&gt; ScriptRebuilding</code></pre>
-  </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="TF3.Core.EventArgs.ScriptEventArgs.html">ScriptEventArgs</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="TF3_Core_GameScript_ScriptRebuilt" data-uid="TF3.Core.GameScript.ScriptRebuilt">ScriptRebuilt</h4>
-  <div class="markdown level1 summary"><p>Event triggered AFTER rebuilding ends.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event EventHandler&lt;ScriptEventArgs&gt; ScriptRebuilt</code></pre>
-  </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="TF3.Core.EventArgs.ScriptEventArgs.html">ScriptEventArgs</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
 </article>
           </div>
           
