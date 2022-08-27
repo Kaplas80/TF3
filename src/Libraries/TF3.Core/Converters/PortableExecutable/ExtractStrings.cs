@@ -60,6 +60,7 @@ namespace TF3.Core.Converters.PortableExecutable
 
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
             _encodings.Add("Shift_JIS", Encoding.GetEncoding(932));
+            _encodings.Add("UTF-16", Encoding.GetEncoding(1200));
 
             var po = new Po(_poHeader);
 
@@ -74,8 +75,7 @@ namespace TF3.Core.Converters.PortableExecutable
                 PESection stringSection = source.Internal.GetSectionContainingRva(stringRelativeVirtualAddress);
                 BinaryStreamReader stringReader = stringSection.CreateReader(stringSection.Offset, stringSection.GetPhysicalSize());
 
-                ulong stringOffset = stringSection.RvaToFileOffset(stringRelativeVirtualAddress);
-                stringReader.Offset = stringOffset;
+                stringReader.Offset = stringSection.RvaToFileOffset(stringRelativeVirtualAddress);
                 int bytesRead = stringReader.ReadBytes(stringBytes, 0, stringInfo.Size);
 
                 if (bytesRead != stringInfo.Size)
@@ -85,17 +85,35 @@ namespace TF3.Core.Converters.PortableExecutable
 
                 string str = _encodings[stringInfo.Encoding].GetString(stringBytes, 0, bytesRead).TrimEnd('\0');
 
+                str = ProcessString(str);
+
                 var entry = new PoEntry()
                 {
                     Original = str,
                     Translated = str,
-                    Context = $"{stringInfo.Address}",
+                    Context = $"{stringInfo.Address}#{stringInfo.Encoding}",
                     Reference = string.Join(',', stringInfo.Pointers.ToArray()),
                 };
                 po.Add(entry);
             }
 
             return po;
+        }
+
+        /// <summary>
+        /// Some games may need string processing before writing the Po.
+        /// For example, converting from fullwidth to halfwidth or replacing some characters.
+        /// </summary>
+        /// <param name="value">The original string.</param>
+        /// <returns>A processed string.</returns>
+        protected virtual string ProcessString(string value)
+        {
+            if (string.IsNullOrEmpty(value))
+            {
+                return "<!empty>";
+            }
+
+            return value;
         }
     }
 }
