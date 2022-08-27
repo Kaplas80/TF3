@@ -21,6 +21,7 @@
 namespace TF3.Core.Converters.PortableExecutable
 {
     using System;
+    using System.Diagnostics.CodeAnalysis;
     using TF3.Core.Formats;
     using Yarhl.FileFormat;
     using Yarhl.IO;
@@ -28,6 +29,7 @@ namespace TF3.Core.Converters.PortableExecutable
     /// <summary>
     /// Serializes PE files.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     public class Writer : IConverter<PortableExecutableFileFormat, BinaryFormat>
     {
         /// <summary>

@@ -21,12 +21,14 @@
 namespace TF3.Core.Models
 {
     using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
     using System.Text.Json.Serialization;
     using TF3.Core.Helpers;
 
     /// <summary>
     /// Parameters for Portable Executable reading.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     public class PortableExecutableStringInfo
     {
         /// <summary>

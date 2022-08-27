@@ -21,6 +21,7 @@
 namespace TF3.Core.Formats
 {
     using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
     using AsmResolver.PE.File;
     using TF3.Core.Models;
     using Yarhl.FileFormat;
@@ -29,6 +30,7 @@ namespace TF3.Core.Formats
     /// <summary>
     /// IFormat wrapper for AsmResolver.PE.File.PEFile.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     public class PortableExecutableFileFormat : ICloneableFormat
     {
         /// <summary>

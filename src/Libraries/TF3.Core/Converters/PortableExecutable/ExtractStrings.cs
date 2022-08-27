@@ -22,6 +22,7 @@ namespace TF3.Core.Converters.PortableExecutable
 {
     using System;
     using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
     using System.Text;
     using AsmResolver.IO;
     using AsmResolver.PE.File;
@@ -33,6 +34,7 @@ namespace TF3.Core.Converters.PortableExecutable
     /// <summary>
     /// Extracts .exe translatable strings to a Po file.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     public class ExtractStrings : IConverter<PortableExecutableFileFormat, Po>, IInitializer<PoHeader>
     {
         private readonly Dictionary<string, Encoding> _encodings = new Dictionary<string, Encoding>();

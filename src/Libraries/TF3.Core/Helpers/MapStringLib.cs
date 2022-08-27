@@ -20,12 +20,14 @@
 
 namespace TF3.Core.Helpers
 {
+    using System.Diagnostics.CodeAnalysis;
     using System.Text;
 
     /// <summary>
     /// Converter between FullWidth and HalfWidth characters.
     /// https://source.winehq.org/source/dlls/kernel32/locale.c.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     public static class MapStringLib
     {
         private static readonly byte[] MiscSymbolsTable =

@@ -5,12 +5,14 @@ namespace TF3.Core.Helpers
 {
     using System;
     using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
     using System.Text.Json;
     using System.Text.Json.Serialization;
 
     /// <summary>
     /// Json serializer for hexadecimal number arrays.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     public sealed class HexStringListJsonConverter : JsonConverter<List<int>>
     {
         /// <inheritdoc/>

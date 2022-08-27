@@ -22,6 +22,7 @@ namespace TF3.Core.Converters.PortableExecutable
 {
     using System;
     using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
     using System.IO;
     using System.Text.Json;
     using Dahomey.Json;
@@ -33,6 +34,7 @@ namespace TF3.Core.Converters.PortableExecutable
     /// <summary>
     /// Deserializes PE files.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     public class Reader : IConverter<BinaryFormat, PortableExecutableFileFormat>, IInitializer<string>
     {
         private string _filename = string.Empty;

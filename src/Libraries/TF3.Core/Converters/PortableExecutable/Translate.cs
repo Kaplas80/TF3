@@ -22,9 +22,8 @@ namespace TF3.Core.Converters.PortableExecutable
 {
     using System;
     using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
     using System.IO;
-    using System.Linq;
-    using System.Reflection;
     using System.Text;
     using AsmResolver;
     using AsmResolver.PE.File;
@@ -37,6 +36,7 @@ namespace TF3.Core.Converters.PortableExecutable
     /// <summary>
     /// Inserts strings from Po file to the game Portable executable.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     public class Translate : IConverter<PortableExecutableFileFormat, PortableExecutableFileFormat>, IInitializer<Po>
     {
         // Asm operations length (in bytes).
