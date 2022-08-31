@@ -1,4 +1,4 @@
-// Copyright (c) 2021 Kaplas
+// Copyright (c) 2022 Kaplas
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -17,6 +17,7 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
+
 namespace TF3.Core.Enums
 {
     /// <summary>
@@ -127,25 +128,25 @@ namespace TF3.Core.Enums
         La32 = 16,
 
         /// <summary>
-        /// Packed pixel type containing two 8-bit signed normalized values, ranging from âˆ’1 to 1.
+        /// Packed pixel type containing two 8-bit signed normalized values, ranging from -1 to 1.
         /// Ranges from [-1, -1, 0, 1] to [1, 1, 0, 1] in vector form.
         /// </summary>
         NormalizedByte2 = 17,
 
         /// <summary>
-        /// Packed pixel type containing four 8-bit signed normalized values, ranging from âˆ’1 to 1.
+        /// Packed pixel type containing four 8-bit signed normalized values, ranging from -1 to 1.
         /// Ranges from [-1, -1, -1, -1] to [1, 1, 1, 1] in vector form.
         /// </summary>
         NormalizedByte4 = 18,
 
         /// <summary>
-        /// Packed pixel type containing two 16-bit signed normalized values, ranging from âˆ’1 to 1.
+        /// Packed pixel type containing two 16-bit signed normalized values, ranging from -1 to 1.
         /// Ranges from [-1, -1, 0, 1] to [1, 1, 0, 1] in vector form.
         /// </summary>
         NormalizedShort2 = 19,
 
         /// <summary>
-        /// Packed pixel type containing four 16-bit signed normalized values, ranging from âˆ’1 to 1.
+        /// Packed pixel type containing four 16-bit signed normalized values, ranging from -1 to 1.
         /// Ranges from [-1, -1, -1, -1] to [1, 1, 1, 1] in vector form.
         /// </summary>
         NormalizedShort4 = 20,
