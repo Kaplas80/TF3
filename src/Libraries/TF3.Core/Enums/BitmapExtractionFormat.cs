@@ -27,11 +27,16 @@ namespace TF3.Core.Enums
         /// <summary>
         /// PNG format.
         /// </summary>
-        Png,
+        Png = 0,
 
         /// <summary>
         /// TGA format.
         /// </summary>
-        Tga,
+        Tga = 1,
+
+        /// <summary>
+        /// BMP format.
+        /// </summary>
+        Bmp = 2,
     }
 }
