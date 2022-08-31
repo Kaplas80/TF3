@@ -65,6 +65,10 @@ namespace TF3.Core.Converters.BitmapImage
                     source.Internal.SaveAsTga(result.Stream);
                     break;
 
+                case BitmapExtractionFormat.Bmp:
+                    source.Internal.SaveAsBmp(result.Stream);
+                    break;
+
                 default:
                     throw new FormatException("Unknown image format");
             }

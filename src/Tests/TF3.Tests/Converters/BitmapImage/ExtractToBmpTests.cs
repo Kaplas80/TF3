@@ -28,7 +28,7 @@ namespace TF3.Tests.Converters.BitmapImage
     using TF3.Core.Formats;
     using Yarhl.IO;
 
-    public class ExtractToTgaTests
+    public class ExtractToBmpTests
     {
         private readonly byte[] _validData = { 0x01 };
 
@@ -36,7 +36,7 @@ namespace TF3.Tests.Converters.BitmapImage
         public void NullSourceThrowsException()
         {
             var converter = new Extractor();
-            converter.Initialize(new ImageExtractorParameters { ImageFormat = BitmapExtractionFormat.Tga });
+            converter.Initialize(new ImageExtractorParameters { ImageFormat = BitmapExtractionFormat.Bmp });
             _ = Assert.Throws<ArgumentNullException>(() => converter.Convert(null));
         }
 
@@ -44,7 +44,7 @@ namespace TF3.Tests.Converters.BitmapImage
         public void NullImageThrowsException()
         {
             var converter = new Extractor();
-            converter.Initialize(new ImageExtractorParameters { ImageFormat = BitmapExtractionFormat.Tga });
+            converter.Initialize(new ImageExtractorParameters { ImageFormat = BitmapExtractionFormat.Bmp });
             var format = new BitmapFileFormat();
             _ = Assert.Throws<NullReferenceException>(() => converter.Convert(format));
         }
@@ -77,13 +77,21 @@ namespace TF3.Tests.Converters.BitmapImage
             BitmapFileFormat bmp = reader.Convert(format);
 
             var converter = new Extractor();
-            converter.Initialize(new ImageExtractorParameters { ImageFormat = BitmapExtractionFormat.Tga });
+            converter.Initialize(new ImageExtractorParameters { ImageFormat = BitmapExtractionFormat.Bmp });
 
-            // TGA files do not have any magic number, so we can only check if no exception has been thrown
             BinaryFormat result = null;
             Assert.DoesNotThrow(() => result = converter.Convert(bmp));
             Assert.IsNotNull(result);
             Assert.IsNotNull(result.Stream);
+
+            result.Stream.Position = 0;
+            var reader1 = new DataReader(result.Stream)
+            {
+                Endianness = EndiannessMode.BigEndian,
+            };
+            ulong magic = reader1.ReadUInt16();
+
+            Assert.AreEqual(0x424D, magic);
         }
     }
 }
