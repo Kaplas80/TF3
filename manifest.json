@@ -726,7 +726,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Enums.BitmapExtractionFormat.html",
-          "hash": "0fCIqK2B/9MSO92VSlfp/edGLzSfXKBSOCXpZBQ0YtE="
+          "hash": "mHAAV+UrREHV1W5VHaI/6tAnz+0bayjYK24d7a9c3sg="
         }
       },
       "is_incremental": false,
@@ -738,7 +738,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Enums.BitmapPixelFormat.html",
-          "hash": "fGa5O/sAz48YDtp3yPeLIZapZJF67CuOVW/za7aYpQE="
+          "hash": "REaS0m6ovF+sTZNXoQ+YnB9y0kuvr3/jDWsLqLsSFdY="
         }
       },
       "is_incremental": false,
@@ -750,7 +750,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TF3.Core.Enums.html",
-          "hash": "E1Un72+9QHVTlDqts6ay5OKuTN9UM2k/iStykGkNDMU="
+          "hash": "b8ho4X5RoTGSamQq5nyk9Cb5gJvwfNOHv+3jZ/yuBmA="
         }
       },
       "is_incremental": false,
@@ -1146,7 +1146,7 @@
       "output": {
         ".html": {
           "relative_path": "dev/Changelog.html",
-          "hash": "BpGbXkEpLFEFW2AchWd+I1Q8QfCMxuX8AXOHscqr3PY="
+          "hash": "b1QhDJOYpTPzkUjppRvzr716AdjLjklvMz5l3j+5U9U="
         }
       },
       "is_incremental": false,

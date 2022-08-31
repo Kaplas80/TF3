@@ -1771,6 +1771,12 @@ references:
   commentId: T:TF3.Core.Enums.BitmapExtractionFormat
   fullName: TF3.Core.Enums.BitmapExtractionFormat
   nameWithType: BitmapExtractionFormat
+- uid: TF3.Core.Enums.BitmapExtractionFormat.Bmp
+  name: Bmp
+  href: api/TF3.Core.Enums.BitmapExtractionFormat.html#TF3_Core_Enums_BitmapExtractionFormat_Bmp
+  commentId: F:TF3.Core.Enums.BitmapExtractionFormat.Bmp
+  fullName: TF3.Core.Enums.BitmapExtractionFormat.Bmp
+  nameWithType: BitmapExtractionFormat.Bmp
 - uid: TF3.Core.Enums.BitmapExtractionFormat.Png
   name: Png
   href: api/TF3.Core.Enums.BitmapExtractionFormat.html#TF3_Core_Enums_BitmapExtractionFormat_Png
