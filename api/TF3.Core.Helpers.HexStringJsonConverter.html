@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class AssetEventArgs
+    <title>Class HexStringJsonConverter
    | Translation Framework v3 </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class AssetEventArgs
+    <meta name="title" content="Class HexStringJsonConverter
    | Translation Framework v3 ">
     <meta name="generator" content="docfx 2.59.0.0">
     
@@ -236,37 +236,48 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="TF3.Core.EventArgs.AssetEventArgs">
+            <article class="content wrap" id="_content" data-uid="TF3.Core.Helpers.HexStringJsonConverter">
   
   
-  <h1 id="TF3_Core_EventArgs_AssetEventArgs" data-uid="TF3.Core.EventArgs.AssetEventArgs" class="text-break">Class AssetEventArgs
+  <h1 id="TF3_Core_Helpers_HexStringJsonConverter" data-uid="TF3.Core.Helpers.HexStringJsonConverter" class="text-break">Class HexStringJsonConverter
   </h1>
-  <div class="markdown level0 summary"><p>Asset events arguments.</p>
+  <div class="markdown level0 summary"><p>Json serializer for hexadecimal numbers.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">AssetEventArgs</span></div>
+    <div class="level1"><span class="xref">HexStringJsonConverter</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="TF3.Core.EventArgs.html">TF3.Core.EventArgs</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="TF3.Core.Helpers.html">TF3.Core.Helpers</a></h6>
   <h6><strong>Assembly</strong>: TF3.Core.dll</h6>
-  <h5 id="TF3_Core_EventArgs_AssetEventArgs_syntax">Syntax</h5>
+  <h5 id="TF3_Core_Helpers_HexStringJsonConverter_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class AssetEventArgs : Object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class HexStringJsonConverter : JsonConverter&lt;ulong&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   
   
-  <a id="TF3_Core_EventArgs_AssetEventArgs__ctor_" data-uid="TF3.Core.EventArgs.AssetEventArgs.#ctor*"></a>
-  <h4 id="TF3_Core_EventArgs_AssetEventArgs__ctor_TF3_Core_Models_AssetInfo_" data-uid="TF3.Core.EventArgs.AssetEventArgs.#ctor(TF3.Core.Models.AssetInfo)">AssetEventArgs(AssetInfo)</h4>
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="TF3.Core.EventArgs.AssetEventArgs.html">AssetEventArgs</a> class.</p>
-</div>
+  <a id="TF3_Core_Helpers_HexStringJsonConverter__ctor_" data-uid="TF3.Core.Helpers.HexStringJsonConverter.#ctor*"></a>
+  <h4 id="TF3_Core_Helpers_HexStringJsonConverter__ctor" data-uid="TF3.Core.Helpers.HexStringJsonConverter.#ctor">HexStringJsonConverter()</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AssetEventArgs(AssetInfo assetInfo)</code></pre>
+    <pre><code class="lang-csharp hljs">public HexStringJsonConverter()</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="TF3_Core_Helpers_HexStringJsonConverter_Read_" data-uid="TF3.Core.Helpers.HexStringJsonConverter.Read*"></a>
+  <h4 id="TF3_Core_Helpers_HexStringJsonConverter_Read_System_Text_Json_Utf8JsonReader__System_Type_System_Text_Json_JsonSerializerOptions_" data-uid="TF3.Core.Helpers.HexStringJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)">Read(ref Utf8JsonReader, Type, JsonSerializerOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ulong Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -279,27 +290,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="TF3.Core.Models.AssetInfo.html">AssetInfo</a></td>
-        <td><span class="parametername">assetInfo</span></td>
-        <td><p>Asset info.</p>
-</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.json.utf8jsonreader">Utf8JsonReader</a></td>
+        <td><span class="parametername">reader</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">typeToConvert</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions">JsonSerializerOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="properties">Properties
-  </h3>
-  
-  
-  <a id="TF3_Core_EventArgs_AssetEventArgs_Data_" data-uid="TF3.Core.EventArgs.AssetEventArgs.Data*"></a>
-  <h4 id="TF3_Core_EventArgs_AssetEventArgs_Data" data-uid="TF3.Core.EventArgs.AssetEventArgs.Data">Data</h4>
-  <div class="markdown level1 summary"><p>Gets the asset info.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AssetInfo Data { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -309,7 +316,44 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="TF3.Core.Models.AssetInfo.html">AssetInfo</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="TF3_Core_Helpers_HexStringJsonConverter_Write_" data-uid="TF3.Core.Helpers.HexStringJsonConverter.Write*"></a>
+  <h4 id="TF3_Core_Helpers_HexStringJsonConverter_Write_System_Text_Json_Utf8JsonWriter_System_UInt64_System_Text_Json_JsonSerializerOptions_" data-uid="TF3.Core.Helpers.HexStringJsonConverter.Write(System.Text.Json.Utf8JsonWriter,System.UInt64,System.Text.Json.JsonSerializerOptions)">Write(Utf8JsonWriter, UInt64, JsonSerializerOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Write(Utf8JsonWriter writer, ulong value, JsonSerializerOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter">Utf8JsonWriter</a></td>
+        <td><span class="parametername">writer</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions">JsonSerializerOptions</a></td>
+        <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
     </tbody>
