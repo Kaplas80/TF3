@@ -1,8 +1,28 @@
-﻿namespace TF3.Tests.Converters
+﻿// Copyright (c) 2022 Kaplas
+//
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
+
+namespace TF3.Tests.Converters.Po
 {
     using System;
     using NUnit.Framework;
-    using TF3.Core.Converters.Po;
+    using TF3.YarhlPlugin.Common.Converters.Po;
     using Yarhl.FileFormat;
     using Yarhl.FileSystem;
     using Yarhl.IO;
@@ -39,7 +59,7 @@
             var entry = new PoEntry("Test") { Translated = "Prueba" };
             po.Add(entry);
 
-            BinaryFormat poBinary = ConvertFormat.With<Po2Binary>(po) as BinaryFormat;
+            var poBinary = ConvertFormat.With<Po2Binary>(po) as BinaryFormat;
 
             using var format = new NodeContainerFormat();
             using var node = new Node("Node", poBinary);
@@ -63,13 +83,13 @@
             var entry1 = new PoEntry("Test 1") { Translated = "Prueba 1" };
             po1.Add(entry1);
 
-            BinaryFormat poBinary1 = ConvertFormat.With<Po2Binary>(po1) as BinaryFormat;
+            var poBinary1 = ConvertFormat.With<Po2Binary>(po1) as BinaryFormat;
 
             var po2 = new Po(header);
             var entry2 = new PoEntry("Test 2") { Translated = "Prueba 2" };
             po2.Add(entry2);
 
-            BinaryFormat poBinary2 = ConvertFormat.With<Po2Binary>(po2) as BinaryFormat;
+            var poBinary2 = ConvertFormat.With<Po2Binary>(po2) as BinaryFormat;
 
             using var format = new NodeContainerFormat();
             using var node1 = new Node("Node 1", poBinary1);

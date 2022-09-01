@@ -35,7 +35,6 @@ namespace TF3.Core.Exceptions
         /// Initializes a new instance of the <see cref="ByteMismatchException"/> class.
         /// </summary>
         public ByteMismatchException()
-            : base()
         {
         }
 

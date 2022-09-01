@@ -2,7 +2,7 @@
 {
     using System;
     using NUnit.Framework;
-    using TF3.Core.Converters;
+    using TF3.YarhlPlugin.Common.Converters;
     using Yarhl.IO;
 
     public class FormatReplaceTests

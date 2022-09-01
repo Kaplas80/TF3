@@ -22,10 +22,10 @@ namespace TF3.Tests.Converters.BitmapImage
 {
     using System;
     using NUnit.Framework;
-    using TF3.Core.Converters.BitmapImage;
-    using TF3.Core.Converters.Common;
-    using TF3.Core.Enums;
-    using TF3.Core.Formats;
+    using TF3.YarhlPlugin.Common.Converters.BitmapImage;
+    using TF3.YarhlPlugin.Common.Converters.Common;
+    using TF3.YarhlPlugin.Common.Enums;
+    using TF3.YarhlPlugin.Common.Formats;
     using Yarhl.IO;
 
     public class ExtractToTgaTests
