@@ -21,6 +21,8 @@
 namespace TF3.Core.Models
 {
     using System.Diagnostics.CodeAnalysis;
+    using System.Text.Json.Serialization;
+    using TF3.Core.Helpers;
 
     /// <summary>
     /// Game file info.
@@ -45,8 +47,9 @@ namespace TF3.Core.Models
 
         /// <summary>
         /// Gets or sets the file checksum.
-        /// If it is 0, it won't be checked.
+        /// If it is 0x0, it won't be checked.
         /// </summary>
+        [JsonConverter(typeof(HexStringJsonConverter))]
         public ulong Checksum { get; set; }
     }
 }

@@ -22,6 +22,8 @@ namespace TF3.Core.Models
 {
     using System.Collections.Generic;
     using System.Diagnostics.CodeAnalysis;
+    using System.Text.Json.Serialization;
+    using TF3.Core.Helpers;
 
     /// <summary>
     /// Game file container info.
@@ -46,8 +48,9 @@ namespace TF3.Core.Models
 
         /// <summary>
         /// Gets or sets the container checksums.
-        /// If it is 0, the file won't be checked.
+        /// If it is 0x0, the file won't be checked.
         /// </summary>
+        [JsonConverter(typeof(HexStringListJsonConverter))]
         public List<ulong> Checksums { get; set; }
 
         /// <summary>

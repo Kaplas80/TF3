@@ -14,5 +14,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Libraries\TF3.Core\TF3.Core.csproj" />
+    <ProjectReference Include="..\..\Libraries\TF3.YarhlPlugin.Common\TF3.YarhlPlugin.Common.csproj" />
   </ItemGroup>
 </Project>
