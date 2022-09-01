@@ -151,7 +151,7 @@ namespace TF3.Core
         /// <summary>
         /// Gets or sets the list of patches.
         /// </summary>
-        public List<PatchInfo> Patches { get; set; }
+        public List<Models.PatchInfo> Patches { get; set; }
 
         /// <summary>
         /// Gets or sets the list of parameters.
@@ -212,7 +212,7 @@ namespace TF3.Core
                 TranslateAsset(assetInfo, containersDict, translationPath);
             }
 
-            foreach (PatchInfo patchInfo in Patches)
+            foreach (Models.PatchInfo patchInfo in Patches)
             {
                 ApplyPatch(patchInfo, containersDict, translationPath);
             }

@@ -11,9 +11,10 @@ Task("Define-Project")
     info.StableNuGetFeedToken = info.GitHubToken;
 
     info.AddLibraryProjects("src/Libraries/TF3.Core/TF3.Core.csproj");
+    info.AddLibraryProjects("src/Libraries/TF3.YarhlPlugin.Common/TF3.YarhlPlugin.Common.csproj");
     info.AddApplicationProjects("src/Apps/TF3.CommandLine/TF3.CommandLine.csproj");
     info.AddTestProjects("src/Tests/TF3.Tests/TF3.Tests.csproj");
-	
+
 	info.PreviewNuGetFeed = "https://pkgs.dev.azure.com/kaplas80/TF3/_packaging/TF3-Preview/nuget/v3/index.json";
 });
 

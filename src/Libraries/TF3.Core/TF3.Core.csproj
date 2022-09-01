@@ -11,13 +11,7 @@
 
   <ItemGroup>
     <PackageReference Include="Yarhl" />
-    <PackageReference Include="Yarhl.Media.Text" />
     <PackageReference Include="Dahomey.Json" />
     <PackageReference Include="Standart.Hash.xxHash" />
-    <PackageReference Include="BCnEncoder.Net" />
-    <PackageReference Include="BCnEncoder.Net.ImageSharp" />
-    <PackageReference Include="SixLabors.ImageSharp" />
-    <PackageReference Include="AsmResolver.PE.File" />
   </ItemGroup>
-
 </Project>

@@ -3,9 +3,9 @@
     using System;
     using System.Collections.Generic;
     using NUnit.Framework;
-    using TF3.Core.Converters.BitmapImage;
-    using TF3.Core.Enums;
-    using TF3.Core.Formats;
+    using TF3.YarhlPlugin.Common.Converters.BitmapImage;
+    using TF3.YarhlPlugin.Common.Enums;
+    using TF3.YarhlPlugin.Common.Formats;
     using Yarhl.IO;
 
     public class WriterTests
