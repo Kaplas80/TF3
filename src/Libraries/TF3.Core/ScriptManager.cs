@@ -20,6 +20,7 @@
 
 namespace TF3.Core
 {
+    using System;
     using System.Collections.Generic;
     using System.IO;
     using System.Text.Json;
@@ -32,6 +33,11 @@ namespace TF3.Core
     public static class ScriptManager
     {
         private static readonly List<GameScript> _scripts = new List<GameScript>();
+
+        /// <summary>
+        /// Event triggered on errors.
+        /// </summary>
+        public static event EventHandler<(string file, string message)> ErrorLoading;
 
         /// <summary>
         /// Gets a list of loaded scripts.
@@ -54,9 +60,16 @@ namespace TF3.Core
 
             foreach (string file in Directory.EnumerateFiles(path, "TF3.Script.*.json"))
             {
-                string scriptContents = File.ReadAllText(file);
-                GameScript script = JsonSerializer.Deserialize<GameScript>(scriptContents, options);
-                _scripts.Add(script);
+                try
+                {
+                    string scriptContents = File.ReadAllText(file);
+                    GameScript script = JsonSerializer.Deserialize<GameScript>(scriptContents, options);
+                    _scripts.Add(script);
+                }
+                catch (Exception e)
+                {
+                    ErrorLoading?.Invoke(null, (file, e.Message));
+                }
             }
         }
 

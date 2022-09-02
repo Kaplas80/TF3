@@ -36,6 +36,12 @@ namespace TF3.CommandLine
         /// <param name="args">Application arguments.</param>
         public static void Main(string[] args)
         {
+            ScriptManager.ErrorLoading += (object _, (string file, string message) x) =>
+            {
+                Console.WriteLine($"Error loading {x.file}");
+                Console.WriteLine(x.message);
+            };
+
             ScriptManager.LoadScripts("scripts");
 
             Parser.Default.ParseArguments<Options.ListScriptsOptions, Options.ExtractOptions, Options.RebuildOptions>(args)
