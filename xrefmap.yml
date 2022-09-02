@@ -1357,6 +1357,12 @@ references:
   commentId: Overload:TF3.Core.ScriptManager.Clear
   fullName: TF3.Core.ScriptManager.Clear
   nameWithType: ScriptManager.Clear
+- uid: TF3.Core.ScriptManager.ErrorLoading
+  name: ErrorLoading
+  href: api/TF3.Core.ScriptManager.html#TF3_Core_ScriptManager_ErrorLoading
+  commentId: E:TF3.Core.ScriptManager.ErrorLoading
+  fullName: TF3.Core.ScriptManager.ErrorLoading
+  nameWithType: ScriptManager.ErrorLoading
 - uid: TF3.Core.ScriptManager.LoadScripts(System.String)
   name: LoadScripts(String)
   href: api/TF3.Core.ScriptManager.html#TF3_Core_ScriptManager_LoadScripts_System_String_
