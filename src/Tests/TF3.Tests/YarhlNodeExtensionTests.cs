@@ -21,7 +21,6 @@
 namespace TF3.Tests
 {
     using System.Collections.Generic;
-    using System.Text.Json;
     using NUnit.Framework;
     using TF3.Core.Exceptions;
     using TF3.Core.Helpers;
@@ -34,34 +33,44 @@ namespace TF3.Tests
         [Test]
         public void SingleConverter()
         {
-            const string parameter = /*lang=json,strict*/ "{\"Id\":\"TestParameterId\",\"TypeName\":\"System.String\",\"Value\":\"Prueba\"}";
+            byte[] values = { 0x01, 0x02 };
+            using DataStream stream = DataStreamFactory.FromArray(values);
+            var converter = new ConverterInfo() { TypeName = "TF3.Core.Converters.SingleNodeToFormat", ParameterId = string.Empty, };
 
-            var converter = new ConverterInfo() { TypeName = "TF3.Core.Converters.FormatToSingleNode", ParameterId = "TestParameterId", };
-            ParameterInfo parameterInfo = JsonSerializer.Deserialize<ParameterInfo>(parameter);
+            using Node ncf = NodeFactory.CreateContainer("root");
+            using Node n = NodeFactory.FromSubstream("test", stream, 0, stream.Length);
+            ncf.Add(n);
 
-            using Node n = NodeFactory.FromMemory("test");
-            Assert.IsFalse(n.IsContainer);
-            n.Transform(new List<ConverterInfo>() { converter }, new List<ParameterInfo>() { parameterInfo });
-            Assert.IsTrue(n.IsContainer);
-            Assert.AreEqual("Prueba", n.Children[0].Name);
+            Assert.IsTrue(ncf.IsContainer);
+            ncf.Transform(new List<ConverterInfo>() { converter }, new List<ParameterInfo>());
+            Assert.IsFalse(ncf.IsContainer);
+            Assert.IsTrue(ncf.Stream.Compare(stream));
         }
 
         [Test]
         public void MultipleConverters()
         {
-            var converter1 = new ConverterInfo() { TypeName = "TF3.Core.Converters.FormatToSingleNode", ParameterId = string.Empty, };
+            byte[] values = { 0x01, 0x02 };
+            using DataStream stream = DataStreamFactory.FromArray(values);
+
+            var converter1 = new ConverterInfo() { TypeName = "TF3.Core.Converters.SingleNodeToFormat", ParameterId = string.Empty, };
             var converter2 = new ConverterInfo() { TypeName = "TF3.Core.Converters.SingleNodeToFormat", ParameterId = string.Empty, };
-            using Node n = NodeFactory.FromMemory("test");
-            Assert.IsFalse(n.IsContainer);
-            n.Transform(new List<ConverterInfo>() { converter1, converter2 }, new List<ParameterInfo>());
-            Assert.IsFalse(n.IsContainer);
-            Assert.IsTrue(n.Stream != null);
+            using Node ncf = NodeFactory.CreateContainer("root");
+            using Node n1 = NodeFactory.CreateContainer("test1");
+            using Node n2 = NodeFactory.FromSubstream("test", stream, 0, stream.Length);
+            n1.Add(n2);
+            ncf.Add(n1);
+
+            Assert.IsTrue(ncf.IsContainer);
+            ncf.Transform(new List<ConverterInfo>() { converter1, converter2 }, new List<ParameterInfo>());
+            Assert.IsFalse(ncf.IsContainer);
+            Assert.IsTrue(ncf.Stream.Compare(stream));
         }
 
         [Test]
         public void UnknownConverterThrowsException()
         {
-            var converter = new ConverterInfo() { TypeName = "TF3.Core.Converters.FormatToSingleNode1", ParameterId = string.Empty, };
+            var converter = new ConverterInfo() { TypeName = "TF3.Core.Converters.SingleNodeToFormat1", ParameterId = string.Empty, };
             using Node n = NodeFactory.FromMemory("test");
             _ = _ = Assert.Throws<UnknownConverterException>(() => n.Transform(new List<ConverterInfo>() { converter }, new List<ParameterInfo>()));
         }
@@ -80,6 +89,23 @@ namespace TF3.Tests
         public void TranslateNode()
         {
             const string translator = "TF3.YarhlPlugin.Common.Converters.FormatReplace";
+            using Node n = NodeFactory.FromMemory("test");
+            using Node translation = NodeFactory.FromMemory("test2");
+
+            IBinary format1 = n.GetFormatAs<IBinary>();
+            IBinary format2 = translation.GetFormatAs<IBinary>();
+            Assert.AreNotSame(format1, format2);
+
+            n.Translate(translation, translator);
+
+            IBinary result = n.GetFormatAs<IBinary>();
+            Assert.AreSame(result, format2);
+        }
+
+        [Test]
+        public void EmptyTranslatorReplacesFormat()
+        {
+            const string translator = "";
             using Node n = NodeFactory.FromMemory("test");
             using Node translation = NodeFactory.FromMemory("test2");
 

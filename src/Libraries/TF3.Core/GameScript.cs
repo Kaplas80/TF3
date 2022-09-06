@@ -212,7 +212,7 @@ namespace TF3.Core
                 TranslateAsset(assetInfo, containersDict, translationPath);
             }
 
-            foreach (Models.PatchInfo patchInfo in Patches)
+            foreach (PatchInfo patchInfo in Patches)
             {
                 ApplyPatch(patchInfo, containersDict, translationPath);
             }
@@ -344,8 +344,10 @@ namespace TF3.Core
 
             if (asset.IsContainer)
             {
-                if (assetInfo.OutputNames.Count == 1 && assetInfo.OutputNames[0] == "*")
+                if (assetInfo.OutputNames.Count == 1 && assetInfo.OutputNames[0].EndsWith("*"))
                 {
+                    string customPath = assetInfo.OutputNames[0].Substring(0, assetInfo.OutputNames[0].Length - 1);
+
                     // Use node names to extract
                     foreach (Node node in Navigator.IterateNodes(asset))
                     {
@@ -354,7 +356,7 @@ namespace TF3.Core
                             continue;
                         }
 
-                        string path = Path.Combine(outputPath, node.Path.Substring(1));
+                        string path = Path.Combine(outputPath, customPath, node.Path.Substring(1));
                         node.Stream.WriteTo(path);
                     }
                 }
@@ -445,11 +447,6 @@ namespace TF3.Core
 
             asset.Translate(translation, assetInfo.Translator);
 
-            if (!asset.IsContainer)
-            {
-                asset.TransformWith<FormatToSingleNode>();
-            }
-
             foreach (AssetFileInfo fileInfo in assetInfo.Files)
             {
                 if (!containers.TryGetValue(fileInfo.ContainerId, out Node container))
@@ -457,9 +454,16 @@ namespace TF3.Core
                     throw new DirectoryNotFoundException($"Container not found: {fileInfo.ContainerId}");
                 }
 
-                Node newFile = asset.Children[0].Name == "single_node"
-                    ? asset.Children[0]
-                    : Navigator.SearchNode(asset, fileInfo.Name);
+                Node newFile;
+
+                if (!asset.IsContainer || asset.Name == fileInfo.Name)
+                {
+                    newFile = asset;
+                }
+                else
+                {
+                    newFile = Navigator.SearchNode(asset, fileInfo.Name);
+                }
 
                 newFile.Transform(fileInfo.Writers, Parameters);
 
@@ -477,10 +481,17 @@ namespace TF3.Core
         {
             Node translation;
 
-            if (assetInfo.OutputNames.Count == 1 && assetInfo.OutputNames[0] == "*")
+            if (assetInfo.OutputNames.Count == 1 && assetInfo.OutputNames[0].EndsWith("*"))
             {
-                // Can't check if all translation files exists
-                string path = Path.Combine(translationPath, assetInfo.Id);
+                // Can't check if all translation files exists, only the directory
+                string customPath = assetInfo.OutputNames[0].Substring(0, assetInfo.OutputNames[0].Length - 1);
+                string path = Path.Combine(translationPath, customPath, assetInfo.Id);
+                if (!Directory.Exists(path))
+                {
+                    AssetTranslationFailed?.Invoke(this, new AssetEventArgs(assetInfo));
+                    return null;
+                }
+
                 translation = NodeFactory.FromDirectory(path, "*", string.Concat(assetInfo.Id, "_Translation"), true);
             }
             else

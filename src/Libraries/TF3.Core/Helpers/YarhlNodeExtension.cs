@@ -22,6 +22,7 @@ namespace TF3.Core.Helpers
 {
     using System;
     using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
     using System.Linq;
     using System.Text.Json;
     using System.Text.Json.Serialization;
@@ -42,6 +43,7 @@ namespace TF3.Core.Helpers
         /// <param name="node">The original node.</param>
         /// <param name="converters">Converters list.</param>
         /// <param name="parameters">Allowed parameters list.</param>
+        [ExcludeFromCodeCoverage]
         public static void Transform(this Node node, List<ConverterInfo> converters, List<ParameterInfo> parameters)
         {
             JsonSerializerOptions options = new JsonSerializerOptions
@@ -84,6 +86,12 @@ namespace TF3.Core.Helpers
         /// <param name="translator">The translator converter.</param>
         public static void Translate(this Node node, Node translation, string translator)
         {
+            if (string.IsNullOrEmpty(translator))
+            {
+                node.ChangeFormat(translation.Format);
+                return;
+            }
+
             var yarhlConverters = PluginManager.Instance.GetConverters().Select(x => x.Metadata).ToList();
             ConverterMetadata metadata = yarhlConverters.Find(x => x.Name == translator);
 
