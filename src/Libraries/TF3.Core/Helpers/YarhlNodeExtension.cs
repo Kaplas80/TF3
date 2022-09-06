@@ -72,6 +72,10 @@ namespace TF3.Core.Helpers
                         object value = JsonSerializer.Deserialize(json, parameterType, options);
                         initializerParameters = new[] { value };
                     }
+                    else
+                    {
+                        throw new InvalidCastException($"Can not find {parameter.TypeName}. Please, use full qualified name");
+                    }
                 }
 
                 node.ApplyChange(metadata, initializerParameters);
