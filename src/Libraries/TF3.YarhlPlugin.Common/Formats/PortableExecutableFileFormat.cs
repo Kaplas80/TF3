@@ -53,7 +53,7 @@ namespace TF3.YarhlPlugin.Common.Formats
         public List<PortableExecutableStringInfo> StringInfo { get; set; }
 
         /// <inheritdoc />
-        public object DeepClone()
+        public virtual object DeepClone()
         {
             DataStream newStream = DataStreamFactory.FromMemory();
             Internal.Write(newStream);
