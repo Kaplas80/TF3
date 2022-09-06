@@ -109,48 +109,6 @@ references:
   commentId: Overload:TF3.Core.Converters.BinaryPatch.Reader.Initialize
   fullName: TF3.Core.Converters.BinaryPatch.Reader.Initialize
   nameWithType: Reader.Initialize
-- uid: TF3.Core.Converters.FormatToSingleNode
-  name: FormatToSingleNode
-  href: api/TF3.Core.Converters.FormatToSingleNode.html
-  commentId: T:TF3.Core.Converters.FormatToSingleNode
-  fullName: TF3.Core.Converters.FormatToSingleNode
-  nameWithType: FormatToSingleNode
-- uid: TF3.Core.Converters.FormatToSingleNode.#ctor
-  name: FormatToSingleNode()
-  href: api/TF3.Core.Converters.FormatToSingleNode.html#TF3_Core_Converters_FormatToSingleNode__ctor
-  commentId: M:TF3.Core.Converters.FormatToSingleNode.#ctor
-  fullName: TF3.Core.Converters.FormatToSingleNode.FormatToSingleNode()
-  nameWithType: FormatToSingleNode.FormatToSingleNode()
-- uid: TF3.Core.Converters.FormatToSingleNode.#ctor*
-  name: FormatToSingleNode
-  href: api/TF3.Core.Converters.FormatToSingleNode.html#TF3_Core_Converters_FormatToSingleNode__ctor_
-  commentId: Overload:TF3.Core.Converters.FormatToSingleNode.#ctor
-  fullName: TF3.Core.Converters.FormatToSingleNode.FormatToSingleNode
-  nameWithType: FormatToSingleNode.FormatToSingleNode
-- uid: TF3.Core.Converters.FormatToSingleNode.Convert(Yarhl.FileFormat.IFormat)
-  name: Convert(IFormat)
-  href: api/TF3.Core.Converters.FormatToSingleNode.html#TF3_Core_Converters_FormatToSingleNode_Convert_Yarhl_FileFormat_IFormat_
-  commentId: M:TF3.Core.Converters.FormatToSingleNode.Convert(Yarhl.FileFormat.IFormat)
-  fullName: TF3.Core.Converters.FormatToSingleNode.Convert(Yarhl.FileFormat.IFormat)
-  nameWithType: FormatToSingleNode.Convert(IFormat)
-- uid: TF3.Core.Converters.FormatToSingleNode.Convert*
-  name: Convert
-  href: api/TF3.Core.Converters.FormatToSingleNode.html#TF3_Core_Converters_FormatToSingleNode_Convert_
-  commentId: Overload:TF3.Core.Converters.FormatToSingleNode.Convert
-  fullName: TF3.Core.Converters.FormatToSingleNode.Convert
-  nameWithType: FormatToSingleNode.Convert
-- uid: TF3.Core.Converters.FormatToSingleNode.Initialize(System.String)
-  name: Initialize(String)
-  href: api/TF3.Core.Converters.FormatToSingleNode.html#TF3_Core_Converters_FormatToSingleNode_Initialize_System_String_
-  commentId: M:TF3.Core.Converters.FormatToSingleNode.Initialize(System.String)
-  fullName: TF3.Core.Converters.FormatToSingleNode.Initialize(System.String)
-  nameWithType: FormatToSingleNode.Initialize(String)
-- uid: TF3.Core.Converters.FormatToSingleNode.Initialize*
-  name: Initialize
-  href: api/TF3.Core.Converters.FormatToSingleNode.html#TF3_Core_Converters_FormatToSingleNode_Initialize_
-  commentId: Overload:TF3.Core.Converters.FormatToSingleNode.Initialize
-  fullName: TF3.Core.Converters.FormatToSingleNode.Initialize
-  nameWithType: FormatToSingleNode.Initialize
 - uid: TF3.Core.Converters.SingleNodeToFormat
   name: SingleNodeToFormat
   href: api/TF3.Core.Converters.SingleNodeToFormat.html
