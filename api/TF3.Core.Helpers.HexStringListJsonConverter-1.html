@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class HexStringListJsonConverter
+    <title>Class HexStringListJsonConverter&lt;T&gt;
    | Translation Framework v3 </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class HexStringListJsonConverter
+    <meta name="title" content="Class HexStringListJsonConverter&lt;T&gt;
    | Translation Framework v3 ">
     <meta name="generator" content="docfx 2.59.0.0">
     
@@ -189,10 +189,10 @@
                                   <a href="../dev/../api/TF3.Core.Helpers.ChecksumHelper.html" title="ChecksumHelper" class="">ChecksumHelper</a>
                                 </li>
                                 <li class="">
-                                  <a href="../dev/../api/TF3.Core.Helpers.HexStringJsonConverter.html" title="HexStringJsonConverter" class="">HexStringJsonConverter</a>
+                                  <a href="../dev/../api/TF3.Core.Helpers.HexStringJsonConverter-1.html" title="HexStringJsonConverter&lt;T&gt;" class="">HexStringJsonConverter&lt;T&gt;</a>
                                 </li>
                                 <li class="">
-                                  <a href="../dev/../api/TF3.Core.Helpers.HexStringListJsonConverter.html" title="HexStringListJsonConverter" class="">HexStringListJsonConverter</a>
+                                  <a href="../dev/../api/TF3.Core.Helpers.HexStringListJsonConverter-1.html" title="HexStringListJsonConverter&lt;T&gt;" class="">HexStringListJsonConverter&lt;T&gt;</a>
                                 </li>
                                 <li class="">
                                   <a href="../dev/../api/TF3.Core.Helpers.YarhlNodeExtension.html" title="YarhlNodeExtension" class="">YarhlNodeExtension</a>
@@ -233,31 +233,47 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="TF3.Core.Helpers.HexStringListJsonConverter">
+            <article class="content wrap" id="_content" data-uid="TF3.Core.Helpers.HexStringListJsonConverter`1">
   
   
-  <h1 id="TF3_Core_Helpers_HexStringListJsonConverter" data-uid="TF3.Core.Helpers.HexStringListJsonConverter" class="text-break">Class HexStringListJsonConverter
+  <h1 id="TF3_Core_Helpers_HexStringListJsonConverter_1" data-uid="TF3.Core.Helpers.HexStringListJsonConverter`1" class="text-break">Class HexStringListJsonConverter&lt;T&gt;
   </h1>
   <div class="markdown level0 summary"><p>Json serializer for hexadecimal number arrays.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">HexStringListJsonConverter</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">HexStringListJsonConverter&lt;T&gt;</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="TF3.Core.Helpers.html">TF3.Core.Helpers</a></h6>
   <h6><strong>Assembly</strong>: TF3.Core.dll</h6>
-  <h5 id="TF3_Core_Helpers_HexStringListJsonConverter_syntax">Syntax</h5>
+  <h5 id="TF3_Core_Helpers_HexStringListJsonConverter_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class HexStringListJsonConverter : JsonConverter&lt;List&lt;ulong&gt;&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class HexStringListJsonConverter&lt;T&gt; : JsonConverter&lt;List&lt;T&gt;&gt;</code></pre>
   </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Output type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="constructors">Constructors
   </h3>
   
   
-  <a id="TF3_Core_Helpers_HexStringListJsonConverter__ctor_" data-uid="TF3.Core.Helpers.HexStringListJsonConverter.#ctor*"></a>
-  <h4 id="TF3_Core_Helpers_HexStringListJsonConverter__ctor" data-uid="TF3.Core.Helpers.HexStringListJsonConverter.#ctor">HexStringListJsonConverter()</h4>
+  <a id="TF3_Core_Helpers_HexStringListJsonConverter_1__ctor_" data-uid="TF3.Core.Helpers.HexStringListJsonConverter`1.#ctor*"></a>
+  <h4 id="TF3_Core_Helpers_HexStringListJsonConverter_1__ctor" data-uid="TF3.Core.Helpers.HexStringListJsonConverter`1.#ctor">HexStringListJsonConverter()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -268,13 +284,13 @@
   </h3>
   
   
-  <a id="TF3_Core_Helpers_HexStringListJsonConverter_Read_" data-uid="TF3.Core.Helpers.HexStringListJsonConverter.Read*"></a>
-  <h4 id="TF3_Core_Helpers_HexStringListJsonConverter_Read_System_Text_Json_Utf8JsonReader__System_Type_System_Text_Json_JsonSerializerOptions_" data-uid="TF3.Core.Helpers.HexStringListJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)">Read(ref Utf8JsonReader, Type, JsonSerializerOptions)</h4>
+  <a id="TF3_Core_Helpers_HexStringListJsonConverter_1_Read_" data-uid="TF3.Core.Helpers.HexStringListJsonConverter`1.Read*"></a>
+  <h4 id="TF3_Core_Helpers_HexStringListJsonConverter_1_Read_System_Text_Json_Utf8JsonReader__System_Type_System_Text_Json_JsonSerializerOptions_" data-uid="TF3.Core.Helpers.HexStringListJsonConverter`1.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)">Read(ref Utf8JsonReader, Type, JsonSerializerOptions)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override List&lt;ulong&gt; Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public override List&lt;T&gt; Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -287,17 +303,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.json.utf8jsonreader">Utf8JsonReader</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonreader">Utf8JsonReader</a></td>
         <td><span class="parametername">reader</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></td>
         <td><span class="parametername">typeToConvert</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions">JsonSerializerOptions</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions">JsonSerializerOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
@@ -313,20 +329,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;T&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="TF3_Core_Helpers_HexStringListJsonConverter_Write_" data-uid="TF3.Core.Helpers.HexStringListJsonConverter.Write*"></a>
-  <h4 id="TF3_Core_Helpers_HexStringListJsonConverter_Write_System_Text_Json_Utf8JsonWriter_System_Collections_Generic_List_System_UInt64__System_Text_Json_JsonSerializerOptions_" data-uid="TF3.Core.Helpers.HexStringListJsonConverter.Write(System.Text.Json.Utf8JsonWriter,System.Collections.Generic.List{System.UInt64},System.Text.Json.JsonSerializerOptions)">Write(Utf8JsonWriter, List&lt;UInt64&gt;, JsonSerializerOptions)</h4>
+  <a id="TF3_Core_Helpers_HexStringListJsonConverter_1_Write_" data-uid="TF3.Core.Helpers.HexStringListJsonConverter`1.Write*"></a>
+  <h4 id="TF3_Core_Helpers_HexStringListJsonConverter_1_Write_System_Text_Json_Utf8JsonWriter_System_Collections_Generic_List__0__System_Text_Json_JsonSerializerOptions_" data-uid="TF3.Core.Helpers.HexStringListJsonConverter`1.Write(System.Text.Json.Utf8JsonWriter,System.Collections.Generic.List{`0},System.Text.Json.JsonSerializerOptions)">Write(Utf8JsonWriter, List&lt;T&gt;, JsonSerializerOptions)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void Write(Utf8JsonWriter writer, List&lt;ulong&gt; value, JsonSerializerOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void Write(Utf8JsonWriter writer, List&lt;T&gt; value, JsonSerializerOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -339,17 +355,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter">Utf8JsonWriter</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter">Utf8JsonWriter</a></td>
         <td><span class="parametername">writer</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;T&gt;</td>
         <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions">JsonSerializerOptions</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions">JsonSerializerOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td></td>
       </tr>

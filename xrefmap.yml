@@ -691,99 +691,123 @@ references:
   commentId: Overload:TF3.Core.Helpers.ChecksumHelper.Check
   fullName: TF3.Core.Helpers.ChecksumHelper.Check
   nameWithType: ChecksumHelper.Check
-- uid: TF3.Core.Helpers.HexStringJsonConverter
-  name: HexStringJsonConverter
-  href: api/TF3.Core.Helpers.HexStringJsonConverter.html
-  commentId: T:TF3.Core.Helpers.HexStringJsonConverter
-  fullName: TF3.Core.Helpers.HexStringJsonConverter
-  nameWithType: HexStringJsonConverter
-- uid: TF3.Core.Helpers.HexStringJsonConverter.#ctor
+- uid: TF3.Core.Helpers.HexStringJsonConverter`1
+  name: HexStringJsonConverter<T>
+  href: api/TF3.Core.Helpers.HexStringJsonConverter-1.html
+  commentId: T:TF3.Core.Helpers.HexStringJsonConverter`1
+  name.vb: HexStringJsonConverter(Of T)
+  fullName: TF3.Core.Helpers.HexStringJsonConverter<T>
+  fullName.vb: TF3.Core.Helpers.HexStringJsonConverter(Of T)
+  nameWithType: HexStringJsonConverter<T>
+  nameWithType.vb: HexStringJsonConverter(Of T)
+- uid: TF3.Core.Helpers.HexStringJsonConverter`1.#ctor
   name: HexStringJsonConverter()
-  href: api/TF3.Core.Helpers.HexStringJsonConverter.html#TF3_Core_Helpers_HexStringJsonConverter__ctor
-  commentId: M:TF3.Core.Helpers.HexStringJsonConverter.#ctor
-  fullName: TF3.Core.Helpers.HexStringJsonConverter.HexStringJsonConverter()
-  nameWithType: HexStringJsonConverter.HexStringJsonConverter()
-- uid: TF3.Core.Helpers.HexStringJsonConverter.#ctor*
+  href: api/TF3.Core.Helpers.HexStringJsonConverter-1.html#TF3_Core_Helpers_HexStringJsonConverter_1__ctor
+  commentId: M:TF3.Core.Helpers.HexStringJsonConverter`1.#ctor
+  fullName: TF3.Core.Helpers.HexStringJsonConverter<T>.HexStringJsonConverter()
+  fullName.vb: TF3.Core.Helpers.HexStringJsonConverter(Of T).HexStringJsonConverter()
+  nameWithType: HexStringJsonConverter<T>.HexStringJsonConverter()
+  nameWithType.vb: HexStringJsonConverter(Of T).HexStringJsonConverter()
+- uid: TF3.Core.Helpers.HexStringJsonConverter`1.#ctor*
   name: HexStringJsonConverter
-  href: api/TF3.Core.Helpers.HexStringJsonConverter.html#TF3_Core_Helpers_HexStringJsonConverter__ctor_
-  commentId: Overload:TF3.Core.Helpers.HexStringJsonConverter.#ctor
-  fullName: TF3.Core.Helpers.HexStringJsonConverter.HexStringJsonConverter
-  nameWithType: HexStringJsonConverter.HexStringJsonConverter
-- uid: TF3.Core.Helpers.HexStringJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  href: api/TF3.Core.Helpers.HexStringJsonConverter-1.html#TF3_Core_Helpers_HexStringJsonConverter_1__ctor_
+  commentId: Overload:TF3.Core.Helpers.HexStringJsonConverter`1.#ctor
+  fullName: TF3.Core.Helpers.HexStringJsonConverter<T>.HexStringJsonConverter
+  fullName.vb: TF3.Core.Helpers.HexStringJsonConverter(Of T).HexStringJsonConverter
+  nameWithType: HexStringJsonConverter<T>.HexStringJsonConverter
+  nameWithType.vb: HexStringJsonConverter(Of T).HexStringJsonConverter
+- uid: TF3.Core.Helpers.HexStringJsonConverter`1.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
   name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
-  href: api/TF3.Core.Helpers.HexStringJsonConverter.html#TF3_Core_Helpers_HexStringJsonConverter_Read_System_Text_Json_Utf8JsonReader__System_Type_System_Text_Json_JsonSerializerOptions_
-  commentId: M:TF3.Core.Helpers.HexStringJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  href: api/TF3.Core.Helpers.HexStringJsonConverter-1.html#TF3_Core_Helpers_HexStringJsonConverter_1_Read_System_Text_Json_Utf8JsonReader__System_Type_System_Text_Json_JsonSerializerOptions_
+  commentId: M:TF3.Core.Helpers.HexStringJsonConverter`1.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
   name.vb: Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
-  fullName: TF3.Core.Helpers.HexStringJsonConverter.Read(ref System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
-  fullName.vb: TF3.Core.Helpers.HexStringJsonConverter.Read(ByRef System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
-  nameWithType: HexStringJsonConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
-  nameWithType.vb: HexStringJsonConverter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
-- uid: TF3.Core.Helpers.HexStringJsonConverter.Read*
+  fullName: TF3.Core.Helpers.HexStringJsonConverter<T>.Read(ref System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  fullName.vb: TF3.Core.Helpers.HexStringJsonConverter(Of T).Read(ByRef System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  nameWithType: HexStringJsonConverter<T>.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType.vb: HexStringJsonConverter(Of T).Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: TF3.Core.Helpers.HexStringJsonConverter`1.Read*
   name: Read
-  href: api/TF3.Core.Helpers.HexStringJsonConverter.html#TF3_Core_Helpers_HexStringJsonConverter_Read_
-  commentId: Overload:TF3.Core.Helpers.HexStringJsonConverter.Read
-  fullName: TF3.Core.Helpers.HexStringJsonConverter.Read
-  nameWithType: HexStringJsonConverter.Read
-- uid: TF3.Core.Helpers.HexStringJsonConverter.Write(System.Text.Json.Utf8JsonWriter,System.UInt64,System.Text.Json.JsonSerializerOptions)
-  name: Write(Utf8JsonWriter, UInt64, JsonSerializerOptions)
-  href: api/TF3.Core.Helpers.HexStringJsonConverter.html#TF3_Core_Helpers_HexStringJsonConverter_Write_System_Text_Json_Utf8JsonWriter_System_UInt64_System_Text_Json_JsonSerializerOptions_
-  commentId: M:TF3.Core.Helpers.HexStringJsonConverter.Write(System.Text.Json.Utf8JsonWriter,System.UInt64,System.Text.Json.JsonSerializerOptions)
-  fullName: TF3.Core.Helpers.HexStringJsonConverter.Write(System.Text.Json.Utf8JsonWriter, System.UInt64, System.Text.Json.JsonSerializerOptions)
-  nameWithType: HexStringJsonConverter.Write(Utf8JsonWriter, UInt64, JsonSerializerOptions)
-- uid: TF3.Core.Helpers.HexStringJsonConverter.Write*
+  href: api/TF3.Core.Helpers.HexStringJsonConverter-1.html#TF3_Core_Helpers_HexStringJsonConverter_1_Read_
+  commentId: Overload:TF3.Core.Helpers.HexStringJsonConverter`1.Read
+  fullName: TF3.Core.Helpers.HexStringJsonConverter<T>.Read
+  fullName.vb: TF3.Core.Helpers.HexStringJsonConverter(Of T).Read
+  nameWithType: HexStringJsonConverter<T>.Read
+  nameWithType.vb: HexStringJsonConverter(Of T).Read
+- uid: TF3.Core.Helpers.HexStringJsonConverter`1.Write(System.Text.Json.Utf8JsonWriter,`0,System.Text.Json.JsonSerializerOptions)
+  name: Write(Utf8JsonWriter, T, JsonSerializerOptions)
+  href: api/TF3.Core.Helpers.HexStringJsonConverter-1.html#TF3_Core_Helpers_HexStringJsonConverter_1_Write_System_Text_Json_Utf8JsonWriter__0_System_Text_Json_JsonSerializerOptions_
+  commentId: M:TF3.Core.Helpers.HexStringJsonConverter`1.Write(System.Text.Json.Utf8JsonWriter,`0,System.Text.Json.JsonSerializerOptions)
+  fullName: TF3.Core.Helpers.HexStringJsonConverter<T>.Write(System.Text.Json.Utf8JsonWriter, T, System.Text.Json.JsonSerializerOptions)
+  fullName.vb: TF3.Core.Helpers.HexStringJsonConverter(Of T).Write(System.Text.Json.Utf8JsonWriter, T, System.Text.Json.JsonSerializerOptions)
+  nameWithType: HexStringJsonConverter<T>.Write(Utf8JsonWriter, T, JsonSerializerOptions)
+  nameWithType.vb: HexStringJsonConverter(Of T).Write(Utf8JsonWriter, T, JsonSerializerOptions)
+- uid: TF3.Core.Helpers.HexStringJsonConverter`1.Write*
   name: Write
-  href: api/TF3.Core.Helpers.HexStringJsonConverter.html#TF3_Core_Helpers_HexStringJsonConverter_Write_
-  commentId: Overload:TF3.Core.Helpers.HexStringJsonConverter.Write
-  fullName: TF3.Core.Helpers.HexStringJsonConverter.Write
-  nameWithType: HexStringJsonConverter.Write
-- uid: TF3.Core.Helpers.HexStringListJsonConverter
-  name: HexStringListJsonConverter
-  href: api/TF3.Core.Helpers.HexStringListJsonConverter.html
-  commentId: T:TF3.Core.Helpers.HexStringListJsonConverter
-  fullName: TF3.Core.Helpers.HexStringListJsonConverter
-  nameWithType: HexStringListJsonConverter
-- uid: TF3.Core.Helpers.HexStringListJsonConverter.#ctor
+  href: api/TF3.Core.Helpers.HexStringJsonConverter-1.html#TF3_Core_Helpers_HexStringJsonConverter_1_Write_
+  commentId: Overload:TF3.Core.Helpers.HexStringJsonConverter`1.Write
+  fullName: TF3.Core.Helpers.HexStringJsonConverter<T>.Write
+  fullName.vb: TF3.Core.Helpers.HexStringJsonConverter(Of T).Write
+  nameWithType: HexStringJsonConverter<T>.Write
+  nameWithType.vb: HexStringJsonConverter(Of T).Write
+- uid: TF3.Core.Helpers.HexStringListJsonConverter`1
+  name: HexStringListJsonConverter<T>
+  href: api/TF3.Core.Helpers.HexStringListJsonConverter-1.html
+  commentId: T:TF3.Core.Helpers.HexStringListJsonConverter`1
+  name.vb: HexStringListJsonConverter(Of T)
+  fullName: TF3.Core.Helpers.HexStringListJsonConverter<T>
+  fullName.vb: TF3.Core.Helpers.HexStringListJsonConverter(Of T)
+  nameWithType: HexStringListJsonConverter<T>
+  nameWithType.vb: HexStringListJsonConverter(Of T)
+- uid: TF3.Core.Helpers.HexStringListJsonConverter`1.#ctor
   name: HexStringListJsonConverter()
-  href: api/TF3.Core.Helpers.HexStringListJsonConverter.html#TF3_Core_Helpers_HexStringListJsonConverter__ctor
-  commentId: M:TF3.Core.Helpers.HexStringListJsonConverter.#ctor
-  fullName: TF3.Core.Helpers.HexStringListJsonConverter.HexStringListJsonConverter()
-  nameWithType: HexStringListJsonConverter.HexStringListJsonConverter()
-- uid: TF3.Core.Helpers.HexStringListJsonConverter.#ctor*
+  href: api/TF3.Core.Helpers.HexStringListJsonConverter-1.html#TF3_Core_Helpers_HexStringListJsonConverter_1__ctor
+  commentId: M:TF3.Core.Helpers.HexStringListJsonConverter`1.#ctor
+  fullName: TF3.Core.Helpers.HexStringListJsonConverter<T>.HexStringListJsonConverter()
+  fullName.vb: TF3.Core.Helpers.HexStringListJsonConverter(Of T).HexStringListJsonConverter()
+  nameWithType: HexStringListJsonConverter<T>.HexStringListJsonConverter()
+  nameWithType.vb: HexStringListJsonConverter(Of T).HexStringListJsonConverter()
+- uid: TF3.Core.Helpers.HexStringListJsonConverter`1.#ctor*
   name: HexStringListJsonConverter
-  href: api/TF3.Core.Helpers.HexStringListJsonConverter.html#TF3_Core_Helpers_HexStringListJsonConverter__ctor_
-  commentId: Overload:TF3.Core.Helpers.HexStringListJsonConverter.#ctor
-  fullName: TF3.Core.Helpers.HexStringListJsonConverter.HexStringListJsonConverter
-  nameWithType: HexStringListJsonConverter.HexStringListJsonConverter
-- uid: TF3.Core.Helpers.HexStringListJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  href: api/TF3.Core.Helpers.HexStringListJsonConverter-1.html#TF3_Core_Helpers_HexStringListJsonConverter_1__ctor_
+  commentId: Overload:TF3.Core.Helpers.HexStringListJsonConverter`1.#ctor
+  fullName: TF3.Core.Helpers.HexStringListJsonConverter<T>.HexStringListJsonConverter
+  fullName.vb: TF3.Core.Helpers.HexStringListJsonConverter(Of T).HexStringListJsonConverter
+  nameWithType: HexStringListJsonConverter<T>.HexStringListJsonConverter
+  nameWithType.vb: HexStringListJsonConverter(Of T).HexStringListJsonConverter
+- uid: TF3.Core.Helpers.HexStringListJsonConverter`1.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
   name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
-  href: api/TF3.Core.Helpers.HexStringListJsonConverter.html#TF3_Core_Helpers_HexStringListJsonConverter_Read_System_Text_Json_Utf8JsonReader__System_Type_System_Text_Json_JsonSerializerOptions_
-  commentId: M:TF3.Core.Helpers.HexStringListJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  href: api/TF3.Core.Helpers.HexStringListJsonConverter-1.html#TF3_Core_Helpers_HexStringListJsonConverter_1_Read_System_Text_Json_Utf8JsonReader__System_Type_System_Text_Json_JsonSerializerOptions_
+  commentId: M:TF3.Core.Helpers.HexStringListJsonConverter`1.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
   name.vb: Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
-  fullName: TF3.Core.Helpers.HexStringListJsonConverter.Read(ref System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
-  fullName.vb: TF3.Core.Helpers.HexStringListJsonConverter.Read(ByRef System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
-  nameWithType: HexStringListJsonConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
-  nameWithType.vb: HexStringListJsonConverter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
-- uid: TF3.Core.Helpers.HexStringListJsonConverter.Read*
+  fullName: TF3.Core.Helpers.HexStringListJsonConverter<T>.Read(ref System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  fullName.vb: TF3.Core.Helpers.HexStringListJsonConverter(Of T).Read(ByRef System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  nameWithType: HexStringListJsonConverter<T>.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType.vb: HexStringListJsonConverter(Of T).Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: TF3.Core.Helpers.HexStringListJsonConverter`1.Read*
   name: Read
-  href: api/TF3.Core.Helpers.HexStringListJsonConverter.html#TF3_Core_Helpers_HexStringListJsonConverter_Read_
-  commentId: Overload:TF3.Core.Helpers.HexStringListJsonConverter.Read
-  fullName: TF3.Core.Helpers.HexStringListJsonConverter.Read
-  nameWithType: HexStringListJsonConverter.Read
-- uid: TF3.Core.Helpers.HexStringListJsonConverter.Write(System.Text.Json.Utf8JsonWriter,System.Collections.Generic.List{System.UInt64},System.Text.Json.JsonSerializerOptions)
-  name: Write(Utf8JsonWriter, List<UInt64>, JsonSerializerOptions)
-  href: api/TF3.Core.Helpers.HexStringListJsonConverter.html#TF3_Core_Helpers_HexStringListJsonConverter_Write_System_Text_Json_Utf8JsonWriter_System_Collections_Generic_List_System_UInt64__System_Text_Json_JsonSerializerOptions_
-  commentId: M:TF3.Core.Helpers.HexStringListJsonConverter.Write(System.Text.Json.Utf8JsonWriter,System.Collections.Generic.List{System.UInt64},System.Text.Json.JsonSerializerOptions)
-  name.vb: Write(Utf8JsonWriter, List(Of UInt64), JsonSerializerOptions)
-  fullName: TF3.Core.Helpers.HexStringListJsonConverter.Write(System.Text.Json.Utf8JsonWriter, System.Collections.Generic.List<System.UInt64>, System.Text.Json.JsonSerializerOptions)
-  fullName.vb: TF3.Core.Helpers.HexStringListJsonConverter.Write(System.Text.Json.Utf8JsonWriter, System.Collections.Generic.List(Of System.UInt64), System.Text.Json.JsonSerializerOptions)
-  nameWithType: HexStringListJsonConverter.Write(Utf8JsonWriter, List<UInt64>, JsonSerializerOptions)
-  nameWithType.vb: HexStringListJsonConverter.Write(Utf8JsonWriter, List(Of UInt64), JsonSerializerOptions)
-- uid: TF3.Core.Helpers.HexStringListJsonConverter.Write*
+  href: api/TF3.Core.Helpers.HexStringListJsonConverter-1.html#TF3_Core_Helpers_HexStringListJsonConverter_1_Read_
+  commentId: Overload:TF3.Core.Helpers.HexStringListJsonConverter`1.Read
+  fullName: TF3.Core.Helpers.HexStringListJsonConverter<T>.Read
+  fullName.vb: TF3.Core.Helpers.HexStringListJsonConverter(Of T).Read
+  nameWithType: HexStringListJsonConverter<T>.Read
+  nameWithType.vb: HexStringListJsonConverter(Of T).Read
+- uid: TF3.Core.Helpers.HexStringListJsonConverter`1.Write(System.Text.Json.Utf8JsonWriter,System.Collections.Generic.List{`0},System.Text.Json.JsonSerializerOptions)
+  name: Write(Utf8JsonWriter, List<T>, JsonSerializerOptions)
+  href: api/TF3.Core.Helpers.HexStringListJsonConverter-1.html#TF3_Core_Helpers_HexStringListJsonConverter_1_Write_System_Text_Json_Utf8JsonWriter_System_Collections_Generic_List__0__System_Text_Json_JsonSerializerOptions_
+  commentId: M:TF3.Core.Helpers.HexStringListJsonConverter`1.Write(System.Text.Json.Utf8JsonWriter,System.Collections.Generic.List{`0},System.Text.Json.JsonSerializerOptions)
+  name.vb: Write(Utf8JsonWriter, List(Of T), JsonSerializerOptions)
+  fullName: TF3.Core.Helpers.HexStringListJsonConverter<T>.Write(System.Text.Json.Utf8JsonWriter, System.Collections.Generic.List<T>, System.Text.Json.JsonSerializerOptions)
+  fullName.vb: TF3.Core.Helpers.HexStringListJsonConverter(Of T).Write(System.Text.Json.Utf8JsonWriter, System.Collections.Generic.List(Of T), System.Text.Json.JsonSerializerOptions)
+  nameWithType: HexStringListJsonConverter<T>.Write(Utf8JsonWriter, List<T>, JsonSerializerOptions)
+  nameWithType.vb: HexStringListJsonConverter(Of T).Write(Utf8JsonWriter, List(Of T), JsonSerializerOptions)
+- uid: TF3.Core.Helpers.HexStringListJsonConverter`1.Write*
   name: Write
-  href: api/TF3.Core.Helpers.HexStringListJsonConverter.html#TF3_Core_Helpers_HexStringListJsonConverter_Write_
-  commentId: Overload:TF3.Core.Helpers.HexStringListJsonConverter.Write
-  fullName: TF3.Core.Helpers.HexStringListJsonConverter.Write
-  nameWithType: HexStringListJsonConverter.Write
+  href: api/TF3.Core.Helpers.HexStringListJsonConverter-1.html#TF3_Core_Helpers_HexStringListJsonConverter_1_Write_
+  commentId: Overload:TF3.Core.Helpers.HexStringListJsonConverter`1.Write
+  fullName: TF3.Core.Helpers.HexStringListJsonConverter<T>.Write
+  fullName.vb: TF3.Core.Helpers.HexStringListJsonConverter(Of T).Write
+  nameWithType: HexStringListJsonConverter<T>.Write
+  nameWithType.vb: HexStringListJsonConverter(Of T).Write
 - uid: TF3.Core.Helpers.YarhlNodeExtension
   name: YarhlNodeExtension
   href: api/TF3.Core.Helpers.YarhlNodeExtension.html
