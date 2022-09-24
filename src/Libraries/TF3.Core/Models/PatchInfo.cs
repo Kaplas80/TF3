@@ -21,6 +21,8 @@
 namespace TF3.Core.Models
 {
     using System.Diagnostics.CodeAnalysis;
+    using System.Text.Json.Serialization;
+    using TF3.Core.Helpers;
 
     /// <summary>
     /// Binary patch info.
@@ -46,11 +48,13 @@ namespace TF3.Core.Models
         /// <summary>
         /// Gets or sets the data virtual address (in exe files).
         /// </summary>
+        [JsonConverter(typeof(HexStringJsonConverter<long>))]
         public long VirtualAddress { get; set; }
 
         /// <summary>
         /// Gets or sets the data raw address (in exe files).
         /// </summary>
+        [JsonConverter(typeof(HexStringJsonConverter<long>))]
         public long RawAddress { get; set; }
     }
 }
