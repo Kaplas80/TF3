@@ -39,7 +39,7 @@ namespace TF3.YarhlPlugin.Common.Models
         /// <summary>
         /// Gets or sets the string address inside the executable file.
         /// </summary>
-        [JsonConverter(typeof(HexStringJsonConverter))]
+        [JsonConverter(typeof(HexStringJsonConverter<int>))]
         public int Address { get; set; }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace TF3.YarhlPlugin.Common.Models
         /// <summary>
         /// Gets or sets the list of pointers referencing the string.
         /// </summary>
-        [JsonConverter(typeof(HexStringListJsonConverter))]
+        [JsonConverter(typeof(HexStringListJsonConverter<int>))]
         public List<int> Pointers { get; set; }
     }
 }
