@@ -50,7 +50,7 @@ namespace TF3.Core.Models
         /// Gets or sets the container checksums.
         /// If it is 0x0, the file won't be checked.
         /// </summary>
-        [JsonConverter(typeof(HexStringListJsonConverter))]
+        [JsonConverter(typeof(HexStringListJsonConverter<ulong>))]
         public List<ulong> Checksums { get; set; }
 
         /// <summary>

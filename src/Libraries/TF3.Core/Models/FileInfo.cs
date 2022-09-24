@@ -49,7 +49,7 @@ namespace TF3.Core.Models
         /// Gets or sets the file checksum.
         /// If it is 0x0, it won't be checked.
         /// </summary>
-        [JsonConverter(typeof(HexStringJsonConverter))]
+        [JsonConverter(typeof(HexStringJsonConverter<ulong>))]
         public ulong Checksum { get; set; }
     }
 }
