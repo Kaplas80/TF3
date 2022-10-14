@@ -42,6 +42,10 @@ TF3.CommandLine.exe extract --script [script-name] --install-dir [game-files-dir
 TF3.CommandLine.exe rebuild --script [script-name] --install-dir [game-files-directory] --translation-dir [translation-files-directory] --output-dir [output-directory]
 ```
 
+## FAQ
+
+If you have questions, see [FAQ](https://github.com/Kaplas80/TF3/blob/main/FAQ.md) or open a new thread in [Discussions](https://github.com/Kaplas80/TF3/discussions)
+
 ## Credits
 
 * Thanks to Pleonex for [Yarhl](https://scenegate.github.io/Yarhl/) and [PleOps.Cake](https://www.pleonex.dev/PleOps.Cake/).
