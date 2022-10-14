@@ -173,7 +173,25 @@ namespace TF3.Core
             Node gameRoot = NodeFactory.FromDirectory(gamePath, "*", "root", true, Yarhl.IO.FileOpenMode.Read);
             containersDict.Add("root", gameRoot);
 
-            ReadContainers(Containers, gameRoot, containersDict);
+            try
+            {
+                ReadContainers(Containers, gameRoot, containersDict);
+            }
+            catch (DirectoryNotFoundException e)
+            {
+                Console.WriteLine($"Error reading container: {e.Message}");
+                return;
+            }
+            catch (ChecksumMismatchException e)
+            {
+                Console.WriteLine($"Bad container checksum: {e.Message}");
+                return;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Unexpected error reading containers: {e}");
+                return;
+            }
 
             foreach (AssetInfo assetInfo in Assets)
             {
@@ -205,7 +223,25 @@ namespace TF3.Core
             Node gameRoot = NodeFactory.FromDirectory(gamePath, "*", "root", true, Yarhl.IO.FileOpenMode.Read);
             containersDict.Add("root", gameRoot);
 
-            ReadContainers(Containers, gameRoot, containersDict);
+            try
+            {
+                ReadContainers(Containers, gameRoot, containersDict);
+            }
+            catch (DirectoryNotFoundException e)
+            {
+                Console.WriteLine($"Error reading container: {e.Message}");
+                return;
+            }
+            catch (ChecksumMismatchException e)
+            {
+                Console.WriteLine($"Bad container checksum: {e.Message}");
+                return;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Unexpected error reading containers: {e}");
+                return;
+            }
 
             foreach (AssetInfo assetInfo in Assets)
             {
@@ -217,7 +253,20 @@ namespace TF3.Core
                 ApplyPatch(patchInfo, containersDict, translationPath);
             }
 
-            WriteContainers(Containers, gameRoot);
+            try
+            {
+                WriteContainers(Containers, gameRoot);
+            }
+            catch (DirectoryNotFoundException e)
+            {
+                Console.WriteLine($"Error writing container: {e.Message}");
+                return;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Unexpected error writing containers: {e}");
+                return;
+            }
 
             foreach (Node node in Navigator.IterateNodes(gameRoot).Where(x => x.Tags.ContainsKey("Changed")))
             {
@@ -394,7 +443,31 @@ namespace TF3.Core
 
             foreach (AssetFileInfo fileInfo in assetInfo.Files)
             {
-                Node file = ReadFile(fileInfo, containers);
+                Node file;
+                try
+                {
+                    file = ReadFile(fileInfo, containers);
+                }
+                catch (DirectoryNotFoundException e)
+                {
+                    Console.WriteLine($"Error reading file: {e.Message}");
+                    continue;
+                }
+                catch (FileNotFoundException e)
+                {
+                    Console.WriteLine($"Error reading file: {e.Message}");
+                    continue;
+                }
+                catch (ChecksumMismatchException e)
+                {
+                    Console.WriteLine($"Bad file checksum: {e.Message}");
+                    continue;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine($"Unexpected error reading file: {e}");
+                    continue;
+                }
 
                 // Add call will remove the node from its original parent, so we need to make a copy
                 var newFile = new Node(file);
@@ -546,7 +619,32 @@ namespace TF3.Core
 
             patch.TransformWith<Converters.BinaryPatch.Reader, long>(-patchInfo.VirtualAddress + patchInfo.RawAddress);
 
-            Node file = ReadFile(patchInfo.File, containers);
+            Node file;
+            try
+            {
+                file = ReadFile(patchInfo.File, containers);
+            }
+            catch (DirectoryNotFoundException e)
+            {
+                Console.WriteLine($"Error reading file: {e.Message}");
+                return;
+            }
+            catch (FileNotFoundException e)
+            {
+                Console.WriteLine($"Error reading file: {e.Message}");
+                return;
+            }
+            catch (ChecksumMismatchException e)
+            {
+                Console.WriteLine($"Bad file checksum: {e.Message}");
+                return;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Unexpected error reading file: {e}");
+                return;
+            }
+
             file.TransformWith<Converters.BinaryPatch.Apply, Formats.BinaryPatch>(patch.GetFormatAs<Formats.BinaryPatch>());
 
             file.Tags["Changed"] = true;
