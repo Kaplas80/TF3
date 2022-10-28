@@ -645,6 +645,12 @@ namespace TF3.Core
                 return;
             }
 
+            if (!file.Stream.CanWrite)
+            {
+                Console.WriteLine($"{patchInfo.File.Name} is read only. Skipping patch...");
+                return;
+            }
+
             file.TransformWith<Converters.BinaryPatch.Apply, Formats.BinaryPatch>(patch.GetFormatAs<Formats.BinaryPatch>());
 
             file.Tags["Changed"] = true;
