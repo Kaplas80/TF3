@@ -1,4 +1,4 @@
-﻿namespace TF3.Tests.Converters.BinaryPatch
+namespace TF3.Tests.Converters.BinaryPatch
 {
     using System;
     using NUnit.Framework;

@@ -1,4 +1,4 @@
-﻿# TF3 FAQ
+# TF3 FAQ
 
 ## What is TF3?
 

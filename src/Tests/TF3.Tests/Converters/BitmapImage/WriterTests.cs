@@ -1,4 +1,4 @@
-﻿namespace TF3.Tests.Converters.BitmapImage
+namespace TF3.Tests.Converters.BitmapImage
 {
     using System;
     using System.Collections.Generic;

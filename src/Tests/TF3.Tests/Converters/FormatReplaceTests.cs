@@ -1,4 +1,4 @@
-﻿namespace TF3.Tests.Converters
+namespace TF3.Tests.Converters
 {
     using System;
     using NUnit.Framework;
