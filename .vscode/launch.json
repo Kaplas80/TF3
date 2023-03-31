@@ -9,9 +9,9 @@
       "type": "coreclr",
       "request": "launch",
       "preLaunchTask": "Cake: Run Build",
-      "program": "${workspaceFolder}/src/Apps/TF3.CommandLine/bin/Debug/net6.0/win-x64/TF3.CommandLine.dll",
+      "program": "${workspaceFolder}/src/Apps/TF3.CommandLine/bin/Debug/net6.0/linux-x64/TF3.CommandLine.dll",
       "args": [],
-      "cwd": "${workspaceFolder}/src/Apps/TF3.CommandLine/bin/Debug/net6.0/win-x64",
+      "cwd": "${workspaceFolder}/src/Apps/TF3.CommandLine/bin/Debug/net6.0/linux-x64",
       "stopAtEntry": false,
       "console": "internalConsole"
     }
